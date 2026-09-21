@@ -99,9 +99,9 @@ remain unchanged. Student tails do not inherently favor either party.
 
 ## Files and reproducibility
 
-`outputs/matched_student/` contains predictions, seat distributions, all-fold
+`outputs/results/experiments/matched_student/` contains predictions, seat distributions, all-fold
 Gaussian controls, convergence diagnostics, source hashes and immutable manifests.
 Forecast NPZ files retain prior/posterior moments, trace summaries and seat counts.
 The comparison notebook writes its tables/plot to a separate
-`outputs/matched_student_review/` run so its display files cannot invalidate the
+`outputs/results/experiments/matched_student_review/` run so its display files cannot invalidate the
 sampler cache. The earlier fat-tail helper remains a separate architecture.

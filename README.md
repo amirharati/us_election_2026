@@ -105,7 +105,8 @@ reviewed training labels; see [data preparation](docs/DATA.md).
   history, poll metadata, and source receipts. Other data trees are optional local
   archives excluded from Git. Public source data remain subject to source terms.
 - `config/`: dated candidate, survey, election-rule, feature and acceptance policy.
-- `outputs/`: immutable forecast runs with their own manifests and metadata.
+- `outputs/`: latest readable reports, supporting result bundles, and validation.
+  Start with [outputs/README.md](outputs/README.md). Timestamped runs stay in ignored cache.
 - `cache/`: ignored raw downloads, source checks, temporary preparation, and local
   exact-input replay copies.
 - `tests/`, `PACKAGE_MANIFEST.json`: numerical and reproducibility checks.
@@ -142,7 +143,13 @@ See [portfolio results](docs/PORTFOLIO_RESULTS.md) for the executed historical a
 
 ### Saved live reports and cutoff history
 
-Notebook04 saves a standalone HTML report to `outputs/live_reports/<timestamp>/report.html` on every Run All. It includes all current models, state/chamber tables, the recently polled uncertainty watchlist and control-probability history for both parties. The report embeds its chart; Parquet tables and a PNG are adjacent. `outputs/live_reports/latest.json` identifies the latest completed report.
+Notebook 04 publishes [the Markdown forecast](outputs/reports/forecast/report.md)
+and [the self-contained HTML report](outputs/reports/forecast/report.html).
+Both have stable paths and are replaced on each successful run. They include
+current models, state/chamber tables, the uncertainty watchlist and both-party
+control history. Supporting data live in `outputs/results/forecast/`; comparison
+reports live in `outputs/reports/experiments/`. See [all outputs](outputs/README.md).
+Timestamped runs and previous outputs remain only in ignored `cache/`.
 
 The default history runs from January1,2026 every30days plus the last3calendar days, including the current cutoff. Change `HISTORY_EVERY_DAYS` in the notebook for a finer grid. Each cutoff reuses fixed trained models and reruns inference with screened polls and dated feature references. Verified caches are keyed by actual inputs and model code/assets; the latest endpoint uses the exact current live forecast. Student models retain their sampler/convergence checks.
 

@@ -39,8 +39,8 @@ Total notebook execution time: 340.05 seconds.
 The live cutoff is 2026-09-20. FRED failed its source check (RuntimeError), so the report explicitly uses verified stale compact FRED evidence. Other providers reused recent successful source checks. This run is not a claim of nine newly downloaded feeds. Fresh feature parsing/revision replacement was exercised separately by a synthetic provider-feed regression test.
 Political context remains explicitly carried forward from its dated review. Independent raw-source parsing audits require optional original archives; normal forecasting and model reproduction do not. Older input vintages need the local replay cache or their Git revision; saved reports remain readable.
 
-[Latest complete forecast report](../outputs/live_reports/20260921T035014.722114Z/report.html)
+[Latest complete forecast report](../outputs/reports/forecast/report.html)
 
-[Notebook execution record](../outputs/notebook_execution/results.json)
+[Notebook execution record](../outputs/validation/notebooks.json)
 
 [Storage and model lifecycle](../docs/GIT_STORAGE.md)

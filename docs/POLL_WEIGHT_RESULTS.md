@@ -1,6 +1,6 @@
 # Poll-weight experiment results
 
-Run: `outputs/poll_weights/20260920T224711.587511Z`. Current data as of September20,2026; no download was performed by the experiment. All comparisons use the saved live source and frozen historical cutoffs. The main model is unchanged.
+Run: `cache/legacy_outputs/20260921T044037Z/poll_weights/20260920T224711.587511Z`. Current data as of September20,2026; no download was performed by the experiment. All comparisons use the saved live source and frozen historical cutoffs. The main model is unchanged.
 
 ## Historical2016–2024, bias re-estimated for each rule
 

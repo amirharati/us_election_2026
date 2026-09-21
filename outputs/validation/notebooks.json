@@ -1,0 +1,72 @@
+[
+  {
+    "notebook": "01_models_and_results.ipynb",
+    "status": "passed",
+    "legacy_data_reads_blocked": true,
+    "seconds": 6.83,
+    "notebook_sha256": "8c239b0cbdd69cc3bee923d3673fc40557ca5abfac9eb65be02651e2918ef32f"
+  },
+  {
+    "notebook": "02_blend_weights.ipynb",
+    "status": "passed",
+    "legacy_data_reads_blocked": true,
+    "seconds": 5.36,
+    "notebook_sha256": "5326428483f81ef038678862eb4da50527fa5666929b59fde79fcde39dce5b3c"
+  },
+  {
+    "notebook": "03_training_and_assumptions.ipynb",
+    "status": "passed",
+    "legacy_data_reads_blocked": true,
+    "seconds": 32.01,
+    "notebook_sha256": "00e0ef5cbb04c41bb62cf5983a3ec87a9ab459f8f6ecbaad1e3e1ccb4f3d0dac"
+  },
+  {
+    "notebook": "04_live_forecast.ipynb",
+    "status": "passed",
+    "legacy_data_reads_blocked": true,
+    "seconds": 139.89,
+    "notebook_sha256": "48531ca3886d8a74028b03c115576d81e3a8e38c5fdf7821e8122971cece8b30"
+  },
+  {
+    "notebook": "05_wave_and_poll_error_scenarios.ipynb",
+    "status": "passed",
+    "legacy_data_reads_blocked": true,
+    "seconds": 5.51,
+    "notebook_sha256": "1ee2403ac71b586ef6b76af62f70a8c3cb0f0a77f3df8c011e8bf22e2faf88ab"
+  },
+  {
+    "notebook": "06_matched_student_comparison.ipynb",
+    "status": "passed",
+    "legacy_data_reads_blocked": true,
+    "seconds": 26.06,
+    "notebook_sha256": "6e1d0ec1ea017ed1fd61f2700dcd1270920214ed4ef4287950d57d719778ae62"
+  },
+  {
+    "notebook": "07_older_model_alternatives.ipynb",
+    "status": "passed",
+    "legacy_data_reads_blocked": true,
+    "seconds": 56.67,
+    "notebook_sha256": "516c6fb95314ad6ab2e04cdff0f5fa37c59177dd3db055be12cff37ba0d46f5a"
+  },
+  {
+    "notebook": "08_all_model_mixture.ipynb",
+    "status": "passed",
+    "legacy_data_reads_blocked": true,
+    "seconds": 56.12,
+    "notebook_sha256": "8eb5b92162484fa4c8e6bac9edfc1539dac9280bf3b1f7707f4a250734718848"
+  },
+  {
+    "notebook": "09_poll_weight_experiments.ipynb",
+    "status": "passed",
+    "legacy_data_reads_blocked": true,
+    "seconds": 16.75,
+    "notebook_sha256": "f31d8bb17ddd7d410e0a5c7cc75c5d4804cdd720e41e18b5c47c89a9fda07e11"
+  },
+  {
+    "notebook": "10_model_disagreements.ipynb",
+    "status": "passed",
+    "legacy_data_reads_blocked": true,
+    "seconds": 3.08,
+    "notebook_sha256": "6825c7008378fe65b7af02fc6586f8b543b10a3d56b93b7ca8df33b496f2819d"
+  }
+]

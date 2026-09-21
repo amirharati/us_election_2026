@@ -1,7 +1,0 @@
-{
-  "poll_sensitivity.csv": "b75675b2cf54d7f157059c34bff1564f1438269b9cd976d7dd41fb808fef4125",
-  "run.json": "23362f1bbf9f56a6b7dbd9e922c5a419ed5e6c05e2a711c462760570a6c5ebfc",
-  "seats.csv": "5fabee90646f24aa0debec67fddaa78a7c0ef47aa37e44bd6b3584d74264cd20",
-  "seats.parquet": "7349638c5568c0dcbe7318c575012bd4d5d8a8a359aac520d8b4d12136734e16",
-  "states.parquet": "d1b90110f10e4766d377df07784d9c9efd3d4ce617d46c5703668fa6cf96efa2"
-}

@@ -14,10 +14,17 @@ required. Existing local archives have not been deleted.
   successful live forecast. It contains historical labels/poll metadata, current
   polls, normalized model feature observations, materialized monthly features,
   political context, source receipts, and checksums.
-- `outputs/` and `reports/`: complete report/result runs, including their tables,
-  arrays, images, HTML, and manifests. Intermediate refresh and cutoff inference
-  runs are ignored. Select useful report runs when committing; `.gitignore`
-  does not automatically select only the newest report.
+- `outputs/reports/`: latest Markdown reports and the latest forecast HTML/chart.
+- `outputs/results/`: one complete latest bundle per forecast, experiment or training
+  task, including tables, arrays, metadata and manifests. These support rerunning
+  downstream notebooks from a clone without retaining all timestamped runs.
+- `outputs/validation/`: latest notebook status and cleanup validation.
+- `reports/`: source-audit and historical migration documentation.
+
+Start with [the output index](../outputs/README.md). Old timestamped outputs have
+been moved to ignored `cache/legacy_outputs/`; new executions stay in ignored
+`cache/runs/`. Published latest bundles are replaced, so output folders do not
+accumulate dates. `.codex/` is also ignored and its existing log is untracked.
 
 The two compact bundles preserve historical information and unknown values;
 compression does not truncate history or round observations. Feature records
@@ -53,7 +60,7 @@ committed current-input changes; daily raw archive copies are unnecessary.
 
 Live and cutoff runs update forecasts with fixed historical calibration; they
 never overwrite `assets/`. `run.py train` reproduces the bundled historical fit,
-checks it against the saved fit, and writes `outputs/training/<timestamp>/fit.npz`.
+checks it against the saved fit, and writes `outputs/results/training/training/fit.npz`.
 It does not promote a replacement model, and that partial fit file is not a
 complete drop-in checkpoint. Student commands resample posterior distributions.
 A future training-data or model update requires explicit validation/promotion.
@@ -77,5 +84,5 @@ python scripts/run_notebooks.py
 
 The runner uses the active Python environment, executes cells in order, saves
 successful notebooks in place, and writes a status report under
-`outputs/notebook_execution/`. It blocks access to all legacy `data/` directories
+`outputs/validation/`. It blocks access to all legacy `data/` directories
 outside `data/compact/`, so accidental raw-data dependencies fail visibly.

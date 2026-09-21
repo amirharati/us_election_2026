@@ -1,0 +1,20 @@
+{
+  "notebooks_passed": 10,
+  "tests_passed": 34,
+  "published_result_bundles": 12,
+  "markdown_links_checked": 59,
+  "previous_output_files": 1220,
+  "published_output_files": 318,
+  "previous_output_bytes": 47201942,
+  "published_output_bytes": 13219255,
+  "git_eligible_bytes": 62309302,
+  "codex_untracked": true,
+  "source_cutoff": "2026-09-21",
+  "stale_sources": [
+    "fred"
+  ],
+  "clean_copy_audit": true,
+  "clean_copy_all_latest_bundles": true,
+  "clean_copy_markdown_html_regeneration": true,
+  "clean_copy_offline_live_publication": true
+}

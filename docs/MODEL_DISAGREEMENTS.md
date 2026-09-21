@@ -1,6 +1,6 @@
 # Current model disagreement review
 
-Data cutoff: September20,2026. Review: `outputs/model_disagreement/20260921T003945.240960Z`.
+Data cutoff: September20,2026. Review: `cache/legacy_outputs/20260921T044037Z/model_disagreement/20260921T003945.240960Z`.
 Poll-weight experiments are excluded. Scope is the four Bayesian models, corrected-polling helper, retained Gaussian mean shifts, four-model mixture and mixture mean shifts. The16 retained forecasts share data and are not independent votes. Notebook10 contains every state, ranked spreads, interval plots and covariance/seat-tail summaries.
 
 ## Main findings

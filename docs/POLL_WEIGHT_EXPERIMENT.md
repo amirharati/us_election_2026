@@ -50,7 +50,7 @@ This is a controlled sensitivity of means and bias calibration, not a fully rede
 
 ## Outputs and interpretation
 
-`outputs/poll_weights/<timestamp>/` includes:
+`outputs/results/experiments/poll_weights/` includes:
 
 - `predictions.parquet`, `seats.parquet`: all variants, both arms and historical/live cases.
 - `cycle_scores.parquet`, `summary.parquet`: cycle-level and all/recent historical accuracy, MAE, Brier, coverage, widths and WIS.

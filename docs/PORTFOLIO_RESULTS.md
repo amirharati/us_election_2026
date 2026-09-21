@@ -1,6 +1,6 @@
 # Portfolio comparison results
 
-Saved comparison: `outputs/portfolio/20260920T212316.436489Z`. Live source: `outputs/live/20260920T212126.170629Z`.
+Saved comparison: `cache/legacy_outputs/20260921T044037Z/portfolio/20260920T212316.436489Z`. Live source: `cache/legacy_outputs/20260921T044037Z/live/20260920T212126.170629Z`.
 As of 2026-09-20. Gaussian remains reference; mixture and shifts are exploratory.
 
 ## Recent historical folds,2016–2024

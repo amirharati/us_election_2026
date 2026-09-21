@@ -1,0 +1,13 @@
+{
+  "bias_estimates.parquet": "18b660a296ad00cabcaf190cc3d05b1d831488ba8f7294aabc44943854357997",
+  "checks.parquet": "cd541537e8368a110a3e1e2cb6645dfa34c745f1cd97ef70ab16c66f0cc55b09",
+  "cycle_scores.parquet": "082e8a847364de371607c6ce26746108582811ad13eb64da7276a6d62c626e99",
+  "predictions.parquet": "e9d8054949376bffcb259c1dd0733c66617680bcd41270148d585c003df044b8",
+  "ratings.parquet": "f43bbcdb48a10030f4a97d2de796219856dfd05732514e508983926adc55ce3b",
+  "raw_polls.parquet": "7eb03d29c9a1ade7bad9cded23b23ad93ddb5f0539ee07d1589c0599311df25a",
+  "raw_summary.parquet": "28f2fda35b9be8306a9b2b8dc33cb4ac9d44938c094e171f22c37dfc44ed006d",
+  "run.json": "605e64d7472c5ceecb85cd3fccbc10d3e187ea4967c76823afd8c95686151dd5",
+  "sample_weights.parquet": "9854a4922026f0108119f95d23ce13a4f4bd189ee24fe9b70be8a0513aa3057d",
+  "seats.parquet": "782b4f8cca3fde7107786817d8510e54143739b6df536f1c99fb94a6b5b83801",
+  "summary.parquet": "b0a372db276a9f87def250c5cbcca31c1fde99aa786fef38086b43eb1f3a1081"
+}

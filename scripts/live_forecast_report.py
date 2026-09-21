@@ -187,11 +187,71 @@ def recent_table(table, last_days=3):
     return recent.pivot(index='model',columns='date',values=['D_control_pct','R_control_pct']).round(2)
 
 
+def markdown_report(out, meta, seats, predictions, watchlist, history_run=None):
+    """Readable GitHub report, with full numerical bundles linked separately."""
+    from output_publication import markdown_table
+    main=seats[seats.model.eq('Bayesian')].iloc[0]
+    lines=[f'# 2026 Senate forecast — {meta["as_of"]}', '',
+        '[All outputs](../../README.md) · [HTML report](report.html) · [Supporting tables](../../results/forecast/live_reports/)', '',
+        '## At a glance', '',
+        f'- **Democratic control: {main.D_control_pct:.1f}%** under the reference Gaussian model.',
+        f'- **Expected Democratic seats: {main.expected_D:.1f}**; central 70% range: **{int(main.D_lo70)}–{int(main.D_hi70)}**.',
+        f'- Predicted winners by mean margin: **{int(main.point_D)} D / {int(main.point_R)} R**.',
+        f'- Trained through **{meta["trained_through"]}**. Live evidence updates predictions; trained parameters are fixed.', '',
+        'Margins are Democratic minus Republican percentage points. Positive margins favor Democrats. D control requires 51 seats; R control includes a 50–50 chamber under the retained vice-presidential tie-break assumption.', '',
+        '## Data freshness', '']
+    sources=meta.get('freshness',{}).get('sources',[])
+    statuses={'fresh_check_cache':'Recent successful check reused','checked_online':'Checked online this run',
+              'offline_cache':'Offline: saved evidence','stale_cache_after_failure':'STALE: source check failed; saved evidence used'}
+    if sources:
+        frame=pd.DataFrame([{'Source':r['source'],'Status':statuses.get(r.get('acquisition_status'),r.get('acquisition_status','Unknown')),
+                             'Last successful check':r.get('checked_at') or 'Not recorded'} for r in sources])
+        lines += [markdown_table(frame),'']
+    lines += [f'Political context is reviewed through **{meta["political_reference_reviewed_through"]}**. '+
+              ('It is carried forward as an explicit assumption.' if meta['political_context_carried_forward'] else 'No carry-forward is needed.'), '',
+              'The forecast cutoff does not mean every source has observations through that date. Missing evidence is not replaced with a zero.', '',
+              '## Chamber forecast across models', '']
+    chamber=seats[['model','expected_D','D_control_pct','R_control_pct','D_lo70','D_hi70']].rename(columns={
+        'model':'Model','expected_D':'Expected D seats','D_control_pct':'D control %','R_control_pct':'R control %',
+        'D_lo70':'D seats: 70% low','D_hi70':'D seats: 70% high'})
+    lines += [markdown_table(chamber),'', 'Mixtures and polling blends are comparisons, not automatically selected replacements for the reference model.', '',
+              '## State forecasts — reference model','']
+    state=predictions[predictions.model.eq('Bayesian')][['geography','special','margin_pp','p_dem','lo95_pp','hi95_pp']].copy()
+    state['Contest']=state.geography+state.special.map(lambda x:' (special)' if x else '')
+    state['D win %']=100*state.p_dem
+    state=state.rename(columns={'margin_pp':'D−R margin','lo95_pp':'95% low','hi95_pp':'95% high'})
+    lines += [markdown_table(state,['Contest','D−R margin','D win %','95% low','95% high']), '',
+              '## Recently polled races with broad uncertainty', '']
+    broad=watchlist['broad'].query("model == 'Bayesian'")
+    if broad.empty:lines+=['No reference-model contests meet the configured recency and interval-width thresholds.','']
+    else:
+        lines += [markdown_table(broad,['contest','latest_poll','recent_samples','recent_firms','stronger_coverage','width95_pp']), '']
+    settings=watchlist.get('parameters',{})
+    lines += ['Watchlist settings: '+', '.join(f'{k}={v}' for k,v in settings.items())+'.','']
+    if history_run is not None:
+        hm=json.loads((history_run/'run.json').read_text());history=pd.read_parquet(history_run/'control_history.parquet')
+        lines += ['## Control probability over cutoff dates','',
+            '**This is a retrospective reconstruction, not a record of forecasts issued on those dates.** The current roster, revised historical features and September-calibrated model are reused at earlier cutoffs.', '',
+            '![Control probabilities across cutoff dates](control_history.png)', '',
+            '### Recent reference-model cutoffs','']
+        recent=history[history.model.eq('Bayesian')].sort_values('cutoff').tail(hm['last_days'])
+        lines += [markdown_table(recent,['cutoff','D_control_pct','R_control_pct','expected_D','D_lo70','D_hi70']), '',
+            f'History mode: **{hm["feature_mode"]}**; regular spacing: **{hm["every_days"]} days**. Small differences can include Monte Carlo variation. All models and cutoff rows are in the HTML and supporting Parquet tables.','']
+    else:lines+=['## Cutoff history','','This current-only report does not yet include cutoff history. Run notebook 04 to publish the full history.','']
+    lines += ['## Provenance and interpretation','',
+        '- [Forecast settings, input hash and source receipts](../../results/forecast/live_reports/forecast_metadata.json)',
+        '- [Complete state predictions](../../results/forecast/live_reports/predictions.parquet)',
+        '- [Chamber results](../../results/forecast/live_reports/seats.parquet)', '',
+        'The model retains its candidate, caucus, election-rule, historical-vintage and small-sample limitations. Probabilities are model estimates. An unchanged fitted checkpoint can produce different forecasts when polls, feature observations or the cutoff change.', '']
+    (out/'report.md').write_text('\n'.join(lines))
+
+
 def save_report(live_run, watchlist, history_run=None):
-    """Save a self-contained HTML report, plus machine-readable result tables."""
+    """Save Markdown and self-contained HTML reports, plus supporting tables."""
     live_run = lab.verify_run(live_run)
     meta = json.loads((live_run/'run.json').read_text())
     out = lab.new_run('live_reports')
+    lab.write_json(out/'forecast_metadata.json',meta)
     seats = _seat_history_row(live_run)
     pred = pd.read_parquet(live_run/'predictions.parquet')
     seats.to_parquet(out/'seats.parquet',index=False)
@@ -236,6 +296,7 @@ def save_report(live_run, watchlist, history_run=None):
         '<pre>'+html.escape(json.dumps(meta,indent=2))+'</pre>'])
     page='<!doctype html><html><head><meta charset="utf-8"><title>2026 Senate forecast report</title><style>body{font-family:system-ui,sans-serif;margin:32px;line-height:1.45}table{border-collapse:collapse;font-size:13px;margin:16px 0}th,td{padding:6px 10px;border:1px solid #ddd;text-align:right}th{background:#eef2f6}details{margin:16px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere}img{max-width:100%}</style></head><body>'+''.join(parts)+'</body></html>'
     (out/'report.html').write_text(page)
+    markdown_report(out,meta,seats,pred,watchlist,history_run)
     return lab.finish(out,dict(kind='live_report',as_of=meta['as_of'],
         live_run=str(live_run.relative_to(lab.ROOT)),live_manifest_sha256=lab.sha(live_run/'manifest.json'),
         watchlist_parameters=watchlist.get('parameters',{}),

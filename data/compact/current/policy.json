@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-20",
+  "as_of": "2026-09-21",
   "disruption": "OR of health/VIX/GPR high-stress proxies; Jan(cutoff_year-4)..last closed month; original source/threshold limitations retained",
   "feature_window": "Latest eligible closed month (or quarter); 3 consecutive months for means; exact 12-month endpoints for growth, 24 months for cpi_24m_pct",
   "historical_horizon_days": 44,

@@ -17,7 +17,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 def run(start=1):
-    out=ROOT/'outputs/notebook_execution';out.mkdir(parents=True,exist_ok=True)
+    out=ROOT/'outputs/validation';out.mkdir(parents=True,exist_ok=True)
     os.environ.setdefault('MPLCONFIGDIR',str(ROOT/'cache/matplotlib'))
     os.environ.setdefault('NUMBA_CACHE_DIR',str(ROOT/'cache/numba'))
     os.environ.setdefault('OPENBLAS_NUM_THREADS','1')
@@ -33,7 +33,8 @@ _sys.addaudithook(_forbid_legacy_data)
 print('Verification: legacy data reads blocked; compact inputs and local download cache allowed.')
 """
     report=[]
-    status=out/'results.json'
+    status=out/'notebooks.json'
+    logs_dir=ROOT/'cache/notebook_execution';logs_dir.mkdir(parents=True,exist_ok=True)
     if start>1 and status.exists():report=[r for r in json.loads(status.read_text()) if int(r['notebook'][:2])<start]
     with tempfile.TemporaryDirectory(prefix='election-kernel-') as temp:
         spec=Path(temp)/'election-verify';spec.mkdir()
@@ -59,11 +60,15 @@ print('Verification: legacy data reads blocked; compact inputs and local downloa
                     for o in c.get('outputs',[]):
                         if o.output_type=='stream':logs.append(o.text)
                         if o.output_type=='error':logs.append('\n'.join(o.traceback))
-                (out/(path.stem+'.log')).write_text('\n'.join(logs))
+                (logs_dir/(path.stem+'.log')).write_text('\n'.join(logs))
                 # Preserve failed executions separately; successful notebooks are saved in place.
-                nbformat.write(notebook,path if result['status']=='passed' else out/path.name)
+                nbformat.write(notebook,path if result['status']=='passed' else logs_dir/path.name)
                 result['notebook_sha256']=hashlib.sha256(path.read_bytes()).hexdigest()
                 report.append(result);status.write_text(json.dumps(report,indent=2)+'\n')
+                lines=['# Notebook execution', '', 'Executed in order with legacy raw-data reads blocked. Successful notebooks are saved in place; logs and failed attempts stay in the ignored local cache.', '',
+                       '| Notebook | Status | Seconds |', '|---|---|---:|']
+                lines += [f"| [{r['notebook']}](../../notebooks/{r['notebook']}) | {r['status']} | {r['seconds']:.2f} |" for r in report]
+                (out/'notebooks.md').write_text('\n'.join(lines)+'\n')
                 print(result['status'].upper(),path.name,result['seconds'],'seconds',flush=True)
             if result['status']=='failed':
                 print(result['error'],flush=True);return 1

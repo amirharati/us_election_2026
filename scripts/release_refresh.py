@@ -111,7 +111,7 @@ def refresh_live(force=False, offline=False, ttl_hours=6., timeout=20,
             sources=[{k:v for k,v in r.items() if k not in ['snapshot','raw_snapshot']} for r in results])
         with tempfile.TemporaryDirectory(dir=ROOT/'cache',prefix='compact-update-') as tmp:
             candidate=prepare(current,results,as_of,Path(tmp)/'candidate')
-            old_pointer=ROOT/'outputs/live/latest.json'
+            old_pointer=ROOT/'cache/runs/live/latest.json'
             previous=old_pointer.read_bytes() if old_pointer.exists() else None
             try:
                 forecast=release.live_forecast(candidate,include_student=include_student,freshness=freshness)
@@ -122,11 +122,14 @@ def refresh_live(force=False, offline=False, ttl_hours=6., timeout=20,
                 if not replay.exists():shutil.copytree(candidate,replay)
                 metadata=json.loads((forecast/'run.json').read_text())
                 metadata['dataset']=str(replay.relative_to(ROOT))
-                release.finish(forecast,metadata)
+                release.finish(forecast,metadata,publish=False)
                 backup=Path(tmp)/'previous'
                 current.rename(backup)
-                try:candidate.rename(current)
+                try:
+                    candidate.rename(current)
+                    release.publish_run(forecast)
                 except BaseException:
+                    if current.exists():shutil.rmtree(current)
                     backup.rename(current);raise
             except BaseException:
                 if previous is not None:old_pointer.write_bytes(previous)

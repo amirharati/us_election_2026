@@ -72,7 +72,7 @@ class CompactTests(unittest.TestCase):
 
     def test_failed_inference_does_not_promote_current_inputs(self):
         before=lab.sha(HOME/'current/manifest.json')
-        pointer=lab.ROOT/'outputs/live/latest.json';old=pointer.read_bytes() if pointer.exists() else None
+        pointer=lab.ROOT/'cache/runs/live/latest.json';old=pointer.read_bytes() if pointer.exists() else None
         with patch.object(lab,'live_forecast',side_effect=RuntimeError('test inference failure')):
             with self.assertRaisesRegex(RuntimeError,'test inference failure'):
                 refresh.refresh_live(offline=True,include_student=False)

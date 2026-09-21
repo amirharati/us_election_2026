@@ -46,16 +46,23 @@ def write_json(path, value):
 
 
 def new_run(kind):
-    p=ROOT/'outputs'/kind/datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ')
+    p=ROOT/'cache/runs'/kind/datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ')
     p.mkdir(parents=True);return p
 
 
-def finish(out, metadata):
+def finish(out, metadata, publish=True):
     write_json(out/'run.json',metadata)
     manifest={str(p.relative_to(out)):sha(p) for p in sorted(out.rglob('*')) if p.is_file() and p.name!='manifest.json'}
     write_json(out/'manifest.json',manifest)
     write_json(out.parent/'latest.json',dict(artifact=out.name,manifest_sha256=sha(out/'manifest.json')))
+    if publish:
+        publish_run(out)
     return out
+
+
+def publish_run(out):
+    from output_publication import publish
+    publish(ROOT, out)
 
 
 def verify_run(path):
@@ -67,10 +74,13 @@ def verify_run(path):
 
 
 def latest_run(kind):
-    root=ROOT/'outputs'/kind;pointer=json.loads((root/'latest.json').read_text())
-    p=root/pointer['artifact']
-    if sha(p/'manifest.json')!=pointer['manifest_sha256']:raise ValueError('Changed run manifest')
-    return verify_run(p)
+    from output_publication import result_path
+    root=ROOT/'cache/runs'/kind
+    if (root/'latest.json').exists():
+        pointer=json.loads((root/'latest.json').read_text());p=root/pointer['artifact']
+        if sha(p/'manifest.json')!=pointer['manifest_sha256']:raise ValueError('Changed run manifest')
+        return verify_run(p)
+    return verify_run(result_path(ROOT,kind))
 
 
 def dataset_for_run(metadata):
@@ -125,7 +135,7 @@ def seat_row(q, draws, model, reference, method='Bayesian joint covariance'):
                 actual_D=float(reference.actual_D),method=method),freq
 
 
-def reproduce(include_student=True, weights=WEIGHTS, plain_weights=(.2,.5,.7)):
+def reproduce(include_student=True, weights=WEIGHTS, plain_weights=(.2,.5,.7), output_kind='reproduction'):
     """Recompute Gaussian posteriors, non-Bayesian corrections and mean blends.
 
 Uses bundled historical training fits, never the parent lab. Student historical
@@ -137,7 +147,7 @@ MCMC output is verified and loaded; rerun it explicitly with rerun_student().
     reference=pd.read_parquet(ASSETS/'main/seats.parquet')
     nb=pd.read_parquet(ASSETS/'reference_blends/predictions.parquet').query('model == "Bayesian"')
     hist=pd.read_parquet(ASSETS/'training/history.parquet')
-    out=new_run('reproduction');(out/'forecasts').mkdir()
+    out=new_run(output_kind);(out/'forecasts').mkdir()
     predictions=[];seats=[];checks=[]
     for fold in folds.itertuples():
         sc,year=fold.scenario,int(fold.cycle)
@@ -291,7 +301,7 @@ def display_tables(path):
 
 def weight_experiment():
     """One fixed grid; no selecting weights on the cycle being scored."""
-    return reproduce(include_student=False,weights=[.05,.10,.20,.30,.40,.50],plain_weights=())
+    return reproduce(include_student=False,weights=[.05,.10,.20,.30,.40,.50],plain_weights=(),output_kind='blend_weights')
 
 
 def prepare_live_evidence(snapshot, as_of=None, feature_mode='dated'):
@@ -414,7 +424,7 @@ def live_forecast(snapshot, include_student=True, weights=(.1,.2,.4,.5), freshne
         trained_through=2024,calibration_horizon='frozen September17 historical forecasts',
         refreshed_hyperparameters=False,weights=list(weights),freshness=freshness or {},
         missing_current_feature_scores=future_scores.columns[future_scores.isna().any()].tolist(),
-        political_reference_reviewed_through=political_review,political_context_carried_forward=bool(political_carried)))
+        political_reference_reviewed_through=political_review,political_context_carried_forward=bool(political_carried)),publish=output_kind!='live')
 
 
 def refresh(**kwargs):

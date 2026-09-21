@@ -1,8 +1,16 @@
+# Current report locations
+
+Start with [the output index](../outputs/README.md). Notebook 04 publishes
+`outputs/reports/forecast/report.md`, `report.html`, and `control_history.png`.
+These stable paths always contain the latest published report. Supporting tables
+and manifests are in `outputs/results/forecast/`; timestamped runs and intermediate
+cutoff forecasts are local-only under ignored `cache/runs/`.
+
 # Saved live reports and cutoff history
 
 Notebook04 now saves a current-only report before starting the cutoff replay,
 then a complete report once the replay succeeds. Each is an immutable timestamped
-directory under `outputs/live_reports/`; `latest.json` points to the latest
+directory under `cache/runs/live_reports/`; `latest.json` points to the latest
 completed report. The self-contained `report.html` embeds its chart. Adjacent
 Parquet files preserve the current predictions, chamber probabilities, watchlist,
 and cutoff-history tables; the chart is also available as PNG. No ZIP is created.
@@ -52,7 +60,7 @@ polls/candidates that were relevant earlier in 2026.
 polling cutoffs only. This is a sensitivity experiment, not historical information
 availability. The final endpoint in either mode is the exact current live run.
 Changing the cutoff never changes the pinned dataset on disk or the latest-live
-pointer; intermediate forecasts live under `outputs/cutoff_forecasts/`.
+pointer; intermediate forecasts live under `cache/runs/cutoff_forecasts/`.
 
 ## Control probabilities and uncertainty
 

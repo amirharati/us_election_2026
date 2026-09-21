@@ -4,6 +4,14 @@ The package was tested with CPython 3.11.7 and the numerical package versions in
 `requirements.txt`. The required Excel/PDF parsers were also installed and used.
 A completely fresh installation on a second operating system was not tested.
 
+## Output hierarchy revalidation — September 21
+
+All ten notebooks were rerun and saved after reorganizing output publication;
+34 tests pass. Markdown reports, complete latest result bundles, and execution
+status now have stable paths under `outputs/`. Start with the
+[output index](../outputs/README.md) and [cleanup validation](../outputs/validation/output_cleanup.md).
+Previous dated runs are preserved locally under ignored `cache/legacy_outputs/`.
+
 ## Compact-package revalidation
 
 All ten notebooks and 31 tests passed after the compact-ingestion migration.

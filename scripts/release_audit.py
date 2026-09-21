@@ -37,8 +37,9 @@ def audit():
         assert fit['years'].max()<r.cycle
         lab.verify_selection(r.scenario,int(r.cycle))
     checks['all_15_chronological_model_selections']=True
-    root=lab.ROOT/'outputs/reproduction'
-    if (root/'latest.json').exists():
+    from output_publication import result_path
+    root=result_path(lab.ROOT,'reproduction')
+    if (root/'manifest.json').exists():
         run=lab.latest_run('reproduction');p=pd.read_parquet(run/'predictions.parquet');s=pd.read_parquet(run/'seats.parquet')
         reference=pd.read_parquet(lab.ASSETS/'reference_blends/predictions.parquet')
         common=set(p.model)&set(reference.model)

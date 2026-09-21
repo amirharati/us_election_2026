@@ -1,3 +1,4 @@
+/.codex/
 # Local environments, Python/Jupyter caches, and editor/OS scratch files.
 .venv/
 venv/
@@ -19,11 +20,6 @@ __pycache__/
 /data/final_work/
 /data/**/latest.json
 
-# Intermediate runs; keep complete report/result runs and their manifests.
-# In particular, DO NOT blanket-ignore outputs/, *.parquet, or *.npz.
-/outputs/cutoff_forecasts/
-/outputs/refresh/
-
 # Raw archives and legacy preparation trees are optional local ingestion/audit data.
 # The self-contained compact historical/current model inputs are ordinary Git files.
 /data/*
@@ -33,4 +29,6 @@ __pycache__/
 !/data/compact/current/
 
 # Notebook execution logs and local reproducibility scratch.
-/outputs/notebook_execution/*.log
+/outputs/validation/*.log
+/outputs/results/**/.publish-*/
+/outputs/reports/**/.publish-*/

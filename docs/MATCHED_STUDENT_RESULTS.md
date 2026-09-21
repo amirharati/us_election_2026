@@ -68,8 +68,8 @@ meaningful distinction from 50%; sampling and model uncertainty remain.
 - Maximum R-hat: 1.005375; minimum bulk/tail ESS: 2742.4.
 - Nine tests passed, including an independent quadrature check of a scalar observed Student posterior.
 - Notebook 06 executed successfully; the comparison figure was inspected.
-- Sampler run: `outputs/matched_student/20260920T205948.809875Z`.
-- Tables and figure: `outputs/matched_student_review/20260920T210126.682933Z`.
+- Sampler run: `cache/legacy_outputs/20260921T044037Z/matched_student/20260920T205948.809875Z`.
+- Tables and figure: `cache/legacy_outputs/20260921T044037Z/matched_student_review/20260920T210126.682933Z`.
 
 All 2012–2024 per-cycle results, current state margins/probabilities and sampler
 diagnostics are in notebook 06 and these versioned artifacts. Historical scores

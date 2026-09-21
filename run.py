@@ -44,7 +44,10 @@ def main():
     else:
         from release_audit import audit
         print(audit());return
-    print(out)
+    from output_publication import result_path
+    print('Published results:',result_path(lab.ROOT,out.parent.name))
+    print('Readable reports:',lab.ROOT/'outputs/README.md')
+    print('Local execution archive:',out)
 
 
 if __name__=='__main__':main()

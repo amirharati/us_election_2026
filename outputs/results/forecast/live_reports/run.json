@@ -1,0 +1,14 @@
+{
+  "kind": "live_report",
+  "as_of": "2026-09-21",
+  "live_run": "cache/runs/live/20260921T044340.518203Z",
+  "live_manifest_sha256": "59c5e1e1d35b0ac4835a6293414237d84857d9d03ec66685897b397d9282155f",
+  "watchlist_parameters": {
+    "recent_days": 30,
+    "min_width_pp": 25,
+    "min_samples": 3,
+    "min_firms": 2
+  },
+  "history_run": "cache/runs/control_history/20260921T044500.122041Z",
+  "history_manifest_sha256": "b2d48dd88140199468fffd2b58bb6e34f0801a1db175e2049ffc88d95b30d8a7"
+}
