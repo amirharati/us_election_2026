@@ -161,3 +161,15 @@ See [Git storage and model updates](docs/GIT_STORAGE.md) for the compact input
 layout, current-only refresh, source-audit boundary, and model promotion behavior.
 Run all ten notebooks with `python scripts/run_notebooks.py`; this also checks
 that none depends on the ignored legacy data trees.
+
+Dated reports are kept in `outputs/reports/history/YYYY-MM-DD/<report-type>/report.md`,
+using the UTC execution date (the forecast cutoff is shown inside). Same-day reruns
+replace that day’s report; other dates remain. Linked charts, tables and provenance
+are copied with the report, while full execution archives remain ignored. Notebook
+report generation and CLI report-producing tasks use this same publication path.
+Run `python run.py report` to generate a dated forecast report from the saved forecast
+without downloading data or fitting models. `python run.py live` also generates a report.
+
+Notebooks 07 and 08 share verified portfolio calculations but publish separate reports:
+`outputs/reports/experiments/older_alternatives.md` and
+`outputs/reports/experiments/all_model_mixture.md`, with separate dated archives.

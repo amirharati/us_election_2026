@@ -102,3 +102,37 @@ Validation checks include the cutoff schedule, cache invalidation, future poll
 field/release exclusion, future feature reference-period exclusion, chronological
 training, both-party probability complements, no duplicate cutoff/model rows,
 and equality of every model's current endpoint to the saved live forecast.
+
+Dated reports are kept in `outputs/reports/history/YYYY-MM-DD/<report-type>/report.md`,
+using the UTC execution date (the forecast cutoff is shown inside). Same-day reruns
+replace that day’s report; other dates remain. Linked charts, tables and provenance
+are copied with the report, while full execution archives remain ignored. Notebook
+report generation and CLI report-producing tasks use this same publication path.
+Run `python run.py report` to generate a dated forecast report from the saved forecast
+without downloading data or fitting models. `python run.py live` also generates a report.
+
+## Room for a surprise
+
+Notebook 04 section 5b and every newly generated forecast report include separate
+watchlists for adequately polled races (3 independent eligible samples / 2 firms
+in 30 days by default) and thin/no recent polling. These cover every forecast
+contest, keeping regular and special elections separate.
+
+Within each group, take the union of the top three by mean absolute pairwise
+core-model margin difference, RMS within-model predictive standard deviation,
+reference-model other-winner probability, and historical mean absolute margin
+error (at least two past races). Sort the selected races by other-winner probability.
+This is an explicit screening rule, not a fitted surprise-risk score. The likely
+winner and 95% range come from the reference Bayesian model; RMS SD summarizes
+available core models and can differ from the reference interval. Related blends
+and mixtures are excluded, and model counts are retained in the numerical output.
+
+Past errors use up to three completed state races from the September historical
+backtest before the forecast year, requiring comparable horizons. They may involve
+other Senate seats, candidates or special elections. Show worst error/year,
+95% interval misses and wrong-winner counts; missing history is labelled rather
+than treated as zero. Past misses flag review and do not modify win probabilities.
+
+Full scores, polling counts, model counts, selection reasons and provenance are
+saved as `surprise_*.parquet` and `surprise_parameters.json` in the forecast report
+bundle. The dated report also retains its linked all-race scores and settings.

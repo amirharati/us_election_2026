@@ -15,15 +15,15 @@ Margins are Democratic minus Republican percentage points. Positive margins favo
 
 | Source         | Status                                          | Last successful check            |
 |:---------------|:------------------------------------------------|:---------------------------------|
-| polls          | Recent successful check reused                  | 2026-09-21T01:30:21.133335+00:00 |
+| polls          | Checked online this run                         | 2026-09-21T17:09:51.964927+00:00 |
 | fred           | STALE: source check failed; saved evidence used | Not recorded                     |
-| michigan       | Recent successful check reused                  | 2026-09-21T01:30:21.672682+00:00 |
-| ucsb           | Recent successful check reused                  | 2026-09-21T01:30:19.881029+00:00 |
-| french         | Recent successful check reused                  | 2026-09-21T01:30:20.378348+00:00 |
-| cboe           | Recent successful check reused                  | 2026-09-21T01:30:20.682464+00:00 |
-| gpr            | Recent successful check reused                  | 2026-09-21T01:30:23.335887+00:00 |
-| epu            | Recent successful check reused                  | 2026-09-21T01:30:22.308967+00:00 |
-| infectious_emv | Recent successful check reused                  | 2026-09-21T01:30:22.306390+00:00 |
+| michigan       | Checked online this run                         | 2026-09-21T17:09:53.828754+00:00 |
+| ucsb           | Checked online this run                         | 2026-09-21T17:09:50.236540+00:00 |
+| french         | Checked online this run                         | 2026-09-21T17:09:50.886920+00:00 |
+| cboe           | Checked online this run                         | 2026-09-21T17:09:51.358046+00:00 |
+| gpr            | Checked online this run                         | 2026-09-21T17:09:52.621928+00:00 |
+| epu            | Checked online this run                         | 2026-09-21T17:09:53.060556+00:00 |
+| infectious_emv | Checked online this run                         | 2026-09-21T17:09:53.060806+00:00 |
 
 Political context is reviewed through **2026-09-17**. It is carried forward as an explicit assumption.
 
@@ -101,7 +101,43 @@ Mixtures and polling blends are comparisons, not automatically selected replacem
 | MT         | 2026-09-15    |                3 |              3 | True                |                     27.31 |
 | FL special | 2026-09-17    |                3 |              3 | True                |                     25.82 |
 
-Watchlist settings: recent_days=30, min_width_pp=25, min_samples=3, min_firms=2.
+Watchlist settings: recent_days=30, min_width_pp=25.0, min_samples=3, min_firms=2.
+
+## Races to watch — room for a different outcome
+
+Reference-model winner, margin, 95% interval and other-winner probability describe the likely outcome and its alternatives. Disagreement is the mean absolute pairwise difference in core-model margins. Predictive SD is the square root of the mean within-model variance, not variance between model means. Blends/mixtures are excluded; the core models share evidence and are not independent votes. Within each polling group, select the top 3 races on each of disagreement, predictive SD, reference-model other-winner probability, and historical mean absolute error (at least two past races); take their union and order by other-winner probability. Ties are broken by contest name. This is a review screen, not a calibrated probability of surprising the public. History uses the last three completed state races in September backtests before the current cycle; it can include other Senate seats and special elections. These are reconstructed forecasts, not issued forecasts. Past errors are context and do not alter current probabilities.
+
+Coverage: at least 3 independent eligible samples from 2 firms in the past 30 days.
+
+Available core models: Bayesian, Matched Student-t (df5), Older Gaussian, Student-t research helper, Non-Bayesian corrected.
+
+### Adequately polled races
+
+| Race       | Likely winner   |   D−R margin | 95% range (pp)   |   Other winner % |   Disagreement (pp) |   Predictive SD (pp) | Recent polls / firms   | Past state surprises                                                                                                   | Why watch                                                                                                                                |
+|:-----------|:----------------|-------------:|:-----------------|-----------------:|--------------------:|---------------------:|:-----------------------|:-----------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------|
+| TX         | D               |         0.10 | -9.5 to 9.6      |            49.50 |                0.50 |                 7.00 | 9 / 9                  | The largest miss was 5.1 pp in 2018. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.  | Other-winner probability ranks #1 in this group. Models disagree on the winner.                                                          |
+| OH special | D               |         2.80 | -8.4 to 13.9     |            31.30 |                2.40 |                 7.40 | 3 / 3                  | The largest miss was 5.9 pp in 2022. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.  | Other-winner probability ranks #2 in this group. Models disagree on the winner.                                                          |
+| AK         | R               |        -3.10 | -14.7 to 8.5     |            30.00 |                1.30 |                 7.90 | 3 / 3                  | No comparable history is available.                                                                                    | Predictive uncertainty ranks #3 in this group. Other-winner probability ranks #3 in this group.                                          |
+| IA         | R               |        -3.30 | -14.9 to 8.4     |            29.20 |                1.20 |                 7.60 | 9 / 9                  | The largest miss was 10.4 pp in 2016. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Past margin error ranks #3 in this group.                                                                                                |
+| FL special | R               |        -5.50 | -18.4 to 7.4     |            20.30 |                2.30 |                 8.40 | 3 / 3                  | The largest miss was 12.4 pp in 2022. 1 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Predictive uncertainty ranks #1 in this group. Past margin error ranks #2 in this group. 1 of 3 past results fell outside the 95% range. |
+| MI         | D               |         5.00 | -6.7 to 16.7     |            20.10 |                3.60 |                 7.70 | 8 / 8                  | The largest miss was 11.9 pp in 2018. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Model disagreement ranks #3 in this group. Past margin error ranks #1 in this group. Models disagree on the winner.                      |
+| ME         | D               |         8.20 | -3.2 to 19.6     |             8.00 |                3.80 |                 7.80 | 4 / 4                  | No comparable history is available.                                                                                    | Model disagreement ranks #2 in this group. Models disagree on the winner.                                                                |
+| MT         | R               |       -18.70 | -32.3 to -5.0    |             0.40 |                4.20 |                 8.20 | 3 / 3                  | The largest miss was 8.8 pp in 2020. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.  | Model disagreement ranks #1 in this group. Predictive uncertainty ranks #2 in this group.                                                |
+
+### Thinly polled or no recent polls
+
+| Race   | Likely winner   |   D−R margin | 95% range (pp)   | Other winner %   |   Disagreement (pp) |   Predictive SD (pp) | Recent polls / firms   | Past state surprises                                                                                                   | Why watch                                                                                                                                                                                                               |
+|:-------|:----------------|-------------:|:-----------------|:-----------------|--------------------:|---------------------:|:-----------------------|:-----------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GA     | D               |         5.20 | -6.5 to 16.9     | 19.2             |                1.20 |                 7.90 | 1 / 1                  | No comparable history is available.                                                                                    | Other-winner probability ranks #1 in this group. Recent polling is limited.                                                                                                                                             |
+| MN     | D               |         8.40 | -5.7 to 22.4     | 12.1             |                1.90 |                 8.20 | 1 / 1                  | The largest miss was 8.9 pp in 2020. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.  | Other-winner probability ranks #2 in this group. Recent polling is limited.                                                                                                                                             |
+| CO     | D               |        17.40 | -6.0 to 40.9     | 7.3              |                5.30 |                12.60 | 0 / 0                  | The largest miss was 8.1 pp in 2022. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.  | Other-winner probability ranks #3 in this group. There are no recent eligible polls.                                                                                                                                    |
+| WV     | R               |       -32.50 | -72.7 to 7.7     | 5.7              |               11.00 |                31.10 | 0 / 0                  | The largest miss was 47.9 pp in 2020. 1 of 3 results fell outside the 95% range. It missed the winner in 1 of 3 races. | Model disagreement ranks #1 in this group. Predictive uncertainty ranks #1 in this group. Past margin error ranks #2 in this group. There are no recent eligible polls. 1 of 3 past results fell outside the 95% range. |
+| NE     | R               |       -24.10 | -50.1 to 2.0     | 3.5              |                1.90 |                20.40 | 0 / 0                  | The largest miss was 22.2 pp in 2020. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Predictive uncertainty ranks #2 in this group. Past margin error ranks #3 in this group. There are no recent eligible polls.                                                                                            |
+| AR     | R               |       -20.80 | -34.7 to -6.9    | 0.2              |                6.40 |                 9.60 | 0 / 0                  | The largest miss was 16.7 pp in 2022. 2 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Model disagreement ranks #2 in this group. There are no recent eligible polls. 2 of 3 past results fell outside the 95% range.                                                                                          |
+| OR     | D               |        23.10 | 8.1 to 38.1      | 0.1              |                6.10 |                 9.70 | 0 / 0                  | The largest miss was 9.7 pp in 2020. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.  | Model disagreement ranks #3 in this group. There are no recent eligible polls.                                                                                                                                          |
+| SD     | R               |       -34.00 | -52.8 to -15.3   | <0.1             |                4.00 |                18.30 | 0 / 0                  | The largest miss was 32.0 pp in 2016. 1 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Predictive uncertainty ranks #3 in this group. Past margin error ranks #1 in this group. There are no recent eligible polls. 1 of 3 past results fell outside the 95% range.                                            |
+
+[All races and numerical scores](../../results/forecast/live_reports/surprise_all.parquet) · [Watchlist settings and provenance](../../results/forecast/live_reports/surprise_parameters.json)
 
 ## Control probability over cutoff dates
 

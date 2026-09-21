@@ -1,6 +1,6 @@
 # Results — start here
 
-Only the latest published results live here. Each rerun replaces the corresponding report and result bundle; Git history preserves committed versions.
+Latest reports and supporting results are below. Dated reports are retained in Git: one copy per UTC execution date and report type; same-day reruns replace that day’s copy. Forecast cutoffs are recorded inside each report.
 
 ## Forecast
 
@@ -9,15 +9,23 @@ Only the latest published results live here. Each rerun replaces the correspondi
 
 ## Comparisons and training
 
+- [All-model mixture review](reports/experiments/all_model_mixture.md)
 - [Blend-weight comparison](reports/experiments/blend_weights.md)
 - [Matched Student-t comparison](reports/experiments/matched_student.md)
 - [Matched Student-t review](reports/experiments/matched_student_review.md)
 - [Where the models disagree](reports/experiments/model_disagreement.md)
+- [Older model alternatives](reports/experiments/older_alternatives.md)
 - [Poll-weight experiments](reports/experiments/poll_weights.md)
 - [All-model comparison and mixtures](reports/experiments/portfolio.md)
 - [Frozen model reproduction](reports/experiments/reproduction.md)
 - [Wave and polling-error scenarios](reports/experiments/scenarios.md)
 - [Historical training reproduction](reports/training/training.md)
+
+## Dated reports
+
+- [2026-09-21 — Older model alternatives](reports/history/2026-09-21/older_alternatives/report.md)
+- [2026-09-21 — Forecast report](reports/history/2026-09-21/live_reports/report.md)
+- [2026-09-21 — All-model mixture review](reports/history/2026-09-21/all_model_mixture/report.md)
 
 ## Validation
 

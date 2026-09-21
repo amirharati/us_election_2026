@@ -1,7 +1,7 @@
 {
   "kind": "control_history",
   "as_of": "2026-09-21",
-  "live_run": "cache/runs/live/20260921T044340.518203Z",
+  "live_run": "cache/runs/live/20260921T171049.906872Z",
   "start": "2026-01-01",
   "every_days": 30,
   "last_days": 3,
@@ -24,90 +24,90 @@
     "Mixture + polling 40%",
     "Mixture + polling 50%"
   ],
-  "source_manifest_sha256": "59c5e1e1d35b0ac4835a6293414237d84857d9d03ec66685897b397d9282155f",
-  "model_hash": "35722d2b4a01db07f25e0d4bbaafc8c7be5baa81d1e962465e8e07e235a6e65e",
+  "source_manifest_sha256": "13ff84a248ed24a6d9d7717737708a52441e705ed9680589de04e16e3cb367d5",
+  "model_hash": "49ef85935aa9d166fb78574b3b226114de9fdc794d66de5bcc775dd2c72be175",
   "cutoff_sources": [
     {
       "cutoff": "2026-01-01",
-      "run": "cache/runs/cutoff_forecasts/20260921T044347.660771Z",
-      "manifest_sha256": "22d70da30b2debd1c6ba4a863173c2dd48412b76ab526d33ea7432a046437741",
+      "run": "cache/runs/cutoff_forecasts/20260921T171057.475606Z",
+      "manifest_sha256": "2c82628e1e08dfbb8c17723a733fd041a2e78abf34ecda66aadcba72d8fff6e6",
       "status": "computed",
-      "input_fingerprint": "a5ebc8917546d2b398f35b7e9b91550a0f813bffdc4af643f8d7a0fa03c1cbdf"
+      "input_fingerprint": "4875cc5f70674a472a5b52c6062859a28694d1a4abd49367d6d6855e4905cc95"
     },
     {
       "cutoff": "2026-01-31",
-      "run": "cache/runs/cutoff_forecasts/20260921T044354.364646Z",
-      "manifest_sha256": "cd120895da7c55e8a4dd0cb5ebc6f771eeb98cb0e500d1a3115b9ee7a5af851f",
+      "run": "cache/runs/cutoff_forecasts/20260921T171103.639249Z",
+      "manifest_sha256": "c7f19df9cdcc0b940b6188f7e2a10ef2f2bdb8d74d7ac3573bb602f14a3f5e4c",
       "status": "computed",
-      "input_fingerprint": "2e5bd1979a0636cd49e023e50a905951514529fb1251f6c267bb40e5268ffc83"
+      "input_fingerprint": "dc119cdfc418c20a11b076b7b0cd9ab22439201e5c0eb080a59f72ad02ff157e"
     },
     {
       "cutoff": "2026-03-02",
-      "run": "cache/runs/cutoff_forecasts/20260921T044400.663565Z",
-      "manifest_sha256": "2c924fd4258c210cc59a807c8e8d666b9af5739b473d7cd1b11290a5af08a991",
+      "run": "cache/runs/cutoff_forecasts/20260921T171109.873114Z",
+      "manifest_sha256": "45d2363ff00cd59ca57da3d09d36b89b4f8fdd8074bbfd9acd0b5d1498536e50",
       "status": "computed",
-      "input_fingerprint": "cabb6bdf516f02341eceb4c1b80a78ae33d53cf44d1bc76706a74af80d6a7ac4"
+      "input_fingerprint": "0f5bc39754a7f819b5ba8f10b80a42b725c0f5042009c6e597abddf790ab6faf"
     },
     {
       "cutoff": "2026-04-01",
-      "run": "cache/runs/cutoff_forecasts/20260921T044406.679079Z",
-      "manifest_sha256": "ef1b575da050577a68992f3a7735579257847c773f825acf7b4313e26c4ebd3b",
+      "run": "cache/runs/cutoff_forecasts/20260921T171116.352764Z",
+      "manifest_sha256": "12645f261e3e7566d52ced824b14760b2ccc0da639cfb3f20954c9178e3b14d0",
       "status": "computed",
-      "input_fingerprint": "4e51f0b2f693aff542d487fbb5bf9a9d9c2baa6fb3250243613aac35fac537b0"
+      "input_fingerprint": "9eb07bf92da2c499bab0989749029134a1ec638e9084bd4e8cf17da2710471c2"
     },
     {
       "cutoff": "2026-05-01",
-      "run": "cache/runs/cutoff_forecasts/20260921T044413.742612Z",
-      "manifest_sha256": "5a216f786d0341e3548af14e16b496cd3910cde7ecf9514b2bc944fd20671034",
+      "run": "cache/runs/cutoff_forecasts/20260921T171122.762065Z",
+      "manifest_sha256": "0e91ddf97a792de16b0d5e75e4f3f0d94344e07ef7d2271e1d55b57ec5c9c7df",
       "status": "computed",
-      "input_fingerprint": "110505186c2483c63913a0f44a50ea77a041eb0234882b44305849b1107c727f"
+      "input_fingerprint": "1fe9027f5a311094f43101891330736c087a167086595fcb6b2f3a6142232bbf"
     },
     {
       "cutoff": "2026-05-31",
-      "run": "cache/runs/cutoff_forecasts/20260921T044420.511312Z",
-      "manifest_sha256": "224f4c502ab27087b927e17887d8ab5b4c1fd4836a6e656fc57dedddb84ef85c",
+      "run": "cache/runs/cutoff_forecasts/20260921T171131.393617Z",
+      "manifest_sha256": "9fac87b1c12b3e96347c3c0889ca67c1efeb77a0e4fcbfae88187b457114f8ca",
       "status": "computed",
-      "input_fingerprint": "f4924ac21c3ec2bfab1d2d1ff12c311ce82986974c6e79e4a29e45daa5e619c8"
+      "input_fingerprint": "f862d25204fd343c46e661263a262a351d0f10ac99005bc55f060b5a67d705b7"
     },
     {
       "cutoff": "2026-06-30",
-      "run": "cache/runs/cutoff_forecasts/20260921T044427.556857Z",
-      "manifest_sha256": "547e1eaebc85a5c8f54388e9c6e2655e43f6dce590565fdff4f3a92546002071",
+      "run": "cache/runs/cutoff_forecasts/20260921T171138.953107Z",
+      "manifest_sha256": "89d17cf0cf3cdcebb640decb63e53bf5858347e96297ea617ea9336b75b95f00",
       "status": "computed",
-      "input_fingerprint": "8f0213f1242bf42f6c56ac08696cff2efef6d92a88bc90adf941771c1d8d1aee"
+      "input_fingerprint": "f1023ec005797ff8549f6f1ab2c7a8e94d65b52125bfadeceda5f0b8c00ab343"
     },
     {
       "cutoff": "2026-07-30",
-      "run": "cache/runs/cutoff_forecasts/20260921T044434.407659Z",
-      "manifest_sha256": "a8da7c2c41685492427a4221b6fe90521551f291cf12942574e2d8e21ddd759a",
+      "run": "cache/runs/cutoff_forecasts/20260921T171147.131146Z",
+      "manifest_sha256": "ff175b3a4b0ab68fca9964b06ed8b494ee3bd801e70dc5654b16fe05d6a06cf4",
       "status": "computed",
-      "input_fingerprint": "f1e8f4b64fd5d706724a7fcac61564e99973f4727d4b4cf11eff82b9cd295ace"
+      "input_fingerprint": "5cffe191a9e9051c2565cfc04fac6483dc4f9f89a4720e3f0386714afa14af68"
     },
     {
       "cutoff": "2026-08-29",
-      "run": "cache/runs/cutoff_forecasts/20260921T044441.548492Z",
-      "manifest_sha256": "c520ebb737b26bfa657f80ca2e15267b00916bcc2818cabf82550c247efe70aa",
+      "run": "cache/runs/cutoff_forecasts/20260921T171153.586017Z",
+      "manifest_sha256": "7f500937f2522f708039948237212f3a766f2d0b3d0f6dfad7fc57f634b2d450",
       "status": "computed",
-      "input_fingerprint": "8c87e32ad134aba5b3c25a31967e3fc6c948fdbb51c5386d987a1eca77990e1f"
+      "input_fingerprint": "41b09de7edc16c1c7317525245a64d3c7e36b3d8dd9631d229ebe7037d28fe17"
     },
     {
       "cutoff": "2026-09-19",
-      "run": "cache/runs/cutoff_forecasts/20260921T044449.052922Z",
-      "manifest_sha256": "4e339f575a7dbf3336bee3e21ecba21874c993c42cabdcf58c5194d09e71ff3c",
+      "run": "cache/runs/cutoff_forecasts/20260921T171200.702068Z",
+      "manifest_sha256": "0a8a90e16b38665e2e736071b282025213e013142558873c81c59859cb869201",
       "status": "computed",
-      "input_fingerprint": "3df758083c42507d5d5612ace69ff16ee6b1bcd06fab379fb8784a710ad80587"
+      "input_fingerprint": "2256fe46919254f2e72d431e8b37df6929fcf4f58bb4002d0892a465c90c5377"
     },
     {
       "cutoff": "2026-09-20",
-      "run": "cache/runs/cutoff_forecasts/20260921T044456.014332Z",
-      "manifest_sha256": "faa78279a6a54ff13f12adfcb9e33ea517df002cf149fa6ae51149d1f3701c78",
+      "run": "cache/runs/cutoff_forecasts/20260921T171207.925760Z",
+      "manifest_sha256": "5935ebcc902412904946fef69cb5014c4cda7b6953469748a366d0ce0bb6c1da",
       "status": "computed",
-      "input_fingerprint": "2fb7e4fbaae49057cf24736a6de4b29bb8dabdb452dbc5e14593428b2aaba875"
+      "input_fingerprint": "deb0a7bf24a93032f569b325682b86536bc61560f253d6a515eafb2f70435cdf"
     },
     {
       "cutoff": "2026-09-21",
-      "run": "cache/runs/live/20260921T044340.518203Z",
-      "manifest_sha256": "59c5e1e1d35b0ac4835a6293414237d84857d9d03ec66685897b397d9282155f",
+      "run": "cache/runs/live/20260921T171049.906872Z",
+      "manifest_sha256": "13ff84a248ed24a6d9d7717737708a52441e705ed9680589de04e16e3cb367d5",
       "status": "current_live_run",
       "input_fingerprint": null
     }

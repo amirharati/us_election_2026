@@ -190,7 +190,7 @@
       <td>52</td>
     </tr>
   </tbody>
-</table><h2>Recently polled states with broad uncertainty</h2><p>Wide intervals are not themselves evidence of fat tails. The stronger-coverage flag distinguishes multiple recent samples/firms from a single recent poll.</p><p>Watchlist settings: {&quot;recent_days&quot;: 30, &quot;min_width_pp&quot;: 25, &quot;min_samples&quot;: 3, &quot;min_firms&quot;: 2}</p><table border="1" class="dataframe">
+</table><h2>Recently polled states with broad uncertainty</h2><p>Wide intervals are not themselves evidence of fat tails. The stronger-coverage flag distinguishes multiple recent samples/firms from a single recent poll.</p><p>Watchlist settings: {&quot;recent_days&quot;: 30, &quot;min_width_pp&quot;: 25.0, &quot;min_samples&quot;: 3, &quot;min_firms&quot;: 2}</p><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th>model</th>
@@ -209,11 +209,39 @@
       <td>MT, FL special</td>
     </tr>
     <tr>
-      <td>Matched Student-t (df5)</td>
+      <td>Corrected 10%</td>
       <td>17</td>
-      <td>2</td>
-      <td>NM, MN</td>
-      <td>None</td>
+      <td>4</td>
+      <td>NM, MN, MT, FL special</td>
+      <td>MT, FL special</td>
+    </tr>
+    <tr>
+      <td>Corrected 20%</td>
+      <td>17</td>
+      <td>4</td>
+      <td>NM, MN, MT, FL special</td>
+      <td>MT, FL special</td>
+    </tr>
+    <tr>
+      <td>Corrected 40%</td>
+      <td>17</td>
+      <td>4</td>
+      <td>NM, MN, MT, FL special</td>
+      <td>MT, FL special</td>
+    </tr>
+    <tr>
+      <td>Corrected 50%</td>
+      <td>17</td>
+      <td>4</td>
+      <td>NM, MN, MT, FL special</td>
+      <td>MT, FL special</td>
+    </tr>
+    <tr>
+      <td>Non-Bayesian corrected</td>
+      <td>17</td>
+      <td>17</td>
+      <td>AK, FL special, GA, IA, KS, KY, MA, ME, MI, MN, MT, NC, NH, NM, OH special, SC, TX</td>
+      <td>AK, FL special, IA, ME, MI, MT, NC, OH special, SC, TX</td>
     </tr>
     <tr>
       <td>Older Gaussian</td>
@@ -230,11 +258,11 @@
       <td>FL special</td>
     </tr>
     <tr>
-      <td>Non-Bayesian corrected</td>
+      <td>Matched Student-t (df5)</td>
       <td>17</td>
-      <td>17</td>
-      <td>AK, FL special, GA, IA, KS, KY, MA, ME, MI, MN, MT, NC, NH, NM, OH special, SC, TX</td>
-      <td>AK, FL special, IA, ME, MI, MT, NC, OH special, SC, TX</td>
+      <td>2</td>
+      <td>NM, MN</td>
+      <td>None</td>
     </tr>
     <tr>
       <td>Four-model mixture</td>
@@ -244,7 +272,42 @@
       <td>FL special, MT, AK</td>
     </tr>
     <tr>
+      <td>Mixture + polling 5%</td>
+      <td>17</td>
+      <td>7</td>
+      <td>NM, FL special, NH, MT, MN, KY, AK</td>
+      <td>FL special, MT, AK</td>
+    </tr>
+    <tr>
+      <td>Mixture + polling 10%</td>
+      <td>17</td>
+      <td>7</td>
+      <td>NM, FL special, NH, MT, MN, KY, AK</td>
+      <td>FL special, MT, AK</td>
+    </tr>
+    <tr>
       <td>Mixture + polling 20%</td>
+      <td>17</td>
+      <td>7</td>
+      <td>NM, FL special, NH, MT, MN, KY, AK</td>
+      <td>FL special, MT, AK</td>
+    </tr>
+    <tr>
+      <td>Mixture + polling 30%</td>
+      <td>17</td>
+      <td>7</td>
+      <td>NM, FL special, NH, MT, MN, KY, AK</td>
+      <td>FL special, MT, AK</td>
+    </tr>
+    <tr>
+      <td>Mixture + polling 40%</td>
+      <td>17</td>
+      <td>7</td>
+      <td>NM, FL special, NH, MT, MN, KY, AK</td>
+      <td>FL special, MT, AK</td>
+    </tr>
+    <tr>
+      <td>Mixture + polling 50%</td>
       <td>17</td>
       <td>7</td>
       <td>NM, FL special, NH, MT, MN, KY, AK</td>
@@ -331,7 +394,233 @@
       <td>True</td>
     </tr>
   </tbody>
-</table><h2>State margins, probabilities and95% ranges — all models</h2><details><summary>Bayesian</summary><table border="1" class="dataframe">
+</table><h2>Races to watch — room for a different outcome</h2><p>Reference-model winner, margin, 95% interval and other-winner probability describe the likely outcome and its alternatives. Disagreement is the mean absolute pairwise difference in core-model margins. Predictive SD is the square root of the mean within-model variance, not variance between model means. Blends/mixtures are excluded; the core models share evidence and are not independent votes. Within each polling group, select the top 3 races on each of disagreement, predictive SD, reference-model other-winner probability, and historical mean absolute error (at least two past races); take their union and order by other-winner probability. Ties are broken by contest name. This is a review screen, not a calibrated probability of surprising the public. History uses the last three completed state races in September backtests before the current cycle; it can include other Senate seats and special elections. These are reconstructed forecasts, not issued forecasts. Past errors are context and do not alter current probabilities.</p><p>Settings: {&quot;as_of&quot;: &quot;2026-09-21&quot;, &quot;recent_days&quot;: 30, &quot;min_samples&quot;: 3, &quot;min_firms&quot;: 2, &quot;top_n&quot;: 3, &quot;core_models&quot;: [&quot;Bayesian&quot;, &quot;Matched Student-t (df5)&quot;, &quot;Older Gaussian&quot;, &quot;Student-t research helper&quot;, &quot;Non-Bayesian corrected&quot;], &quot;available_models&quot;: [&quot;Bayesian&quot;, &quot;Matched Student-t (df5)&quot;, &quot;Older Gaussian&quot;, &quot;Student-t research helper&quot;, &quot;Non-Bayesian corrected&quot;], &quot;history_sha256&quot;: &quot;e168daabc2efeccb4db025386f8ed78ea4e4ab9a7d7f49e37716352a4e027d86&quot;, &quot;historical_scope&quot;: &quot;state, not necessarily same Senate seat&quot;, &quot;historical_scenario&quot;: &quot;matched_live&quot;, &quot;source_manifest_sha256&quot;: &quot;13ff84a248ed24a6d9d7717737708a52441e705ed9680589de04e16e3cb367d5&quot;}</p><h3>Adequately polled races</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Race</th>
+      <th>Likely winner</th>
+      <th>D−R margin</th>
+      <th>95% range (pp)</th>
+      <th>Other winner %</th>
+      <th>Disagreement (pp)</th>
+      <th>Predictive SD (pp)</th>
+      <th>Recent polls / firms</th>
+      <th>Past state surprises</th>
+      <th>Why watch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TX</td>
+      <td>D</td>
+      <td>0.10</td>
+      <td>-9.5 to 9.6</td>
+      <td>49.5</td>
+      <td>0.50</td>
+      <td>7.00</td>
+      <td>9 / 9</td>
+      <td>The largest miss was 5.1 pp in 2018. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.</td>
+      <td>Other-winner probability ranks #1 in this group. Models disagree on the winner.</td>
+    </tr>
+    <tr>
+      <td>OH special</td>
+      <td>D</td>
+      <td>2.80</td>
+      <td>-8.4 to 13.9</td>
+      <td>31.3</td>
+      <td>2.40</td>
+      <td>7.40</td>
+      <td>3 / 3</td>
+      <td>The largest miss was 5.9 pp in 2022. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.</td>
+      <td>Other-winner probability ranks #2 in this group. Models disagree on the winner.</td>
+    </tr>
+    <tr>
+      <td>AK</td>
+      <td>R</td>
+      <td>-3.10</td>
+      <td>-14.7 to 8.5</td>
+      <td>30.0</td>
+      <td>1.30</td>
+      <td>7.90</td>
+      <td>3 / 3</td>
+      <td>No comparable history is available.</td>
+      <td>Predictive uncertainty ranks #3 in this group. Other-winner probability ranks #3 in this group.</td>
+    </tr>
+    <tr>
+      <td>IA</td>
+      <td>R</td>
+      <td>-3.30</td>
+      <td>-14.9 to 8.4</td>
+      <td>29.2</td>
+      <td>1.20</td>
+      <td>7.60</td>
+      <td>9 / 9</td>
+      <td>The largest miss was 10.4 pp in 2016. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.</td>
+      <td>Past margin error ranks #3 in this group.</td>
+    </tr>
+    <tr>
+      <td>FL special</td>
+      <td>R</td>
+      <td>-5.50</td>
+      <td>-18.4 to 7.4</td>
+      <td>20.3</td>
+      <td>2.30</td>
+      <td>8.40</td>
+      <td>3 / 3</td>
+      <td>The largest miss was 12.4 pp in 2022. 1 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.</td>
+      <td>Predictive uncertainty ranks #1 in this group. Past margin error ranks #2 in this group. 1 of 3 past results fell outside the 95% range.</td>
+    </tr>
+    <tr>
+      <td>MI</td>
+      <td>D</td>
+      <td>5.00</td>
+      <td>-6.7 to 16.7</td>
+      <td>20.1</td>
+      <td>3.60</td>
+      <td>7.70</td>
+      <td>8 / 8</td>
+      <td>The largest miss was 11.9 pp in 2018. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.</td>
+      <td>Model disagreement ranks #3 in this group. Past margin error ranks #1 in this group. Models disagree on the winner.</td>
+    </tr>
+    <tr>
+      <td>ME</td>
+      <td>D</td>
+      <td>8.20</td>
+      <td>-3.2 to 19.6</td>
+      <td>8.0</td>
+      <td>3.80</td>
+      <td>7.80</td>
+      <td>4 / 4</td>
+      <td>No comparable history is available.</td>
+      <td>Model disagreement ranks #2 in this group. Models disagree on the winner.</td>
+    </tr>
+    <tr>
+      <td>MT</td>
+      <td>R</td>
+      <td>-18.70</td>
+      <td>-32.3 to -5.0</td>
+      <td>0.4</td>
+      <td>4.20</td>
+      <td>8.20</td>
+      <td>3 / 3</td>
+      <td>The largest miss was 8.8 pp in 2020. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.</td>
+      <td>Model disagreement ranks #1 in this group. Predictive uncertainty ranks #2 in this group.</td>
+    </tr>
+  </tbody>
+</table><h3>Thinly polled or no recent polls</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Race</th>
+      <th>Likely winner</th>
+      <th>D−R margin</th>
+      <th>95% range (pp)</th>
+      <th>Other winner %</th>
+      <th>Disagreement (pp)</th>
+      <th>Predictive SD (pp)</th>
+      <th>Recent polls / firms</th>
+      <th>Past state surprises</th>
+      <th>Why watch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GA</td>
+      <td>D</td>
+      <td>5.20</td>
+      <td>-6.5 to 16.9</td>
+      <td>19.2</td>
+      <td>1.20</td>
+      <td>7.90</td>
+      <td>1 / 1</td>
+      <td>No comparable history is available.</td>
+      <td>Other-winner probability ranks #1 in this group. Recent polling is limited.</td>
+    </tr>
+    <tr>
+      <td>MN</td>
+      <td>D</td>
+      <td>8.40</td>
+      <td>-5.7 to 22.4</td>
+      <td>12.1</td>
+      <td>1.90</td>
+      <td>8.20</td>
+      <td>1 / 1</td>
+      <td>The largest miss was 8.9 pp in 2020. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.</td>
+      <td>Other-winner probability ranks #2 in this group. Recent polling is limited.</td>
+    </tr>
+    <tr>
+      <td>CO</td>
+      <td>D</td>
+      <td>17.40</td>
+      <td>-6.0 to 40.9</td>
+      <td>7.3</td>
+      <td>5.30</td>
+      <td>12.60</td>
+      <td>0 / 0</td>
+      <td>The largest miss was 8.1 pp in 2022. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.</td>
+      <td>Other-winner probability ranks #3 in this group. There are no recent eligible polls.</td>
+    </tr>
+    <tr>
+      <td>WV</td>
+      <td>R</td>
+      <td>-32.50</td>
+      <td>-72.7 to 7.7</td>
+      <td>5.7</td>
+      <td>11.00</td>
+      <td>31.10</td>
+      <td>0 / 0</td>
+      <td>The largest miss was 47.9 pp in 2020. 1 of 3 results fell outside the 95% range. It missed the winner in 1 of 3 races.</td>
+      <td>Model disagreement ranks #1 in this group. Predictive uncertainty ranks #1 in this group. Past margin error ranks #2 in this group. There are no recent eligible polls. 1 of 3 past results fell outside the 95% range.</td>
+    </tr>
+    <tr>
+      <td>NE</td>
+      <td>R</td>
+      <td>-24.10</td>
+      <td>-50.1 to 2.0</td>
+      <td>3.5</td>
+      <td>1.90</td>
+      <td>20.40</td>
+      <td>0 / 0</td>
+      <td>The largest miss was 22.2 pp in 2020. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.</td>
+      <td>Predictive uncertainty ranks #2 in this group. Past margin error ranks #3 in this group. There are no recent eligible polls.</td>
+    </tr>
+    <tr>
+      <td>AR</td>
+      <td>R</td>
+      <td>-20.80</td>
+      <td>-34.7 to -6.9</td>
+      <td>0.2</td>
+      <td>6.40</td>
+      <td>9.60</td>
+      <td>0 / 0</td>
+      <td>The largest miss was 16.7 pp in 2022. 2 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.</td>
+      <td>Model disagreement ranks #2 in this group. There are no recent eligible polls. 2 of 3 past results fell outside the 95% range.</td>
+    </tr>
+    <tr>
+      <td>OR</td>
+      <td>D</td>
+      <td>23.10</td>
+      <td>8.1 to 38.1</td>
+      <td>0.1</td>
+      <td>6.10</td>
+      <td>9.70</td>
+      <td>0 / 0</td>
+      <td>The largest miss was 9.7 pp in 2020. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.</td>
+      <td>Model disagreement ranks #3 in this group. There are no recent eligible polls.</td>
+    </tr>
+    <tr>
+      <td>SD</td>
+      <td>R</td>
+      <td>-34.00</td>
+      <td>-52.8 to -15.3</td>
+      <td>&lt;0.1</td>
+      <td>4.00</td>
+      <td>18.30</td>
+      <td>0 / 0</td>
+      <td>The largest miss was 32.0 pp in 2016. 1 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.</td>
+      <td>Predictive uncertainty ranks #3 in this group. Past margin error ranks #1 in this group. There are no recent eligible polls. 1 of 3 past results fell outside the 95% range.</td>
+    </tr>
+  </tbody>
+</table><h2>State margins, probabilities and 95% ranges — all models</h2><details><summary>Bayesian</summary><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th>geography</th>
@@ -13576,39 +13865,39 @@
       <td>21</td>
       <td>190</td>
       <td>2026-08-29</td>
-      <td>759</td>
-      <td>759</td>
+      <td>760</td>
+      <td>760</td>
     </tr>
     <tr>
       <td>2026-09-19</td>
       <td>21</td>
       <td>233</td>
       <td>2026-09-18</td>
-      <td>824</td>
-      <td>824</td>
+      <td>826</td>
+      <td>826</td>
     </tr>
     <tr>
       <td>2026-09-20</td>
       <td>21</td>
       <td>233</td>
       <td>2026-09-18</td>
-      <td>824</td>
-      <td>824</td>
+      <td>826</td>
+      <td>826</td>
     </tr>
     <tr>
       <td>2026-09-21</td>
       <td>21</td>
       <td>233</td>
       <td>2026-09-18</td>
-      <td>824</td>
-      <td>824</td>
+      <td>826</td>
+      <td>826</td>
     </tr>
   </tbody>
 </table></details><h2>Freshness and provenance</h2><pre>{
   &quot;kind&quot;: &quot;live&quot;,
   &quot;as_of&quot;: &quot;2026-09-21&quot;,
-  &quot;dataset&quot;: &quot;cache/run_inputs/2765d4c4b15ec5ee199ab30a9244dbc2cfa9c1900c246b82b9aee397e19b200b&quot;,
-  &quot;dataset_manifest_sha256&quot;: &quot;2765d4c4b15ec5ee199ab30a9244dbc2cfa9c1900c246b82b9aee397e19b200b&quot;,
+  &quot;dataset&quot;: &quot;cache/run_inputs/58598358f0270da2b820b48e94ccfcba0fa37d1a8ba0148a3846689f6f675ecb&quot;,
+  &quot;dataset_manifest_sha256&quot;: &quot;58598358f0270da2b820b48e94ccfcba0fa37d1a8ba0148a3846689f6f675ecb&quot;,
   &quot;snapshot_as_of&quot;: &quot;2026-09-21&quot;,
   &quot;feature_mode&quot;: &quot;dated&quot;,
   &quot;reconstruction&quot;: false,
@@ -13657,17 +13946,17 @@
     ],
     &quot;sources&quot;: [
       {
-        &quot;freshness&quot;: {},
-        &quot;manifest_sha256&quot;: &quot;57b9dd02b08a2b06260db98a05d3d16d312e4e7de643dde703d85a2ab8e94ffb&quot;,
-        &quot;poll_latest_dates&quot;: {
-          &quot;generic_latest_poll_end&quot;: &quot;2026-09-17&quot;,
-          &quot;latest_poll_end&quot;: &quot;2026-09-18&quot;
-        },
+        &quot;manifest_sha256&quot;: &quot;b55dba5aec0cf5b4a2dac8c3d7406416d8b15d30f766875e66a71696eb92fc8a&quot;,
         &quot;verified_files&quot;: 8,
+        &quot;freshness&quot;: {},
+        &quot;poll_latest_dates&quot;: {
+          &quot;latest_poll_end&quot;: &quot;2026-09-18&quot;,
+          &quot;generic_latest_poll_end&quot;: &quot;2026-09-17&quot;
+        },
         &quot;source&quot;: &quot;polls&quot;,
         &quot;status&quot;: &quot;saved_or_unchanged&quot;,
-        &quot;acquisition_status&quot;: &quot;fresh_check_cache&quot;,
-        &quot;checked_at&quot;: &quot;2026-09-21T01:30:21.133335+00:00&quot;
+        &quot;acquisition_status&quot;: &quot;checked_online&quot;,
+        &quot;checked_at&quot;: &quot;2026-09-21T17:09:51.964927+00:00&quot;
       },
       {
         &quot;freshness&quot;: {
@@ -13689,6 +13978,8 @@
         &quot;checked_at&quot;: null
       },
       {
+        &quot;manifest_sha256&quot;: &quot;e7a0689a158df5b85c8ab753575a520ccf80c8ab2e6b6f45e40e4cfd40049faa&quot;,
+        &quot;verified_files&quot;: 17,
         &quot;freshness&quot;: {
           &quot;RB_10.xls&quot;: {},
           &quot;RB_1a.xls&quot;: {},
@@ -13703,111 +13994,102 @@
           &quot;YB_6.xls&quot;: {},
           &quot;YB_8.xls&quot;: {}
         },
-        &quot;manifest_sha256&quot;: &quot;a24aae01833c7e57f31081b4c601ea4a116f7272cab5049e2d302bbd993f14a3&quot;,
         &quot;poll_latest_dates&quot;: {},
-        &quot;retrieved_at&quot;: &quot;2026-09-21T01:30:19.060243+00:00&quot;,
-        &quot;verified_files&quot;: 17,
         &quot;source&quot;: &quot;michigan&quot;,
         &quot;status&quot;: &quot;saved_or_unchanged&quot;,
-        &quot;acquisition_status&quot;: &quot;fresh_check_cache&quot;,
-        &quot;checked_at&quot;: &quot;2026-09-21T01:30:21.672682+00:00&quot;
+        &quot;acquisition_status&quot;: &quot;checked_online&quot;,
+        &quot;checked_at&quot;: &quot;2026-09-21T17:09:53.828754+00:00&quot;
       },
       {
+        &quot;manifest_sha256&quot;: &quot;392675af2807e33f85ecedff4359c438580329b68810777476f0c856f26f52f2&quot;,
+        &quot;verified_files&quot;: 6,
         &quot;freshness&quot;: {
           &quot;donald-j-trump-2nd-term-public-approval.html&quot;: {}
         },
-        &quot;manifest_sha256&quot;: &quot;5c85b579622ee7129d2a60203598b4c8d79ddd4b7b1eba04db7a3624fd22d813&quot;,
         &quot;poll_latest_dates&quot;: {},
-        &quot;retrieved_at&quot;: &quot;2026-09-21T01:30:19.054786+00:00&quot;,
-        &quot;verified_files&quot;: 6,
         &quot;source&quot;: &quot;ucsb&quot;,
         &quot;status&quot;: &quot;saved_or_unchanged&quot;,
-        &quot;acquisition_status&quot;: &quot;fresh_check_cache&quot;,
-        &quot;checked_at&quot;: &quot;2026-09-21T01:30:19.881029+00:00&quot;
+        &quot;acquisition_status&quot;: &quot;checked_online&quot;,
+        &quot;checked_at&quot;: &quot;2026-09-21T17:09:50.236540+00:00&quot;
       },
       {
+        &quot;manifest_sha256&quot;: &quot;98b024dab6924462c19631698713bead895759525d9b429c4d828a160a196eb0&quot;,
+        &quot;verified_files&quot;: 6,
         &quot;freshness&quot;: {
           &quot;ff_factors.zip&quot;: {},
           &quot;ff_factors_daily.zip&quot;: {}
         },
-        &quot;manifest_sha256&quot;: &quot;f8efbb96641d80f56fa1ba66ebdffa6b772b30e19d361cff557fa2f1570c728a&quot;,
         &quot;poll_latest_dates&quot;: {},
-        &quot;retrieved_at&quot;: &quot;2026-09-17T04:18:54.627938+00:00&quot;,
-        &quot;verified_files&quot;: 6,
         &quot;source&quot;: &quot;french&quot;,
         &quot;status&quot;: &quot;saved_or_unchanged&quot;,
-        &quot;acquisition_status&quot;: &quot;fresh_check_cache&quot;,
-        &quot;checked_at&quot;: &quot;2026-09-21T01:30:20.378348+00:00&quot;
+        &quot;acquisition_status&quot;: &quot;checked_online&quot;,
+        &quot;checked_at&quot;: &quot;2026-09-21T17:09:50.886920+00:00&quot;
       },
       {
+        &quot;manifest_sha256&quot;: &quot;c1856ed8788b3dc8a97a1098b233a774116852a967e5c723101957a99a130a1e&quot;,
+        &quot;verified_files&quot;: 6,
         &quot;freshness&quot;: {
           &quot;vix.csv&quot;: {
             &quot;first_source_date&quot;: &quot;1990-01-02&quot;,
-            &quot;freshness&quot;: &quot;has_current_year_rows&quot;,
             &quot;last_source_date&quot;: &quot;2026-09-18&quot;,
-            &quot;selected_rows&quot;: 185
+            &quot;selected_rows&quot;: 185,
+            &quot;freshness&quot;: &quot;has_current_year_rows&quot;
           }
         },
-        &quot;manifest_sha256&quot;: &quot;54d6262c50048b77f5540f76f7c08f19bd1d4b3092837ebb99d1df59f18afeaa&quot;,
         &quot;poll_latest_dates&quot;: {},
-        &quot;retrieved_at&quot;: &quot;2026-09-20T18:27:05.555755+00:00&quot;,
-        &quot;verified_files&quot;: 6,
         &quot;source&quot;: &quot;cboe&quot;,
         &quot;status&quot;: &quot;saved_or_unchanged&quot;,
-        &quot;acquisition_status&quot;: &quot;fresh_check_cache&quot;,
-        &quot;checked_at&quot;: &quot;2026-09-21T01:30:20.682464+00:00&quot;
+        &quot;acquisition_status&quot;: &quot;checked_online&quot;,
+        &quot;checked_at&quot;: &quot;2026-09-21T17:09:51.358046+00:00&quot;
       },
       {
+        &quot;manifest_sha256&quot;: &quot;c18cc2687073438a53fdeb2fbc395fe9e8fe6ce78741224261f1468425dfc870&quot;,
+        &quot;verified_files&quot;: 6,
         &quot;freshness&quot;: {
           &quot;data_gpr_daily_recent.xls&quot;: {},
           &quot;data_gpr_export.xls&quot;: {}
         },
-        &quot;manifest_sha256&quot;: &quot;9137ba5399c15f6fc48bf2fde62858a374061a1a06a0d7c612fb7ad707560a0f&quot;,
         &quot;poll_latest_dates&quot;: {},
-        &quot;retrieved_at&quot;: &quot;2026-09-17T04:18:32.065964+00:00&quot;,
-        &quot;verified_files&quot;: 6,
         &quot;source&quot;: &quot;gpr&quot;,
         &quot;status&quot;: &quot;saved_or_unchanged&quot;,
-        &quot;acquisition_status&quot;: &quot;fresh_check_cache&quot;,
-        &quot;checked_at&quot;: &quot;2026-09-21T01:30:23.335887+00:00&quot;
+        &quot;acquisition_status&quot;: &quot;checked_online&quot;,
+        &quot;checked_at&quot;: &quot;2026-09-21T17:09:52.621928+00:00&quot;
       },
       {
+        &quot;manifest_sha256&quot;: &quot;893ddf666775dee3f856c88be7c02522c347e9dafe7e79a940b44952109d03cf&quot;,
+        &quot;verified_files&quot;: 8,
         &quot;freshness&quot;: {
           &quot;Categorical_EPU_Data.xlsx&quot;: {},
           &quot;US_Policy_Uncertainty_Data.xlsx&quot;: {},
           &quot;daily_epu.csv&quot;: {
             &quot;first_source_date&quot;: &quot;1985-01-01&quot;,
-            &quot;freshness&quot;: &quot;has_current_year_rows&quot;,
-            &quot;last_source_date&quot;: &quot;2026-09-19&quot;,
-            &quot;selected_rows&quot;: 262
+            &quot;last_source_date&quot;: &quot;2026-09-20&quot;,
+            &quot;selected_rows&quot;: 263,
+            &quot;freshness&quot;: &quot;has_current_year_rows&quot;
           }
         },
-        &quot;manifest_sha256&quot;: &quot;d88dac5fc16cafc30369b4386875e16fdfbc71a8a58a86693621f60e2130692d&quot;,
         &quot;poll_latest_dates&quot;: {},
-        &quot;retrieved_at&quot;: &quot;2026-09-20T18:27:05.997412+00:00&quot;,
-        &quot;verified_files&quot;: 8,
         &quot;source&quot;: &quot;epu&quot;,
         &quot;status&quot;: &quot;saved_or_unchanged&quot;,
-        &quot;acquisition_status&quot;: &quot;fresh_check_cache&quot;,
-        &quot;checked_at&quot;: &quot;2026-09-21T01:30:22.308967+00:00&quot;
+        &quot;acquisition_status&quot;: &quot;checked_online&quot;,
+        &quot;checked_at&quot;: &quot;2026-09-21T17:09:53.060556+00:00&quot;
       },
       {
+        &quot;manifest_sha256&quot;: &quot;d08f07792be08b903ad6a5cdd5990ab8fd0cc3193f4b49bd46ad46eae326caaf&quot;,
+        &quot;verified_files&quot;: 6,
         &quot;freshness&quot;: {
           &quot;infectious_emv.csv&quot;: {
             &quot;first_source_date&quot;: &quot;1985-01-01&quot;,
-            &quot;freshness&quot;: &quot;has_current_year_rows&quot;,
-            &quot;last_source_date&quot;: &quot;2026-09-19&quot;,
-            &quot;selected_rows&quot;: 262
+            &quot;last_source_date&quot;: &quot;2026-09-20&quot;,
+            &quot;selected_rows&quot;: 263,
+            &quot;freshness&quot;: &quot;has_current_year_rows&quot;
           }
         },
-        &quot;manifest_sha256&quot;: &quot;0f1ebff9c79d7de2e644189888988f0474a7ac7622124a1029f5b758ada225d0&quot;,
         &quot;poll_latest_dates&quot;: {},
-        &quot;retrieved_at&quot;: &quot;2026-09-20T18:27:07.069495+00:00&quot;,
-        &quot;verified_files&quot;: 6,
         &quot;source&quot;: &quot;infectious_emv&quot;,
         &quot;status&quot;: &quot;saved_or_unchanged&quot;,
-        &quot;acquisition_status&quot;: &quot;fresh_check_cache&quot;,
-        &quot;checked_at&quot;: &quot;2026-09-21T01:30:22.306390+00:00&quot;
+        &quot;acquisition_status&quot;: &quot;checked_online&quot;,
+        &quot;checked_at&quot;: &quot;2026-09-21T17:09:53.060806+00:00&quot;
       }
     ]
   },

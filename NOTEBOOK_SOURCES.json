@@ -1,12 +1,12 @@
 {
-  "notebooks/01_models_and_results.ipynb": "689022675fe1cec9091312b621d8d3b032db58ebe364ab94be3f1c344d386286",
-  "notebooks/02_blend_weights.ipynb": "1be37b1ce7dc368f1bff236e2331fb0975a17749de9c5ec39d31c5931ea71bd0",
-  "notebooks/03_training_and_assumptions.ipynb": "2061171161cf2e4ce3dffcbe8418586665e442310ae44b5b32753d49222dcce3",
-  "notebooks/04_live_forecast.ipynb": "e7a23be248c54125d8fb81b1c647b9df2a2eee09ec2cfc010010ddf4cad84f0f",
-  "notebooks/05_wave_and_poll_error_scenarios.ipynb": "0b517831f7ed7ea38e4d88d77ce51b2c2ee874fdcd1576c0fc8cc52504c8d259",
-  "notebooks/06_matched_student_comparison.ipynb": "cf0b13e766e64ca383944651c830590a3f569d7d6a21166294c605de358d44ab",
-  "notebooks/07_older_model_alternatives.ipynb": "1a65dd597bf6e35a590639a200bde48efdad4de9fdd9173df433935bad1ecba1",
-  "notebooks/08_all_model_mixture.ipynb": "4cef2492e48af09fce838a7b314e2e3e93feafd622e74fb742d54e43807db88e",
-  "notebooks/09_poll_weight_experiments.ipynb": "3b6dfd58e6927b8a07a9386045eaaf85257105b9f96ceb134223bd176de174e9",
-  "notebooks/10_model_disagreements.ipynb": "4b8b5281417ebb0ab517508f1049fa2c7dda492a209a94d68b2409d9ff947bcf"
+  "notebooks/01_models_and_results.ipynb": "2722ec0b2b2a56b8e35618910f0f10fe5485274969ca1ea2bff4355faa91e9de",
+  "notebooks/02_blend_weights.ipynb": "056aee895f3854ec4eac3eb1d34539356dc4201e5b641343d2f338a8792a290d",
+  "notebooks/03_training_and_assumptions.ipynb": "115dd6fc6edc30491d33de918713273b84a013c5ba3846b77fa7127d378a0e46",
+  "notebooks/04_live_forecast.ipynb": "8835266065783e241b1c0a3ad09e95d2dce6bf05a757301828f4a935a56fff7b",
+  "notebooks/05_wave_and_poll_error_scenarios.ipynb": "09d26cf6d69ecc24a314253f524f5b33ad00014c1a4bf666202d144d07447bd6",
+  "notebooks/06_matched_student_comparison.ipynb": "84d15e09910d62b7297c5d03b9a4451bd1d982dd86d9a4a4da2ed1b8a9ac201e",
+  "notebooks/07_older_model_alternatives.ipynb": "9b99d1d1d5f589c1342600a8039814e007a503beeed3e4e2e95e0cb939e978fe",
+  "notebooks/08_all_model_mixture.ipynb": "1434322e1572cd1c1c4679ee0416598caee94c8aa9d9916604f0b15bd55b0cfa",
+  "notebooks/09_poll_weight_experiments.ipynb": "65e8097eb715377e51bb2e674821a080052aae7711f504a4cc172f41d1ce7c27",
+  "notebooks/10_model_disagreements.ipynb": "e7e1d163cdc3c7ddef5ff63bb3014521697b217da3233aa378b3ca46bea71dee"
 }

@@ -187,7 +187,7 @@ def recent_table(table, last_days=3):
     return recent.pivot(index='model',columns='date',values=['D_control_pct','R_control_pct']).round(2)
 
 
-def markdown_report(out, meta, seats, predictions, watchlist, history_run=None):
+def markdown_report(out, meta, seats, predictions, watchlist, history_run=None, surprise=None):
     """Readable GitHub report, with full numerical bundles linked separately."""
     from output_publication import markdown_table
     main=seats[seats.model.eq('Bayesian')].iloc[0]
@@ -228,6 +228,16 @@ def markdown_report(out, meta, seats, predictions, watchlist, history_run=None):
         lines += [markdown_table(broad,['contest','latest_poll','recent_samples','recent_firms','stronger_coverage','width95_pp']), '']
     settings=watchlist.get('parameters',{})
     lines += ['Watchlist settings: '+', '.join(f'{k}={v}' for k,v in settings.items())+'.','']
+    if surprise is not None:
+        from live_surprise_watchlist import display_table, METHOD
+        lines += ['## Races to watch — room for a different outcome', '', METHOD, '',
+                  'Coverage: at least '+str(surprise['parameters']['min_samples'])+' independent eligible samples from '+
+                  str(surprise['parameters']['min_firms'])+' firms in the past '+str(surprise['parameters']['recent_days'])+' days.', '',
+                  'Available core models: '+', '.join(surprise['parameters']['available_models'])+'.', '']
+        for key,title in [('polled','Adequately polled races'),('thin','Thinly polled or no recent polls')]:
+            lines += ['### '+title, '', markdown_table(display_table(surprise[key])) if not surprise[key].empty else 'No qualifying races.', '']
+        lines += ['[All races and numerical scores](../../results/forecast/live_reports/surprise_all.parquet) · '
+                  '[Watchlist settings and provenance](../../results/forecast/live_reports/surprise_parameters.json)', '']
     if history_run is not None:
         hm=json.loads((history_run/'run.json').read_text());history=pd.read_parquet(history_run/'control_history.parquet')
         lines += ['## Control probability over cutoff dates','',
@@ -246,12 +256,22 @@ def markdown_report(out, meta, seats, predictions, watchlist, history_run=None):
     (out/'report.md').write_text('\n'.join(lines))
 
 
-def save_report(live_run, watchlist, history_run=None):
+def save_report(live_run, watchlist, history_run=None, surprise=None):
     """Save Markdown and self-contained HTML reports, plus supporting tables."""
     live_run = lab.verify_run(live_run)
     meta = json.loads((live_run/'run.json').read_text())
     out = lab.new_run('live_reports')
     lab.write_json(out/'forecast_metadata.json',meta)
+    from live_surprise_watchlist import build_surprise_watchlist, display_table, METHOD
+    if surprise is None:
+        settings = watchlist.get('parameters',{})
+        surprise = build_surprise_watchlist(live_run, **{k:settings[k] for k in
+            ['recent_days','min_samples','min_firms'] if k in settings})
+    if surprise['parameters']['source_manifest_sha256'] != lab.sha(live_run/'manifest.json'):
+        raise ValueError('Surprise watchlist and report use different forecasts')
+    for name in ['all','polled','thin']:
+        surprise[name].to_parquet(out/f'surprise_{name}.parquet',index=False)
+    lab.write_json(out/'surprise_parameters.json',surprise['parameters'])
     seats = _seat_history_row(live_run)
     pred = pd.read_parquet(live_run/'predictions.parquet')
     seats.to_parquet(out/'seats.parquet',index=False)
@@ -269,6 +289,14 @@ def save_report(live_run, watchlist, history_run=None):
         '<p>Watchlist settings: '+html.escape(json.dumps(watchlist.get('parameters',{})))+'</p>',
         table(watchlist['summary']),table(watchlist['broad'].query("model == 'Bayesian'")),
         '<h2>State margins, probabilities and95% ranges — all models</h2>']
+    # Keep the new watchlist beside the existing uncertainty summary.
+    parts.pop()  # Move the all-model state-details heading below the watchlist.
+    parts += ['<h2>Races to watch — room for a different outcome</h2>',
+              '<p>'+html.escape(METHOD)+'</p>',
+              '<p>Settings: '+html.escape(json.dumps(surprise['parameters']))+'</p>']
+    for key,title in [('polled','Adequately polled races'),('thin','Thinly polled or no recent polls')]:
+        parts += ['<h3>'+title+'</h3>',table(display_table(surprise[key])) if not surprise[key].empty else '<p>No qualifying races.</p>']
+    parts += ['<h2>State margins, probabilities and 95% ranges — all models</h2>']
     state = pred[['model','geography','special','margin_pp','p_dem','lo95_pp','hi95_pp']].copy()
     state['D_win_pct'] = 100*state.pop('p_dem')
     for model,frame in state.groupby('model',sort=False):
@@ -296,9 +324,9 @@ def save_report(live_run, watchlist, history_run=None):
         '<pre>'+html.escape(json.dumps(meta,indent=2))+'</pre>'])
     page='<!doctype html><html><head><meta charset="utf-8"><title>2026 Senate forecast report</title><style>body{font-family:system-ui,sans-serif;margin:32px;line-height:1.45}table{border-collapse:collapse;font-size:13px;margin:16px 0}th,td{padding:6px 10px;border:1px solid #ddd;text-align:right}th{background:#eef2f6}details{margin:16px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere}img{max-width:100%}</style></head><body>'+''.join(parts)+'</body></html>'
     (out/'report.html').write_text(page)
-    markdown_report(out,meta,seats,pred,watchlist,history_run)
+    markdown_report(out,meta,seats,pred,watchlist,history_run,surprise)
     return lab.finish(out,dict(kind='live_report',as_of=meta['as_of'],
         live_run=str(live_run.relative_to(lab.ROOT)),live_manifest_sha256=lab.sha(live_run/'manifest.json'),
-        watchlist_parameters=watchlist.get('parameters',{}),
+        watchlist_parameters=watchlist.get('parameters',{}),surprise_parameters=surprise['parameters'],
         history_run=str(history_run.relative_to(lab.ROOT)) if history_run else None,
         history_manifest_sha256=lab.sha(history_run/'manifest.json') if history_run else None))

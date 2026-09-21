@@ -212,3 +212,20 @@ def run(include_live=True,force=False):
                        ensemble_weights_learned=False,mean_shift_weights_learned=False,promotion=False))
     lab.write_json(index,dict(run=str(out.relative_to(lab.ROOT)),manifest_sha256=lab.sha(out/'manifest.json')))
     return out
+
+
+def publish_review(source, kind, models=None):
+    """Publish a notebook-specific view without mutating the shared portfolio."""
+    if kind not in {'older_alternatives', 'all_model_mixture'}:
+        raise ValueError('Unknown portfolio review: '+kind)
+    source = lab.verify_run(source)
+    out = lab.new_run(kind)
+    for name in ['predictions', 'seats', 'summary', 'cycle_scores', 'diagnostics', 'checks']:
+        frame = pd.read_parquet(source/(name+'.parquet'))
+        if models is not None and 'model' in frame:
+            frame = frame[frame.model.isin(models)]
+        frame.to_parquet(out/(name+'.parquet'), index=False)
+    meta = json.loads((source/'run.json').read_text())
+    return lab.finish(out, dict(meta, kind=kind, selected_models=models,
+        source_portfolio=str(source.relative_to(lab.ROOT)),
+        source_portfolio_manifest_sha256=lab.sha(source/'manifest.json')))

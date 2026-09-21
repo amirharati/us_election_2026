@@ -7,7 +7,7 @@ import election_lab as lab
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('task',choices=['reproduce','weights','train','student','live','download-history','scenarios','matched-student','portfolio','poll-weights','audit'])
+    p.add_argument('task',choices=['reproduce','weights','train','student','live','report','download-history','scenarios','matched-student','portfolio','poll-weights','audit'])
     p.add_argument('--force',action='store_true',help='Recheck public sources even inside cache TTL')
     p.add_argument('--offline',action='store_true',help='Use verified caches with explicit offline status')
     p.add_argument('--strict',action='store_true',help='Fail rather than retain stale sources after a download failure')
@@ -25,6 +25,13 @@ def main():
         pred.to_parquet(out/'predictions.parquet',index=False);d['diagnostics'].to_parquet(out/'diagnostics.parquet',index=False)
         out=lab.finish(out,dict(scenario=a.scenario,cycle=a.year,df=5,warmup=d['warmup'],draws=d['draws'],chains=d['chains']))
     elif a.task=='live':out=lab.refresh(force=a.force,offline=a.offline,strict=a.strict,ttl_hours=a.ttl_hours,timeout=a.timeout,include_student=not a.no_student)
+    elif a.task=='report':
+        from live_forecast_report import save_report
+        from live_uncertainty_watchlist import build_watchlist
+        import pandas as pd
+        live=lab.latest_run('live')
+        models=pd.read_parquet(live/'predictions.parquet').model.unique().tolist()
+        out=save_report(live,build_watchlist(live,models))
     elif a.task=='matched-student':
         from matched_student import run
         out=run(force=a.force)
@@ -44,6 +51,12 @@ def main():
     else:
         from release_audit import audit
         print(audit());return
+    if a.task=='live':
+        from live_forecast_report import save_report
+        from live_uncertainty_watchlist import build_watchlist
+        import pandas as pd
+        models=pd.read_parquet(out/'predictions.parquet').model.unique().tolist()
+        save_report(out,build_watchlist(out,models))
     from output_publication import result_path
     print('Published results:',result_path(lab.ROOT,out.parent.name))
     print('Readable reports:',lab.ROOT/'outputs/README.md')

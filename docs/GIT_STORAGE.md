@@ -24,7 +24,7 @@ required. Existing local archives have not been deleted.
 Start with [the output index](../outputs/README.md). Old timestamped outputs have
 been moved to ignored `cache/legacy_outputs/`; new executions stay in ignored
 `cache/runs/`. Published latest bundles are replaced, so output folders do not
-accumulate dates. `.codex/` is also ignored and its existing log is untracked.
+accumulate full execution bundles. `.codex/` is also ignored and its existing log is untracked.
 
 The two compact bundles preserve historical information and unknown values;
 compression does not truncate history or round observations. Feature records
@@ -86,3 +86,11 @@ The runner uses the active Python environment, executes cells in order, saves
 successful notebooks in place, and writes a status report under
 `outputs/validation/`. It blocks access to all legacy `data/` directories
 outside `data/compact/`, so accidental raw-data dependencies fail visibly.
+
+Dated reports are kept in `outputs/reports/history/YYYY-MM-DD/<report-type>/report.md`,
+using the UTC execution date (the forecast cutoff is shown inside). Same-day reruns
+replace that day’s report; other dates remain. Linked charts, tables and provenance
+are copied with the report, while full execution archives remain ignored. Notebook
+report generation and CLI report-producing tasks use this same publication path.
+Run `python run.py report` to generate a dated forecast report from the saved forecast
+without downloading data or fitting models. `python run.py live` also generates a report.

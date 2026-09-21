@@ -1,14 +1,39 @@
 {
   "kind": "live_report",
   "as_of": "2026-09-21",
-  "live_run": "cache/runs/live/20260921T044340.518203Z",
-  "live_manifest_sha256": "59c5e1e1d35b0ac4835a6293414237d84857d9d03ec66685897b397d9282155f",
+  "live_run": "cache/runs/live/20260921T171049.906872Z",
+  "live_manifest_sha256": "13ff84a248ed24a6d9d7717737708a52441e705ed9680589de04e16e3cb367d5",
   "watchlist_parameters": {
     "recent_days": 30,
-    "min_width_pp": 25,
+    "min_width_pp": 25.0,
     "min_samples": 3,
     "min_firms": 2
   },
-  "history_run": "cache/runs/control_history/20260921T044500.122041Z",
-  "history_manifest_sha256": "b2d48dd88140199468fffd2b58bb6e34f0801a1db175e2049ffc88d95b30d8a7"
+  "surprise_parameters": {
+    "as_of": "2026-09-21",
+    "recent_days": 30,
+    "min_samples": 3,
+    "min_firms": 2,
+    "top_n": 3,
+    "core_models": [
+      "Bayesian",
+      "Matched Student-t (df5)",
+      "Older Gaussian",
+      "Student-t research helper",
+      "Non-Bayesian corrected"
+    ],
+    "available_models": [
+      "Bayesian",
+      "Matched Student-t (df5)",
+      "Older Gaussian",
+      "Student-t research helper",
+      "Non-Bayesian corrected"
+    ],
+    "history_sha256": "e168daabc2efeccb4db025386f8ed78ea4e4ab9a7d7f49e37716352a4e027d86",
+    "historical_scope": "state, not necessarily same Senate seat",
+    "historical_scenario": "matched_live",
+    "source_manifest_sha256": "13ff84a248ed24a6d9d7717737708a52441e705ed9680589de04e16e3cb367d5"
+  },
+  "history_run": "cache/runs/control_history/20260921T171211.928533Z",
+  "history_manifest_sha256": "e91519041748e3aed55d4951fb4b6a2c85ce802ca208448d425f27126daac3dc"
 }

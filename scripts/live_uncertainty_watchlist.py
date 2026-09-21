@@ -59,7 +59,8 @@ def build_watchlist(run, models, recent_days=30, min_width_pp=25.,
     coverage = recent.groupby('target_id').agg(
         latest_poll=('field_end', 'max'), recent_samples=('sample_key', 'size'),
         recent_firms=('firm', 'nunique')).reset_index()
-    detail = pred.merge(coverage, on='target_id', validate='many_to_one')
+    detail = pred.merge(coverage, on='target_id', how='left', validate='many_to_one')
+    detail[['recent_samples','recent_firms']] = detail[['recent_samples','recent_firms']].fillna(0).astype(int)
     detail['contest'] = detail.geography + detail.special.fillna(False).map(
         {True: ' special', False: ''})
     detail['width95_pp'] = detail.hi95_pp-detail.lo95_pp
@@ -71,6 +72,8 @@ def build_watchlist(run, models, recent_days=30, min_width_pp=25.,
                'recent_firms', 'stronger_coverage', 'prediction_pp', 'lo95_pp',
                'hi95_pp', 'width95_pp', 'p_dem', 'broad']
     detail = detail[columns].sort_values(['model', 'width95_pp'], ascending=[True, False])
+    all_contests = detail.copy()
+    detail = detail[detail.recent_samples.gt(0)].copy()
     broad = detail[detail.broad].copy()
     summaries = []
     for model in models:
@@ -81,7 +84,7 @@ def build_watchlist(run, models, recent_days=30, min_width_pp=25.,
             model=model, recent_contests=int(detail.model.eq(model).sum()),
             broad_contests=len(rows), states=', '.join(rows.contest) or 'None',
             stronger_coverage_states=', '.join(rows.loc[rows.stronger_coverage, 'contest']) or 'None'))
-    return dict(as_of=str(cutoff.date()), recent=detail, broad=broad,
+    return dict(as_of=str(cutoff.date()), recent=detail, broad=broad, all_contests=all_contests,
                 parameters=dict(recent_days=recent_days,min_width_pp=min_width_pp,
                                 min_samples=min_samples,min_firms=min_firms),
                 summary=pd.DataFrame(summaries))

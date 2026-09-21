@@ -1,7 +1,9 @@
-"""Publish only the latest useful results; keep execution history in local cache."""
+"""Publish latest results and compact dated reports; keep full runs in local cache."""
 from pathlib import Path
 import json
 import os
+import re
+from datetime import datetime
 import shutil
 import tempfile
 import pandas as pd
@@ -10,6 +12,7 @@ INTERNAL = {'refresh', 'cutoff_forecasts'}
 FORECAST = {'live', 'live_reports', 'control_history'}
 TRAINING = {'training', 'student_refit'}
 TITLES = {
+    'older_alternatives': 'Older model alternatives', 'all_model_mixture': 'All-model mixture review',
     'reproduction': 'Frozen model reproduction', 'blend_weights': 'Blend-weight comparison',
     'scenarios': 'Wave and polling-error scenarios', 'matched_student': 'Matched Student-t comparison',
     'matched_student_review': 'Matched Student-t review', 'portfolio': 'All-model comparison and mixtures',
@@ -58,7 +61,7 @@ def markdown_table(frame, columns=None, floatfmt=".2f"):
 def write_index(root):
     root=Path(root);out=root/'outputs';out.mkdir(exist_ok=True)
     lines=['# Results — start here','',
-        'Only the latest published results live here. Each rerun replaces the corresponding report and result bundle; Git history preserves committed versions.','',
+        'Latest reports and supporting results are below. Dated reports are retained in Git: one copy per UTC execution date and report type; same-day reruns replace that day’s copy. Forecast cutoffs are recorded inside each report.','',
         '## Forecast','']
     if (out/'reports/forecast/report.md').exists():
         lines += ['- [Read the forecast](reports/forecast/report.md) — Markdown summary, state forecasts, source status and cutoff history.',
@@ -68,6 +71,9 @@ def write_index(root):
     for p in sorted((out/'reports').glob('*/*.md')):
         if p.parent.name=='forecast':continue
         lines.append(f'- [{TITLES.get(p.stem,p.stem.replace("_"," ").title())}]({p.relative_to(out).as_posix()})')
+    lines += ['', '## Dated reports', '']
+    for p in sorted((out/'reports/history').glob('*/*/report.md'), reverse=True):
+        lines.append(f'- [{p.parents[1].name} — {TITLES.get(p.parent.name,p.parent.name)}]({p.relative_to(out).as_posix()})')
     lines += ['', '## Validation', '',
         '- [Notebook execution status](validation/notebooks.md)',
         '- [Storage and rerun validation](validation/output_cleanup.md)', '',
@@ -123,6 +129,31 @@ def experiment_report(root, run, kind):
     destination.write_text('\n'.join(lines))
 
 
+def archive_report(root, run, report):
+    """Freeze a daily readable report and its linked files, never full model arrays."""
+    date = datetime.strptime(run.name.split('T')[0], '%Y%m%d').date().isoformat()
+    destination = Path(root)/'outputs/reports/history'/date/run.parent.name
+    with tempfile.TemporaryDirectory() as temp:
+        stage = Path(temp)
+        def freeze_link(match):
+            marker, label, target = match.groups()
+            if '://' in target or target.startswith('#'):
+                return match.group(0)
+            source = (report.parent/target).resolve()
+            # Navigation and directories refer to changing latest results, not history.
+            if source.name == 'README.md' or not source.is_file():
+                return label
+            name = source.name
+            if name == 'run.json': name = 'supporting_run.json'
+            shutil.copyfile(source, stage/name)
+            return f'{marker}[{label}]({name})'
+        body = re.sub(r'(!?)\[([^\]]+)\]\(([^)]+)\)', freeze_link, report.read_text())
+        note = f'Archived execution date (UTC): **{date}**. Run: `{run.name}`. Same-day reruns replace this copy; other dates are retained.\n\n'
+        (stage/'report.md').write_text(note+body)
+        shutil.copyfile(run/'run.json', stage/'run.json')
+        replace_directory(stage,destination)
+
+
 def publish(root, run):
     run=Path(run);kind=run.parent.name
     if kind in INTERNAL:return
@@ -134,4 +165,9 @@ def publish(root, run):
                 if (run/name).exists():shutil.copyfile(run/name,stage/name)
             replace_directory(stage,Path(root)/'outputs/reports/forecast')
     elif kind not in FORECAST:experiment_report(root,run,kind)
+    if kind=='live_reports':
+        archive_report(root,run,Path(root)/'outputs/reports/forecast/report.md')
+    elif kind not in FORECAST:
+        group='training' if kind in TRAINING else 'experiments'
+        archive_report(root,run,Path(root)/'outputs/reports'/group/(kind+'.md'))
     write_index(root)

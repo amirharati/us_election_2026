@@ -1,14 +1,18 @@
 {
   "control_history.parquet": "ab7fb76473db6a97571721b6eb66637dc3b40329cb62464fc65c33bc3663e8be",
   "control_history.png": "30a3110cd084f01a793864937eaaaaac1a02c9ea9321fb0214c1473f12177530",
-  "forecast_metadata.json": "7bbd40e11479f905d435de3d360b70f8f98d88032afdd0b74ec3e018519570bd",
-  "history_evidence.parquet": "8616078a8ecc892dce14d27738777884c083f3d07ba08fa5f398d2ee65611e53",
-  "predictions.parquet": "13b4e8ba95934ce1e6b1ea9aaa6e09da54ecd108095e515f0284bdcf91f22d3c",
-  "report.html": "d9cb4c9eb3945aceb3a48461e325c3d98150cdb072e529b3c8a45afc913236f6",
-  "report.md": "bad9eb9876d11975d43b2ab1ec9cd2964925c7844e01f141b68188bb11b49c1d",
-  "run.json": "c7f2d93f8f98f413ce3310d21ce9802b3bbd3dfa2d3b15850da5ca54fcd4f105",
+  "forecast_metadata.json": "7dafdc5b3626cad584059f6f94fff3b44028bf67fc65e420fb12bd9f4ddb1688",
+  "history_evidence.parquet": "7fa84f0f4c757d692efdc2cfd4e8af17ad94d64cd90b29e903e3e57d775049c8",
+  "predictions.parquet": "7f2cb570090c490fb847e4711ca4d6629db914ad348f6b9e32aa4d30df4ee1bb",
+  "report.html": "c9bbd3b21651985cab1d46fa734cd8f8d0cbe891f6ba03f17543c4ac57a4f0db",
+  "report.md": "6c99f7ee78bd8ab820ce661405bb56d99a531f7c1a90a715a5eb162cad35a493",
+  "run.json": "b5d370f5ad00036ea79a94175e12cc14b95f7c868a7f68e83c00b15c68186663",
   "seats.parquet": "5f9cf5beced4754b699d565a0bb6ab0617f7f5293a1c938f5f39092bb6dc1fe2",
-  "watchlist_broad.parquet": "87d78fc2c4f3e7fc9ba559047db17b74c8f21c14a96b70ef11b3c1539990de96",
-  "watchlist_recent.parquet": "03cbdf457e370924f84666e9e4c2f5984cc771e0b9836c90da5eb058cbac4e8c",
-  "watchlist_summary.parquet": "b1bb7440786bcbd02757e6a210c2bdfb1afdfe5e25eedcf895b910d07f68e6ec"
+  "surprise_all.parquet": "a7e2e859f6cf3c5e077e8eaaf41654ab09f8a8acb148d1f6514816e009638dfe",
+  "surprise_parameters.json": "8ea2406e4a170faefd85e6c8a0b82bb9a388c08ed325c7f28ddc00903835b96c",
+  "surprise_polled.parquet": "fb8224e2e4383c58e6d860a48e414aa3a98225d7505c81df2dfcae2b696257ca",
+  "surprise_thin.parquet": "8baa09402c1b40bea2191afcfc2bc03e7e79286027f35133f33ec5c4a6600a92",
+  "watchlist_broad.parquet": "6951f24a3d7ff38c80033f405e325a60236d6ee6493999d4e61acdeae6b85d7b",
+  "watchlist_recent.parquet": "48f8f23169438a7030fc84518a9a198599baf8376bdff48619270a8e4ff65abe",
+  "watchlist_summary.parquet": "49bb8b1c058a9035bb7231ca8bd00e77f1823cb4342b2f053a0847c016353728"
 }
