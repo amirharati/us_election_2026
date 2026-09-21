@@ -7,6 +7,7 @@ import shutil
 
 import numpy as np
 import pandas as pd
+from model_labels import label_frame
 import calibrate_margin_uncertainty as calibration
 
 POINT_SOURCE = 'reports/bayesian_nonbayesian_blend/20260920T055636.585382Z'
@@ -200,11 +201,11 @@ Both blends average margins, not probabilities. Each non-Bayesian model/blend ge
 
 MAE is absolute D−R margin error in percentage points, averaged equally over cycles. Lower is better. Correct winner counts use unrounded signs.
 
-'''+point_summary.query('first_cycle == 2016').round(4).to_markdown(index=False)
-    report+='\n\n## Probability and interval evaluation,2018–2024\n\nThree earlier calibration cycles are required, giving111 matched contests per horizon. Brier and interval score: lower is better;70% coverage should be near.70. Metrics average cycles equally.\n\n'+probability_summary.round(4).to_markdown(index=False)
-    report+='\n\n## Current seats and control\n\nExpected seats sum marginals and do not require independence. Point totals count margin-sign winners. The `independent_states` rows explicitly assume independent outcomes; their ranges/control probabilities are provisional, not learned joint forecasts. Original correlated Bayesian results are separately retained. D needs51 seats; R wins a50–50 tie under the existing convention.\n\n'+current_seats.round(4).to_markdown(index=False)
-    report+='\n\n## Every current contest: margin / P(D)\n\nPositive margins favor D; probabilities are chances of winning, not vote shares. No correlations are displayed. Existing independent-candidate proxy caveats, including Nebraska, remain.\n\n'+tables['current_table'].to_markdown(index=False)
-    report+='\n\n## Current70% marginal intervals\n\n'+tables['current_intervals'].to_markdown(index=False)
+'''+label_frame(point_summary.query('first_cycle == 2016').round(4)).to_markdown(index=False)
+    report+='\n\n## Probability and interval evaluation,2018–2024\n\nThree earlier calibration cycles are required, giving111 matched contests per horizon. Brier and interval score: lower is better;70% coverage should be near.70. Metrics average cycles equally.\n\n'+label_frame(probability_summary.round(4)).to_markdown(index=False)
+    report+='\n\n## Current seats and control\n\nExpected seats sum marginals and do not require independence. Point totals count margin-sign winners. The `independent_states` rows explicitly assume independent outcomes; their ranges/control probabilities are provisional, not learned joint forecasts. Original correlated Bayesian results are separately retained. D needs51 seats; R wins a50–50 tie under the existing convention.\n\n'+label_frame(current_seats.round(4)).to_markdown(index=False)
+    report+='\n\n## Every current contest: margin / P(D)\n\nPositive margins favor D; probabilities are chances of winning, not vote shares. No correlations are displayed. Existing independent-candidate proxy caveats, including Nebraska, remain.\n\n'+label_frame(tables['current_table']).to_markdown(index=False)
+    report+='\n\n## Current70% marginal intervals\n\n'+label_frame(tables['current_intervals']).to_markdown(index=False)
     report+='\n\nPer-cycle results, older2012/2014 checks, competitive and polling-coverage subsets are saved alongside this report. Historical point-seat totals retain the same explicit incumbent-caucus completion assumptions for unmodeled contests. No promotion, weight search, refit of component means, or data refresh.\n'
     (out/'RESULTS.md').write_text(report)
     calibration.finalize(out)

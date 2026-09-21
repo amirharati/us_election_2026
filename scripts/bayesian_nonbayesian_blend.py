@@ -8,6 +8,7 @@ import shutil
 
 import numpy as np
 import pandas as pd
+from model_labels import label_frame
 from scipy.stats import norm
 
 BAYES_SOURCE = 'reports/signed_state_factor/20260920T052241.012596Z'
@@ -180,10 +181,10 @@ Saved chronological component forecasts are reused for 2012–2024, with identic
 MAE is absolute margin error in percentage points (lower is better). `mae_pp` pools contests; `mean_cycle_mae_pp` gives each cycle equal weight. Correct calls use the sign of the unrounded margin. Each horizon has 140 matched contests across 5 cycles.
 
 '''
-    report += recent.round(4).to_markdown(index=False)
-    report += '\n\n## Every historical cycle\n\n'+cycles.round(4).to_markdown(index=False)
-    report += '\n\n## Current state table\n\n'+tables['current_display'].to_markdown(index=False)
-    report += '\n\n## Current point seat totals\n\n'+seats[seats.cycle.eq(2026)].to_markdown(index=False)
+    report += label_frame(recent.round(4)).to_markdown(index=False)
+    report += '\n\n## Every historical cycle\n\n'+label_frame(cycles.round(4)).to_markdown(index=False)
+    report += '\n\n## Current state table\n\n'+label_frame(tables['current_display']).to_markdown(index=False)
+    report += '\n\n## Current point seat totals\n\n'+label_frame(seats[seats.cycle.eq(2026)]).to_markdown(index=False)
     report += '''\n\nSeat totals count margin-sign winners plus the same fixed-seat ledger for all models. These are point seat counts, not expected seats or control probabilities. Historical totals retain the source's explicit incumbent-caucus completion assumptions for unmodeled contests; those are excluded from state accuracy. Current 35 contests are all modeled. Existing independent-proxy and ballot-system caveats remain, including Nebraska; these outputs do not repair that admission policy.
 
 Additional polled/no-poll and past-results-only competitive subsets are saved in `group_scores.parquet` and displayed in the notebook. The recipe, source hashes and audit are archived alongside outputs.

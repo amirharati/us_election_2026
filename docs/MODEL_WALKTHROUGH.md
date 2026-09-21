@@ -14,7 +14,7 @@ Historical storage covers all states, but a state without a Senate contest in a 
 
 | Display label | Historical center / relationships | Distribution and inference |
 |---|---|---|
-| Bayesian | Repaired historical centers, national momentum/approval, common movement plus signed state pattern | Exact joint Gaussian conditioning |
+| Gaussian Bayesian | Repaired historical centers, national momentum/approval, common movement plus signed state pattern | Exact joint Gaussian conditioning |
 | Matched Student-t (df5) | Same final centers, fitted coefficients, variance budgets, loadings and calibration | Componentwise Student scales; Gibbs sampling |
 | Older Gaussian | Earlier historical centers/calibration, national momentum/approval and common movement; no signed pattern | Exact joint Gaussian conditioning |
 | Student-t research helper | Same older architecture as Older Gaussian | Earlier componentwise Student scales; Gibbs sampling |

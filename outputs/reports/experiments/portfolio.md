@@ -2,7 +2,7 @@
 
 [Complete supporting results](../../results/experiments/portfolio/) · [Run settings](../../results/experiments/portfolio/run.json)
 
-Latest execution: `20260921T044632.628767Z`. Forecast cutoff: **frozen historical/reference inputs**.
+Latest execution: `20260921T185943.532983Z`. Forecast cutoff: **frozen historical/reference inputs**.
 
 Margins are Democratic minus Republican percentage points. Experiments do not replace the active model or automatically select blend weights.
 
@@ -10,7 +10,7 @@ Margins are Democratic minus Republican percentage points. Experiments do not re
 
 | Horizon           | Model                     |   Races |   Correct calls |   Margin MAE (pp) |   Brier score |
 |:------------------|:--------------------------|--------:|----------------:|------------------:|--------------:|
-| Matched September | Bayesian                  |     140 |             128 |             6.307 |         0.055 |
+| Matched September | Gaussian Bayesian         |     140 |             128 |             6.307 |         0.055 |
 | Matched September | Four-model mixture        |     140 |             129 |             6.512 |         0.056 |
 | Matched September | Matched Student-t (df5)   |     140 |             129 |             6.344 |         0.055 |
 | Matched September | Mixture + polling 10%     |     140 |             129 |             6.498 |         0.056 |
@@ -22,7 +22,7 @@ Margins are Democratic minus Republican percentage points. Experiments do not re
 | Matched September | Non-Bayesian corrected    |     140 |             127 |             7.472 |         0.078 |
 | Matched September | Older Gaussian            |     140 |             129 |             6.808 |         0.059 |
 | Matched September | Student-t research helper |     140 |             129 |             6.801 |         0.058 |
-| October 31        | Bayesian                  |     140 |             132 |             5.206 |         0.050 |
+| October 31        | Gaussian Bayesian         |     140 |             132 |             5.206 |         0.050 |
 | October 31        | Four-model mixture        |     140 |             132 |             5.275 |         0.050 |
 | October 31        | Matched Student-t (df5)   |     140 |             132 |             5.224 |         0.049 |
 | October 31        | Mixture + polling 10%     |     140 |             133 |             5.180 |         0.048 |
@@ -39,7 +39,7 @@ Margins are Democratic minus Republican percentage points. Experiments do not re
 
 | Horizon           | Model                     |   D seats (mean winners) |   R seats (mean winners) |   Expected D seats |   D control % |   D seats: 70% low |   D seats: 70% high |
 |:------------------|:--------------------------|-------------------------:|-------------------------:|-------------------:|--------------:|-------------------:|--------------------:|
-| Matched September | Bayesian                  |                       51 |                       49 |             50.320 |        45.520 |             49.000 |              52.000 |
+| Matched September | Gaussian Bayesian         |                       51 |                       49 |             50.320 |        45.520 |             49.000 |              52.000 |
 | Matched September | Non-Bayesian corrected    |                       48 |                       52 |             48.373 |        16.354 |             46.000 |              51.000 |
 | Matched September | Older Gaussian            |                       50 |                       50 |             51.090 |        61.997 |             49.000 |              53.000 |
 | Matched September | Student-t research helper |                       50 |                       50 |             51.115 |        63.006 |             49.000 |              53.000 |

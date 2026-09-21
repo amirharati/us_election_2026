@@ -7,6 +7,7 @@ from datetime import datetime
 import shutil
 import tempfile
 import pandas as pd
+from model_labels import label_frame
 
 INTERNAL = {'refresh', 'cutoff_forecasts'}
 FORECAST = {'live', 'live_reports', 'control_history'}
@@ -42,7 +43,7 @@ def replace_directory(source, destination):
 
 def markdown_table(frame, columns=None, floatfmt=".2f"):
     if columns is not None:frame=frame[[c for c in columns if c in frame]]
-    frame=frame.copy()
+    frame=label_frame(frame)
     for c in frame:
         if pd.api.types.is_datetime64_any_dtype(frame[c]):frame[c]=frame[c].dt.strftime('%Y-%m-%d')
     if 'scenario' in frame:

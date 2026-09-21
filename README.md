@@ -41,7 +41,7 @@ threading, set `OPENBLAS_NUM_THREADS=1` before launching Python if needed.
 | [02 Blend weights](notebooks/02_blend_weights.ipynb) | Fixed 5/10/20/30/40/50% corrected-polling grid, separate September/October evaluation | No |
 | [03 Training and assumptions](notebooks/03_training_and_assumptions.ipynb) | Refit prior variance, feature weights, signed factor and polling variance; inspect chronological choices; rerun Student sampler | No |
 | [04 Live forecast](notebooks/04_live_forecast.ipynb) | Check downloads/cache, prepare data, compute forecasts, uncertainty watchlist, cutoff history and saved HTML report | Yes, cache aware |
-| [05 Waves and polling error](notebooks/05_wave_and_poll_error_scenarios.ipynb) | Bayesian/20%/50% blends, 2D wave/error heatmaps, shared and independent random stress | No; latest saved live run |
+| [05 Waves and polling error](notebooks/05_wave_and_poll_error_scenarios.ipynb) | Gaussian Bayesian/20%/50% blends, 2D wave/error heatmaps, shared and independent random stress | No; latest saved live run |
 | [06 Matched Student-t](notebooks/06_matched_student_comparison.ipynb) | Same final Gaussian priors/relationships, heavier tails; paired history and current comparison | No; latest saved live run |
 | [07 Older alternatives](notebooks/07_older_model_alternatives.ipynb) | Earlier Gaussian/Student pair, historical and current comparisons | No; latest saved live run |
 | [08 All-model mixture](notebooks/08_all_model_mixture.ipynb) | Fixed four-model joint mixture and 5–50% polling mean shifts | No; latest saved live run |
@@ -116,7 +116,7 @@ reviewed training labels; see [data preparation](docs/DATA.md).
 Margins are **Democratic minus Republican percentage points**. Positive favors
 Democrats. Point seats count positive predicted means; expected seats sum win
 probabilities plus continuing seats. Control probability comes from the full
-joint simulation for Bayesian/blended/Student models. D requires 51 seats under
+joint simulation for Gaussian Bayesian/blended/Student models. D requires 51 seats under
 the retained chamber convention. The non-Bayesian helper's own seat probability
 uses an explicitly labeled independence approximation.
 
@@ -173,3 +173,5 @@ without downloading data or fitting models. `python run.py live` also generates 
 Notebooks 07 and 08 share verified portfolio calculations but publish separate reports:
 `outputs/reports/experiments/older_alternatives.md` and
 `outputs/reports/experiments/all_model_mixture.md`, with separate dated archives.
+
+The main model is labeled **Gaussian Bayesian** in notebooks and reports. Student-t models are also Bayesian; their predictive tails differ. Saved result tables retain the legacy internal identifier `Bayesian` for compatibility.

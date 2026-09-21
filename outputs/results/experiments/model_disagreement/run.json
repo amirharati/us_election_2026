@@ -18,21 +18,19 @@
     "Mixture + polling 20%"
   ],
   "sources": {
-    "cache/runs/live/20260921T044340.518203Z": "59c5e1e1d35b0ac4835a6293414237d84857d9d03ec66685897b397d9282155f",
-    "cache/runs/portfolio/20260921T044632.628767Z": "3ca1343ea3c103e142dcb5b41ca804828743da7bc60c77e18663ef39a09eef76"
+    "cache/runs/live/20260921T185745.202426Z": "f4ee18e438566a0234719d12dd2e487cd045dbe3c34a6a7388c565aa3ab12935",
+    "cache/runs/portfolio/20260921T185943.532983Z": "e28481edc9f4636c51512564464c6028789a512082bacbbcb119d163a9c4960f"
   },
   "source_code_sha256": "091a8274b54249a7c735e92f8de9c7726f9fbc15483800a45c83c03d914b49aa",
   "scope": "16 retained current model/blend forecasts; poll-weight experiments excluded; no new fitted model",
   "freshness": {
     "mode": "online_with_cache",
     "checked_on": "2026-09-21",
-    "stale_sources": [
-      "fred"
-    ],
+    "stale_sources": [],
     "sources": [
       {
         "freshness": {},
-        "manifest_sha256": "57b9dd02b08a2b06260db98a05d3d16d312e4e7de643dde703d85a2ab8e94ffb",
+        "manifest_sha256": "b55dba5aec0cf5b4a2dac8c3d7406416d8b15d30f766875e66a71696eb92fc8a",
         "poll_latest_dates": {
           "generic_latest_poll_end": "2026-09-17",
           "latest_poll_end": "2026-09-18"
@@ -41,26 +39,60 @@
         "source": "polls",
         "status": "saved_or_unchanged",
         "acquisition_status": "fresh_check_cache",
-        "checked_at": "2026-09-21T01:30:21.133335+00:00"
+        "checked_at": "2026-09-21T17:09:51.964927+00:00"
       },
       {
         "freshness": {
+          "A229RX0.csv": {
+            "first_source_date": "1959-01-01",
+            "freshness": "has_current_year_rows",
+            "last_source_date": "2026-07-01",
+            "selected_rows": 7
+          },
+          "CPIAUCSL.csv": {
+            "first_source_date": "1947-01-01",
+            "freshness": "has_current_year_rows",
+            "last_source_date": "2026-08-01",
+            "selected_rows": 8
+          },
           "CUSR0000SETB01.csv": {
             "first_source_date": "1967-01-01",
             "freshness": "has_current_year_rows",
             "last_source_date": "2026-08-01",
             "selected_rows": 8
+          },
+          "GDPC1.csv": {
+            "first_source_date": "1947-01-01",
+            "freshness": "has_current_year_rows",
+            "last_source_date": "2026-04-01",
+            "selected_rows": 2
+          },
+          "NASDAQCOM.csv": {
+            "first_source_date": "1971-02-05",
+            "freshness": "has_current_year_rows",
+            "last_source_date": "2026-09-18",
+            "selected_rows": 186
+          },
+          "STLFSI4.csv": {
+            "first_source_date": "1993-12-31",
+            "freshness": "has_current_year_rows",
+            "last_source_date": "2026-09-11",
+            "selected_rows": 37
+          },
+          "UNRATE.csv": {
+            "first_source_date": "1948-01-01",
+            "freshness": "has_current_year_rows",
+            "last_source_date": "2026-08-01",
+            "selected_rows": 8
           }
         },
-        "manifest_sha256": "da1f6e14247f46ac7a784808e595eda6421ce828827dd8e862452ffb609734ec",
+        "manifest_sha256": "cff38c9043b19119725a35ea92342d83ea64df69c68ddbdf5869f69698f0e1cd",
         "poll_latest_dates": {},
-        "retrieved_at": "2026-09-18T04:01:31.099180+00:00",
-        "verified_files": 6,
+        "verified_files": 18,
         "source": "fred",
         "status": "saved_or_unchanged",
-        "acquisition_status": "stale_cache_after_failure",
-        "failure_type": "RuntimeError",
-        "checked_at": null
+        "acquisition_status": "fresh_check_cache",
+        "checked_at": "2026-09-21T18:45:06.271894+00:00"
       },
       {
         "freshness": {
@@ -77,41 +109,38 @@
           "YB_6.xls": {},
           "YB_8.xls": {}
         },
-        "manifest_sha256": "a24aae01833c7e57f31081b4c601ea4a116f7272cab5049e2d302bbd993f14a3",
+        "manifest_sha256": "e7a0689a158df5b85c8ab753575a520ccf80c8ab2e6b6f45e40e4cfd40049faa",
         "poll_latest_dates": {},
-        "retrieved_at": "2026-09-21T01:30:19.060243+00:00",
         "verified_files": 17,
         "source": "michigan",
         "status": "saved_or_unchanged",
         "acquisition_status": "fresh_check_cache",
-        "checked_at": "2026-09-21T01:30:21.672682+00:00"
+        "checked_at": "2026-09-21T17:09:53.828754+00:00"
       },
       {
         "freshness": {
           "donald-j-trump-2nd-term-public-approval.html": {}
         },
-        "manifest_sha256": "5c85b579622ee7129d2a60203598b4c8d79ddd4b7b1eba04db7a3624fd22d813",
+        "manifest_sha256": "392675af2807e33f85ecedff4359c438580329b68810777476f0c856f26f52f2",
         "poll_latest_dates": {},
-        "retrieved_at": "2026-09-21T01:30:19.054786+00:00",
         "verified_files": 6,
         "source": "ucsb",
         "status": "saved_or_unchanged",
         "acquisition_status": "fresh_check_cache",
-        "checked_at": "2026-09-21T01:30:19.881029+00:00"
+        "checked_at": "2026-09-21T17:09:50.236540+00:00"
       },
       {
         "freshness": {
           "ff_factors.zip": {},
           "ff_factors_daily.zip": {}
         },
-        "manifest_sha256": "f8efbb96641d80f56fa1ba66ebdffa6b772b30e19d361cff557fa2f1570c728a",
+        "manifest_sha256": "98b024dab6924462c19631698713bead895759525d9b429c4d828a160a196eb0",
         "poll_latest_dates": {},
-        "retrieved_at": "2026-09-17T04:18:54.627938+00:00",
         "verified_files": 6,
         "source": "french",
         "status": "saved_or_unchanged",
         "acquisition_status": "fresh_check_cache",
-        "checked_at": "2026-09-21T01:30:20.378348+00:00"
+        "checked_at": "2026-09-21T17:09:50.886920+00:00"
       },
       {
         "freshness": {
@@ -122,28 +151,26 @@
             "selected_rows": 185
           }
         },
-        "manifest_sha256": "54d6262c50048b77f5540f76f7c08f19bd1d4b3092837ebb99d1df59f18afeaa",
+        "manifest_sha256": "c1856ed8788b3dc8a97a1098b233a774116852a967e5c723101957a99a130a1e",
         "poll_latest_dates": {},
-        "retrieved_at": "2026-09-20T18:27:05.555755+00:00",
         "verified_files": 6,
         "source": "cboe",
         "status": "saved_or_unchanged",
         "acquisition_status": "fresh_check_cache",
-        "checked_at": "2026-09-21T01:30:20.682464+00:00"
+        "checked_at": "2026-09-21T17:09:51.358046+00:00"
       },
       {
         "freshness": {
           "data_gpr_daily_recent.xls": {},
           "data_gpr_export.xls": {}
         },
-        "manifest_sha256": "9137ba5399c15f6fc48bf2fde62858a374061a1a06a0d7c612fb7ad707560a0f",
+        "manifest_sha256": "c18cc2687073438a53fdeb2fbc395fe9e8fe6ce78741224261f1468425dfc870",
         "poll_latest_dates": {},
-        "retrieved_at": "2026-09-17T04:18:32.065964+00:00",
         "verified_files": 6,
         "source": "gpr",
         "status": "saved_or_unchanged",
         "acquisition_status": "fresh_check_cache",
-        "checked_at": "2026-09-21T01:30:23.335887+00:00"
+        "checked_at": "2026-09-21T17:09:52.621928+00:00"
       },
       {
         "freshness": {
@@ -152,36 +179,34 @@
           "daily_epu.csv": {
             "first_source_date": "1985-01-01",
             "freshness": "has_current_year_rows",
-            "last_source_date": "2026-09-19",
-            "selected_rows": 262
+            "last_source_date": "2026-09-20",
+            "selected_rows": 263
           }
         },
-        "manifest_sha256": "d88dac5fc16cafc30369b4386875e16fdfbc71a8a58a86693621f60e2130692d",
+        "manifest_sha256": "893ddf666775dee3f856c88be7c02522c347e9dafe7e79a940b44952109d03cf",
         "poll_latest_dates": {},
-        "retrieved_at": "2026-09-20T18:27:05.997412+00:00",
         "verified_files": 8,
         "source": "epu",
         "status": "saved_or_unchanged",
         "acquisition_status": "fresh_check_cache",
-        "checked_at": "2026-09-21T01:30:22.308967+00:00"
+        "checked_at": "2026-09-21T17:09:53.060556+00:00"
       },
       {
         "freshness": {
           "infectious_emv.csv": {
             "first_source_date": "1985-01-01",
             "freshness": "has_current_year_rows",
-            "last_source_date": "2026-09-19",
-            "selected_rows": 262
+            "last_source_date": "2026-09-20",
+            "selected_rows": 263
           }
         },
-        "manifest_sha256": "0f1ebff9c79d7de2e644189888988f0474a7ac7622124a1029f5b758ada225d0",
+        "manifest_sha256": "d08f07792be08b903ad6a5cdd5990ab8fd0cc3193f4b49bd46ad46eae326caaf",
         "poll_latest_dates": {},
-        "retrieved_at": "2026-09-20T18:27:07.069495+00:00",
         "verified_files": 6,
         "source": "infectious_emv",
         "status": "saved_or_unchanged",
         "acquisition_status": "fresh_check_cache",
-        "checked_at": "2026-09-21T01:30:22.306390+00:00"
+        "checked_at": "2026-09-21T17:09:53.060806+00:00"
       }
     ]
   },

@@ -16,7 +16,7 @@ Expected seats use exact marginals; control and ranges use the original30,000 pa
 
 | scenario     |   cycle | model           |   point_D |   expected_D |   actual_D |   p_D_at_least_51 |   D_lo70 |   D_hi70 |   expected_seat_absolute_error |   seat_crps | coverage70   |   unmodeled_contested |
 |:-------------|--------:|:----------------|----------:|-------------:|-----------:|------------------:|---------:|---------:|-------------------------------:|------------:|:-------------|----------------------:|
-| matched_live |    2026 | Bayesian        |        51 |      50.4262 |        nan |            0.4827 |       49 |       52 |                            nan |         nan |              |                     0 |
+| matched_live |    2026 | Gaussian Bayesian        |        51 |      50.4262 |        nan |            0.4827 |       49 |       52 |                            nan |         nan |              |                     0 |
 | matched_live |    2026 | Mean-only blend |        52 |      50.7967 |        nan |            0.574  |       49 |       53 |                            nan |         nan |              |                     0 |
 
 ## Historical reference comparison, 2016–2024
@@ -25,9 +25,9 @@ Expected seats use exact marginals; control and ranges use the original30,000 pa
 
 | scenario     | model           |   mae_pp |   brier |   coverage70 |   width70_pp |   coverage95 |   width95_pp |   n |   cycles |   correct |
 |:-------------|:----------------|---------:|--------:|-------------:|-------------:|-------------:|-------------:|----:|---------:|----------:|
-| matched_live | Bayesian        |   6.3067 |  0.0555 |       0.7821 |      19.8764 |       0.9395 |      37.5876 | 140 |        5 |       128 |
+| matched_live | Gaussian Bayesian        |   6.3067 |  0.0555 |       0.7821 |      19.8764 |       0.9395 |      37.5876 | 140 |        5 |       128 |
 | matched_live | Mean-only blend |   6.9263 |  0.0628 |       0.7463 |      19.8764 |       0.9472 |      37.5876 | 140 |        5 |       126 |
-| oct31        | Bayesian        |   5.206  |  0.0504 |       0.7317 |      15.7997 |       0.9419 |      29.8782 | 140 |        5 |       132 |
+| oct31        | Gaussian Bayesian        |   5.206  |  0.0504 |       0.7317 |      15.7997 |       0.9419 |      29.8782 | 140 |        5 |       132 |
 | oct31        | Mean-only blend |   5.5174 |  0.0526 |       0.7105 |      15.7997 |       0.9342 |      29.8782 | 140 |        5 |       130 |
 
 ## Masking historical state polls
@@ -36,15 +36,15 @@ Same originally polled targets in all three rows per model/horizon:102 earlier a
 
 | scenario     | model           | mask     |   mae_pp |   brier |   coverage70 |   width70_pp |   coverage95 |   width95_pp |   n |   cycles |   correct |
 |:-------------|:----------------|:---------|---------:|--------:|-------------:|-------------:|-------------:|-------------:|----:|---------:|----------:|
-| matched_live | Bayesian        | full     |   5.3271 |  0.0716 |       0.7716 |      14.5101 |       0.94   |      27.4396 | 102 |        5 |        93 |
-| matched_live | Bayesian        | no_polls |   6.9765 |  0.1021 |       0.9011 |      30.7503 |       0.9813 |      58.1509 | 102 |        5 |        89 |
-| matched_live | Bayesian        | one_firm |   5.5723 |  0.0762 |       0.7649 |      15.4202 |       0.95   |      29.1607 | 102 |        5 |        92 |
+| matched_live | Gaussian Bayesian        | full     |   5.3271 |  0.0716 |       0.7716 |      14.5101 |       0.94   |      27.4396 | 102 |        5 |        93 |
+| matched_live | Gaussian Bayesian        | no_polls |   6.9765 |  0.1021 |       0.9011 |      30.7503 |       0.9813 |      58.1509 | 102 |        5 |        89 |
+| matched_live | Gaussian Bayesian        | one_firm |   5.5723 |  0.0762 |       0.7649 |      15.4202 |       0.95   |      29.1607 | 102 |        5 |        92 |
 | matched_live | Mean-only blend | full     |   5.6085 |  0.0764 |       0.7344 |      14.5101 |       0.95   |      27.4396 | 102 |        5 |        90 |
 | matched_live | Mean-only blend | no_polls |   7.3665 |  0.109  |       0.8639 |      30.7503 |       0.9913 |      58.1509 | 102 |        5 |        89 |
 | matched_live | Mean-only blend | one_firm |   5.9973 |  0.0795 |       0.6876 |      15.4202 |       0.9513 |      29.1607 | 102 |        5 |        90 |
-| oct31        | Bayesian        | full     |   5.2399 |  0.0563 |       0.6883 |      13.1044 |       0.9311 |      24.7812 | 125 |        5 |       117 |
-| oct31        | Bayesian        | no_polls |   7.9208 |  0.0955 |       0.9094 |      36.8107 |       0.9909 |      69.6115 | 125 |        5 |       107 |
-| oct31        | Bayesian        | one_firm |   5.4378 |  0.0627 |       0.7169 |      14.8421 |       0.9659 |      28.0673 | 125 |        5 |       113 |
+| oct31        | Gaussian Bayesian        | full     |   5.2399 |  0.0563 |       0.6883 |      13.1044 |       0.9311 |      24.7812 | 125 |        5 |       117 |
+| oct31        | Gaussian Bayesian        | no_polls |   7.9208 |  0.0955 |       0.9094 |      36.8107 |       0.9909 |      69.6115 | 125 |        5 |       107 |
+| oct31        | Gaussian Bayesian        | one_firm |   5.4378 |  0.0627 |       0.7169 |      14.8421 |       0.9659 |      28.0673 | 125 |        5 |       113 |
 | oct31        | Mean-only blend | full     |   5.4322 |  0.0574 |       0.6747 |      13.1044 |       0.922  |      24.7812 | 125 |        5 |       115 |
 | oct31        | Mean-only blend | no_polls |   8.4608 |  0.1034 |       0.889  |      36.8107 |       1      |      69.6115 | 125 |        5 |       109 |
 | oct31        | Mean-only blend | one_firm |   5.728  |  0.0649 |       0.6775 |      14.8421 |       0.9568 |      28.0673 | 125 |        5 |       113 |
@@ -53,9 +53,9 @@ Naturally unpolled contests are a separate, small population (38 earlier/15 late
 
 | scenario     | model           |   mae_pp |   brier |   coverage70 |   width70_pp |   coverage95 |   width95_pp |   n |   cycles |   correct |
 |:-------------|:----------------|---------:|--------:|-------------:|-------------:|-------------:|-------------:|----:|---------:|----------:|
-| matched_live | Bayesian        |   8.3923 |  0.0219 |       0.7283 |      30.5222 |       0.9653 |      57.7194 |  38 |        5 |        35 |
+| matched_live | Gaussian Bayesian        |   8.3923 |  0.0219 |       0.7283 |      30.5222 |       0.9653 |      57.7194 |  38 |        5 |        35 |
 | matched_live | Mean-only blend |   9.2672 |  0.0305 |       0.755  |      30.5222 |       0.9653 |      57.7194 |  38 |        5 |        36 |
-| oct31        | Bayesian        |   6.2029 |  0.0073 |       1      |      35.1439 |       1      |      66.4594 |  15 |        5 |        15 |
+| oct31        | Gaussian Bayesian        |   6.2029 |  0.0073 |       1      |      35.1439 |       1      |      66.4594 |  15 |        5 |        15 |
 | oct31        | Mean-only blend |   7.1883 |  0.0147 |       0.8    |      35.1439 |       1      |      66.4594 |  15 |        5 |        15 |
 
 ## Event support and source limitation
@@ -118,14 +118,14 @@ VIX has a positive descriptive association with typical standardized error, part
 
 |   first_cycle | scenario     | model    | proxy   | outcome                 |   omitted_cycle |   n |   pearson_r |   omit_one_min |   omit_one_max |
 |--------------:|:-------------|:---------|:--------|:------------------------|----------------:|----:|------------:|---------------:|---------------:|
-|          2012 | matched_live | Bayesian | vix_3m  | median_abs_z            |             nan |   7 |      0.3264 |         0.0249 |         0.5276 |
-|          2012 | matched_live | Bayesian | vix_3m  | same_direction_fraction |             nan |   7 |      0.4347 |         0.1545 |         0.7342 |
-|          2012 | matched_live | Bayesian | gpr_3m  | median_abs_z            |             nan |   7 |     -0.1926 |        -0.346  |         0.0923 |
-|          2012 | matched_live | Bayesian | gpr_3m  | same_direction_fraction |             nan |   7 |     -0.0634 |        -0.2608 |         0.3058 |
-|          2012 | oct31        | Bayesian | vix_3m  | median_abs_z            |             nan |   7 |      0.6366 |         0.3988 |         0.9331 |
-|          2012 | oct31        | Bayesian | vix_3m  | same_direction_fraction |             nan |   7 |      0.1887 |        -0.1874 |         0.6577 |
-|          2012 | oct31        | Bayesian | gpr_3m  | median_abs_z            |             nan |   7 |      0.1128 |        -0.165  |         0.6462 |
-|          2012 | oct31        | Bayesian | gpr_3m  | same_direction_fraction |             nan |   7 |     -0.1928 |        -0.6614 |         0.1428 |
+|          2012 | matched_live | Gaussian Bayesian | vix_3m  | median_abs_z            |             nan |   7 |      0.3264 |         0.0249 |         0.5276 |
+|          2012 | matched_live | Gaussian Bayesian | vix_3m  | same_direction_fraction |             nan |   7 |      0.4347 |         0.1545 |         0.7342 |
+|          2012 | matched_live | Gaussian Bayesian | gpr_3m  | median_abs_z            |             nan |   7 |     -0.1926 |        -0.346  |         0.0923 |
+|          2012 | matched_live | Gaussian Bayesian | gpr_3m  | same_direction_fraction |             nan |   7 |     -0.0634 |        -0.2608 |         0.3058 |
+|          2012 | oct31        | Gaussian Bayesian | vix_3m  | median_abs_z            |             nan |   7 |      0.6366 |         0.3988 |         0.9331 |
+|          2012 | oct31        | Gaussian Bayesian | vix_3m  | same_direction_fraction |             nan |   7 |      0.1887 |        -0.1874 |         0.6577 |
+|          2012 | oct31        | Gaussian Bayesian | gpr_3m  | median_abs_z            |             nan |   7 |      0.1128 |        -0.165  |         0.6462 |
+|          2012 | oct31        | Gaussian Bayesian | gpr_3m  | same_direction_fraction |             nan |   7 |     -0.1928 |        -0.6614 |         0.1428 |
 
 Older raw-poll error comparisons are saved separately in `raw_poll_error_cycles.parquet`; they are not additional model-backtest folds.
 
@@ -143,16 +143,16 @@ The100-seat ledger and35 current physical contests reconcile; candidate identity
 
 | model           | affected_states   |   allocated_D |   expected_D |   p_D_control |   D_lo70 |   D_hi70 |   baseline_expected_D |   baseline_p_D_control | interpretation                                                           |
 |:----------------|:------------------|--------------:|-------------:|--------------:|---------:|---------:|----------------------:|-----------------------:|:-------------------------------------------------------------------------|
-| Bayesian        | ID                |             0 |      50.4151 |        0.4827 |       49 |       52 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
-| Bayesian        | ID                |             1 |      51.4151 |        0.7345 |       50 |       53 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
-| Bayesian        | MT                |             0 |      50.4114 |        0.4818 |       49 |       52 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
-| Bayesian        | MT                |             1 |      51.4114 |        0.7339 |       50 |       53 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
-| Bayesian        | NE                |             0 |      50.3805 |        0.4743 |       49 |       52 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
-| Bayesian        | NE                |             1 |      51.3805 |        0.7293 |       50 |       53 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
-| Bayesian        | SD                |             0 |      50.415  |        0.4827 |       49 |       52 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
-| Bayesian        | SD                |             1 |      51.415  |        0.7345 |       50 |       53 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
-| Bayesian        | ID,MT,NE,SD       |             0 |      50.3761 |        0.4733 |       49 |       52 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
-| Bayesian        | ID,MT,NE,SD       |             4 |      54.3761 |        0.9936 |       53 |       56 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
+| Gaussian Bayesian        | ID                |             0 |      50.4151 |        0.4827 |       49 |       52 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
+| Gaussian Bayesian        | ID                |             1 |      51.4151 |        0.7345 |       50 |       53 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
+| Gaussian Bayesian        | MT                |             0 |      50.4114 |        0.4818 |       49 |       52 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
+| Gaussian Bayesian        | MT                |             1 |      51.4114 |        0.7339 |       50 |       53 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
+| Gaussian Bayesian        | NE                |             0 |      50.3805 |        0.4743 |       49 |       52 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
+| Gaussian Bayesian        | NE                |             1 |      51.3805 |        0.7293 |       50 |       53 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
+| Gaussian Bayesian        | SD                |             0 |      50.415  |        0.4827 |       49 |       52 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
+| Gaussian Bayesian        | SD                |             1 |      51.415  |        0.7345 |       50 |       53 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
+| Gaussian Bayesian        | ID,MT,NE,SD       |             0 |      50.3761 |        0.4733 |       49 |       52 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
+| Gaussian Bayesian        | ID,MT,NE,SD       |             4 |      54.3761 |        0.9936 |       53 |       56 |               50.4153 |                 0.4827 | Allocation-only bound; other races held fixed, not conditioning on a win |
 | Mean-only blend | ID                |             0 |      50.7954 |        0.574  |       49 |       53 |               50.7955 |                 0.574  | Allocation-only bound; other races held fixed, not conditioning on a win |
 | Mean-only blend | ID                |             1 |      51.7954 |        0.7745 |       50 |       54 |               50.7955 |                 0.574  | Allocation-only bound; other races held fixed, not conditioning on a win |
 | Mean-only blend | MT                |             0 |      50.7938 |        0.5739 |       49 |       53 |               50.7955 |                 0.574  | Allocation-only bound; other races held fixed, not conditioning on a win |
@@ -175,16 +175,16 @@ We average over both favorable and unfavorable observations. The primary criteri
 
 | model           | state   |   rank | polled   | structural_proxy   |   p_dem |   information_bits |   control_entropy_reduction_pct |   seat_variance_reduction |
 |:----------------|:--------|-------:|:---------|:-------------------|--------:|-------------------:|--------------------------------:|--------------------------:|
-| Bayesian        | AK      |      1 | True     | False              |  0.3881 |             0.015  |                          1.5039 |                    0.0842 |
-| Bayesian        | OH      |      2 | True     | False              |  0.6905 |             0.0131 |                          1.3117 |                    0.0707 |
-| Bayesian        | IA      |      3 | True     | False              |  0.2993 |             0.0125 |                          1.2545 |                    0.072  |
-| Bayesian        | TX      |      4 | True     | False              |  0.5147 |             0.012  |                          1.2039 |                    0.0704 |
-| Bayesian        | FL      |      5 | True     | False              |  0.1781 |             0.0089 |                          0.8916 |                    0.0583 |
-| Bayesian        | MI      |      6 | True     | False              |  0.8022 |             0.0085 |                          0.854  |                    0.0504 |
-| Bayesian        | GA      |      7 | True     | False              |  0.8295 |             0.0083 |                          0.8282 |                    0.0487 |
-| Bayesian        | CO      |      8 | False    | False              |  0.9279 |             0.0072 |                          0.7233 |                    0.0548 |
-| Bayesian        | NC      |      9 | True     | False              |  0.8353 |             0.0065 |                          0.6467 |                    0.0386 |
-| Bayesian        | WV      |     10 | False    | False              |  0.0573 |             0.0064 |                          0.6392 |                    0.048  |
+| Gaussian Bayesian        | AK      |      1 | True     | False              |  0.3881 |             0.015  |                          1.5039 |                    0.0842 |
+| Gaussian Bayesian        | OH      |      2 | True     | False              |  0.6905 |             0.0131 |                          1.3117 |                    0.0707 |
+| Gaussian Bayesian        | IA      |      3 | True     | False              |  0.2993 |             0.0125 |                          1.2545 |                    0.072  |
+| Gaussian Bayesian        | TX      |      4 | True     | False              |  0.5147 |             0.012  |                          1.2039 |                    0.0704 |
+| Gaussian Bayesian        | FL      |      5 | True     | False              |  0.1781 |             0.0089 |                          0.8916 |                    0.0583 |
+| Gaussian Bayesian        | MI      |      6 | True     | False              |  0.8022 |             0.0085 |                          0.854  |                    0.0504 |
+| Gaussian Bayesian        | GA      |      7 | True     | False              |  0.8295 |             0.0083 |                          0.8282 |                    0.0487 |
+| Gaussian Bayesian        | CO      |      8 | False    | False              |  0.9279 |             0.0072 |                          0.7233 |                    0.0548 |
+| Gaussian Bayesian        | NC      |      9 | True     | False              |  0.8353 |             0.0065 |                          0.6467 |                    0.0386 |
+| Gaussian Bayesian        | WV      |     10 | False    | False              |  0.0573 |             0.0064 |                          0.6392 |                    0.048  |
 | Mean-only blend | CO      |      1 | False    | False              |  0.8362 |             0.0145 |                          1.4721 |                    0.0928 |
 | Mean-only blend | WV      |      2 | False    | False              |  0.1413 |             0.0119 |                          1.2117 |                    0.08   |
 | Mean-only blend | AK      |      3 | True     | False              |  0.5896 |             0.0111 |                          1.1234 |                    0.0798 |

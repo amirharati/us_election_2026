@@ -11,7 +11,7 @@ Poll-weight experiments are excluded. Scope is the four Bayesian models, correct
 
 | model                     |   point_D |   expected_D |   D_control_pct |   D_lo70 |   D_hi70 |
 |:--------------------------|----------:|-------------:|----------------:|---------:|---------:|
-| Bayesian                  |        51 |       50.321 |          45.513 |       49 |       52 |
+| Gaussian Bayesian                  |        51 |       50.321 |          45.513 |       49 |       52 |
 | Matched Student-t (df5)   |        51 |       50.477 |          50.069 |       49 |       52 |
 | Older Gaussian            |        50 |       51.091 |          61.997 |       49 |       53 |
 | Student-t research helper |        50 |       51.116 |          63.019 |       49 |       53 |
@@ -23,7 +23,7 @@ Point seats count positive mean margins; expected seats sum probabilities; D con
 
 ### Key states: D−R margin in pp / D win probability
 
-| geography   | Bayesian      | Matched Student-t (df5)   | Older Gaussian   | Student-t research helper   | Non-Bayesian corrected   |
+| geography   | Gaussian Bayesian      | Matched Student-t (df5)   | Older Gaussian   | Student-t research helper   | Non-Bayesian corrected   |
 |:------------|:--------------|:--------------------------|:-----------------|:----------------------------|:-------------------------|
 | MI          | +4.99 / 79.9% | +4.90 / 85.0%             | +4.73 / 74.9%    | +4.72 / 80.6%               | -3.86 / 37.9%            |
 | ME          | +8.19 / 92.0% | +7.96 / 94.0%             | +5.20 / 76.2%    | +5.35 / 82.4%               | -0.04 / 49.9%            |
@@ -45,9 +45,9 @@ Point seats count positive mean margins; expected seats sum probabilities; D con
 
 | geography   | model                     |   margin_pp |   D_probability_pct |   lo70_pp |   hi70_pp |   lo95_pp |   hi95_pp |
 |:------------|:--------------------------|------------:|--------------------:|----------:|----------:|----------:|----------:|
-| NE          | Bayesian                  |      -24.08 |                3.51 |    -37.86 |    -10.3  |    -50.14 |      1.98 |
-| SD          | Bayesian                  |      -34.05 |                0.02 |    -43.98 |    -24.11 |    -52.83 |    -15.26 |
-| WV          | Bayesian                  |      -32.46 |                5.68 |    -53.73 |    -11.2  |    -72.67 |      7.74 |
+| NE          | Gaussian Bayesian                  |      -24.08 |                3.51 |    -37.86 |    -10.3  |    -50.14 |      1.98 |
+| SD          | Gaussian Bayesian                  |      -34.05 |                0.02 |    -43.98 |    -24.11 |    -52.83 |    -15.26 |
+| WV          | Gaussian Bayesian                  |      -32.46 |                5.68 |    -53.73 |    -11.2  |    -72.67 |      7.74 |
 | NE          | Older Gaussian            |      -21.17 |               22.52 |    -50.24 |      7.9  |    -76.15 |     33.81 |
 | SD          | Older Gaussian            |      -28    |               13.98 |    -54.85 |     -1.16 |    -78.77 |     22.76 |
 | WV          | Older Gaussian            |      -19.26 |               33.03 |    -64.71 |     26.19 |   -105.22 |     66.7  |
@@ -74,7 +74,7 @@ Matched prior variances plus heavier far tails can mean narrower central interva
 
 | model                     |   seat_sd |   p_D_at_least_55 |   p_D_45_or_fewer |   p_tie50 |   mean_state_correlation |
 |:--------------------------|----------:|------------------:|------------------:|----------:|-------------------------:|
-| Bayesian                  |    1.5521 |            0.0022 |            0.001  |    0.2512 |                   0.0286 |
+| Gaussian Bayesian                  |    1.5521 |            0.0022 |            0.001  |    0.2512 |                   0.0286 |
 | Older Gaussian            |    2.0454 |            0.0447 |            0.0032 |    0.1654 |                   0.0178 |
 | Student-t research helper |    1.896  |            0.0364 |            0.0014 |    0.1758 |                   0.0172 |
 | Matched Student-t (df5)   |    1.4316 |            0.002  |            0.0004 |    0.2608 |                   0.0265 |

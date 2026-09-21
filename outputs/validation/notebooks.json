@@ -3,90 +3,70 @@
     "notebook": "01_models_and_results.ipynb",
     "status": "passed",
     "legacy_data_reads_blocked": true,
-    "seconds": 6.83,
-    "notebook_sha256": "8c239b0cbdd69cc3bee923d3673fc40557ca5abfac9eb65be02651e2918ef32f",
-    "post_execution_edit": "Report navigation only: notebook-relative Markdown links; removed local cache hyperlink.",
-    "current_notebook_sha256": "ae48e01007fdf8e8e15fee2f45fc4eb7636dee8abe6c60a478bb1baa9b000853"
+    "seconds": 7.42,
+    "notebook_sha256": "d9202dd87d9515c454cd6a4c157c61bfeacc8e0c876f94cb4e98c1d5da581138"
   },
   {
     "notebook": "02_blend_weights.ipynb",
     "status": "passed",
     "legacy_data_reads_blocked": true,
-    "seconds": 5.36,
-    "notebook_sha256": "5326428483f81ef038678862eb4da50527fa5666929b59fde79fcde39dce5b3c",
-    "post_execution_edit": "Report navigation only: notebook-relative Markdown links; removed local cache hyperlink.",
-    "current_notebook_sha256": "6438ea49d0a3069ada8fb4a55d18d1266bb01a92e7f69e2b7f6fc2eb3f5dc67b"
+    "seconds": 6.21,
+    "notebook_sha256": "f0da00b18208c775a665a6b811bcd794a439468e06b96180abd705c28cefa8d5"
   },
   {
     "notebook": "03_training_and_assumptions.ipynb",
     "status": "passed",
     "legacy_data_reads_blocked": true,
-    "seconds": 32.01,
-    "notebook_sha256": "00e0ef5cbb04c41bb62cf5983a3ec87a9ab459f8f6ecbaad1e3e1ccb4f3d0dac",
-    "post_execution_edit": "Report navigation only: notebook-relative Markdown links; removed local cache hyperlink.",
-    "current_notebook_sha256": "a63333c44d6adf70612cab00d60f27758e2b70796dd00fde2e49d7b6ec819fad"
+    "seconds": 24.71,
+    "notebook_sha256": "ad5c4b8496441e41f9474abd837ad834d3781c606529ab358ccfb0330f326381"
   },
   {
     "notebook": "04_live_forecast.ipynb",
     "status": "passed",
     "legacy_data_reads_blocked": true,
-    "seconds": 139.89,
-    "notebook_sha256": "48531ca3886d8a74028b03c115576d81e3a8e38c5fdf7821e8122971cece8b30",
-    "post_execution_edit": "Watchlist rendered with full wrapping HTML and shorter complete sentences. Executed and saved in active VS Code kernel; both tables verified on disk without ellipsis truncation.",
-    "current_notebook_sha256": "791084ac13ef413c182c917294d9e130bdf61e79d29f7d68e347f674e37ad3a8"
+    "seconds": 92.77,
+    "notebook_sha256": "579d2dd4a3a026f2e847d75543329758080e908676ed814ac0c7b97ee4fb3dd0"
   },
   {
     "notebook": "05_wave_and_poll_error_scenarios.ipynb",
     "status": "passed",
     "legacy_data_reads_blocked": true,
-    "seconds": 5.51,
-    "notebook_sha256": "1ee2403ac71b586ef6b76af62f70a8c3cb0f0a77f3df8c011e8bf22e2faf88ab",
-    "post_execution_edit": "Report navigation only: notebook-relative Markdown links; removed local cache hyperlink.",
-    "current_notebook_sha256": "a54b6b46bbb30eae0c134e9fd53a419473ed4db253e6151a68e0ed2df1e894c1"
+    "seconds": 5.59,
+    "notebook_sha256": "942eabce994cac8c38c8bda290b8e41df0affbd7b5daf12f8e611f217d346134"
   },
   {
     "notebook": "06_matched_student_comparison.ipynb",
     "status": "passed",
     "legacy_data_reads_blocked": true,
-    "seconds": 26.06,
-    "notebook_sha256": "6e1d0ec1ea017ed1fd61f2700dcd1270920214ed4ef4287950d57d719778ae62",
-    "post_execution_edit": "Report navigation only: notebook-relative Markdown links; removed local cache hyperlink.",
-    "current_notebook_sha256": "210cfb9c3c6291a4cf16f03d487b5d32ed9a28b43e3ca4a02b918327830a9512"
+    "seconds": 28.03,
+    "notebook_sha256": "31b42c932fc34f2094cda047c7ef1b2bdf172243f5a655181201972f0c7b8ab8"
   },
   {
     "notebook": "07_older_model_alternatives.ipynb",
     "status": "passed",
     "legacy_data_reads_blocked": true,
-    "seconds": 56.67,
-    "notebook_sha256": "516c6fb95314ad6ab2e04cdff0f5fa37c59177dd3db055be12cff37ba0d46f5a",
-    "post_execution_edit": "Added independent portfolio review publication and links; report publication executed separately using the verified saved portfolio. Full notebook not rerun.",
-    "current_notebook_sha256": "e0047e56d75f19a66972c5e191b47a6bf45090a65f4266e67378a18852a941ca"
+    "seconds": 55.39,
+    "notebook_sha256": "0b54a19c798ede51f34cf8ae055c4e1582e5aff680ad99e4a933d3f705a0d837"
   },
   {
     "notebook": "08_all_model_mixture.ipynb",
     "status": "passed",
     "legacy_data_reads_blocked": true,
-    "seconds": 56.12,
-    "notebook_sha256": "8eb5b92162484fa4c8e6bac9edfc1539dac9280bf3b1f7707f4a250734718848",
-    "post_execution_edit": "Added independent portfolio review publication and links; report publication executed separately using the verified saved portfolio. Full notebook not rerun.",
-    "current_notebook_sha256": "c361f2dff140f52fe3bcd0aa765b334dc3c4c9037651aa04968865ddadc92dd0"
+    "seconds": 3.07,
+    "notebook_sha256": "a113d350517bce86fa06f8696bfd0b3de9c19ac006e7f66f3bc05d66d34b9dd3"
   },
   {
     "notebook": "09_poll_weight_experiments.ipynb",
     "status": "passed",
     "legacy_data_reads_blocked": true,
-    "seconds": 16.75,
-    "notebook_sha256": "f31d8bb17ddd7d410e0a5c7cc75c5d4804cdd720e41e18b5c47c89a9fda07e11",
-    "post_execution_edit": "Report navigation only: notebook-relative Markdown links; removed local cache hyperlink.",
-    "current_notebook_sha256": "1b2f0594e01d663d7bf5d41efa658b6b0715c80eb4125a9c92a104b4e1f0d5ae"
+    "seconds": 16.82,
+    "notebook_sha256": "e4205fa82ae2ba1d3e3d5b9f07704073e3b4f1cda979d732b9df5c339c1fe1d3"
   },
   {
     "notebook": "10_model_disagreements.ipynb",
     "status": "passed",
     "legacy_data_reads_blocked": true,
-    "seconds": 3.08,
-    "notebook_sha256": "6825c7008378fe65b7af02fc6586f8b543b10a3d56b93b7ca8df33b496f2819d",
-    "post_execution_edit": "Report navigation only: notebook-relative Markdown links; removed local cache hyperlink.",
-    "current_notebook_sha256": "91f493bbc1ab9423826884fffbb59436acdec7acb1cf64883597db2e4b6ce51f"
+    "seconds": 3.16,
+    "notebook_sha256": "a0fd50351a7421c531a19c56f0764626b3e31e1986694fd256fa35ececee4257"
   }
 ]

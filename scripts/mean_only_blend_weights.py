@@ -5,6 +5,7 @@ import json
 import shutil
 import numpy as np
 import pandas as pd
+from model_labels import label_frame
 from scipy.stats import norm
 from calibrate_margin_uncertainty import sha, finalize
 from plain_polling_blend import verify, BAYES_SOURCE
@@ -155,12 +156,12 @@ Positive margins favor Democrats, in percentage points. P(D) is state win probab
 
 Each horizon contains 140 contests across five cycles. MAE, Brier and coverage average cycles equally; correct calls pool contests. Lower MAE/Brier/CRPS is better; target coverage is 70% or 95%. Matched-live is the saved September horizon; oct31 is October 31.
 
-'''+summary.query('first_cycle == 2016').round(4).to_markdown(index=False)
+'''+label_frame(summary.query('first_cycle == 2016').round(4)).to_markdown(index=False)
     for title,table in [('Current total seats',seats[seats.cycle.eq(2026)]),('All historical cycles',cycles),
                         ('Historical chamber totals and actuals',seats[seats.cycle.lt(2026)]),
                         ('Subgroups, 2016–2024',tables['subgroups']),('Current state margins',tables['current_margins']),
                         ('Current state P(D), percent',tables['current_probabilities'])]:
-        report += '\n\n## '+title+'\n\n'+table.round(4).to_markdown(index=False)
+        report += '\n\n## '+title+'\n\n'+label_frame(table.round(4)).to_markdown(index=False)
     (out/'RESULTS.md').write_text(report)
     shutil.copy2(__file__,out/Path(__file__).name)
     finalize(out)

@@ -2,7 +2,7 @@
 
 [Complete supporting results](../../results/experiments/model_disagreement/) · [Run settings](../../results/experiments/model_disagreement/run.json)
 
-Latest execution: `20260921T044745.370497Z`. Forecast cutoff: **2026-09-21**.
+Latest execution: `20260921T190059.014593Z`. Forecast cutoff: **2026-09-21**.
 
 Margins are Democratic minus Republican percentage points. Experiments do not replace the active model or automatically select blend weights.
 
@@ -10,7 +10,7 @@ Margins are Democratic minus Republican percentage points. Experiments do not re
 
 | Horizon           | Model                     |   D seats (mean winners) |   R seats (mean winners) |   Expected D seats |   D control % |   D seats: 70% low |   D seats: 70% high |
 |:------------------|:--------------------------|-------------------------:|-------------------------:|-------------------:|--------------:|-------------------:|--------------------:|
-| Matched September | Bayesian                  |                       51 |                       49 |             50.320 |        45.520 |                 49 |                  52 |
+| Matched September | Gaussian Bayesian         |                       51 |                       49 |             50.320 |        45.520 |                 49 |                  52 |
 | Matched September | Corrected 10%             |                       51 |                       49 |             50.179 |        41.807 |                 49 |                  52 |
 | Matched September | Corrected 20%             |                       51 |                       49 |             50.031 |        38.290 |                 48 |                  52 |
 | Matched September | Corrected 40%             |                       51 |                       49 |             49.710 |        31.993 |                 48 |                  51 |

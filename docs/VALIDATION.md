@@ -66,7 +66,7 @@ forecast date. Read the source-status table in notebook 04 on each run.
 ## Retained qualifications
 
 The Student helper retains its research architecture, which differs from the
-final Gaussian main model. Mean-only blends preserve Bayesian margin covariance;
+final Gaussian main model. Mean-only blends preserve Gaussian Bayesian margin covariance;
 the non-Bayesian helper's own seat probabilities use an independence approximation.
 Blend weights remain sensitivity experiments, with no automatically selected
 winner or validated time-dependent schedule. See the full model and data guides

@@ -13,25 +13,25 @@ refers to the retained matched historical horizon, not refreshed historical data
 
 | scenario     | model                   |   races |   correct |   accuracy_pct |   absolute_error_pp |   brier |
 |:-------------|:------------------------|--------:|----------:|---------------:|--------------------:|--------:|
-| matched_live | Bayesian                |     140 |       128 |        91.4286 |              6.3067 |  0.0555 |
+| matched_live | Gaussian Bayesian                |     140 |       128 |        91.4286 |              6.3067 |  0.0555 |
 | matched_live | Matched Student-t (df5) |     140 |       129 |        92.1429 |              6.3443 |  0.0548 |
-| oct31        | Bayesian                |     140 |       132 |        94.2857 |              5.206  |  0.0504 |
+| oct31        | Gaussian Bayesian                |     140 |       132 |        94.2857 |              5.206  |  0.0504 |
 | oct31        | Matched Student-t (df5) |     140 |       132 |        94.2857 |              5.2242 |  0.0495 |
 
 | scenario     | model                   |   width70_pp |   coverage70 |   width95_pp |   coverage95 |   wis_pp |
 |:-------------|:------------------------|-------------:|-------------:|-------------:|-------------:|---------:|
-| matched_live | Bayesian                |       19.876 |       78.571 |       37.588 |       94.286 |    3.822 |
+| matched_live | Gaussian Bayesian                |       19.876 |       78.571 |       37.588 |       94.286 |    3.822 |
 | matched_live | Matched Student-t (df5) |       16.929 |       66.429 |       35.084 |       92.857 |    3.783 |
-| oct31        | Bayesian                |       15.8   |       73.571 |       29.878 |       94.286 |    3.054 |
+| oct31        | Gaussian Bayesian                |       15.8   |       73.571 |       29.878 |       94.286 |    3.054 |
 | oct31        | Matched Student-t (df5) |       13.287 |       62.143 |       26.851 |       92.143 |    3.049 |
 
 Chamber metrics (lower is better):
 
 | scenario     | model                   |   seat_crps |   expected_seat_error |
 |:-------------|:------------------------|------------:|----------------------:|
-| matched_live | Bayesian                |      0.7046 |                1.1331 |
+| matched_live | Gaussian Bayesian                |      0.7046 |                1.1331 |
 | matched_live | Matched Student-t (df5) |      0.7686 |                1.2424 |
-| oct31        | Bayesian                |      0.6633 |                0.9458 |
+| oct31        | Gaussian Bayesian                |      0.6633 |                0.9458 |
 | oct31        | Matched Student-t (df5) |      0.6828 |                0.9729 |
 
 The Student result has one additional correct September call and ties October.
@@ -54,7 +54,7 @@ remain explicit in the source metadata.
 
 | model                   |   point_D |   point_R |   expected_D |   D control % | 70% D seats   |
 |:------------------------|----------:|----------:|-------------:|--------------:|:--------------|
-| Bayesian                |        51 |        49 |      50.3214 |       45.5133 | 49–52         |
+| Gaussian Bayesian                |        51 |        49 |      50.3214 |       45.5133 | 49–52         |
 | Matched Student-t (df5) |        51 |        49 |      50.4775 |       50.0687 | 49–52         |
 
 Student raises expected D seats by about 0.16 and control probability by about

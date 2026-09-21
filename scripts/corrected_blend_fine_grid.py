@@ -5,6 +5,7 @@ import json
 import shutil
 import numpy as np
 import pandas as pd
+from model_labels import label_frame
 from scipy.stats import norm
 from mean_only_blend_weights import blend_mean, METRICS
 from mean_only_polling_blend import rescore, translate_draws
@@ -123,7 +124,7 @@ Historical component forecasts used earlier-cycle training/tuning. Repeated arch
     for title,table in [('Recent history',summary[summary.first_cycle.eq(2016)]),('All historical summary',summary),
         ('Current seats',seats[seats.cycle.eq(2026)]),('Each historical cycle',cycles),('Historical chamber totals',seats[seats.cycle.lt(2026)]),
         ('Subgroups',tables['subgroups']),('Current margins by blend weight (%)',tables['current_margins']),('Current P(D) percent',tables['current_probabilities'])]:
-        report+='\n\n## '+title+'\n\n'+table.round(4).to_markdown(index=False)
+        report+='\n\n## '+title+'\n\n'+label_frame(table.round(4)).to_markdown(index=False)
     (out/'RESULTS.md').write_text(report)
     shutil.copy2(__file__,out/Path(__file__).name)
     finalize(out)

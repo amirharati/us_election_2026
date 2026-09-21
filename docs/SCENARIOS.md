@@ -8,7 +8,7 @@ No download, fitting, parameter selection or baseline promotion occurs here.
 ## Models and axes
 
 Compare the main Gaussian Bayesian model (`repaired_both__selected`) with 20% and
-50% corrected-polling mean blends. “Bayesian” here means the packaged main, not a
+50% corrected-polling mean blends. “Gaussian Bayesian” here means the packaged main, not a
 new independent-state or reduced-complexity model. We retain its joint covariance.
 
 The deterministic grid spans an additional Democratic wave of 0–10 **D-minus-R
@@ -51,7 +51,7 @@ For helper weight a, define
 
 `m_blend = (1-a)*m + a*m_helper`, `T = (1-a)*G + a*B`.
 
-The scenario mean is `m_blend - T e + w*1`. It keeps the **whole Bayesian margin
+The scenario mean is `m_blend - T e + w*1`. It keeps the **whole Gaussian Bayesian margin
 covariance C**, not only its marginal variances. A wave moves final margins
 directly; a poll correction is attenuated differently by state and model, so the
 two axes do not simply cancel point for point.

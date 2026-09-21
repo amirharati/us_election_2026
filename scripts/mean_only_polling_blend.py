@@ -7,6 +7,7 @@ import shutil
 
 import numpy as np
 import pandas as pd
+from model_labels import label_frame
 from scipy.stats import norm
 
 from calibrate_margin_uncertainty import sha, finalize
@@ -201,12 +202,12 @@ Positive margins are Democratic minus Republican percentage points; P(D) is win 
 
 The two main rows use the same Bayesian joint covariance. The old pooled blend is shown only as a labeled reference: its joint method assumes independent states.
 
-'''+seats[seats.cycle.eq(2026)].round(4).to_markdown(index=False)
-    report+='\n\n## Recent historical evaluation, 2016–2024\n\nSame two models, 140 contests per horizon. MAE/Brier/interval score: lower is better. Coverage ideally equals70%; widths are in percentage points. Error metrics average cycles equally; correct calls and counts pool contests.\n\n'+summary.query('first_cycle == 2016 and model != @OLD').round(4).to_markdown(index=False)
-    report+='\n\n## Matched comparison including old uncertainty, 2018–2024\n\n111 contests per horizon. All three models have probabilities for these cycles.\n\n'+summary.query('first_cycle == 2018').round(4).to_markdown(index=False)
-    report+='\n\n## Every historical cycle\n\n'+cycles.round(4).to_markdown(index=False)
-    report+='\n\n## All current races\n\n'+current_table.round(2).to_markdown(index=False)
-    report+='\n\n## Current 70% margin intervals\n\n'+tables['current_intervals'].to_markdown(index=False)
+'''+label_frame(seats[seats.cycle.eq(2026)].round(4)).to_markdown(index=False)
+    report+='\n\n## Recent historical evaluation, 2016–2024\n\nSame two models, 140 contests per horizon. MAE/Brier/interval score: lower is better. Coverage ideally equals70%; widths are in percentage points. Error metrics average cycles equally; correct calls and counts pool contests.\n\n'+label_frame(summary.query('first_cycle == 2016 and model != @OLD').round(4)).to_markdown(index=False)
+    report+='\n\n## Matched comparison including old uncertainty, 2018–2024\n\n111 contests per horizon. All three models have probabilities for these cycles.\n\n'+label_frame(summary.query('first_cycle == 2018').round(4)).to_markdown(index=False)
+    report+='\n\n## Every historical cycle\n\n'+label_frame(cycles.round(4)).to_markdown(index=False)
+    report+='\n\n## All current races\n\n'+label_frame(current_table.round(2)).to_markdown(index=False)
+    report+='\n\n## Current 70% margin intervals\n\n'+label_frame(tables['current_intervals']).to_markdown(index=False)
     (out/'RESULTS.md').write_text(report)
     shutil.copy2(__file__,out/Path(__file__).name)
     finalize(out)

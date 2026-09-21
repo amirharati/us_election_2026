@@ -77,6 +77,50 @@ def request_bytes(url, timeout=30, headers=None):
         time.sleep(attempt + 1)
 
 
+def request_fred_csv(url, timeout=30):
+    """Use curl's HTTP/1.1 transport for FRED graph exports when available.
+
+    This endpoint can time out with urllib or fail HTTP/2 streams. Keep TLS
+    verification, HTTPS redirects, bounded download sizes and source validation.
+    Other providers and the optional authenticated vintage API are unchanged.
+    """
+    import shutil
+    import subprocess
+    import tempfile
+    parts = urlsplit(url)
+    if parts.scheme != 'https' or parts.hostname != 'fred.stlouisfed.org' or parts.path != '/graph/fredgraph.csv':
+        raise ValueError('Expected a public FRED graph CSV URL')
+    safe = public_url(url)
+    curl = shutil.which('curl')
+    if curl is None:
+        return request_bytes(url, timeout)
+    with tempfile.TemporaryDirectory(prefix='fred-csv-') as temp:
+        data = Path(temp)/'data.csv'; headers = Path(temp)/'headers.txt'
+        command = [curl, '--http1.1', '--silent', '--show-error', '--fail', '--location',
+                   '--proto', '=https', '--proto-redir', '=https',
+                   '--connect-timeout', str(min(timeout,10)), '--max-time', str(timeout),
+                   '--max-filesize', str(MAX_BYTES), '--dump-header', str(headers),
+                   '--output', str(data), '--write-out', '%{url_effective}', url]
+        try:
+            result = subprocess.run(command, capture_output=True, text=True, timeout=timeout+5)
+        except subprocess.TimeoutExpired:
+            raise RuntimeError(f'FRED CSV download timed out after {timeout}s: {safe}') from None
+        if result.returncode:
+            detail = result.stderr.strip().replace(url,safe)[:500]
+            raise RuntimeError(f'FRED CSV download failed (curl {result.returncode}): {detail}')
+        if not data.exists() or not 0 < data.stat().st_size <= MAX_BYTES:
+            raise ValueError('Empty or oversized FRED CSV response')
+        response_headers = {}
+        for line in headers.read_text().splitlines():
+            if line.startswith('HTTP/'): response_headers = {}
+            elif ':' in line:
+                key,value=line.split(':',1);response_headers[key.lower()]=value.strip()
+        return data.read_bytes(), dict(url=safe,resolved_url=public_url(result.stdout.strip()),
+            retrieved_at=utc_now(),content_type=response_headers.get('content-type',''),
+            etag=response_headers.get('etag',''),http_last_modified=response_headers.get('last-modified',''),
+            transport='curl_http1.1')
+
+
 class Links(HTMLParser):
     def __init__(self, raw):
         super().__init__(convert_charrefs=True)

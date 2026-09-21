@@ -191,7 +191,7 @@ For a user-specified helper weight w:
 
 `draw_blend = draw_Bayesian + (mu_blend-mu_post)`.
 
-Full Bayesian **margin** covariance and interval widths remain unchanged.
+Full Gaussian Bayesian **margin** covariance and interval widths remain unchanged.
 Thresholding margins into winners can change seat-count variance and correlations.
 This is an empirical forecast translation, not a posterior obtained by lowering
 prior precision. It reduces prior pull on the mean only indirectly; helper

@@ -4,7 +4,7 @@ Notebook07 compares the older pair with the final Gaussian reference. Both use t
 
 | Model | Prior construction and relationships | Distribution |
 |---|---|---|
-| Bayesian (reference) | Repaired decay4 centers and selected variance penalties; national momentum/approval; common national and signed state factor | Gaussian |
+| Gaussian Bayesian (reference) | Repaired decay4 centers and selected variance penalties; national momentum/approval; common national and signed state factor | Gaussian |
 | Matched Student-t (df5) | Same centers, budgets, features and signed loadings as reference | Variance-standardized Student scale mixtures; see MATCHED_STUDENT.md |
 | Older Gaussian | Earlier decay4 centers and variance calibration; national features and common national factor; no signed state factor | Gaussian |
 | Student-t research helper | Same earlier architecture as Older Gaussian | Earlier componentwise df5 Student sampler |

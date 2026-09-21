@@ -12,6 +12,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from model_labels import model_label, label_frame
 
 import election_lab as lab
 
@@ -171,7 +172,7 @@ def history_figure(table):
             ax = axes[row,col]
             for name in names:
                 part = table[table.model.eq(name)].sort_values('cutoff')
-                ax.plot(part.cutoff,part[field],label=name,marker='.',linewidth=1.4)
+                ax.plot(part.cutoff,part[field],label=model_label(name),marker='.',linewidth=1.4)
             ax.axhline(50,color='gray',linestyle='--',linewidth=.7)
             ax.set(title=f'{title}\n{party} control',ylim=(0,100),ylabel='Probability (%)')
             ax.grid(alpha=.2);ax.legend(fontsize=7,loc='best');ax.tick_params(axis='x',rotation=30)
@@ -233,7 +234,7 @@ def markdown_report(out, meta, seats, predictions, watchlist, history_run=None, 
         lines += ['## Races to watch — room for a different outcome', '', METHOD, '',
                   'Coverage: at least '+str(surprise['parameters']['min_samples'])+' independent eligible samples from '+
                   str(surprise['parameters']['min_firms'])+' firms in the past '+str(surprise['parameters']['recent_days'])+' days.', '',
-                  'Available core models: '+', '.join(surprise['parameters']['available_models'])+'.', '']
+                  'Available core models: '+', '.join(map(model_label, surprise['parameters']['available_models']))+'.', '']
         for key,title in [('polled','Adequately polled races'),('thin','Thinly polled or no recent polls')]:
             lines += ['### '+title, '', markdown_table(display_table(surprise[key])) if not surprise[key].empty else 'No qualifying races.', '']
         lines += ['[All races and numerical scores](../../results/forecast/live_reports/surprise_all.parquet) · '
@@ -278,7 +279,7 @@ def save_report(live_run, watchlist, history_run=None, surprise=None):
     pred.to_parquet(out/'predictions.parquet',index=False)
     for name in ['recent','broad','summary']:
         watchlist[name].to_parquet(out/f'watchlist_{name}.parquet',index=False)
-    def table(frame):return frame.to_html(index=False,float_format=lambda x:f'{x:.2f}',na_rep='—',escape=True)
+    def table(frame):return label_frame(frame).to_html(index=False,float_format=lambda x:f'{x:.2f}',na_rep='—',escape=True)
     parts = [f'<h1>2026 Senate forecast — {html.escape(meta["as_of"])}</h1>',
         '<p>Positive margins favor Democrats. Probabilities are model estimates, not certified outcomes. '
         'Democratic control requires51 seats; Republican control includes a50–50 Senate with the assumed GOP vice-presidential tie-break.</p>',
@@ -300,7 +301,7 @@ def save_report(live_run, watchlist, history_run=None, surprise=None):
     state = pred[['model','geography','special','margin_pp','p_dem','lo95_pp','hi95_pp']].copy()
     state['D_win_pct'] = 100*state.pop('p_dem')
     for model,frame in state.groupby('model',sort=False):
-        parts.extend([f'<details><summary>{html.escape(model)}</summary>',table(frame.drop(columns='model')),'</details>'])
+        parts.extend([f'<details><summary>{html.escape(model_label(model))}</summary>',table(frame.drop(columns='model')),'</details>'])
     if history_run is not None:
         history_run = lab.verify_run(history_run)
         hmeta = json.loads((history_run/'run.json').read_text())
@@ -317,7 +318,7 @@ def save_report(live_run, watchlist, history_run=None, surprise=None):
             f'<p>Feature mode: {html.escape(hmeta["feature_mode"])}. Scheduled spacing: {hmeta["every_days"]} days; '
             f'last {hmeta["last_days"]} days evaluated daily. Small changes may include Monte Carlo noise.</p>',
             f'<img alt="Senate-control history by model and party" src="data:image/png;base64,{encoded}">',
-            '<h3>Recent daily probabilities (%)</h3>',recent_table(history,hmeta['last_days']).to_html(),
+            '<h3>Recent daily probabilities (%)</h3>',label_frame(recent_table(history,hmeta['last_days'])).to_html(),
             '<details><summary>All cutoff results and changes</summary>',table(history),'</details>',
             '<details><summary>Polling evidence by cutoff</summary>',table(evidence),'</details>'])
     parts.extend(['<h2>Freshness and provenance</h2>',

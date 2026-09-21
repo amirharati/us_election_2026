@@ -4,6 +4,7 @@ from datetime import datetime,timezone
 import json
 import numpy as np
 import pandas as pd
+from model_labels import label_frame
 from scipy.stats import norm
 import simple_bayesian_polling as v1
 import simple_national_model as normal
@@ -185,7 +186,7 @@ def report(out,lab):
     points=pd.DataFrame(pointrows);points.to_parquet(out/'point_summary.parquet',index=False)
     text='# Final bounded experiments: results\n\nLocal/event/horizon calibration selected by earlier-cycle state WIS; adaptive combination by earlier-cycle chamber CRPS. Horizon selector pools horizons. Frozen September17 data; no new holdout. Event flags are on for all recent cycles, so event specificity cannot be inferred from recent performance alone.\n\n'
     keep=lambda names:names.eq('none__base')|names.eq('both__base')|names.eq('approval__base')|names.str.endswith('_selected')|names.str.endswith('__adaptive3')
-    for title,tab in [('Recent state metrics',su[su.period.eq('recent_2016_2024')&su.group.eq('all')&keep(su.model)][['scenario','model','n','correct','absolute_error_pp','wis_pp','brier','coverage70','coverage95']]),('Recent chamber metrics',ch[ch.period.eq('recent_2016_2024')&keep(ch.model)]),('Current seats',s[s.cycle.eq(2026)&keep(s.model)][['model','point_D','expected_D_exact','D_lo70','D_hi70','D_lo95','D_hi95']])]:text+='## '+title+'\n\n'+tab.round(4).to_markdown(index=False)+'\n\n'
+    for title,tab in [('Recent state metrics',su[su.period.eq('recent_2016_2024')&su.group.eq('all')&keep(su.model)][['scenario','model','n','correct','absolute_error_pp','wis_pp','brier','coverage70','coverage95']]),('Recent chamber metrics',ch[ch.period.eq('recent_2016_2024')&keep(ch.model)]),('Current seats',s[s.cycle.eq(2026)&keep(s.model)][['model','point_D','expected_D_exact','D_lo70','D_hi70','D_lo95','D_hi95']])]:text+='## '+title+'\n\n'+label_frame(tab.round(4)).to_markdown(index=False)+'\n\n'
     (lab/'FINAL_BASELINE_EXPERIMENTS_RESULTS.md').write_text(text);(out/'FINAL_BASELINE_EXPERIMENTS_RESULTS.md').write_text(text)
     import matplotlib
     matplotlib.use('Agg')

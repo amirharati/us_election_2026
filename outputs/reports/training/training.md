@@ -2,7 +2,7 @@
 
 [Complete supporting results](../../results/training/training/) · [Run settings](../../results/training/training/run.json)
 
-Latest execution: `20260921T044238.402553Z`. Forecast cutoff: **frozen historical/reference inputs**.
+Latest execution: `20260921T185732.690365Z`. Forecast cutoff: **frozen historical/reference inputs**.
 
 Margins are Democratic minus Republican percentage points. Experiments do not replace the active model or automatically select blend weights.
 

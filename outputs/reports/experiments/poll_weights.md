@@ -2,7 +2,7 @@
 
 [Complete supporting results](../../results/experiments/poll_weights/) · [Run settings](../../results/experiments/poll_weights/run.json)
 
-Latest execution: `20260921T044728.506084Z`. Forecast cutoff: **2026-09-21**.
+Latest execution: `20260921T190041.475376Z`. Forecast cutoff: **2026-09-21**.
 
 Margins are Democratic minus Republican percentage points. Experiments do not replace the active model or automatically select blend weights.
 

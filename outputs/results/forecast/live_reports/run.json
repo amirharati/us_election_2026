@@ -1,8 +1,8 @@
 {
   "kind": "live_report",
   "as_of": "2026-09-21",
-  "live_run": "cache/runs/live/20260921T171049.906872Z",
-  "live_manifest_sha256": "13ff84a248ed24a6d9d7717737708a52441e705ed9680589de04e16e3cb367d5",
+  "live_run": "cache/runs/live/20260921T185745.202426Z",
+  "live_manifest_sha256": "f4ee18e438566a0234719d12dd2e487cd045dbe3c34a6a7388c565aa3ab12935",
   "watchlist_parameters": {
     "recent_days": 30,
     "min_width_pp": 25.0,
@@ -32,8 +32,8 @@
     "history_sha256": "e168daabc2efeccb4db025386f8ed78ea4e4ab9a7d7f49e37716352a4e027d86",
     "historical_scope": "state, not necessarily same Senate seat",
     "historical_scenario": "matched_live",
-    "source_manifest_sha256": "13ff84a248ed24a6d9d7717737708a52441e705ed9680589de04e16e3cb367d5"
+    "source_manifest_sha256": "f4ee18e438566a0234719d12dd2e487cd045dbe3c34a6a7388c565aa3ab12935"
   },
-  "history_run": "cache/runs/control_history/20260921T171211.928533Z",
-  "history_manifest_sha256": "e91519041748e3aed55d4951fb4b6a2c85ce802ca208448d425f27126daac3dc"
+  "history_run": "cache/runs/control_history/20260921T185905.255517Z",
+  "history_manifest_sha256": "e6d0cf81c98bef8f5a0272e0f91d1622cec63c8340863f6b6d606e7d77747a73"
 }

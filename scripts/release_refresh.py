@@ -44,7 +44,7 @@ def acquire(name, force=False, offline=False, ttl_hours=6., timeout=20):
     from compact_data import CompactDataset
     before=cache_path(name);CompactDataset(before)
     saved=json.loads((before/'sources.json').read_text())[name]
-    info={k:v for k,v in saved.items() if k not in ['acquisition_status','checked_at','failure_type','status']}
+    info={k:v for k,v in saved.items() if k not in ['acquisition_status','checked_at','failure_type','failure_detail','status']}
     stamp=ROOT/'cache/acquisition'/f'{name}.json'
     meta=json.loads(stamp.read_text()) if stamp.exists() else {}
     age=float('inf')
@@ -66,9 +66,10 @@ def acquire(name, force=False, offline=False, ttl_hours=6., timeout=20):
         return dict(**new,source=name,status='saved_or_unchanged',raw_snapshot=str(path),
                     acquisition_status='checked_online',checked_at=now)
     except Exception as exc:
-        print('Using verified compact inputs for',name,':',type(exc).__name__,flush=True)
+        detail=str(exc)[:1000]
+        print('Using verified compact inputs for',name,':',type(exc).__name__,detail,flush=True)
         return dict(**info,source=name,status='saved_or_unchanged',snapshot=str(before),
-                    acquisition_status='stale_cache_after_failure',failure_type=type(exc).__name__,checked_at=meta.get('checked_at'))
+                    acquisition_status='stale_cache_after_failure',failure_type=type(exc).__name__,failure_detail=detail,checked_at=meta.get('checked_at'))
 
 
 def portable_snapshot(path):

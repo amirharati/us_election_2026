@@ -8,6 +8,7 @@ import shutil
 
 import numpy as np
 import pandas as pd
+from model_labels import label_frame
 from scipy.stats import norm
 
 SOURCE = 'reports/bayesian_nonbayesian_blend/20260920T055636.585382Z'
@@ -179,10 +180,10 @@ Historical calibration uses only earlier cycles at the same horizon and requires
 
 Brier and interval score are lower-is-better. Coverage is a fraction, ideally near .70; excessive coverage with wide intervals is not automatically better. Metrics average cycles equally, while counts pool contests.
 
-'''+summary.round(4).to_markdown(index=False)
-    report += '\n\n## Current calibration scales and observed residual means\n\n'+fits[fits.cycle.eq(2026)].round(4).to_markdown(index=False)
-    report += '\n\n## Current probabilities and margins\n\n'+current.to_markdown(index=False)
-    report += '\n\n## Current 70% prediction intervals (D−R points)\n\n'+intervals.to_markdown(index=False)
+'''+label_frame(summary.round(4)).to_markdown(index=False)
+    report += '\n\n## Current calibration scales and observed residual means\n\n'+label_frame(fits[fits.cycle.eq(2026)].round(4)).to_markdown(index=False)
+    report += '\n\n## Current probabilities and margins\n\n'+label_frame(current).to_markdown(index=False)
+    report += '\n\n## Current 70% prediction intervals (D−R points)\n\n'+label_frame(intervals).to_markdown(index=False)
     report += '\n\nFrozen September 17 inputs. No usable poll remains missing in the poll column; model-specific prior fallbacks remain. Nebraska retains the independent-candidate proxy caveat. Correlation columns are removed from the new current table. Source point seat counts remain unchanged; summing marginal probabilities does not supply seat intervals. Individual cycle, polling-coverage/competitive subset and reliability tables are saved alongside this report. No model promotion.\n'
     (out/'RESULTS.md').write_text(report)
     finalize(out)

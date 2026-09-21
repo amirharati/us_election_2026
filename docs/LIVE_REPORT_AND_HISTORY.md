@@ -123,7 +123,7 @@ core-model margin difference, RMS within-model predictive standard deviation,
 reference-model other-winner probability, and historical mean absolute margin
 error (at least two past races). Sort the selected races by other-winner probability.
 This is an explicit screening rule, not a fitted surprise-risk score. The likely
-winner and 95% range come from the reference Bayesian model; RMS SD summarizes
+winner and 95% range come from the reference Gaussian Bayesian model; RMS SD summarizes
 available core models and can differ from the reference interval. Related blends
 and mixtures are excluded, and model counts are retained in the numerical output.
 

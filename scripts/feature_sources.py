@@ -100,8 +100,8 @@ def fred(c, args, provider):
                   (data, {"derived_from": series + ".json", "requested_vintage": args.vintage}))
         else:
             url = "https://fred.stlouisfed.org/graph/fredgraph.csv?" + urlencode({"id": series})
-            raw, meta = c.get(url)
-            from feature_download import read_csv
+            from feature_download import read_csv, request_fred_csv
+            raw, meta = request_fred_csv(url, args.timeout)
             fields, _ = read_csv(raw)
             dt = "observation_date" if "observation_date" in fields else "DATE"
             c.add(Artifact(series + ".csv", url, "csv", (dt, series), (dt,), (dt,),

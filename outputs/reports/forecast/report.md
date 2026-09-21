@@ -13,17 +13,17 @@ Margins are Democratic minus Republican percentage points. Positive margins favo
 
 ## Data freshness
 
-| Source         | Status                                          | Last successful check            |
-|:---------------|:------------------------------------------------|:---------------------------------|
-| polls          | Checked online this run                         | 2026-09-21T17:09:51.964927+00:00 |
-| fred           | STALE: source check failed; saved evidence used | Not recorded                     |
-| michigan       | Checked online this run                         | 2026-09-21T17:09:53.828754+00:00 |
-| ucsb           | Checked online this run                         | 2026-09-21T17:09:50.236540+00:00 |
-| french         | Checked online this run                         | 2026-09-21T17:09:50.886920+00:00 |
-| cboe           | Checked online this run                         | 2026-09-21T17:09:51.358046+00:00 |
-| gpr            | Checked online this run                         | 2026-09-21T17:09:52.621928+00:00 |
-| epu            | Checked online this run                         | 2026-09-21T17:09:53.060556+00:00 |
-| infectious_emv | Checked online this run                         | 2026-09-21T17:09:53.060806+00:00 |
+| Source         | Status                         | Last successful check            |
+|:---------------|:-------------------------------|:---------------------------------|
+| polls          | Recent successful check reused | 2026-09-21T17:09:51.964927+00:00 |
+| fred           | Recent successful check reused | 2026-09-21T18:45:06.271894+00:00 |
+| michigan       | Recent successful check reused | 2026-09-21T17:09:53.828754+00:00 |
+| ucsb           | Recent successful check reused | 2026-09-21T17:09:50.236540+00:00 |
+| french         | Recent successful check reused | 2026-09-21T17:09:50.886920+00:00 |
+| cboe           | Recent successful check reused | 2026-09-21T17:09:51.358046+00:00 |
+| gpr            | Recent successful check reused | 2026-09-21T17:09:52.621928+00:00 |
+| epu            | Recent successful check reused | 2026-09-21T17:09:53.060556+00:00 |
+| infectious_emv | Recent successful check reused | 2026-09-21T17:09:53.060806+00:00 |
 
 Political context is reviewed through **2026-09-17**. It is carried forward as an explicit assumption.
 
@@ -33,7 +33,7 @@ The forecast cutoff does not mean every source has observations through that dat
 
 | Model                     |   Expected D seats |   D control % |   R control % |   D seats: 70% low |   D seats: 70% high |
 |:--------------------------|-------------------:|--------------:|--------------:|-------------------:|--------------------:|
-| Bayesian                  |              50.32 |         45.52 |         54.48 |                 49 |                  52 |
+| Gaussian Bayesian         |              50.32 |         45.52 |         54.48 |                 49 |                  52 |
 | Corrected 10%             |              50.18 |         41.81 |         58.19 |                 49 |                  52 |
 | Corrected 20%             |              50.03 |         38.29 |         61.71 |                 48 |                  52 |
 | Corrected 40%             |              49.71 |         31.99 |         68.01 |                 48 |                  51 |
@@ -109,7 +109,7 @@ Reference-model winner, margin, 95% interval and other-winner probability descri
 
 Coverage: at least 3 independent eligible samples from 2 firms in the past 30 days.
 
-Available core models: Bayesian, Matched Student-t (df5), Older Gaussian, Student-t research helper, Non-Bayesian corrected.
+Available core models: Gaussian Bayesian, Matched Student-t (df5), Older Gaussian, Student-t research helper, Non-Bayesian corrected.
 
 ### Adequately polled races
 
