@@ -1,0 +1,4461 @@
+[
+  {
+    "scenario": "matched_live",
+    "forecast_cycle": 2012,
+    "normalizer": {
+      "config": {
+        "version": "fixed-feature-scores-v2",
+        "minimum_history_values": 3,
+        "clip_component_abs": 3.0,
+        "approval_center_pct": 50.0,
+        "approval_scale_pp": 10.0,
+        "disruption_column": "extraordinary_event_any_4y",
+        "missing_policy": "all required components must be known; no imputation or renormalization",
+        "party_policy": "multiply economic levels, momentum and approval by +1 for Democratic WH / -1 for Republican WH; disruption stays unsigned",
+        "weights": "equal 1/3 sentiment, employment and cost pressure; cost families equal within block; change anchors equal within family",
+        "components": {
+          "consumer_sentiment_3m": {
+            "score": "economy_conditions",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "unemployment_pct": {
+            "score": "economy_conditions",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "inflation_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "cpi_24m_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "gasoline_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_jan01": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          }
+        }
+      },
+      "scenario": "matched_live",
+      "training_cycles": [
+        1978,
+        1980,
+        1982,
+        1984,
+        1986,
+        1988,
+        1990,
+        1992,
+        1994,
+        1996,
+        1998,
+        2000,
+        2002,
+        2004,
+        2006,
+        2008,
+        2010
+      ],
+      "statistics": {
+        "consumer_sentiment_3m": {
+          "n": 17,
+          "mean": 83.84658928296408,
+          "scale": 15.981287384210043,
+          "status": "ok",
+          "center": 83.84658928296408,
+          "effective_values": 9.797216641419775
+        },
+        "unemployment_pct": {
+          "n": 17,
+          "mean": 6.084794512565826,
+          "scale": 1.5807746096574367,
+          "status": "ok",
+          "center": 6.084794512565826,
+          "effective_values": 9.797216641419775
+        },
+        "inflation_yoy_pct": {
+          "n": 17,
+          "mean": 3.481388898859358,
+          "scale": 1.9200094338444063,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "cpi_24m_pct": {
+          "n": 17,
+          "mean": 6.025383157574741,
+          "scale": 3.9328948988842036,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "gasoline_yoy_pct": {
+          "n": 17,
+          "mean": 12.998020893833361,
+          "scale": 14.651466783692015,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "consumer_sentiment_3m__change_jan01": {
+          "n": 16,
+          "mean": -1.0016392844674609,
+          "scale": 8.427747786877985,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.661037649370734
+        },
+        "unemployment_pct__change_jan01": {
+          "n": 17,
+          "mean": 0.09807321736313125,
+          "scale": 0.6147775892956231,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "inflation_yoy_pct__change_jan01": {
+          "n": 17,
+          "mean": 0.22310514879188106,
+          "scale": 0.9324632709887059,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "cpi_level__pct_change_jan01": {
+          "n": 17,
+          "mean": 2.347138143107898,
+          "scale": 1.3208485735657787,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "gasoline_cpi_level__pct_change_jan01": {
+          "n": 17,
+          "mean": 9.641443499891132,
+          "scale": 10.834480787505276,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "consumer_sentiment_3m__change_previous_oct31": {
+          "n": 16,
+          "mean": -3.737417361737505,
+          "scale": 11.489849983304858,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.661037649370734
+        },
+        "unemployment_pct__change_previous_oct31": {
+          "n": 17,
+          "mean": 0.11118424762486459,
+          "scale": 0.8563379452461848,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "inflation_yoy_pct__change_previous_oct31": {
+          "n": 17,
+          "mean": 0.7436512484026991,
+          "scale": 1.4041088713774519,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "cpi_level__pct_change_previous_oct31": {
+          "n": 17,
+          "mean": 3.0486744870358558,
+          "scale": 1.8077277533055693,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "gasoline_cpi_level__pct_change_previous_oct31": {
+          "n": 17,
+          "mean": 8.600795892012579,
+          "scale": 13.727606302843057,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        }
+      },
+      "fitted_electoral_weights": false,
+      "normalization": "training-cycle time-weighted component mean/population SD; fixed centers/directions/ingredient weights"
+    },
+    "active_terms": [
+      "economy_conditions_wh",
+      "economy_momentum_wh",
+      "approval_wh",
+      "disruption_any"
+    ],
+    "score_fills": {
+      "economy_conditions_wh": 0.3014004861149971,
+      "economy_momentum_wh": 0.17450066251450658,
+      "approval_wh": 0.55,
+      "disruption_any": 1.0
+    },
+    "score_centers": {
+      "economy_conditions_wh": 0.2673061902245806,
+      "economy_momentum_wh": 0.4124613880760016,
+      "approval_wh": 0.44562932301004765,
+      "disruption_any": 0.8054932592434505
+    },
+    "score_scales": {
+      "economy_conditions_wh": 0.7460592147010422,
+      "economy_momentum_wh": 0.8260370113738282,
+      "approval_wh": 1.1647072278247348,
+      "disruption_any": 0.3958205004251474
+    },
+    "dropped_terms": {},
+    "final_scaling": "time-weighted training median fill, then weighted mean/population SD, including binary"
+  },
+  {
+    "scenario": "matched_live",
+    "forecast_cycle": 2014,
+    "normalizer": {
+      "config": {
+        "version": "fixed-feature-scores-v2",
+        "minimum_history_values": 3,
+        "clip_component_abs": 3.0,
+        "approval_center_pct": 50.0,
+        "approval_scale_pp": 10.0,
+        "disruption_column": "extraordinary_event_any_4y",
+        "missing_policy": "all required components must be known; no imputation or renormalization",
+        "party_policy": "multiply economic levels, momentum and approval by +1 for Democratic WH / -1 for Republican WH; disruption stays unsigned",
+        "weights": "equal 1/3 sentiment, employment and cost pressure; cost families equal within block; change anchors equal within family",
+        "components": {
+          "consumer_sentiment_3m": {
+            "score": "economy_conditions",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "unemployment_pct": {
+            "score": "economy_conditions",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "inflation_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "cpi_24m_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "gasoline_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_jan01": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          }
+        }
+      },
+      "scenario": "matched_live",
+      "training_cycles": [
+        1978,
+        1980,
+        1982,
+        1984,
+        1986,
+        1988,
+        1990,
+        1992,
+        1994,
+        1996,
+        1998,
+        2000,
+        2002,
+        2004,
+        2006,
+        2008,
+        2010,
+        2012
+      ],
+      "statistics": {
+        "consumer_sentiment_3m": {
+          "n": 18,
+          "mean": 82.48535979316877,
+          "scale": 13.253643806489318,
+          "status": "ok",
+          "center": 82.48535979316877,
+          "effective_values": 10.02235645196331
+        },
+        "unemployment_pct": {
+          "n": 18,
+          "mean": 6.605165009526077,
+          "scale": 1.8543356370582436,
+          "status": "ok",
+          "center": 6.605165009526077,
+          "effective_values": 10.02235645196331
+        },
+        "inflation_yoy_pct": {
+          "n": 18,
+          "mean": 2.8380297452026473,
+          "scale": 1.7712584574536665,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "cpi_24m_pct": {
+          "n": 18,
+          "mean": 5.320787927980742,
+          "scale": 3.9281666700376996,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "gasoline_yoy_pct": {
+          "n": 18,
+          "mean": 7.410319503988928,
+          "scale": 13.43891447826861,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "consumer_sentiment_3m__change_jan01": {
+          "n": 17,
+          "mean": 1.2891183710747438,
+          "scale": 6.482923231345821,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "unemployment_pct__change_jan01": {
+          "n": 18,
+          "mean": -0.09330905418461521,
+          "scale": 0.48477784448676475,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "inflation_yoy_pct__change_jan01": {
+          "n": 18,
+          "mean": -0.2747151214786661,
+          "scale": 1.095243283555329,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "cpi_level__pct_change_jan01": {
+          "n": 18,
+          "mean": 1.8941273163355907,
+          "scale": 1.329935716189599,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "gasoline_cpi_level__pct_change_jan01": {
+          "n": 18,
+          "mean": 7.707441141923081,
+          "scale": 12.825340647675803,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "consumer_sentiment_3m__change_previous_oct31": {
+          "n": 17,
+          "mean": 0.25514074999115666,
+          "scale": 9.705558797435021,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "unemployment_pct__change_previous_oct31": {
+          "n": 18,
+          "mean": -0.09911864808348556,
+          "scale": 0.7412817694124764,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "inflation_yoy_pct__change_previous_oct31": {
+          "n": 18,
+          "mean": 0.21192073405136355,
+          "scale": 1.7344627356962992,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "cpi_level__pct_change_previous_oct31": {
+          "n": 18,
+          "mean": 2.3882986428419386,
+          "scale": 1.6264528649218188,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "gasoline_cpi_level__pct_change_previous_oct31": {
+          "n": 18,
+          "mean": 2.8115196477970996,
+          "scale": 12.166960715012149,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        }
+      },
+      "fitted_electoral_weights": false,
+      "normalization": "training-cycle time-weighted component mean/population SD; fixed centers/directions/ingredient weights"
+    },
+    "active_terms": [
+      "economy_conditions_wh",
+      "economy_momentum_wh",
+      "approval_wh",
+      "disruption_any"
+    ],
+    "score_fills": {
+      "economy_conditions_wh": -0.10253105917508709,
+      "economy_momentum_wh": 0.22176968907818087,
+      "approval_wh": -0.4166666666666664,
+      "disruption_any": 1.0
+    },
+    "score_centers": {
+      "economy_conditions_wh": -0.02490097543134868,
+      "economy_momentum_wh": 0.41294046735378465,
+      "approval_wh": 0.009224225785484421,
+      "disruption_any": 0.9192022215121938
+    },
+    "score_scales": {
+      "economy_conditions_wh": 0.7264157795047158,
+      "economy_momentum_wh": 0.6674895132400602,
+      "approval_wh": 1.1610306729189157,
+      "disruption_any": 0.2725243062173381
+    },
+    "dropped_terms": {},
+    "final_scaling": "time-weighted training median fill, then weighted mean/population SD, including binary"
+  },
+  {
+    "scenario": "matched_live",
+    "forecast_cycle": 2016,
+    "normalizer": {
+      "config": {
+        "version": "fixed-feature-scores-v2",
+        "minimum_history_values": 3,
+        "clip_component_abs": 3.0,
+        "approval_center_pct": 50.0,
+        "approval_scale_pp": 10.0,
+        "disruption_column": "extraordinary_event_any_4y",
+        "missing_policy": "all required components must be known; no imputation or renormalization",
+        "party_policy": "multiply economic levels, momentum and approval by +1 for Democratic WH / -1 for Republican WH; disruption stays unsigned",
+        "weights": "equal 1/3 sentiment, employment and cost pressure; cost families equal within block; change anchors equal within family",
+        "components": {
+          "consumer_sentiment_3m": {
+            "score": "economy_conditions",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "unemployment_pct": {
+            "score": "economy_conditions",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "inflation_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "cpi_24m_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "gasoline_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_jan01": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          }
+        }
+      },
+      "scenario": "matched_live",
+      "training_cycles": [
+        1978,
+        1980,
+        1982,
+        1984,
+        1986,
+        1988,
+        1990,
+        1992,
+        1994,
+        1996,
+        1998,
+        2000,
+        2002,
+        2004,
+        2006,
+        2008,
+        2010,
+        2012,
+        2014
+      ],
+      "statistics": {
+        "consumer_sentiment_3m": {
+          "n": 19,
+          "mean": 81.6440316091709,
+          "scale": 13.941506414712586,
+          "status": "ok",
+          "center": 81.6440316091709,
+          "effective_values": 10.12124825045096
+        },
+        "unemployment_pct": {
+          "n": 19,
+          "mean": 6.471840662694075,
+          "scale": 1.5374245662415957,
+          "status": "ok",
+          "center": 6.471840662694075,
+          "effective_values": 10.12124825045096
+        },
+        "inflation_yoy_pct": {
+          "n": 19,
+          "mean": 2.9372773974436353,
+          "scale": 1.7992968755986407,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "cpi_24m_pct": {
+          "n": 19,
+          "mean": 5.613645756034245,
+          "scale": 3.389800974717248,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "gasoline_yoy_pct": {
+          "n": 19,
+          "mean": 8.967767953641234,
+          "scale": 13.69255973912488,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "consumer_sentiment_3m__change_jan01": {
+          "n": 18,
+          "mean": 1.541758255900093,
+          "scale": 8.037811088990486,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "unemployment_pct__change_jan01": {
+          "n": 19,
+          "mean": -0.0765256601327489,
+          "scale": 0.5788494779822286,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "inflation_yoy_pct__change_jan01": {
+          "n": 19,
+          "mean": -0.08504693097524477,
+          "scale": 0.9992467670759555,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "cpi_level__pct_change_jan01": {
+          "n": 19,
+          "mean": 1.9910513668145544,
+          "scale": 1.2254813491527208,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "gasoline_cpi_level__pct_change_jan01": {
+          "n": 19,
+          "mean": 7.000209506048421,
+          "scale": 10.004602284338025,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "consumer_sentiment_3m__change_previous_oct31": {
+          "n": 18,
+          "mean": 0.10136718311112572,
+          "scale": 11.697841707203477,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "unemployment_pct__change_previous_oct31": {
+          "n": 19,
+          "mean": -0.21986024174185997,
+          "scale": 0.8731703845657884,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "inflation_yoy_pct__change_previous_oct31": {
+          "n": 19,
+          "mean": 0.1808115413098384,
+          "scale": 1.6219307761899038,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "cpi_level__pct_change_previous_oct31": {
+          "n": 19,
+          "mean": 2.590008966355934,
+          "scale": 1.6596104106677856,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "gasoline_cpi_level__pct_change_previous_oct31": {
+          "n": 19,
+          "mean": 5.953574125540194,
+          "scale": 12.127629030729581,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        }
+      },
+      "fitted_electoral_weights": false,
+      "normalization": "training-cycle time-weighted component mean/population SD; fixed centers/directions/ingredient weights"
+    },
+    "active_terms": [
+      "economy_conditions_wh",
+      "economy_momentum_wh",
+      "approval_wh",
+      "disruption_any"
+    ],
+    "score_fills": {
+      "economy_conditions_wh": -0.09491001715581307,
+      "economy_momentum_wh": 0.33758198828037617,
+      "approval_wh": -0.4,
+      "disruption_any": 1.0
+    },
+    "score_centers": {
+      "economy_conditions_wh": 0.012994939195914762,
+      "economy_momentum_wh": 0.4712690276483204,
+      "approval_wh": 0.14160022457804927,
+      "disruption_any": 0.7511064391957644
+    },
+    "score_scales": {
+      "economy_conditions_wh": 0.7589130283489162,
+      "economy_momentum_wh": 0.7138427686589193,
+      "approval_wh": 1.0784223571106784,
+      "disruption_any": 0.4323720113448879
+    },
+    "dropped_terms": {},
+    "final_scaling": "time-weighted training median fill, then weighted mean/population SD, including binary"
+  },
+  {
+    "scenario": "matched_live",
+    "forecast_cycle": 2018,
+    "normalizer": {
+      "config": {
+        "version": "fixed-feature-scores-v2",
+        "minimum_history_values": 3,
+        "clip_component_abs": 3.0,
+        "approval_center_pct": 50.0,
+        "approval_scale_pp": 10.0,
+        "disruption_column": "extraordinary_event_any_4y",
+        "missing_policy": "all required components must be known; no imputation or renormalization",
+        "party_policy": "multiply economic levels, momentum and approval by +1 for Democratic WH / -1 for Republican WH; disruption stays unsigned",
+        "weights": "equal 1/3 sentiment, employment and cost pressure; cost families equal within block; change anchors equal within family",
+        "components": {
+          "consumer_sentiment_3m": {
+            "score": "economy_conditions",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "unemployment_pct": {
+            "score": "economy_conditions",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "inflation_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "cpi_24m_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "gasoline_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_jan01": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          }
+        }
+      },
+      "scenario": "matched_live",
+      "training_cycles": [
+        1978,
+        1980,
+        1982,
+        1984,
+        1986,
+        1988,
+        1990,
+        1992,
+        1994,
+        1996,
+        1998,
+        2000,
+        2002,
+        2004,
+        2006,
+        2008,
+        2010,
+        2012,
+        2014,
+        2016
+      ],
+      "statistics": {
+        "consumer_sentiment_3m": {
+          "n": 20,
+          "mean": 83.415096843669,
+          "scale": 11.40444115074943,
+          "status": "ok",
+          "center": 83.415096843669,
+          "effective_values": 10.285589578218943
+        },
+        "unemployment_pct": {
+          "n": 20,
+          "mean": 6.317146481255707,
+          "scale": 1.6407830529407708,
+          "status": "ok",
+          "center": 6.317146481255707,
+          "effective_values": 10.285589578218943
+        },
+        "inflation_yoy_pct": {
+          "n": 20,
+          "mean": 2.42413819967583,
+          "scale": 1.6170568465800936,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "cpi_24m_pct": {
+          "n": 20,
+          "mean": 4.480513845323146,
+          "scale": 3.5597689425442836,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "gasoline_yoy_pct": {
+          "n": 20,
+          "mean": 2.533884177323152,
+          "scale": 14.087769963823757,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "consumer_sentiment_3m__change_jan01": {
+          "n": 19,
+          "mean": 1.8930929644088206,
+          "scale": 5.677026952208756,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "unemployment_pct__change_jan01": {
+          "n": 20,
+          "mean": -0.19013343154483045,
+          "scale": 0.4508484825048725,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "inflation_yoy_pct__change_jan01": {
+          "n": 20,
+          "mean": -0.10634243060212133,
+          "scale": 0.951602005606839,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "cpi_level__pct_change_jan01": {
+          "n": 20,
+          "mean": 1.674876757842371,
+          "scale": 1.159695669634062,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "gasoline_cpi_level__pct_change_jan01": {
+          "n": 20,
+          "mean": 4.429102336603851,
+          "scale": 11.815830822109323,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "consumer_sentiment_3m__change_previous_oct31": {
+          "n": 19,
+          "mean": 0.352879589138299,
+          "scale": 8.093639326612347,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "unemployment_pct__change_previous_oct31": {
+          "n": 20,
+          "mean": -0.28898797228643075,
+          "scale": 0.7329729990615519,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "inflation_yoy_pct__change_previous_oct31": {
+          "n": 20,
+          "mean": 0.38344897485941787,
+          "scale": 1.4763256911533615,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "cpi_level__pct_change_previous_oct31": {
+          "n": 20,
+          "mean": 2.1287766653282216,
+          "scale": 1.418425368240756,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "gasoline_cpi_level__pct_change_previous_oct31": {
+          "n": 20,
+          "mean": 0.7793385397555513,
+          "scale": 10.840048544735968,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        }
+      },
+      "fitted_electoral_weights": false,
+      "normalization": "training-cycle time-weighted component mean/population SD; fixed centers/directions/ingredient weights"
+    },
+    "active_terms": [
+      "economy_conditions_wh",
+      "economy_momentum_wh",
+      "approval_wh",
+      "disruption_any"
+    ],
+    "score_fills": {
+      "economy_conditions_wh": -0.11003935046506282,
+      "economy_momentum_wh": 0.25676447233299377,
+      "approval_wh": -0.4166666666666664,
+      "disruption_any": 1.0
+    },
+    "score_centers": {
+      "economy_conditions_wh": -0.004076292458428385,
+      "economy_momentum_wh": 0.4064964954258717,
+      "approval_wh": -0.12667074998618688,
+      "disruption_any": 0.7540278788978992
+    },
+    "score_scales": {
+      "economy_conditions_wh": 0.7371087840210999,
+      "economy_momentum_wh": 0.631520870294621,
+      "approval_wh": 1.0203778438899218,
+      "disruption_any": 0.43066209113716325
+    },
+    "dropped_terms": {},
+    "final_scaling": "time-weighted training median fill, then weighted mean/population SD, including binary"
+  },
+  {
+    "scenario": "matched_live",
+    "forecast_cycle": 2020,
+    "normalizer": {
+      "config": {
+        "version": "fixed-feature-scores-v2",
+        "minimum_history_values": 3,
+        "clip_component_abs": 3.0,
+        "approval_center_pct": 50.0,
+        "approval_scale_pp": 10.0,
+        "disruption_column": "extraordinary_event_any_4y",
+        "missing_policy": "all required components must be known; no imputation or renormalization",
+        "party_policy": "multiply economic levels, momentum and approval by +1 for Democratic WH / -1 for Republican WH; disruption stays unsigned",
+        "weights": "equal 1/3 sentiment, employment and cost pressure; cost families equal within block; change anchors equal within family",
+        "components": {
+          "consumer_sentiment_3m": {
+            "score": "economy_conditions",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "unemployment_pct": {
+            "score": "economy_conditions",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "inflation_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "cpi_24m_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "gasoline_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_jan01": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          }
+        }
+      },
+      "scenario": "matched_live",
+      "training_cycles": [
+        1978,
+        1980,
+        1982,
+        1984,
+        1986,
+        1988,
+        1990,
+        1992,
+        1994,
+        1996,
+        1998,
+        2000,
+        2002,
+        2004,
+        2006,
+        2008,
+        2010,
+        2012,
+        2014,
+        2016,
+        2018
+      ],
+      "statistics": {
+        "consumer_sentiment_3m": {
+          "n": 21,
+          "mean": 85.20442934987524,
+          "scale": 12.962710742328827,
+          "status": "ok",
+          "center": 85.20442934987524,
+          "effective_values": 10.356868919611907
+        },
+        "unemployment_pct": {
+          "n": 21,
+          "mean": 5.8746995663381965,
+          "scale": 1.601173904132062,
+          "status": "ok",
+          "center": 5.8746995663381965,
+          "effective_values": 10.356868919611907
+        },
+        "inflation_yoy_pct": {
+          "n": 21,
+          "mean": 2.5486363438790534,
+          "scale": 1.670314496931544,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "cpi_24m_pct": {
+          "n": 21,
+          "mean": 4.68707627357025,
+          "scale": 3.2859968623403804,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "gasoline_yoy_pct": {
+          "n": 21,
+          "mean": 5.102812885295248,
+          "scale": 16.60986378982312,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "consumer_sentiment_3m__change_jan01": {
+          "n": 20,
+          "mean": 0.932477725154998,
+          "scale": 6.779958775449132,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "unemployment_pct__change_jan01": {
+          "n": 21,
+          "mean": -0.10606655612089938,
+          "scale": 0.48883511036863364,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "inflation_yoy_pct__change_jan01": {
+          "n": 21,
+          "mean": 0.07691662245191727,
+          "scale": 0.871297621853231,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "cpi_level__pct_change_jan01": {
+          "n": 21,
+          "mean": 1.7873215366366133,
+          "scale": 1.075218214236782,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "gasoline_cpi_level__pct_change_jan01": {
+          "n": 21,
+          "mean": 5.044072001378108,
+          "scale": 9.368126807676642,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "consumer_sentiment_3m__change_previous_oct31": {
+          "n": 20,
+          "mean": 0.4032973101527586,
+          "scale": 9.795461491698651,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "unemployment_pct__change_previous_oct31": {
+          "n": 21,
+          "mean": -0.2286858495215912,
+          "scale": 0.7376826077508718,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "inflation_yoy_pct__change_previous_oct31": {
+          "n": 21,
+          "mean": 0.3759969574663258,
+          "scale": 1.3965980852051902,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "cpi_level__pct_change_previous_oct31": {
+          "n": 21,
+          "mean": 2.290419446292171,
+          "scale": 1.4772192443784038,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "gasoline_cpi_level__pct_change_previous_oct31": {
+          "n": 21,
+          "mean": 3.339961918955487,
+          "scale": 11.77828673976094,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        }
+      },
+      "fitted_electoral_weights": false,
+      "normalization": "training-cycle time-weighted component mean/population SD; fixed centers/directions/ingredient weights"
+    },
+    "active_terms": [
+      "economy_conditions_wh",
+      "economy_momentum_wh",
+      "approval_wh",
+      "disruption_any"
+    ],
+    "score_fills": {
+      "economy_conditions_wh": 0.056568336894296384,
+      "economy_momentum_wh": 0.2185653858723667,
+      "approval_wh": 0.12833333333333313,
+      "disruption_any": 1.0
+    },
+    "score_centers": {
+      "economy_conditions_wh": 0.02624295819818294,
+      "economy_momentum_wh": 0.37912883649531165,
+      "approval_wh": 0.21830271092014955,
+      "disruption_any": 0.8260930797567784
+    },
+    "score_scales": {
+      "economy_conditions_wh": 0.7757194327235443,
+      "economy_momentum_wh": 0.7299959632735342,
+      "approval_wh": 0.9287655383470703,
+      "disruption_any": 0.3790294227823737
+    },
+    "dropped_terms": {},
+    "final_scaling": "time-weighted training median fill, then weighted mean/population SD, including binary"
+  },
+  {
+    "scenario": "matched_live",
+    "forecast_cycle": 2022,
+    "normalizer": {
+      "config": {
+        "version": "fixed-feature-scores-v2",
+        "minimum_history_values": 3,
+        "clip_component_abs": 3.0,
+        "approval_center_pct": 50.0,
+        "approval_scale_pp": 10.0,
+        "disruption_column": "extraordinary_event_any_4y",
+        "missing_policy": "all required components must be known; no imputation or renormalization",
+        "party_policy": "multiply economic levels, momentum and approval by +1 for Democratic WH / -1 for Republican WH; disruption stays unsigned",
+        "weights": "equal 1/3 sentiment, employment and cost pressure; cost families equal within block; change anchors equal within family",
+        "components": {
+          "consumer_sentiment_3m": {
+            "score": "economy_conditions",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "unemployment_pct": {
+            "score": "economy_conditions",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "inflation_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "cpi_24m_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "gasoline_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_jan01": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          }
+        }
+      },
+      "scenario": "matched_live",
+      "training_cycles": [
+        1978,
+        1980,
+        1982,
+        1984,
+        1986,
+        1988,
+        1990,
+        1992,
+        1994,
+        1996,
+        1998,
+        2000,
+        2002,
+        2004,
+        2006,
+        2008,
+        2010,
+        2012,
+        2014,
+        2016,
+        2018,
+        2020
+      ],
+      "statistics": {
+        "consumer_sentiment_3m": {
+          "n": 22,
+          "mean": 85.09712292020625,
+          "scale": 11.544926305616938,
+          "status": "ok",
+          "center": 85.09712292020625,
+          "effective_values": 10.475747603608664
+        },
+        "unemployment_pct": {
+          "n": 22,
+          "mean": 6.076975347480246,
+          "scale": 1.8715632838356537,
+          "status": "ok",
+          "center": 6.076975347480246,
+          "effective_values": 10.475747603608664
+        },
+        "inflation_yoy_pct": {
+          "n": 22,
+          "mean": 2.3375706418763698,
+          "scale": 1.406808838780844,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "cpi_24m_pct": {
+          "n": 22,
+          "mean": 4.346316840509014,
+          "scale": 3.015584325235573,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "gasoline_yoy_pct": {
+          "n": 22,
+          "mean": 3.6962416258903206,
+          "scale": 15.765594373098136,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "consumer_sentiment_3m__change_jan01": {
+          "n": 21,
+          "mean": -1.358842493527253,
+          "scale": 8.89988316543221,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "unemployment_pct__change_jan01": {
+          "n": 22,
+          "mean": 0.34654524111096385,
+          "scale": 1.62410046988734,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "inflation_yoy_pct__change_jan01": {
+          "n": 22,
+          "mean": -0.09411545944262818,
+          "scale": 0.8962458257246114,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "cpi_level__pct_change_jan01": {
+          "n": 22,
+          "mean": 1.49527912572809,
+          "scale": 1.0650657877928429,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "gasoline_cpi_level__pct_change_jan01": {
+          "n": 22,
+          "mean": 1.9702561038016615,
+          "scale": 13.300509601269882,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "consumer_sentiment_3m__change_previous_oct31": {
+          "n": 21,
+          "mean": -1.4358602386988142,
+          "scale": 9.217102221790158,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "unemployment_pct__change_previous_oct31": {
+          "n": 22,
+          "mean": 0.25090146569677346,
+          "scale": 1.760783882687583,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "inflation_yoy_pct__change_previous_oct31": {
+          "n": 22,
+          "mean": 0.3103894104653063,
+          "scale": 1.2616355542944138,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "cpi_level__pct_change_previous_oct31": {
+          "n": 22,
+          "mean": 2.015346379206926,
+          "scale": 1.2283747890077472,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "gasoline_cpi_level__pct_change_previous_oct31": {
+          "n": 22,
+          "mean": 0.07250891188055436,
+          "scale": 11.33693083571767,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        }
+      },
+      "fitted_electoral_weights": false,
+      "normalization": "training-cycle time-weighted component mean/population SD; fixed centers/directions/ingredient weights"
+    },
+    "active_terms": [
+      "economy_conditions_wh",
+      "economy_momentum_wh",
+      "approval_wh",
+      "disruption_any"
+    ],
+    "score_fills": {
+      "economy_conditions_wh": -0.23505266722827173,
+      "economy_momentum_wh": 0.17472377394831046,
+      "approval_wh": 0.13888888888888856,
+      "disruption_any": 1.0
+    },
+    "score_centers": {
+      "economy_conditions_wh": 0.02275850821347529,
+      "economy_momentum_wh": 0.36394554032800275,
+      "approval_wh": 0.17639566059266115,
+      "disruption_any": 0.8276993705396153
+    },
+    "score_scales": {
+      "economy_conditions_wh": 0.6984633413592548,
+      "economy_momentum_wh": 0.5627557603566162,
+      "approval_wh": 0.9720546719097511,
+      "disruption_any": 0.3776415265141532
+    },
+    "dropped_terms": {},
+    "final_scaling": "time-weighted training median fill, then weighted mean/population SD, including binary"
+  },
+  {
+    "scenario": "matched_live",
+    "forecast_cycle": 2024,
+    "normalizer": {
+      "config": {
+        "version": "fixed-feature-scores-v2",
+        "minimum_history_values": 3,
+        "clip_component_abs": 3.0,
+        "approval_center_pct": 50.0,
+        "approval_scale_pp": 10.0,
+        "disruption_column": "extraordinary_event_any_4y",
+        "missing_policy": "all required components must be known; no imputation or renormalization",
+        "party_policy": "multiply economic levels, momentum and approval by +1 for Democratic WH / -1 for Republican WH; disruption stays unsigned",
+        "weights": "equal 1/3 sentiment, employment and cost pressure; cost families equal within block; change anchors equal within family",
+        "components": {
+          "consumer_sentiment_3m": {
+            "score": "economy_conditions",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "unemployment_pct": {
+            "score": "economy_conditions",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "inflation_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "cpi_24m_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "gasoline_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_jan01": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          }
+        }
+      },
+      "scenario": "matched_live",
+      "training_cycles": [
+        1978,
+        1980,
+        1982,
+        1984,
+        1986,
+        1988,
+        1990,
+        1992,
+        1994,
+        1996,
+        1998,
+        2000,
+        2002,
+        2004,
+        2006,
+        2008,
+        2010,
+        2012,
+        2014,
+        2016,
+        2018,
+        2020,
+        2022
+      ],
+      "statistics": {
+        "consumer_sentiment_3m": {
+          "n": 23,
+          "mean": 79.71188318455363,
+          "scale": 14.880562794951706,
+          "status": "ok",
+          "center": 79.71188318455363,
+          "effective_values": 10.52684547239183
+        },
+        "unemployment_pct": {
+          "n": 23,
+          "mean": 6.094433959918288,
+          "scale": 1.8763806148629034,
+          "status": "ok",
+          "center": 6.094433959918288,
+          "effective_values": 10.52684547239183
+        },
+        "inflation_yoy_pct": {
+          "n": 23,
+          "mean": 2.943262519512579,
+          "scale": 2.38502428551566,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "cpi_24m_pct": {
+          "n": 23,
+          "mean": 5.393710647423139,
+          "scale": 4.102241845337007,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "gasoline_yoy_pct": {
+          "n": 23,
+          "mean": 3.059025505542492,
+          "scale": 18.3453841468497,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "consumer_sentiment_3m__change_jan01": {
+          "n": 22,
+          "mean": -5.396768304530798,
+          "scale": 11.318664329509826,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "unemployment_pct__change_jan01": {
+          "n": 23,
+          "mean": 0.7915568478501966,
+          "scale": 1.9687119591738624,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "inflation_yoy_pct__change_jan01": {
+          "n": 23,
+          "mean": -0.023852947102029846,
+          "scale": 0.9275732581771,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "cpi_level__pct_change_jan01": {
+          "n": 23,
+          "mean": 1.8683760777849145,
+          "scale": 1.5627383959573022,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "gasoline_cpi_level__pct_change_jan01": {
+          "n": 23,
+          "mean": 0.022544726696091002,
+          "scale": 13.521122466328881,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "consumer_sentiment_3m__change_previous_oct31": {
+          "n": 22,
+          "mean": -5.6723626518371155,
+          "scale": 12.410914168791493,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "unemployment_pct__change_previous_oct31": {
+          "n": 23,
+          "mean": 0.635182910414196,
+          "scale": 2.155982945059738,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "inflation_yoy_pct__change_previous_oct31": {
+          "n": 23,
+          "mean": 0.5079641547028088,
+          "scale": 1.4689673327024364,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "cpi_level__pct_change_previous_oct31": {
+          "n": 23,
+          "mean": 2.678719048128977,
+          "scale": 2.221769968382615,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "gasoline_cpi_level__pct_change_previous_oct31": {
+          "n": 23,
+          "mean": 1.5967819966968178,
+          "scale": 14.741748033032192,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        }
+      },
+      "fitted_electoral_weights": false,
+      "normalization": "training-cycle time-weighted component mean/population SD; fixed centers/directions/ingredient weights"
+    },
+    "active_terms": [
+      "economy_conditions_wh",
+      "economy_momentum_wh",
+      "approval_wh",
+      "disruption_any"
+    ],
+    "score_fills": {
+      "economy_conditions_wh": 0.16981829984591945,
+      "economy_momentum_wh": 0.11953867050733027,
+      "approval_wh": 0.12833333333333313,
+      "disruption_any": 1.0
+    },
+    "score_centers": {
+      "economy_conditions_wh": 0.02871486867676628,
+      "economy_momentum_wh": 0.25537062992790155,
+      "approval_wh": 0.2308094770587701,
+      "disruption_any": 0.87805198313016
+    },
+    "score_scales": {
+      "economy_conditions_wh": 0.6494880186021919,
+      "economy_momentum_wh": 0.693593274437955,
+      "approval_wh": 0.9188929603611097,
+      "disruption_any": 0.327225760066889
+    },
+    "dropped_terms": {},
+    "final_scaling": "time-weighted training median fill, then weighted mean/population SD, including binary"
+  },
+  {
+    "scenario": "matched_live",
+    "forecast_cycle": 2026,
+    "normalizer": {
+      "config": {
+        "version": "fixed-feature-scores-v2",
+        "minimum_history_values": 3,
+        "clip_component_abs": 3.0,
+        "approval_center_pct": 50.0,
+        "approval_scale_pp": 10.0,
+        "disruption_column": "extraordinary_event_any_4y",
+        "missing_policy": "all required components must be known; no imputation or renormalization",
+        "party_policy": "multiply economic levels, momentum and approval by +1 for Democratic WH / -1 for Republican WH; disruption stays unsigned",
+        "weights": "equal 1/3 sentiment, employment and cost pressure; cost families equal within block; change anchors equal within family",
+        "components": {
+          "consumer_sentiment_3m": {
+            "score": "economy_conditions",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "unemployment_pct": {
+            "score": "economy_conditions",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "inflation_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "cpi_24m_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "gasoline_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_jan01": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          }
+        }
+      },
+      "scenario": "matched_live",
+      "training_cycles": [
+        1978,
+        1980,
+        1982,
+        1984,
+        1986,
+        1988,
+        1990,
+        1992,
+        1994,
+        1996,
+        1998,
+        2000,
+        2002,
+        2004,
+        2006,
+        2008,
+        2010,
+        2012,
+        2014,
+        2016,
+        2018,
+        2020,
+        2022,
+        2024
+      ],
+      "statistics": {
+        "consumer_sentiment_3m": {
+          "n": 24,
+          "mean": 77.19916997238263,
+          "scale": 15.970420826946487,
+          "status": "ok",
+          "center": 77.19916997238263,
+          "effective_values": 10.612278279462627
+        },
+        "unemployment_pct": {
+          "n": 24,
+          "mean": 5.406539781105533,
+          "scale": 1.8832823463171686,
+          "status": "ok",
+          "center": 5.406539781105533,
+          "effective_values": 10.612278279462627
+        },
+        "inflation_yoy_pct": {
+          "n": 24,
+          "mean": 3.4655826797797014,
+          "scale": 2.566756575941194,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.612278279462627
+        },
+        "cpi_24m_pct": {
+          "n": 24,
+          "mean": 6.340795610542029,
+          "scale": 4.422689795386613,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.612278279462627
+        },
+        "gasoline_yoy_pct": {
+          "n": 24,
+          "mean": 6.237148769401782,
+          "scale": 16.731141031480004,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.612278279462627
+        },
+        "consumer_sentiment_3m__change_jan01": {
+          "n": 23,
+          "mean": -3.789670980657597,
+          "scale": 9.759908153057543,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "unemployment_pct__change_jan01": {
+          "n": 24,
+          "mean": 0.23183499381354086,
+          "scale": 1.3849305836336772,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.612278279462627
+        },
+        "inflation_yoy_pct__change_jan01": {
+          "n": 24,
+          "mean": 0.05084537143105593,
+          "scale": 0.9103050845419522,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.612278279462627
+        },
+        "cpi_level__pct_change_jan01": {
+          "n": 24,
+          "mean": 2.18848774381896,
+          "scale": 1.6470405343916208,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.612278279462627
+        },
+        "gasoline_cpi_level__pct_change_jan01": {
+          "n": 24,
+          "mean": 2.2001498736639573,
+          "scale": 11.540303232392205,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.612278279462627
+        },
+        "consumer_sentiment_3m__change_previous_oct31": {
+          "n": 23,
+          "mean": -5.271717026492229,
+          "scale": 10.98097390399059,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "unemployment_pct__change_previous_oct31": {
+          "n": 24,
+          "mean": 0.026469563422534946,
+          "scale": 1.5731836860467976,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.612278279462627
+        },
+        "inflation_yoy_pct__change_previous_oct31": {
+          "n": 24,
+          "mean": 0.6339807434073669,
+          "scale": 1.5657905797489746,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.612278279462627
+        },
+        "cpi_level__pct_change_previous_oct31": {
+          "n": 24,
+          "mean": 3.1040228622971875,
+          "scale": 2.446058901184763,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.612278279462627
+        },
+        "gasoline_cpi_level__pct_change_previous_oct31": {
+          "n": 24,
+          "mean": 2.873413872541495,
+          "scale": 14.01389350356266,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.612278279462627
+        }
+      },
+      "fitted_electoral_weights": false,
+      "normalization": "training-cycle time-weighted component mean/population SD; fixed centers/directions/ingredient weights"
+    },
+    "active_terms": [
+      "economy_conditions_wh",
+      "economy_momentum_wh",
+      "approval_wh",
+      "disruption_any"
+    ],
+    "score_fills": {
+      "economy_conditions_wh": -0.19460426113148466,
+      "economy_momentum_wh": 0.10755397058951219,
+      "approval_wh": -0.46666666666666645,
+      "disruption_any": 1.0
+    },
+    "score_centers": {
+      "economy_conditions_wh": -0.21823245191763746,
+      "economy_momentum_wh": 0.0337374365661716,
+      "approval_wh": -0.16606740515579235,
+      "disruption_any": 0.8789660991402359
+    },
+    "score_scales": {
+      "economy_conditions_wh": 0.6045695188276098,
+      "economy_momentum_wh": 0.6988350611984036,
+      "approval_wh": 0.9712946097369146,
+      "disruption_any": 0.3261666685951106
+    },
+    "dropped_terms": {},
+    "final_scaling": "time-weighted training median fill, then weighted mean/population SD, including binary"
+  },
+  {
+    "scenario": "oct31",
+    "forecast_cycle": 2012,
+    "normalizer": {
+      "config": {
+        "version": "fixed-feature-scores-v2",
+        "minimum_history_values": 3,
+        "clip_component_abs": 3.0,
+        "approval_center_pct": 50.0,
+        "approval_scale_pp": 10.0,
+        "disruption_column": "extraordinary_event_any_4y",
+        "missing_policy": "all required components must be known; no imputation or renormalization",
+        "party_policy": "multiply economic levels, momentum and approval by +1 for Democratic WH / -1 for Republican WH; disruption stays unsigned",
+        "weights": "equal 1/3 sentiment, employment and cost pressure; cost families equal within block; change anchors equal within family",
+        "components": {
+          "consumer_sentiment_3m": {
+            "score": "economy_conditions",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "unemployment_pct": {
+            "score": "economy_conditions",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "inflation_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "cpi_24m_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "gasoline_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_jan01": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          }
+        }
+      },
+      "scenario": "oct31",
+      "training_cycles": [
+        1978,
+        1980,
+        1982,
+        1984,
+        1986,
+        1988,
+        1990,
+        1992,
+        1994,
+        1996,
+        1998,
+        2000,
+        2002,
+        2004,
+        2006,
+        2008,
+        2010
+      ],
+      "statistics": {
+        "consumer_sentiment_3m": {
+          "n": 17,
+          "mean": 84.23329116483212,
+          "scale": 14.861665843456246,
+          "status": "ok",
+          "center": 84.23329116483212,
+          "effective_values": 9.797216641419775
+        },
+        "unemployment_pct": {
+          "n": 17,
+          "mean": 6.051208653429146,
+          "scale": 1.6159457575575629,
+          "status": "ok",
+          "center": 6.051208653429146,
+          "effective_values": 9.797216641419775
+        },
+        "inflation_yoy_pct": {
+          "n": 17,
+          "mean": 3.2575467536707507,
+          "scale": 1.911979981468851,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "cpi_24m_pct": {
+          "n": 17,
+          "mean": 6.112894100435462,
+          "scale": 3.928736254689442,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "gasoline_yoy_pct": {
+          "n": 17,
+          "mean": 9.159072929960782,
+          "scale": 15.52816249127296,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "consumer_sentiment_3m__change_jan01": {
+          "n": 16,
+          "mean": -0.6130926185459743,
+          "scale": 6.848624089649034,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.661037649370734
+        },
+        "unemployment_pct__change_jan01": {
+          "n": 17,
+          "mean": 0.06448735822645141,
+          "scale": 0.6331348080646024,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "inflation_yoy_pct__change_jan01": {
+          "n": 17,
+          "mean": -0.0007369963967262468,
+          "scale": 1.0158966201491684,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "cpi_level__pct_change_jan01": {
+          "n": 17,
+          "mean": 2.5537873184290936,
+          "scale": 1.3956207178287614,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "gasoline_cpi_level__pct_change_jan01": {
+          "n": 17,
+          "mean": 9.92100751527796,
+          "scale": 10.493020018443445,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "consumer_sentiment_3m__change_previous_oct31": {
+          "n": 16,
+          "mean": -3.348870695816019,
+          "scale": 9.75453458494574,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.661037649370734
+        },
+        "unemployment_pct__change_previous_oct31": {
+          "n": 17,
+          "mean": 0.07759838848818483,
+          "scale": 0.8854165027280892,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "inflation_yoy_pct__change_previous_oct31": {
+          "n": 17,
+          "mean": 0.519809103214092,
+          "scale": 1.6386463943528984,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "cpi_level__pct_change_previous_oct31": {
+          "n": 17,
+          "mean": 3.2575467536707507,
+          "scale": 1.911979981468851,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "gasoline_cpi_level__pct_change_previous_oct31": {
+          "n": 17,
+          "mean": 9.159072929960782,
+          "scale": 15.52816249127296,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        }
+      },
+      "fitted_electoral_weights": false,
+      "normalization": "training-cycle time-weighted component mean/population SD; fixed centers/directions/ingredient weights"
+    },
+    "active_terms": [
+      "economy_conditions_wh",
+      "economy_momentum_wh",
+      "approval_wh",
+      "disruption_any"
+    ],
+    "score_fills": {
+      "economy_conditions_wh": 0.03515230855609801,
+      "economy_momentum_wh": 0.06181862958869317,
+      "approval_wh": 0.7166666666666665,
+      "disruption_any": 1.0
+    },
+    "score_centers": {
+      "economy_conditions_wh": 0.2101191115000371,
+      "economy_momentum_wh": 0.3559486651036649,
+      "approval_wh": 0.4323020433229793,
+      "disruption_any": 0.8054932592434505
+    },
+    "score_scales": {
+      "economy_conditions_wh": 0.7453009953283043,
+      "economy_momentum_wh": 0.8007206824525388,
+      "approval_wh": 1.1462653875257316,
+      "disruption_any": 0.3958205004251474
+    },
+    "dropped_terms": {},
+    "final_scaling": "time-weighted training median fill, then weighted mean/population SD, including binary"
+  },
+  {
+    "scenario": "oct31",
+    "forecast_cycle": 2014,
+    "normalizer": {
+      "config": {
+        "version": "fixed-feature-scores-v2",
+        "minimum_history_values": 3,
+        "clip_component_abs": 3.0,
+        "approval_center_pct": 50.0,
+        "approval_scale_pp": 10.0,
+        "disruption_column": "extraordinary_event_any_4y",
+        "missing_policy": "all required components must be known; no imputation or renormalization",
+        "party_policy": "multiply economic levels, momentum and approval by +1 for Democratic WH / -1 for Republican WH; disruption stays unsigned",
+        "weights": "equal 1/3 sentiment, employment and cost pressure; cost families equal within block; change anchors equal within family",
+        "components": {
+          "consumer_sentiment_3m": {
+            "score": "economy_conditions",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "unemployment_pct": {
+            "score": "economy_conditions",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "inflation_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "cpi_24m_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "gasoline_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_jan01": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          }
+        }
+      },
+      "scenario": "oct31",
+      "training_cycles": [
+        1978,
+        1980,
+        1982,
+        1984,
+        1986,
+        1988,
+        1990,
+        1992,
+        1994,
+        1996,
+        1998,
+        2000,
+        2002,
+        2004,
+        2006,
+        2008,
+        2010,
+        2012
+      ],
+      "statistics": {
+        "consumer_sentiment_3m": {
+          "n": 18,
+          "mean": 82.0953454786259,
+          "scale": 12.705125688518335,
+          "status": "ok",
+          "center": 82.0953454786259,
+          "effective_values": 10.02235645196331
+        },
+        "unemployment_pct": {
+          "n": 18,
+          "mean": 6.549663490094609,
+          "scale": 1.867595499217508,
+          "status": "ok",
+          "center": 6.549663490094609,
+          "effective_values": 10.02235645196331
+        },
+        "inflation_yoy_pct": {
+          "n": 18,
+          "mean": 2.559232077592072,
+          "scale": 1.7248585811772987,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "cpi_24m_pct": {
+          "n": 18,
+          "mean": 5.277402271496304,
+          "scale": 3.8713753670598865,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "gasoline_yoy_pct": {
+          "n": 18,
+          "mean": 2.848299154456321,
+          "scale": 14.19093775409858,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "consumer_sentiment_3m__change_jan01": {
+          "n": 17,
+          "mean": 0.8927418912024333,
+          "scale": 6.175106699444648,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "unemployment_pct__change_jan01": {
+          "n": 18,
+          "mean": -0.14881057361608463,
+          "scale": 0.5434707394947497,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "inflation_yoy_pct__change_jan01": {
+          "n": 18,
+          "mean": -0.5535127890892417,
+          "scale": 1.1077349064682123,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "cpi_level__pct_change_jan01": {
+          "n": 18,
+          "mean": 2.0631680059068906,
+          "scale": 1.3659515546504686,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "gasoline_cpi_level__pct_change_jan01": {
+          "n": 18,
+          "mean": 7.331787231295452,
+          "scale": 11.424292857379635,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "consumer_sentiment_3m__change_previous_oct31": {
+          "n": 17,
+          "mean": -0.14123572988115338,
+          "scale": 9.224094413422925,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 9.797216641419775
+        },
+        "unemployment_pct__change_previous_oct31": {
+          "n": 18,
+          "mean": -0.15462016751495497,
+          "scale": 0.8154374817552659,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "inflation_yoy_pct__change_previous_oct31": {
+          "n": 18,
+          "mean": -0.06687693355921197,
+          "scale": 2.0028499820240575,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "cpi_level__pct_change_previous_oct31": {
+          "n": 18,
+          "mean": 2.559232077592072,
+          "scale": 1.7248585811772987,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "gasoline_cpi_level__pct_change_previous_oct31": {
+          "n": 18,
+          "mean": 2.848299154456321,
+          "scale": 14.19093775409858,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        }
+      },
+      "fitted_electoral_weights": false,
+      "normalization": "training-cycle time-weighted component mean/population SD; fixed centers/directions/ingredient weights"
+    },
+    "active_terms": [
+      "economy_conditions_wh",
+      "economy_momentum_wh",
+      "approval_wh",
+      "disruption_any"
+    ],
+    "score_fills": {
+      "economy_conditions_wh": -0.17397057604762528,
+      "economy_momentum_wh": 0.08109654492877347,
+      "approval_wh": -0.3516666666666673,
+      "disruption_any": 1.0
+    },
+    "score_centers": {
+      "economy_conditions_wh": -0.0987273606589641,
+      "economy_momentum_wh": 0.34562243258954256,
+      "approval_wh": 0.0048467789578327675,
+      "disruption_any": 0.9192022215121938
+    },
+    "score_scales": {
+      "economy_conditions_wh": 0.7225373354109835,
+      "economy_momentum_wh": 0.6649779455515986,
+      "approval_wh": 1.1287462454547879,
+      "disruption_any": 0.2725243062173381
+    },
+    "dropped_terms": {},
+    "final_scaling": "time-weighted training median fill, then weighted mean/population SD, including binary"
+  },
+  {
+    "scenario": "oct31",
+    "forecast_cycle": 2016,
+    "normalizer": {
+      "config": {
+        "version": "fixed-feature-scores-v2",
+        "minimum_history_values": 3,
+        "clip_component_abs": 3.0,
+        "approval_center_pct": 50.0,
+        "approval_scale_pp": 10.0,
+        "disruption_column": "extraordinary_event_any_4y",
+        "missing_policy": "all required components must be known; no imputation or renormalization",
+        "party_policy": "multiply economic levels, momentum and approval by +1 for Democratic WH / -1 for Republican WH; disruption stays unsigned",
+        "weights": "equal 1/3 sentiment, employment and cost pressure; cost families equal within block; change anchors equal within family",
+        "components": {
+          "consumer_sentiment_3m": {
+            "score": "economy_conditions",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "unemployment_pct": {
+            "score": "economy_conditions",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "inflation_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "cpi_24m_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "gasoline_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_jan01": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          }
+        }
+      },
+      "scenario": "oct31",
+      "training_cycles": [
+        1978,
+        1980,
+        1982,
+        1984,
+        1986,
+        1988,
+        1990,
+        1992,
+        1994,
+        1996,
+        1998,
+        2000,
+        2002,
+        2004,
+        2006,
+        2008,
+        2010,
+        2012,
+        2014
+      ],
+      "statistics": {
+        "consumer_sentiment_3m": {
+          "n": 19,
+          "mean": 82.317461929223,
+          "scale": 12.901852239934499,
+          "status": "ok",
+          "center": 82.317461929223,
+          "effective_values": 10.12124825045096
+        },
+        "unemployment_pct": {
+          "n": 19,
+          "mean": 6.368395258876929,
+          "scale": 1.5171881920767352,
+          "status": "ok",
+          "center": 6.368395258876929,
+          "effective_values": 10.12124825045096
+        },
+        "inflation_yoy_pct": {
+          "n": 19,
+          "mean": 2.8285905034344343,
+          "scale": 1.7220895072846154,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "cpi_24m_pct": {
+          "n": 19,
+          "mean": 5.683116590281228,
+          "scale": 3.4363745899290667,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "gasoline_yoy_pct": {
+          "n": 19,
+          "mean": 7.059185942033823,
+          "scale": 13.552982889891627,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "consumer_sentiment_3m__change_jan01": {
+          "n": 18,
+          "mean": 2.2179159907456665,
+          "scale": 7.203789705811919,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "unemployment_pct__change_jan01": {
+          "n": 19,
+          "mean": -0.17997106394989282,
+          "scale": 0.6446650266133443,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "inflation_yoy_pct__change_jan01": {
+          "n": 19,
+          "mean": -0.19373382498444605,
+          "scale": 0.9590420214898651,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "cpi_level__pct_change_jan01": {
+          "n": 19,
+          "mean": 2.227828462130896,
+          "scale": 1.2702391248476943,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "gasoline_cpi_level__pct_change_jan01": {
+          "n": 19,
+          "mean": 7.946637436538775,
+          "scale": 9.97613607489442,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "consumer_sentiment_3m__change_previous_oct31": {
+          "n": 18,
+          "mean": 0.7775249179566981,
+          "scale": 10.880081950999003,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.02235645196331
+        },
+        "unemployment_pct__change_previous_oct31": {
+          "n": 19,
+          "mean": -0.3233056455590039,
+          "scale": 0.9550223043778484,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "inflation_yoy_pct__change_previous_oct31": {
+          "n": 19,
+          "mean": 0.07212464730063718,
+          "scale": 1.6589536934427074,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "cpi_level__pct_change_previous_oct31": {
+          "n": 19,
+          "mean": 2.8285905034344343,
+          "scale": 1.7220895072846154,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "gasoline_cpi_level__pct_change_previous_oct31": {
+          "n": 19,
+          "mean": 7.059185942033823,
+          "scale": 13.552982889891627,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        }
+      },
+      "fitted_electoral_weights": false,
+      "normalization": "training-cycle time-weighted component mean/population SD; fixed centers/directions/ingredient weights"
+    },
+    "active_terms": [
+      "economy_conditions_wh",
+      "economy_momentum_wh",
+      "approval_wh",
+      "disruption_any"
+    ],
+    "score_fills": {
+      "economy_conditions_wh": -0.10730908140187224,
+      "economy_momentum_wh": 0.3835694407100925,
+      "approval_wh": -0.3516666666666673,
+      "disruption_any": 1.0
+    },
+    "score_centers": {
+      "economy_conditions_wh": -0.023575718241011887,
+      "economy_momentum_wh": 0.45315635831824774,
+      "approval_wh": 0.14059603187321637,
+      "disruption_any": 0.7511064391957644
+    },
+    "score_scales": {
+      "economy_conditions_wh": 0.769779536613448,
+      "economy_momentum_wh": 0.6777520974888337,
+      "approval_wh": 1.0595347065149179,
+      "disruption_any": 0.4323720113448879
+    },
+    "dropped_terms": {},
+    "final_scaling": "time-weighted training median fill, then weighted mean/population SD, including binary"
+  },
+  {
+    "scenario": "oct31",
+    "forecast_cycle": 2018,
+    "normalizer": {
+      "config": {
+        "version": "fixed-feature-scores-v2",
+        "minimum_history_values": 3,
+        "clip_component_abs": 3.0,
+        "approval_center_pct": 50.0,
+        "approval_scale_pp": 10.0,
+        "disruption_column": "extraordinary_event_any_4y",
+        "missing_policy": "all required components must be known; no imputation or renormalization",
+        "party_policy": "multiply economic levels, momentum and approval by +1 for Democratic WH / -1 for Republican WH; disruption stays unsigned",
+        "weights": "equal 1/3 sentiment, employment and cost pressure; cost families equal within block; change anchors equal within family",
+        "components": {
+          "consumer_sentiment_3m": {
+            "score": "economy_conditions",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "unemployment_pct": {
+            "score": "economy_conditions",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "inflation_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "cpi_24m_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "gasoline_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_jan01": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          }
+        }
+      },
+      "scenario": "oct31",
+      "training_cycles": [
+        1978,
+        1980,
+        1982,
+        1984,
+        1986,
+        1988,
+        1990,
+        1992,
+        1994,
+        1996,
+        1998,
+        2000,
+        2002,
+        2004,
+        2006,
+        2008,
+        2010,
+        2012,
+        2014,
+        2016
+      ],
+      "statistics": {
+        "consumer_sentiment_3m": {
+          "n": 20,
+          "mean": 83.18928912190192,
+          "scale": 10.918533674521598,
+          "status": "ok",
+          "center": 83.18928912190192,
+          "effective_values": 10.285589578218943
+        },
+        "unemployment_pct": {
+          "n": 20,
+          "mean": 6.251778650402411,
+          "scale": 1.6417667754001113,
+          "status": "ok",
+          "center": 6.251778650402411,
+          "effective_values": 10.285589578218943
+        },
+        "inflation_yoy_pct": {
+          "n": 20,
+          "mean": 2.279363094597286,
+          "scale": 1.5025533516157044,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "cpi_24m_pct": {
+          "n": 20,
+          "mean": 4.387790531121185,
+          "scale": 3.520088175887727,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "gasoline_yoy_pct": {
+          "n": 20,
+          "mean": 0.6455262005582029,
+          "scale": 12.334777630522215,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "consumer_sentiment_3m__change_jan01": {
+          "n": 19,
+          "mean": 1.6642504474974276,
+          "scale": 5.599663480388019,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "unemployment_pct__change_jan01": {
+          "n": 20,
+          "mean": -0.25550126239812676,
+          "scale": 0.5268539190230183,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "inflation_yoy_pct__change_jan01": {
+          "n": 20,
+          "mean": -0.25111753568066547,
+          "scale": 1.0515070170073697,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "cpi_level__pct_change_jan01": {
+          "n": 20,
+          "mean": 1.8241026554372457,
+          "scale": 1.1993393465593094,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "gasoline_cpi_level__pct_change_jan01": {
+          "n": 20,
+          "mean": 4.037029534687084,
+          "scale": 10.852061564023238,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "consumer_sentiment_3m__change_previous_oct31": {
+          "n": 19,
+          "mean": 0.124037072226906,
+          "scale": 7.715801058732967,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.12124825045096
+        },
+        "unemployment_pct__change_previous_oct31": {
+          "n": 20,
+          "mean": -0.3543558031397271,
+          "scale": 0.821851515397424,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "inflation_yoy_pct__change_previous_oct31": {
+          "n": 20,
+          "mean": 0.23867386978087368,
+          "scale": 1.754393996309562,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "cpi_level__pct_change_previous_oct31": {
+          "n": 20,
+          "mean": 2.279363094597286,
+          "scale": 1.5025533516157044,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "gasoline_cpi_level__pct_change_previous_oct31": {
+          "n": 20,
+          "mean": 0.6455262005582029,
+          "scale": 12.334777630522215,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        }
+      },
+      "fitted_electoral_weights": false,
+      "normalization": "training-cycle time-weighted component mean/population SD; fixed centers/directions/ingredient weights"
+    },
+    "active_terms": [
+      "economy_conditions_wh",
+      "economy_momentum_wh",
+      "approval_wh",
+      "disruption_any"
+    ],
+    "score_fills": {
+      "economy_conditions_wh": -0.11673786376426795,
+      "economy_momentum_wh": 0.08206553745886597,
+      "approval_wh": -0.3516666666666673,
+      "disruption_any": 1.0
+    },
+    "score_centers": {
+      "economy_conditions_wh": -0.06521696005793437,
+      "economy_momentum_wh": 0.3518912881395612,
+      "approval_wh": -0.13573733038493818,
+      "disruption_any": 0.7540278788978992
+    },
+    "score_scales": {
+      "economy_conditions_wh": 0.736029896403614,
+      "economy_momentum_wh": 0.6432429016902149,
+      "approval_wh": 0.9992502197359132,
+      "disruption_any": 0.43066209113716325
+    },
+    "dropped_terms": {},
+    "final_scaling": "time-weighted training median fill, then weighted mean/population SD, including binary"
+  },
+  {
+    "scenario": "oct31",
+    "forecast_cycle": 2020,
+    "normalizer": {
+      "config": {
+        "version": "fixed-feature-scores-v2",
+        "minimum_history_values": 3,
+        "clip_component_abs": 3.0,
+        "approval_center_pct": 50.0,
+        "approval_scale_pp": 10.0,
+        "disruption_column": "extraordinary_event_any_4y",
+        "missing_policy": "all required components must be known; no imputation or renormalization",
+        "party_policy": "multiply economic levels, momentum and approval by +1 for Democratic WH / -1 for Republican WH; disruption stays unsigned",
+        "weights": "equal 1/3 sentiment, employment and cost pressure; cost families equal within block; change anchors equal within family",
+        "components": {
+          "consumer_sentiment_3m": {
+            "score": "economy_conditions",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "unemployment_pct": {
+            "score": "economy_conditions",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "inflation_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "cpi_24m_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "gasoline_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_jan01": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          }
+        }
+      },
+      "scenario": "oct31",
+      "training_cycles": [
+        1978,
+        1980,
+        1982,
+        1984,
+        1986,
+        1988,
+        1990,
+        1992,
+        1994,
+        1996,
+        1998,
+        2000,
+        2002,
+        2004,
+        2006,
+        2008,
+        2010,
+        2012,
+        2014,
+        2016,
+        2018
+      ],
+      "statistics": {
+        "consumer_sentiment_3m": {
+          "n": 21,
+          "mean": 85.60126715161155,
+          "scale": 12.06354980771655,
+          "status": "ok",
+          "center": 85.60126715161155,
+          "effective_values": 10.356868919611907
+        },
+        "unemployment_pct": {
+          "n": 21,
+          "mean": 5.810079636481873,
+          "scale": 1.5653571901997534,
+          "status": "ok",
+          "center": 5.810079636481873,
+          "effective_values": 10.356868919611907
+        },
+        "inflation_yoy_pct": {
+          "n": 21,
+          "mean": 2.5309789468567825,
+          "scale": 1.5234081846825482,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "cpi_24m_pct": {
+          "n": 21,
+          "mean": 4.777873707453675,
+          "scale": 3.284505297310977,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "gasoline_yoy_pct": {
+          "n": 21,
+          "mean": 4.882392628946543,
+          "scale": 12.519320565853397,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "consumer_sentiment_3m__change_jan01": {
+          "n": 20,
+          "mean": 1.3302438739842655,
+          "scale": 6.168821954791087,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "unemployment_pct__change_jan01": {
+          "n": 21,
+          "mean": -0.1706864859772238,
+          "scale": 0.5494136611233242,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "inflation_yoy_pct__change_jan01": {
+          "n": 21,
+          "mean": 0.05925922542964623,
+          "scale": 0.9090600427879132,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "cpi_level__pct_change_jan01": {
+          "n": 21,
+          "mean": 2.026433907011106,
+          "scale": 1.108659953682172,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "gasoline_cpi_level__pct_change_jan01": {
+          "n": 21,
+          "mean": 6.507861851502789,
+          "scale": 9.014254988061323,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "consumer_sentiment_3m__change_previous_oct31": {
+          "n": 20,
+          "mean": 0.8010634589820257,
+          "scale": 9.131746162176833,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.285589578218943
+        },
+        "unemployment_pct__change_previous_oct31": {
+          "n": 21,
+          "mean": -0.29330577937791563,
+          "scale": 0.8153096417493451,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "inflation_yoy_pct__change_previous_oct31": {
+          "n": 21,
+          "mean": 0.3583395604440548,
+          "scale": 1.499580037374543,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "cpi_level__pct_change_previous_oct31": {
+          "n": 21,
+          "mean": 2.5309789468567825,
+          "scale": 1.5234081846825482,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "gasoline_cpi_level__pct_change_previous_oct31": {
+          "n": 21,
+          "mean": 4.882392628946543,
+          "scale": 12.519320565853397,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        }
+      },
+      "fitted_electoral_weights": false,
+      "normalization": "training-cycle time-weighted component mean/population SD; fixed centers/directions/ingredient weights"
+    },
+    "active_terms": [
+      "economy_conditions_wh",
+      "economy_momentum_wh",
+      "approval_wh",
+      "disruption_any"
+    ],
+    "score_fills": {
+      "economy_conditions_wh": 0.07964938332940959,
+      "economy_momentum_wh": 0.002325140342872886,
+      "approval_wh": 0.13666666666666671,
+      "disruption_any": 1.0
+    },
+    "score_centers": {
+      "economy_conditions_wh": -0.03987689532985026,
+      "economy_momentum_wh": 0.31892922002721574,
+      "approval_wh": 0.22685229201650065,
+      "disruption_any": 0.8260930797567784
+    },
+    "score_scales": {
+      "economy_conditions_wh": 0.7911309233248699,
+      "economy_momentum_wh": 0.72067171888524,
+      "approval_wh": 0.9188730308998406,
+      "disruption_any": 0.3790294227823737
+    },
+    "dropped_terms": {},
+    "final_scaling": "time-weighted training median fill, then weighted mean/population SD, including binary"
+  },
+  {
+    "scenario": "oct31",
+    "forecast_cycle": 2022,
+    "normalizer": {
+      "config": {
+        "version": "fixed-feature-scores-v2",
+        "minimum_history_values": 3,
+        "clip_component_abs": 3.0,
+        "approval_center_pct": 50.0,
+        "approval_scale_pp": 10.0,
+        "disruption_column": "extraordinary_event_any_4y",
+        "missing_policy": "all required components must be known; no imputation or renormalization",
+        "party_policy": "multiply economic levels, momentum and approval by +1 for Democratic WH / -1 for Republican WH; disruption stays unsigned",
+        "weights": "equal 1/3 sentiment, employment and cost pressure; cost families equal within block; change anchors equal within family",
+        "components": {
+          "consumer_sentiment_3m": {
+            "score": "economy_conditions",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "unemployment_pct": {
+            "score": "economy_conditions",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "inflation_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "cpi_24m_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "gasoline_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_jan01": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          }
+        }
+      },
+      "scenario": "oct31",
+      "training_cycles": [
+        1978,
+        1980,
+        1982,
+        1984,
+        1986,
+        1988,
+        1990,
+        1992,
+        1994,
+        1996,
+        1998,
+        2000,
+        2002,
+        2004,
+        2006,
+        2008,
+        2010,
+        2012,
+        2014,
+        2016,
+        2018,
+        2020
+      ],
+      "statistics": {
+        "consumer_sentiment_3m": {
+          "n": 22,
+          "mean": 85.14352897945902,
+          "scale": 11.295246752541575,
+          "status": "ok",
+          "center": 85.14352897945902,
+          "effective_values": 10.475747603608664
+        },
+        "unemployment_pct": {
+          "n": 22,
+          "mean": 5.945393117298495,
+          "scale": 1.8124525764312653,
+          "status": "ok",
+          "center": 5.945393117298495,
+          "effective_values": 10.475747603608664
+        },
+        "inflation_yoy_pct": {
+          "n": 22,
+          "mean": 2.19004735000175,
+          "scale": 1.289243289722004,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "cpi_24m_pct": {
+          "n": 22,
+          "mean": 4.276846789461493,
+          "scale": 2.976369122711427,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "gasoline_yoy_pct": {
+          "n": 22,
+          "mean": 0.5516003992246484,
+          "scale": 12.276290451497845,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "consumer_sentiment_3m__change_jan01": {
+          "n": 21,
+          "mean": -1.3129496779310177,
+          "scale": 8.615639335268355,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "unemployment_pct__change_jan01": {
+          "n": 22,
+          "mean": 0.21496301092921327,
+          "scale": 1.4812508151618808,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "inflation_yoy_pct__change_jan01": {
+          "n": 22,
+          "mean": -0.2416387513172484,
+          "scale": 0.929649715477003,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "cpi_level__pct_change_jan01": {
+          "n": 22,
+          "mean": 1.6685560700502777,
+          "scale": 1.0823493092968695,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "gasoline_cpi_level__pct_change_jan01": {
+          "n": 22,
+          "mean": 2.2523134844515806,
+          "scale": 12.423345325234068,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "consumer_sentiment_3m__change_previous_oct31": {
+          "n": 21,
+          "mean": -1.3899674231025794,
+          "scale": 8.847553214891864,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.356868919611907
+        },
+        "unemployment_pct__change_previous_oct31": {
+          "n": 22,
+          "mean": 0.11931923551502281,
+          "scale": 1.6369186456575298,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "inflation_yoy_pct__change_previous_oct31": {
+          "n": 22,
+          "mean": 0.16286611859068614,
+          "scale": 1.477612875553826,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "cpi_level__pct_change_previous_oct31": {
+          "n": 22,
+          "mean": 2.19004735000175,
+          "scale": 1.289243289722004,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "gasoline_cpi_level__pct_change_previous_oct31": {
+          "n": 22,
+          "mean": 0.5516003992246484,
+          "scale": 12.276290451497845,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        }
+      },
+      "fitted_electoral_weights": false,
+      "normalization": "training-cycle time-weighted component mean/population SD; fixed centers/directions/ingredient weights"
+    },
+    "active_terms": [
+      "economy_conditions_wh",
+      "economy_momentum_wh",
+      "approval_wh",
+      "disruption_any"
+    ],
+    "score_fills": {
+      "economy_conditions_wh": -0.2738409314325634,
+      "economy_momentum_wh": 0.13856843961486476,
+      "approval_wh": 0.13666666666666671,
+      "disruption_any": 1.0
+    },
+    "score_centers": {
+      "economy_conditions_wh": -0.054349961629926856,
+      "economy_momentum_wh": 0.32917806964831914,
+      "approval_wh": 0.1624042772614786,
+      "disruption_any": 0.8276993705396153
+    },
+    "score_scales": {
+      "economy_conditions_wh": 0.706702832226881,
+      "economy_momentum_wh": 0.5774024591083293,
+      "approval_wh": 0.9533461942640602,
+      "disruption_any": 0.3776415265141532
+    },
+    "dropped_terms": {},
+    "final_scaling": "time-weighted training median fill, then weighted mean/population SD, including binary"
+  },
+  {
+    "scenario": "oct31",
+    "forecast_cycle": 2024,
+    "normalizer": {
+      "config": {
+        "version": "fixed-feature-scores-v2",
+        "minimum_history_values": 3,
+        "clip_component_abs": 3.0,
+        "approval_center_pct": 50.0,
+        "approval_scale_pp": 10.0,
+        "disruption_column": "extraordinary_event_any_4y",
+        "missing_policy": "all required components must be known; no imputation or renormalization",
+        "party_policy": "multiply economic levels, momentum and approval by +1 for Democratic WH / -1 for Republican WH; disruption stays unsigned",
+        "weights": "equal 1/3 sentiment, employment and cost pressure; cost families equal within block; change anchors equal within family",
+        "components": {
+          "consumer_sentiment_3m": {
+            "score": "economy_conditions",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "unemployment_pct": {
+            "score": "economy_conditions",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.3333333333333333,
+            "center": "history_mean"
+          },
+          "inflation_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "cpi_24m_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "gasoline_yoy_pct": {
+            "score": "economy_conditions",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.1111111111111111,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_jan01": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_jan01": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "consumer_sentiment_3m__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "sentiment",
+            "direction": 1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "unemployment_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "employment",
+            "direction": -1,
+            "weight": 0.16666666666666666,
+            "center": "zero"
+          },
+          "inflation_yoy_pct__change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          },
+          "gasoline_cpi_level__pct_change_previous_oct31": {
+            "score": "economy_momentum",
+            "group": "cost_pressure",
+            "direction": -1,
+            "weight": 0.05555555555555555,
+            "center": "zero"
+          }
+        }
+      },
+      "scenario": "oct31",
+      "training_cycles": [
+        1978,
+        1980,
+        1982,
+        1984,
+        1986,
+        1988,
+        1990,
+        1992,
+        1994,
+        1996,
+        1998,
+        2000,
+        2002,
+        2004,
+        2006,
+        2008,
+        2010,
+        2012,
+        2014,
+        2016,
+        2018,
+        2020,
+        2022
+      ],
+      "statistics": {
+        "consumer_sentiment_3m": {
+          "n": 23,
+          "mean": 80.4531739275953,
+          "scale": 13.820266900291669,
+          "status": "ok",
+          "center": 80.4531739275953,
+          "effective_values": 10.52684547239183
+        },
+        "unemployment_pct": {
+          "n": 23,
+          "mean": 5.925560464067044,
+          "scale": 1.7439504804302168,
+          "status": "ok",
+          "center": 5.925560464067044,
+          "effective_values": 10.52684547239183
+        },
+        "inflation_yoy_pct": {
+          "n": 23,
+          "mean": 2.9480872721916263,
+          "scale": 2.2950697578422745,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "cpi_24m_pct": {
+          "n": 23,
+          "mean": 5.488684637205491,
+          "scale": 4.1261540487860096,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "gasoline_yoy_pct": {
+          "n": 23,
+          "mean": 2.559022810302712,
+          "scale": 14.185821712092375,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "consumer_sentiment_3m__change_jan01": {
+          "n": 22,
+          "mean": -4.653977197847313,
+          "scale": 10.705077556067147,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "unemployment_pct__change_jan01": {
+          "n": 23,
+          "mean": 0.622683351998954,
+          "scale": 1.7796972111804443,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "inflation_yoy_pct__change_jan01": {
+          "n": 23,
+          "mean": -0.01902819442298235,
+          "scale": 0.9265639222752041,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "cpi_level__pct_change_jan01": {
+          "n": 23,
+          "mean": 2.135048811995841,
+          "scale": 1.6219112316968738,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "gasoline_cpi_level__pct_change_jan01": {
+          "n": 23,
+          "mean": 0.9696137144116362,
+          "scale": 12.994013526777863,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "consumer_sentiment_3m__change_previous_oct31": {
+          "n": 22,
+          "mean": -4.929571545153631,
+          "scale": 11.629204902993601,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.475747603608664
+        },
+        "unemployment_pct__change_previous_oct31": {
+          "n": 23,
+          "mean": 0.46630941456295333,
+          "scale": 1.9833881809971607,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "inflation_yoy_pct__change_previous_oct31": {
+          "n": 23,
+          "mean": 0.5127889073818563,
+          "scale": 1.5229056499404705,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "cpi_level__pct_change_previous_oct31": {
+          "n": 23,
+          "mean": 2.9480872721916263,
+          "scale": 2.2950697578422745,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        },
+        "gasoline_cpi_level__pct_change_previous_oct31": {
+          "n": 23,
+          "mean": 2.559022810302712,
+          "scale": 14.185821712092375,
+          "status": "ok",
+          "center": 0.0,
+          "effective_values": 10.52684547239183
+        }
+      },
+      "fitted_electoral_weights": false,
+      "normalization": "training-cycle time-weighted component mean/population SD; fixed centers/directions/ingredient weights"
+    },
+    "active_terms": [
+      "economy_conditions_wh",
+      "economy_momentum_wh",
+      "approval_wh",
+      "disruption_any"
+    ],
+    "score_fills": {
+      "economy_conditions_wh": -0.05056423370541929,
+      "economy_momentum_wh": 0.08694546264668537,
+      "approval_wh": 0.13666666666666671,
+      "disruption_any": 1.0
+    },
+    "score_centers": {
+      "economy_conditions_wh": -0.019368868385385155,
+      "economy_momentum_wh": 0.24406047789883129,
+      "approval_wh": 0.20616787512563572,
+      "disruption_any": 0.87805198313016
+    },
+    "score_scales": {
+      "economy_conditions_wh": 0.6517598569001682,
+      "economy_momentum_wh": 0.6796811112108367,
+      "approval_wh": 0.8828675591448586,
+      "disruption_any": 0.327225760066889
+    },
+    "dropped_terms": {},
+    "final_scaling": "time-weighted training median fill, then weighted mean/population SD, including binary"
+  }
+]

@@ -1,0 +1,117 @@
+{
+  "bayesian_model": "repaired_both__selected",
+  "source": "reports/plain_polling_blend/20260920T062747.520500Z",
+  "bayesian_source": "reports/signed_state_factor/20260920T052241.012596Z",
+  "previous": "reports/mean_only_polling_blend/20260920T064738.332296Z",
+  "data_as_of": "2026-09-17",
+  "variants": [
+    [
+      "Bayesian",
+      "bayesian_pp",
+      0.0
+    ],
+    [
+      "Plain 20%",
+      "plain_pp",
+      0.2
+    ],
+    [
+      "Plain 50%",
+      "plain_pp",
+      0.5
+    ],
+    [
+      "Plain 70%",
+      "plain_pp",
+      0.7
+    ],
+    [
+      "Corrected 20%",
+      "nonbayesian_pp",
+      0.2
+    ],
+    [
+      "Corrected 50%",
+      "nonbayesian_pp",
+      0.5
+    ],
+    [
+      "Corrected 70%",
+      "nonbayesian_pp",
+      0.7
+    ]
+  ],
+  "draws": 30000,
+  "seed": 197139,
+  "rule": "mu_new=(1-w)*mu_Bayesian+w*mu_component; covariance_new=covariance_Bayesian",
+  "corrected_component": "Retained bias benchmark: local/shared historical polling-error correction, last 5 calendar cycles / 8-year decay",
+  "plain_component": "Saved recency/firm weighted polling; historical tuning and no-poll prior fallback retained",
+  "no_refresh": true,
+  "no_refit": true,
+  "no_weight_selection": true,
+  "no_promotion": true,
+  "sources": {
+    "reports/plain_polling_blend/20260920T062747.520500Z/manifest.json": "3c6a187c6e2e674c12fa9551c26116b43ab46cb9e5998acc4a1cf32d6fa5863e",
+    "reports/mean_only_polling_blend/20260920T064738.332296Z/manifest.json": "e0dc42baabf005195ceef19c3158f875d47e1f55edb38c3cb11d82b56ab0b46f",
+    "reports/signed_state_factor/20260920T052241.012596Z/folds.parquet": "79ec0f0ad7ceaedd2acd969fe0df2d0ce69af8284869e756d9f25c54948dd14c",
+    "reports/signed_state_factor/20260920T052241.012596Z/seats.parquet": "be96c46fce8eb6a13110904ca100694c8ccea1433d073302ca70346420ab9cc5",
+    "reports/signed_state_factor/20260920T052241.012596Z/tuning.parquet": "eb85d063ba6ec3c12dc5a14adbbfccc27ea7cb07b6b2f25d294bb98944213126",
+    "reports/signed_state_factor/20260920T052241.012596Z/forecasts/repaired_both_matched_live_2012_lambda0.npz": "d087c6b51823ac8685f66620794ddeed2a0d855a1a43094efb26cbfa10fa4017",
+    "reports/signed_state_factor/20260920T052241.012596Z/forecasts/repaired_both_matched_live_2014_lambda0.npz": "bdb52443fd77ea19c0462bc2a847f12d57ed32bae1862f815fc4e232582f000a",
+    "reports/signed_state_factor/20260920T052241.012596Z/forecasts/repaired_both_matched_live_2016_lambda0.npz": "c4dbeed9112eec035f3b83d873d3a786bf5a845a9a3b047b5ea9c9d8cb9f9956",
+    "reports/signed_state_factor/20260920T052241.012596Z/forecasts/repaired_both_matched_live_2018_lambda0.npz": "7cde1196d7e352e901f8906cb6b6b2697f97e5bfc550abacc0ee4fe3a60e38bd",
+    "reports/signed_state_factor/20260920T052241.012596Z/forecasts/repaired_both_matched_live_2020_lambda0.25.npz": "f255cbd3a7eafb686a0ac14eabdd4361869c215aba54016e0113cb304fa17be3",
+    "reports/signed_state_factor/20260920T052241.012596Z/forecasts/repaired_both_matched_live_2022_lambda0.5.npz": "0fe0ebd4f4f07e96c16a55afb86eba31b0b7e30686eda83a0092de1a8c315138",
+    "reports/signed_state_factor/20260920T052241.012596Z/forecasts/repaired_both_matched_live_2024_lambda0.5.npz": "36d3b689190227ddfb146005644f2d91b02e3e008d9d627f4160dbc3e86b4114",
+    "reports/signed_state_factor/20260920T052241.012596Z/forecasts/repaired_both_matched_live_2026_lambda0.5.npz": "0a0682e96f84d7e6948121cbcacd7bd225a400e80f2c3dad4ac73b4d3c1200b2",
+    "reports/signed_state_factor/20260920T052241.012596Z/forecasts/repaired_both_oct31_2012_lambda0.npz": "97ffe3bcba75caf3f15a92f10400aef927c542b76711294d317c243085e4c9bc",
+    "reports/signed_state_factor/20260920T052241.012596Z/forecasts/repaired_both_oct31_2014_lambda0.npz": "b9b8b8c262a8d65dbdfde93973d62a2831bcf009f7c59341578b5d126084fa9d",
+    "reports/signed_state_factor/20260920T052241.012596Z/forecasts/repaired_both_oct31_2016_lambda0.npz": "9924e531ab1f75dffb5dafcc51a06dffc0331e08df572cd0a9b25f92e2b6b3fa",
+    "reports/signed_state_factor/20260920T052241.012596Z/forecasts/repaired_both_oct31_2018_lambda0.npz": "8b76c277df006198ed153ef8368419af6542afcb4ca17484873b6f3d88d1d13c",
+    "reports/signed_state_factor/20260920T052241.012596Z/forecasts/repaired_both_oct31_2020_lambda0.5.npz": "9b27cbdae7d0ba9116400c4c5eac299649921dce936d3936045e5db2d8bcf559",
+    "reports/signed_state_factor/20260920T052241.012596Z/forecasts/repaired_both_oct31_2022_lambda0.5.npz": "1708d6fe571408345e996c998b71f738eec3521487ec8400ab6e530df0786982",
+    "reports/signed_state_factor/20260920T052241.012596Z/forecasts/repaired_both_oct31_2024_lambda0.5.npz": "548b73164b7b95ee84f89e9140f0e631b7ce7f7c52b7da1d2fc8f5971d066a2e"
+  },
+  "old_notebooks": {
+    "COVERAGE_BALANCE.ipynb": "d5cc49c80fbbf9081490e165321c4dc2e73676566a34455e0d6de5689afaf1aa",
+    "RECENT_POLL_BIAS.ipynb": "3cf237f981462c4d2b682264aca5b9d9c3e51ea880dd8a29161da7b5849123ea",
+    "BAYESIAN_PRIOR_REVISION3.ipynb": "20699d886d81fa6d06bd9983af8ea9edec670f7ff65fcaf8ce76b15c543a3cf4",
+    "PLAIN_POLLING_BLEND.ipynb": "e1bef6b18c616b3b35ee7a91b99508a8610f9870ea7acf76acd4974630c95ab1",
+    "OFFICIAL_REPAIR_MODEL_REVIEW.ipynb": "3c4fdc620a57588b90f490d39037cc41215bb62bfc76ac964b3d025be143ea6e",
+    "STUDENT_POLLING_LIKELIHOOD.ipynb": "e15c85a2163632832a614cfb2f418048a435e69fbf984c41bdb4f1429e1eb692",
+    "MEAN_ONLY_POLLING_BLEND.ipynb": "f172389cdc40e7b4320e93417dbd255e3ee124de8ff008095e1146649b6fe315",
+    "BAYESIAN_PRIOR_REVISION5.ipynb": "216aea60eff333afc83f148162a209f865d1bbf16d0934a7437ccd8d61619be1",
+    "BAYESIAN_STATE_PENALTY.ipynb": "8bfa7108581680ff3f22264206568927be3a13a2c32cd575c895753439357720",
+    "COMBINED_STUDENT_MODEL.ipynb": "cc3535103eca6439b52d4ed48b385e59f8f28673c21110b2079c1558e5d66e84",
+    "FEATURE_REVIEW.ipynb": "144d1950c5a3e71b4665cd7129ef8596b890f527f6f7cb375326ab36a22c4e75",
+    "BAYESIAN_GAUSSIAN.ipynb": "3c382b7d75276122e5caf7bfa88cb492e7196829d3263e70b0227d106fc5a772",
+    "BAYESIAN_REVISION2.ipynb": "053dbaa94d99a78ae75bacac06a77ea28e86e8faf9d0cb4fe5c8adb7d7ea59e2",
+    "CURRENT_COMPARISON_AND_SCENARIOS.ipynb": "5d6b016e71d060b3578af37b068fa32e5a8dcbb8e7b96567e9b4155dafd30b29",
+    "FINAL_BASELINE_EXPERIMENTS.ipynb": "4ad4a0aab7a9aa6be225dc7251884d17b9c83cfee469ab45a5684def63f367c3",
+    "BASELINE_MODELS.ipynb": "8596ae23b3b121411fbb63fb32ae2e79dc49b20833028bb465d61c6eb0687fe3",
+    "PRIOR_CALIBRATION_SENSITIVITY.ipynb": "bd40317cbca3c72b7414fa595508b0d694785eadf099f8d08ebffd96edabfcb2",
+    "ADAPTIVE_POLL_DECAY.ipynb": "9eaded07c70b421736a0cdd3050c039fc01c5675bb243ca45c8edff35d7755ea",
+    "POLL_TIMING_STUDENT.ipynb": "c7213329b1e687524b61f2f0a0a052910444db4a6fee9c8f835da5d83efb0cb2",
+    "VARIANCE_AND_PUBLISHED_REVIEW.ipynb": "7fa7ad7344ae2a68474097cdf1b6ca4959082ff828c1bc61f15d3fcb418c7e5b",
+    "NATIONAL_FACTOR_REVIEW.ipynb": "2b4754f6eb59ccfc3edf77982917b7c04aa7f6bab2e47f2fa1ada87bbbb95e19",
+    "ELECTORAL_SURPRISE_STUDENT.ipynb": "79c6110bc9d55476dd655e18847e8cf4faf6ed2edee255fc97a5842f39fb7a2f",
+    "DATA_REVIEW.ipynb": "1fcebc6c2c136e52fb54666af7b1d860e37c7149d02da423d61fe4a25a424e94",
+    "SIGNED_STATE_FACTOR.ipynb": "2af606babec860eefad8d447a58c28bfd926bfd93b111f79fe48a5a2920a4359",
+    "NATIONAL_FEATURE_STUDENT.ipynb": "b611492753f0fa862c75f69d15b9c4b9067a2d444a543cfac1b02bcadda6ae3d",
+    "MARGIN_PROBABILITY_CALIBRATION.ipynb": "1bbf83be797b1d1d6250abe7b034fc9e45ad6f531e6cb1e2271c47e4eef24014",
+    "SIMPLE_NATIONAL_MODEL.ipynb": "8366c5e5826a604061cceeb1562ded962bd7d163a22dbffd29be299291b5bd6d",
+    "BAYESIAN_NONBAYESIAN_BLEND.ipynb": "38b1b6c90fe7747dc0bfebad6445ce0541c39e602676d314b1893d1f273fae52",
+    "SIMPLE_BAYESIAN_POLLING.ipynb": "3d36c051e22f962df9057bc270ed5bb3c9ff9bb90d4d67920b739df107f487e1",
+    "WORKING_MODEL.ipynb": "dcd950c4097780f75553e846c4778d06805baf9dce96c931d4d239ebcb61259a",
+    "NATIONAL_FEATURE_PRIOR.ipynb": "786c4133e864985d2f4354b0e37a2bb37066cbe33aad7a99f71f966179020d99",
+    "FINAL_UNCERTAINTY_REVIEW.ipynb": "9eddd30f848dac8afafa9795f46bb5e6db1e666bf98025cf8d5cf41656b06b80",
+    "DF_PRIOR_REVIEW.ipynb": "311e62378286fba487001c76763c02f8a74339d166aaba93320671d07ea33eb6",
+    "POLLING_UPDATE_REVIEW.ipynb": "fe6c97bd7a8e815058e1331e72b29d13d92f2ef43925703e1d5dade85c90787a",
+    "STRUCTURED_POLL_ERROR.ipynb": "91909f6e22fd7805294d93f8939a6ebf9185f4155c1069e5b47ae97f2a8c10ca",
+    "POLL_TREND_AND_SPARSE_REVIEW.ipynb": "9e3463d2465120169091fea1a3133c0768ef07c6a5b4206ebfdd4ae496b67136",
+    "NATIONAL_TAILS_WAVES.ipynb": "9c4d637bbf84de4dd572ec58d9ba216be0c00ac6372a00a3d123710a22d3d1d4",
+    "PRIOR_CENTER_REPAIR.ipynb": "b2a723bdc84e00a7c4bf09c082195043a30221084323b30abd2c115613c5c2c0",
+    "JOINT_POLL_ERROR.ipynb": "8b947347b3c5fecf009abab86f67c237e3da9e2001805de9cb11a961bc301dd1"
+  },
+  "working_sha256": "2d0fb86464a6f23236c34fb5ed01772348eda570a9f9001bd88d4373e9850be0"
+}

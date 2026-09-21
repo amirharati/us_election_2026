@@ -1,0 +1,22 @@
+{
+  "cycle_scores.parquet": "42cd40bfcc3ddba5894254c02a863ac047840359976712f947a6b9bf8f9dc9a0",
+  "forecasts/matched_live_2012.npz": "3e1117f9c51317abf07f904f13d746e79456c37ee700592fb37f641d3ae26af6",
+  "forecasts/matched_live_2014.npz": "f3732f125925521d96b8677eeb12cddf9546f4c2235ff86fe2be44b22c2b2905",
+  "forecasts/matched_live_2016.npz": "d935fe4a5b5c3a5d6b7d439090b15825564c73c82f8dc148dd105b03b1b3d926",
+  "forecasts/matched_live_2018.npz": "9621a13dd0a74b23bda12439cebf729ca6fcb9d41da3580bb252ee126a7d57e6",
+  "forecasts/matched_live_2020.npz": "052e539c39ab648b17cbb2a2b48d8da915b39e77fb10a5431c33826a8979d87c",
+  "forecasts/matched_live_2022.npz": "3fe8b1fa5fd1e63f20361300e0c4c383e600518cfb38e0ad419a6da1458edb62",
+  "forecasts/matched_live_2024.npz": "e3b94be46cbffa0ceb486298b51888039577a7390c6f2de972099425c83bbfef",
+  "forecasts/matched_live_2026.npz": "81a1d47c65f9ab218d8b235c677d5dc39373dcfc638a1bb93f791d9efac3745e",
+  "forecasts/oct31_2012.npz": "a2b6e7583dae3fe2a6e992a33dec2e8cb72a8079b5a0a82b1344ccfa6781b477",
+  "forecasts/oct31_2014.npz": "50dcb989c7176f49e4c82f2a79eee7a995d2ad7ca41a97ca746ea1cc7bc5508e",
+  "forecasts/oct31_2016.npz": "920a847db1972bc31fb92f3745c753616e99444d477fb22bc915a56632606ccf",
+  "forecasts/oct31_2018.npz": "a96beae93bedd437c514f128845657323abab0fbb94a0ad40f22e7764ef604cf",
+  "forecasts/oct31_2020.npz": "049a4af9a88c3042d557550867ccf81d0b26054b6347456727e9d323af9ed218",
+  "forecasts/oct31_2022.npz": "24ada28c8422eca0fb5226ba96ab5bd72fe77f76520f01bdab3d6b10f85c9562",
+  "forecasts/oct31_2024.npz": "174c33ae6744e676da617f65fe8b71965231b67b20c46046d6bb2510a8334b9c",
+  "predictions.parquet": "a7a2ac9bfb2d20b372614559e7040d4ba8c191398cd06648e5536545e708103f",
+  "run.json": "6e05e27570dcfbcf96fdc1ae4b56aa9054fc702f8827cdf8c81b6e8b81396f69",
+  "seats.parquet": "73bbd8434a66bf43ffe8067b5fd2b656f97f8f8656ef336f1131e876a3ffdbc8",
+  "summary.parquet": "ce6d6d2ff8da82db3865e1559a4d383782fa074a2d09de9a094804e5cbe0f25c"
+}

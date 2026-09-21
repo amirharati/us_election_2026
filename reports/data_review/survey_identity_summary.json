@@ -1,0 +1,32 @@
+{
+  "recent_versions": 12060,
+  "active_versions": 10467,
+  "archive_identity_rows": 8758,
+  "current_identity_rows": 1155,
+  "publisher_id_name_conflicts": 0,
+  "name_id_conflicts": 0,
+  "metadata_conflicts": 0,
+  "rating_families_with_multiple_publishers": 26,
+  "superseded_versions_checked": 1593,
+  "multi_version_samples": 1552,
+  "different_id_fingerprint_pairs": 2,
+  "provenance": {
+    "version": "survey-identity-v1",
+    "reviewed_snapshot": "20260917T020151.686202Z",
+    "input_snapshots": {
+      "historical": "20260916T160814.584879Z",
+      "2026": "20260914T174421.503748Z",
+      "prepared": "20260916T160854.192960Z",
+      "normalized": "20260916T160901.748097Z"
+    },
+    "source_provenance_sha256": "41fe6ad55e3f033d9e776c5696e7abe857243b72124d613e34716dc0ba40e33d",
+    "input_manifest_sha256": {
+      "historical": "7b00014e812a51a99efc9b9095c955056ff9bd9bb49937dfc8d18c74dae5935d",
+      "2026": "849454ecd89c671c18825f8b6f2b11f9c7df0cce8bba2afe566affaba9bab06e",
+      "prepared": "d1ba333c32ed322d23aa9d9321d58cc653f4d1a03fe83dfbc042ab1cef94be2f",
+      "normalized": "4395a6171af9316e17043999fe346c67f8bd6f68efb8d1ef2ff1c3e28e332dd3"
+    },
+    "config_sha256": "b8fdba6a06dc873e61e9e721ffabefb59074c0130f9fc4354754e108e5f8b2d3",
+    "script_sha256": "e0d369bd9fe183d7a4cc8a9bbab11d6a76fadcf5c154cc347324f7676c13ecc5"
+  }
+}

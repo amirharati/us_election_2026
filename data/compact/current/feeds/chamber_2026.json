@@ -1,0 +1,13 @@
+{
+  "checked_on": "2026-09-14",
+  "source": "https://www.270towin.com/2026-senate-election/",
+  "total_seats": 100,
+  "contested_seats": 35,
+  "continuing_seats_by_party": {"DEM": 32, "REP": 31, "IND": 2},
+  "continuing_independent_caucus": "DEM",
+  "new_independent_caucus": "unresolved_explicit_scenarios_required",
+  "vice_president_party": "REP",
+  "election_type": "midterm",
+  "president_party": "REP",
+  "nominee_and_election_rule_audit_complete": false
+}

@@ -1,0 +1,18 @@
+{
+  "historical": {
+    "snapshot": "20260916T160814.584879Z",
+    "manifest_sha256": "7b00014e812a51a99efc9b9095c955056ff9bd9bb49937dfc8d18c74dae5935d"
+  },
+  "2026": {
+    "snapshot": "20260914T174421.503748Z",
+    "manifest_sha256": "849454ecd89c671c18825f8b6f2b11f9c7df0cce8bba2afe566affaba9bab06e"
+  },
+  "prepared": {
+    "snapshot": "20260916T160854.192960Z",
+    "manifest_sha256": "d1ba333c32ed322d23aa9d9321d58cc653f4d1a03fe83dfbc042ab1cef94be2f"
+  },
+  "normalized": {
+    "snapshot": "20260916T160901.748097Z",
+    "manifest_sha256": "4395a6171af9316e17043999fe346c67f8bd6f68efb8d1ef2ff1c3e28e332dd3"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "live",
+  "as_of": "2026-09-17",
+  "dataset": "data/final/snapshots/20260919T172852.916455Z",
+  "dataset_manifest_sha256": "76cbc3bded7429267f5d948a453033c51c545e14b3697113a351d52bc3c7523b",
+  "main": "repaired_both__selected",
+  "trained_through": 2024,
+  "calibration_horizon": "frozen September17 historical forecasts",
+  "refreshed_hyperparameters": false,
+  "weights": [
+    0.1,
+    0.2,
+    0.4,
+    0.5
+  ],
+  "freshness": {
+    "mode": "frozen offline verification"
+  },
+  "missing_current_feature_scores": [],
+  "political_reference_reviewed_through": "2026-09-17"
+}

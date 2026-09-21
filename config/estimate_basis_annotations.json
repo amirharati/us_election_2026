@@ -1,0 +1,182 @@
+[
+  {
+    "source": "538_archive",
+    "dataset": "senate",
+    "cycle": 2020,
+    "geography": "MI",
+    "source_poll_id": "72624",
+    "source_question_id": "136296",
+    "expected": {
+      "dem_share": 0.52,
+      "rep_share": 0.37,
+      "sample_size": 450
+    },
+    "reported_n_basis": "survey",
+    "estimate_basis": "full_sample",
+    "survey_n": 450,
+    "estimate_n": 450,
+    "basis_review_status": "source_inconsistency_unresolved",
+    "evidence": "ESTIMATE_BASIS_AUDIT.md; reports/source_audit/estimate_basis/audit_facts.json",
+    "notes": "Full/decided tables cannot be related by unchanged-weight conditioning; two full-sample age-column totals fail rounding checks. Correct values unknown."
+  },
+  {
+    "source": "538_archive",
+    "dataset": "senate",
+    "cycle": 2022,
+    "geography": "OH",
+    "source_poll_id": "81588",
+    "source_question_id": "165136",
+    "expected": {
+      "dem_share": 0.46,
+      "rep_share": 0.54,
+      "sample_size": 450
+    },
+    "reported_n_basis": "survey",
+    "estimate_basis": "decided",
+    "survey_n": 450,
+    "estimate_n": 432,
+    "basis_review_status": "source_basis_verified",
+    "evidence": "ESTIMATE_BASIS_AUDIT.md; reports/source_audit/estimate_basis/audit_facts.json",
+    "notes": "Archive shares match decided table; reported N=450 describes full survey, decided base is432. No effective N inferred."
+  },
+  {
+    "source": "538_archive",
+    "dataset": "senate",
+    "cycle": "2020",
+    "geography": "NC",
+    "source_poll_id": "72659",
+    "source_question_id": "136353",
+    "expected": {
+      "dem_share": 0.48,
+      "rep_share": 0.46,
+      "sample_size": 707.0
+    },
+    "reported_n_basis": "estimate",
+    "estimate_basis": "full_sample",
+    "survey_n": 1009,
+    "estimate_n": 707,
+    "basis_review_status": "source_basis_verified",
+    "evidence": "HIGH_ERROR_CASE_AUDIT.md; reports/source_audit/high_error_queue/poll_spot_checks.json",
+    "notes": "Ipsos Q8 includes unsure/other/nonvote; N707 LV from parent1009 adults."
+  },
+  {
+    "source": "538_archive",
+    "dataset": "senate",
+    "cycle": "2020",
+    "geography": "NC",
+    "source_poll_id": "72215",
+    "source_question_id": "135478",
+    "expected": {
+      "dem_share": 0.46,
+      "rep_share": 0.43,
+      "sample_size": 1034.0
+    },
+    "reported_n_basis": "estimate",
+    "estimate_basis": "includes_leaners",
+    "survey_n": null,
+    "estimate_n": 1034,
+    "basis_review_status": "source_basis_verified",
+    "evidence": "HIGH_ERROR_CASE_AUDIT.md; reports/source_audit/high_error_queue/poll_spot_checks.json",
+    "notes": "Siena Q6 includes already voted and leaners; total LV sample1034; parent recruitment N not asserted."
+  },
+  {
+    "source": "538",
+    "dataset": "senate",
+    "cycle": "2014",
+    "geography": "TX",
+    "source_poll_id": "33824",
+    "source_question_id": "137740",
+    "expected": {
+      "dem_share": 0.31,
+      "rep_share": 0.57,
+      "sample_size": 866.0
+    },
+    "reported_n_basis": "estimate",
+    "estimate_basis": "forced_choice_followup",
+    "survey_n": 1200,
+    "estimate_n": 866,
+    "basis_review_status": "source_basis_verified",
+    "evidence": "HIGH_ERROR_CASE_AUDIT.md; reports/source_audit/high_error_queue/poll_spot_checks.json",
+    "notes": "UT/TT Q14 LV includes follow-up choice for initially undecided; 1200 RV parent,866 LV base."
+  },
+  {
+    "source": "538_archive",
+    "dataset": "senate",
+    "cycle": "2022",
+    "geography": "PA",
+    "source_poll_id": "81589",
+    "source_question_id": "165137",
+    "expected": {
+      "dem_share": 0.49,
+      "rep_share": 0.48,
+      "sample_size": 450.0
+    },
+    "reported_n_basis": "survey",
+    "estimate_basis": "decided",
+    "survey_n": 450,
+    "estimate_n": 427,
+    "basis_review_status": "source_basis_verified",
+    "evidence": "HIGH_ERROR_CASE_AUDIT.md; reports/source_audit/high_error_queue/poll_spot_checks.json",
+    "notes": "ResearchCo decided shares49/48 with surveyN450; stated decided base427."
+  },
+  {
+    "source": "538",
+    "dataset": "generic_ballot",
+    "cycle": "1998",
+    "geography": "US",
+    "source_poll_id": "66189",
+    "source_question_id": "33533",
+    "expected": {
+      "dem_share": 0.46,
+      "rep_share": 0.44,
+      "sample_size": 743.0
+    },
+    "reported_n_basis": "estimate",
+    "estimate_basis": "includes_leaners",
+    "survey_n": null,
+    "estimate_n": 743,
+    "basis_review_status": "source_basis_verified",
+    "evidence": "HIGH_ERROR_CASE_AUDIT.md; reports/source_audit/high_error_queue/poll_spot_checks.json",
+    "notes": "Pew final LV estimate46/44; parent1714 RV, full adult recruitment size not inferred."
+  },
+  {
+    "source": "538",
+    "dataset": "generic_ballot",
+    "cycle": "2002",
+    "geography": "US",
+    "source_poll_id": "66192",
+    "source_question_id": "33249",
+    "expected": {
+      "dem_share": 0.46,
+      "rep_share": 0.44,
+      "sample_size": 1035.0
+    },
+    "reported_n_basis": "estimate",
+    "estimate_basis": "unknown",
+    "survey_n": null,
+    "estimate_n": 1035,
+    "basis_review_status": "source_basis_verified",
+    "evidence": "HIGH_ERROR_CASE_AUDIT.md; reports/source_audit/high_error_queue/poll_spot_checks.json",
+    "notes": "Pew final LV46/44 with1035 LV; publicationalso1610 RV. Full recruitment N not inferred. Exact leaner routing not established; estimate basis remains unknown."
+  },
+  {
+    "source": "538_archive",
+    "dataset": "generic_ballot",
+    "cycle": "2020",
+    "geography": "US",
+    "source_poll_id": "72714",
+    "source_question_id": "136473",
+    "expected": {
+      "dem_share": 0.52,
+      "rep_share": 0.42,
+      "sample_size": 1363.0
+    },
+    "reported_n_basis": "population",
+    "estimate_basis": "full_sample",
+    "survey_n": 1500,
+    "estimate_n": 1362,
+    "basis_review_status": "source_basis_verified",
+    "evidence": "HIGH_ERROR_CASE_AUDIT.md; reports/source_audit/high_error_queue/poll_spot_checks.json",
+    "notes": "YouGov Q31 LVshares52/42; archive populationN1363 vsquestion1362, one respondent difference."
+  }
+]

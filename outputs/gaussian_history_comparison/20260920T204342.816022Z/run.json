@@ -1,0 +1,15 @@
+{
+  "kind": "paired_historical_gaussian_comparison",
+  "older": "both (Gaussian architecture underlying Student helper)",
+  "newer": "repaired_both__selected",
+  "source_hashes": {
+    "assets/student/base_predictions.parquet": "3e27e32a0183dcc1e797f929d29edc28ef0431da8072a6a8ed61d130565653f2",
+    "assets/main/predictions.parquet": "e168daabc2efeccb4db025386f8ed78ea4e4ab9a7d7f49e37716352a4e027d86"
+  },
+  "tests": "identical contest keys, labels, polling means and firm masses; metrics recomputed from Gaussian mean/SD",
+  "margin_units": "D-minus-R percentage points",
+  "mae_aggregation": "equal weight per cycle",
+  "accuracy_aggregation": "pooled contests",
+  "coverage_aggregation": "pooled contests",
+  "held_out": "chronological historical folds; architectures explored repeatedly, not untouched final test set"
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "main": "repaired_both__selected",
+  "main_label": "Gaussian: repaired state priors + national features + signed state factor",
+  "nonbayesian": "bias",
+  "fat_tail": "both__t5v1",
+  "fat_tail_note": "Research Student-t helper; original priors and common national factor, no signed factor. Not a Student version of the final main architecture.",
+  "blend_weights": [
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.7
+  ],
+  "blend_rule": "mean translation, Bayesian covariance unchanged",
+  "default_blend_weight": null,
+  "data_as_of": "2026-09-17",
+  "year": 2026,
+  "designation": "User-authorized standalone main; research registry left unchanged",
+  "matched_fat_tail_experiment": "final_gaussian_matched_componentwise_t5",
+  "matched_fat_tail_status": "Research comparison; all final Gaussian calibration held fixed",
+  "older_gaussian": "both",
+  "reference_not_universally_best": true,
+  "ensemble_config": "config/ensemble_v1.json",
+  "validation": "Rolling-origin fits/tuning; architecture selection reused evaluation years; no untouched final holdout"
+}

@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-20",
+  "tests_passed": 31,
+  "notebooks_passed": 10,
+  "legacy_data_reads_blocked": true,
+  "clean_copy_audit": true,
+  "clean_copy_offline_forecast": true,
+  "all_python_modules_compile": true,
+  "live_core_forecast_max_difference": 0.0,
+  "compact_bytes": 25137162,
+  "model_asset_bytes": 6890835,
+  "git_eligible_bytes": 96257714,
+  "largest_git_file_bytes": 8873197,
+  "live_run": "outputs/live/20260921T034858.755021Z",
+  "html_report": "outputs/live_reports/20260921T035014.722114Z/report.html",
+  "stale_sources": [
+    "fred"
+  ],
+  "raw_files_deleted": false,
+  "active_model_changed": false
+}

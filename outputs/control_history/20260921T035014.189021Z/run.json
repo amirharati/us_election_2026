@@ -1,0 +1,120 @@
+{
+  "kind": "control_history",
+  "as_of": "2026-09-20",
+  "live_run": "outputs/live/20260921T034858.755021Z",
+  "start": "2026-01-01",
+  "every_days": 30,
+  "last_days": 3,
+  "feature_mode": "dated",
+  "models": [
+    "Bayesian",
+    "Corrected 10%",
+    "Corrected 20%",
+    "Corrected 40%",
+    "Corrected 50%",
+    "Non-Bayesian corrected",
+    "Older Gaussian",
+    "Student-t research helper",
+    "Matched Student-t (df5)",
+    "Four-model mixture",
+    "Mixture + polling 5%",
+    "Mixture + polling 10%",
+    "Mixture + polling 20%",
+    "Mixture + polling 30%",
+    "Mixture + polling 40%",
+    "Mixture + polling 50%"
+  ],
+  "source_manifest_sha256": "a117c101c51fc99a227768cac033ae1b4feddffade40f257a8fff254ea235205",
+  "model_hash": "df593f463ff991fb2b10912a6a9c9ba17b367614266caf5b444c145a2925028b",
+  "cutoff_sources": [
+    {
+      "cutoff": "2026-01-01",
+      "run": "outputs/cutoff_forecasts/20260921T034907.497321Z",
+      "manifest_sha256": "497705854a4fc224fac5582d65cdf4c81c0c4e1d5fdec9f544908c70e70c5158",
+      "status": "computed",
+      "input_fingerprint": "4e52d508667c262731ec889af7f669ecf141c9a2151f794d5196444e53cb87e4"
+    },
+    {
+      "cutoff": "2026-01-31",
+      "run": "outputs/cutoff_forecasts/20260921T034913.801014Z",
+      "manifest_sha256": "aeabde012a9219f8d91cf92ccba01d8e7a0313a9ba2a7908289fb2d979173411",
+      "status": "computed",
+      "input_fingerprint": "480ddbd2f1e1f5051fddd29b0acfa21a10d4e859fa16064a5e6bce9b5921dbad"
+    },
+    {
+      "cutoff": "2026-03-02",
+      "run": "outputs/cutoff_forecasts/20260921T034920.587626Z",
+      "manifest_sha256": "b810562bf06628b8c403e8f5ebdec8257fefd1d444982a0b7db7b4801c993294",
+      "status": "computed",
+      "input_fingerprint": "ede92e28ebb0a2bec8ff969702dd47191457be67e739e9d3992b226c96b6f5ef"
+    },
+    {
+      "cutoff": "2026-04-01",
+      "run": "outputs/cutoff_forecasts/20260921T034926.138032Z",
+      "manifest_sha256": "7852e031833b57b10144ff2b33ccbf019df55ca794f5c606a6f475cbdc56aca0",
+      "status": "computed",
+      "input_fingerprint": "5dc9b92e9d5eec7dff149b55f4bb40f48bd5ca6e203ec518eed788b0ae7a7c6c"
+    },
+    {
+      "cutoff": "2026-05-01",
+      "run": "outputs/cutoff_forecasts/20260921T034932.238887Z",
+      "manifest_sha256": "da01669befd08ee5b7fcb6d84fc550692346a29cc683c06ffdb45c74128acc2c",
+      "status": "computed",
+      "input_fingerprint": "a8c4809516015088c0050ce308e48b360a8afc3bcf51151b9a8cdaf156e3df9d"
+    },
+    {
+      "cutoff": "2026-05-31",
+      "run": "outputs/cutoff_forecasts/20260921T034938.828798Z",
+      "manifest_sha256": "6d5e4895f0028b2232ef66b7bd23216729e111970242aedbe820c8862fd42f71",
+      "status": "computed",
+      "input_fingerprint": "b2b11e23df913432d00f82991bd886941b330ce3e57159f1b2d2325328af69c0"
+    },
+    {
+      "cutoff": "2026-06-30",
+      "run": "outputs/cutoff_forecasts/20260921T034944.849350Z",
+      "manifest_sha256": "03257e1e6686a7a400c1fa0e741581acff65c68c0a11fbe3af14bca2ba5cb671",
+      "status": "computed",
+      "input_fingerprint": "13f6fd147df2fecd7777850eaf220b17e6be1eb23154639426497a7e841444a3"
+    },
+    {
+      "cutoff": "2026-07-30",
+      "run": "outputs/cutoff_forecasts/20260921T034950.742251Z",
+      "manifest_sha256": "f3fc0648d5c773746bfb1bd0d906924e375dd0f85cf32e83ebc99087d4268626",
+      "status": "computed",
+      "input_fingerprint": "83360b680e976b803eeb806be47937920b4532387ceaed4e5425647fce2e8797"
+    },
+    {
+      "cutoff": "2026-08-29",
+      "run": "outputs/cutoff_forecasts/20260921T034957.017518Z",
+      "manifest_sha256": "cba9b0e9f0009efad4c1b02c8634718e3b3c7364dfdf02d16580652d04fcf2b5",
+      "status": "computed",
+      "input_fingerprint": "fcab642fdb6e0f23d1023d42cdad54412a766e49b80004580c34cc149377fdf8"
+    },
+    {
+      "cutoff": "2026-09-18",
+      "run": "outputs/cutoff_forecasts/20260921T035003.031720Z",
+      "manifest_sha256": "3d691b1930cda9821936f19a6bb934b29d67048e3c670b013bff0f64f812b63d",
+      "status": "computed",
+      "input_fingerprint": "be458030957cd29ae79d0016247d83119763f1d79665f6722dc5f824b85c10da"
+    },
+    {
+      "cutoff": "2026-09-19",
+      "run": "outputs/cutoff_forecasts/20260921T035010.064438Z",
+      "manifest_sha256": "cc2b22324e67b555fed743fd322704702d1adb63da5cc8d67d2c08954b3cb930",
+      "status": "computed",
+      "input_fingerprint": "8735b3927c31fcb312f90d607541bc9d7c64cda957289c5cb682952fe13ea1e0"
+    },
+    {
+      "cutoff": "2026-09-20",
+      "run": "outputs/live/20260921T034858.755021Z",
+      "manifest_sha256": "a117c101c51fc99a227768cac033ae1b4feddffade40f257a8fff254ea235205",
+      "status": "current_live_run",
+      "input_fingerprint": null
+    }
+  ],
+  "trained_through": 2024,
+  "interpretation": "Retrospective fixed-model, current-roster replay; not archived issued forecasts.",
+  "availability": "Poll field-end and known release cutoffs; unknown releases use field end. Dated features use latest-revised reference periods, not publication vintages.",
+  "horizon": "September-calibrated checkpoints reused from January onward; early-year probabilities are exploratory.",
+  "control_rule": "D>=51; R<=50 D seats, including GOP VP tie-break; caucusing independents grouped with their bloc."
+}

@@ -1,0 +1,12 @@
+{
+  "notebooks/01_models_and_results.ipynb": "35278ab3994e555da61b6f7c0ec9ee8b7a66a2a2d1925152f6d38f9fd5f1682b",
+  "notebooks/02_blend_weights.ipynb": "e0b8f18342bfdac64e48091b20f3f0bb3d759684625164c8e9fd1b763c153193",
+  "notebooks/03_training_and_assumptions.ipynb": "9ce0059440500d7e3088affb5a82a2cabb7fd99acf8bc91803a0cceeb0025edc",
+  "notebooks/04_live_forecast.ipynb": "f973a7e8d270acb9aa01f1e99876c367042e643d081a65a71be769605fa26943",
+  "notebooks/05_wave_and_poll_error_scenarios.ipynb": "36f1f5d982031fc7a1f24c6065d63be83d5f1fec63cb2110be0f9945406ed6b3",
+  "notebooks/06_matched_student_comparison.ipynb": "a976533ecf2bbbed545b22508a5dd88149a66b9db870ab432c5de0c6236d9628",
+  "notebooks/07_older_model_alternatives.ipynb": "b96e8539d9e3cd63e70462a26c1f6c2742bb2add52febb93c0253706d1d5936e",
+  "notebooks/08_all_model_mixture.ipynb": "1a52775ce1732d57980dcac1d77a3482d3f8829b6bf63b44e3266bc9957a457d",
+  "notebooks/09_poll_weight_experiments.ipynb": "1fd12a2599a27688aab6c7ebc7b8a4d7ceddfa1b8c4fe4f2dfb32dfac4c9fed7",
+  "notebooks/10_model_disagreements.ipynb": "8e00c5684db334f0653be41a89e83db353222cfefbfcb4053bde2de2c8304af4"
+}

@@ -1,0 +1,36 @@
+# Local environments, Python/Jupyter caches, and editor/OS scratch files.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.nbc
+*.nbi
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+*.swp
+*.swo
+*.tmp
+
+# Local source checks, preparation pointers, inference caches, and logs.
+/cache/
+/data/final_work/
+/data/**/latest.json
+
+# Intermediate runs; keep complete report/result runs and their manifests.
+# In particular, DO NOT blanket-ignore outputs/, *.parquet, or *.npz.
+/outputs/cutoff_forecasts/
+/outputs/refresh/
+
+# Raw archives and legacy preparation trees are optional local ingestion/audit data.
+# The self-contained compact historical/current model inputs are ordinary Git files.
+/data/*
+!/data/compact/
+/data/compact/*
+!/data/compact/frozen/
+!/data/compact/current/
+
+# Notebook execution logs and local reproducibility scratch.
+/outputs/notebook_execution/*.log

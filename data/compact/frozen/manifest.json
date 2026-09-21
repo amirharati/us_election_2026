@@ -1,0 +1,70 @@
+{
+  "files": {
+    "feature_monthly.parquet": {
+      "bytes": 3124823,
+      "sha256": "d088506987693e5c2c29e45348de5ab0f784cd2716fc4169ee742b287063bdb4"
+    },
+    "feature_records.parquet": {
+      "bytes": 5932454,
+      "sha256": "3741b3af1a2c0cf200ac944d108813269c2647fdd1341d79fe1502bb717e37c4"
+    },
+    "policy.json": {
+      "bytes": 1648,
+      "sha256": "6a4a89c0e3ed7204767c2f7278246d71f44a476b22e443a335dd51938223e776"
+    },
+    "political.json": {
+      "bytes": 2731,
+      "sha256": "a118484a6cb440c4b767835490f5082bdbe4a711a1e23dd6c30a3f55a71bbdf9"
+    },
+    "provenance.json": {
+      "bytes": 746,
+      "sha256": "c5bacd0d46908a906708f11e2f39f4be5e0e73e955b6c6a4aa5bee518eb16db9"
+    },
+    "summary.json": {
+      "bytes": 1637,
+      "sha256": "f101a651dc0639960656810e8ac38ba715f01b5f4ca5ca064e3dcd1ed690f359"
+    },
+    "tables/answers.parquet": {
+      "bytes": 392567,
+      "sha256": "4cb92a874545c40e74ec1f1743aea38d044bcba09cf0edce374e391cfd99c338"
+    },
+    "tables/contest_inputs_reference.parquet": {
+      "bytes": 57036,
+      "sha256": "088b309743ac976c68b5a4aae46a45126b9e7581494bdbb58d6092ac5629f254"
+    },
+    "tables/current_contests.parquet": {
+      "bytes": 13347,
+      "sha256": "69f3b787dc7bade041b2c3747de005860637ba5e735f401fc153a2ec96a336d1"
+    },
+    "tables/labels.parquet": {
+      "bytes": 47615,
+      "sha256": "eb16fa45774aa2335a0c9c926b9a953ccd8420080850d4a7f88b2492fa1c86a3"
+    },
+    "tables/poll_availability.parquet": {
+      "bytes": 185832,
+      "sha256": "a3c6582199bed4cf8d96f0ad3c92f91e8eecde9196261854f8a3cabac37bd3f0"
+    },
+    "tables/poll_identity.parquet": {
+      "bytes": 395537,
+      "sha256": "f0fed570175c048b3b0c0f50156305e5e3d66e7a333a5af51d890b71b4b29015"
+    },
+    "tables/poll_metadata.parquet": {
+      "bytes": 415362,
+      "sha256": "a594b3c9637d3e7183715df4ce9ebbf56466c3e79a154a9a1933f8b2edb025b3"
+    },
+    "tables/poll_quality.parquet": {
+      "bytes": 195025,
+      "sha256": "3204c0af4da4041c4c8c8d0270d29a68273ce7dfe81bac12a60a8d517d147c38"
+    },
+    "tables/polls.parquet": {
+      "bytes": 1527718,
+      "sha256": "55ec2717ceba29efd601bf011240aaa92934fa4e5339a706d22ce31406b31e46"
+    },
+    "tables/seat_ledger.parquet": {
+      "bytes": 10606,
+      "sha256": "c035b58e784faef9b5dc44ee371251640fddf05baa8575a2cb82e8e45d6d09d5"
+    }
+  },
+  "kind": "compact_model_inputs",
+  "schema_version": 1
+}

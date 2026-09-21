@@ -1,0 +1,245 @@
+Senate Facts - U.S. Senate Daily Press (https://www.dailypress.senate.gov/on-the-floor/senate-facts/)
+citeturn162view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.dailypress.senate.gov/on-the-floor/senate-facts/","lineno":38}); Total lines: 417
+L0: next vote: 11:45 AM Thursday
+L1: 
+L2:   * cite0†On the Floor L3:     * cite0†On the Floor L4:     * cite1†Senate Facts L5:   * cite2†About L6:     * cite2†About Us L7:     * cite3†Gallery History L8:     * cite4†Standing Committee of Correspondents L9:   * cite5†Membership L10:     * cite5†Membership L11:     * cite6†Governing Rules L12:     * cite7†List of Members L13:   * cite8†Contacts L14:     * cite8†Contact Us L15:     * cite9†Senator Press Contacts L16:     * cite10†Committee Press Contacts L17:   * cite0†On the Floor L18:     * cite0†On the Floor L19:     * cite1†Senate Facts L20:   * cite2†About L21:     * cite2†About Us L22:     * cite3†Gallery History L23:     * cite4†Standing Committee of Correspondents L24:   * cite5†Membership L25:     * cite5†Membership L26:     * cite6†Governing Rules L27:     * cite7†List of Members L28:   * cite8†Contacts L29:     * cite8†Contact Us L30:     * cite9†Senator Press Contacts L31:     * cite10†Committee Press Contacts L32: 
+L33: Search [Input: Search...]
+L34: # Senate Facts
+L35: 
+L36: # Senate Facts
+L37: 
+L38: 119th Congress: Senate Party Lineup
+L39: 
+L40: Class II - Senators Whose Terms of Service Expire in January 2027
+L41: 
+L42: Senate Order of Service
+L43: 
+L44: 119th Congress: Senate Party Lineup
+L45: 
+L46: ### As of July 14, 2026:
+L47: 
+L48: Democrat: 45
+L49: 
+L50: Independent: 2 (For organizational purposes, Senators King and Sanders caucus with the Democrats)
+L51: 
+L52: Republican: 53
+L53: 
+L54: Class II - Senators Whose Terms of Service Expire in January 2027
+L55: ### Democrats (13)
+L56:   * Cory Booker (New Jersey)
+L57:   * Chris Coons (Delaware)
+L58:   * Dick Durbin (Illinois) Has announced his retirement at the end of his term.
+L59:   * John Hickenlooper (Colorado)
+L60:   * Ben Ray Lujan (New Mexico)
+L61:   * Ed Markey (Massachusetts)
+L62:   * Jeff Merkley (Oregon)
+L63:   * Jon Ossoff (Georgia)
+L64:   * Gary Peters (Michigan) Has announced his retirement at the end of his term.
+L65:   * Jack Reed Rhode Island)
+L66:   * Jeanne Shaheen (New Hampshire) Has announced her retirement at the end of her term.
+L67:   * Tina Smith (Minnesota) Has announced her retirement at the end of her term.
+L68:   * Mark Warner (Virginia)
+L69: ### Republicans (22)
+L70:   * Alan Armstrong (Oklahoma)
+L71:   * Shelly Moore Capito (West Virginia)
+L72:   * Bill Cassidy (Louisiana) Lost in primary.
+L73:   * Susan Collins (Maine)
+L74:   * John Cornyn (Texas) Lost in primary.
+L75:   * Tom Cotton (Arkansas)
+L76:   * Steve Daines (Montana) Has announced his retirement at the end of his term.
+L77:   * Joni Ernst (Iowa) Has announced her retirement at the end of her term.
+L78:   * Darline Graham (South Carolina)
+L79:   * Bill Hagerty (Tennessee)
+L80:   * Jon Husted (Ohio)
+L81:   * Cindy Hyde Smith (Mississippi)
+L82:   * Cynthia Lummis (Wyoming) Has announced her retirement at the end of her term.
+L83:   * Roger Marshall (Kansas)
+L84:   * Mitch McConnell (Kentucky) Has announced his retirement at the end of his term.
+L85:   * Ashley Moody (Florida)
+L86:   * Pete Ricketts (Nebraska)
+L87:   * Jim Risch (Idaho)
+L88:   * Mike Rounds (South Dakota)
+L89:   * Dan Sullivan (Alaska)
+L90:   * Thom Tillis (North Carolina) Has announced his retirement at the end of his term.
+L91:   * Tommy Tuberville (Alabama) Has announced his retirement at the end of his term.
+L92: Senate Order of Service
+L93: 
+L94: This list reflects the order in which United States Senators began their service. This is different
+L95: from seniority lists, which are maintained by the party caucuses (for the purposes of committee
+L96: assignments) and by the Senate Committee on Rules and Administration (for the purpose of
+L97: office space assignment). Members who began service on the same day are listed alphabetically.
+L98: 
+L99: cite11†Source†www.senate.gov L100: 
+L101: Charles Grassley, R-Iowa, January 3, 1981
+L102: Mitch McConnell, R-Kentucky, January 3, 1985
+L103: 
+L104: Patty Murray, D-Washington, January 3, 1993
+L105: 
+L106: Ron Wyden, D-Oregon, February 6, 1996
+L107: 
+L108: Susan Collins, R-Maine, January 3, 1997
+L109: Richard Durbin, D-Illinois, January 3, 1997
+L110: Jack Reed, D-Rhode Island, January 3,1997
+L111: 
+L112: Michael Crapo, R-Idaho, January 3, 1999
+L113: Chuck Schumer, D-New York, January 3, 1999
+L114: 
+L115: Maria Cantwell, D-Washington, January 3, 2001
+L116: 
+L117: John Cornyn, R-Texas, January 7, 2003
+L118: Lisa Murkowski, R-Alaska, January 7, 2003
+L119: John Thune, R-South Dakota, January 3, 2005
+L120: 
+L121: Amy Klobuchar, D-Minnesota, January 3, 2007
+L122: Bernie Sanders, I-Vermont, January 3, 2007
+L123: Sheldon Whitehouse, D-Rhode Island, January 3, 2007
+L124: 
+L125: John A. Barrasso, R-Wyoming, June 22, 2007
+L126: 
+L127: Roger Wicker, R-Mississippi, December 31, 2007
+L128: 
+L129: Jeff Merkley, D-Oregon, January 3, 2009
+L130: Jim Risch, R-Idaho, January 3, 2009
+L131: Jeanne Shaheen, D-New Hampshire, January 3, 2009
+L132: Mark Warner, D-Virginia, January 3, 2009
+L133: 
+L134: Michael Bennet, D-Colorado, January 22, 2009
+L135: Kirsten Gillibrand, D-New York, January 27, 2009
+L136: 
+L137: Chris Coons, D-Delaware, November 15, 2010
+L138: 
+L139: Richard Blumenthal, D-Connecticut, January 3, 2011
+L140: John Boozman, R-Arkansas, January 3, 2011
+L141: John Hoeven, R-North Dakota, January 3, 2011
+L142: Ron Johnson, R-Wisconsin, January 3, 2011
+L143: Mike Lee, R-Utah, January 3, 2011
+L144: Jerry Moran, R-Kansas, January 3, 2011
+L145: Rand Paul, R-Kentucky, January 3, 2011
+L146: 
+L147: Brian Schatz, D-Hawaii, December 27, 2012
+L148: Tammy Baldwin, D-Wisconsin, January 3, 2013
+L149: Ted Cruz, R-Texas, January 3, 2013
+L150: Deb Fischer, R-Nebraska, January 3, 2013
+L151: Martin Heinrich, D-New Mexico, January 3, 2013
+L152: Mazie Hirono, D-Hawaii, January 3, 2013
+L153: Tim Kaine, D-Virginia, January 3, 2013
+L154: Angus King, I-Maine, January 3, 2013
+L155: Chris Murphy, D-Connecticut, January 3, 2013
+L156: Tim Scott, R-South Carolina, January 3, 2013
+L157: Elizabeth Warren, D-Massachusetts, January 3, 2013
+L158: 
+L159: Edward Markey, D-Massachusetts, July 16, 2013
+L160: Cory Booker, D-New Jersey, October 31, 2013
+L161: 
+L162: Shelley Moore Capito, R-West Virginia, January 3, 2015
+L163: Bill Cassidy, R-Louisiana, January 3, 2015
+L164: Tom Cotton, R-Arkansas, January 3, 2015
+L165: Steve Daines, R-Montana, January 3, 2015
+L166: Joni Ernst, R-Iowa, January 3, 2015
+L167: James Lankford, R-Oklahoma, January 3, 2015
+L168: Gary Peters, D-Michigan, January 3, 2015
+L169: Mike Rounds, R-South Dakota, January 3, 2015
+L170: Dan Sullivan, R-Alaska, January 3, 2015
+L171: Thom Tillis, R-North Carolina, January 3, 2015
+L172: Catherine Cortez-Masto, D-Nevada, January 3, 2017
+L173: Tammy Duckworth, D-Illinois, January 3, 2017
+L174: Maggie Hassan, D-New Hampshire, January 3, 2017
+L175: John Kennedy, R-Louisiana, January 3, 2017
+L176: Chris Van Hollen, D-Maryland, January 3, 2017
+L177: Todd Young, R-Indiana, January 3, 2017
+L178: 
+L179: Tina Smith, D-Minnesota, January 3, 2018
+L180: 
+L181: Cindy Hyde Smith, R-Mississippi, April 9, 2018
+L182: Marsha Blackburn, R-Tennessee, January 3, 2019
+L183: Kevin Cramer, R-North Dakota, January 3, 2019
+L184: Josh Hawley, R-Missouri, January 3, 2019
+L185: Jacky Rosen, D-Nevada, January 3, 2019
+L186: 
+L187: Rick Scott, R-Florida, January 8, 2019
+L188: 
+L189: Mark Kelly, D-Arizona, December 2, 2020
+L190: Bill Hagerty, R-Tennessee, January 3, 2021
+L191: John Hickenlooper, D-Colorado, January 3, 2021
+L192: Ben Ray Lujan, D-New Mexico, January 3, 2021
+L193: Cynthia Lummis, R-Wyoming, January 3, 2021
+L194: Roger Marshall, R-Kansas, January 3, 2021
+L195: Tommy Tuberville, R-Alabama, January 3, 2021
+L196: 
+L197: Alex Padilla, D-California, January 20, 2021
+L198: Jon Ossoff, D-Georgia, January 20, 2021
+L199: Raphael Warnock D-Georgia, January 20, 2021
+L200: Katie Britt, R-Alabama, January 3, 2023
+L201: Ted Budd, R-North Carolina, January 3, 2023
+L202: John Fetterman, D- Pennsylvania, January 3, 2023
+L203: Eric Schmitt, R-Missouri, January 3, 2023
+L204: Peter Welch D-Vermont, January 3, 2023
+L205: 
+L206: Pete Ricketts, R-Nebraska, January 23, 2023
+L207: 
+L208: Andy Kim, D-New Jersey, December 9, 2024
+L209: Adam Schiff, D-California, December 9, 2024
+L210: Angela Alsobrooks, D-Maryland, January 3, 2025
+L211: Jim Banks, R-Indiana, January 3, 2025
+L212: Lisa Blunt Rochester, D-Delaware, January 3, 2025
+L213: John Curtis, R-Utah, January 3, 2025
+L214: Ruben Gallego, D-Arizona January 3, 2025
+L215: David McCormick, R-Pennsylvania, January 3, 2025
+L216: Bernie Moreno, R-Ohio, January 3, 2025
+L217: Tim Sheehy, R-Montana, January 3, 2025
+L218: Elissa Slotkin, D-Michigan, January 3, 2025
+L219: 
+L220: Jim Justice, R-West Virginia, January 14, 2025
+L221: Jon Husted, R-Ohio, January 21, 2025
+L222: Ashley Moody, R-Florida, January 21, 2025
+L223: 
+L224: Alan Armstrong, R-Oklahoma, March 24, 2026
+L225: 
+L226: Darline Graham, R-South Carolina, July 14, 2026
+L227: 
+L228: 119th Congress: Senate Party Lineup
+L229: ### As of January 21, 2025:
+L230: 
+L231: Democrat: 45
+L232: 
+L233: Independent: 2 (For organizational purposes, Senators King and Sanders caucus with the Democrats)
+L234: 
+L235: Republican: 53
+L236: 
+L237: Senators up for Re-election in 2026
+L238: ### Democrats (13)
+L239:   * Cory Booker (New Jersey)
+L240:   * Chris Coons (Delaware)
+L241:   * Dick Durbin (Illinois) Has announced his retirement at the end of his term.
+L242:   * John Hickenlooper (Colorado)
+L243:   * Ben Ray Lujan (New Mexico)
+L244:   * Ed Markey (Massachusetts)
+L245:   * Jeff Merkley (Oregon)
+L246:   * Jon Ossoff (Georgia)
+L247:   * Gary Peters (Michigan) Has announced his retirement at the end of his term.
+L248:   * Jack Reed (Rhode Island)
+L249:   * Jean Shaheen (New Hampshire) Has announced his retirement at the end of his term.
+L250:   * Tina Smith (Minnesota) Has announced his retirement at the end of his term.
+L251:   * Mark Warner (Virginia)
+L252: ### Republicans (20)
+L253:   * Shelly Moore Capito (West Virginia)
+L254:   * Bill Cassidy (Louisiana) Lost in primary.
+L255:   * Susan Collins (Maine)
+L256:   * John Cornyn (Texas) Lost in primary.
+L257:   * Tom Cotton (Arkansas)
+L258:   * Steve Daines (Montana) Has announced his retirement at the end of his term.
+L259:   * Joni Ernst (Iowa) Has announced her retirement at the end of her term.
+L260:   * Darline Graham (South Carolina)
+L261:   * Bill Hagerty (Tennessee)
+L262:   * Cindy Hyde Smith (Mississippi)
+L263:   * Cynthia Lummis (Wyoming) Has announced her retirement at the end of her term.
+L264:   * Roger Marshall (Kansas)
+L265:   * Mitch McConnell (Kentucky) Has announced his retirement at the end of his term.
+L266:   * (Oklahoma seat currently held by Senator Armstrong)
+--------------------------------------------------------------------------------
+Election Information - Division of Elections (https://www.elections.alaska.gov/election-information/)
+citeturn162view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.elections.alaska.gov/election-information/","lineno":null}); Total lines: 313
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn162view2 [wordlim: 200] Source: open({"ref_id":"https://sos.ga.gov/2026-elections-calendar","lineno":null}); Total lines: 1
+

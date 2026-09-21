@@ -1,0 +1,9 @@
+{
+  "predictions.parquet": "e46a827a8db28f56ffdcecd9db18d07bcf59125783c60e167897c54414074339",
+  "report.html": "88036b1d4315d37a533b526040269b5e58a7ccef3e2215438aa1264cce18a55f",
+  "run.json": "c4a6ac5cc90e3b53631571d21c803c315599f9486020aa40bb5a5f86b85d7e50",
+  "seats.parquet": "17c50674dbee2d9c88875152f02e9fe6e6061e55a0453b119f0711ea1527933e",
+  "watchlist_broad.parquet": "19b3063e7364c4cdcb2ead3aeab54d4810da99a694c41b7cd6adec54be656f6b",
+  "watchlist_recent.parquet": "396c4ac07ec6c38795e20a4cd3db347509e915f8013fbc361012b2282efc8644",
+  "watchlist_summary.parquet": "4b1f2b5bd666bb9b2b8e1d23349305dcc17c0fd79831f623db730359ef07957a"
+}

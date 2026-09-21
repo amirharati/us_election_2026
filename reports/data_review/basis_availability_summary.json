@@ -1,0 +1,29 @@
+{
+  "version": "basis-availability-v1",
+  "observations": 15802,
+  "basis_reviewed": 37,
+  "timing_reviewed": 11,
+  "researchco_versions": 22,
+  "researchco_questions": 11,
+  "reported_n_unchanged": true,
+  "availability": {
+    "not_reviewed": 15791,
+    "found_release_after_cutoff": 4,
+    "exact_estimate_timing_unverified": 4,
+    "announced_after_cutoff": 1,
+    "documented_before_cutoff": 2
+  },
+  "provenance": {
+    "reviewed_snapshot": "20260917T020151.686202Z",
+    "reviewed_manifest_sha256": "95986e319b1c1da6c8b40bdbb4ae0b1c2fc88d5d17623f9e733f2414546beae9",
+    "files": {
+      "config/basis_availability_v1.json": "861406fc121767437fe36db33db90a6e2c8433754bd257a7f9c9afd189d73949",
+      "scripts/audit_basis_availability.py": "cadd76615fba668fcd52e42c1d439603c5afa31f215777071e561fd77292e79c",
+      "reports/source_audit/basis_availability/provenance.json": "5e8bf37f2eeea6d30bd4b17b5fb4a0fd86b47c725df3247bf387d035443d6dc2",
+      "reports/source_audit/basis_availability/web_review.json": "71472c33c49c5ac25c0b7b39af67ee831af03c297e1f799766bde81c8c7a04f4",
+      "config/estimate_basis_annotations.json": "344af428abe2fc85170a27963e583d9599058eb5952e5327b94c23d2b09950cf",
+      "reports/source_audit/national_2022_timing/audit_facts.json": "8c8bdbcbdea627b0d9caddf471ebdaaf005bd5bfbbc1c3fb941fc4c013acbf61",
+      "reports/source_audit/estimate_basis/audit_facts.json": "6e00605a5d717f24e9d1560110dd907a43a6ffd3de47cbc0640295dfd31a787a"
+    }
+  }
+}

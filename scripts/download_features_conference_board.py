@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+"""Download conference_board feature sources in historical or current mode."""
+import sys
+from feature_download import main
+
+if __name__ == "__main__":
+    sys.exit(main(source="conference_board"))

@@ -1,0 +1,1609 @@
+{
+  "artifacts": [
+    {
+      "id": "1a47269f8cddde4323127439",
+      "origins": [
+        {
+          "path": "data/features/bea/current_2026/snapshots/20260917T042448.755633Z/raw/A229RX0.csv",
+          "retrieved_at": "2026-09-17T04:24:48.600764+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=A229RX0"
+        },
+        {
+          "path": "data/features/bea/historical_2026/snapshots/20260917T042621.121597Z/raw/A229RX0.csv",
+          "retrieved_at": "2026-09-17T04:26:21.001054+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=A229RX0"
+        }
+      ],
+      "path": "data/features/bea/current_2026/snapshots/20260917T042448.755633Z/raw/A229RX0.csv",
+      "sha256": "4b778d70fa08a455d9bbb386b5deeb8881230653c508d3de0743a0a0e29ff9cb",
+      "source": "bea"
+    },
+    {
+      "id": "512ae45d9a6c5f0a23ffce9b",
+      "origins": [
+        {
+          "path": "data/features/bea/current_2026/snapshots/20260917T042448.755633Z/raw/GDPC1.csv",
+          "retrieved_at": "2026-09-17T04:24:48.669552+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GDPC1"
+        },
+        {
+          "path": "data/features/bea/historical_2026/snapshots/20260917T042621.121597Z/raw/GDPC1.csv",
+          "retrieved_at": "2026-09-17T04:26:21.057593+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GDPC1"
+        }
+      ],
+      "path": "data/features/bea/current_2026/snapshots/20260917T042448.755633Z/raw/GDPC1.csv",
+      "sha256": "519d65c05941022da119fdcbc95976d6865e94b9cc4a8248239e20d7b898e5fc",
+      "source": "bea"
+    },
+    {
+      "id": "80c7ff6a46ffb3c494e2584f",
+      "origins": [
+        {
+          "path": "data/features/bea/current_2026/snapshots/20260917T042448.755633Z/raw/PCEPI.csv",
+          "retrieved_at": "2026-09-17T04:24:48.745975+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPI"
+        },
+        {
+          "path": "data/features/bea/historical_2026/snapshots/20260917T042621.121597Z/raw/PCEPI.csv",
+          "retrieved_at": "2026-09-17T04:26:21.113724+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPI"
+        }
+      ],
+      "path": "data/features/bea/current_2026/snapshots/20260917T042448.755633Z/raw/PCEPI.csv",
+      "sha256": "02580549b5894c8d530e35a5ab9a23a15a64d94d6f37b8a077d23c3a66fafcb8",
+      "source": "bea"
+    },
+    {
+      "id": "1b62fcd74f449202e1d7c3a3",
+      "origins": [
+        {
+          "path": "data/features/bls/current_2026/snapshots/20260917T042447.548921Z/raw/CUSR0000SA0.csv",
+          "retrieved_at": "2026-09-17T04:24:47.009577+00:00",
+          "url": ""
+        }
+      ],
+      "path": "data/features/bls/current_2026/snapshots/20260917T042447.548921Z/raw/CUSR0000SA0.csv",
+      "sha256": "98de9ed1a6012d054193b4a7949b451e935fd021f86b8390b51fc56fe4ce4229",
+      "source": "bls"
+    },
+    {
+      "id": "f24677bbf432eba54eb10659",
+      "origins": [
+        {
+          "path": "data/features/bls/current_2026/snapshots/20260917T042447.548921Z/raw/CUSR0000SA0_2024_2026.json",
+          "retrieved_at": "2026-09-17T04:24:47.309580+00:00",
+          "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/CUSR0000SA0?startyear=2024&endyear=2026"
+        }
+      ],
+      "path": "data/features/bls/current_2026/snapshots/20260917T042447.548921Z/raw/CUSR0000SA0_2024_2026.json",
+      "sha256": "b82b4fbff030574cf4f8f9ade313e72ea50da1ddaf5852640960302083e5ad6a",
+      "source": "bls"
+    },
+    {
+      "id": "d0275008e281ddcf88ee5707",
+      "origins": [
+        {
+          "path": "data/features/bls/current_2026/snapshots/20260917T042447.548921Z/raw/LNS14000000.csv",
+          "retrieved_at": "2026-09-17T04:24:47.009577+00:00",
+          "url": ""
+        }
+      ],
+      "path": "data/features/bls/current_2026/snapshots/20260917T042447.548921Z/raw/LNS14000000.csv",
+      "sha256": "5d07bd017d908daadb9d41636daf869d69191451459440c59815c0bf1dac659d",
+      "source": "bls"
+    },
+    {
+      "id": "ba1218d63ae129e69a0d26ce",
+      "origins": [
+        {
+          "path": "data/features/bls/current_2026/snapshots/20260917T042447.548921Z/raw/LNS14000000_2024_2026.json",
+          "retrieved_at": "2026-09-17T04:24:47.546906+00:00",
+          "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/LNS14000000?startyear=2024&endyear=2026"
+        }
+      ],
+      "path": "data/features/bls/current_2026/snapshots/20260917T042447.548921Z/raw/LNS14000000_2024_2026.json",
+      "sha256": "8d64a898f1419c2918cf184646db854838b013b3874f5dba6e7840a6b8ee4e3e",
+      "source": "bls"
+    },
+    {
+      "id": "12467ca8ca78c1ef248681ca",
+      "origins": [
+        {
+          "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/CUSR0000SA0.csv",
+          "retrieved_at": "2026-09-17T04:24:17.998641+00:00",
+          "url": ""
+        }
+      ],
+      "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/CUSR0000SA0.csv",
+      "sha256": "da40625a8d23d200f97d07d19be7a3ac26438dce5f58350fafd41c664f6712c4",
+      "source": "bls"
+    },
+    {
+      "id": "83dcce2818762529761fb87d",
+      "origins": [
+        {
+          "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/CUSR0000SA0_1976_1985.json",
+          "retrieved_at": "2026-09-17T04:24:18.435418+00:00",
+          "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/CUSR0000SA0?startyear=1976&endyear=1985"
+        }
+      ],
+      "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/CUSR0000SA0_1976_1985.json",
+      "sha256": "f0ddd4417e204c62739358281d4dbb345c323a37ca8ed5fecd173767064917a5",
+      "source": "bls"
+    },
+    {
+      "id": "772821ca225568ee5b3d1035",
+      "origins": [
+        {
+          "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/CUSR0000SA0_1986_1995.json",
+          "retrieved_at": "2026-09-17T04:24:18.721057+00:00",
+          "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/CUSR0000SA0?startyear=1986&endyear=1995"
+        }
+      ],
+      "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/CUSR0000SA0_1986_1995.json",
+      "sha256": "dd076551451e37dec00e5a49ec65a63b46d5fe06e54e520027842c3ca0bfe82b",
+      "source": "bls"
+    },
+    {
+      "id": "a706802aac555cc60787bc39",
+      "origins": [
+        {
+          "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/CUSR0000SA0_1996_2005.json",
+          "retrieved_at": "2026-09-17T04:24:19.027297+00:00",
+          "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/CUSR0000SA0?startyear=1996&endyear=2005"
+        }
+      ],
+      "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/CUSR0000SA0_1996_2005.json",
+      "sha256": "94159a2d1c213045e15d4be48d96e3ae2a0865ed57e5c105d9edeeb767858399",
+      "source": "bls"
+    },
+    {
+      "id": "698b4032a9719ae6780abf6a",
+      "origins": [
+        {
+          "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/CUSR0000SA0_2006_2015.json",
+          "retrieved_at": "2026-09-17T04:24:19.240410+00:00",
+          "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/CUSR0000SA0?startyear=2006&endyear=2015"
+        }
+      ],
+      "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/CUSR0000SA0_2006_2015.json",
+      "sha256": "2c4b5eb9ca44e3403aef9839663f1d9b48650f95beeccec7ebafffa55a93f9c7",
+      "source": "bls"
+    },
+    {
+      "id": "1010057f4729874318bfae1b",
+      "origins": [
+        {
+          "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/CUSR0000SA0_2016_2025.json",
+          "retrieved_at": "2026-09-17T04:24:19.452800+00:00",
+          "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/CUSR0000SA0?startyear=2016&endyear=2025"
+        }
+      ],
+      "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/CUSR0000SA0_2016_2025.json",
+      "sha256": "7142dbfed1ba47f7792e9442bee38a2031a1894c8ee658d85f69e96192b2ec41",
+      "source": "bls"
+    },
+    {
+      "id": "b03a19789fddb4ec09947fab",
+      "origins": [
+        {
+          "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/LNS14000000.csv",
+          "retrieved_at": "2026-09-17T04:24:17.998641+00:00",
+          "url": ""
+        }
+      ],
+      "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/LNS14000000.csv",
+      "sha256": "2f01c61bc3b45e4e552b528eaa5917a74146c93b23c740e798524106bf6fa9ba",
+      "source": "bls"
+    },
+    {
+      "id": "7ca7915a844750456a3057d1",
+      "origins": [
+        {
+          "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/LNS14000000_1976_1985.json",
+          "retrieved_at": "2026-09-17T04:24:19.692693+00:00",
+          "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/LNS14000000?startyear=1976&endyear=1985"
+        }
+      ],
+      "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/LNS14000000_1976_1985.json",
+      "sha256": "c718466f5603ab3c7eb84fb04d19a2ef23c1dc7c46ee48b430f1517a80762387",
+      "source": "bls"
+    },
+    {
+      "id": "89fba0a75af533994ed032cd",
+      "origins": [
+        {
+          "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/LNS14000000_1986_1995.json",
+          "retrieved_at": "2026-09-17T04:24:19.947573+00:00",
+          "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/LNS14000000?startyear=1986&endyear=1995"
+        }
+      ],
+      "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/LNS14000000_1986_1995.json",
+      "sha256": "de39c599d07578ee2eb73993def00a53e6f22f8b0dcb8576113165269bd58c10",
+      "source": "bls"
+    },
+    {
+      "id": "3db151e0e659bdbfbfbe4300",
+      "origins": [
+        {
+          "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/LNS14000000_1996_2005.json",
+          "retrieved_at": "2026-09-17T04:24:20.159297+00:00",
+          "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/LNS14000000?startyear=1996&endyear=2005"
+        }
+      ],
+      "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/LNS14000000_1996_2005.json",
+      "sha256": "1b291a133b8cf027d75e32b1ea5b839524220cef06282d0769f942f7d2d8b942",
+      "source": "bls"
+    },
+    {
+      "id": "b0f85044199d04de2456a776",
+      "origins": [
+        {
+          "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/LNS14000000_2006_2015.json",
+          "retrieved_at": "2026-09-17T04:24:20.367327+00:00",
+          "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/LNS14000000?startyear=2006&endyear=2015"
+        }
+      ],
+      "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/LNS14000000_2006_2015.json",
+      "sha256": "85242b33a3cf8df7f2bee3dc0bb200a333bd8eab8abd3c88075511942522cfd2",
+      "source": "bls"
+    },
+    {
+      "id": "90c2504ffd25ef27601e7448",
+      "origins": [
+        {
+          "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/LNS14000000_2016_2025.json",
+          "retrieved_at": "2026-09-17T04:24:20.606498+00:00",
+          "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/LNS14000000?startyear=2016&endyear=2025"
+        }
+      ],
+      "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z/raw/LNS14000000_2016_2025.json",
+      "sha256": "d45cfb9c088078a1322c789de34fa69a73659b34018e9eca59b390ef3ecdc924",
+      "source": "bls"
+    },
+    {
+      "id": "8a10b6d05a095c4303b08a14",
+      "origins": [
+        {
+          "path": "data/features/cboe/current_2026/snapshots/20260917T043202.438493Z/raw/vix.csv",
+          "retrieved_at": "2026-09-17T04:32:02.314305+00:00",
+          "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+        },
+        {
+          "path": "data/features/cboe/historical_2026/snapshots/20260917T042420.968568Z/raw/vix.csv",
+          "retrieved_at": "2026-09-17T04:24:20.859510+00:00",
+          "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+        }
+      ],
+      "path": "data/features/cboe/current_2026/snapshots/20260917T043202.438493Z/raw/vix.csv",
+      "sha256": "c235a6d4213272afb6743b80eaa15b938dd85f6b3bc5ef4e04379643a483fb9c",
+      "source": "cboe"
+    },
+    {
+      "id": "7019891fdd1ebeff2f7c9320",
+      "origins": [
+        {
+          "path": "data/features/cdc/current_2026/snapshots/20260917T041851.560286Z/raw/excess_deaths.csv",
+          "retrieved_at": "2026-09-17T04:18:50.917895+00:00",
+          "url": "https://data.cdc.gov/api/views/xkkf-xrst/rows.csv?accessType=DOWNLOAD"
+        },
+        {
+          "path": "data/features/cdc/historical_2026/snapshots/20260917T042432.944994Z/raw/excess_deaths.csv",
+          "retrieved_at": "2026-09-17T04:24:32.122121+00:00",
+          "url": "https://data.cdc.gov/api/views/xkkf-xrst/rows.csv?accessType=DOWNLOAD"
+        }
+      ],
+      "path": "data/features/cdc/current_2026/snapshots/20260917T041851.560286Z/raw/excess_deaths.csv",
+      "sha256": "61a3b6e4aa564266ec736a42ef3f7272ca41c740ac57f7f7fbfa1f7391e83e2b",
+      "source": "cdc"
+    },
+    {
+      "id": "38c72f81e946c5c076d283e4",
+      "origins": [
+        {
+          "path": "data/features/cdc/current_2026/snapshots/20260917T041851.560286Z/raw/excess_deaths_metadata.json",
+          "retrieved_at": "2026-09-17T04:18:38.868806+00:00",
+          "url": "https://data.cdc.gov/api/views/xkkf-xrst.json"
+        },
+        {
+          "path": "data/features/cdc/historical_2026/snapshots/20260917T042432.944994Z/raw/excess_deaths_metadata.json",
+          "retrieved_at": "2026-09-17T04:24:28.950722+00:00",
+          "url": "https://data.cdc.gov/api/views/xkkf-xrst.json"
+        }
+      ],
+      "path": "data/features/cdc/current_2026/snapshots/20260917T041851.560286Z/raw/excess_deaths_metadata.json",
+      "sha256": "88fc80f540657bef18f71e96466bf4647c44410c2418f7ff6b64cb6a5902d6e2",
+      "source": "cdc"
+    },
+    {
+      "id": "b1b03c301875b8d6c27f9cc3",
+      "origins": [
+        {
+          "path": "data/features/cdc_nhsn/current_2026/snapshots/20260917T042328.864876Z/raw/ua7e-t2fy.csv",
+          "retrieved_at": "2026-09-17T04:23:25.844838+00:00",
+          "url": "https://data.cdc.gov/api/views/ua7e-t2fy/rows.csv?accessType=DOWNLOAD"
+        },
+        {
+          "path": "data/features/cdc_nhsn/historical_2026/snapshots/20260917T042524.379244Z/raw/ua7e-t2fy.csv",
+          "retrieved_at": "2026-09-17T04:25:20.722664+00:00",
+          "url": "https://data.cdc.gov/api/views/ua7e-t2fy/rows.csv?accessType=DOWNLOAD"
+        }
+      ],
+      "path": "data/features/cdc_nhsn/current_2026/snapshots/20260917T042328.864876Z/raw/ua7e-t2fy.csv",
+      "sha256": "e48c2ea92e0beb552a6510b7b0c2fe7a7c9ea911cd27880169298c34de20c330",
+      "source": "cdc_nhsn"
+    },
+    {
+      "id": "b836dfdd10b144ab970c9467",
+      "origins": [
+        {
+          "path": "data/features/cdc_nhsn/current_2026/snapshots/20260917T042328.864876Z/raw/ua7e-t2fy_metadata.json",
+          "retrieved_at": "2026-09-17T04:23:13.564426+00:00",
+          "url": "https://data.cdc.gov/api/views/ua7e-t2fy.json"
+        },
+        {
+          "path": "data/features/cdc_nhsn/historical_2026/snapshots/20260917T042524.379244Z/raw/ua7e-t2fy_metadata.json",
+          "retrieved_at": "2026-09-17T04:24:39.067503+00:00",
+          "url": "https://data.cdc.gov/api/views/ua7e-t2fy.json"
+        }
+      ],
+      "path": "data/features/cdc_nhsn/current_2026/snapshots/20260917T042328.864876Z/raw/ua7e-t2fy_metadata.json",
+      "sha256": "d3f99cc53b54502bbc4676b543c1d823e581239ba9fb11117f2665430f5f70a7",
+      "source": "cdc_nhsn"
+    },
+    {
+      "id": "c8b79d52c80fa8f33964f776",
+      "origins": [
+        {
+          "path": "data/features/cdc_nhsn/historical_2026/snapshots/20260917T042524.379244Z/raw/rhwp-grxi.csv",
+          "retrieved_at": "2026-09-17T04:24:37.603016+00:00",
+          "url": "https://data.cdc.gov/api/views/rhwp-grxi/rows.csv?accessType=DOWNLOAD"
+        }
+      ],
+      "path": "data/features/cdc_nhsn/historical_2026/snapshots/20260917T042524.379244Z/raw/rhwp-grxi.csv",
+      "sha256": "1c2dc9c2fbbf26b5b04c7a81b8eefc2f6c8dbd3250b9da0b9030087212702446",
+      "source": "cdc_nhsn"
+    },
+    {
+      "id": "10f775f2ef758becad6d49d8",
+      "origins": [
+        {
+          "path": "data/features/cdc_nhsn/historical_2026/snapshots/20260917T042524.379244Z/raw/rhwp-grxi_metadata.json",
+          "retrieved_at": "2026-09-17T04:24:33.672011+00:00",
+          "url": "https://data.cdc.gov/api/views/rhwp-grxi.json"
+        }
+      ],
+      "path": "data/features/cdc_nhsn/historical_2026/snapshots/20260917T042524.379244Z/raw/rhwp-grxi_metadata.json",
+      "sha256": "4f94fedebed873180230d618bca549a2529eddd2fda0e8cf4ab3576a47998b40",
+      "source": "cdc_nhsn"
+    },
+    {
+      "id": "a11a230e9003a6a8e13c457d",
+      "origins": [
+        {
+          "path": "data/features/congress/current_2026/snapshots/20260917T041858.130126Z/raw/legislators-current.json",
+          "retrieved_at": "2026-09-17T04:18:58.121466+00:00",
+          "url": "https://raw.githubusercontent.com/unitedstates/congress-legislators/gh-pages/legislators-current.json"
+        },
+        {
+          "path": "data/features/congress/historical_2026/snapshots/20260917T042611.704765Z/raw/legislators-current.json",
+          "retrieved_at": "2026-09-17T04:26:11.693803+00:00",
+          "url": "https://raw.githubusercontent.com/unitedstates/congress-legislators/gh-pages/legislators-current.json"
+        }
+      ],
+      "path": "data/features/congress/current_2026/snapshots/20260917T041858.130126Z/raw/legislators-current.json",
+      "sha256": "19b49014bfbfb0defd3bc7b6ba8e279a63931427af9464b0f014a9bfb541ec5d",
+      "source": "congress"
+    },
+    {
+      "id": "dc796c6fde11f49b78e471a4",
+      "origins": [
+        {
+          "path": "data/features/congress/current_2026/snapshots/20260917T041858.130126Z/raw/legislators-historical.json",
+          "retrieved_at": "2026-09-17T04:18:57.538243+00:00",
+          "url": "https://raw.githubusercontent.com/unitedstates/congress-legislators/gh-pages/legislators-historical.json"
+        },
+        {
+          "path": "data/features/congress/historical_2026/snapshots/20260917T042611.704765Z/raw/legislators-historical.json",
+          "retrieved_at": "2026-09-17T04:26:11.287812+00:00",
+          "url": "https://raw.githubusercontent.com/unitedstates/congress-legislators/gh-pages/legislators-historical.json"
+        }
+      ],
+      "path": "data/features/congress/current_2026/snapshots/20260917T041858.130126Z/raw/legislators-historical.json",
+      "sha256": "25187633f3215a096fe9d14d8a40db1fb0841ab1d24c6da52da3a80c93698cbc",
+      "source": "congress"
+    },
+    {
+      "id": "576c2f5ec3b7cabe8bc250bf",
+      "origins": [
+        {
+          "path": "data/features/epu/current_2026/snapshots/20260917T041833.786307Z/raw/Categorical_EPU_Data.xlsx",
+          "retrieved_at": "2026-09-17T04:18:33.511966+00:00",
+          "url": "https://www.policyuncertainty.com/media/Categorical_EPU_Data.xlsx"
+        },
+        {
+          "path": "data/features/epu/historical_2026/snapshots/20260917T042423.067359Z/raw/Categorical_EPU_Data.xlsx",
+          "retrieved_at": "2026-09-17T04:24:22.769377+00:00",
+          "url": "https://www.policyuncertainty.com/media/Categorical_EPU_Data.xlsx"
+        }
+      ],
+      "path": "data/features/epu/current_2026/snapshots/20260917T041833.786307Z/raw/Categorical_EPU_Data.xlsx",
+      "sha256": "a64af936ba621b3f5c15dedf534f5c04d6ffa20df7f335c7046e68d4d5dd99e3",
+      "source": "epu"
+    },
+    {
+      "id": "6f49ac2868ccc5968230fd06",
+      "origins": [
+        {
+          "path": "data/features/epu/current_2026/snapshots/20260917T041833.786307Z/raw/US_Policy_Uncertainty_Data.xlsx",
+          "retrieved_at": "2026-09-17T04:18:33.341967+00:00",
+          "url": "https://www.policyuncertainty.com/media/US_Policy_Uncertainty_Data.xlsx"
+        },
+        {
+          "path": "data/features/epu/historical_2026/snapshots/20260917T042423.067359Z/raw/US_Policy_Uncertainty_Data.xlsx",
+          "retrieved_at": "2026-09-17T04:24:22.614990+00:00",
+          "url": "https://www.policyuncertainty.com/media/US_Policy_Uncertainty_Data.xlsx"
+        }
+      ],
+      "path": "data/features/epu/current_2026/snapshots/20260917T041833.786307Z/raw/US_Policy_Uncertainty_Data.xlsx",
+      "sha256": "4f167dc2ed6b26081b0e547284def249e275a0e537d71766776b334e581bcc71",
+      "source": "epu"
+    },
+    {
+      "id": "bf5d77b098f5df44388d3aa7",
+      "origins": [
+        {
+          "path": "data/features/epu/current_2026/snapshots/20260917T041833.786307Z/raw/daily_epu.csv",
+          "retrieved_at": "2026-09-17T04:18:33.701664+00:00",
+          "url": "https://www.policyuncertainty.com/media/All_Daily_Policy_Data.csv"
+        },
+        {
+          "path": "data/features/epu/historical_2026/snapshots/20260917T042423.067359Z/raw/daily_epu.csv",
+          "retrieved_at": "2026-09-17T04:24:22.957376+00:00",
+          "url": "https://www.policyuncertainty.com/media/All_Daily_Policy_Data.csv"
+        }
+      ],
+      "path": "data/features/epu/current_2026/snapshots/20260917T041833.786307Z/raw/daily_epu.csv",
+      "sha256": "08b5983af0f9c1c389cee84a2d167714150ad5c5af10dfee0a5ae8c667de07f8",
+      "source": "epu"
+    },
+    {
+      "id": "387bf1d77db948f9830f4476",
+      "origins": [
+        {
+          "path": "data/features/fred/current_2026/snapshots/20260917T042448.546101Z/raw/A229RX0.csv",
+          "retrieved_at": "2026-09-17T04:24:48.064470+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=A229RX0"
+        },
+        {
+          "path": "data/features/fred/historical_2026/snapshots/20260917T042620.950234Z/raw/A229RX0.csv",
+          "retrieved_at": "2026-09-17T04:26:20.467938+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=A229RX0"
+        }
+      ],
+      "path": "data/features/fred/current_2026/snapshots/20260917T042448.546101Z/raw/A229RX0.csv",
+      "sha256": "4b778d70fa08a455d9bbb386b5deeb8881230653c508d3de0743a0a0e29ff9cb",
+      "source": "fred"
+    },
+    {
+      "id": "7968f1f748521e3b8373980f",
+      "origins": [
+        {
+          "path": "data/features/fred/current_2026/snapshots/20260917T042448.546101Z/raw/CPIAUCSL.csv",
+          "retrieved_at": "2026-09-17T04:24:47.658748+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL"
+        },
+        {
+          "path": "data/features/fred/historical_2026/snapshots/20260917T042620.950234Z/raw/CPIAUCSL.csv",
+          "retrieved_at": "2026-09-17T04:26:20.401898+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL"
+        }
+      ],
+      "path": "data/features/fred/current_2026/snapshots/20260917T042448.546101Z/raw/CPIAUCSL.csv",
+      "sha256": "f8ecddf53a9a9a74dda92c2c4204e6039466fcb744bc74171b73b5f6aac48119",
+      "source": "fred"
+    },
+    {
+      "id": "c6bbb8fc5c6aac0ce1a2d748",
+      "origins": [
+        {
+          "path": "data/features/fred/current_2026/snapshots/20260917T042448.546101Z/raw/GDPC1.csv",
+          "retrieved_at": "2026-09-17T04:24:48.218966+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GDPC1"
+        },
+        {
+          "path": "data/features/fred/historical_2026/snapshots/20260917T042620.950234Z/raw/GDPC1.csv",
+          "retrieved_at": "2026-09-17T04:26:20.612593+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GDPC1"
+        }
+      ],
+      "path": "data/features/fred/current_2026/snapshots/20260917T042448.546101Z/raw/GDPC1.csv",
+      "sha256": "519d65c05941022da119fdcbc95976d6865e94b9cc4a8248239e20d7b898e5fc",
+      "source": "fred"
+    },
+    {
+      "id": "8df474fdd41ce273bcbea856",
+      "origins": [
+        {
+          "path": "data/features/fred/current_2026/snapshots/20260917T042448.546101Z/raw/NASDAQCOM.csv",
+          "retrieved_at": "2026-09-17T04:24:48.338706+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQCOM"
+        },
+        {
+          "path": "data/features/fred/historical_2026/snapshots/20260917T042620.950234Z/raw/NASDAQCOM.csv",
+          "retrieved_at": "2026-09-17T04:26:20.730585+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQCOM"
+        }
+      ],
+      "path": "data/features/fred/current_2026/snapshots/20260917T042448.546101Z/raw/NASDAQCOM.csv",
+      "sha256": "c339a5042fff2025bb2064c96bc0dcfd86d45c528fc8abb4b8ee8123e1d9d070",
+      "source": "fred"
+    },
+    {
+      "id": "b3ff7c11158720f0e97fd632",
+      "origins": [
+        {
+          "path": "data/features/fred/current_2026/snapshots/20260917T042448.546101Z/raw/STLFSI4.csv",
+          "retrieved_at": "2026-09-17T04:24:48.529184+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=STLFSI4"
+        },
+        {
+          "path": "data/features/fred/historical_2026/snapshots/20260917T042620.950234Z/raw/STLFSI4.csv",
+          "retrieved_at": "2026-09-17T04:26:20.928984+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=STLFSI4"
+        }
+      ],
+      "path": "data/features/fred/current_2026/snapshots/20260917T042448.546101Z/raw/STLFSI4.csv",
+      "sha256": "b1701df5531acb1197919a6283a7665094a75b99a26d9ffc9a4e9963c8ac106b",
+      "source": "fred"
+    },
+    {
+      "id": "7bf202c49db3bdb273987629",
+      "origins": [
+        {
+          "path": "data/features/fred/current_2026/snapshots/20260917T042448.546101Z/raw/UNRATE.csv",
+          "retrieved_at": "2026-09-17T04:24:48.147078+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE"
+        },
+        {
+          "path": "data/features/fred/historical_2026/snapshots/20260917T042620.950234Z/raw/UNRATE.csv",
+          "retrieved_at": "2026-09-17T04:26:20.536582+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE"
+        }
+      ],
+      "path": "data/features/fred/current_2026/snapshots/20260917T042448.546101Z/raw/UNRATE.csv",
+      "sha256": "ffe86c903f6944ebc8281e5474a15fc4ceaac61059bc51ec86a7241391d8713d",
+      "source": "fred"
+    },
+    {
+      "id": "1f36c7d159082f85e4636908",
+      "origins": [
+        {
+          "path": "data/features/french/current_2026/snapshots/20260917T041855.110387Z/raw/ff_factors.zip",
+          "retrieved_at": "2026-09-17T04:18:54.866560+00:00",
+          "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip"
+        },
+        {
+          "path": "data/features/french/historical_2026/snapshots/20260917T042608.868593Z/raw/ff_factors.zip",
+          "retrieved_at": "2026-09-17T04:26:08.650217+00:00",
+          "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip"
+        }
+      ],
+      "path": "data/features/french/current_2026/snapshots/20260917T041855.110387Z/raw/ff_factors.zip",
+      "sha256": "b840dba55d319f4818fc7300e65c52eff5f64870c8d495fa58ff5d4cd749f5eb",
+      "source": "french"
+    },
+    {
+      "id": "b85889f770efd1717969b6f2",
+      "origins": [
+        {
+          "path": "data/features/french/current_2026/snapshots/20260917T041855.110387Z/raw/ff_factors_daily.zip",
+          "retrieved_at": "2026-09-17T04:18:55.107403+00:00",
+          "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_daily_CSV.zip"
+        },
+        {
+          "path": "data/features/french/historical_2026/snapshots/20260917T042608.868593Z/raw/ff_factors_daily.zip",
+          "retrieved_at": "2026-09-17T04:26:08.860073+00:00",
+          "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_daily_CSV.zip"
+        }
+      ],
+      "path": "data/features/french/current_2026/snapshots/20260917T041855.110387Z/raw/ff_factors_daily.zip",
+      "sha256": "1916d331c2c51d2aee3d00215897d2b8e5995cb387f1f4569ba46bff5fb049a8",
+      "source": "french"
+    },
+    {
+      "id": "17f7d545690d68fe7ad677f8",
+      "origins": [
+        {
+          "path": "data/features/gpr/current_2026/snapshots/20260917T041833.190437Z/raw/data_gpr_daily_recent.xls",
+          "retrieved_at": "2026-09-17T04:18:33.182659+00:00",
+          "url": "https://www.matteoiacoviello.com/gpr_files/data_gpr_daily_recent.xls"
+        },
+        {
+          "path": "data/features/gpr/historical_2026/snapshots/20260917T042422.467763Z/raw/data_gpr_daily_recent.xls",
+          "retrieved_at": "2026-09-17T04:24:22.459921+00:00",
+          "url": "https://www.matteoiacoviello.com/gpr_files/data_gpr_daily_recent.xls"
+        }
+      ],
+      "path": "data/features/gpr/current_2026/snapshots/20260917T041833.190437Z/raw/data_gpr_daily_recent.xls",
+      "sha256": "4d3b8685bf19b0a2c139595439e9fd9351871d016f62bddb05fa7bf2e6bfa9ab",
+      "source": "gpr"
+    },
+    {
+      "id": "8310e0dbab9248e2fa89f799",
+      "origins": [
+        {
+          "path": "data/features/gpr/current_2026/snapshots/20260917T041833.190437Z/raw/data_gpr_export.xls",
+          "retrieved_at": "2026-09-17T04:18:32.678938+00:00",
+          "url": "https://www.matteoiacoviello.com/gpr_files/data_gpr_export.xls"
+        },
+        {
+          "path": "data/features/gpr/historical_2026/snapshots/20260917T042422.467763Z/raw/data_gpr_export.xls",
+          "retrieved_at": "2026-09-17T04:24:21.939939+00:00",
+          "url": "https://www.matteoiacoviello.com/gpr_files/data_gpr_export.xls"
+        }
+      ],
+      "path": "data/features/gpr/current_2026/snapshots/20260917T041833.190437Z/raw/data_gpr_export.xls",
+      "sha256": "6ff388db4aa34eb66433d4c13c9f82d88316714889a1fc9e6a8c0ce1158d5eae",
+      "source": "gpr"
+    },
+    {
+      "id": "24d69f6f30a6e03013beee99",
+      "origins": [
+        {
+          "path": "data/features/infectious_emv/current_2026/snapshots/20260917T043202.834524Z/raw/infectious_emv.csv",
+          "retrieved_at": "2026-09-17T04:32:02.667557+00:00",
+          "url": "https://www.policyuncertainty.com/media/All_Infectious_EMV_Data.csv"
+        },
+        {
+          "path": "data/features/infectious_emv/historical_2026/snapshots/20260917T042421.428914Z/raw/infectious_emv.csv",
+          "retrieved_at": "2026-09-17T04:24:21.292751+00:00",
+          "url": "https://www.policyuncertainty.com/media/All_Infectious_EMV_Data.csv"
+        }
+      ],
+      "path": "data/features/infectious_emv/current_2026/snapshots/20260917T043202.834524Z/raw/infectious_emv.csv",
+      "sha256": "0f6bfead2a3e2236649e23eb99553a7bfb680d28ace0d494da302e0c85df9a0f",
+      "source": "infectious_emv"
+    },
+    {
+      "id": "5c528cbd9cd978d975a27a32",
+      "origins": [
+        {
+          "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/RB_10.xls",
+          "retrieved_at": "2026-09-17T04:18:38.458215+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=RB&y=2026&m=7&n=10&f=xls&k=ac2d389ee50b78c7b4fbd8ba4430cfa2"
+        },
+        {
+          "path": "data/features/michigan/historical_2026/snapshots/20260917T042426.441900Z/raw/RB_10.xls",
+          "retrieved_at": "2026-09-17T04:24:26.438904+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=RB&y=2026&m=7&n=10&f=xls&k=ac2d389ee50b78c7b4fbd8ba4430cfa2"
+        }
+      ],
+      "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/RB_10.xls",
+      "sha256": "35856099664584791756b0b2a728abd6055a2acb346b44d93fe169846a2dcfeb",
+      "source": "michigan"
+    },
+    {
+      "id": "d50cd765805b7d1994af93cc",
+      "origins": [
+        {
+          "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/RB_1a.xls",
+          "retrieved_at": "2026-09-17T04:18:36.777142+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=RB&y=2026&m=7&n=1a&f=xls&k=1225b6af6d02f3c6d1ba0d64ca03400c"
+        },
+        {
+          "path": "data/features/michigan/historical_2026/snapshots/20260917T042426.441900Z/raw/RB_1a.xls",
+          "retrieved_at": "2026-09-17T04:24:24.739845+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=RB&y=2026&m=7&n=1a&f=xls&k=1225b6af6d02f3c6d1ba0d64ca03400c"
+        }
+      ],
+      "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/RB_1a.xls",
+      "sha256": "4f7816a88c90ec179f113de0dca514fb37e3974b3ee7121b3100de83e0c48f4f",
+      "source": "michigan"
+    },
+    {
+      "id": "0a1a1cb9132b981dd777ab57",
+      "origins": [
+        {
+          "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/RB_1b.xls",
+          "retrieved_at": "2026-09-17T04:18:37.124383+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=RB&y=2026&m=7&n=1b&f=xls&k=a782133157c4eb764022ddfc7dd1e7a8"
+        },
+        {
+          "path": "data/features/michigan/historical_2026/snapshots/20260917T042426.441900Z/raw/RB_1b.xls",
+          "retrieved_at": "2026-09-17T04:24:25.098251+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=RB&y=2026&m=7&n=1b&f=xls&k=a782133157c4eb764022ddfc7dd1e7a8"
+        }
+      ],
+      "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/RB_1b.xls",
+      "sha256": "65ad8bd7ed8efff64c554aa7486b403b766c652c70651d2d30df19d9403c0e26",
+      "source": "michigan"
+    },
+    {
+      "id": "8e76de04a017014b78c8aeb4",
+      "origins": [
+        {
+          "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/RB_5b.xls",
+          "retrieved_at": "2026-09-17T04:18:37.430371+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=RB&y=2026&m=7&n=5b&f=xls&k=fc9f191c13214cea7342b0b22c77af7e"
+        },
+        {
+          "path": "data/features/michigan/historical_2026/snapshots/20260917T042426.441900Z/raw/RB_5b.xls",
+          "retrieved_at": "2026-09-17T04:24:25.432305+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=RB&y=2026&m=7&n=5b&f=xls&k=fc9f191c13214cea7342b0b22c77af7e"
+        }
+      ],
+      "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/RB_5b.xls",
+      "sha256": "8f671069e8789a58c4aba1d8f50afa5df925bda6ed2e3d3954bb6e0afa6731b1",
+      "source": "michigan"
+    },
+    {
+      "id": "af4a1f3b865d09af683ac6ab",
+      "origins": [
+        {
+          "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/RB_6.xls",
+          "retrieved_at": "2026-09-17T04:18:37.794593+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=RB&y=2026&m=7&n=6&f=xls&k=30c7ba24512c4a0fd3d9f5c96bf260a3"
+        },
+        {
+          "path": "data/features/michigan/historical_2026/snapshots/20260917T042426.441900Z/raw/RB_6.xls",
+          "retrieved_at": "2026-09-17T04:24:25.794125+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=RB&y=2026&m=7&n=6&f=xls&k=30c7ba24512c4a0fd3d9f5c96bf260a3"
+        }
+      ],
+      "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/RB_6.xls",
+      "sha256": "0f7e7e9f9d9da440a2cb3673c35b0ca8eece68480142922cb1374b511fd05748",
+      "source": "michigan"
+    },
+    {
+      "id": "9bf68cbad19d17b30ae8197b",
+      "origins": [
+        {
+          "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/RB_8.xls",
+          "retrieved_at": "2026-09-17T04:18:38.127850+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=RB&y=2026&m=7&n=8&f=xls&k=dc5f254e8f891e0528dd6651f478f79d"
+        },
+        {
+          "path": "data/features/michigan/historical_2026/snapshots/20260917T042426.441900Z/raw/RB_8.xls",
+          "retrieved_at": "2026-09-17T04:24:26.111401+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=RB&y=2026&m=7&n=8&f=xls&k=dc5f254e8f891e0528dd6651f478f79d"
+        }
+      ],
+      "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/RB_8.xls",
+      "sha256": "25b937cfec7c6c2d2059f1d15d1d10e5ec6a8d4055c9eaec47295b0bc44a6146",
+      "source": "michigan"
+    },
+    {
+      "id": "1e49835c195ba74f9dc54227",
+      "origins": [
+        {
+          "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/YB_10.xls",
+          "retrieved_at": "2026-09-17T04:18:38.281779+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=YB&y=2026&m=7&n=10&f=xls&k=6a7b38b7964d8321512cbf64b6ad35da"
+        },
+        {
+          "path": "data/features/michigan/historical_2026/snapshots/20260917T042426.441900Z/raw/YB_10.xls",
+          "retrieved_at": "2026-09-17T04:24:26.258597+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=YB&y=2026&m=7&n=10&f=xls&k=6a7b38b7964d8321512cbf64b6ad35da"
+        }
+      ],
+      "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/YB_10.xls",
+      "sha256": "d261f5e004b1a42f18268e89d4b0d3731ca19628c3c1dc8a70e60fa988a6dc94",
+      "source": "michigan"
+    },
+    {
+      "id": "95ee267a6ffbda43ef335955",
+      "origins": [
+        {
+          "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/YB_1a.xls",
+          "retrieved_at": "2026-09-17T04:18:36.586207+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=YB&y=2026&m=7&n=1a&f=xls&k=49a6bb6c1d8c7083c97ddb3dbc502e71"
+        },
+        {
+          "path": "data/features/michigan/historical_2026/snapshots/20260917T042426.441900Z/raw/YB_1a.xls",
+          "retrieved_at": "2026-09-17T04:24:24.547550+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=YB&y=2026&m=7&n=1a&f=xls&k=49a6bb6c1d8c7083c97ddb3dbc502e71"
+        }
+      ],
+      "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/YB_1a.xls",
+      "sha256": "e998fdd5794487c50084a0c4c496921c572d2a8f43ef95b095170a9954d58315",
+      "source": "michigan"
+    },
+    {
+      "id": "5bc7e749c3f10dacd0a463f8",
+      "origins": [
+        {
+          "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/YB_1b.xls",
+          "retrieved_at": "2026-09-17T04:18:36.931231+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=YB&y=2026&m=7&n=1b&f=xls&k=c16d72a92a1f58d31ffa0609dcb89809"
+        },
+        {
+          "path": "data/features/michigan/historical_2026/snapshots/20260917T042426.441900Z/raw/YB_1b.xls",
+          "retrieved_at": "2026-09-17T04:24:24.901642+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=YB&y=2026&m=7&n=1b&f=xls&k=c16d72a92a1f58d31ffa0609dcb89809"
+        }
+      ],
+      "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/YB_1b.xls",
+      "sha256": "819fbb2057c9ad118956176a69a0a65c34376f902ec02b6696880df28848258e",
+      "source": "michigan"
+    },
+    {
+      "id": "020b3be90029c593ba1af28d",
+      "origins": [
+        {
+          "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/YB_5b.xls",
+          "retrieved_at": "2026-09-17T04:18:37.268890+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=YB&y=2026&m=7&n=5b&f=xls&k=9f11e9326d89940c1ba6df24a3a384a2"
+        },
+        {
+          "path": "data/features/michigan/historical_2026/snapshots/20260917T042426.441900Z/raw/YB_5b.xls",
+          "retrieved_at": "2026-09-17T04:24:25.253327+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=YB&y=2026&m=7&n=5b&f=xls&k=9f11e9326d89940c1ba6df24a3a384a2"
+        }
+      ],
+      "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/YB_5b.xls",
+      "sha256": "3db8b86389242e930b2400f284ff6ca3a9376d1f57479cefb81fa0213abd8688",
+      "source": "michigan"
+    },
+    {
+      "id": "9046be1341df7af4340d8786",
+      "origins": [
+        {
+          "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/YB_6.xls",
+          "retrieved_at": "2026-09-17T04:18:37.585589+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=YB&y=2026&m=7&n=6&f=xls&k=a99f0e7f551986cb97f725a7917483ef"
+        },
+        {
+          "path": "data/features/michigan/historical_2026/snapshots/20260917T042426.441900Z/raw/YB_6.xls",
+          "retrieved_at": "2026-09-17T04:24:25.586494+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=YB&y=2026&m=7&n=6&f=xls&k=a99f0e7f551986cb97f725a7917483ef"
+        }
+      ],
+      "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/YB_6.xls",
+      "sha256": "11a217dc8c744dbeace9dd65dae166cfd83b804c190fec1864f01440695f1b02",
+      "source": "michigan"
+    },
+    {
+      "id": "e921422f7d2977f6c095efb5",
+      "origins": [
+        {
+          "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/YB_8.xls",
+          "retrieved_at": "2026-09-17T04:18:37.947793+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=YB&y=2026&m=7&n=8&f=xls&k=1171f230c427b44a146dd6ebb2218436"
+        },
+        {
+          "path": "data/features/michigan/historical_2026/snapshots/20260917T042426.441900Z/raw/YB_8.xls",
+          "retrieved_at": "2026-09-17T04:24:25.937663+00:00",
+          "url": "https://data.sca.isr.umich.edu/get-table.php?c=YB&y=2026&m=7&n=8&f=xls&k=1171f230c427b44a146dd6ebb2218436"
+        }
+      ],
+      "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z/raw/YB_8.xls",
+      "sha256": "2daa2af105930e93ec445c39a5047293b511995d2cd6f90af05f18b865c7038a",
+      "source": "michigan"
+    },
+    {
+      "id": "60e96c3f596c6bcdeaf08ea1",
+      "origins": [
+        {
+          "path": "data/features/oecd/current_2026/snapshots/20260917T042449.109723Z/raw/USACSCICP02STSAM.csv",
+          "retrieved_at": "2026-09-17T04:24:49.089210+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=USACSCICP02STSAM"
+        },
+        {
+          "path": "data/features/oecd/historical_2026/snapshots/20260917T042621.187711Z/raw/USACSCICP02STSAM.csv",
+          "retrieved_at": "2026-09-17T04:26:21.178377+00:00",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=USACSCICP02STSAM"
+        }
+      ],
+      "path": "data/features/oecd/current_2026/snapshots/20260917T042449.109723Z/raw/USACSCICP02STSAM.csv",
+      "sha256": "890aa669cdebd56d6df07ab869b8649156a7b717544526a6f4777483582f9aa7",
+      "source": "oecd"
+    },
+    {
+      "id": "1cc90f3705fd064bf7451ad4",
+      "origins": [
+        {
+          "path": "data/features/owid/current_2026/snapshots/20260917T042408.793122Z/raw/owid_covid.csv",
+          "retrieved_at": "2026-09-17T04:23:54.690876+00:00",
+          "url": "https://catalog.ourworldindata.org/garden/covid/latest/compact/compact.csv"
+        },
+        {
+          "path": "data/features/owid/historical_2026/snapshots/20260917T042607.936931Z/raw/owid_covid.csv",
+          "retrieved_at": "2026-09-17T04:25:53.678216+00:00",
+          "url": "https://catalog.ourworldindata.org/garden/covid/latest/compact/compact.csv"
+        }
+      ],
+      "path": "data/features/owid/current_2026/snapshots/20260917T042408.793122Z/raw/owid_covid.csv",
+      "sha256": "0db194d51324c2d0a765d521ecb26b3c96cf5f4b7763b5db35879c2cd9d0c6fa",
+      "source": "owid"
+    },
+    {
+      "id": "a412d9f53b1720f400002aa3",
+      "origins": [
+        {
+          "path": "data/features/owid/current_2026/snapshots/20260917T042408.793122Z/raw/owid_metadata.json",
+          "retrieved_at": "2026-09-17T04:23:29.098869+00:00",
+          "url": "https://catalog.ourworldindata.org/garden/covid/latest/compact/compact.meta.json"
+        },
+        {
+          "path": "data/features/owid/historical_2026/snapshots/20260917T042607.936931Z/raw/owid_metadata.json",
+          "retrieved_at": "2026-09-17T04:25:27.236425+00:00",
+          "url": "https://catalog.ourworldindata.org/garden/covid/latest/compact/compact.meta.json"
+        }
+      ],
+      "path": "data/features/owid/current_2026/snapshots/20260917T042408.793122Z/raw/owid_metadata.json",
+      "sha256": "9d6081a2c167ae389669df6d436bd6576c1bc1a007c293e12f9a6f9552f8a7a3",
+      "source": "owid"
+    },
+    {
+      "id": "136b0a701fa08abfed217e31",
+      "origins": [
+        {
+          "path": "data/features/oxcgrt/historical_2026/snapshots/20260917T042635.988467Z/raw/OxCGRT_compact_national_v1.csv",
+          "retrieved_at": "2026-09-17T04:26:18.369705+00:00",
+          "url": "https://raw.githubusercontent.com/OxCGRT/covid-policy-dataset/main/data/OxCGRT_compact_national_v1.csv"
+        }
+      ],
+      "path": "data/features/oxcgrt/historical_2026/snapshots/20260917T042635.988467Z/raw/OxCGRT_compact_national_v1.csv",
+      "sha256": "fa5c95fa8f5e386517698cdc17581f7e3333348907c57ad8459c877580d0fe79",
+      "source": "oxcgrt"
+    },
+    {
+      "id": "481588c7bd636f9d4a6b6180",
+      "origins": [
+        {
+          "path": "data/features/oxcgrt/historical_2026/snapshots/20260917T042635.988467Z/raw/OxCGRT_compact_subnational_v1.csv",
+          "retrieved_at": "2026-09-17T04:26:29.130090+00:00",
+          "url": "https://raw.githubusercontent.com/OxCGRT/covid-policy-dataset/main/data/OxCGRT_compact_subnational_v1.csv"
+        }
+      ],
+      "path": "data/features/oxcgrt/historical_2026/snapshots/20260917T042635.988467Z/raw/OxCGRT_compact_subnational_v1.csv",
+      "sha256": "d242cf3b2332bf021c877012d720931536979f46610898648ba35f96f5615dff",
+      "source": "oxcgrt"
+    },
+    {
+      "id": "9086421f55c0f1c6b9eca9eb",
+      "origins": [
+        {
+          "path": "data/features/policy_agendas/current_2026/snapshots/20260917T043202.129541Z/raw/mip.csv",
+          "retrieved_at": "2026-09-17T04:32:02.071230+00:00",
+          "url": "https://www.maxwell.syr.edu/docs/default-source/research/campbell/us-policy-agendas-project/publicopinion-gallup-dataset.csv?sfvrsn=cbb5d0ee_3"
+        },
+        {
+          "path": "data/features/policy_agendas/historical_2026/snapshots/20260917T043127.996748Z/raw/mip.csv",
+          "retrieved_at": "2026-09-17T04:31:27.929678+00:00",
+          "url": "https://www.maxwell.syr.edu/docs/default-source/research/campbell/us-policy-agendas-project/publicopinion-gallup-dataset.csv?sfvrsn=cbb5d0ee_3"
+        }
+      ],
+      "path": "data/features/policy_agendas/current_2026/snapshots/20260917T043202.129541Z/raw/mip.csv",
+      "sha256": "38885460d5338271c4586a39b6f09a3134c02568dcce6f2198e9a20721fef61b",
+      "source": "policy_agendas"
+    },
+    {
+      "id": "3727d5f22e2537c016bbe986",
+      "origins": [
+        {
+          "path": "data/features/policy_agendas/current_2026/snapshots/20260917T043202.129541Z/raw/mip_codebook.pdf",
+          "retrieved_at": "2026-09-17T04:32:01.899770+00:00",
+          "url": "https://www.maxwell.syr.edu/docs/default-source/research/campbell/us-policy-agendas-project/publicopinion-gallup-codebook.pdf?sfvrsn=7ba452bd_3"
+        },
+        {
+          "path": "data/features/policy_agendas/historical_2026/snapshots/20260917T043127.996748Z/raw/mip_codebook.pdf",
+          "retrieved_at": "2026-09-17T04:31:27.764445+00:00",
+          "url": "https://www.maxwell.syr.edu/docs/default-source/research/campbell/us-policy-agendas-project/publicopinion-gallup-codebook.pdf?sfvrsn=7ba452bd_3"
+        }
+      ],
+      "path": "data/features/policy_agendas/current_2026/snapshots/20260917T043202.129541Z/raw/mip_codebook.pdf",
+      "sha256": "d000ff79e1f7ca810cb7a06e676ebf7cd61cf982e6c3fda0982a2973c8bdb58c",
+      "source": "policy_agendas"
+    },
+    {
+      "id": "6555dd00491356f186bcf2b3",
+      "origins": [
+        {
+          "path": "data/features/silver_bulletin/current_2026/snapshots/20260917T041836.196391Z/raw/approval_polls.csv",
+          "retrieved_at": "2026-09-17T04:18:36.099498+00:00",
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vS-FKWVTTFtJT6u56e0bqdfoMcXvDO1DUChsJ3jQAMB2lZk2SMqVfmg7dGjclTYkYWz-Pm5lfcLPjp4/pub?output=csv"
+        },
+        {
+          "path": "data/features/silver_bulletin/historical_2026/snapshots/20260917T042424.152863Z/raw/approval_polls.csv",
+          "retrieved_at": "2026-09-17T04:24:24.056817+00:00",
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vS-FKWVTTFtJT6u56e0bqdfoMcXvDO1DUChsJ3jQAMB2lZk2SMqVfmg7dGjclTYkYWz-Pm5lfcLPjp4/pub?output=csv"
+        }
+      ],
+      "path": "data/features/silver_bulletin/current_2026/snapshots/20260917T041836.196391Z/raw/approval_polls.csv",
+      "sha256": "8181d91c8e52e8e5608df3fc701734a38bfe0077bccdf796e3b3466b0392d691",
+      "source": "silver_bulletin"
+    },
+    {
+      "id": "2564f3b6577c315e9032c787",
+      "origins": [
+        {
+          "path": "data/features/ucdp/current_2026/snapshots/20260917T042555.375606Z/raw/ged_candidate.csv",
+          "retrieved_at": "2026-09-17T04:25:45.109062+00:00",
+          "url": "https://ucdp.uu.se/downloads/candidateged/GEDEvent_v26_0_7.csv"
+        }
+      ],
+      "path": "data/features/ucdp/current_2026/snapshots/20260917T042555.375606Z/raw/ged_candidate.csv",
+      "sha256": "9fc2c6dd85eee91845512e8ef1055281d9fd028fb98748a6f2a27c6e8aa8c562",
+      "source": "ucdp"
+    },
+    {
+      "id": "08b9099e7fcbce25053681a8",
+      "origins": [
+        {
+          "path": "data/features/ucdp/current_2026/snapshots/20260917T042555.375606Z/raw/ged_candidate_01.csv",
+          "retrieved_at": "2026-09-17T04:25:55.292909+00:00",
+          "url": "https://ucdp.uu.se/downloads/candidateged/GEDEvent_v26_0_1.csv"
+        }
+      ],
+      "path": "data/features/ucdp/current_2026/snapshots/20260917T042555.375606Z/raw/ged_candidate_01.csv",
+      "sha256": "0abfa097090623537a4903c5dd1ab958e7f33e1b759319305d8036ff8c14e9ec",
+      "source": "ucdp"
+    },
+    {
+      "id": "35b0bb64f23eebd8f4e3a59c",
+      "origins": [
+        {
+          "path": "data/features/ucdp/current_2026/snapshots/20260917T042555.375606Z/raw/ged_candidate_02.csv",
+          "retrieved_at": "2026-09-17T04:25:54.079272+00:00",
+          "url": "https://ucdp.uu.se/downloads/candidateged/GEDEvent_v26_0_2.csv"
+        }
+      ],
+      "path": "data/features/ucdp/current_2026/snapshots/20260917T042555.375606Z/raw/ged_candidate_02.csv",
+      "sha256": "c3d1743040749e5cceb2f87f5825bbe827a682008e711950467d4089ce0cf8e4",
+      "source": "ucdp"
+    },
+    {
+      "id": "7756f4286a8fa6015b062790",
+      "origins": [
+        {
+          "path": "data/features/ucdp/current_2026/snapshots/20260917T042555.375606Z/raw/ged_candidate_03.csv",
+          "retrieved_at": "2026-09-17T04:25:52.779839+00:00",
+          "url": "https://ucdp.uu.se/downloads/candidateged/GEDEvent_v26_0_3.csv"
+        }
+      ],
+      "path": "data/features/ucdp/current_2026/snapshots/20260917T042555.375606Z/raw/ged_candidate_03.csv",
+      "sha256": "9d122d54f707b1180badea3a8fe6815aba94d398cd05e96be1d29e87aad048bb",
+      "source": "ucdp"
+    },
+    {
+      "id": "5dc54eb5533cc3e84b7e182a",
+      "origins": [
+        {
+          "path": "data/features/ucdp/current_2026/snapshots/20260917T042555.375606Z/raw/ged_candidate_04.csv",
+          "retrieved_at": "2026-09-17T04:25:50.804874+00:00",
+          "url": "https://ucdp.uu.se/downloads/candidateged/GEDEvent_v26_0_4.csv"
+        }
+      ],
+      "path": "data/features/ucdp/current_2026/snapshots/20260917T042555.375606Z/raw/ged_candidate_04.csv",
+      "sha256": "acbe171bc51b95e330a41d1b0d5766d7388c31bcb4b2d9a3e1a0af77dfd9e69b",
+      "source": "ucdp"
+    },
+    {
+      "id": "1a33d6b13165d9f1402f5805",
+      "origins": [
+        {
+          "path": "data/features/ucdp/current_2026/snapshots/20260917T042555.375606Z/raw/ged_candidate_05.csv",
+          "retrieved_at": "2026-09-17T04:25:49.244644+00:00",
+          "url": "https://ucdp.uu.se/downloads/candidateged/GEDEvent_v26_0_5.csv"
+        }
+      ],
+      "path": "data/features/ucdp/current_2026/snapshots/20260917T042555.375606Z/raw/ged_candidate_05.csv",
+      "sha256": "7b07f507ff479b5dcfe880eee596a41312c787c9f6395c7778e16abf0076a7e4",
+      "source": "ucdp"
+    },
+    {
+      "id": "9748e78375d988c301370126",
+      "origins": [
+        {
+          "path": "data/features/ucdp/current_2026/snapshots/20260917T042555.375606Z/raw/ged_candidate_06.csv",
+          "retrieved_at": "2026-09-17T04:25:47.594557+00:00",
+          "url": "https://ucdp.uu.se/downloads/candidateged/GEDEvent_v26_0_6.csv"
+        }
+      ],
+      "path": "data/features/ucdp/current_2026/snapshots/20260917T042555.375606Z/raw/ged_candidate_06.csv",
+      "sha256": "21385a3b686d921d4364d754c7d71a0c75c92c92d3a7ef0439754cad4267af68",
+      "source": "ucdp"
+    },
+    {
+      "id": "4c812d05b54d91d28253d2a0",
+      "origins": [
+        {
+          "path": "data/features/ucdp/historical_2026/snapshots/20260917T042703.748578Z/raw/ged_historical.zip",
+          "retrieved_at": "2026-09-17T04:27:03.202055+00:00",
+          "url": "https://ucdp.uu.se/downloads/ged/ged261-csv.zip"
+        }
+      ],
+      "path": "data/features/ucdp/historical_2026/snapshots/20260917T042703.748578Z/raw/ged_historical.zip",
+      "sha256": "8c941d84954e555ee2e54f40fa04d9203bf1e2f962203d0a9930966c4947c667",
+      "source": "ucdp"
+    },
+    {
+      "id": "4d7c38164eb7607fc91d156f",
+      "origins": [
+        {
+          "path": "data/features/ucsb/current_2026/snapshots/20260917T041838.609576Z/raw/donald-j-trump-2nd-term-public-approval.html",
+          "retrieved_at": "2026-09-17T04:18:38.607930+00:00",
+          "url": "https://www.presidency.ucsb.edu/statistics/data/donald-j-trump-2nd-term-public-approval"
+        },
+        {
+          "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/donald-j-trump-2nd-term-public-approval.html",
+          "retrieved_at": "2026-09-17T04:24:26.718912+00:00",
+          "url": "https://www.presidency.ucsb.edu/statistics/data/donald-j-trump-2nd-term-public-approval"
+        }
+      ],
+      "path": "data/features/ucsb/current_2026/snapshots/20260917T041838.609576Z/raw/donald-j-trump-2nd-term-public-approval.html",
+      "sha256": "52073b139bc780371ffe79c46f2ba52286a668f7d5fbf0c3b19b5dbf65ef27fe",
+      "source": "ucsb"
+    },
+    {
+      "id": "184ea5305bb43b47c33a4709",
+      "origins": [
+        {
+          "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/barack-obama-public-approval.html",
+          "retrieved_at": "2026-09-17T04:24:26.623465+00:00",
+          "url": "https://www.presidency.ucsb.edu/statistics/data/barack-obama-public-approval"
+        }
+      ],
+      "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/barack-obama-public-approval.html",
+      "sha256": "413c19798d72bcd69e232ebb3f52c81b1b8135f6331e0dfa7e8909ba0c8f46af",
+      "source": "ucsb"
+    },
+    {
+      "id": "a0db4366ea0898b475db5fbb",
+      "origins": [
+        {
+          "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/donald-j-trump-public-approval.html",
+          "retrieved_at": "2026-09-17T04:24:26.809050+00:00",
+          "url": "https://www.presidency.ucsb.edu/statistics/data/donald-j-trump-public-approval"
+        }
+      ],
+      "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/donald-j-trump-public-approval.html",
+      "sha256": "433f93954affa1bedb06765f3d7e02551b76fae619b1818b93b1af3c75b5e125",
+      "source": "ucsb"
+    },
+    {
+      "id": "95ebff0f3b673c3e401e58ab",
+      "origins": [
+        {
+          "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/dwight-d-eisenhower-public-approval.html",
+          "retrieved_at": "2026-09-17T04:24:26.893358+00:00",
+          "url": "https://www.presidency.ucsb.edu/statistics/data/dwight-d-eisenhower-public-approval"
+        }
+      ],
+      "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/dwight-d-eisenhower-public-approval.html",
+      "sha256": "ffa71624858fc974131878fe64ee5840d11fb829a3110cb810dfc97a68319a05",
+      "source": "ucsb"
+    },
+    {
+      "id": "f0efa096b00b56d59f18327d",
+      "origins": [
+        {
+          "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/franklin-d-roosevelt-public-approval.html",
+          "retrieved_at": "2026-09-17T04:24:26.972047+00:00",
+          "url": "https://www.presidency.ucsb.edu/statistics/data/franklin-d-roosevelt-public-approval"
+        }
+      ],
+      "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/franklin-d-roosevelt-public-approval.html",
+      "sha256": "cf41b305938ac165cc3b17e56b9026838c503d6b4429a46eeeda3febde2d500a",
+      "source": "ucsb"
+    },
+    {
+      "id": "75929e26f06a976e2aaa910e",
+      "origins": [
+        {
+          "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/george-bush-public-approval.html",
+          "retrieved_at": "2026-09-17T04:24:27.384476+00:00",
+          "url": "https://www.presidency.ucsb.edu/statistics/data/george-bush-public-approval"
+        }
+      ],
+      "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/george-bush-public-approval.html",
+      "sha256": "4162dda8f8a5b82c1707ccd68028ef5960ad1926e8e808e8e40ad07cd382ac11",
+      "source": "ucsb"
+    },
+    {
+      "id": "db94368122cab8a1017850c3",
+      "origins": [
+        {
+          "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/george-w-bush-public-approval.html",
+          "retrieved_at": "2026-09-17T04:24:27.492788+00:00",
+          "url": "https://www.presidency.ucsb.edu/statistics/data/george-w-bush-public-approval"
+        }
+      ],
+      "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/george-w-bush-public-approval.html",
+      "sha256": "d2275bfe1e0a011e68777373cdbb299664fdbd3681cad059c56314dabc6986f8",
+      "source": "ucsb"
+    },
+    {
+      "id": "4606963084d672bae53573e4",
+      "origins": [
+        {
+          "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/gerald-r-ford-public-approval.html",
+          "retrieved_at": "2026-09-17T04:24:27.582704+00:00",
+          "url": "https://www.presidency.ucsb.edu/statistics/data/gerald-r-ford-public-approval"
+        }
+      ],
+      "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/gerald-r-ford-public-approval.html",
+      "sha256": "fb90741c9ff2d2bc40a0e5e4f4d1cb936f69ed408e52493601268c3378808acb",
+      "source": "ucsb"
+    },
+    {
+      "id": "7adc860392adca2b3c3de036",
+      "origins": [
+        {
+          "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/harry-s-truman-public-approval.html",
+          "retrieved_at": "2026-09-17T04:24:27.664403+00:00",
+          "url": "https://www.presidency.ucsb.edu/statistics/data/harry-s-truman-public-approval"
+        }
+      ],
+      "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/harry-s-truman-public-approval.html",
+      "sha256": "099b715b46f5197b1c27936186981f34570f132ef4e7760c6e456260db82d834",
+      "source": "ucsb"
+    },
+    {
+      "id": "b56ffb803ab483608fe89116",
+      "origins": [
+        {
+          "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/jimmy-carter-public-approval.html",
+          "retrieved_at": "2026-09-17T04:24:27.744253+00:00",
+          "url": "https://www.presidency.ucsb.edu/statistics/data/jimmy-carter-public-approval"
+        }
+      ],
+      "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/jimmy-carter-public-approval.html",
+      "sha256": "30e85c9e4ccd0d76226028a4ac744b6810181a1ba3e8c7221375d7b2358a49d1",
+      "source": "ucsb"
+    },
+    {
+      "id": "f6be0aa28f3f4c2f701d5e50",
+      "origins": [
+        {
+          "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/john-f-kennedy-public-approval.html",
+          "retrieved_at": "2026-09-17T04:24:27.822179+00:00",
+          "url": "https://www.presidency.ucsb.edu/statistics/data/john-f-kennedy-public-approval"
+        }
+      ],
+      "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/john-f-kennedy-public-approval.html",
+      "sha256": "d8c9e9cbb3cbf6ff920b3f16e0ac4b1deafad260db3ab29b14a7713a4773ada6",
+      "source": "ucsb"
+    },
+    {
+      "id": "596ad4ae5377f68411178991",
+      "origins": [
+        {
+          "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/joseph-r-biden-public-approval.html",
+          "retrieved_at": "2026-09-17T04:24:27.951798+00:00",
+          "url": "https://www.presidency.ucsb.edu/statistics/data/joseph-r-biden-public-approval"
+        }
+      ],
+      "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/joseph-r-biden-public-approval.html",
+      "sha256": "eba7553cdf459ec9b722f925f7555bee2565fe37109539d5669968eff9b7e7a7",
+      "source": "ucsb"
+    },
+    {
+      "id": "db3ee8bf1a80ecfe7029f721",
+      "origins": [
+        {
+          "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/lyndon-b-johnson-public-approval.html",
+          "retrieved_at": "2026-09-17T04:24:28.034170+00:00",
+          "url": "https://www.presidency.ucsb.edu/statistics/data/lyndon-b-johnson-public-approval"
+        }
+      ],
+      "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/lyndon-b-johnson-public-approval.html",
+      "sha256": "9e5a7a3342855254a12cd5d8af0c81647be2d31b986b0aca9aa0d4f323904e0b",
+      "source": "ucsb"
+    },
+    {
+      "id": "430bf4e3fa817da52e90c47f",
+      "origins": [
+        {
+          "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/richard-m-nixon-public-approval.html",
+          "retrieved_at": "2026-09-17T04:24:28.453432+00:00",
+          "url": "https://www.presidency.ucsb.edu/statistics/data/richard-m-nixon-public-approval"
+        }
+      ],
+      "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/richard-m-nixon-public-approval.html",
+      "sha256": "93168a5b7b9cb9bfa84de130c5412b3bd32eb07eb302ad10562209ea0071bedd",
+      "source": "ucsb"
+    },
+    {
+      "id": "3223c6161977721ece114d42",
+      "origins": [
+        {
+          "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/ronald-reagan-public-approval.html",
+          "retrieved_at": "2026-09-17T04:24:28.550389+00:00",
+          "url": "https://www.presidency.ucsb.edu/statistics/data/ronald-reagan-public-approval"
+        }
+      ],
+      "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/ronald-reagan-public-approval.html",
+      "sha256": "2c89808e8ee087186d2ce30ca9db55af2443191ab2378c68ec6408775605b2ad",
+      "source": "ucsb"
+    },
+    {
+      "id": "50669150a04e3d5d1f51dbe4",
+      "origins": [
+        {
+          "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/william-j-clinton-public-approval.html",
+          "retrieved_at": "2026-09-17T04:24:28.638849+00:00",
+          "url": "https://www.presidency.ucsb.edu/statistics/data/william-j-clinton-public-approval"
+        }
+      ],
+      "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z/raw/william-j-clinton-public-approval.html",
+      "sha256": "1a4525794d08faac55416801d0923b8aa0ec7fa9d618ab3043c6e6a6d234052f",
+      "source": "ucsb"
+    },
+    {
+      "id": "de4ae5530fc2267e8006d2bb",
+      "origins": [
+        {
+          "path": "data/features/who/current_2026/snapshots/20260917T041853.970083Z/raw/who_covid_weekly.csv",
+          "retrieved_at": "2026-09-17T04:18:53.495313+00:00",
+          "url": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-data.csv"
+        },
+        {
+          "path": "data/features/who/historical_2026/snapshots/20260917T042526.984189Z/raw/who_covid_weekly.csv",
+          "retrieved_at": "2026-09-17T04:25:26.461819+00:00",
+          "url": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-data.csv"
+        }
+      ],
+      "path": "data/features/who/current_2026/snapshots/20260917T041853.970083Z/raw/who_covid_weekly.csv",
+      "sha256": "81c1bdb31ae97ce09c3edc3059dec0ceebf9c59a8d8ccfbe978e0d919813fba4",
+      "source": "who"
+    },
+    {
+      "id": "2d32478eb2ad7bfade589abb",
+      "origins": [
+        {
+          "path": "data/features/yougov/current_2026/snapshots/20260917T041900.895484Z/raw/report_000.pdf",
+          "retrieved_at": "2026-09-17T04:18:59.536901+00:00",
+          "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_HGAKAIQ.pdf"
+        }
+      ],
+      "path": "data/features/yougov/current_2026/snapshots/20260917T041900.895484Z/raw/report_000.pdf",
+      "sha256": "c54943d1957efe592d44ceb51ea6d11eb3f42969a2b398f3f475e9bdc789382e",
+      "source": "yougov"
+    },
+    {
+      "id": "efdfe5fda18a6d0c3f2059a7",
+      "origins": [
+        {
+          "path": "data/features/yougov/current_2026/snapshots/20260917T041900.895484Z/raw/report_001.pdf",
+          "retrieved_at": "2026-09-17T04:18:59.642379+00:00",
+          "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_ZmVljW6.pdf"
+        }
+      ],
+      "path": "data/features/yougov/current_2026/snapshots/20260917T041900.895484Z/raw/report_001.pdf",
+      "sha256": "3a7da89a9f77588209a2a2f82155ee53060701c837d9cfd20c7e967806b26d7a",
+      "source": "yougov"
+    },
+    {
+      "id": "f797e9dffd55ae62313088ca",
+      "origins": [
+        {
+          "path": "data/features/yougov/current_2026/snapshots/20260917T041900.895484Z/raw/report_002.pdf",
+          "retrieved_at": "2026-09-17T04:18:59.899711+00:00",
+          "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_yVe1kKt.pdf"
+        }
+      ],
+      "path": "data/features/yougov/current_2026/snapshots/20260917T041900.895484Z/raw/report_002.pdf",
+      "sha256": "6cb29d5188072a6b97fa88e1117a24b5c5a3a604e2bf16d07492432c34545a29",
+      "source": "yougov"
+    },
+    {
+      "id": "67af8783ca030b3547f20775",
+      "origins": [
+        {
+          "path": "data/features/yougov/current_2026/snapshots/20260917T041900.895484Z/raw/report_003.pdf",
+          "retrieved_at": "2026-09-17T04:18:59.973595+00:00",
+          "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econtoplines_B94Xkmi.pdf"
+        }
+      ],
+      "path": "data/features/yougov/current_2026/snapshots/20260917T041900.895484Z/raw/report_003.pdf",
+      "sha256": "9aefabe77cd2efee7320ec4c407698803daf5d87cf26832cea437eb85e7144f3",
+      "source": "yougov"
+    },
+    {
+      "id": "81622cbd60e1491850c85ee2",
+      "origins": [
+        {
+          "path": "data/features/yougov/current_2026/snapshots/20260917T041900.895484Z/raw/report_004.pdf",
+          "retrieved_at": "2026-09-17T04:19:00.359911+00:00",
+          "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econtoplines_U8xI6DT.pdf"
+        }
+      ],
+      "path": "data/features/yougov/current_2026/snapshots/20260917T041900.895484Z/raw/report_004.pdf",
+      "sha256": "e4b8f06aa4e1f42973ccd5c1932790a5ef41d4a20c8a5b42a4b135a40efec12b",
+      "source": "yougov"
+    },
+    {
+      "id": "746fa4d62d6dbe29990fa4a8",
+      "origins": [
+        {
+          "path": "data/features/yougov/current_2026/snapshots/20260917T041900.895484Z/raw/report_005.pdf",
+          "retrieved_at": "2026-09-17T04:19:00.462831+00:00",
+          "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econtoplines_Vglw52E.pdf"
+        }
+      ],
+      "path": "data/features/yougov/current_2026/snapshots/20260917T041900.895484Z/raw/report_005.pdf",
+      "sha256": "2353842fcd05f781768b9b4cd5771d9a5fdba01e54d0a85b1a5a40229336c84c",
+      "source": "yougov"
+    },
+    {
+      "id": "2f892b1a4ccca1678b9deb25",
+      "origins": [
+        {
+          "path": "data/features/yougov/current_2026/snapshots/20260917T041900.895484Z/raw/report_006.pdf",
+          "retrieved_at": "2026-09-17T04:19:00.893205+00:00",
+          "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econtoplines_ZLmkpUi.pdf"
+        }
+      ],
+      "path": "data/features/yougov/current_2026/snapshots/20260917T041900.895484Z/raw/report_006.pdf",
+      "sha256": "30793ff8c34a693c1df30af35916b86147e9d39070be49feb6a5dd8ba3cdc1e1",
+      "source": "yougov"
+    }
+  ],
+  "bundles": [
+    {
+      "manifest_sha256": "ec211a0c13cf8c7cddc2bb9f83e0f2043c9637baf9b3962bd6b876b481370210",
+      "path": "data/features/bea/current_2026/snapshots/20260917T042448.755633Z"
+    },
+    {
+      "manifest_sha256": "f8d312ab9b061531c2e0cd7d08ba49bb0cf5389c5368c258f27d54510014c9ca",
+      "path": "data/features/bea/historical_2026/snapshots/20260917T042621.121597Z"
+    },
+    {
+      "manifest_sha256": "d5b453cea124b0bb12af088cf0a61cb862a07093c1a05041920be4387b9ed115",
+      "path": "data/features/bls/current_2026/snapshots/20260917T042447.548921Z"
+    },
+    {
+      "manifest_sha256": "2b4eceaf294a0f03e610cbc37a831283cf023579cf69534076fd848be6efe8f9",
+      "path": "data/features/bls/historical_2026/snapshots/20260917T042420.614936Z"
+    },
+    {
+      "manifest_sha256": "de49e276f9b02296d49c8f8367df177429aff2ff0220dcfb3cb3435ebbb064f3",
+      "path": "data/features/cboe/current_2026/snapshots/20260917T043202.438493Z"
+    },
+    {
+      "manifest_sha256": "ff15f275d95f70c6ccb4ac71eefe45faf5c76d4e7e0a93906781b1958a029b1c",
+      "path": "data/features/cboe/historical_2026/snapshots/20260917T042420.968568Z"
+    },
+    {
+      "manifest_sha256": "3b932610f218aec56099bed044a3e998aa4af7bc3a9cf092325aa4ff0d700003",
+      "path": "data/features/cdc/current_2026/snapshots/20260917T041851.560286Z"
+    },
+    {
+      "manifest_sha256": "9b2a716464bba783ff89782e664503ddfe186f4a3f0130b124df7cb4fbcec466",
+      "path": "data/features/cdc/historical_2026/snapshots/20260917T042432.944994Z"
+    },
+    {
+      "manifest_sha256": "253694786701eb91f18385d6e914412b5243ed7e43e413b602aa7885030568b2",
+      "path": "data/features/cdc_nhsn/current_2026/snapshots/20260917T042328.864876Z"
+    },
+    {
+      "manifest_sha256": "307f7404e3fcd2c7fd16244ee6cbf1d2a8b411cba8d2dd5609a1201baf63bd36",
+      "path": "data/features/cdc_nhsn/historical_2026/snapshots/20260917T042524.379244Z"
+    },
+    {
+      "manifest_sha256": "be2502b8ddf7dc66232438220da7b27e902ff6963a065e7339f10f79ad056e0a",
+      "path": "data/features/congress/current_2026/snapshots/20260917T041858.130126Z"
+    },
+    {
+      "manifest_sha256": "c707bff643bac516ebf54c45417e71869771933944ce6c82ff0291dbbf8920d5",
+      "path": "data/features/congress/historical_2026/snapshots/20260917T042611.704765Z"
+    },
+    {
+      "manifest_sha256": "be09dd324ba451147f86a798e9fbf3ad095ccbf319928b8cfb118f3299bc8989",
+      "path": "data/features/epu/current_2026/snapshots/20260917T041833.786307Z"
+    },
+    {
+      "manifest_sha256": "7f47d2f2cda402e2e6d1e767ae45180aabe3ce7a87c3a7affb49c79eab6605a3",
+      "path": "data/features/epu/historical_2026/snapshots/20260917T042423.067359Z"
+    },
+    {
+      "manifest_sha256": "49e552c07a04bebfc0a10b480ee592ec1c9a3a594eafce2c60f9c8356e801ecd",
+      "path": "data/features/fred/current_2026/snapshots/20260917T042448.546101Z"
+    },
+    {
+      "manifest_sha256": "f771d93db70c7b1646833b9cbc48d52f9a6778a51bf139c10d67b18a5d5c24bc",
+      "path": "data/features/fred/historical_2026/snapshots/20260917T042620.950234Z"
+    },
+    {
+      "manifest_sha256": "f8efbb96641d80f56fa1ba66ebdffa6b772b30e19d361cff557fa2f1570c728a",
+      "path": "data/features/french/current_2026/snapshots/20260917T041855.110387Z"
+    },
+    {
+      "manifest_sha256": "188cf0793dcec54d75fd44372a7b5b9aea5c83a467258656281cf2d185d1c54d",
+      "path": "data/features/french/historical_2026/snapshots/20260917T042608.868593Z"
+    },
+    {
+      "manifest_sha256": "9137ba5399c15f6fc48bf2fde62858a374061a1a06a0d7c612fb7ad707560a0f",
+      "path": "data/features/gpr/current_2026/snapshots/20260917T041833.190437Z"
+    },
+    {
+      "manifest_sha256": "31b4f0f6c40da8bd7f52cd3b0d520170150aed472857cb42fc9537e4b402a5b6",
+      "path": "data/features/gpr/historical_2026/snapshots/20260917T042422.467763Z"
+    },
+    {
+      "manifest_sha256": "ef397250e9685771129a8acaf977af0522608bd5332c33175cb00b31061563bf",
+      "path": "data/features/infectious_emv/current_2026/snapshots/20260917T043202.834524Z"
+    },
+    {
+      "manifest_sha256": "d43324ca85343dc0338fea904f0e41ba04c03d3fc2f60623c339cbe1bb581d2c",
+      "path": "data/features/infectious_emv/historical_2026/snapshots/20260917T042421.428914Z"
+    },
+    {
+      "manifest_sha256": "0ac16b4f101c60892275a49d9cf007e93d993a6bd8fb2124bd952b98db821880",
+      "path": "data/features/michigan/current_2026/snapshots/20260917T041838.467365Z"
+    },
+    {
+      "manifest_sha256": "0cc54f55c5da0e6f0db390f7c175196f9f335cce8da7b8cfb56c444b3925e82d",
+      "path": "data/features/michigan/historical_2026/snapshots/20260917T042426.441900Z"
+    },
+    {
+      "manifest_sha256": "1f248f69bb9b0605c9dac46857cebc2e11e5dd3879d09678c7b7a9eefc561d43",
+      "path": "data/features/oecd/current_2026/snapshots/20260917T042449.109723Z"
+    },
+    {
+      "manifest_sha256": "81f6993ee7ca5801ab98c4a117bfcbdbbce6c9b88baf731c06016a29050a26a5",
+      "path": "data/features/oecd/historical_2026/snapshots/20260917T042621.187711Z"
+    },
+    {
+      "manifest_sha256": "f7feed23733d8d40d1b87741aa4f1abfe053b0c32e13a9958ca3db284b909b8a",
+      "path": "data/features/owid/current_2026/snapshots/20260917T042408.793122Z"
+    },
+    {
+      "manifest_sha256": "d20ba01fd6eb8be3bbbc7ac13c1ede7893530e7e5f0a85307e5a5caffb048c3c",
+      "path": "data/features/owid/historical_2026/snapshots/20260917T042607.936931Z"
+    },
+    {
+      "manifest_sha256": "7910c57d8ae1d287678d6361f0165f2627b4187c62958607140a0fca1005b617",
+      "path": "data/features/oxcgrt/historical_2026/snapshots/20260917T042635.988467Z"
+    },
+    {
+      "manifest_sha256": "16d1117b86d80afd9d4a9eb00cde4095cd82ccf41fc4a8fc36881056036f8eef",
+      "path": "data/features/policy_agendas/current_2026/snapshots/20260917T043202.129541Z"
+    },
+    {
+      "manifest_sha256": "081fdfe954bb2c33d99bdca7dfb0c3bad90d8ec1877c4b5f194a92a73f3b6eb0",
+      "path": "data/features/policy_agendas/historical_2026/snapshots/20260917T043127.996748Z"
+    },
+    {
+      "manifest_sha256": "f303f557c5a586a0fdfd9f5e89742588878a98ee125a4cd7e33fca2dedc58510",
+      "path": "data/features/silver_bulletin/current_2026/snapshots/20260917T041836.196391Z"
+    },
+    {
+      "manifest_sha256": "81752804d3bc1d384d4bf19b12e6c53d1e0d8f40f9a3770efc78f32c523d04d2",
+      "path": "data/features/silver_bulletin/historical_2026/snapshots/20260917T042424.152863Z"
+    },
+    {
+      "manifest_sha256": "f8a179bebdd663f86fde718c5f94355a45bea53c88898cf947b2ba9d68415a7d",
+      "path": "data/features/ucdp/current_2026/snapshots/20260917T042555.375606Z"
+    },
+    {
+      "manifest_sha256": "9e6ea8443383051a9b95e94334a8dbdb62c7a8100f0ef02ae812c0398d64c292",
+      "path": "data/features/ucdp/historical_2026/snapshots/20260917T042703.748578Z"
+    },
+    {
+      "manifest_sha256": "d90caa1488ae582c79f50820b7d1fa9c6e27e024f34e197f7743bcbfc412a27e",
+      "path": "data/features/ucsb/current_2026/snapshots/20260917T041838.609576Z"
+    },
+    {
+      "manifest_sha256": "b1fbad7d204134bcf5cc0ec516b20cbaddae8719ea62c638d5066c38b9e9ce44",
+      "path": "data/features/ucsb/historical_2026/snapshots/20260917T042428.640303Z"
+    },
+    {
+      "manifest_sha256": "08c880ed59c0750125b98be4b791406a8f4606522d926a10eed8823ba95a75a8",
+      "path": "data/features/who/current_2026/snapshots/20260917T041853.970083Z"
+    },
+    {
+      "manifest_sha256": "ac869c109540d47b55194c09992a1a7b6538c98531f30f317e11b7de77efd65f",
+      "path": "data/features/who/historical_2026/snapshots/20260917T042526.984189Z"
+    },
+    {
+      "manifest_sha256": "803d7d28a016add4189d74eb4ba07fa60f51201d94bad7775438bc6ba2a5a889",
+      "path": "data/features/yougov/current_2026/snapshots/20260917T041900.895484Z"
+    }
+  ],
+  "schema_version": 1
+}

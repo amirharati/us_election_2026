@@ -1,0 +1,11 @@
+{
+  "extracted_from": "data/final/snapshots/20260919T172852.916455Z",
+  "format": "compact-v1",
+  "historical_inputs": "Frozen reviewed labels and model series; raw-source audit performed at extraction",
+  "source_manifest_sha256": "76cbc3bded7429267f5d948a453033c51c545e14b3697113a351d52bc3c7523b",
+  "source_manifests": {
+    "data/final_inputs/accepted/snapshots/20260919T172338.369397Z": "fda0cecfb7147d9986aef01e16e80f5ba14e5a215f0787e194d9b930e0f2973f",
+    "data/final_inputs/features_cost_v2/snapshots/20260918T040522.018413Z": "8a354c076be6ce731af2d297274254901e7468aa797d5ec99aecb71f77984c71",
+    "data/final_inputs/political/snapshots/20260917T172509.230474Z": "aabb26ea82c658594a33e45f3c624b40841578a8075d4bf03052185a4cb27890"
+  }
+}

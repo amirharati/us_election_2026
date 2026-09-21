@@ -1,0 +1,8 @@
+{
+  "scenario": "matched_live",
+  "cycle": 2026,
+  "df": 5,
+  "warmup": 2000,
+  "draws": 4000,
+  "chains": 8
+}

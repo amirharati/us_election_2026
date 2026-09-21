@@ -1,0 +1,83 @@
+{
+  "version": "preparation-acceptance-v1",
+  "snapshots": {
+    "reviewed": {
+      "path": "data/reviewed/snapshots/20260917T020151.686202Z",
+      "sha256": "95986e319b1c1da6c8b40bdbb4ae0b1c2fc88d5d17623f9e733f2414546beae9"
+    },
+    "refresh": {
+      "path": "data/refresh_2026/snapshots/20260917T024613.466701Z",
+      "sha256": "2c5e46cedd0900eef7795f44212d67562f7419f18def0f8cc2662ce3cc973ffc"
+    },
+    "historical": {
+      "path": "data/historical/snapshots/20260916T160814.584879Z",
+      "sha256": "7b00014e812a51a99efc9b9095c955056ff9bd9bb49937dfc8d18c74dae5935d"
+    },
+    "prepared": {
+      "path": "data/prepared/snapshots/20260916T160854.192960Z",
+      "sha256": "d1ba333c32ed322d23aa9d9321d58cc653f4d1a03fe83dfbc042ab1cef94be2f"
+    },
+    "normalized": {
+      "path": "data/normalized/snapshots/20260916T160901.748097Z",
+      "sha256": "4395a6171af9316e17043999fe346c67f8bd6f68efb8d1ef2ff1c3e28e332dd3"
+    },
+    "2026": {
+      "path": "data/2026/snapshots/20260914T174421.503748Z",
+      "sha256": "849454ecd89c671c18825f8b6f2b11f9c7df0cce8bba2afe566affaba9bab06e"
+    },
+    "current_raw": {
+      "path": "data/2026/snapshots/20260917T023907.012578Z",
+      "sha256": "b0544aa65402aec42ed9733ea232fe532385ba3c11dcf7787d3ae2bc0a18fb86"
+    }
+  },
+  "files": {
+    "reports/data_review/basis_availability_metadata.csv": "e17fa70ef81771001301f9f58686ceec8951dda0607ac3f7e4792c37bd2e6e10",
+    "reports/data_review/basis_availability_summary.json": "aeb973843015be4afda3a87cad944dfd30aa31922533de51e2d1d1b4c9af0742",
+    "reports/data_review/survey_identity_identity.csv": "e3ed8eb1cfad9b3ce574ffd12d44560081bb15e4f7c81e47f44f1ec5504c54f7",
+    "reports/data_review/survey_identity_summary.json": "8c5ccfe84013770c3fe12c0fd11feb07691cc2db295bae94e4d28fca7d76a9e9",
+    "config/survey_identity_v1.json": "b8fdba6a06dc873e61e9e721ffabefb59074c0130f9fc4354754e108e5f8b2d3",
+    "config/basis_availability_v1.json": "861406fc121767437fe36db33db90a6e2c8433754bd257a7f9c9afd189d73949",
+    "config/estimate_basis_annotations.json": "344af428abe2fc85170a27963e583d9599058eb5952e5327b94c23d2b09950cf",
+    "config/analysis_policy_v1.json": "97dfa7098f38cea662aa8bee5119066f28837495a06cb21aae3800c317aaf76b",
+    "reports/source_audit/preparation_acceptance/louisiana_rules.html": "0352112761242daece50617e6c08e39327b70f2fc96583fb5c84d45fdee7a9f7",
+    "reports/source_audit/preparation_acceptance/provenance.json": "390ec328df2ca5fe7f956b5cd24d6142dff46bea3475b3a5ed8422fcf4d59359",
+    "reports/source_audit/preparation_acceptance/mississippi_vote_rules.pdf": "db334a82e345229a3b2c516e7262da309ec98e82caea94ea4a8fed7eecce9ce7",
+    "reports/source_audit/preparation_acceptance/maine_rules.html": "0655662ef33ea56695e6cbfb671af92e372a093ae776f28fcac02a0c6947a8f3",
+    "reports/source_audit/preparation_acceptance/rules_web.txt": "05166e7f25c45548e199a7715a23b486c6a67dd8dd79625dad0f25ee05e561be",
+    "reports/source_audit/preparation_acceptance/rule_evidence_web.txt": "0a32d8eaf8e876d1b27c6478a6f35087c35dc20915ac03bdb57e44880f14c727",
+    "reports/source_audit/preparation_acceptance/senate_roster_web.txt": "333d2d51120c66d314118c43497e84b65d26a383267d96ea831db5259895e6d9",
+    "reports/source_audit/preparation_acceptance/senate_roster.csv": "39abe6a5f2ca2e73a6162b28a301f0c87a4c2e7e52ca34193071b744498d7293"
+  },
+  "basis_file": "reports/data_review/basis_availability_metadata.csv",
+  "identity_file": "reports/data_review/survey_identity_identity.csv",
+  "roster_file": "reports/source_audit/preparation_acceptance/senate_roster.csv",
+  "rule_reviews": {
+    "AK": {
+      "source": "https://www.elections.alaska.gov/election-information/",
+      "rule": "rcv"
+    },
+    "ME": {
+      "source": "https://www.maine.gov/sos/elections-voting/upcoming-elections",
+      "rule": "rcv"
+    },
+    "GA": {
+      "source": "https://georgia.gov/events/2026-12-01/election-day-general-election-runoff",
+      "rule": "majority_runoff"
+    },
+    "LA": {
+      "source": "https://www.sos.la.gov/elections-voting/how-candidates-are-elected",
+      "rule": "plurality"
+    },
+    "MS": {
+      "source": "https://www.sos.ms.gov/news/secretary-michael-watson-clarifies-vote-requirements-mississippi-elected-offices",
+      "rule": "plurality"
+    }
+  },
+  "limitations": [
+    "Not a complete ballot roster",
+    "All current contests require explicit seat-model acceptance",
+    "Older source-only labels remain provisional",
+    "Incomplete historical publication vintages",
+    "No weighting or new-feature selection performed"
+  ]
+}

@@ -1,0 +1,49 @@
+[
+  {
+    "file": "maine_rules.html",
+    "url": "https://www.maine.gov/sos/elections-voting/upcoming-elections",
+    "sha256": "0655662ef33ea56695e6cbfb671af92e372a093ae776f28fcac02a0c6947a8f3",
+    "retrieved_at": "2026-09-17T02:58:54.518483+00:00"
+  },
+  {
+    "file": "louisiana_rules.html",
+    "url": "https://www.sos.la.gov/elections-voting/how-candidates-are-elected",
+    "sha256": "0352112761242daece50617e6c08e39327b70f2fc96583fb5c84d45fdee7a9f7",
+    "retrieved_at": "2026-09-17T02:58:55.191466+00:00"
+  },
+  {
+    "file": "senate_roster_web.txt",
+    "url": "https://www.senate.gov/senators/",
+    "sha256": "333d2d51120c66d314118c43497e84b65d26a383267d96ea831db5259895e6d9",
+    "retrieved_at": "2026-09-17T03:00:48.241145+00:00",
+    "format": "web tool extraction or derived table; direct requests denied for some sites"
+  },
+  {
+    "file": "senate_roster.csv",
+    "url": "https://www.senate.gov/senators/",
+    "sha256": "39abe6a5f2ca2e73a6162b28a301f0c87a4c2e7e52ca34193071b744498d7293",
+    "retrieved_at": "2026-09-17T03:00:48.241259+00:00",
+    "format": "web tool extraction or derived table; direct requests denied for some sites"
+  },
+  {
+    "file": "rules_web.txt",
+    "url": "https://www.dailypress.senate.gov/on-the-floor/senate-facts/",
+    "sha256": "05166e7f25c45548e199a7715a23b486c6a67dd8dd79625dad0f25ee05e561be",
+    "retrieved_at": "2026-09-17T03:00:48.241436+00:00",
+    "format": "web tool extraction or derived table; direct requests denied for some sites"
+  },
+  {
+    "file": "rule_evidence_web.txt",
+    "url": "https://georgia.gov/events/2026-12-01/election-day-general-election-runoff",
+    "sha256": "0a32d8eaf8e876d1b27c6478a6f35087c35dc20915ac03bdb57e44880f14c727",
+    "retrieved_at": "2026-09-17T03:00:48.241612+00:00",
+    "format": "web tool extraction or derived table; direct requests denied for some sites"
+  },
+  {
+    "file": "mississippi_vote_rules.pdf",
+    "url": "https://mcusercontent.com/c9f52743f930fd93605c3a79c/files/db0bf77c-d59d-01a2-a6e1-ff93c657cab2/Majority_Chart.pdf",
+    "linked_from": "https://www.sos.ms.gov/news/secretary-michael-watson-clarifies-vote-requirements-mississippi-elected-offices",
+    "sha256": "db334a82e345229a3b2c516e7262da309ec98e82caea94ea4a8fed7eecce9ce7",
+    "retrieved_at": "2026-09-17T03:01:16.810066+00:00"
+  }
+]

@@ -1,0 +1,154 @@
+{
+  "coverage_start": "1975-01-01",
+  "definition": "Day-granular political majority/leadership control, not exact seats, committee organization or supermajority. Boundaries effective on stated day.",
+  "exceptions": [
+    {
+      "end_exclusive": "2003-01-03",
+      "note": "Republicans gained numerical advantage when Talent entered; no Senate reorganization occurred while out of session. Leadership-control feature remains DEM until 2003-01-03; do not interpret it as seat plurality.",
+      "start": "2002-11-23"
+    }
+  ],
+  "house_transitions": [
+    [
+      "1975-01-01",
+      "DEM"
+    ],
+    [
+      "1995-01-03",
+      "REP"
+    ],
+    [
+      "2007-01-03",
+      "DEM"
+    ],
+    [
+      "2011-01-03",
+      "REP"
+    ],
+    [
+      "2019-01-03",
+      "DEM"
+    ],
+    [
+      "2023-01-03",
+      "REP"
+    ]
+  ],
+  "presidents": [
+    [
+      "1969-01-20",
+      "Richard Nixon",
+      "REP"
+    ],
+    [
+      "1974-08-09",
+      "Gerald Ford",
+      "REP"
+    ],
+    [
+      "1977-01-20",
+      "Jimmy Carter",
+      "DEM"
+    ],
+    [
+      "1981-01-20",
+      "Ronald Reagan",
+      "REP"
+    ],
+    [
+      "1989-01-20",
+      "George H. W. Bush",
+      "REP"
+    ],
+    [
+      "1993-01-20",
+      "Bill Clinton",
+      "DEM"
+    ],
+    [
+      "2001-01-20",
+      "George W. Bush",
+      "REP"
+    ],
+    [
+      "2009-01-20",
+      "Barack Obama",
+      "DEM"
+    ],
+    [
+      "2017-01-20",
+      "Donald Trump (first term)",
+      "REP"
+    ],
+    [
+      "2021-01-20",
+      "Joe Biden",
+      "DEM"
+    ],
+    [
+      "2025-01-20",
+      "Donald Trump (second term)",
+      "REP"
+    ]
+  ],
+  "reviewed_through": "2026-09-17",
+  "senate_transitions": [
+    [
+      "1975-01-01",
+      "DEM"
+    ],
+    [
+      "1981-01-03",
+      "REP"
+    ],
+    [
+      "1987-01-03",
+      "DEM"
+    ],
+    [
+      "1995-01-03",
+      "REP"
+    ],
+    [
+      "2001-01-03",
+      "DEM"
+    ],
+    [
+      "2001-01-20",
+      "REP"
+    ],
+    [
+      "2001-06-06",
+      "DEM"
+    ],
+    [
+      "2003-01-03",
+      "REP"
+    ],
+    [
+      "2007-01-03",
+      "DEM"
+    ],
+    [
+      "2015-01-03",
+      "REP"
+    ],
+    [
+      "2021-01-20",
+      "DEM"
+    ],
+    [
+      "2025-01-03",
+      "REP"
+    ]
+  ],
+  "source_directory": "data/political_context/sources/2026-09-17",
+  "source_manifest_sha256": "3de19dd111edac869d4d998e7f8fbe6af5536265b2a59c764a33c62883ca7a3e",
+  "sources": [
+    "https://history.house.gov/Institution/Presidents-Coinciding/Party-Government/",
+    "https://history.house.gov/Institution/Presidents-Coinciding/Presidents-Coinciding/",
+    "https://www.senate.gov/history/partydiv.htm",
+    "https://www.senate.gov/artandhistory/history/resources/pdf/chronlist.pdf"
+  ],
+  "version": 1
+}

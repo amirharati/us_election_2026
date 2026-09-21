@@ -1,0 +1,17 @@
+{
+  "version": "fixed-feature-scores-v1",
+  "minimum_history_values": 3,
+  "clip_component_abs": 3.0,
+  "level_directions": {
+    "consumer_sentiment_3m": 1,
+    "inflation_yoy_pct": -1,
+    "unemployment_pct": -1
+  },
+  "change_anchors": ["jan01", "previous_oct31"],
+  "approval_center_pct": 50.0,
+  "approval_scale_pp": 10.0,
+  "disruption_column": "extraordinary_event_any_4y",
+  "weights": "equal across three economic variables; equal across both change anchors within each variable",
+  "missing_policy": "all required components must be known; no imputation or renormalization",
+  "party_policy": "multiply economic levels, momentum and approval by +1 for Democratic WH / -1 for Republican WH; disruption stays unsigned"
+}

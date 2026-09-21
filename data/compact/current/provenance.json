@@ -1,0 +1,13 @@
+{
+  "extracted_from": "data/final/snapshots/20260921T013717.589042Z",
+  "format": "compact-v1",
+  "historical_inputs": "Frozen reviewed labels and model series; raw-source audit performed at extraction",
+  "previous_compact_manifest": "a7f9115906852042fc20c2231e19191f39f6f6922ed8e0b8099b9306aa1ea7be",
+  "source_manifest_sha256": "ce14d3ea50112d2fede693fecd03d4ecb29f797dbc5347f127adfe0534d6c192",
+  "source_manifests": {
+    "data/final_inputs/accepted/snapshots/20260921T013338.978265Z": "6ad3dfeeb240106c23d99bd9322bb04c9b24a4d90b504fd24b9df6dc11647137",
+    "data/final_inputs/features_prepared/snapshots/20260921T013500.021296Z": "02443a735ac79c4315daa01fdbb582847351a86b46b1f209b2089a005b5c14bb",
+    "data/final_inputs/political/snapshots/20260920T183130.402220Z": "74744f0c6fbc2e659dd39a09e77c0c3a480eac4f58d4a88871b9f54381326184"
+  },
+  "update": "Replace current poll feed and changed current feature partitions; historical partitions unchanged"
+}

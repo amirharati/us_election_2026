@@ -1,0 +1,48 @@
+{
+  "version": "survey-identity-v1",
+  "aliases": [
+    {
+      "canonical": "noble predictive insights",
+      "names": [
+        "OH Predictive Insights",
+        "Noble Predictive Insights"
+      ],
+      "source": "https://www.noblepredictiveinsights.com/post/noble-predictive-insights-formerly-o-h-predictive-insights-announces-new-website-launch",
+      "evidence": "May 3 2023 company announcement explicitly describes the rebrand"
+    },
+    {
+      "canonical": "gqr",
+      "names": [
+        "Greenberg Quinlan Rosner",
+        "GQR"
+      ],
+      "source": "https://www.gqrr.com/news/collin-ward-joins-gqr-to-lead-expanded-corporate-advocacy-communications-practice/",
+      "evidence": "Company announcement uses both names for the same practice"
+    }
+  ],
+  "tracking_source": "https://intel.morningconsult.com/mc-content/trackers/2022-midterm-elections-tracker",
+  "tracking_evidence": "Nov 1 2022 page: likely-voter generic ballot is a three-day moving average; Politico/registered-voter research is separate weekly/biweekly research. No respondent IDs or effective N supplied.",
+  "limitations": "Rating families, joint labels, common URLs and matching shares are not proof of sample identity. Alias map is bounded and retrospective, not a complete corporate or historical-methodology map.",
+  "sample_links": [
+    {
+      "canonical": "nyt:419d2158-916b-4df7-a656-28a6a005e069",
+      "members": [
+        "nyt:17eb9dd9-8dc0-4319-80c9-638fe7b99c58",
+        "nyt:419d2158-916b-4df7-a656-28a6a005e069"
+      ],
+      "status": "same_reported_survey",
+      "source": "https://www.wral.com/news/nccapitol/cooper-leads-whatley-in-us-senate-race-new-nc-polls-april-2026/",
+      "evidence": "One Opinion Diagnostics April21\u201324 survey; identical full candidate vector, firm UUID, race, population, N and article URL in two source records; created Apr29 and May14. Preserve original IDs and N. Canonical ID uses earlier source record."
+    }
+  ],
+  "pending_duplicates": [
+    {
+      "members": [
+        "silver_bulletin:89897",
+        "silver_bulletin:900442"
+      ],
+      "status": "unverified_shared_tracker_url",
+      "handling": "retain_flag_and_one-copy_sensitivity; revisit at refresh"
+    }
+  ]
+}

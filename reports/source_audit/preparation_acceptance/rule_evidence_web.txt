@@ -1,0 +1,187 @@
+Election Day - General Election Runoff | Georgia.gov (https://georgia.gov/events/2026-12-01/election-day-general-election-runoff)
+citeturn166view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://georgia.gov/events/2026-12-01/election-day-general-election-runoff","lineno":null}); Total lines: 131
+--------------------------------------------------------------------------------
+Election Information - Division of Elections (https://www.elections.alaska.gov/election-information/)
+citeturn166view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.elections.alaska.gov/election-information/","lineno":154}); Total lines: 313
+L39:     * cite33†Yugtun Mumigcisteḿeng Ikayungcalleq (Hooper Bay Yup’ik) L40:     * cite34†Cugtun Qantulimeg Ukisqangcall’er (Nunivak Cup’ig) L41:     * cite35†Yugtun Mumigcisteḿek Ikasungcalleq (Norton Sound Kotlik Yup’ik) L51:     * cite26†Ballot Measures L52:   * cite44†Political Parties L53:   * cite45†Contact Us L54:     * cite46†Division Contact Information L55:     * cite47†Invite the Alaska Division of Elections L56:     * cite45†Election Workers L57:     * cite48†Careers in Elections L58:   * cite49†Research L59:     * cite50†Election Essentials L60:     * cite51†Press Releases and Public Notices L61:     * cite52†Ballot Count System & Election Security L62:     * cite53†Statistics L63:     * cite54†District and Precinct Maps L64:     * cite55†Election Law†www.akleg.gov L65:     * cite56†Regulations†www.akleg.gov L66:     * cite20†Sample Ballots L67:     * cite26†Ballot Measures L68:     * cite57†Lists And Reports L69:     * cite58†Electoral College L70:     * cite39†Elected Officials L71:     * cite59†Alaska Community List L72: # Election Information
+L73: 
+L74: cite23†Primary Election Information L75: 
+L76: cite21†General Election Information L77: 
+L78: cite60†City & Borough Elections L79: 
+L80: cite24†REAA Election Information L81: 
+L82: cite61†Special Election Information L83: 
+L84: cite62†Presidential Elections L85: 
+L86: Voting Process
+L87: 
+L88: cite63†Sample Ballots L89: 
+L90: cite52†Alaska’s Ballot Counting Process L91: 
+L92: cite27†Election Results L93: Primary Elections are held on the third Tuesday in August of even numbered years. REAA Elections are held annually on the first Tuesday in October. General Elections are held on the Tuesday after the first Monday in November of even numbered years. Presidential Elections are held every four years during the General Election.
+L94: 
+L95: Upcoming Elections
+L96: #### REAA Election
+L97: October 6, 2026
+L98: 
+L99: #### General Election
+L100: November 3, 2026
+L101: 
+L102: ## Primary Election Information
+L103: 
+L104: #### Ballot Information
+L105: 
+L106: #### Election Date
+L107: 
+L108: No Entries Found
+L109: 
+L110: cite64†Full Election Calendar! L111: 
+L112: For information about the history of the State of Alaska Primary Elections see our cite65†Primary Election History timeline.
+L113: ### Nonpartisan Top Four Primary Election
+L114: 
+L115: Nonpartisan Top Four Primary Election – Explained
+L116: A Nonpartisan Top Four Primary is used to determine the top four vote getters that will advance to the General Election, regardless of political affiliation. In accordance with Alaska’s laws, a primary election candidate does not have to be a member of a political party or a political group to run for office.
+L117: If a candidate is registered as affiliated with a political party or group, it does not imply the candidate is nominated by, endorsed by, approved by, or associated with that particular party or group. Currently, there is one primary ballot.
+L118: ##### Nonpartisan Top Four Primary Frequently Asked Questions
+L119: 
+L120: What is a Nonpartisan Top Four Primary Election?
+L121: 
+L122: There will be only one ballot, with all candidates regardless of political party or political group affiliation. Voters may cast a vote for one candidate in each race, regardless of voter’s political affiliation.
+L123: Only four candidates in each race who receive the most votes will advance to the general election. The primary election no longer determines the nominee of a political party or group.
+L124: What happens when there are less than four candidates in a race?
+L125: 
+L126: All candidates for that race will move on to the general election.
+L127: 
+L128: When was the Nonpartisan Top Four Primary Election system first used?
+L129: 
+L130: The June 11, 2022 special primary election.
+L131: 
+L132: Will my registered political affiliation affect who I can vote for?
+L133: 
+L134: No. All candidates will be on the same ballot and all voters may vote for anyone regardless of registration affiliation.
+L135: Can a candidate with no party affiliation still run in the general election by petition?
+L136: 
+L137: No. The nominating petition process no longer allows for candidates to run in the general election using the nominating petition process. If a candidate did not appear on the primary election ballot or was not successful in advancing to the general election, they may run as an official write-in candidate as long as they file a letter of intent at least 5 days prior to the general election.
+L138: Who can run in the primary election?
+L139: 
+L140: Any registered voter who meets the requirements of AS 15.25.030(a) and seeks to become a candidate in the primary election can file a declaration of candidacy. Primary candidates do not need to be a member of a political party or political group.
+L141: 
+L142: What happens if a potential candidate misses the filing deadline?
+L143: 
+L144: They cannot participate in the primary election but can file paperwork to run as a write-in candidate on the general election ballot.
+L145: Is there a limit as to how many candidates can file for the primary election?
+L146: 
+L147: No.
+L148: 
+L149: Will there still be a ballot measures only ballot in the primary?
+L150: 
+L151: No. With a nonpartisan primary, there is no need for a ballot measures only ballot.
+L152: 
+L153: cite66†Top Four Primary Election Rack Card L154: ## General Election Information
+L155: 
+L156: #### Ballot Information
+L157: 
+L158: #### Election Dates
+L159: 
+L160: November 3, 2026
+L161: 
+L162: cite64†Full Election Calendar! L163: 
+L164: cite26†Ballot Measure(s) appearing on the general election ballot.
+L165: ### Ranked Choice Voting
+L166: In accordance with Alaska law, all general elections will be conducted by Ranked Choice Voting (RCV). RCV allows voters to rank candidates in order of preference. Only the top four candidates who received the greatest number of votes for any office in the primary will appear on the general election ballot. There will still be a space for write-in candidates except for Presidential races. For a candidate to win, they must receive a majority (50% + 1) of total votes cast.
+L167: If no candidate receives a majority of 1st choice votes in the 1st round of counting, more rounds of counting continue until a candidate reaches a majority.
+L168: Ranked Choice Voting – Explained
+L169: ##### Ranked Choice Voting Frequently Asked Questions
+L170: 
+L171: What is Ranked Choice Voting?
+L172: 
+L173: Ranked Choice Voting allows voters to rank candidates in order of preference. In the 2020 General election, voters approved an initiative to establish a Ranked Choice Voting general election system.
+L174: 
+L175: What happens if I only vote for one candidate?
+L176: 
+L177: Your vote is counted in round one and your vote stays with your candidate throughout tabulation.
+L178: 
+L179: Do I have to rank all candidates in the general election?
+L180: No. You may rank as many or as few candidates as you would like. If you do not want to rank a candidate, leave their row blank.
+L181: 
+L182: What happens if there is a tie during one of the tabulation rounds? Which candidate gets to advance?
+L183: In the event of a tie between two candidates with the fewest votes in a round, Alaska law resolves the tie “by lot” to determine which candidate is eliminated and which candidate advances to the next round. Believe it or not, “by lot” means the division’s director will flip a coin, draw a name or draw straws. The same applies if there is a tie for the last two remaining candidates.
+L184: 
+L185: How do I mark my ballot in a Ranked Choice Voting election?
+L186: Fill in only one oval per candidate, in each column. You do not have to rank all the candidates. Your second choice is only counted if your first-choice candidate is eliminated.
+L187: cite67†Image: Correct way to mark a ballot example L188: Instructions: Vote by ranking candidates of your choice.
+L189: Rank as many or as few candidates as you like.
+L190: Completely fill in no more than one oval for each candidate or column.
+L191: For your 1st choice, fill in the oval in the 1st choice column.
+L192: For your 2nd choice, fill in the oval in the 2nd choice column, and so on
+L193: If you make a mistake, you can ask for a new ballot.
+L194: How will I know when and why my candidates were eliminated?
+L195: 
+L196: Results reports showing how many votes each candidate had in every round and how votes were transferred when candidates were eliminated will be available on the division’s website, in addition to a summary report showing the final votes tallied for the winning candidate.
+L197: 
+L198: What offices are elected using Ranked Choice Voting?
+L199: The President/Vice-President, U.S. Senator, U.S. Representative, Governor/Lieutenant Governor, and all State Representatives and State Senators.
+L200: 
+L201: When was the Ranked Choice Voting system implemented?
+L202: 
+L203: The August 16, 2022 Special General Election.
+L204: 
+L205: cite68†RCV Rack Card L206: 
+L207: How does Ranked Choice Voting work?
+L208: In each race, voters rank their choices in order of preference. Votes are counted in rounds.
+L209: This is what happens:
+L210: Round One:
+L211: The Division counts all 1st choices. If a candidate gets 50% + 1 vote in round one, that candidate wins and the counting stops.
+L212: If not, counting goes to Round Two.
+L213: Round Two (and beyond):
+L214: The candidate with the fewest votes gets eliminated. If you voted for that candidate, your vote goes to your next choice, and you still have a say in who wins. If your first-choice candidate was not eliminated, your vote stays with them. Votes are counted again.
+L215: This keeps happening in rounds until two candidates are left and the one with the most votes wins.
+L216: Is there a benefit of ranking multiple choices?
+L217: 
+L218: Yes. By ranking multiple candidates, you have a voice in who gets elected even if your top choice does not win. Ranking multiple candidates ensures your vote will go toward your second, third, fourth, or fifth choice if your top choice is eliminated, giving you more voice in who wins.
+L219: 
+L220: If I rank four candidates in a race, does that mean I got to vote four times?
+L221: No. You only get one vote counted per race. Your vote will only count toward your highest ranked candidate in that race who has not been eliminated. If your top choice candidate is eliminated, your vote will then count toward your next highest ranked candidate.
+L222: 
+L223: What about write-in candidates?
+L224: To vote for a candidate whose name is not on the ballot, write the person’s name on the “Write-in” line, and fill in an oval to rank your choice.
+L225: Write-in candidates only advance if they come in first or a close second in the initial results. Ballot Measure No. 2 did not change the law for write-in candidates, so the division issued a regulation at 6 AAC 25.071.
+L226: Write-ins will only be counted if the aggregate of all first choice votes cast for all write-ins for the particular office is:
+L227: 1. The highest number of first choice votes received by any candidate for the office or
+L228: 2. The second highest and the difference between the total number of first choice votes received by the leading candidate and the first-choice votes received by all the write-in candidates is less than .5 percent. (That percentage is calculated by dividing the difference by the total number of first choice votes received by the leading candidate and the write-ins.)
+L229: If the write-ins do not meet the above requirements, all write-in candidates are defeated. If the write-ins do clear this threshold, by leading or coming in a close second in the first round, the division will count the write-ins and treat them as individual candidates in the ranked choice tabulation.
+L230: What are mistakes to avoid?
+L231: If you skip a ranking, your next ranking moves up. Here, if your first-choice candidate is eliminated, your third choice counts as your second choice and your fourth choice would count as your third choice.
+L232: cite69†Image: Skipped ranking ballot example L233: If you skip two or more rankings in a row, only the rankings before the skipped rankings will count. Here, your first-choice counts, and the fourth choice would not count.
+L234: cite70†Image: Two skipped rankings example L235: If you give more than one candidate the same ranking, those rankings and later rankings will not count. Here, only your first-choice counts.
+L236: cite71†Image: Multiple candidates with same ranking ballot example L237: Your vote only counts once, even if you rank a candidate more than once. When a candidate is eliminated in a round, they are eliminated from all future rounds.
+L238: cite72†Image: Overvoted ballot example L239: When and where will the tabulation rounds take place?
+L240: 
+L241: Tabulation rounds will begin after the last counting of ballots on the 15th day following election day.
+L242: This will happen in Juneau at the Director’s Office. Just like past elections, all results are unofficial until the State Review Board certifies the election, and all eligible absentee and questioned votes are counted.
+L243: 
+L244: Will Ranked Choice Voting be used for judges and ballot measures?
+L245: No. All judicial retentions and ballot measures will continue to run in the same yes or no fashion as in past elections.
+L246: 
+L247: Will this information be available in other languages?
+L248: 
+L249: Yes. View translated Ranked Choice Voting pages here:
+L250: 
+L251: cite73†YUKON YUP’IK ❯ L252: 
+L253: cite74†BRISTOL BAY YUP’IK ❯ L254: 
+L255: cite75†GENERAL CENTRAL YUP’IK ❯ L256: 
+L257: cite76†HOOPER BAY YUP’IK ❯ L258: 
+L259: cite77†CHEVAK CUP’IK ❯ L260: 
+L261: cite78†NORTON SOUND KOTLIK YUP’IK ❯ L262: ## City and Borough Election Information
+L263: #### City and Borough Elections
+L264: 
+L265: City and borough clerks are responsible to administer local city and borough elections following procedures set out in their municipal ordinances and cite79†Alaska Statutes Title 29, Chapter 26†www.legis.state.ak.us .
+L266: 
+L267: You may find contact information for your local city or borough using the cite80†DCRA Community Index†dcra-cdo-dcced.opendata.arcgis.com .
+L268: If you have an issue with a city or borough election, you should first contact your local city or borough clerk to discuss the issue. Otherwise, you may contact a cite81†DCRA Local Government Specialist†www.commerce.alaska.gov for assistance.
+L269: #### State of Alaska Division of Elections Responsibilities
+L270: 
+L271: The Division of Elections does not have any oversight of city or borough elections.
+L272: The division maintains voter registration for Alaska, provides the list of registered voters within the city and borough boundaries to the clerk’s office, and processes voter history and registrations generated from the election. The division also maintains all precinct boundaries and street assignments and, polling place locations assigned to a precinct for state elections.
+L273: ## Presidential Elections
+L274: #### Primary Election Information
+L275: Alaska statutes do not provide candidate access to the primary election ballot for the office of President and Vice-President. Therefore, the State of Alaska does not conduct a presidential primary. The recognized political parties in Alaska select their Presidential and Vice-Presidential candidates in a manner prescribed by their party bylaws; typically, by caucus at times scheduled by each individual party.
+L276: Once the winner of the party’s caucus is determined, the delegates of each respective party go to their national party convention, which is a formal gathering of all party delegates, from all the states. At the national party convention, they formally vote and officially announce their party’s nominee for President and Vice-President.
+

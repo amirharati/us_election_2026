@@ -1,0 +1,14 @@
+{
+  "kind": "live_report",
+  "as_of": "2026-09-20",
+  "live_run": "outputs/live/20260921T003534.648280Z",
+  "live_manifest_sha256": "4e648bf04885c3a81ef2558272a502f34fff9094de573e01a98c7a7879eee798",
+  "watchlist_parameters": {
+    "recent_days": 30,
+    "min_width_pp": 25.0,
+    "min_samples": 3,
+    "min_firms": 2
+  },
+  "history_run": null,
+  "history_manifest_sha256": null
+}

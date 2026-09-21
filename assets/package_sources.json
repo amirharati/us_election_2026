@@ -1,0 +1,23 @@
+{
+  "source_lab": "US_election_2026",
+  "frozen_dataset": "data/final/snapshots/20260919T172852.916455Z",
+  "providers": [
+    "cboe",
+    "epu",
+    "fred",
+    "french",
+    "gpr",
+    "infectious_emv",
+    "michigan",
+    "oxcgrt",
+    "ucsb"
+  ],
+  "original_manifests": {
+    "reports/signed_state_factor/20260920T052241.012596Z": "d99be6aa93a075196fb9e548088aeb03cabf1d726046fa4cd9cbb5027438ae40",
+    "reports/simple_national_model/20260920T000314.601869Z": "2a3f1ad70de3eaa048f8bb18d0b5cdda0f9561962b589396f563c2eff73514b4",
+    "reports/official_repair_review/20260919T172552.860612Z": "e2c6df9310c39bff2b34ad691d1f3bdafac79bfafd710cf329b8982eeb354e88",
+    "reports/national_feature_prior/20260920T013619.322700Z": "731a896cb8382402e1447dfd48a3e0d41f419324467a03720ab88d03eeb9e785",
+    "reports/combined_student_model/20260920T025147.349063Z": "4d8769ee7f43c75ac6ad605e4dac7cb81c6c4e1961c6c1b2e91e6ce0d9aa0f27"
+  },
+  "scope": "Frozen accepted data and necessary raw/prepared inputs; trained fits, earlier-cycle selections and benchmark forecasts. Native scripts retained for numerical and acquisition helpers."
+}

@@ -1,0 +1,25 @@
+{
+  "as_of": "2026-09-17",
+  "disruption": "OR of health/VIX/GPR high-stress proxies; Jan(cutoff_year-4)..last closed month; original source/threshold limitations retained",
+  "feature_window": "Latest eligible closed month (or quarter); 3 consecutive months for means; exact 12-month endpoints for growth, 24 months for cpi_24m_pct",
+  "historical_horizon_days": 47,
+  "history": "1976 onward; all accepted versions/outcomes retained; 2016+ priority is not a cutoff",
+  "missing": "NaN; no imputation",
+  "not_forecast_ready_reasons": [
+    "complete_ballot_and_seat_mapping_restrictions",
+    "historical_publication_and_vintage_gaps",
+    "sample_version_and_model_likelihood_policy_pending"
+  ],
+  "observed_view": "Feature values masked unless observation by cutoff is supported; this does not certify poll availability (see poll_availability). Retrieval proves only availability on retrieval day or later",
+  "political": "Official effective-date reference within reviewed range; outside range missing",
+  "polls": "All versions preserved; screened counts are not independent samples. Quality/source restrictions remain separate.",
+  "reference_view": "Latest-revised source observations whose full reference periods end by the row cutoff; no publication guarantee",
+  "restricted_feature": "MIP/PDF mapping not admitted; all prepared source tables retained via pinned source catalog",
+  "selected_national_features": 35,
+  "staleness_days": {
+    "GDP": 200,
+    "monthly_or_daily_aggregates": 120
+  },
+  "state_prior": "Latest retained presidential result with result year strictly before context year",
+  "version": "final-alignment-v1"
+}

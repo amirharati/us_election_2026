@@ -1,0 +1,38 @@
+{
+  "version": "official-result-reviews-v1",
+  "margin_basis": "all valid candidate votes; D minus R as fraction",
+  "results": [
+    {
+      "outcome_id": "2018-WV-regular-gen",
+      "cycle": 2018,
+      "state": "WV",
+      "dem_votes": 290510,
+      "rep_votes": 271113,
+      "other_votes": 24411,
+      "total_votes": 586034,
+      "election_date": "2018-11-06",
+      "source_url": "https://www.fec.gov/documents/2705/federalelections2018.pdf",
+      "source_path": "data/official_result_reviews/20260919/fec2018.pdf",
+      "source_sha256": "6d7b65418458f40cb4d301f04034e79a6938344097c6d28ec418d676af757ab2",
+      "source_section": "U.S. Senate, West Virginia; printed pages 32\u201333",
+      "reviewed_at": "2026-09-19",
+      "expected_old_reason": "unofficial_source_result"
+    },
+    {
+      "outcome_id": "2020-SD-regular-gen",
+      "cycle": 2020,
+      "state": "SD",
+      "dem_votes": 143987,
+      "rep_votes": 276232,
+      "other_votes": 0,
+      "total_votes": 420219,
+      "election_date": "2020-11-03",
+      "source_url": "https://www.fec.gov/resources/cms-content/documents/federalelections2020.pdf",
+      "source_path": "data/official_result_reviews/20260919/fec2020.pdf",
+      "source_sha256": "e4e6d5efd911ff02bffffb47180d05278f98a07655bd390d078904f545d12836",
+      "source_section": "U.S. Senate, South Dakota",
+      "reviewed_at": "2026-09-19",
+      "expected_old_reason": "unofficial_source_result"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "version": "fixed-feature-scores-v2",
+  "minimum_history_values": 3,
+  "clip_component_abs": 3.0,
+  "approval_center_pct": 50.0,
+  "approval_scale_pp": 10.0,
+  "disruption_column": "extraordinary_event_any_4y",
+  "missing_policy": "all required components must be known; no imputation or renormalization",
+  "party_policy": "multiply economic levels, momentum and approval by +1 for Democratic WH / -1 for Republican WH; disruption stays unsigned",
+  "weights": "equal 1/3 sentiment, employment and cost pressure; cost families equal within block; change anchors equal within family",
+  "components": {
+    "consumer_sentiment_3m": {
+      "score": "economy_conditions",
+      "group": "sentiment",
+      "direction": 1,
+      "weight": 0.3333333333333333,
+      "center": "history_mean"
+    },
+    "unemployment_pct": {
+      "score": "economy_conditions",
+      "group": "employment",
+      "direction": -1,
+      "weight": 0.3333333333333333,
+      "center": "history_mean"
+    },
+    "inflation_yoy_pct": {
+      "score": "economy_conditions",
+      "group": "cost_pressure",
+      "direction": -1,
+      "weight": 0.1111111111111111,
+      "center": "zero"
+    },
+    "cpi_24m_pct": {
+      "score": "economy_conditions",
+      "group": "cost_pressure",
+      "direction": -1,
+      "weight": 0.1111111111111111,
+      "center": "zero"
+    },
+    "gasoline_yoy_pct": {
+      "score": "economy_conditions",
+      "group": "cost_pressure",
+      "direction": -1,
+      "weight": 0.1111111111111111,
+      "center": "zero"
+    },
+    "consumer_sentiment_3m__change_jan01": {
+      "score": "economy_momentum",
+      "group": "sentiment",
+      "direction": 1,
+      "weight": 0.16666666666666666,
+      "center": "zero"
+    },
+    "unemployment_pct__change_jan01": {
+      "score": "economy_momentum",
+      "group": "employment",
+      "direction": -1,
+      "weight": 0.16666666666666666,
+      "center": "zero"
+    },
+    "inflation_yoy_pct__change_jan01": {
+      "score": "economy_momentum",
+      "group": "cost_pressure",
+      "direction": -1,
+      "weight": 0.05555555555555555,
+      "center": "zero"
+    },
+    "cpi_level__pct_change_jan01": {
+      "score": "economy_momentum",
+      "group": "cost_pressure",
+      "direction": -1,
+      "weight": 0.05555555555555555,
+      "center": "zero"
+    },
+    "gasoline_cpi_level__pct_change_jan01": {
+      "score": "economy_momentum",
+      "group": "cost_pressure",
+      "direction": -1,
+      "weight": 0.05555555555555555,
+      "center": "zero"
+    },
+    "consumer_sentiment_3m__change_previous_oct31": {
+      "score": "economy_momentum",
+      "group": "sentiment",
+      "direction": 1,
+      "weight": 0.16666666666666666,
+      "center": "zero"
+    },
+    "unemployment_pct__change_previous_oct31": {
+      "score": "economy_momentum",
+      "group": "employment",
+      "direction": -1,
+      "weight": 0.16666666666666666,
+      "center": "zero"
+    },
+    "inflation_yoy_pct__change_previous_oct31": {
+      "score": "economy_momentum",
+      "group": "cost_pressure",
+      "direction": -1,
+      "weight": 0.05555555555555555,
+      "center": "zero"
+    },
+    "cpi_level__pct_change_previous_oct31": {
+      "score": "economy_momentum",
+      "group": "cost_pressure",
+      "direction": -1,
+      "weight": 0.05555555555555555,
+      "center": "zero"
+    },
+    "gasoline_cpi_level__pct_change_previous_oct31": {
+      "score": "economy_momentum",
+      "group": "cost_pressure",
+      "direction": -1,
+      "weight": 0.05555555555555555,
+      "center": "zero"
+    }
+  }
+}

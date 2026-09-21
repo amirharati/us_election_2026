@@ -1,0 +1,185 @@
+U.S. Senate: Senators (https://www.senate.gov/senators/)
+citeturn161view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.senate.gov/senators/","lineno":null}); Total lines: 326
+L0: cite0†Skip Content L1: 
+L2: cite1†Image: U.S. Flag L3: 
+L4: [Select]
+L5: 
+L6: 
+L7: 
+L8: [Input]
+L9: 
+L10: MENU[Input]
+L11:   * cite2†SENATORS [Input]
+L12:     * cite3†Contact Your Senators L13:     * cite4†Leadership & Officers L14:     * cite5†Former Senators L15:     * cite6†Qualifications & Terms of Service L16:     * cite7†Facts & Milestones L17:     * cite8†States in the Senate L18:   * cite9†COMMITTEES [Input]
+L19:     * cite10†Membership & Assignments L20:     * cite11†Hearings & Meetings L21:     * cite12†History L22:   * cite13†LEGISLATION & RECORDS [Input]
+L23:     * cite14†Bills, Acts, & Laws L24:     * cite15†Nominations L25:     * cite16†Treaties L26:     * cite17†Votes L27:     * cite18†Floor Proceedings L28:     * cite19†Rules & Procedure L29:     * cite20†Landmark Legislation L30:     * cite21†Sessions of Congress L31:     * cite22†Senate Archives L32:     * cite23†Public Disclosure L33:   * cite24†ART & ARTIFACTS [Input]
+L34:     * cite25†Collection Search L35:     * cite26†Fine Art L36:     * cite27†Decorative Art L37:     * cite28†Historical Images L38:     * cite29†Historical Artifacts L39:     * cite30†Thematic Collections L40:     * cite31†Exhibitions & Publications L41:   * cite32†ABOUT THE SENATE [Input]
+L42:     * cite33†Officers & Staff [Input]
+L43:       * cite34†Vice President L44:       * cite35†President Pro Tempore L45:       * cite36†Secretary of the Senate L46:       * cite37†Sergeant at Arms L47:       * cite38†Party Secretaries L48:       * cite39†Chaplain L49:       * cite40†Committee & Office Staff L50:       * cite41†Pages L51:     * cite42†Powers & Procedures [Input]
+L52:       * cite43†Censure L53:       * cite44†Declarations of War L54:       * cite45†Expulsion L55:       * cite46†Filibuster & Cloture L56:       * cite47†Impeachment L57:       * cite48†Investigations L58:       * cite49†Nominations L59:       * cite50†Rules L60:       * cite51†Treaties L61:       * cite52†Voting L62:     * cite53†Origins & Foundations [Input]
+L63:       * cite54†The Senate & the Constitution L64:       * cite55†Electing & Appointing Senators L65:       * cite56†Committee System L66:       * cite57†Idea of the Senate L67:       * cite58†Parties & Leadership L68:     * cite59†Parties & Leadership L69:     * cite60†Historic Buildings & Spaces [Input]
+L70:       * cite61†The Capitol L71:       * cite62†Senate Chamber L72:       * cite63†Historic Rooms L73:       * cite64†Senate Office Buildings L74:       * cite65†Congressional Meeting Places L75:       * cite66†Past Senate Chambers L76:     * cite67†Traditions & Symbols L77:     * cite68†Oral History Project L78:     * cite69†Historical Highlights [Input]
+L79:       * cite70†1787-1800 L80:       * cite71†1801-1850 L81:       * cite72†1851-1877 L82:       * cite73†1878-1920 L83:       * cite74†1921-1940 L84:       * cite75†1941-1963 L85:       * cite76†1964-present L86:     * cite77†Senate Stories Blog L87:     *     * cite78†Research Tools L88:     *
+L89: # Senators
+L90: 
+L91: * * *
+L92: 
+L93: 119th Congress
+L94: 
+L95: SH: Hart Senate Office Building
+L96: SD: Dirksen Senate Office Building
+L97: SR: Russell Senate Office Building
+L98: 
+L99: cite79†Suite & Telephone List (PDF) | cite80†XML L100: All telephone numbers preceded by 202-22
+L101: Senator's Name  | State  | Party  | Class  | Office Room*  | Phone
+L102: --- | --- | --- | --- | --- | ---
+L103: cite81†Alsobrooks, Angela D.†alsobrooks.senate.gov | Maryland  | Democratic  | 1 I  | SR-374  | 4-4524
+L104: cite82†Armstrong, Alan†www.armstrong.senate.gov | Oklahoma  | Republican  | 2 II  | SH-330  | 4-4721
+L105: cite83†Baldwin, Tammy†www.baldwin.senate.gov | Wisconsin  | Democratic  | 1 I  | SH-141  | 4-5653
+L106: cite84†Banks, Jim†www.banks.senate.gov | Indiana  | Republican  | 1 I  | SH-303  | 4-4814
+L107: cite85†Barrasso, John†www.barrasso.senate.gov | Wyoming  | Republican  | 1 I  | SD-307  | 4-6441
+L108: cite86†Bennet, Michael F.†www.bennet.senate.gov | Colorado  | Democratic  | 3 III  | SR-261  | 4-5852
+L109: cite87†Blackburn, Marsha†www.blackburn.senate.gov | Tennessee  | Republican  | 1 I  | SD-357  | 4-3344
+L110: cite88†Blumenthal, Richard†www.blumenthal.senate.gov | Connecticut  | Democratic  | 3 III  | SH-503  | 4-2823
+L111: cite89†Blunt Rochester, Lisa†www.bluntrochester.senate.gov | Delaware  | Democratic  | 1 I  | SH-513  | 4-2441
+L112: cite90†Booker, Cory A.†www.booker.senate.gov | New Jersey  | Democratic  | 2 II  | SH-306  | 4-3224
+L113: cite91†Boozman, John†www.boozman.senate.gov | Arkansas  | Republican  | 3 III  | SD-555  | 4-4843
+L114: cite92†Britt, Katie Boyd†www.britt.senate.gov | Alabama  | Republican  | 3 III  | SR-416  | 4-5744
+L115: cite93†Budd, Ted†www.budd.senate.gov | North Carolina  | Republican  | 3 III  | SR-354  | 4-3154
+L116: cite94†Cantwell, Maria†www.cantwell.senate.gov | Washington  | Democratic  | 1 I  | SH-511  | 4-3441
+L117: cite95†Capito, Shelley Moore†www.capito.senate.gov | West Virginia  | Republican  | 2 II  | SR-170  | 4-6472
+L118: cite96†Cassidy, Bill†www.cassidy.senate.gov | Louisiana  | Republican  | 2 II  | SD-455  | 4-5824
+L119: cite97†Collins, Susan M.†www.collins.senate.gov | Maine  | Republican  | 2 II  | SD-413  | 4-2523
+L120: cite98†Coons, Christopher A.†www.coons.senate.gov | Delaware  | Democratic  | 2 II  | SR-218  | 4-5042
+L121: cite99†Cornyn, John†www.cornyn.senate.gov | Texas  | Republican  | 2 II  | SH-517  | 4-2934
+L122: cite100†Cortez Masto, Catherine†www.cortezmasto.senate.gov | Nevada  | Democratic  | 3 III  | SH-309  | 4-3542
+L123: cite101†Cotton, Tom†www.cotton.senate.gov | Arkansas  | Republican  | 2 II  | SR-326  | 4-2353
+L124: cite102†Cramer, Kevin†www.cramer.senate.gov | North Dakota  | Republican  | 1 I  | SH-313  | 4-2043
+L125: cite103†Crapo, Mike†www.crapo.senate.gov | Idaho  | Republican  | 3 III  | SD-239  | 4-6142
+L126: cite104†Cruz, Ted†www.cruz.senate.gov | Texas  | Republican  | 1 I  | SR-167  | 4-5922
+L127: cite105†Curtis, John R.†www.curtis.senate.gov | Utah  | Republican  | 1 I  | SH-502  | 4-5251
+L128: cite106†Daines, Steve†www.daines.senate.gov | Montana  | Republican  | 2 II  | SH-320  | 4-2651
+L129: cite107†Duckworth, Tammy†www.duckworth.senate.gov | Illinois  | Democratic  | 3 III  | SH-524  | 4-2854
+L130: cite108†Durbin, Richard J.†www.durbin.senate.gov | Illinois  | Democratic  | 2 II  | SH-711  | 4-2152
+L131: cite109†Ernst, Joni†www.ernst.senate.gov | Iowa  | Republican  | 2 II  | SR-260  | 4-3254
+L132: cite110†Fetterman, John†www.fetterman.senate.gov | Pennsylvania  | Democratic  | 3 III  | SR-142  | 4-4254
+L133: cite111†Fischer, Deb†www.fischer.senate.gov | Nebraska  | Republican  | 1 I  | SR-448  | 4-6551
+L134: cite112†Gallego, Ruben†www.gallego.senate.gov | Arizona  | Democratic  | 1 I  | SH-302  | 4-4521
+L135: cite113†Gillibrand, Kirsten E.†www.gillibrand.senate.gov | New York  | Democratic  | 1 I  | SR-478  | 4-4451
+L136: cite114†Graham, Darline†www.dgraham.senate.gov | South Carolina  | Republican  | 2 II  | SR-211  | 4-5972
+L137: cite115†Grassley, Chuck†www.grassley.senate.gov | Iowa  | Republican  | 3 III  | SH-135  | 4-3744
+L138: cite116†Hagerty, Bill†www.hagerty.senate.gov | Tennessee  | Republican  | 2 II  | SR-251  | 4-4944
+L139: cite117†Hassan, Margaret Wood†www.hassan.senate.gov | New Hampshire  | Democratic  | 3 III  | SH-324  | 4-3324
+L140: cite118†Hawley, Josh†www.hawley.senate.gov | Missouri  | Republican  | 1 I  | SR-381  | 4-6154
+L141: cite119†Heinrich, Martin†www.heinrich.senate.gov | New Mexico  | Democratic  | 1 I  | SH-709  | 4-5521
+L142: cite120†Hickenlooper, John W.†www.hickenlooper.senate.gov | Colorado  | Democratic  | 2 II  | SH-316  | 4-5941
+L143: cite121†Hirono, Mazie K.†www.hirono.senate.gov | Hawaii  | Democratic  | 1 I  | SH-109  | 4-6361
+L144: cite122†Hoeven, John†www.hoeven.senate.gov | North Dakota  | Republican  | 3 III  | SR-338  | 4-2551
+L145: cite123†Husted, Jon†www.husted.senate.gov | Ohio  | Republican  | 3 III  | SR-304  | 4-3353
+L146: cite124†Hyde-Smith, Cindy†www.hydesmith.senate.gov | Mississippi  | Republican  | 2 II  | SH-528  | 4-5054
+L147: cite125†Johnson, Ron†www.ronjohnson.senate.gov | Wisconsin  | Republican  | 3 III  | SH-328  | 4-5323
+L148: cite126†Justice, James C.†www.justice.senate.gov | West Virginia  | Republican  | 1 I  | SH-509  | 4-3954
+L149: cite127†Kaine, Tim†www.kaine.senate.gov | Virginia  | Democratic  | 1 I  | SR-231  | 4-4024
+L150: cite128†Kelly, Mark†www.kelly.senate.gov | Arizona  | Democratic  | 3 III  | SH-516  | 4-2235
+L151: cite129†Kennedy, John†www.kennedy.senate.gov | Louisiana  | Republican  | 3 III  | SR-437  | 4-4623
+L152: cite130†Kim, Andy†www.kim.senate.gov | New Jersey  | Democratic  | 1 I  | SH-520  | 4-4744
+L153: cite131†King, Angus S., Jr.†www.king.senate.gov | Maine  | Independent  | 1 I  | SH-133  | 4-5344
+L154: cite132†Klobuchar, Amy†www.klobuchar.senate.gov | Minnesota  | Democratic  | 1 I  | SD-425  | 4-3244
+L155: cite133†Lankford, James†www.lankford.senate.gov | Oklahoma  | Republican  | 3 III  | SH-731  | 4-5754
+L156: cite134†Lee, Mike†www.lee.senate.gov | Utah  | Republican  | 3 III  | SR-363  | 4-5444
+L157: cite135†Luján, Ben Ray†www.lujan.senate.gov | New Mexico  | Democratic  | 2 II  | SR-498  | 4-6621
+L158: cite136†Lummis, Cynthia M.†www.lummis.senate.gov | Wyoming  | Republican  | 2 II  | SR-127A  | 4-3424
+L159: cite137†Markey, Edward J.†www.markey.senate.gov | Massachusetts  | Democratic  | 2 II  | SD-255  | 4-2742
+L160: cite138†Marshall, Roger†www.marshall.senate.gov | Kansas  | Republican  | 2 II  | SR-479A  | 4-4774
+L161: cite139†McConnell, Mitch†www.mcconnell.senate.gov | Kentucky  | Republican  | 2 II  | SR-317  | 4-2541
+L162: cite140†McCormick, David†mccormick.senate.gov | Pennsylvania  | Republican  | 1 I  | SH-702  | 4-6324
+L163: cite141†Merkley, Jeff†www.merkley.senate.gov | Oregon  | Democratic  | 2 II  | SH-531  | 4-3753
+L164: cite142†Moody, Ashley†www.moody.senate.gov | Florida  | Republican  | 3 III  | SR-387  | 4-3041
+L165: cite143†Moran, Jerry†www.moran.senate.gov | Kansas  | Republican  | 3 III  | SD-521  | 4-6521
+L166: cite144†Moreno, Bernie†www.moreno.senate.gov | Ohio  | Republican  | 1 I  | SR-284  | 4-2315
+L167: cite145†Murkowski, Lisa†www.murkowski.senate.gov | Alaska  | Republican  | 3 III  | SH-522  | 4-6665
+L168: cite146†Murphy, Christopher†www.murphy.senate.gov | Connecticut  | Democratic  | 1 I  | SH-136  | 4-4041
+L169: cite147†Murray, Patty†www.murray.senate.gov | Washington  | Democratic  | 3 III  | SR-154  | 4-2621
+L170: cite148†Ossoff, Jon†www.ossoff.senate.gov | Georgia  | Democratic  | 2 II  | SH-317  | 4-3521
+L171: cite149†Padilla, Alex†www.padilla.senate.gov | California  | Democratic  | 3 III  | SH-331  | 4-3553
+L172: cite150†Paul, Rand†www.paul.senate.gov | Kentucky  | Republican  | 3 III  | SR-295  | 4-4343
+L173: cite151†Peters, Gary C.†www.peters.senate.gov | Michigan  | Democratic  | 2 II  | SH-724  | 4-6221
+L174: cite152†Reed, Jack†www.reed.senate.gov | Rhode Island  | Democratic  | 2 II  | SH-728  | 4-4642
+L175: cite153†Ricketts, Pete†www.ricketts.senate.gov | Nebraska  | Republican  | 2 II  | SR-139  | 4-4224
+L176: cite154†Risch, James E.†www.risch.senate.gov | Idaho  | Republican  | 2 II  | SR-483  | 4-2752
+L177: cite155†Rosen, Jacky†www.rosen.senate.gov | Nevada  | Democratic  | 1 I  | SH-713  | 4-6244
+L178: cite156†Rounds, Mike†www.rounds.senate.gov | South Dakota  | Republican  | 2 II  | SH-716  | 4-5842
+L179: cite157†Sanders, Bernard†www.sanders.senate.gov | Vermont  | Independent  | 1 I  | SD-332  | 4-5141
+L180: cite158†Schatz, Brian†www.schatz.senate.gov | Hawaii  | Democratic  | 3 III  | SH-722  | 4-3934
+L181: cite159†Schiff, Adam B.†www.schiff.senate.gov | California  | Democratic  | 1 I  | SH-112  | 4-3841
+L182: cite160†Schmitt, Eric†www.schmitt.senate.gov | Missouri  | Republican  | 3 III  | SR-404  | 4-5721
+L183: cite161†Schumer, Charles E.†www.schumer.senate.gov | New York  | Democratic  | 3 III  | SH-322  | 4-6542
+L184: cite162†Scott, Rick†www.rickscott.senate.gov | Florida  | Republican  | 1 I  | SH-110  | 4-5274
+L185: cite163†Scott, Tim†www.scott.senate.gov | South Carolina  | Republican  | 3 III  | SH-104  | 4-6121
+L186: cite164†Shaheen, Jeanne†www.shaheen.senate.gov | New Hampshire  | Democratic  | 2 II  | SH-506  | 4-2841
+L187: cite165†Sheehy, Tim†www.sheehy.senate.gov | Montana  | Republican  | 1 I  | SR-124  | 4-2644
+L188: cite166†Slotkin, Elissa†www.slotkin.senate.gov | Michigan  | Democratic  | 1 I  | SR-291  | 4-4822
+L189: cite167†Smith, Tina†www.smith.senate.gov | Minnesota  | Democratic  | 2 II  | SH-720  | 4-5641
+L190: cite168†Sullivan, Dan†www.sullivan.senate.gov | Alaska  | Republican  | 2 II  | SH-706  | 4-3004
+L191: cite169†Thune, John†www.thune.senate.gov | South Dakota  | Republican  | 3 III  | SD-511  | 4-2321
+L192: cite170†Tillis, Thom†www.tillis.senate.gov | North Carolina  | Republican  | 2 II  | SD-113  | 4-6342
+L193: cite171†Tuberville, Tommy†www.tuberville.senate.gov | Alabama  | Republican  | 2 II  | SR-455  | 4-4124
+L194: cite172†Van Hollen, Chris†www.vanhollen.senate.gov | Maryland  | Democratic  | 3 III  | SH-730  | 4-4654
+L195: cite173†Warner, Mark R.†www.warner.senate.gov | Virginia  | Democratic  | 2 II  | SH-703  | 4-2023
+L196: cite174†Warnock, Raphael G.†www.warnock.senate.gov | Georgia  | Democratic  | 3 III  | SH-717  | 4-3643
+L197: cite175†Warren, Elizabeth†www.warren.senate.gov | Massachusetts  | Democratic  | 1 I  | SH-311  | 4-4543
+L198: cite176†Welch, Peter†www.welch.senate.gov | Vermont  | Democratic  | 3 III  | SR-115  | 4-4242
+L199: cite177†Whitehouse, Sheldon†www.whitehouse.senate.gov | Rhode Island  | Democratic  | 1 I  | SH-530  | 4-2921
+L200: cite178†Wicker, Roger F.†www.wicker.senate.gov | Mississippi  | Republican  | 1 I  | SR-425  | 4-6253
+L201: cite179†Wyden, Ron†www.wyden.senate.gov | Oregon  | Democratic  | 3 III  | SD-221  | 4-5244
+L202: cite180†Young, Todd†www.young.senate.gov | Indiana  | Republican  | 3 III  | SD-185  | 4-5623
+L203: cite181†What is a class? L204: 
+L205: * * *
+L206: 
+L207: cite3†Contact Your Senators Information on how to contact current senators. L208: 
+L209: cite4†Leadership & Officers Current Senate leaders and officers as well as links to historical essays, lists, and artwork depicting former leaders. L210: 
+L211: cite5†Former Senators Links to historical lists and statistics, art work, images, and research collections of former senators. L212: cite6†Qualifications & Terms of Service Information on the requirements to become a senator, a senator's term of service, and the oath of office. L213: 
+L214: cite7†Facts & Milestones Links to biographical information, Senate service accomplishments, military service, awards and honors, and more for current and former senators. L215: 
+L216: cite182†States in the Senate Lists of all senators from each state and facts about each state's history in the U.S. Senate. L217:   * cite3†Contact Your Senators L218:   * cite4†Leadership & Officers L219:   * cite5†Former Senators L220:   * cite6†Qualifications & Terms of Service L221:   * cite7†Facts & Milestones L222:   * cite8†States in the Senate L223: ### Information about Current Senators
+L224: 
+L225: Party Division 119th Congress
+L226: • Majority Party: Republicans (53 seats)
+L227: • Minority Party: Democrats (45 seats)
+L228: • Other Parties: Independents (2 seats)
+L229: cite183†More Party Division Information L230: 
+L231: Senators by Class
+L232: • cite184†Class I (terms expire 2031)
+L233: • cite185†Class II (terms expire 2027)
+L234: • cite186†Class III (terms expire 2029)
+L235: 
+L236: * * *
+L237: 
+L238: The following lists from cite7†Facts & Milestones include current senators.
+L239: Senate Service
+L240: • cite187†Appointed Senators L241: • cite188†Committee Membership L242: • cite189†Longest Serving Senators L243: • cite190†New senators (2001-Present) L244: • cite191†Senate Freshman since Direct Election (1914) L245: • cite192†Senate Roll Call Votes L246: • cite193†Senate Salaries (1789-Present) L247: • cite194†Senators (1789-Present) L248: • cite195†Senators who have Cast more than 10,000 Votes L249: • cite196†Senators who have Delivered Washington's Farewell Address L250: Political Parties
+L251: • cite197†Senators Representing Third or Minor Parties L252: • cite198†Senators who Changed Parties during Senate Service (since 1890) L253: 
+L254: Diversity in the Senate
+L255: • cite199†Foreign-born Senators L256: • cite200†Ethnic Diversity in the Senate L257: • cite201†Women Senators L258: 
+L259: Military & Professional Service
+L260: • cite202†Marines in the Senate L261: • cite203†Physicians in the Senate L262: 
+L263: Other Accomplishments
+L264: • cite204†Books Written by Sitting Senators L265: 
+L266: cite7†Visit Facts & Milestones for more lists about senators L267: ### Related Links
+L268: 
+L269: • cite205†Biographical Directory†bioguide.congress.gov L270: • cite206†Membership of the 119th Congress: A Profile†www.congress.gov (CRS)
+L271: • cite207†Congressional Directory†www.govinfo.gov (GPO-GovInfo)
+L272: • cite208†Congressional Pictorial Directory†www.govinfo.gov (GPO-GovInfo)
+L273: ### How to Contact My Senator
+L274: 
+L275: • cite3†Contacting U.S. Senators (Guide)
+L276: 
+L277: Can't find your senator's name in the list of senators? Perhaps he or she is a member of the cite209†U.S. House of Representatives†www.house.gov , a cite5†former senator , or a senator in your cite210†State Legislature†www.loc.gov .
+L278: 
+L279: ### cite211†SENATORS L280: 
+L281:   * cite3†Contact L282:   * cite4†Leadership & Officers L283:   * cite5†Former Senators L284:   * cite6†Qualifications & Terms of Service L285:   * cite7†Facts & Milestones L286:   * cite8†States L287: ### cite9†COMMITTEES L288: 
+L289:   * cite10†Membership & Assignments L290:   * cite11†Hearings & Meetings L291:   * cite12†History L292: 
+L293: ###
+L294: cite13†LEGISLATION & RECORDS L295: 
+L296:   * cite14†Bills, Acts, & Laws L297:   * cite15†Nominations L298:   * cite16†Treaties L299:   * cite17†Votes L300:   * cite18†Floor Proceedings L301:   * cite19†Rules & Procedure L302:   * cite20†Landmark Legislation L303:   * cite21†Sessions of Congress L304:   * cite22†Senate Archives L305:   * cite23†Public Disclosure L306: ### cite24†ART & ARTIFACTS L307: 
+L308:   * cite26†Fine Art L309:   * cite27†Decorative Art L310:   * cite28†Historical Images L311:   * cite29†Historical Artifacts L312:   * cite30†Thematic Collections L313: ### cite32†ABOUT THE SENATE L314: 
+L315:   * cite33†Officers & Staff L316:   * cite42†Powers & Procedures L317:   * cite53†Origins & Foundations L318:   * cite59†Parties & Leadership L319:   * cite60†Historic Buildings & Spaces L320:   * cite67†Traditions & Symbols L321:   * cite68†Oral History Project L322:   * cite69†Historical Highlights L323:   * cite77†Senate Stories Blog L324:   * cite78†Research Tools L325: cite212†Contact |   cite213†Content Responsibility |   cite214†Usage Policy |   cite215†Privacy Policy |   cite216†Employment & Internships |   cite217†Procurement |   cite218†www.senate.gov 

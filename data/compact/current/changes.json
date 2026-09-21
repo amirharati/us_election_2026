@@ -1,0 +1,24 @@
+{
+  "generic_ballot": {
+    "added_poll_ids": [],
+    "counts": {
+      "added": 0,
+      "removed": 0,
+      "revised": 0
+    },
+    "removed_poll_ids": [],
+    "revised_fields": [],
+    "revised_poll_ids": []
+  },
+  "senate": {
+    "added_poll_ids": [],
+    "counts": {
+      "added": 0,
+      "removed": 0,
+      "revised": 0
+    },
+    "removed_poll_ids": [],
+    "revised_fields": [],
+    "revised_poll_ids": []
+  }
+}

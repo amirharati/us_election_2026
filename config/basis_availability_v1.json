@@ -1,0 +1,252 @@
+{
+  "version": "basis-availability-v1",
+  "timing_cutoff": "2022-11-07",
+  "timing": [
+    {
+      "observation_id": "538_archive:generic_ballot:741",
+      "source_poll_id": "81621",
+      "source_question_id": "166068",
+      "expected": {
+        "dem_share": "0.35",
+        "rep_share": "0.35",
+        "sample_size": "1004.0",
+        "population": "a",
+        "poll_end": "2022-11-07"
+      },
+      "status": "found_release_after_cutoff",
+      "documented_release_date": "2022-11-08",
+      "evidence": "https://www.ipsos.com/en-us/news-polls/ipsos-core-political-survey-presidential-approval-tracker-11072022",
+      "notes": "Adult35/35 N1004 report datedNov8; does not date other populations."
+    },
+    {
+      "observation_id": "538_archive:generic_ballot:742",
+      "source_poll_id": "81621",
+      "source_question_id": "166075",
+      "expected": {
+        "dem_share": "0.4576",
+        "rep_share": "0.44549999999999995",
+        "sample_size": "452.0",
+        "population": "lv",
+        "poll_end": "2022-11-07"
+      },
+      "status": "exact_estimate_timing_unverified",
+      "documented_release_date": null,
+      "evidence": "https://www.ipsos.com/en-us/news-polls/ipsos-core-political-survey-presidential-approval-tracker-11072022",
+      "notes": "The linked Nov 7 article chart ends Nov 1, so it cannot establish this Nov 4\u20137 LV estimate. Same-survey adult report is dated Nov 8; archive notes direct provision of LV data by Ipsos."
+    },
+    {
+      "observation_id": "538_archive:generic_ballot:743",
+      "source_poll_id": "81621",
+      "source_question_id": "166084",
+      "expected": {
+        "dem_share": "0.4043",
+        "rep_share": "0.4068",
+        "sample_size": "789.0",
+        "population": "rv",
+        "poll_end": "2022-11-07"
+      },
+      "status": "exact_estimate_timing_unverified",
+      "documented_release_date": null,
+      "evidence": "https://www.ipsos.com/en-us/news-polls/ipsos-core-political-survey-presidential-approval-tracker-11072022",
+      "notes": "The linked Nov 7 article chart ends Nov 1, so it cannot establish this Nov 4\u20137 LV estimate. Same-survey adult report is dated Nov 8; archive notes direct provision of LV data by Ipsos."
+    },
+    {
+      "observation_id": "538_archive:generic_ballot:744",
+      "source_poll_id": "81650",
+      "source_question_id": "166091",
+      "expected": {
+        "dem_share": "0.49",
+        "rep_share": "0.49",
+        "sample_size": "12208.0",
+        "population": "lv",
+        "poll_end": "2022-11-07"
+      },
+      "status": "announced_after_cutoff",
+      "documented_release_date": "2022-11-08",
+      "evidence": "https://unidosus.org/press-releases/poll-finds-concern-about-inflation-and-strong-support-for-progressive-policies-on-abortion-climate-change-immigration-making-big-corporations-pay-more-taxes/",
+      "notes": "Sponsor announcement sets public data release for Nov 8 at 5 p.m. ET; N=12,208. Archive links a Nov 10 follow-up. This is an election-voter survey, with prior voters and definite voters."
+    },
+    {
+      "observation_id": "538_archive:generic_ballot:757",
+      "source_poll_id": "81635",
+      "source_question_id": "166087",
+      "expected": {
+        "dem_share": "0.44",
+        "rep_share": "0.39",
+        "sample_size": "1540.0",
+        "population": "a",
+        "poll_end": "2022-11-02"
+      },
+      "status": "found_release_after_cutoff",
+      "documented_release_date": "2022-11-08",
+      "evidence": "https://premise.com/blog/premise-poll-midterm-elections/",
+      "notes": "Original blog dated Nov 8; crosstab has Nov 4 title and Nov 7 footer, neither proves public availability. RV column N1211 D44/R42 matches archive. Blog headline D44/R39 is the all-adult result."
+    },
+    {
+      "observation_id": "538_archive:generic_ballot:758",
+      "source_poll_id": "81635",
+      "source_question_id": "166088",
+      "expected": {
+        "dem_share": "0.44",
+        "rep_share": "0.42",
+        "sample_size": "1211.0",
+        "population": "rv",
+        "poll_end": "2022-11-02"
+      },
+      "status": "found_release_after_cutoff",
+      "documented_release_date": "2022-11-08",
+      "evidence": "https://premise.com/blog/premise-poll-midterm-elections/",
+      "notes": "Original blog dated Nov 8; crosstab has Nov 4 title and Nov 7 footer, neither proves public availability. RV column N1211 D44/R42 matches archive. Blog headline D44/R39 is the all-adult result."
+    },
+    {
+      "observation_id": "538_archive:generic_ballot:786",
+      "source_poll_id": "82000",
+      "source_question_id": "167245",
+      "expected": {
+        "dem_share": "0.53",
+        "rep_share": "0.47",
+        "sample_size": "1000.0",
+        "population": "rv",
+        "poll_end": "2022-10-27"
+      },
+      "status": "documented_before_cutoff",
+      "documented_release_date": "2022-11-03",
+      "evidence": "https://cleanenergyconservatives.com/overwhelming-majorities-say-candidates-should-care-about-clean-energy/",
+      "notes": "Partner repost dated Nov 7 reproduces Nov 3 release announcement and links full report. Original Q2 confirms Oct 24\u201327, N1000 RV, D53/R47."
+    },
+    {
+      "observation_id": "538_archive:generic_ballot:787",
+      "source_poll_id": "83374",
+      "source_question_id": "178618",
+      "expected": {
+        "dem_share": "0.46",
+        "rep_share": "0.48",
+        "sample_size": "1434.0",
+        "population": "rv",
+        "poll_end": "2022-10-27"
+      },
+      "status": "found_release_after_cutoff",
+      "documented_release_date": "2022-11-11",
+      "evidence": "https://www.city-journal.org/article/toward-a-conservative-popularism",
+      "notes": "Linked City Journal article datePublished is Nov 11, 22:58:54 UTC. Topline confirms Oct 24\u201327, N1434 RV, D46/R48. PDF filename is not publication evidence; an earlier release has not been established."
+    },
+    {
+      "observation_id": "538_archive:generic_ballot:796",
+      "source_poll_id": "81259",
+      "source_question_id": "164166",
+      "expected": {
+        "dem_share": "0.34",
+        "rep_share": "0.32",
+        "sample_size": "1005.0",
+        "population": "a",
+        "poll_end": "2022-10-25"
+      },
+      "status": "documented_before_cutoff",
+      "documented_release_date": "2022-10-26",
+      "evidence": "https://www.ipsos.com/en-us/news-polls/Ipsos-core-political-survey-presidential-approval-tracker-10262022",
+      "notes": "Exact adult version matches dated public report and linked PDF; do not borrow this date for LV/RV versions."
+    },
+    {
+      "observation_id": "538_archive:generic_ballot:797",
+      "source_poll_id": "81259",
+      "source_question_id": "166074",
+      "expected": {
+        "dem_share": "0.4562",
+        "rep_share": "0.44329999999999997",
+        "sample_size": "452.0",
+        "population": "lv",
+        "poll_end": "2022-10-25"
+      },
+      "status": "exact_estimate_timing_unverified",
+      "documented_release_date": null,
+      "evidence": "https://www.ipsos.com/en-us/news-polls/likely-voters-split-between-both-parties-as-many-americans-dont-know-who-they-will-vote-for-or-wont-vote",
+      "notes": "Nov 7 Ipsos article includes an Oct 24\u201325 point, but does not substantiate the exact archive D45.62/R44.33, N452. Archive notes direct provision by Ipsos; entry Dec 7."
+    },
+    {
+      "observation_id": "538_archive:generic_ballot:798",
+      "source_poll_id": "81259",
+      "source_question_id": "166083",
+      "expected": {
+        "dem_share": "0.4031",
+        "rep_share": "0.3914",
+        "sample_size": "764.0",
+        "population": "rv",
+        "poll_end": "2022-10-25"
+      },
+      "status": "exact_estimate_timing_unverified",
+      "documented_release_date": null,
+      "evidence": "https://www.ipsos.com/en-us/news-polls/likely-voters-split-between-both-parties-as-many-americans-dont-know-who-they-will-vote-for-or-wont-vote",
+      "notes": "Nov 7 Ipsos article includes an Oct 24\u201325 point, but does not substantiate the exact archive D45.62/R44.33, N452. Archive notes direct provision by Ipsos; entry Dec 7."
+    }
+  ],
+  "researchco_pages": {
+    "AZ": 1,
+    "CA": 2,
+    "FL": 4,
+    "GA": 5,
+    "IL": 6,
+    "NV": 7,
+    "NY": 8,
+    "OH": 9,
+    "PA": 10,
+    "WI": 11
+  },
+  "researchco_questions": {
+    "165128": {
+      "state": "AZ",
+      "poll_id": "81581",
+      "pair_index": 0
+    },
+    "165129": {
+      "state": "CA",
+      "poll_id": "81582",
+      "pair_index": 0
+    },
+    "165130": {
+      "state": "CA",
+      "poll_id": "81582",
+      "pair_index": 1
+    },
+    "165131": {
+      "state": "FL",
+      "poll_id": "81583",
+      "pair_index": 0
+    },
+    "165132": {
+      "state": "GA",
+      "poll_id": "81584",
+      "pair_index": 0
+    },
+    "165133": {
+      "state": "IL",
+      "poll_id": "81585",
+      "pair_index": 0
+    },
+    "165134": {
+      "state": "NV",
+      "poll_id": "81586",
+      "pair_index": 0
+    },
+    "165135": {
+      "state": "NY",
+      "poll_id": "81587",
+      "pair_index": 0
+    },
+    "165136": {
+      "state": "OH",
+      "poll_id": "81588",
+      "pair_index": 0
+    },
+    "165137": {
+      "state": "PA",
+      "poll_id": "81589",
+      "pair_index": 0
+    },
+    "165138": {
+      "state": "WI",
+      "poll_id": "81590",
+      "pair_index": 0
+    }
+  },
+  "limitations": "Dated source evidence is not a complete vintage archive. Nonreviewed rows remain unknown. No effective N or repaired ABC/MI values inferred."
+}

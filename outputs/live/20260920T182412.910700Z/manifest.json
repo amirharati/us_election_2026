@@ -1,0 +1,9 @@
+{
+  "feature_context.parquet": "7663e413863300aaa3d88d79ad702cbd64dbfee52fe32a0faa8f7aa3f084a7e0",
+  "feature_scores.parquet": "0cdce2a937f0db25f9e1f23b1699926408e9c21dea0d6ee28fe1a94de2e4bf5e",
+  "main_joint.npz": "0a0682e96f84d7e6948121cbcacd7bd225a400e80f2c3dad4ac73b4d3c1200b2",
+  "poll_audit.parquet": "791a26044129e3291b21188fb7ad79c129f235f8abb1cbe5fcfabd3b907f5777",
+  "predictions.parquet": "3fa0d0fa44af90aa3d1fa9b161f19b2eb6cd2699284acba2b7f252791d1d0f0a",
+  "run.json": "c0388fa6a9311272e6a0c189fcc41ca2af40833d4f37384c65c6ab789b6d9f2c",
+  "seats.parquet": "c3f0fe4d0d0321a58233bcd2e9dcd27d9c97499bd26e9071a1b31209f1179b18"
+}
