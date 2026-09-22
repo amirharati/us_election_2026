@@ -1,0 +1,29 @@
+Archived execution date (UTC): **2026-09-21**. Run: `20260921T185732.690365Z`. Same-day reruns replace this copy; other dates are retained.
+
+# Historical training reproduction
+
+Complete supporting results · [Run settings](supporting_run.json)
+
+Latest execution: `20260921T185732.690365Z`. Forecast cutoff: **frozen historical/reference inputs**.
+
+Margins are Democratic minus Republican percentage points. Experiments do not replace the active model or automatically select blend weights.
+
+## Fit settings
+
+| Setting             | Value                                                                                                                                            |
+|:--------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
+| scenario            | matched_live                                                                                                                                     |
+| cycle               | 2026                                                                                                                                             |
+| training_cycles     | [1978, 1980, 1982, 1984, 1986, 1988, 1990, 1992, 1994, 1996, 1998, 2000, 2002, 2004, 2006, 2008, 2010, 2012, 2014, 2016, 2018, 2020, 2022, 2024] |
+| tau                 | 6.0                                                                                                                                              |
+| signed_lambda       | 0.5                                                                                                                                              |
+| movement_kappa      | 8.0                                                                                                                                              |
+| poll_kappa          | 2.0                                                                                                                                              |
+| movement_iterations | 46                                                                                                                                               |
+| passed              | True                                                                                                                                             |
+| selection_checks    | {'feature_tau': 'both_tau6', 'signed_factor': 'repaired_both__lambda0.5', 'validation_cycles': [2020, 2022, 2024]}                               |
+| selection           | Reproduced earlier-cycle choices; not reselected on this test outcome                                                                            |
+
+This is a reproduction/posterior rerun. The saved active model in `assets/` is unchanged.
+
+For all scenarios, per-state tables, sampler diagnostics and exact provenance, see the complete result bundle.

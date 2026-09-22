@@ -162,7 +162,9 @@ layout, current-only refresh, source-audit boundary, and model promotion behavio
 Run all ten notebooks with `python scripts/run_notebooks.py`; this also checks
 that none depends on the ignored legacy data trees.
 
-Dated reports are kept in `outputs/reports/history/YYYY-MM-DD/<report-type>/report.md`,
+Browse [all daily reports](outputs/reports/history/README.md). Forecast copies are saved as
+`outputs/reports/history/YYYY-MM-DD/live_reports/forecast-YYYY-MM-DD.md`,
+with other report types under the same date folder,
 using the UTC execution date (the forecast cutoff is shown inside). Same-day reruns
 replace that day’s report; other dates remain. Linked charts, tables and provenance
 are copied with the report, while full execution archives remain ignored. Notebook

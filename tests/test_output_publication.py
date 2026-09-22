@@ -37,10 +37,13 @@ class PublicationTests(unittest.TestCase):
             base=lab.ROOT/'outputs/reports/history'
             for date,value in [('2026-09-20',1),('2026-09-21',3)]:
                 saved=base/date/'live_reports'
-                self.assertIn(f'# Value {value}',(saved/'report.md').read_text())
+                self.assertIn(f'# Value {value}',(saved/f'forecast-{date}.md').read_text())
                 self.assertEqual((saved/'control_history.png').read_bytes(),bytes([value]))
                 self.assertEqual(json.loads((saved/'forecast_metadata.json').read_text())['value'],value)
-            self.assertEqual(len(list(base.glob('*/*/report.md'))),2)
+            self.assertEqual(len(list(base.glob('*/live_reports/forecast-*.md'))),2)
+            index=(base/'README.md').read_text()
+            self.assertIn('2026-09-20/live_reports/forecast-2026-09-20.md',index)
+            self.assertIn('2026-09-21/live_reports/forecast-2026-09-21.md',index)
 
     def test_notebook_portfolio_reviews_do_not_overwrite_each_other(self):
         with tempfile.TemporaryDirectory() as temp,patch.object(lab,'ROOT',Path(temp)):

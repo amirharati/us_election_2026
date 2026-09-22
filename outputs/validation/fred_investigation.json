@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "fred_csv_series_downloaded": 7,
+  "source_snapshot": "cache/fred_diagnostic_fixed/fred/current_2026/snapshots/20260921T183926.558961Z",
+  "feature_score_changes": "none",
+  "active_feature_vector_changes": "none",
+  "context_changes": {},
+  "interpretation": "With polls and cutoff held fixed, newly downloaded FRED inputs produce identical model feature scores and active feature vector. Fixed-model forecast inputs are unchanged.",
+  "live_run": "cache/runs/live/20260921T184512.304363Z",
+  "fred_status": "checked_online",
+  "fred_checked_at": "2026-09-21T18:45:06.271894+00:00",
+  "max_prediction_changes": {
+    "margin_pp": 0.0,
+    "p_dem": 0.0,
+    "lo95_pp": 0.0,
+    "hi95_pp": 0.0
+  },
+  "active_model_assets_unchanged": true,
+  "tests_passed": 44,
+  "full_live_notebook_passed": true,
+  "notebook_code_cells": 10,
+  "freshness_display_contains_nan": false,
+  "report": "cache/runs/live_reports/20260921T184642.410972Z"
+}

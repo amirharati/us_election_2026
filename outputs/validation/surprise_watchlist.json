@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "forecast": "cache/runs/live/20260921T171049.906872Z",
+  "report": "cache/runs/live_reports/20260921T174006.998461Z",
+  "contests": 35,
+  "zero_recent_poll_contests": 18,
+  "adequately_polled_selected": 8,
+  "thin_or_unpolled_selected": 8,
+  "report_links_verified": 16,
+  "tests_passed": 40,
+  "execution": "Verified cell first in a fresh kernel from notebooks/ using latest saved forecast; saved notebook watchlist/report outputs use original notebook forecast and matching history.",
+  "standalone_cell_verified": true
+}

@@ -71,10 +71,21 @@ def write_index(root):
     else:lines+=['Run notebook 04 to publish the forecast report.']
     lines += ['', '## Comparisons and training', '']
     for p in sorted((out/'reports').glob('*/*.md')):
-        if p.parent.name=='forecast':continue
+        if p.parent.name in {'forecast','history'}:continue
         lines.append(f'- [{TITLES.get(p.stem,p.stem.replace("_"," ").title())}]({p.relative_to(out).as_posix()})')
-    lines += ['', '## Dated reports', '']
-    for p in sorted((out/'reports/history').glob('*/*/report.md'), reverse=True):
+    history=out/'reports/history';history.mkdir(parents=True,exist_ok=True)
+    archived=sorted([*history.glob('*/*/report.md'),*history.glob('*/live_reports/forecast-*.md')],reverse=True)
+    archive_lines=['# Daily report archive','','One report per UTC execution date and report type. Same-day reruns replace that day’s copy; earlier dates remain. The forecast cutoff is recorded inside each report.','','## Forecast reports','']
+    for p in archived:
+        if p.parent.name=='live_reports':
+            archive_lines.append(f'- [{p.parents[1].name} — forecast]({p.relative_to(history).as_posix()})')
+    archive_lines += ['', '## Other reports', '']
+    for p in archived:
+        if p.parent.name!='live_reports':
+            archive_lines.append(f'- [{p.parents[1].name} — {TITLES.get(p.parent.name,p.parent.name)}]({p.relative_to(history).as_posix()})')
+    (history/'README.md').write_text('\n'.join(archive_lines)+'\n')
+    lines += ['', '## Dated reports', '', '- [Browse all daily reports](reports/history/README.md)', '']
+    for p in archived:
         lines.append(f'- [{p.parents[1].name} — {TITLES.get(p.parent.name,p.parent.name)}]({p.relative_to(out).as_posix()})')
     lines += ['', '## Validation', '',
         '- [Notebook execution status](validation/notebooks.md)',
@@ -151,7 +162,8 @@ def archive_report(root, run, report):
             return f'{marker}[{label}]({name})'
         body = re.sub(r'(!?)\[([^\]]+)\]\(([^)]+)\)', freeze_link, report.read_text())
         note = f'Archived execution date (UTC): **{date}**. Run: `{run.name}`. Same-day reruns replace this copy; other dates are retained.\n\n'
-        (stage/'report.md').write_text(note+body)
+        name = f'forecast-{date}.md' if run.parent.name=='live_reports' else 'report.md'
+        (stage/name).write_text(note+body)
         shutil.copyfile(run/'run.json', stage/'run.json')
         replace_directory(stage,destination)
 

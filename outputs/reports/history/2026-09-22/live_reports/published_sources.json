@@ -1,0 +1,605 @@
+{
+  "silver": {
+    "D_control_pct": 65.0,
+    "availability": "Rounded Deluxe Senate-control probability from public text. State probabilities and expected seats are subscriber-only and unavailable here.",
+    "discovery_errors": [],
+    "discovery_sha256": {
+      "https://www.natesilver.net/feed": "866e7ac8ff832bfcc574e9bf856a2081f4060a5477ead6dd99290538c385b0ba",
+      "https://www.natesilver.net/p/expert-ratings-are-ignoring-signs": "45a925cf1e686bc6ed822f777afcd92ce36807b0a35d52c6cc5666a53deab9de",
+      "https://www.natesilver.net/p/nate-silver-2026-midterm-election-polls-model": "3083761c492f36e85da1830e94c693d581ed0fd878583fd55a7e84ed684f7607"
+    },
+    "expected_D": null,
+    "feed_url": "https://www.natesilver.net/feed",
+    "published_date": "2026-09-20",
+    "published_label": "2026-09-20",
+    "raw_sha256": "45a925cf1e686bc6ed822f777afcd92ce36807b0a35d52c6cc5666a53deab9de",
+    "retrieved_at": "2026-09-21T20:59:28.318875+00:00",
+    "rows": [],
+    "scope": "public_topline_only",
+    "source_url": "https://www.natesilver.net/p/expert-ratings-are-ignoring-signs"
+  },
+  "rttwh": {
+    "published_date": "2026-09-21",
+    "published_label": "Last Updated on Sep 21, 7:13 PM ET",
+    "rows": [
+      {
+        "geography": "AL",
+        "seat_class": null,
+        "p_dem": 0.011000000000000001,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "AK",
+        "seat_class": null,
+        "p_dem": 0.5429999999999999,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "AR",
+        "seat_class": null,
+        "p_dem": 0.019,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "CO",
+        "seat_class": null,
+        "p_dem": 0.9840000000000001,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "DE",
+        "seat_class": null,
+        "p_dem": 0.9790000000000001,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "FL",
+        "seat_class": null,
+        "p_dem": 0.361,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "GA",
+        "seat_class": null,
+        "p_dem": 0.92,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "ID",
+        "seat_class": null,
+        "p_dem": 0.044000000000000004,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "IL",
+        "seat_class": null,
+        "p_dem": 0.9740000000000001,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "IA",
+        "seat_class": null,
+        "p_dem": 0.535,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "KS",
+        "seat_class": null,
+        "p_dem": 0.4,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "KY",
+        "seat_class": null,
+        "p_dem": 0.021,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "LA",
+        "seat_class": null,
+        "p_dem": 0.11,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "ME",
+        "seat_class": null,
+        "p_dem": 0.674,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "MA",
+        "seat_class": null,
+        "p_dem": 0.995,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "MI",
+        "seat_class": null,
+        "p_dem": 0.79,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "MN",
+        "seat_class": null,
+        "p_dem": 0.848,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "MS",
+        "seat_class": null,
+        "p_dem": 0.13,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "MT",
+        "seat_class": null,
+        "p_dem": 0.0,
+        "independent_pct": 20.6,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "NE",
+        "seat_class": null,
+        "p_dem": 0.0,
+        "independent_pct": 36.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "NH",
+        "seat_class": null,
+        "p_dem": 0.836,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "NJ",
+        "seat_class": null,
+        "p_dem": 0.9690000000000001,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "NM",
+        "seat_class": null,
+        "p_dem": 0.993,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "NC",
+        "seat_class": null,
+        "p_dem": 0.883,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "OH",
+        "seat_class": null,
+        "p_dem": 0.75,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "OK",
+        "seat_class": null,
+        "p_dem": 0.008,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "OR",
+        "seat_class": null,
+        "p_dem": 0.977,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "RI",
+        "seat_class": null,
+        "p_dem": 0.986,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "SC",
+        "seat_class": null,
+        "p_dem": 0.21899999999999997,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "SD",
+        "seat_class": null,
+        "p_dem": 0.134,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "TN",
+        "seat_class": null,
+        "p_dem": 0.009000000000000001,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "TX",
+        "seat_class": null,
+        "p_dem": 0.75,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "VA",
+        "seat_class": null,
+        "p_dem": 0.98,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "WV",
+        "seat_class": null,
+        "p_dem": 0.006999999999999999,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      },
+      {
+        "geography": "WY",
+        "seat_class": null,
+        "p_dem": 0.012,
+        "independent_pct": 0.0,
+        "rating": null,
+        "rating_date": null
+      }
+    ],
+    "D_control_pct": 68.9,
+    "expected_D": 52.3,
+    "source_url": "https://www.racetothewh.com/senate/26",
+    "feed_url": "https://live-data.jifo.co/6911ecb8-c744-4464-a182-70568e288364",
+    "raw_sha256": "1d2885b01e8830f0361a05a68d88c3705d99a6ae783db6706fd8329bea9d2424",
+    "retrieved_at": "2026-09-22T01:31:36.413333+00:00"
+  },
+  "inside": {
+    "published_date": "2026-09-17",
+    "published_label": "2026-09-17T13:25:00-05:00",
+    "rows": [
+      {
+        "geography": "ME",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Toss-up",
+        "rating_date": "2026-09-17"
+      },
+      {
+        "geography": "AK",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Tilt Republican",
+        "rating_date": "2026-09-03"
+      },
+      {
+        "geography": "KS",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Likely Republican",
+        "rating_date": "2026-09-03"
+      },
+      {
+        "geography": "OH",
+        "seat_class": 3,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Toss-up",
+        "rating_date": "2026-09-03"
+      },
+      {
+        "geography": "NH",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Toss-up",
+        "rating_date": "2026-09-03"
+      },
+      {
+        "geography": "NC",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Tilt Democrat",
+        "rating_date": "2026-08-06"
+      },
+      {
+        "geography": "GA",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Tilt Democrat",
+        "rating_date": "2026-08-06"
+      },
+      {
+        "geography": "TX",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Lean Republican",
+        "rating_date": "2026-08-06"
+      },
+      {
+        "geography": "IA",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Tilt Republican",
+        "rating_date": "2026-08-06"
+      },
+      {
+        "geography": "SC",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Likely Republican",
+        "rating_date": "2026-07-12"
+      },
+      {
+        "geography": "MT",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Republican",
+        "rating_date": "2026-06-25"
+      },
+      {
+        "geography": "OK",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Republican",
+        "rating_date": "2026-04-23"
+      },
+      {
+        "geography": "NE",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Likely Republican",
+        "rating_date": "2026-04-23"
+      },
+      {
+        "geography": "WY",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Republican",
+        "rating_date": "2025-12-19"
+      },
+      {
+        "geography": "MN",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Likely Democrat",
+        "rating_date": "2025-07-24"
+      },
+      {
+        "geography": "MI",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Toss-up",
+        "rating_date": "2025-07-24"
+      },
+      {
+        "geography": "AL",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Republican",
+        "rating_date": "2025-06-05"
+      },
+      {
+        "geography": "IL",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Democrat",
+        "rating_date": "2025-04-23"
+      },
+      {
+        "geography": "KY",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Republican",
+        "rating_date": "2025-02-20"
+      },
+      {
+        "geography": "FL",
+        "seat_class": 3,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Republican",
+        "rating_date": "2025-01-17"
+      },
+      {
+        "geography": "DE",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Democrat",
+        "rating_date": "2025-01-09"
+      },
+      {
+        "geography": "AR",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Republican",
+        "rating_date": "2025-01-09"
+      },
+      {
+        "geography": "CO",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Democrat",
+        "rating_date": "2025-01-09"
+      },
+      {
+        "geography": "ID",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Republican",
+        "rating_date": "2025-01-09"
+      },
+      {
+        "geography": "LA",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Republican",
+        "rating_date": "2025-01-09"
+      },
+      {
+        "geography": "MA",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Democrat",
+        "rating_date": "2025-01-09"
+      },
+      {
+        "geography": "MS",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Republican",
+        "rating_date": "2025-01-09"
+      },
+      {
+        "geography": "NJ",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Democrat",
+        "rating_date": "2025-01-09"
+      },
+      {
+        "geography": "NM",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Democrat",
+        "rating_date": "2025-01-09"
+      },
+      {
+        "geography": "OR",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Democrat",
+        "rating_date": "2025-01-09"
+      },
+      {
+        "geography": "RI",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Democrat",
+        "rating_date": "2025-01-09"
+      },
+      {
+        "geography": "SD",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Republican",
+        "rating_date": "2025-01-09"
+      },
+      {
+        "geography": "TN",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Republican",
+        "rating_date": "2025-01-09"
+      },
+      {
+        "geography": "VA",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Democrat",
+        "rating_date": "2025-01-09"
+      },
+      {
+        "geography": "WV",
+        "seat_class": 2,
+        "p_dem": null,
+        "independent_pct": null,
+        "rating": "Solid Republican",
+        "rating_date": "2025-01-09"
+      }
+    ],
+    "D_control_pct": null,
+    "expected_D": null,
+    "source_url": "https://insideelections.com/ratings/senate/",
+    "feed_url": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_senate_year=2026_district=all_clean.json",
+    "raw_sha256": "db8a7e3f3115d358c916706f8c99260babac30fa1441076110fd25c2d6af2777",
+    "retrieved_at": "2026-09-22T01:31:36.692709+00:00"
+  }
+}

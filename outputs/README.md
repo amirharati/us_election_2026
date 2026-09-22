@@ -24,7 +24,9 @@ Latest reports and supporting results are below. Dated reports are retained in G
 
 ## Dated reports
 
-- [2026-09-22 — Forecast report](reports/history/2026-09-22/live_reports/report.md)
+- [Browse all daily reports](reports/history/README.md)
+
+- [2026-09-22 — Forecast report](reports/history/2026-09-22/live_reports/forecast-2026-09-22.md)
 - [2026-09-21 — Historical training reproduction](reports/history/2026-09-21/training/report.md)
 - [2026-09-21 — Wave and polling-error scenarios](reports/history/2026-09-21/scenarios/report.md)
 - [2026-09-21 — Frozen model reproduction](reports/history/2026-09-21/reproduction/report.md)
@@ -34,7 +36,7 @@ Latest reports and supporting results are below. Dated reports are retained in G
 - [2026-09-21 — Where the models disagree](reports/history/2026-09-21/model_disagreement/report.md)
 - [2026-09-21 — Matched Student-t review](reports/history/2026-09-21/matched_student_review/report.md)
 - [2026-09-21 — Matched Student-t comparison](reports/history/2026-09-21/matched_student/report.md)
-- [2026-09-21 — Forecast report](reports/history/2026-09-21/live_reports/report.md)
+- [2026-09-21 — Forecast report](reports/history/2026-09-21/live_reports/forecast-2026-09-21.md)
 - [2026-09-21 — Blend-weight comparison](reports/history/2026-09-21/blend_weights/report.md)
 - [2026-09-21 — All-model mixture review](reports/history/2026-09-21/all_model_mixture/report.md)
 

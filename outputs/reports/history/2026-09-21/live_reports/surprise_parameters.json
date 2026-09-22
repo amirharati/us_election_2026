@@ -1,0 +1,25 @@
+{
+  "as_of": "2026-09-21",
+  "recent_days": 30,
+  "min_samples": 3,
+  "min_firms": 2,
+  "top_n": 3,
+  "core_models": [
+    "Bayesian",
+    "Matched Student-t (df5)",
+    "Older Gaussian",
+    "Student-t research helper",
+    "Non-Bayesian corrected"
+  ],
+  "available_models": [
+    "Bayesian",
+    "Matched Student-t (df5)",
+    "Older Gaussian",
+    "Student-t research helper",
+    "Non-Bayesian corrected"
+  ],
+  "history_sha256": "e168daabc2efeccb4db025386f8ed78ea4e4ab9a7d7f49e37716352a4e027d86",
+  "historical_scope": "state, not necessarily same Senate seat",
+  "historical_scenario": "matched_live",
+  "source_manifest_sha256": "8500c3a6845fefc29f8a9596e348c3db77ab70a0ce54d68a15c1d418e370d9cd"
+}
