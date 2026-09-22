@@ -7,7 +7,7 @@ Most recent successful execution of each notebook. Legacy raw-data reads were bl
 | [01_models_and_results.ipynb](../../notebooks/01_models_and_results.ipynb) | passed | 7.42 |
 | [02_blend_weights.ipynb](../../notebooks/02_blend_weights.ipynb) | passed | 6.21 |
 | [03_training_and_assumptions.ipynb](../../notebooks/03_training_and_assumptions.ipynb) | passed | 24.71 |
-| [04_live_forecast.ipynb](../../notebooks/04_live_forecast.ipynb) | passed | 107.14 |
+| [04_live_forecast.ipynb](../../notebooks/04_live_forecast.ipynb) | passed | 110.92 |
 | [05_wave_and_poll_error_scenarios.ipynb](../../notebooks/05_wave_and_poll_error_scenarios.ipynb) | passed | 5.59 |
 | [06_matched_student_comparison.ipynb](../../notebooks/06_matched_student_comparison.ipynb) | passed | 28.03 |
 | [07_older_model_alternatives.ipynb](../../notebooks/07_older_model_alternatives.ipynb) | passed | 55.39 |

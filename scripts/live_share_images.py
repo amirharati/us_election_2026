@@ -34,7 +34,11 @@ def finish(fig, directory, name):
 
 def style_axis(ax, labels):
     ax.set(yticks=np.arange(len(labels)), yticklabels=labels, ylim=(len(labels)-.4,-.6))
-    ax.grid(axis='x',alpha=.15);ax.set_axisbelow(True)
+    ax.grid(axis='x',alpha=.15)
+    ax.grid(axis='y',color='#b7c3cf',linewidth=.65,alpha=.65)
+    for row in range(0,len(labels),2):
+        ax.axhspan(row-.5,row+.5,color=BG,zorder=-2)
+    ax.set_axisbelow(True)
     ax.spines[['top','right']].set_visible(False)
     if not len(labels):ax.text(.5,.5,'No races meet these selection rules.',transform=ax.transAxes,ha='center')
 

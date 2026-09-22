@@ -305,7 +305,7 @@
   "scripts/joint_poll_error.py": "228b871844348f4d9dc0be6825ef2908e0d52bbf1cda11c90b6e05299e3b91bc",
   "scripts/live_forecast_report.py": "7c1d40f805858961472a3b2c33d6702fc4c389b056f97c431972acb1ddd31442",
   "scripts/live_published_comparison.py": "38bb431b988f4524b3c288fbe6e50a572465bb79a8d8037332b659030e840725",
-  "scripts/live_share_images.py": "a220fc20caae935458b5b81b06089c1e40de8dbeb667fbf7490abe78c2178c39",
+  "scripts/live_share_images.py": "4663a365527f07e53140c7eb745ee6c07505c3418fbad65a4afe9d488c262ebb",
   "scripts/live_surprise_watchlist.py": "042e3e68b03b8b43240a5bcc522a7331074df8bce2269259a13d8e3f4a0dc3f2",
   "scripts/live_uncertainty_watchlist.py": "884baed1da8c04c76afe21ace0b199e58358a0a7f654e2c7de63c56067df6642",
   "scripts/load_final_dataset.py": "26c0178348b91c038e8201d9c99c713dc7e9a2a149cdf168a6d0653af8e0d466",

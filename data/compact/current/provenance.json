@@ -2,7 +2,7 @@
   "extracted_from": "data/final/snapshots/20260921T013717.589042Z",
   "format": "compact-v1",
   "historical_inputs": "Frozen reviewed labels and model series; raw-source audit performed at extraction",
-  "previous_compact_manifest": "3d2e4d676e86ddffef58dcded92bb62529d7f34644b0943e4a9d4abfe73e182d",
+  "previous_compact_manifest": "d9a61e001b6ac2d860e81b9d04414c1199ed4d6cd5fd81874d7c70fe629d96db",
   "source_manifest_sha256": "ce14d3ea50112d2fede693fecd03d4ecb29f797dbc5347f127adfe0534d6c192",
   "source_manifests": {
     "data/final_inputs/accepted/snapshots/20260921T013338.978265Z": "6ad3dfeeb240106c23d99bd9322bb04c9b24a4d90b504fd24b9df6dc11647137",

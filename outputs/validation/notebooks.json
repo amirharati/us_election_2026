@@ -24,8 +24,8 @@
     "notebook": "04_live_forecast.ipynb",
     "status": "passed",
     "legacy_data_reads_blocked": true,
-    "seconds": 107.14,
-    "notebook_sha256": "8c2970c29f73baf742c68a5620895a5ae373f31e08220d9497a43e678b037b68"
+    "seconds": 110.92,
+    "notebook_sha256": "811d58c0349758780645627b65964a7ae0f70e9d002fbb00a689d9409d278cc0"
   },
   {
     "notebook": "05_wave_and_poll_error_scenarios.ipynb",

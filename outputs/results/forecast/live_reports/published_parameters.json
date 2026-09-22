@@ -1,8 +1,8 @@
 {
-  "source_manifest_sha256": "016b5284ccdcd33d55f8dfb3b361846c47b4b2f47ca7edd534ed1e2440a826f2",
+  "source_manifest_sha256": "aab24e37545a434f0b32fa3b6a27d4d73121bfd10ae54113eae3ffe934b61d18",
   "comparison_code_sha256": "38bb431b988f4524b3c288fbe6e50a572465bb79a8d8037332b659030e840725",
   "candidate_review_sha256": "19948ffa07797afc4ce11dd49a32e98c2b65191bfdafbd7687116dbfa30f2175",
-  "cutoff": "2026-09-21",
+  "cutoff": "2026-09-22",
   "models": [
     "Bayesian",
     "Four-model mixture"

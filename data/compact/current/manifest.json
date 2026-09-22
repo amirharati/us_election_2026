@@ -1,16 +1,16 @@
 {
   "files": {
     "changes.json": {
-      "bytes": 94149,
-      "sha256": "63013c1b2e16637b735a291be3b3d79524e19e285443f95ffc57863cf06068ee"
+      "bytes": 423,
+      "sha256": "4025b171bba1d9ae26179d827ea23d88327556bdfddb920683e4a08e3d5e9a4a"
     },
     "feature_monthly.parquet": {
-      "bytes": 3127848,
-      "sha256": "f48d9eabc9a9c08ced77a8e65ff5a45e0ed53786a5025e74b56ff68777201471"
+      "bytes": 3127838,
+      "sha256": "27a48c372a1ad9921d3973730653343fb1de69f1145f647f3f82feac58783cd2"
     },
     "feature_records.parquet": {
-      "bytes": 10479177,
-      "sha256": "768f64db2a8d79c697c5b53c7dcb9a231b3c32ab42d5d7ad7d61c731bbddb458"
+      "bytes": 10470224,
+      "sha256": "835bec18ba012023d26bdea11ff706e87a750a62f62386bd55392e149a34b54c"
     },
     "feeds/chamber_2026.json": {
       "bytes": 463,
@@ -21,16 +21,16 @@
       "sha256": "a9015824902ff12d244342867ce8a5ecd71703c1b58a96ceb0ca50ff6e62de67"
     },
     "feeds/generic_ballot.parquet": {
-      "bytes": 71109,
-      "sha256": "40805688566700be68c2be5709edf93b3dc0cca1cfe4530ecffe662de9199926"
+      "bytes": 71021,
+      "sha256": "9f73fa8c767ed16c353a17f3f00cad136564471bf54857c5ef8367f9549fa31e"
     },
     "feeds/senate.parquet": {
-      "bytes": 144864,
-      "sha256": "65a5a1eaf2158d3ca257d1ebd87e7a4e818a2f68f19c318f6f688fb610cb2dfa"
+      "bytes": 145744,
+      "sha256": "0e39409603e1dfb60f5ef1f6338eae4c4d8496ec3e114510907fba87e75cd4e4"
     },
     "policy.json": {
       "bytes": 1648,
-      "sha256": "ae033fd7670a9041b18aa077847aaeda37ad0e95f0f319f7160fd07c44d8ed3d"
+      "sha256": "536362d5a8b5ac4509758646a2e139106221d24d2150e9916d4b454deb1ca48f"
     },
     "political.json": {
       "bytes": 2731,
@@ -38,51 +38,51 @@
     },
     "provenance.json": {
       "bytes": 959,
-      "sha256": "eb5a92402b4e3573bd3ad380e0b232cc204b791d6dd4e6d0c0433359602b4da0"
+      "sha256": "4b21e8de97434017bf1dcf3c0b5259aba8aa45e010dd47ececd469ec0e0c79af"
     },
     "sources.json": {
-      "bytes": 5455,
-      "sha256": "93125395e1d95bbe181e08bc9d419e47541e248fa7932a36220401b339b24e1f"
+      "bytes": 5482,
+      "sha256": "9a02c7b0a36c39efd0b5ed0563c6de91c2f22d19cd45e4869a9347b403ff5dec"
     },
     "summary.json": {
       "bytes": 1637,
-      "sha256": "90fb7acab89150d456b339ad77205ad170c5db60e08bf58ddf8f0093845ce6c4"
+      "sha256": "6dc0ab47a2c021bd03402711e2dbd89aeac288d40569508740c68b52fc09d7b4"
     },
     "tables/answers.parquet": {
-      "bytes": 393473,
-      "sha256": "d6ca0b7a02ccd27bef60dbc54a34966c78dc6755d9b7e8fe5f4717b917b3ddf1"
+      "bytes": 393702,
+      "sha256": "db96e38a9b992cbc098f80ebab2006a30d9549572fed4955613e8ec3e6e58fb2"
     },
     "tables/contest_inputs_reference.parquet": {
       "bytes": 57078,
-      "sha256": "4ffb4650e3619c2b9b2bd3b479b7d7fac67584d2f6ecb1d943e3b67020db97d5"
+      "sha256": "f58e49b64e32a5d10ffa8aa735698f977c6a7224e0ca2881f3ef37886637ea64"
     },
     "tables/current_contests.parquet": {
-      "bytes": 13351,
-      "sha256": "dd61152673c2c9007e4284834cb9ed46f874dcbe6a6ab183517193dab2e13e47"
+      "bytes": 13355,
+      "sha256": "a175aebd84521ec5f834098107ac26ddf529f8cc0f49db48517918f6118a9c49"
     },
     "tables/labels.parquet": {
       "bytes": 47615,
       "sha256": "eb16fa45774aa2335a0c9c926b9a953ccd8420080850d4a7f88b2492fa1c86a3"
     },
     "tables/poll_availability.parquet": {
-      "bytes": 186025,
-      "sha256": "9141df88422f1d0b2cff69ec3ac3735d5b70541f623e8ed3aadfea5321aebb92"
+      "bytes": 186129,
+      "sha256": "f6ed0d4372d98fe57ec71a0646ba7f3aabf9f2d5fb4c95ff6fef991a7536b291"
     },
     "tables/poll_identity.parquet": {
-      "bytes": 396356,
-      "sha256": "cc956fb8dc4801256d1639eb47d67d97d7505761cb81e0a1c49dda8c1e508952"
+      "bytes": 396689,
+      "sha256": "d59b32a90001037198f4e3676c9337a0f3921dcbf58064ea5d890e1a17336ea0"
     },
     "tables/poll_metadata.parquet": {
-      "bytes": 416686,
-      "sha256": "97ece863c140c7b9d8d96aa50c4642460deaa59446bda8c394f846d52abab9c0"
+      "bytes": 417070,
+      "sha256": "e11546a3a41d697914507a0a3e3693015d8e0f90b67d4a959445139937deb19a"
     },
     "tables/poll_quality.parquet": {
-      "bytes": 195223,
-      "sha256": "5b8955e386aeffb9d2e9e0a23c52e39464d32305f7f85d017ada226097c90636"
+      "bytes": 195310,
+      "sha256": "3700f62e8f2fceb9c1c27dc09d090c3ff8c3ac577b3ece4a5c954cff627492de"
     },
     "tables/polls.parquet": {
-      "bytes": 1528837,
-      "sha256": "25e77d0936cd1ab5dd7987171fc4879bf6e56de24e5df09a6a97f317ab3c68b8"
+      "bytes": 1528986,
+      "sha256": "6dfca9e4d56e6ce378060a7a116915cbf6cd705c5f591dced02769ddfe0380f7"
     },
     "tables/seat_ledger.parquet": {
       "bytes": 10606,
