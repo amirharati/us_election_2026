@@ -13,17 +13,17 @@ Margins are Democratic minus Republican percentage points. Positive margins favo
 
 ## Data freshness
 
-| Source         | Status                         | Last successful check            |
-|:---------------|:-------------------------------|:---------------------------------|
-| polls          | Recent successful check reused | 2026-09-21T17:09:51.964927+00:00 |
-| fred           | Recent successful check reused | 2026-09-21T18:45:06.271894+00:00 |
-| michigan       | Recent successful check reused | 2026-09-21T17:09:53.828754+00:00 |
-| ucsb           | Recent successful check reused | 2026-09-21T17:09:50.236540+00:00 |
-| french         | Recent successful check reused | 2026-09-21T17:09:50.886920+00:00 |
-| cboe           | Recent successful check reused | 2026-09-21T17:09:51.358046+00:00 |
-| gpr            | Recent successful check reused | 2026-09-21T17:09:52.621928+00:00 |
-| epu            | Recent successful check reused | 2026-09-21T17:09:53.060556+00:00 |
-| infectious_emv | Recent successful check reused | 2026-09-21T17:09:53.060806+00:00 |
+| Source         | Status                  | Last successful check            |
+|:---------------|:------------------------|:---------------------------------|
+| polls          | Checked online this run | 2026-09-22T01:31:16.439134+00:00 |
+| fred           | Checked online this run | 2026-09-22T01:31:18.301135+00:00 |
+| michigan       | Checked online this run | 2026-09-22T01:31:18.698603+00:00 |
+| ucsb           | Checked online this run | 2026-09-22T01:31:14.926191+00:00 |
+| french         | Checked online this run | 2026-09-22T01:31:15.653104+00:00 |
+| cboe           | Checked online this run | 2026-09-22T01:31:16.186067+00:00 |
+| gpr            | Checked online this run | 2026-09-22T01:31:18.228753+00:00 |
+| epu            | Checked online this run | 2026-09-22T01:31:17.486405+00:00 |
+| infectious_emv | Checked online this run | 2026-09-22T01:31:18.225183+00:00 |
 
 Political context is reviewed through **2026-09-17**. It is carried forward as an explicit assumption.
 
@@ -154,6 +154,107 @@ Available core models: Gaussian Bayesian, Matched Student-t (df5), Older Gaussia
 | 2026-09-21 |         45.52 |         54.48 |              50.32 |                 49 |                  52 |
 
 History mode: **dated**; regular spacing: **30 days**. Small differences can include Monte Carlo variation. All models and cutoff rows are in the HTML and supporting Parquet tables.
+
+## Comparison with published forecasts
+
+This section is generated from publisher feeds on each live rerun. It compares the Gaussian Bayesian reference and the four-model mixture with published forecasts. A numerical mismatch means opposite favored winners or a D/Independent win probability gap of at least 15 percentage points. For ratings, a mismatch means opposite favored parties, or a publisher toss-up when our model gives one party at least 75% probability. Ratings are never converted into probabilities. These are differences of opinion, not evidence that either forecast is wrong. Sources can use different data dates and methods. Chamber totals retain each publisher’s own independent-caucus convention. Independent candidates count on the D/Independent side in state comparisons. Published D and independent win probabilities are added once; independents already in a publisher’s D column are not added again. This is our comparison assumption, not a claim about their party affiliation or future caucus. Silver supplies only a dated, rounded public Deluxe topline; its detailed subscriber forecasts are unavailable. Publisher releases after our cutoff are excluded. A successful download does not mean the forecast was updated today.
+
+### Source dates and availability
+
+| Source                 | URL                                                            | Status            | Published   | Retrieved                        | Error   | Coverage                                                                                                                                     |   Days before our cutoff |
+|:-----------------------|:---------------------------------------------------------------|:------------------|:------------|:---------------------------------|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------|-------------------------:|
+| Silver Bulletin Deluxe | https://www.natesilver.net/p/expert-ratings-are-ignoring-signs | fresh_check_cache | 2026-09-20  | 2026-09-21T20:59:28.318875+00:00 |         | Rounded Deluxe Senate-control probability from public text. State probabilities and expected seats are subscriber-only and unavailable here. |                        1 |
+| Race to the WH         | https://www.racetothewh.com/senate/26                          | checked_online    | 2026-09-21  | 2026-09-22T01:31:36.413333+00:00 |         | State and chamber forecasts                                                                                                                  |                        0 |
+| Inside Elections       | https://insideelections.com/ratings/senate/                    | checked_online    | 2026-09-17  | 2026-09-22T01:31:36.692709+00:00 |         | Public race ratings                                                                                                                          |                        4 |
+
+### Senate control and expected seats
+
+| Forecast               | Date       |   D control % | Expected D seats   | Coverage                                                                                                                                     |
+|:-----------------------|:-----------|--------------:|:-------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
+| Gaussian Bayesian      | 2026-09-21 |         45.52 | 50.32039374858208  | Our model                                                                                                                                    |
+| Four-model mixture     | 2026-09-21 |         55.14 | 50.747539062528034 | Our model                                                                                                                                    |
+| Silver Bulletin Deluxe | 2026-09-20 |         65.00 | —                  | Rounded Deluxe Senate-control probability from public text. State probabilities and expected seats are subscriber-only and unavailable here. |
+| Race to the WH         | 2026-09-21 |         68.90 | 52.3               | Published forecast.                                                                                                                          |
+
+### Chamber differences: ours minus publisher
+
+| Model              | Publisher              | Published   |   Our D control % |   Published D control % |   Gap (pp) | Expected-seat gap   | Comparison                                    |
+|:-------------------|:-----------------------|:------------|------------------:|------------------------:|-----------:|:--------------------|:----------------------------------------------|
+| Gaussian Bayesian  | Silver Bulletin Deluxe | 2026-09-20  |             45.52 |                   65.00 |     -19.48 | —                   | The models favor different Senate majorities. |
+| Four-model mixture | Silver Bulletin Deluxe | 2026-09-20  |             55.14 |                   65.00 |      -9.86 | —                   | The models favor the same Senate majority.    |
+| Gaussian Bayesian  | Race to the WH         | 2026-09-21  |             45.52 |                   68.90 |     -23.38 | -1.9796062514179198 | The models favor different Senate majorities. |
+| Four-model mixture | Race to the WH         | 2026-09-21  |             55.14 |                   68.90 |     -13.76 | -1.5524609374719631 | The models favor the same Senate majority.    |
+
+### Inside Elections: favored-party counts in matched races
+
+| Model              |   Matched races |   Our D/Independent favored |   Our R favored |   Publisher D/Independent favored |   Publisher R favored |   Publisher toss-ups |
+|:-------------------|----------------:|----------------------------:|----------------:|----------------------------------:|----------------------:|---------------------:|
+| Gaussian Bayesian  |              35 |                          17 |              18 |                                12 |                    19 |                    4 |
+| Four-model mixture |              35 |                          16 |              19 |                                12 |                    19 |                    4 |
+
+### State mismatches
+
+| Source           | Published   | Model              | Contest      |   Our D/Independent win % | Published D/Independent win %   | Published rating   | Gap (pp)            | Side definition                                | Reason                                                                                         |
+|:-----------------|:------------|:-------------------|:-------------|--------------------------:|:--------------------------------|:-------------------|:--------------------|:-----------------------------------------------|:-----------------------------------------------------------------------------------------------|
+| Inside Elections | 2026-09-17  | Four-model mixture | ME           |                     86.36 | —                               | Toss-up            | —                   | D versus R.                                    | The publisher rates this a toss-up. Our model gives D 86.4%.                                   |
+| Inside Elections | 2026-09-17  | Four-model mixture | MI           |                     80.18 | —                               | Toss-up            | —                   | D versus R.                                    | The publisher rates this a toss-up. Our model gives D 80.2%.                                   |
+| Inside Elections | 2026-09-17  | Four-model mixture | NH           |                     85.60 | —                               | Toss-up            | —                   | D versus R.                                    | The publisher rates this a toss-up. Our model gives D 85.6%.                                   |
+| Inside Elections | 2026-09-17  | Gaussian Bayesian  | ME           |                     92.00 | —                               | Toss-up            | —                   | D versus R.                                    | The publisher rates this a toss-up. Our model gives D 92.0%.                                   |
+| Inside Elections | 2026-09-17  | Gaussian Bayesian  | MI           |                     79.94 | —                               | Toss-up            | —                   | D versus R.                                    | The publisher rates this a toss-up. Our model gives D 79.9%.                                   |
+| Inside Elections | 2026-09-17  | Gaussian Bayesian  | NH           |                     95.41 | —                               | Toss-up            | —                   | D versus R.                                    | The publisher rates this a toss-up. Our model gives D 95.4%.                                   |
+| Inside Elections | 2026-09-17  | Gaussian Bayesian  | TX           |                     50.51 | —                               | Lean Republican    | —                   | D versus R.                                    | Our favored party differs from the published rating.                                           |
+| Race to the WH   | 2026-09-21  | Four-model mixture | KS           |                      7.73 | 40.0                            | —                  | -32.26880208333421  | D versus R.                                    | Our D/Independent win probability is 32.3 points lower.                                        |
+| Race to the WH   | 2026-09-21  | Four-model mixture | TX           |                     48.75 | 75.0                            | —                  | -26.252656250015516 | D versus R.                                    | The forecasts favor different parties. Our D/Independent win probability is 26.3 points lower. |
+| Race to the WH   | 2026-09-21  | Four-model mixture | IA           |                     29.41 | 53.5                            | —                  | -24.09140625000982  | D versus R.                                    | The forecasts favor different parties. Our D/Independent win probability is 24.1 points lower. |
+| Race to the WH   | 2026-09-21  | Four-model mixture | NE           |                     12.12 | 36.0                            | —                  | -23.882395833336695 | Independents count with D for this comparison. | Our D/Independent win probability is 23.9 points lower.                                        |
+| Race to the WH   | 2026-09-21  | Four-model mixture | MT           |                      0.24 | 20.6                            | —                  | -20.358489583333338 | Independents count with D for this comparison. | Our D/Independent win probability is 20.4 points lower.                                        |
+| Race to the WH   | 2026-09-21  | Four-model mixture | ME           |                     86.36 | 67.4                            | —                  | 18.95911458348446   | D versus R.                                    | Our D/Independent win probability is 19.0 points higher.                                       |
+| Race to the WH   | 2026-09-21  | Four-model mixture | WV           |                     18.58 | 0.7                             | —                  | 17.879270833338932  | D versus R.                                    | Our D/Independent win probability is 17.9 points higher.                                       |
+| Race to the WH   | 2026-09-21  | Four-model mixture | AK           |                     37.00 | 54.29999999999999               | —                  | -17.2994791666948   | D versus R.                                    | The forecasts favor different parties. Our D/Independent win probability is 17.3 points lower. |
+| Race to the WH   | 2026-09-21  | Four-model mixture | SC           |                      6.33 | 21.9                            | —                  | -15.573072916666497 | D versus R.                                    | Our D/Independent win probability is 15.6 points lower.                                        |
+| Race to the WH   | 2026-09-21  | Gaussian Bayesian  | KS           |                      6.37 | 40.0                            | —                  | -33.633040369794706 | D versus R.                                    | Our D/Independent win probability is 33.6 points lower.                                        |
+| Race to the WH   | 2026-09-21  | Gaussian Bayesian  | NE           |                      3.51 | 36.0                            | —                  | -32.49126884590694  | Independents count with D for this comparison. | Our D/Independent win probability is 32.5 points lower.                                        |
+| Race to the WH   | 2026-09-21  | Gaussian Bayesian  | ME           |                     92.00 | 67.4                            | —                  | 24.60214817756754   | D versus R.                                    | Our D/Independent win probability is 24.6 points higher.                                       |
+| Race to the WH   | 2026-09-21  | Gaussian Bayesian  | TX           |                     50.51 | 75.0                            | —                  | -24.485464036005755 | D versus R.                                    | Our D/Independent win probability is 24.5 points lower.                                        |
+| Race to the WH   | 2026-09-21  | Gaussian Bayesian  | IA           |                     29.18 | 53.5                            | —                  | -24.316131612777415 | D versus R.                                    | The forecasts favor different parties. Our D/Independent win probability is 24.3 points lower. |
+| Race to the WH   | 2026-09-21  | Gaussian Bayesian  | AK           |                     30.01 | 54.29999999999999               | —                  | -24.288103373220217 | D versus R.                                    | The forecasts favor different parties. Our D/Independent win probability is 24.3 points lower. |
+| Race to the WH   | 2026-09-21  | Gaussian Bayesian  | MT           |                      0.37 | 20.6                            | —                  | -20.234889708419583 | Independents count with D for this comparison. | Our D/Independent win probability is 20.2 points lower.                                        |
+| Race to the WH   | 2026-09-21  | Gaussian Bayesian  | SC           |                      3.32 | 21.9                            | —                  | -18.576955620955836 | D versus R.                                    | Our D/Independent win probability is 18.6 points lower.                                        |
+| Race to the WH   | 2026-09-21  | Gaussian Bayesian  | FL (special) |                     20.29 | 36.1                            | —                  | -15.810944223897689 | D versus R.                                    | Our D/Independent win probability is 15.8 points lower.                                        |
+
+### Excluded comparisons
+
+No rows qualify or the source is unavailable. Check source status above.
+
+[All matched state comparisons](../../results/forecast/live_reports/published_all_states.parquet) · [Publisher snapshots and provenance](../../results/forecast/live_reports/published_sources.json) · [Comparison settings](../../results/forecast/live_reports/published_parameters.json)
+
+## Shareable images
+
+The tables above remain available. These PNGs are generated from the same saved results on every run.
+
+![chamber](share_chamber.png)
+
+![compare inside elections four model mixture](share_compare_inside_elections_four_model_mixture.png)
+
+![compare inside elections gaussian bayesian](share_compare_inside_elections_gaussian_bayesian.png)
+
+![compare race to the wh four model mixture](share_compare_race_to_the_wh_four_model_mixture.png)
+
+![compare race to the wh gaussian bayesian](share_compare_race_to_the_wh_gaussian_bayesian.png)
+
+![published chamber](share_published_chamber.png)
+
+![state margins](share_state_margins.png)
+
+![state probabilities](share_state_probabilities.png)
+
+![uncertainty](share_uncertainty.png)
+
+![watch polled](share_watch_polled.png)
+
+![watch thin](share_watch_thin.png)
+
+[Image manifest](../../results/forecast/live_reports/share_images.json)
 
 ## Provenance and interpretation
 

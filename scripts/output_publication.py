@@ -66,7 +66,8 @@ def write_index(root):
         '## Forecast','']
     if (out/'reports/forecast/report.md').exists():
         lines += ['- [Read the forecast](reports/forecast/report.md) — Markdown summary, state forecasts, source status and cutoff history.',
-                  '- [Open the browser report](reports/forecast/report.html) — self-contained HTML (download/open locally).']
+                  '- [Open the browser report](reports/forecast/report.html) — self-contained HTML (download/open locally).',
+                  '- [Shareable PNG images](reports/forecast/report.md#shareable-images) — generated alongside the tables and retained in dated reports.']
     else:lines+=['Run notebook 04 to publish the forecast report.']
     lines += ['', '## Comparisons and training', '']
     for p in sorted((out/'reports').glob('*/*.md')):
@@ -162,7 +163,7 @@ def publish(root, run):
     if kind=='live_reports':
         with tempfile.TemporaryDirectory() as temp:
             stage=Path(temp)
-            for name in ['report.md','report.html','control_history.png']:
+            for name in ['report.md','report.html','control_history.png',*[p.name for p in sorted(run.glob('share_*.png'))]]:
                 if (run/name).exists():shutil.copyfile(run/name,stage/name)
             replace_directory(stage,Path(root)/'outputs/reports/forecast')
     elif kind not in FORECAST:experiment_report(root,run,kind)

@@ -31,7 +31,9 @@ def main():
         import pandas as pd
         live=lab.latest_run('live')
         models=pd.read_parquet(live/'predictions.parquet').model.unique().tolist()
-        out=save_report(live,build_watchlist(live,models))
+        from live_published_comparison import build_published_comparison
+        published=build_published_comparison(live,offline=a.offline,force=a.force,ttl_hours=a.ttl_hours,timeout=a.timeout)
+        out=save_report(live,build_watchlist(live,models),published=published)
     elif a.task=='matched-student':
         from matched_student import run
         out=run(force=a.force)
@@ -56,7 +58,9 @@ def main():
         from live_uncertainty_watchlist import build_watchlist
         import pandas as pd
         models=pd.read_parquet(out/'predictions.parquet').model.unique().tolist()
-        save_report(out,build_watchlist(out,models))
+        from live_published_comparison import build_published_comparison
+        published=build_published_comparison(out,offline=a.offline,force=a.force,ttl_hours=a.ttl_hours,timeout=a.timeout)
+        save_report(out,build_watchlist(out,models),published=published)
     from output_publication import result_path
     print('Published results:',result_path(lab.ROOT,out.parent.name))
     print('Readable reports:',lab.ROOT/'outputs/README.md')

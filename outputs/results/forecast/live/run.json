@@ -1,8 +1,8 @@
 {
   "kind": "live",
   "as_of": "2026-09-21",
-  "dataset": "cache/run_inputs/ccad080b25d498186e17054fd96c44c31fa0ba3c368451cb70d8b3a26a2c4347",
-  "dataset_manifest_sha256": "ccad080b25d498186e17054fd96c44c31fa0ba3c368451cb70d8b3a26a2c4347",
+  "dataset": "cache/run_inputs/24df46be32fa399f31031af5fba7c319d07b12e38af461593259608d971a1a3c",
+  "dataset_manifest_sha256": "24df46be32fa399f31031af5fba7c319d07b12e38af461593259608d971a1a3c",
   "snapshot_as_of": "2026-09-21",
   "feature_mode": "dated",
   "reconstruction": false,
@@ -49,72 +49,74 @@
     "stale_sources": [],
     "sources": [
       {
-        "freshness": {},
-        "manifest_sha256": "b55dba5aec0cf5b4a2dac8c3d7406416d8b15d30f766875e66a71696eb92fc8a",
-        "poll_latest_dates": {
-          "generic_latest_poll_end": "2026-09-17",
-          "latest_poll_end": "2026-09-18"
-        },
+        "manifest_sha256": "e171cae825f08a68a3a15f629674ea813a90bbe7be65594f6a11f4bf623e9d03",
         "verified_files": 8,
+        "freshness": {},
+        "poll_latest_dates": {
+          "latest_poll_end": "2026-09-18",
+          "generic_latest_poll_end": "2026-09-17"
+        },
         "source": "polls",
         "status": "saved_or_unchanged",
-        "acquisition_status": "fresh_check_cache",
-        "checked_at": "2026-09-21T17:09:51.964927+00:00"
+        "acquisition_status": "checked_online",
+        "checked_at": "2026-09-22T01:31:16.439134+00:00"
       },
       {
+        "manifest_sha256": "cff38c9043b19119725a35ea92342d83ea64df69c68ddbdf5869f69698f0e1cd",
+        "verified_files": 18,
         "freshness": {
           "A229RX0.csv": {
             "first_source_date": "1959-01-01",
-            "freshness": "has_current_year_rows",
             "last_source_date": "2026-07-01",
-            "selected_rows": 7
+            "selected_rows": 7,
+            "freshness": "has_current_year_rows"
           },
           "CPIAUCSL.csv": {
             "first_source_date": "1947-01-01",
-            "freshness": "has_current_year_rows",
             "last_source_date": "2026-08-01",
-            "selected_rows": 8
+            "selected_rows": 8,
+            "freshness": "has_current_year_rows"
           },
           "CUSR0000SETB01.csv": {
             "first_source_date": "1967-01-01",
-            "freshness": "has_current_year_rows",
             "last_source_date": "2026-08-01",
-            "selected_rows": 8
+            "selected_rows": 8,
+            "freshness": "has_current_year_rows"
           },
           "GDPC1.csv": {
             "first_source_date": "1947-01-01",
-            "freshness": "has_current_year_rows",
             "last_source_date": "2026-04-01",
-            "selected_rows": 2
+            "selected_rows": 2,
+            "freshness": "has_current_year_rows"
           },
           "NASDAQCOM.csv": {
             "first_source_date": "1971-02-05",
-            "freshness": "has_current_year_rows",
             "last_source_date": "2026-09-18",
-            "selected_rows": 186
+            "selected_rows": 186,
+            "freshness": "has_current_year_rows"
           },
           "STLFSI4.csv": {
             "first_source_date": "1993-12-31",
-            "freshness": "has_current_year_rows",
             "last_source_date": "2026-09-11",
-            "selected_rows": 37
+            "selected_rows": 37,
+            "freshness": "has_current_year_rows"
           },
           "UNRATE.csv": {
             "first_source_date": "1948-01-01",
-            "freshness": "has_current_year_rows",
             "last_source_date": "2026-08-01",
-            "selected_rows": 8
+            "selected_rows": 8,
+            "freshness": "has_current_year_rows"
           }
         },
-        "manifest_sha256": "cff38c9043b19119725a35ea92342d83ea64df69c68ddbdf5869f69698f0e1cd",
         "poll_latest_dates": {},
-        "verified_files": 18,
         "source": "fred",
         "status": "saved_or_unchanged",
-        "acquisition_status": "fresh_check_cache",
-        "checked_at": "2026-09-21T18:45:06.271894+00:00"
+        "acquisition_status": "checked_online",
+        "checked_at": "2026-09-22T01:31:18.301135+00:00"
       },
       {
+        "manifest_sha256": "ab16e59aaef0d4c6fb55755a24eb63b10e6b601069faf06b584c9b5f712a4326",
+        "verified_files": 17,
         "freshness": {
           "RB_10.xls": {},
           "RB_1a.xls": {},
@@ -129,104 +131,102 @@
           "YB_6.xls": {},
           "YB_8.xls": {}
         },
-        "manifest_sha256": "e7a0689a158df5b85c8ab753575a520ccf80c8ab2e6b6f45e40e4cfd40049faa",
         "poll_latest_dates": {},
-        "verified_files": 17,
         "source": "michigan",
         "status": "saved_or_unchanged",
-        "acquisition_status": "fresh_check_cache",
-        "checked_at": "2026-09-21T17:09:53.828754+00:00"
+        "acquisition_status": "checked_online",
+        "checked_at": "2026-09-22T01:31:18.698603+00:00"
       },
       {
+        "manifest_sha256": "1d9713c6c7ba41afad212ecf83b73427c673f51e63af338b70a1d51de45f0c24",
+        "verified_files": 6,
         "freshness": {
           "donald-j-trump-2nd-term-public-approval.html": {}
         },
-        "manifest_sha256": "392675af2807e33f85ecedff4359c438580329b68810777476f0c856f26f52f2",
         "poll_latest_dates": {},
-        "verified_files": 6,
         "source": "ucsb",
         "status": "saved_or_unchanged",
-        "acquisition_status": "fresh_check_cache",
-        "checked_at": "2026-09-21T17:09:50.236540+00:00"
+        "acquisition_status": "checked_online",
+        "checked_at": "2026-09-22T01:31:14.926191+00:00"
       },
       {
+        "manifest_sha256": "98b024dab6924462c19631698713bead895759525d9b429c4d828a160a196eb0",
+        "verified_files": 6,
         "freshness": {
           "ff_factors.zip": {},
           "ff_factors_daily.zip": {}
         },
-        "manifest_sha256": "98b024dab6924462c19631698713bead895759525d9b429c4d828a160a196eb0",
         "poll_latest_dates": {},
-        "verified_files": 6,
         "source": "french",
         "status": "saved_or_unchanged",
-        "acquisition_status": "fresh_check_cache",
-        "checked_at": "2026-09-21T17:09:50.886920+00:00"
+        "acquisition_status": "checked_online",
+        "checked_at": "2026-09-22T01:31:15.653104+00:00"
       },
       {
+        "manifest_sha256": "367c3d766ef56ebdf5a807dbe542af12f65d0a0b3bb04bdb23aca6bdec3d3325",
+        "verified_files": 6,
         "freshness": {
           "vix.csv": {
             "first_source_date": "1990-01-02",
-            "freshness": "has_current_year_rows",
-            "last_source_date": "2026-09-18",
-            "selected_rows": 185
+            "last_source_date": "2026-09-21",
+            "selected_rows": 186,
+            "freshness": "has_current_year_rows"
           }
         },
-        "manifest_sha256": "c1856ed8788b3dc8a97a1098b233a774116852a967e5c723101957a99a130a1e",
         "poll_latest_dates": {},
-        "verified_files": 6,
         "source": "cboe",
         "status": "saved_or_unchanged",
-        "acquisition_status": "fresh_check_cache",
-        "checked_at": "2026-09-21T17:09:51.358046+00:00"
+        "acquisition_status": "checked_online",
+        "checked_at": "2026-09-22T01:31:16.186067+00:00"
       },
       {
+        "manifest_sha256": "c18cc2687073438a53fdeb2fbc395fe9e8fe6ce78741224261f1468425dfc870",
+        "verified_files": 6,
         "freshness": {
           "data_gpr_daily_recent.xls": {},
           "data_gpr_export.xls": {}
         },
-        "manifest_sha256": "c18cc2687073438a53fdeb2fbc395fe9e8fe6ce78741224261f1468425dfc870",
         "poll_latest_dates": {},
-        "verified_files": 6,
         "source": "gpr",
         "status": "saved_or_unchanged",
-        "acquisition_status": "fresh_check_cache",
-        "checked_at": "2026-09-21T17:09:52.621928+00:00"
+        "acquisition_status": "checked_online",
+        "checked_at": "2026-09-22T01:31:18.228753+00:00"
       },
       {
+        "manifest_sha256": "893ddf666775dee3f856c88be7c02522c347e9dafe7e79a940b44952109d03cf",
+        "verified_files": 8,
         "freshness": {
           "Categorical_EPU_Data.xlsx": {},
           "US_Policy_Uncertainty_Data.xlsx": {},
           "daily_epu.csv": {
             "first_source_date": "1985-01-01",
-            "freshness": "has_current_year_rows",
             "last_source_date": "2026-09-20",
-            "selected_rows": 263
+            "selected_rows": 263,
+            "freshness": "has_current_year_rows"
           }
         },
-        "manifest_sha256": "893ddf666775dee3f856c88be7c02522c347e9dafe7e79a940b44952109d03cf",
         "poll_latest_dates": {},
-        "verified_files": 8,
         "source": "epu",
         "status": "saved_or_unchanged",
-        "acquisition_status": "fresh_check_cache",
-        "checked_at": "2026-09-21T17:09:53.060556+00:00"
+        "acquisition_status": "checked_online",
+        "checked_at": "2026-09-22T01:31:17.486405+00:00"
       },
       {
+        "manifest_sha256": "76c61b43e0b57a9209af6793b2ad87d47cd80e6236f39840b473028099d749e1",
+        "verified_files": 6,
         "freshness": {
           "infectious_emv.csv": {
             "first_source_date": "1985-01-01",
-            "freshness": "has_current_year_rows",
-            "last_source_date": "2026-09-20",
-            "selected_rows": 263
+            "last_source_date": "2026-09-21",
+            "selected_rows": 264,
+            "freshness": "has_current_year_rows"
           }
         },
-        "manifest_sha256": "d08f07792be08b903ad6a5cdd5990ab8fd0cc3193f4b49bd46ad46eae326caaf",
         "poll_latest_dates": {},
-        "verified_files": 6,
         "source": "infectious_emv",
         "status": "saved_or_unchanged",
-        "acquisition_status": "fresh_check_cache",
-        "checked_at": "2026-09-21T17:09:53.060806+00:00"
+        "acquisition_status": "checked_online",
+        "checked_at": "2026-09-22T01:31:18.225183+00:00"
       }
     ]
   },

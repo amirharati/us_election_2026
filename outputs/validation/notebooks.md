@@ -1,13 +1,13 @@
 # Notebook execution
 
-Executed in order with legacy raw-data reads blocked. Successful notebooks are saved in place; logs and failed attempts stay in the ignored local cache.
+Most recent successful execution of each notebook. Legacy raw-data reads were blocked. Successful executions are saved in place.
 
 | Notebook | Status | Seconds |
 |---|---|---:|
 | [01_models_and_results.ipynb](../../notebooks/01_models_and_results.ipynb) | passed | 7.42 |
 | [02_blend_weights.ipynb](../../notebooks/02_blend_weights.ipynb) | passed | 6.21 |
 | [03_training_and_assumptions.ipynb](../../notebooks/03_training_and_assumptions.ipynb) | passed | 24.71 |
-| [04_live_forecast.ipynb](../../notebooks/04_live_forecast.ipynb) | passed | 92.77 |
+| [04_live_forecast.ipynb](../../notebooks/04_live_forecast.ipynb) | passed | 107.14 |
 | [05_wave_and_poll_error_scenarios.ipynb](../../notebooks/05_wave_and_poll_error_scenarios.ipynb) | passed | 5.59 |
 | [06_matched_student_comparison.ipynb](../../notebooks/06_matched_student_comparison.ipynb) | passed | 28.03 |
 | [07_older_model_alternatives.ipynb](../../notebooks/07_older_model_alternatives.ipynb) | passed | 55.39 |

@@ -2,7 +2,7 @@
   "notebooks/01_models_and_results.ipynb": "ee3b0d6875c58a77703b8569b301b0e8997ae4e5d85e6ccd03d0da052d6b6acb",
   "notebooks/02_blend_weights.ipynb": "774821dc0d849cd389e8081eaf02edfcfe28286274e3adf8e86b9fd4042d593c",
   "notebooks/03_training_and_assumptions.ipynb": "b662551c3da44bb3d4bc9f62b9d7819dcb459bfab048e2a85aa46e6a48450721",
-  "notebooks/04_live_forecast.ipynb": "29e73e62fa165344e4bbbdec3d87c25f7d738f0d6e13f7b049f6c94dd91d6648",
+  "notebooks/04_live_forecast.ipynb": "249ee65f0e453fec62475af7ee38bb52bf6430e08f23f7dde67c817444950c01",
   "notebooks/05_wave_and_poll_error_scenarios.ipynb": "1cfeabaafbae27c2169769a09a322cba302584cd69ad6bc547607283be1141de",
   "notebooks/06_matched_student_comparison.ipynb": "a8e742dc00df470f8fd273910b5927bb164e619439fa128bc24fc97e80870760",
   "notebooks/07_older_model_alternatives.ipynb": "b8826f21537a6ab85e12816faf5cba2129365063f49a58ede03a846fb1848183",

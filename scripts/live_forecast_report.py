@@ -176,7 +176,7 @@ def history_figure(table):
             ax.axhline(50,color='gray',linestyle='--',linewidth=.7)
             ax.set(title=f'{title}\n{party} control',ylim=(0,100),ylabel='Probability (%)')
             ax.grid(alpha=.2);ax.legend(fontsize=7,loc='best');ax.tick_params(axis='x',rotation=30)
-    fig.suptitle('2026 cutoff replay — fixed trained models, dated evidence\nLines connect evaluated cutoffs; early-year forecasts use September calibration.',fontsize=12)
+    fig.suptitle(f'2026 cutoff replay through {pd.Timestamp(table.cutoff.max()).date()} — fixed trained models, dated evidence\nLines connect evaluated cutoffs; early-year forecasts use September calibration.',fontsize=12)
     fig.tight_layout(rect=(0,0,1,.95))
     return fig
 
@@ -188,7 +188,7 @@ def recent_table(table, last_days=3):
     return recent.pivot(index='model',columns='date',values=['D_control_pct','R_control_pct']).round(2)
 
 
-def markdown_report(out, meta, seats, predictions, watchlist, history_run=None, surprise=None):
+def markdown_report(out, meta, seats, predictions, watchlist, history_run=None, surprise=None, published=None):
     """Readable GitHub report, with full numerical bundles linked separately."""
     from output_publication import markdown_table
     main=seats[seats.model.eq('Bayesian')].iloc[0]
@@ -249,6 +249,20 @@ def markdown_report(out, meta, seats, predictions, watchlist, history_run=None, 
         lines += [markdown_table(recent,['cutoff','D_control_pct','R_control_pct','expected_D','D_lo70','D_hi70']), '',
             f'History mode: **{hm["feature_mode"]}**; regular spacing: **{hm["every_days"]} days**. Small differences can include Monte Carlo variation. All models and cutoff rows are in the HTML and supporting Parquet tables.','']
     else:lines+=['## Cutoff history','','This current-only report does not yet include cutoff history. Run notebook 04 to publish the full history.','']
+    if published is not None:
+        from live_published_comparison import sections, method
+        lines += ['## Comparison with published forecasts', '', method(published), '']
+        for title, frame in sections(published):
+            lines += ['### '+title, '', markdown_table(frame) if not frame.empty else 'No rows qualify or the source is unavailable. Check source status above.', '']
+        lines += ['[All matched state comparisons](../../results/forecast/live_reports/published_all_states.parquet) · '
+                  '[Publisher snapshots and provenance](../../results/forecast/live_reports/published_sources.json) · '
+                  '[Comparison settings](../../results/forecast/live_reports/published_parameters.json)', '']
+    images=sorted(out.glob('share_*.png'))
+    if images:
+        lines += ['## Shareable images', '', 'The tables above remain available. These PNGs are generated from the same saved results on every run.', '']
+        for picture in images:
+            lines += [f'![{picture.stem.removeprefix("share_").replace("_"," ")}]({picture.name})', '']
+        lines += ['[Image manifest](../../results/forecast/live_reports/share_images.json)', '']
     lines += ['## Provenance and interpretation','',
         '- [Forecast settings, input hash and source receipts](../../results/forecast/live_reports/forecast_metadata.json)',
         '- [Complete state predictions](../../results/forecast/live_reports/predictions.parquet)',
@@ -257,11 +271,17 @@ def markdown_report(out, meta, seats, predictions, watchlist, history_run=None, 
     (out/'report.md').write_text('\n'.join(lines))
 
 
-def save_report(live_run, watchlist, history_run=None, surprise=None):
+def save_report(live_run, watchlist, history_run=None, surprise=None, published=None):
     """Save Markdown and self-contained HTML reports, plus supporting tables."""
     live_run = lab.verify_run(live_run)
     meta = json.loads((live_run/'run.json').read_text())
+    from live_published_comparison import build_published_comparison, save_comparison, render_comparison
+    if published is None:
+        published = build_published_comparison(live_run, offline=True)
+    if published['parameters']['source_manifest_sha256'] != lab.sha(live_run/'manifest.json'):
+        raise ValueError('Published comparison and report use different forecasts')
     out = lab.new_run('live_reports')
+    save_comparison(published, out)
     lab.write_json(out/'forecast_metadata.json',meta)
     from live_surprise_watchlist import build_surprise_watchlist, display_table, METHOD
     if surprise is None:
@@ -321,13 +341,22 @@ def save_report(live_run, watchlist, history_run=None, surprise=None):
             '<h3>Recent daily probabilities (%)</h3>',label_frame(recent_table(history,hmeta['last_days'])).to_html(),
             '<details><summary>All cutoff results and changes</summary>',table(history),'</details>',
             '<details><summary>Polling evidence by cutoff</summary>',table(evidence),'</details>'])
+    parts.extend(['<h2>Comparison with published forecasts</h2>', render_comparison(published).data])
+    from live_share_images import build_share_images
+    share_images=build_share_images(out,live_run,watchlist,surprise,published)
+    parts += ['<h2>Shareable images</h2>', '<p>These PNGs are generated from the same results. The original tables remain above.</p>']
+    for picture in share_images:
+        encoded=base64.b64encode(picture.read_bytes()).decode()
+        label=html.escape(picture.stem.removeprefix('share_').replace('_',' '))
+        parts += [f'<details><summary>{label}</summary><img alt="{label}" src="data:image/png;base64,{encoded}"></details>']
     parts.extend(['<h2>Freshness and provenance</h2>',
         '<pre>'+html.escape(json.dumps(meta,indent=2))+'</pre>'])
     page='<!doctype html><html><head><meta charset="utf-8"><title>2026 Senate forecast report</title><style>body{font-family:system-ui,sans-serif;margin:32px;line-height:1.45}table{border-collapse:collapse;font-size:13px;margin:16px 0}th,td{padding:6px 10px;border:1px solid #ddd;text-align:right}th{background:#eef2f6}details{margin:16px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere}img{max-width:100%}</style></head><body>'+''.join(parts)+'</body></html>'
     (out/'report.html').write_text(page)
-    markdown_report(out,meta,seats,pred,watchlist,history_run,surprise)
+    markdown_report(out,meta,seats,pred,watchlist,history_run,surprise,published)
     return lab.finish(out,dict(kind='live_report',as_of=meta['as_of'],
         live_run=str(live_run.relative_to(lab.ROOT)),live_manifest_sha256=lab.sha(live_run/'manifest.json'),
+        published_parameters=published['parameters'],
         watchlist_parameters=watchlist.get('parameters',{}),surprise_parameters=surprise['parameters'],
         history_run=str(history_run.relative_to(lab.ROOT)) if history_run else None,
         history_manifest_sha256=lab.sha(history_run/'manifest.json') if history_run else None))

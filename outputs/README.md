@@ -6,6 +6,7 @@ Latest reports and supporting results are below. Dated reports are retained in G
 
 - [Read the forecast](reports/forecast/report.md) — Markdown summary, state forecasts, source status and cutoff history.
 - [Open the browser report](reports/forecast/report.html) — self-contained HTML (download/open locally).
+- [Shareable PNG images](reports/forecast/report.md#shareable-images) — generated alongside the tables and retained in dated reports.
 
 ## Comparisons and training
 
@@ -23,6 +24,7 @@ Latest reports and supporting results are below. Dated reports are retained in G
 
 ## Dated reports
 
+- [2026-09-22 — Forecast report](reports/history/2026-09-22/live_reports/report.md)
 - [2026-09-21 — Historical training reproduction](reports/history/2026-09-21/training/report.md)
 - [2026-09-21 — Wave and polling-error scenarios](reports/history/2026-09-21/scenarios/report.md)
 - [2026-09-21 — Frozen model reproduction](reports/history/2026-09-21/reproduction/report.md)

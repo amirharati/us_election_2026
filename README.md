@@ -175,3 +175,5 @@ Notebooks 07 and 08 share verified portfolio calculations but publish separate r
 `outputs/reports/experiments/all_model_mixture.md`, with separate dated archives.
 
 The main model is labeled **Gaussian Bayesian** in notebooks and reports. Student-t models are also Bayesian; their predictive tails differ. Saved result tables retain the legacy internal identifier `Bayesian` for compatibility.
+
+The live notebook and report automatically compare our forecasts with Race to the WH probabilities, Inside Elections ratings, and dated public Silver Bulletin Deluxe toplines. They also generate shareable PNGs alongside the original tables. See [comparison rules, source freshness, and exclusions](docs/PUBLISHED_COMPARISON.md).
