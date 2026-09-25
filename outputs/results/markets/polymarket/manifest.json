@@ -1,0 +1,21 @@
+{
+  "catalog.json.gz": "f1413b53259b457977f102729835afedc27d2fd1ca0fe63d31e5e9883cb6af35",
+  "comparisons.parquet": "616be01638362c038633fa7e017e0885f4a87811fb38e4103e125982b9b366f3",
+  "events.parquet": "d0b43230fbd4149393dbcf5d2cff896a1c3e3751b424ca3e41d94af7fa4f1336",
+  "inventory.parquet": "ba478006dbdd0e41120673846193938342dc254838000d1051d94577619882d0",
+  "inventory.png": "618cef3d2eaa32e0a049a5f81d473dcdc356bbaa54517d2f16bb92916ae1792a",
+  "order_books.json.gz": "933d1248011740c3f09b480de01b27beb6f86f65009c3ec5c91b218406b89c7a",
+  "price_checks.parquet": "765459d12d2f35c1b7eb452a99cf4965a028f82b704e8c7cb108dbf1d3c05271",
+  "price_checks_stress.parquet": "8ed6328613a013eea740ed4e4ecf7276d3fa33bf6d3d46dfa9d55cb45a2e357a",
+  "report.md": "ca268303f068008028c1688087bd7a6b69e46806d9b11c060767c21ae12a178e",
+  "research_gaps.png": "8409d62036af7a26894a41779d666fb5bef8998bee0a2e7d4400814853df60f7",
+  "run.json": "964a7cf935e1fc8871623ee4f8a6bcebb81ee4ee0bc4d80b03e68eaade83975f",
+  "scanner_audit.parquet": "b19603d93651ed508f068f6d894b25c85b39a39654453949cb01e86d1e4f8433",
+  "scanner_details.parquet": "93e897beddd36e8db5ddeccdfb2333f3e363a2f07a7bcd0abc94ab6250584ae0",
+  "scanner_grouped.html": "795fd219da41d8d72a64fefaf2aa857302b55c0ea9e3cf37ac3c71a401112542",
+  "scanner_grouped.parquet": "2e5419927f829d1596dfc08a13a65e3a3aa4e2879166c5c23f7131f00bff80ed",
+  "scanner_initial.md": "6503e1508f1d0fa54b6db9c996eb2a89519d9ae3753ec164d286b5ce62ca9fc8",
+  "scanner_settings.json": "49deb264601980c01b6d513cdbde623b74ed3b5fd4c1949a7e223e203708ba1b",
+  "scanner_summary.parquet": "8cd286099e74a685159da146714f6953fe0bda0f6257ce804f577bbaf7167197",
+  "status.json": "7235f832303cc01ffcf33758508026b9726fb68c2a015edae3d8c1f72ccbdbad"
+}

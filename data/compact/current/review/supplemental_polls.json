@@ -1,0 +1,247 @@
+{
+  "polls": [
+    {
+      "metadata": {
+        "created_at": "2026-09-17",
+        "display_name": "Advanced Targeting Research",
+        "end_date": "2026-09-16",
+        "methodology": "Text/Live Phone",
+        "notes": "Public primary memo. One700RV survey; retain both questions, prefer fuller three-candidate ballot. Fleming omitted; flag partial coverage. Pollster accuracy is not established by inclusion.",
+        "poll_id": "reviewed:ID:ATR:2026-09",
+        "pollster": "Advanced Targeting Research",
+        "pollster_id": "reviewed:advanced-targeting-research",
+        "population": "rv",
+        "population_full": "rv",
+        "race_id": "0fb583f2-dab6-4fd3-8128-3556d27a1c23",
+        "sample_size": "700",
+        "source": "reviewed_supplement",
+        "start_date": "2026-09-13",
+        "state": "ID",
+        "url": "https://www.advancedtargetingresearch.com/_files/ugd/03a624_0fca9a6dd7f846f7bc96f97429561064.pdf"
+      },
+      "questions": [
+        {
+          "answers": [
+            {
+              "candidate_id": "270b752e-1222-4fa7-9907-6ee2cd668024",
+              "candidate_name": "Todd Achilles",
+              "party": "IND",
+              "pct": "45.5"
+            },
+            {
+              "candidate_id": "bc8bc0b0-45a8-4b8e-bb09-b8df2efc72fb",
+              "candidate_name": "James Risch",
+              "party": "REP",
+              "pct": "39.4"
+            },
+            {
+              "candidate_id": "08987541-5344-4b24-8ef2-a7ea04d49003",
+              "candidate_name": "Matt Loesby",
+              "party": "LIB",
+              "pct": "4.5"
+            },
+            {
+              "candidate_id": "d8390906-54c4-4050-9005-4934a65fa7b1",
+              "candidate_name": "Don't know",
+              "party": "NONE",
+              "pct": "10.6"
+            }
+          ],
+          "question_id": "reviewed:ID:ATR:2026-09:three-way"
+        },
+        {
+          "answers": [
+            {
+              "candidate_id": "270b752e-1222-4fa7-9907-6ee2cd668024",
+              "candidate_name": "Todd Achilles",
+              "party": "IND",
+              "pct": "50.1"
+            },
+            {
+              "candidate_id": "bc8bc0b0-45a8-4b8e-bb09-b8df2efc72fb",
+              "candidate_name": "James Risch",
+              "party": "REP",
+              "pct": "38.5"
+            },
+            {
+              "candidate_id": "d8390906-54c4-4050-9005-4934a65fa7b1",
+              "candidate_name": "Don't know",
+              "party": "NONE",
+              "pct": "11.4"
+            }
+          ],
+          "question_id": "reviewed:ID:ATR:2026-09:two-way"
+        }
+      ],
+      "review_notes": "Public primary memo. One700RV survey; retain both questions, prefer fuller three-candidate ballot. Fleming omitted; flag partial coverage. Pollster accuracy is not established by inclusion.",
+      "source_sha256": "c092b9411a5c97bcf7bd992846f7190a3f4aa63cecb7595e736ec27e396c5678"
+    },
+    {
+      "metadata": {
+        "created_at": "2026-05-05",
+        "display_name": "The Public Sentiment Institute",
+        "end_date": "2026-05-05",
+        "methodology": "Online Pollfish",
+        "notes": "Original LV crosstab unweighted sample size and exact total-column shares. Mark Moran retains IND. May field dates per release and2026 workbook; prose2025 year is inconsistent with2026 workbook/title and dated release.",
+        "poll_id": "reviewed:VA:TPSI:2026-05",
+        "pollster": "The Public Sentiment Institute",
+        "pollster_id": "reviewed:the-public-sentiment-institute",
+        "population": "lv",
+        "population_full": "lv",
+        "race_id": "1b678686-7e5d-4f9c-857a-2e606685c7f1",
+        "sample_size": "703",
+        "source": "reviewed_supplement",
+        "sponsors": "The Virginia Project",
+        "start_date": "2026-05-01",
+        "state": "VA",
+        "url": "https://docs.google.com/spreadsheets/d/1BHuaXuhWj-xJdeJ4WoIOr778OubyduRuWa8aItCpANo/edit"
+      },
+      "questions": [
+        {
+          "answers": [
+            {
+              "candidate_id": "495a6ebd-1d3a-4448-8f8e-8f2354675c15",
+              "candidate_name": "Mark Warner",
+              "party": "DEM",
+              "pct": "54.57097830097546"
+            },
+            {
+              "candidate_id": "reviewed:VA:bert-mizusawa",
+              "candidate_name": "Bert Mizusawa",
+              "party": "REP",
+              "pct": "28.76963647839526"
+            },
+            {
+              "candidate_id": "reviewed:VA:mark-moran",
+              "candidate_name": "Mark Moran",
+              "party": "IND",
+              "pct": "2.620973732060557"
+            },
+            {
+              "candidate_id": "reviewed:VA:don't-know",
+              "candidate_name": "Don't know",
+              "party": "NONE",
+              "pct": "14.03841148856873"
+            }
+          ],
+          "question_id": "reviewed:VA:TPSI:2026-05:mizusawa"
+        }
+      ],
+      "review_notes": "Original LV crosstab unweighted sample size and exact total-column shares. Mark Moran retains IND. May field dates per release and2026 workbook; prose2025 year is inconsistent with2026 workbook/title and dated release.",
+      "source_sha256": "db7b02c81191e652fd8bb03ccfe42204ae99efa2d0243773eac8ef37d14b75e7"
+    },
+    {
+      "metadata": {
+        "created_at": "2026-06-16",
+        "display_name": "The Public Sentiment Institute",
+        "end_date": "2026-06-16",
+        "methodology": "Online Pollfish",
+        "notes": "Original LV crosstab unweighted sample size and exact total-column shares. Mark Moran retains IND. Exact field dates unavailable; publicationJune16 used only as conservative upper-bound field date, explicitly flagged. Release headline996 is weighted; table reports663 unweighted.",
+        "poll_id": "reviewed:VA:TPSI:2026-06",
+        "pollster": "The Public Sentiment Institute",
+        "pollster_id": "reviewed:the-public-sentiment-institute",
+        "population": "lv",
+        "population_full": "lv",
+        "race_id": "1b678686-7e5d-4f9c-857a-2e606685c7f1",
+        "sample_size": "663",
+        "source": "reviewed_supplement",
+        "sponsors": "",
+        "start_date": "2026-06-16",
+        "state": "VA",
+        "url": "https://docs.google.com/spreadsheets/d/1_WppnTBtVE63Er7OnXf-cy5gFceU3SZMvh6J_jr7xLc/edit"
+      },
+      "questions": [
+        {
+          "answers": [
+            {
+              "candidate_id": "495a6ebd-1d3a-4448-8f8e-8f2354675c15",
+              "candidate_name": "Mark Warner",
+              "party": "DEM",
+              "pct": "50.28411742452036"
+            },
+            {
+              "candidate_id": "reviewed:VA:bert-mizusawa",
+              "candidate_name": "Bert Mizusawa",
+              "party": "REP",
+              "pct": "32.77649599498136"
+            },
+            {
+              "candidate_id": "reviewed:VA:mark-moran",
+              "candidate_name": "Mark Moran",
+              "party": "IND",
+              "pct": "3.207216938204623"
+            },
+            {
+              "candidate_id": "reviewed:VA:don't-know",
+              "candidate_name": "Don't know",
+              "party": "NONE",
+              "pct": "13.73216964229367"
+            }
+          ],
+          "question_id": "reviewed:VA:TPSI:2026-06:mizusawa"
+        }
+      ],
+      "review_notes": "Original LV crosstab unweighted sample size and exact total-column shares. Mark Moran retains IND. Exact field dates unavailable; publicationJune16 used only as conservative upper-bound field date, explicitly flagged. Release headline996 is weighted; table reports663 unweighted.",
+      "source_sha256": "c7f5f3f1e47879091ea64daf86e2620a228f3c0273e8d3d0c142f8608b543d7f"
+    },
+    {
+      "metadata": {
+        "created_at": "2026-09-01",
+        "display_name": "Impact Research",
+        "end_date": "2026-08-22",
+        "methodology": "Live Phone/Text-to-Web",
+        "notes": "Primary memo datedAug27, public post verifiedSep1. Distinct900LV August14\u201322 disclosure overlaps existing700LV August18\u201324; retain both but conservatively group as one sample until respondent independence is documented.",
+        "partisan": "DEM",
+        "poll_id": "reviewed:SC:Impact:2026-08-22",
+        "pollster": "Impact Research",
+        "pollster_id": "reviewed:impact-research",
+        "population": "lv",
+        "population_full": "lv",
+        "race_id": "15314566-c454-4722-b119-8ac87efa2e93",
+        "sample_size": "900",
+        "source": "reviewed_supplement",
+        "start_date": "2026-08-14",
+        "state": "SC",
+        "url": "https://pbs.twimg.com/media/HRGJkaIWwAAUqgW.jpg"
+      },
+      "questions": [
+        {
+          "answers": [
+            {
+              "candidate_id": "3b708929-ecc4-4ed8-8369-cd9512a89493",
+              "candidate_name": "Annie Andrews",
+              "party": "DEM",
+              "pct": "42"
+            },
+            {
+              "candidate_id": "5f8e0206-1e9e-440f-bacd-639587401823",
+              "candidate_name": "Darline Graham",
+              "party": "REP",
+              "pct": "39"
+            },
+            {
+              "candidate_id": "1ef7bda9-590d-450d-acea-02fba97f3128",
+              "candidate_name": "Kasie Whitener",
+              "party": "LIB",
+              "pct": "6"
+            },
+            {
+              "candidate_id": "d8390906-54c4-4050-9005-4934a65fa7b1",
+              "candidate_name": "Don't know",
+              "party": "NONE",
+              "pct": "13"
+            }
+          ],
+          "question_id": "reviewed:SC:Impact:2026-08-22:initial"
+        }
+      ],
+      "retain_alongside_upstream_poll_ids": [
+        "6ee4c6c7-2c69-480a-959d-384e29ee003e"
+      ],
+      "review_notes": "Primary memo datedAug27, public post verifiedSep1. Distinct900LV August14\u201322 disclosure overlaps existing700LV August18\u201324; retain both but conservatively group as one sample until respondent independence is documented.",
+      "source_sha256": "a25cc6c33edd6bac6ef66b8a95ed62eefe0b25f9103c7404bc2c384490a298f6"
+    }
+  ],
+  "reviewed_on": "2026-09-25",
+  "schema_version": 1
+}

@@ -1,9 +1,27 @@
 """Readable model names, without changing persisted identifiers or calculations."""
+import re
 import pandas as pd
 
 
+MODEL_GUIDE = (
+    'All forecasts shown here use polling evidence when available. '
+    'The empirical baseline uses poll averages and historical polling-error patterns. '
+    'A 20% shift moves the predicted margin one-fifth of the way toward that baseline while retaining the original model’s uncertainty distribution. '
+    'It does not mean the other models omit polls or need correction.'
+)
+
+
 def model_label(value):
-    return 'Gaussian Bayesian' if isinstance(value, str) and value == 'Bayesian' else value
+    if not isinstance(value,str):return value
+    names={'Bayesian':'Gaussian Bayesian', 'Non-Bayesian corrected':'Empirical baseline'}
+    if value in names:return names[value]
+    for pattern,label in [(r'Mixture \+ polling (\d+(?:\.\d+)?)%', 'Mixture'),
+                          (r'Corrected (\d+(?:\.\d+)?)%', 'Gaussian')]:
+        match=re.fullmatch(pattern,value)
+        if match:return f'{label}: {match.group(1)}% shift toward baseline'
+    match=re.fullmatch(r'Plain (\d+(?:\.\d+)?)%',value)
+    if match:return f'Gaussian: {match.group(1)}% shift toward poll average'
+    return value
 
 
 def _axis(axis):

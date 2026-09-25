@@ -179,3 +179,9 @@ Notebooks 07 and 08 share verified portfolio calculations but publish separate r
 The main model is labeled **Gaussian Bayesian** in notebooks and reports. Student-t models are also Bayesian; their predictive tails differ. Saved result tables retain the legacy internal identifier `Bayesian` for compatibility.
 
 The live notebook and report automatically compare our forecasts with Race to the WH probabilities, Inside Elections ratings, and dated public Silver Bulletin Deluxe toplines. They also generate shareable PNGs alongside the original tables. See [comparison rules, source freshness, and exclusions](docs/PUBLISHED_COMPARISON.md).
+
+See [model names explained](docs/MODEL_NAMES.md) for the labels used in tables and charts. All displayed models use polling evidence when available.
+
+### Polymarket market research
+
+[Notebook11](notebooks/11_live_polymarket.ipynb) discovers current U.S. Senate markets, including individual races, margins, control, seat totals and Senate-only combinations, and screens conditional model–price gaps using public order books and fees. It uses the last verified forecast and never submits orders. See [method and limitations](docs/POLYMARKET_RESEARCH.md) and [latest report](outputs/reports/markets/polymarket/report.md).

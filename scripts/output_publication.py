@@ -13,6 +13,7 @@ INTERNAL = {'refresh', 'cutoff_forecasts'}
 FORECAST = {'live', 'live_reports', 'control_history'}
 TRAINING = {'training', 'student_refit'}
 TITLES = {
+    'polymarket': 'Polymarket Senate market research',
     'older_alternatives': 'Older model alternatives', 'all_model_mixture': 'All-model mixture review',
     'reproduction': 'Frozen model reproduction', 'blend_weights': 'Blend-weight comparison',
     'scenarios': 'Wave and polling-error scenarios', 'matched_student': 'Matched Student-t comparison',
@@ -69,6 +70,8 @@ def write_index(root):
                   '- [Open the browser report](reports/forecast/report.html) — self-contained HTML (download/open locally).',
                   '- [Shareable PNG images](reports/forecast/report.md#shareable-images) — generated alongside the tables and retained in dated reports.']
     else:lines+=['Run notebook 04 to publish the forecast report.']
+    if (out/'reports/markets/polymarket/report.md').exists():
+        lines += ['', '## Prediction-market research', '', '- [Polymarket Senate catalog and conditional gaps](reports/markets/polymarket/report.md)']
     lines += ['', '## Comparisons and training', '']
     for p in sorted((out/'reports').glob('*/*.md')):
         if p.parent.name in {'forecast','history'}:continue
@@ -165,6 +168,8 @@ def archive_report(root, run, report):
         name = f'forecast-{date}.md' if run.parent.name=='live_reports' else 'report.md'
         (stage/name).write_text(note+body)
         shutil.copyfile(run/'run.json', stage/'run.json')
+        for audit_file in run.glob('poll_audit*'):
+            shutil.copyfile(audit_file, stage/audit_file.name)
         replace_directory(stage,destination)
 
 
@@ -175,7 +180,7 @@ def publish(root, run):
     if kind=='live_reports':
         with tempfile.TemporaryDirectory() as temp:
             stage=Path(temp)
-            for name in ['report.md','report.html','control_history.png',*[p.name for p in sorted(run.glob('share_*.png'))]]:
+            for name in ['report.md','report.html','control_history.png',*[p.name for p in sorted(run.glob('poll_audit*'))],*[p.name for p in sorted(run.glob('share_*.png'))]]:
                 if (run/name).exists():shutil.copyfile(run/name,stage/name)
             replace_directory(stage,Path(root)/'outputs/reports/forecast')
     elif kind not in FORECAST:experiment_report(root,run,kind)

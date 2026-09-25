@@ -55,6 +55,21 @@ def scenario(rows, review, asof, window):
     return questions, answers
 
 
+def validate_race_ids(old, new, review):
+    """Accept explicitly reviewed source identities, not unreviewed matchups."""
+    known={(r['state'],r['race_id']) for r in old}
+    added={(r['state'],r['race_id']) for r in new}-known
+    allowed={(state,race) for state,spec in review['contests'].items() for race in spec.get('source_race_ids',[])}
+    unknown=added-allowed
+    if unknown:
+        detail='; '.join(f'{state}: {race}' for state,race in sorted(unknown))
+        raise ValueError('New source race IDs require review: '+detail+'; inspect config/candidate_review_2026.json. Previous forecast is preserved.')
+    for r in new:
+        if (r['state'],r['race_id']) in added:
+            if (str(r.get('cycle')),r.get('office_type'),r.get('stage'),r.get('election_date'))!=('2026','U.S. Senate','general','2026-11-03'):
+                raise ValueError('Reviewed source race has incompatible election metadata: '+r['state']+': '+r['race_id'])
+
+
 def run(old_path, new_path, old_asof, asof, output, window=14):
     if asof < old_asof:
         raise ValueError('New cutoff precedes baseline cutoff')
@@ -79,12 +94,7 @@ def run(old_path, new_path, old_asof, asof, output, window=14):
     expected = {r['state'] for r in contests}
     if {r['state'] for r in rows['senate'][1]}-expected:
         raise ValueError('Unexpected Senate state')
-    old_races = defaultdict(set)
-    for r in rows['senate'][0]: old_races[r['state']].add(r['race_id'])
-    new_races = {(r['state'],r['race_id']) for r in rows['senate'][1]
-                 if r['race_id'] not in old_races[r['state']]}
-    # New source race UUIDs must be reviewed even when state is already scheduled.
-    if new_races: raise ValueError(f'New source race IDs require review: {sorted(new_races)}')
+    validate_race_ids(rows['senate'][0],rows['senate'][1],review)
     scenario_rows = []; scenarios = {}; question_sets = {}
     for name, raw, cutoff in [('old_data_old_cutoff',rows['senate'][0],old_asof),
                              ('old_data_new_cutoff',rows['senate'][0],asof),

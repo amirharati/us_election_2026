@@ -9,7 +9,7 @@ from pathlib import Path
 import argparse
 
 from data_utils import LAB, Snapshot, digest, latest
-from prepare_data import day, number, read, write_table, surname
+from prepare_data import day, number, read, write_table, surname, forecast_side_shares
 
 
 def share(value):
@@ -106,25 +106,32 @@ def current_senate(questions, answer_rows):
                  source_rows="|".join(a["source_row"] for a in ars), source_race_id=q["race_id"],
                  cycle=2026, geography=q["state"], geography_type="state", election_date="2026-11-03",
                  poll_start=q["start_date"], poll_end=q["end_date"], poll_date=q["end_date"],
-                 date_basis="field_end", source_available_date=q["created_date"], pollster=q["pollster"],
+                 date_basis=q.get("date_basis","field_end"), source_available_date=q["created_date"], pollster=q["pollster"],
                  population=q["population"].strip().lower(), sample_size=number(q["sample_size"]),
                  methodology=q["methodology"], partisan=q["partisan"], source_url=q["source_url"],
                  response_coverage="all_exported_answers", reported_answer_sum=number(q["response_sum"])/100,
                  matchup_status="accepted" if q["accepted_matchup"] == "True" else "quarantined",
                  selection_status=q["selection"], scalar_seat_mapping_ready=q["scalar_seat_mapping_ready"] == "True",
-                 quality_flags=q["reasons"])
+                 quality_flags='|'.join(filter(None,[q["reasons"],q.get('review_flags','')])) )
+        o['source']=q.get('data_source','nyt')
+        o['question_basis']=q.get('question_basis','initial_unverified')
+        o['source_file']='feeds/reviewed_senate.parquet' 
         if q["ranked_choice_round"]:
             o["quality_flags"] += "|rcv_round_"+q["ranked_choice_round"]
-        for party, field in [("DEM", "dem_share"), ("REP", "rep_share")]:
-            candidates = [a for a in unique if a["reviewed_party"] == party]
-            if len(candidates) == 1:
-                o[field] = share(candidates[0]["pct"])
+        d, rep = forecast_side_shares(unique)
+        o["dem_share"], o["rep_share"] = share(d), share(rep)
+        if any(a["reviewed_party"] == "IND" for a in unique):
+            o["quality_flags"] += "|independent_candidate_present|D_IND_vs_REP"
+        if sum(a["reviewed_party"] in {"DEM", "IND"} for a in unique) > 1:
+            o["quality_flags"] += "|strongest_opponent_proxy"
         for a in ars:
             answers.append(dict(observation_id=o["observation_id"], source_row=int(a["source_row"]),
                                 candidate_id=a["candidate_id"], candidate_name=a["candidate_name"],
                                 source_party=a["source_party"], party=a["reviewed_party"],
                                 support_share=share(a["pct"]), exact_duplicate=a["exact_duplicate"] == "True",
-                                party_override=a["party_override"] == "True"))
+                                party_override=a["party_override"] == "True",
+                                canonical_candidate_id=a.get("canonical_candidate_id",a["candidate_id"]),
+                                canonical_candidate_name=a.get("canonical_candidate_name",a["candidate_name"])))
         observations.append(derive(o))
     return observations, answers
 

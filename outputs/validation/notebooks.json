@@ -23,9 +23,10 @@
   {
     "notebook": "04_live_forecast.ipynb",
     "status": "passed",
-    "legacy_data_reads_blocked": true,
-    "seconds": 110.92,
-    "notebook_sha256": "811d58c0349758780645627b65964a7ae0f70e9d002fbb00a689d9409d278cc0"
+    "execution_mode": "full_online_final_poll_review",
+    "legacy_data_reads_blocked": false,
+    "notebook_sha256": "bfd6826876790658008e8fd37173f0639461832894f33dd44a15bc753fb4f04d",
+    "seconds": 144.61
   },
   {
     "notebook": "05_wave_and_poll_error_scenarios.ipynb",
@@ -68,5 +69,12 @@
     "legacy_data_reads_blocked": true,
     "seconds": 3.16,
     "notebook_sha256": "a0fd50351a7421c531a19c56f0764626b3e31e1986694fd256fa35ececee4257"
+  },
+  {
+    "notebook": "11_live_polymarket.ipynb",
+    "status": "passed",
+    "legacy_data_reads_blocked": true,
+    "seconds": 36.03,
+    "notebook_sha256": "c63c364df8baa4edd0da72ef235d71be5edebeaf525c71fd22b2fa9ecefff3ce"
   }
 ]

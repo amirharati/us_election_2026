@@ -10,13 +10,13 @@ As of 2026-09-20. Gaussian remains reference; mixture and shifts are exploratory
 | matched_live | Gaussian Bayesian                  |       128 | 140 |   6.3067 |  0.0555 |          78.5714 |
 | matched_live | Four-model mixture        |       129 | 140 |   6.5119 |  0.0561 |          75      |
 | matched_live | Matched Student-t (df5)   |       129 | 140 |   6.3443 |  0.0548 |          66.4286 |
-| matched_live | Mixture + polling 20%     |       129 | 140 |   6.5124 |  0.0566 |          75.7143 |
+| matched_live | Mixture: 20% shift toward baseline     |       129 | 140 |   6.5124 |  0.0566 |          75.7143 |
 | matched_live | Older Gaussian            |       129 | 140 |   6.8085 |  0.0591 |          79.2857 |
 | matched_live | Student-t research helper |       129 | 140 |   6.8011 |  0.0579 |          66.4286 |
 | oct31        | Gaussian Bayesian                  |       132 | 140 |   5.206  |  0.0504 |          73.5714 |
 | oct31        | Four-model mixture        |       132 | 140 |   5.2748 |  0.0495 |          67.1429 |
 | oct31        | Matched Student-t (df5)   |       132 | 140 |   5.2242 |  0.0495 |          62.1429 |
-| oct31        | Mixture + polling 20%     |       133 | 140 |   5.0972 |  0.0473 |          71.4286 |
+| oct31        | Mixture: 20% shift toward baseline     |       133 | 140 |   5.0972 |  0.0473 |          71.4286 |
 | oct31        | Older Gaussian            |       133 | 140 |   5.3436 |  0.0501 |          72.1429 |
 | oct31        | Student-t research helper |       131 | 140 |   5.3574 |  0.049  |          62.1429 |
 
@@ -33,7 +33,7 @@ The ensemble adds one September correct call but worsens MAE relative to the Gau
 | Student-t research helper |        50 |       51.116 |       49 |       53 |        63.019 |
 | Matched Student-t (df5)   |        51 |       50.477 |       49 |       52 |        50.069 |
 | Four-model mixture        |        50 |       50.748 |       49 |       53 |        55.149 |
-| Mixture + polling 20%     |        50 |       50.42  |       49 |       52 |        47.403 |
+| Mixture: 20% shift toward baseline     |        50 |       50.42  |       49 |       52 |        47.403 |
 
 Point D seats count positive mean margins; R point seats are100 minus D. Expected seats sum probabilities. D control requires51. Every prediction includes continuing seats. The20% mixture shift preserves mixture covariance and interval widths, while moving means toward the more Republican corrected-polling helper. Hence its control probability decreases; this is not a covariance change.
 

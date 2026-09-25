@@ -4,11 +4,16 @@ One report per UTC execution date and report type. Same-day reruns replace that 
 
 ## Forecast reports
 
+- [2026-09-25 — forecast](2026-09-25/live_reports/forecast-2026-09-25.md)
+- [2026-09-24 — forecast](2026-09-24/live_reports/forecast-2026-09-24.md)
+- [2026-09-23 — forecast](2026-09-23/live_reports/forecast-2026-09-23.md)
 - [2026-09-22 — forecast](2026-09-22/live_reports/forecast-2026-09-22.md)
 - [2026-09-21 — forecast](2026-09-21/live_reports/forecast-2026-09-21.md)
 
 ## Other reports
 
+- [2026-09-25 — Polymarket Senate market research](2026-09-25/polymarket/report.md)
+- [2026-09-24 — Polymarket Senate market research](2026-09-24/polymarket/report.md)
 - [2026-09-21 — Historical training reproduction](2026-09-21/training/report.md)
 - [2026-09-21 — Wave and polling-error scenarios](2026-09-21/scenarios/report.md)
 - [2026-09-21 — Frozen model reproduction](2026-09-21/reproduction/report.md)

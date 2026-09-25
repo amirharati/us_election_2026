@@ -1,0 +1,38 @@
+[
+  {
+    "notes": "Public primary memo. One700RV survey; retain both questions, prefer fuller three-candidate ballot. Fleming omitted; flag partial coverage. Pollster accuracy is not established by inclusion.",
+    "poll_id": "reviewed:ID:ATR:2026-09",
+    "publication_date": "2026-09-17",
+    "source_sha256": "c092b9411a5c97bcf7bd992846f7190a3f4aa63cecb7595e736ec27e396c5678",
+    "source_url": "https://www.advancedtargetingresearch.com/_files/ugd/03a624_0fca9a6dd7f846f7bc96f97429561064.pdf",
+    "state": "ID",
+    "status": "supplement_added"
+  },
+  {
+    "notes": "Original LV crosstab unweighted sample size and exact total-column shares. Mark Moran retains IND. May field dates per release and2026 workbook; prose2025 year is inconsistent with2026 workbook/title and dated release.",
+    "poll_id": "reviewed:VA:TPSI:2026-05",
+    "publication_date": "2026-05-05",
+    "source_sha256": "db7b02c81191e652fd8bb03ccfe42204ae99efa2d0243773eac8ef37d14b75e7",
+    "source_url": "https://docs.google.com/spreadsheets/d/1BHuaXuhWj-xJdeJ4WoIOr778OubyduRuWa8aItCpANo/edit",
+    "state": "VA",
+    "status": "supplement_added"
+  },
+  {
+    "notes": "Original LV crosstab unweighted sample size and exact total-column shares. Mark Moran retains IND. Exact field dates unavailable; publicationJune16 used only as conservative upper-bound field date, explicitly flagged. Release headline996 is weighted; table reports663 unweighted.",
+    "poll_id": "reviewed:VA:TPSI:2026-06",
+    "publication_date": "2026-06-16",
+    "source_sha256": "c7f5f3f1e47879091ea64daf86e2620a228f3c0273e8d3d0c142f8608b543d7f",
+    "source_url": "https://docs.google.com/spreadsheets/d/1_WppnTBtVE63Er7OnXf-cy5gFceU3SZMvh6J_jr7xLc/edit",
+    "state": "VA",
+    "status": "supplement_added"
+  },
+  {
+    "notes": "Primary memo datedAug27, public post verifiedSep1. Distinct900LV August14\u201322 disclosure overlaps existing700LV August18\u201324; retain both but conservatively group as one sample until respondent independence is documented.",
+    "poll_id": "reviewed:SC:Impact:2026-08-22",
+    "publication_date": "2026-09-01",
+    "source_sha256": "a25cc6c33edd6bac6ef66b8a95ed62eefe0b25f9103c7404bc2c384490a298f6",
+    "source_url": "https://pbs.twimg.com/media/HRGJkaIWwAAUqgW.jpg",
+    "state": "SC",
+    "status": "supplement_added"
+  }
+]

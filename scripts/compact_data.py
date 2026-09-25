@@ -200,17 +200,25 @@ def poll_update(path, result, as_of):
             frame = pd.read_csv(p/rel,dtype=str,keep_default_na=False)
             if list(frame) != list(old[name][0]): raise ValueError('Poll source schema changed')
             raw[name] = frame.to_dict('records')
-        allowed = {(r['state'],r['race_id']) for r in old['senate']}
-        if {(r['state'],r['race_id']) for r in raw['senate']} - allowed:
-            raise ValueError('New source race IDs require review')
+        from audit_refresh_2026 import validate_race_ids
+        validate_race_ids(old['senate'],raw['senate'],json.loads((LAB/'config/candidate_review_2026.json').read_text()))
     review = json.loads((LAB/'config/candidate_review_2026.json').read_text())
     facts = json.loads((LAB/'config/survey_identity_v1.json').read_text())
-    qs, ans = current_questions(raw['senate'],review,as_of); select_current(qs,as_of,14)
+    from current_poll_review import reviewed_feed
+    supplements=json.loads((LAB/'config/supplemental_polls_2026.json').read_text())
+    reviewed_rows, receipts=reviewed_feed(raw['senate'],supplements,as_of)
+    model_raw=dict(raw,senate=reviewed_rows)
+    (path/'review').mkdir(exist_ok=True)
+    atomic_json(path/'review/candidate_review.json',review)
+    atomic_json(path/'review/supplemental_polls.json',supplements)
+    atomic_json(path/'review/receipts.json',receipts)
+    pd.DataFrame(reviewed_rows).to_parquet(path/'feeds/reviewed_senate.parquet',index=False)
+    qs, ans = current_questions(reviewed_rows,review,as_of); select_current(qs,as_of,14)
     obs, answers = current_senate(csv_form(qs),csv_form(ans))
     national, national_answers = current_generic(raw['generic_ballot'],as_of)
     obs += national; answers += national_answers
     # Content-derived version avoids new identities for unchanged source data.
-    version = result['manifest_sha256'][:20]
+    version = hashlib.sha256((result['manifest_sha256']+json.dumps(review,sort_keys=True)+json.dumps(supplements,sort_keys=True)).encode()).hexdigest()[:20]
     links = {member:x['canonical'] for x in facts['sample_links'] for member in x['members']}
     pending = {member for x in facts['pending_duplicates'] for member in x['members']}
     for o in obs:
@@ -226,9 +234,23 @@ def poll_update(path, result, as_of):
     for o in obs:
         oid=ids[o['observation_id']]
         x=dict(o); x.pop('poll_error_vs_result',None)
+        x.pop('question_basis',None)  # Reviewed basis belongs in poll_metadata; preserve poll schema.
         x.update(observation_id=oid,origin_bundle='refresh',origin_snapshot=version,origin_observation_id=o['observation_id'])
-        i=current_identity(o,raw,aliases,facts);i['observation_id']=oid;identity.append(i)
-        b=default_metadata(o,list(template));b['observation_id']=oid;metadata.append(b)
+        i=current_identity(o,model_raw,aliases,facts);i['observation_id']=oid
+        pr=review.get('poll_reviews',{}).get(o['source_poll_id'],{})
+        if pr.get('sample_group_id'):
+            i['canonical_sample_group_id']=pr['sample_group_id']
+            i['sample_identity_status']='conservative_same_firm_overlap'
+        identity.append(i)
+        b=default_metadata(o,list(template));b['observation_id']=oid
+        # A known publication/archive date is a conservative availability bound.
+        # Never make supplementary polls visible to a replay before publication.
+        b['documented_release_date']=o['source_available_date']
+        b['availability_status']='known_publication_or_archive_bound'
+        if o.get('question_basis')=='initial':
+            b['question_construct']='vote_intention';b['estimate_basis']='full_sample'
+            b['basis_review_status']='primary_release_reviewed'
+        metadata.append(b)
         x['canonical_sample_group_id']=i['canonical_sample_group_id']
         status,reason=disposition(x,None,{})
         quality.append(dict(observation_id=oid,cycle=x['cycle'],geography=x['geography'],dataset=x['dataset'],

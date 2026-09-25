@@ -296,7 +296,7 @@ def display_tables(path):
     now['P(D) %']=100*now.p_dem
     return dict(summary=pd.read_parquet(path/'summary.parquet') if (path/'summary.parquet').exists() else pd.DataFrame(),
                 seats=seats[seats.cycle.eq(2026)],margins=now.pivot(index='State',columns='model',values='margin_pp'),
-                probabilities=now.pivot(index='State',columns='model',values='P(D) %'))
+                probabilities=now.pivot(index='State',columns='model',values='P(D) %'),predictions=now)
 
 
 def weight_experiment():
@@ -397,7 +397,7 @@ def live_forecast(snapshot, include_student=True, weights=(.1,.2,.4,.5), freshne
     seats.append(dict(scenario='matched_live',cycle=2026,model='Non-Bayesian corrected',point_D=point,point_R=100-point,method='Independent-state approximation',**ss))
     out=new_run(output_kind)
     from model_portfolio import additions,configuration
-    extra=additions(pp,fit,float(fold.lambda_value),cal,draws,arrays['covariance'],npred,ref,include_student)
+    extra=additions(pp,fit,float(fold.lambda_value),cal,draws,arrays['covariance'],npred,ref,include_student,save_samples=True)
     rows.extend(extra['predictions']);seats.extend(extra['seats'])
     if extra['diagnostics']:
         diagnostics=pd.concat(extra['diagnostics'],ignore_index=True)
@@ -410,7 +410,7 @@ def live_forecast(snapshot, include_student=True, weights=(.1,.2,.4,.5), freshne
     predictions=pd.concat(rows,ignore_index=True)
     assert predictions.actual_pp.isna().all()
     predictions.to_parquet(out/'predictions.parquet',index=False);pd.DataFrame(seats).to_parquet(out/'seats.parquet',index=False)
-    np.savez_compressed(out/'main_joint.npz',**arrays,target_ids=q.target_id.to_numpy(str),seat_count_frequency=freq)
+    np.savez_compressed(out/'main_joint.npz',**arrays,target_ids=q.target_id.to_numpy(str),seat_count_frequency=freq,samples=draws)
     poll_audit[poll_audit.cycle.eq(2026)].to_parquet(out/'poll_audit.parquet',index=False)
     future_scores.to_parquet(out/'feature_scores.parquet',index=False)
     current_context.to_parquet(out/'feature_context.parquet',index=False)
@@ -424,7 +424,7 @@ def live_forecast(snapshot, include_student=True, weights=(.1,.2,.4,.5), freshne
         trained_through=2024,calibration_horizon='frozen September17 historical forecasts',
         refreshed_hyperparameters=False,weights=list(weights),freshness=freshness or {},
         missing_current_feature_scores=future_scores.columns[future_scores.isna().any()].tolist(),
-        political_reference_reviewed_through=political_review,political_context_carried_forward=bool(political_carried)),publish=output_kind!='live')
+        political_reference_reviewed_through=political_review,political_context_carried_forward=bool(political_carried)),publish=output_kind not in {'live','distribution_rebuild'})
 
 
 def refresh(**kwargs):

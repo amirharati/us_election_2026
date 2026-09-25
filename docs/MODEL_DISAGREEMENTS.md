@@ -15,15 +15,15 @@ Poll-weight experiments are excluded. Scope is the four Bayesian models, correct
 | Matched Student-t (df5)   |        51 |       50.477 |          50.069 |       49 |       52 |
 | Older Gaussian            |        50 |       51.091 |          61.997 |       49 |       53 |
 | Student-t research helper |        50 |       51.116 |          63.019 |       49 |       53 |
-| Non-Bayesian corrected    |        48 |       48.373 |          16.354 |       46 |       51 |
+| Empirical baseline    |        48 |       48.373 |          16.354 |       46 |       51 |
 | Four-model mixture        |        50 |       50.748 |          55.149 |       49 |       53 |
-| Mixture + polling 20%     |        50 |       50.42  |          47.403 |       49 |       52 |
+| Mixture: 20% shift toward baseline     |        50 |       50.42  |          47.403 |       49 |       52 |
 
 Point seats count positive mean margins; expected seats sum probabilities; D control requires51. Bayesian/mixture chamber probabilities use joint forecasts. The non-Bayesian helper assumes independent states, so its control probability is not an identical uncertainty framework. All totals include continuing seats under the documented caucus/seat-ledger convention.
 
 ### Key states: D−R margin in pp / D win probability
 
-| geography   | Gaussian Bayesian      | Matched Student-t (df5)   | Older Gaussian   | Student-t research helper   | Non-Bayesian corrected   |
+| geography   | Gaussian Bayesian      | Matched Student-t (df5)   | Older Gaussian   | Student-t research helper   | Empirical baseline   |
 |:------------|:--------------|:--------------------------|:-----------------|:----------------------------|:-------------------------|
 | MI          | +4.99 / 79.9% | +4.90 / 85.0%             | +4.73 / 74.9%    | +4.72 / 80.6%               | -3.86 / 37.9%            |
 | ME          | +8.19 / 92.0% | +7.96 / 94.0%             | +5.20 / 76.2%    | +5.35 / 82.4%               | -0.04 / 49.9%            |
@@ -79,7 +79,7 @@ Matched prior variances plus heavier far tails can mean narrower central interva
 | Student-t research helper |    1.896  |            0.0364 |            0.0014 |    0.1758 |                   0.0172 |
 | Matched Student-t (df5)   |    1.4316 |            0.002  |            0.0004 |    0.2608 |                   0.0265 |
 | Four-model mixture        |    1.7858 |            0.0213 |            0.0015 |    0.2133 |                   0.0198 |
-| Mixture + polling 20%     |    1.8287 |            0.0152 |            0.0035 |    0.2232 |                   0.0198 |
+| Mixture: 20% shift toward baseline     |    1.8287 |            0.0152 |            0.0035 |    0.2232 |                   0.0198 |
 
 The probability of at least55 D seats is about0.22% final Gaussian,0.20% matched Student,4.47% older Gaussian and3.64% older Student. Thus the broader older **architecture**, more than the Student label by itself, drives this particular chamber-upset scenario. These are finite Monte Carlo estimates, especially noisy for very rare events. Mean correlations alone do not determine seat tails; marginal means, scales and dependence all matter.
 

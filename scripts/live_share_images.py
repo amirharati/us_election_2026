@@ -4,6 +4,7 @@ import json
 import textwrap
 
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 import numpy as np
 import pandas as pd
 
@@ -64,26 +65,86 @@ def chamber_images(seats,directory,cutoff):
     axes[1].axvline(51,color=MUTED,ls='--',lw=1)
     for ax in axes:ax.set_ylim(len(q),-.6);ax.grid(axis='x',alpha=.15);ax.set_axisbelow(True);ax.spines[['top','right']].set_visible(False)
     fig.suptitle(f'2026 Senate · chamber forecast · cutoff {cutoff}',fontsize=17,weight='bold',color=INK)
-    fig.text(.02,.015,'Source: local live forecast. D control requires 51 seats. Model alternatives are not independent forecasts.',fontsize=9,color=MUTED)
+    fig.text(.02,.015,'All models use polls when available. A baseline shift changes the mean, not the uncertainty distribution. D control requires 51 seats.',fontsize=9,color=MUTED)
     fig.tight_layout(rect=[0,.04,1,.93]);return [finish(fig,directory,'share_chamber')]
 
 
-def state_images(tables,models,directory,cutoff):
-    paths=[]
-    for key,title in [('margins','D/Independent minus R margin (pp)'),('probabilities','D/Independent win probability (%)')]:
-        frame=tables[key][[m for m in models if m in tables[key].columns]].copy()
-        frame=frame.loc[frame.mean(axis=1).sort_values().index]
-        fig,ax=plt.subplots(figsize=(12,12));y=np.arange(len(frame))
-        ax.hlines(y,frame.min(axis=1),frame.max(axis=1),color='#bcc7d2',lw=3,label='Range across displayed models')
-        for m in frame:
-            if m not in ['Bayesian','Four-model mixture']:ax.scatter(frame[m],y,color='#8e9ba8',s=12,zorder=2)
-        for m,color,marker in [('Bayesian',BLUE,'o'),('Four-model mixture','#d58b25','D')]:
-            if m in frame:ax.scatter(frame[m],y,color=color,marker=marker,s=36,label=model_label(m),zorder=3)
-        ax.axvline(0 if key=='margins' else 50,color=MUTED,ls='--',lw=1)
-        if key=='probabilities':ax.set_xlim(-2,102)
-        style_axis(ax,frame.index);ax.set_xlabel(title);ax.legend(loc='upper center',bbox_to_anchor=(.5,1.10),ncol=3,fontsize=9)
-        chart_caption(fig,f'2026 Senate · state forecasts and model spread\nCutoff {cutoff}',
-            'Each dot is a model forecast. Connecting lines show model disagreement, not prediction intervals. Independents count with D/Independent.')
+def state_chart_data(tables):
+    """Align actual mixture quantiles with its four component means by state."""
+    from model_portfolio import configuration
+    config=configuration();names=list(config['component_weights'])
+    predictions=tables['predictions']
+    mixture=predictions[predictions.model.eq(config['mixture_label'])].set_index('State')
+    if mixture.empty:return mixture
+    q=mixture.sort_values('margin_pp').copy()
+    means=tables['margins'].reindex(q.index)[names].to_numpy(dtype=float)
+    if not np.isfinite(means).all():raise ValueError('Missing four-model component margins')
+    pairs=np.triu_indices(len(names),1)
+    q['disagreement_pp']=np.abs(means[:,:,None]-means[:,None,:])[:,pairs[0],pairs[1]].mean(axis=1)
+    return q
+
+
+COVERAGE_COLORS={'adequate':'#16857b','thin':'#c28b18','none':'#7a8592'}
+
+
+def interval_coverage(q,coverage):
+    """Use unique admitted samples from the forecast's own cutoff and audit."""
+    rows=coverage['all_contests'].query("model == 'Four-model mixture'")
+    if rows.target_id.duplicated().any():raise ValueError('Duplicate polling coverage for a race')
+    rows=rows.set_index('target_id').reindex(q.target_id)
+    if rows[['recent_samples','recent_firms']].isna().any().any():
+        raise ValueError('Missing polling coverage; missing is not zero polls')
+    settings=coverage['parameters']
+    adequate=(rows.recent_samples.ge(settings['min_samples']) & rows.recent_firms.ge(settings['min_firms']))
+    groups=np.where(rows.recent_samples.eq(0),'none',np.where(adequate,'adequate','thin'))
+    return [COVERAGE_COLORS[g] for g in groups]
+
+
+def state_images(tables,models,directory,cutoff,coverage=None):
+    q=state_chart_data(tables)
+    if q.empty:return []  # The four-model mixture requires all four fitted components.
+    paths=[];y=np.arange(len(q))
+    if coverage is not None and str(coverage['as_of'])!=str(cutoff):
+        raise ValueError('Polling coverage and chart cutoff differ')
+    colors=interval_coverage(q,coverage) if coverage is not None else BLUE
+    has68=all(c in q and q[c].notna().all() for c in ['lo68_pp','hi68_pp'])
+    for key in ['margins','probabilities']:
+        fig,axes=plt.subplots(1,2,figsize=(14,13),gridspec_kw={'width_ratios':[3,1]},sharey=True)
+        ax,disagreement=axes
+        if key=='margins':
+            ax.hlines(y,q.lo95_pp,q.hi95_pp,color=colors,lw=2,label='Central 95% predictive interval',zorder=2)
+            if has68:ax.hlines(y,q.lo68_pp,q.hi68_pp,color=colors,lw=6,label='Central 68% predictive interval',zorder=3)
+            ax.scatter(q.margin_pp,y,color=INK,s=30,label='Mixture mean',zorder=4)
+            ax.axvline(0,color=MUTED,ls='--',lw=1)
+            ax.set_xlabel('D/Independent minus R vote margin (percentage points)')
+            ax.set_title('Four-model mixture: possible election outcomes',fontsize=12,pad=90)
+            handles=[Line2D([],[],color=INK,lw=2,label='Central 95% interval')]
+            if has68:handles.append(Line2D([],[],color=INK,lw=6,label='Central 68% interval'))
+            handles.append(Line2D([],[],color=INK,marker='o',ls='',label='Mixture mean'))
+            if coverage is not None:
+                settings=coverage['parameters']
+                labels={'adequate':f"Adequate: ≥{settings['min_samples']} samples and ≥{settings['min_firms']} firms",
+                        'thin':'Few samples or limited firm diversity','none':'No recent polls'}
+                handles += [Line2D([],[],color=color,lw=5,label=labels[group]) for group,color in COVERAGE_COLORS.items()]
+                legend_title=f"Polling coverage in the previous {settings['recent_days']} days"
+            else:legend_title='Polling coverage unavailable'
+            ax.legend(handles=handles,loc='lower center',bbox_to_anchor=(.5,1.015),fontsize=9,ncol=2,title=legend_title,title_fontsize=10)
+            note='Color shows polling coverage, not confidence. Interval width reflects the full mixture, including within-model uncertainty and model differences.'
+            if not has68:note+=' This older saved run has no 68% quantiles; rerun the live forecast to add them.'
+        else:
+            ax.scatter(100*q.p_dem,y,color=BLUE,s=35,zorder=3)
+            ax.axvline(50,color=MUTED,ls='--',lw=1)
+            ax.set(xlim=(-2,102),xlabel='D/Independent win probability (%)')
+            ax.set_title('Four-model mixture: chance of winning',fontsize=12,pad=20)
+            note='Dots show mixture win probabilities. Vote-margin predictive intervals belong in the companion margin chart.'
+        disagreement.barh(y,q.disagreement_pp,height=.5,color='#8757a3',zorder=2)
+        disagreement.set(xlim=(0,None),xlabel='Average pairwise margin gap (pp)')
+        disagreement.set_title('Component disagreement',fontsize=12,pad=20)
+        for axis in axes:style_axis(axis,q.index)
+        disagreement.tick_params(axis='y',labelleft=False)
+        title='predictive intervals' if key=='margins' else 'win probabilities'
+        chart_caption(fig,f'2026 Senate · four-model mixture {title}\nCutoff {cutoff}',
+            note+' Right panel averages the six absolute margin gaps among the four components; it is context, not extra uncertainty to add.')
         paths.append(finish(fig,directory,'share_state_'+key))
     return paths
 
@@ -163,7 +224,7 @@ def build_share_images(out,run,watchlist,surprise,published):
     import election_lab as lab
     meta=json.loads((run/'run.json').read_text());cutoff=meta['as_of'];tables=lab.display_tables(run)
     paths=chamber_images(tables['seats'],out,cutoff)
-    paths+=state_images(tables,MODELS,out,cutoff)
+    paths+=state_images(tables,MODELS,out,cutoff,coverage=watchlist)
     paths+=uncertainty_images(watchlist['broad'].query("model == 'Bayesian'"),out,cutoff)
     for key in ['polled','thin']:paths+=watch_images(surprise[key],key,out,cutoff)
     paths+=published_images(published,out,cutoff)

@@ -1,0 +1,19 @@
+{
+  "source_manifest_sha256": "cd906926884c0f4633a708ff8433f6fe47091b95348beafb31488c48d86cdaad",
+  "comparison_code_sha256": "38bb431b988f4524b3c288fbe6e50a572465bb79a8d8037332b659030e840725",
+  "candidate_review_sha256": "b7ac76fdc04556503ed6ce4cd0acc2955b7afabbe10241d967a42ea75ec6ca6c",
+  "cutoff": "2026-09-24",
+  "models": [
+    "Bayesian",
+    "Four-model mixture"
+  ],
+  "gap_pp": 15,
+  "confidence": 0.75,
+  "independent_states": [
+    "ID",
+    "MT",
+    "NE",
+    "SD"
+  ],
+  "independent_policy": "D_plus_independent_combined_side; no double counting of publisher D column"
+}

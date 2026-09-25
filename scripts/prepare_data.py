@@ -238,7 +238,20 @@ def lag_features(cycle, state, states, national):
                      "test" if cycle in {2020, 2022} else "forecast" if cycle == 2026 else "unused"}
 
 
+def forecast_side_shares(answers):
+    """Current-election proxy: strongest D/IND candidate minus strongest REP.
+
+    Keep actual affiliations on answer rows. Never add competing candidates' votes.
+    Multiple opponents require a candidate-level model for exact win probabilities.
+    """
+    left = [number(a["pct"]) for a in answers if a["reviewed_party"] in {"DEM", "IND"}]
+    right = [number(a["pct"]) for a in answers if a["reviewed_party"] == "REP"]
+    return (max(left) if left and None not in left else None,
+            max(right) if right and None not in right else None)
+
+
 def current_questions(rows, review, asof):
+    from current_poll_review import canonical_candidate
     groups = defaultdict(list)
     for line, r in enumerate(rows, 2):
         groups[(r["poll_id"], r["question_id"], r["race_id"], r["ranked_choice_round"])].append((line, r))
@@ -249,7 +262,15 @@ def current_questions(rows, review, asof):
         spec = review["contests"][state]
         expected = {c["candidate_id"]: c for c in spec["candidates"] if c["candidate_id"]}
         qid = "|".join(key)
-        reasons = []
+        qr = review.get("question_reviews", {}).get(key[1], {})
+        pr = review.get("poll_reviews", {}).get(key[0], {})
+        reasons, flags = [], []
+        if pr.get('date_basis') and pr['date_basis'] != 'field_end':
+            flags.append(pr['date_basis'])
+        if qr and (qr['poll_id'] != key[0] or qr['state'] != state):
+            raise ValueError('Stale question review: '+qid)
+        if qr.get('basis') in {'informed', 'conditional', 'ambiguous'}:
+            reasons.append('reviewed_'+qr['basis']+'_question')
         if not spec["candidates"]:
             reasons.append("pending_matchup_review")
         unique, seen = [], set()
@@ -257,19 +278,32 @@ def current_questions(rows, review, asof):
             fingerprint = tuple(sorted(a.items()))
             duplicate = fingerprint in seen
             seen.add(fingerprint)
-            correct_party = expected.get(a["candidate_id"], {}).get("party", a["party"])
+            candidate = canonical_candidate(a, spec)
+            correct_party = candidate['party'] if candidate else a['party']
+            canonical_id = candidate['candidate_id'] if candidate else a['candidate_id']
+            if canonical_id != a['candidate_id']: flags.append('reviewed_candidate_alias')
             answers.append({"question_key": qid, "source_row": line, "candidate_id": a["candidate_id"],
                             "candidate_name": a["candidate_name"], "source_party": a["party"],
-                            "reviewed_party": correct_party, "pct": a["pct"],
+                            "canonical_candidate_id": canonical_id, "canonical_candidate_name": candidate["name"] if candidate else a["candidate_name"], "reviewed_party": correct_party, "pct": a["pct"],
                             "exact_duplicate": duplicate, "party_override": correct_party != a["party"]})
             if not duplicate:
-                unique.append(a)
-        ids = [a["candidate_id"] for a in unique]
+                unique.append(dict(a, canonical_candidate_id=canonical_id, reviewed_party=correct_party))
+        ids = [a["canonical_candidate_id"] for a in unique]
         if len(ids) != len(set(ids)):
             reasons.append("conflicting_candidate_answers")
-        if len(expected) != len(spec["candidates"]) or not set(expected) <= set(ids):
+        # Require the reviewed Republican and at least one reviewed D/IND opponent.
+        # Additional independents do not invalidate an otherwise usable matchup.
+        republicans = {k for k, c in expected.items() if c["party"] == "REP"}
+        opponents = {k for k, c in expected.items() if c["party"] in {"DEM", "IND"}}
+        if (len(expected) != len(spec["candidates"]) or not republicans
+                or not republicans <= set(ids) or not opponents.intersection(ids)):
             reasons.append("missing_reviewed_contender")
-        if any(a["party"] in {"DEM", "REP", "IND"} and a["candidate_id"] not in expected for a in unique):
+        required = set(spec.get('required_ballot_candidate_ids', republicans | opponents))
+        if required - set(ids):
+            reasons.append('conditional_missing_ballot_contender')
+        elif set(expected) - set(ids):
+            flags.append('partial_ballot_coverage')
+        if any(a["reviewed_party"] in {"DEM", "REP"} and a["canonical_candidate_id"] not in expected for a in unique):
             reasons.append("unreviewed_or_former_contender")
         shares = [number(a["pct"]) for a in unique]
         if any(v is None or not 0 <= v <= 100 for v in shares) or sum(v or 0 for v in shares) > 102:
@@ -288,23 +322,47 @@ def current_questions(rows, review, asof):
             reasons.append("different_election_stage")
         if any(a.get("hypothetical", "").upper() in {"TRUE", "YES", "1"} for a in unique):
             reasons.append("explicitly_hypothetical_question")
-        if number(r["sample_size"]) is None or number(r["sample_size"]) <= 0:
+        sample_size = number(r['sample_size'])
+        if sample_size is None and pr.get('sample_size'):
+            sample_size = pr['sample_size']; flags.append('reviewed_missing_sample_size')
+        if sample_size is None or sample_size <= 0:
             reasons.append("invalid_sample_size")
-        pair = {expected[a["candidate_id"]]["party"]: number(a["pct"]) for a in unique if a["candidate_id"] in expected}
-        margin = pair["DEM"]-pair["REP"] if {"DEM", "REP"} <= pair.keys() and None not in pair.values() else None
+        d, rep = forecast_side_shares(unique)
+        if qr.get('expected_shares'):
+            actual={a['candidate_id']:number(a['pct']) for a in unique}
+            if any(actual.get(k)!=v for k,v in qr['expected_shares'].items()):
+                raise ValueError('Source revised reviewed question; review again: '+qid)
+        margin = d-rep if d is not None and rep is not None else None
         questions.append({"question_key": qid, "poll_id": key[0], "question_id": key[1],
                           "race_id": key[2], "state": state, "pollster_id": r["pollster_id"],
                           "pollster": r["pollster"], "start_date": str(start), "end_date": str(end),
                           "created_date": str(created), "population": r["population"],
-                          "sample_size": number(r["sample_size"]), "partisan": r["partisan"],
+                          "sample_size": sample_size, "partisan": r["partisan"],
                           "methodology": r["methodology"], "source_url": r["url"],
                           "ranked_choice_round": r["ranked_choice_round"],
                           "ranked_choice_final": r["ranked_choice_final"],
                           "dem_rep_margin": margin, "response_sum": sum(v or 0 for v in shares),
                           "answer_count": len(unique), "accepted_matchup": not reasons,
-                          "reasons": "|".join(reasons), "election_rule": spec["rule"],
+                          "reasons": "|".join(reasons), "review_flags": "|".join(sorted(set(flags))),
+                          "question_basis": qr.get('basis','initial_unverified'),
+                          "ballot_candidate_count": sum(a['reviewed_party'] not in {'NONE',''} for a in unique),
+                          "data_source": 'reviewed_supplement' if r.get('source')=='reviewed_supplement' else 'nyt',
+                          "date_basis": pr.get('date_basis','field_end'),
+                          "election_rule": spec["rule"],
                           "scalar_seat_mapping_ready": spec["scalar_seat_mapping_ready"],
                           "selection": "excluded"})
+    # Prefer fuller ballot versions within the same sample/population/RCV round.
+    # Do not average a two-way hypothetical with a fuller actual-ballot question.
+    families = defaultdict(list)
+    for q in questions:
+        if q['accepted_matchup']:
+            families[(q['poll_id'],q['state'],q['population'],q['ranked_choice_round'])].append(q)
+    for family in families.values():
+        largest=max(q['ballot_candidate_count'] for q in family)
+        for q in family:
+            if q['ballot_candidate_count'] < largest:
+                q['accepted_matchup']=False
+                q['reasons']='alternative_reduced_ballot_same_sample'
     return questions, answers
 
 

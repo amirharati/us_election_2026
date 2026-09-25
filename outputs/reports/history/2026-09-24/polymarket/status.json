@@ -1,0 +1,27 @@
+{
+  "retrieved_at": "2026-09-24T15:45:41.568079+00:00",
+  "evaluated_at": "2026-09-24T15:45:42.688263+00:00",
+  "catalog_status": "recent catalog cache",
+  "book_status": {
+    "status": "checked online",
+    "errors": [],
+    "retrieved_at": "2026-09-24T15:45:41.568065+00:00",
+    "tokens_requested": 990,
+    "books_returned": 990
+  },
+  "catalog_age_seconds": 559.392841,
+  "max_catalog_age_seconds": 900,
+  "max_book_age_seconds": 120,
+  "forecast_cutoff": "2026-09-24",
+  "forecast_age_days": 0,
+  "forecast_manifest_sha256": "9cae98c7c99d7f0162fc89352b49a5672af056149d7038a3d75f183a9a56fb82",
+  "forecast_source_review": "No review status recorded here; inspect forecast provenance.",
+  "shares": 100,
+  "min_edge_pp": 3,
+  "max_spread": 0.1,
+  "min_liquidity": 2000,
+  "max_forecast_age_days": 3,
+  "priced_markets": 225,
+  "scope": "Research only; model-conditioned expected-value gaps are not arbitrage or guaranteed returns. No orders or account access.",
+  "limitations": "Forecast may retain unresolved source/roster reviews. No candidate-by-candidate third-party or first-round model. Joint draws are saved, but combination/ranking settlement mappings remain unsupported. Simulation estimates have Monte Carlo error and are not confidence in model accuracy. Prices can move before execution. Repeated contracts share risk."
+}

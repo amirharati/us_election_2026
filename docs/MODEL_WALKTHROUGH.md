@@ -18,7 +18,7 @@ Historical storage covers all states, but a state without a Senate contest in a 
 | Matched Student-t (df5) | Same final centers, fitted coefficients, variance budgets, loadings and calibration | Componentwise Student scales; Gibbs sampling |
 | Older Gaussian | Earlier historical centers/calibration, national momentum/approval and common movement; no signed pattern | Exact joint Gaussian conditioning |
 | Student-t research helper | Same older architecture as Older Gaussian | Earlier componentwise Student scales; Gibbs sampling |
-| Non-Bayesian corrected | Polling average plus historical state polling-error correction; no economic regression term | Point estimate, with separate empirical residual calibration |
+| Empirical baseline | Polling average plus historical state polling-error correction; no economic regression term | Point estimate, with separate empirical residual calibration |
 | Corrected / Plain percentage blends | Translate the final Gaussian toward the specified corrected/raw polling helper | Gaussian covariance retained |
 | Four-model mixture | Fixed 25% weight on each of the four Bayesian distributions | Mixture of whole joint state vectors |
 | Mixture + polling percentage | Translate that mixture toward the corrected polling point estimate | Entire centered mixture retained |
@@ -241,7 +241,7 @@ Eight chains start at 2,000 warmup and 4,000 retained draws each. They extend un
 
 A large residual can increase a polling scale and weaken that observation, or increase an electoral scale and permit a larger true movement. The posterior weighs those explanations jointly. Heavy tails neither guarantee wider central intervals at matched variance nor guarantee a shift toward either party.
 
-## 9. Non-Bayesian corrected polling
+## 9. Empirical baseline polling
 
 This helper starts with a polling average whose half-life/prior-strength choices are tuned on the preceding cycle. For the 2026 checkpoint these are 30 days and zero prior strength. It then learns **result minus poll**, the opposite sign convention from d above:
 

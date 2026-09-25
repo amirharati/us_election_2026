@@ -8,6 +8,10 @@ Latest reports and supporting results are below. Dated reports are retained in G
 - [Open the browser report](reports/forecast/report.html) — self-contained HTML (download/open locally).
 - [Shareable PNG images](reports/forecast/report.md#shareable-images) — generated alongside the tables and retained in dated reports.
 
+## Prediction-market research
+
+- [Polymarket Senate catalog and conditional gaps](reports/markets/polymarket/report.md)
+
 ## Comparisons and training
 
 - [All-model mixture review](reports/experiments/all_model_mixture.md)
@@ -26,6 +30,11 @@ Latest reports and supporting results are below. Dated reports are retained in G
 
 - [Browse all daily reports](reports/history/README.md)
 
+- [2026-09-25 — Polymarket Senate market research](reports/history/2026-09-25/polymarket/report.md)
+- [2026-09-25 — Forecast report](reports/history/2026-09-25/live_reports/forecast-2026-09-25.md)
+- [2026-09-24 — Polymarket Senate market research](reports/history/2026-09-24/polymarket/report.md)
+- [2026-09-24 — Forecast report](reports/history/2026-09-24/live_reports/forecast-2026-09-24.md)
+- [2026-09-23 — Forecast report](reports/history/2026-09-23/live_reports/forecast-2026-09-23.md)
 - [2026-09-22 — Forecast report](reports/history/2026-09-22/live_reports/forecast-2026-09-22.md)
 - [2026-09-21 — Historical training reproduction](reports/history/2026-09-21/training/report.md)
 - [2026-09-21 — Wave and polling-error scenarios](reports/history/2026-09-21/scenarios/report.md)

@@ -53,7 +53,8 @@ def make_mixture(components,config):
     levels=[.025,.10,.15,.25,.5,.75,.85,.90,.975]
     quantiles=weighted_quantiles(samples,draw_weights,levels)
     return dict(mean=mean,covariance=cov,samples=samples,weights=draw_weights,quantiles=quantiles,
-                component_names=names,component_weights=weights)
+                component_names=names,component_weights=weights,
+                quantiles68=weighted_quantiles(samples,draw_weights,[.16,.84]))
 
 
 def distribution_rows(template,mixture,delta,label):
@@ -66,6 +67,8 @@ def distribution_rows(template,mixture,delta,label):
     p['model']=label;p['prediction_pp']=mean;p['prediction']=mean/100;p['margin_pp']=mean
     p['posterior_sd_pp']=np.sqrt(np.diag(mixture['covariance']));p['sigma_pp']=p.posterior_sd_pp
     p['median_pp']=quantiles[4];p['p_dem']=weights@(draws>0)
+    central68=mixture['quantiles68']+delta
+    p['lo68_pp']=central68[0];p['hi68_pp']=central68[1]
     for level,lo,hi in [(95,0,8),(80,1,7),(70,2,6),(50,3,5)]:p[f'lo{level}_pp']=quantiles[lo];p[f'hi{level}_pp']=quantiles[hi]
     p=score_rows(p);p['actual_pp']=100*p.actual
     return p,draws
@@ -84,7 +87,7 @@ def weighted_seats(pred,draws,weights,reference):
     return seat_scores(row,frequency),frequency
 
 
-def additions(main_rows,main_fit,lam,calendar,main_draws,main_covariance,polling_rows,reference,include_student=True):
+def additions(main_rows,main_fit,lam,calendar,main_draws,main_covariance,polling_rows,reference,include_student=True,save_samples=False):
     """Extra rows for one historical/live case; reference rows are never changed."""
     alternatives,diagnostics=older_pair(main_rows,calendar,include_student)
     rows=[];seats=[];moments={};checks=[]
@@ -98,6 +101,7 @@ def additions(main_rows,main_fit,lam,calendar,main_draws,main_covariance,polling
         seat,freq=lab.seat_row(pred,comp['draws'],name,reference,'Joint Gaussian' if name==OLD_GAUSSIAN else 'Joint Student MCMC')
         seat['expected_D_exact']=seat['expected_D'];seats.append(seat_scores(seat,freq))
         moments[name]=dict(mean=pred.margin_pp.to_numpy(),covariance=comp['covariance'],seat_count_frequency=freq)
+        if save_samples:moments[name]['samples']=comp['draws']
     if include_student:
         config=configuration();mix=make_mixture(components,config)
         if list(polling_rows.target_id)!=list(main_rows.target_id):raise ValueError('Polling helper contest mapping differs')

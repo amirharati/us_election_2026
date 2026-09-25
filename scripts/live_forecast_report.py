@@ -12,7 +12,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from model_labels import model_label, label_frame
+from model_labels import model_label, label_frame, MODEL_GUIDE
 
 import election_lab as lab
 
@@ -162,7 +162,7 @@ def history_figure(table):
     groups = [
         ('Core models', [m for m in table.model.unique() if m in
          ['Bayesian','Matched Student-t (df5)','Older Gaussian','Student-t research helper','Non-Bayesian corrected']]),
-        ('Gaussian + corrected-polling mean', [m for m in table.model.unique() if m.startswith('Corrected ')]),
+        ('Gaussian: shifts toward empirical baseline', [m for m in table.model.unique() if m.startswith('Corrected ')]),
         ('Four-model mixture and mean shifts', [m for m in table.model.unique() if m.startswith('Mixture +') or m=='Four-model mixture']),
     ]
     groups = [(title, names) for title,names in groups if names]
@@ -195,11 +195,13 @@ def markdown_report(out, meta, seats, predictions, watchlist, history_run=None, 
     lines=[f'# 2026 Senate forecast — {meta["as_of"]}', '',
         '[All outputs](../../README.md) · [HTML report](report.html) · [Supporting tables](../../results/forecast/live_reports/)', '',
         '## At a glance', '',
-        f'- **Democratic control: {main.D_control_pct:.1f}%** under the reference Gaussian model.',
-        f'- **Expected Democratic seats: {main.expected_D:.1f}**; central 70% range: **{int(main.D_lo70)}–{int(main.D_hi70)}**.',
-        f'- Predicted winners by mean margin: **{int(main.point_D)} D / {int(main.point_R)} R**.',
+        f'- **D/Independent control: {main.D_control_pct:.1f}%** under the reference Gaussian model.',
+        f'- **Expected D/Independent seats: {main.expected_D:.1f}**; central 70% range: **{int(main.D_lo70)}–{int(main.D_hi70)}**.',
+        f'- Predicted winners by mean margin: **{int(main.point_D)} D/IND / {int(main.point_R)} R**.',
         f'- Trained through **{meta["trained_through"]}**. Live evidence updates predictions; trained parameters are fixed.', '',
-        'Margins are Democratic minus Republican percentage points. Positive margins favor Democrats. D control requires 51 seats; R control includes a 50–50 chamber under the retained vice-presidential tie-break assumption.', '',
+        'Margins are D/Independent minus Republican percentage points. Positive margins favor the D/Independent side. D control requires 51 seats; R control includes a 50–50 chamber under the retained vice-presidential tie-break assumption.', '',
+        '## Poll coverage and candidate affiliations', '',
+        '[All-state polling audit](poll_audit.md). Independents retain their IND affiliation. For multiple D/IND candidates, the strongest individual candidate is used, never their summed votes. Independent chamber alignment is an explicit modeling assumption.', '',
         '## Data freshness', '']
     sources=meta.get('freshness',{}).get('sources',[])
     statuses={'fresh_check_cache':'Recent successful check reused','checked_online':'Checked online this run',
@@ -215,13 +217,13 @@ def markdown_report(out, meta, seats, predictions, watchlist, history_run=None, 
     chamber=seats[['model','expected_D','D_control_pct','R_control_pct','D_lo70','D_hi70']].rename(columns={
         'model':'Model','expected_D':'Expected D seats','D_control_pct':'D control %','R_control_pct':'R control %',
         'D_lo70':'D seats: 70% low','D_hi70':'D seats: 70% high'})
-    lines += [markdown_table(chamber),'', 'Mixtures and polling blends are comparisons, not automatically selected replacements for the reference model.', '',
+    lines += [markdown_table(chamber),'', MODEL_GUIDE+' Mixtures and mean shifts are comparisons, not automatically selected replacements for the reference model.', '',
               '## State forecasts — reference model','']
     state=predictions[predictions.model.eq('Bayesian')][['geography','special','margin_pp','p_dem','lo95_pp','hi95_pp']].copy()
     state['Contest']=state.geography+state.special.map(lambda x:' (special)' if x else '')
-    state['D win %']=100*state.p_dem
-    state=state.rename(columns={'margin_pp':'D−R margin','lo95_pp':'95% low','hi95_pp':'95% high'})
-    lines += [markdown_table(state,['Contest','D−R margin','D win %','95% low','95% high']), '',
+    state['D/IND win %']=100*state.p_dem
+    state=state.rename(columns={'margin_pp':'D/IND−R margin','lo95_pp':'95% low','hi95_pp':'95% high'})
+    lines += [markdown_table(state,['Contest','D/IND−R margin','D/IND win %','95% low','95% high']), '',
               '## Recently polled races with broad uncertainty', '']
     broad=watchlist['broad'].query("model == 'Bayesian'")
     if broad.empty:lines+=['No reference-model contests meet the configured recency and interval-width thresholds.','']
@@ -282,6 +284,8 @@ def save_report(live_run, watchlist, history_run=None, surprise=None, published=
         raise ValueError('Published comparison and report use different forecasts')
     out = lab.new_run('live_reports')
     save_comparison(published, out)
+    from live_poll_audit import save_poll_audit, METHOD as POLL_SIDE_METHOD
+    poll_coverage = save_poll_audit(live_run, out)
     lab.write_json(out/'forecast_metadata.json',meta)
     from live_surprise_watchlist import build_surprise_watchlist, display_table, METHOD
     if surprise is None:
@@ -301,9 +305,10 @@ def save_report(live_run, watchlist, history_run=None, surprise=None, published=
         watchlist[name].to_parquet(out/f'watchlist_{name}.parquet',index=False)
     def table(frame):return label_frame(frame).to_html(index=False,float_format=lambda x:f'{x:.2f}',na_rep='—',escape=True)
     parts = [f'<h1>2026 Senate forecast — {html.escape(meta["as_of"])}</h1>',
-        '<p>Positive margins favor Democrats. Probabilities are model estimates, not certified outcomes. '
-        'Democratic control requires51 seats; Republican control includes a50–50 Senate with the assumed GOP vice-presidential tie-break.</p>',
+        '<p>Positive margins favor D/Independent. Probabilities are model estimates, not certified outcomes. '
+        'D/Independent control requires 51 seats; Republican control includes a50–50 Senate with the assumed GOP vice-presidential tie-break.</p>',
         '<h2>Current chamber forecast — all models</h2>',
+        '<p>'+html.escape(MODEL_GUIDE)+'</p>',
         table(seats[['model','point_D','point_R','expected_D','expected_R','D_control_pct','R_control_pct','D_lo70','D_hi70']]),
         '<h2>Recently polled states with broad uncertainty</h2>',
         '<p>Wide intervals are not themselves evidence of fat tails. The stronger-coverage flag distinguishes multiple recent samples/firms from a single recent poll.</p>',
@@ -317,7 +322,7 @@ def save_report(live_run, watchlist, history_run=None, surprise=None, published=
               '<p>Settings: '+html.escape(json.dumps(surprise['parameters']))+'</p>']
     for key,title in [('polled','Adequately polled races'),('thin','Thinly polled or no recent polls')]:
         parts += ['<h3>'+title+'</h3>',table(display_table(surprise[key])) if not surprise[key].empty else '<p>No qualifying races.</p>']
-    parts += ['<h2>State margins, probabilities and 95% ranges — all models</h2>']
+    parts += ['<h2>Poll coverage and independent candidates</h2>', '<p>'+html.escape(POLL_SIDE_METHOD)+'</p>', table(poll_coverage['summary']), '<h2>State margins, probabilities and 95% ranges — all models</h2>']
     state = pred[['model','geography','special','margin_pp','p_dem','lo95_pp','hi95_pp']].copy()
     state['D_win_pct'] = 100*state.pop('p_dem')
     for model,frame in state.groupby('model',sort=False):
