@@ -14,4 +14,4 @@ Executed in order with legacy raw-data reads blocked. Successful notebooks are s
 | [08_all_model_mixture.ipynb](../../notebooks/08_all_model_mixture.ipynb) | passed | 3.07 |
 | [09_poll_weight_experiments.ipynb](../../notebooks/09_poll_weight_experiments.ipynb) | passed | 16.82 |
 | [10_model_disagreements.ipynb](../../notebooks/10_model_disagreements.ipynb) | passed | 3.16 |
-| [11_live_polymarket.ipynb](../../notebooks/11_live_polymarket.ipynb) | passed | 13.07 |
+| [11_live_polymarket.ipynb](../../notebooks/11_live_polymarket.ipynb) | passed | 41.45 |

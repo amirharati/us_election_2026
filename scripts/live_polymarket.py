@@ -171,6 +171,51 @@ def model_context(run):
     return dict(run=run,meta=meta,pred=pred,mix=mix,seats=seats,review=review,freq=freq,distributions=PredictiveDistributions(run))
 
 
+def winner_estimate(question, policy, distributions, model, state):
+    """Expose available winner estimates without pretending to model runoff transfers."""
+    candidates=policy.get('candidates',[])
+    opponents=[c for c in candidates if c.get('party') in {'DEM','IND'}]
+    republicans=[c for c in candidates if c.get('party')=='REP']
+    target='DEM' if 'Democrats win' in question else 'REP' if 'Republicans win' in question else 'IND' if re.search(r'an independent win',question,re.I) else None
+    notes=[];proxy=False
+    if target:
+        if not candidates:
+            if target=='IND':return None,'No reviewed independent identity or separate independent probability.'
+            republican=target=='REP';proxy=True
+            notes.append('Candidate roster is unreviewed; this assumes the modeled D/R sides match the party nominees.')
+        elif target=='REP' and republicans:
+            republican=True
+        elif opponents and all(c['party']==target for c in opponents):
+            republican=False
+        else:
+            return None,'The model forecasts the strongest D/Independent side versus R; it cannot allocate that probability to this party separately.'
+    else:
+        match=re.fullmatch(r'Will (.+) win the .+ Senate race in 2026\?',question)
+        selected=[c for c in candidates if match and match[1].casefold() in {n.casefold() for n in [c['name'],*c.get('source_names',[])]}]
+        if len(selected)!=1:return None,'Named candidate does not match a unique reviewed current contender.'
+        candidate=selected[0];republican=candidate['party']=='REP'
+        side=republicans if republican else opponents
+        if len(side)!=1 or candidate['party'] not in {'DEM','IND','REP'}:
+            return None,'The model has no separate probability for this candidate among multiple contenders on the same modeled side.'
+    rule=policy.get('rule')
+    if rule=='majority_runoff':
+        proxy=True;notes.append('Runoff transfers and turnout are not separately modeled; the modeled margin is used as a proxy for the eventual winner.')
+    elif rule=='rcv':
+        proxy=True;notes.append('Ranked-choice transfers are not separately modeled; the modeled margin is used as a proxy for the eventual winner.')
+    if any(c.get('party')=='IND' for c in candidates) or len(opponents)>1 or len(republicans)>1:
+        proxy=True;notes.append('The strongest D/Independent-versus-R margin approximates the winning side; third-candidate outcomes are not jointly modeled. Independents remain IND.')
+    if any(c.get('party') not in {'DEM','REP','IND'} for c in candidates):
+        proxy=True;notes.append('The model does not separately simulate other-party winners.')
+    event=distributions.margin_probability(model,state,0,np.inf,lower_closed=False)
+    p=1-event['probability'] if republican else event['probability']
+    if not notes:notes.append('Assumes modeled D/R contenders exhaust the winning outcomes; party replacements and third-party wins require review.')
+    return {**event,'model_low':p,'model_high':p,'probability':p,
+            'event_formula':'1 - P(M > 0)' if republican else 'P(M > 0)',
+            'settlement_proxy':proxy,'mapping':'Conditional settlement proxy' if proxy else 'Conditional comparison',
+            'probability_kind':('Conditional settlement proxy: ' if proxy else '')+event.get('probability_kind','Model probability'),
+            'reason':' '.join(notes)},None
+
+
 def assess_market(row,rules,context):
     title=row['event'];question=row['question'];rule=rules[row['rules_id']]
     result=dict(model_low=None,model_high=None,probability_kind='unavailable',mapping='Not priced',reason='Outside supported Senate outcome mapping',state=None)
@@ -184,18 +229,13 @@ def assess_market(row,rules,context):
         ref=mix.loc[state];policy=review.get(state,{})
         parties={c.get('party') for c in policy.get('candidates',[])}
         if 'first round' in (title+' '+rule).lower():return {**result,'reason':'First-round contract is not the final-election forecast'}
-        if not policy.get('scalar_seat_mapping_ready') or not {'DEM','REP'}.issubset(parties) or any(p not in {'DEM','REP'} for p in parties):
-            return {**result,'reason':'Independent candidate or multi-round rules differ from D/Independent-versus-R forecast'}
         if 'county' in title.lower():return {**result,'reason':'County contract is not a statewide forecast'}
         model=context.get('model_name','Four-model mixture')
         if cat=='Senate race winners':
-            if 'Democrats win' in question:republican=False
-            elif 'Republicans win' in question:republican=True
-            else:return {**result,'reason':'Named candidate contract needs explicit candidate mapping'}
-            event=context['distributions'].margin_probability(model,state,0,np.inf,lower_closed=False)
-            p=1-event['probability'] if republican else event['probability']
-            return {**result,**event,'model_low':p,'model_high':p,'probability':p,'event_formula':'1 - P(M > 0)' if republican else 'P(M > 0)','mapping':'Conditional comparison',
-                    'reason':'Assumes modeled D/R contenders exhaust the winning outcomes; party replacements and third-party wins require review'}
+            estimate,reason=winner_estimate(question,policy,context['distributions'],model,state)
+            return {**result,**estimate} if estimate else {**result,'reason':reason}
+        if not policy.get('scalar_seat_mapping_ready') or not {'DEM','REP'}.issubset(parties) or any(p not in {'DEM','REP'} for p in parties):
+            return {**result,'reason':'No compatible party-specific margin distribution for this independent or multi-round contest.'}
         band=margin_band(question)
         if band is None:return {**result,'reason':'Margin/ranking contract is not a recognized party-specific margin band'}
         if 'top two candidates' not in rule.lower() or 'higher margin bracket' not in rule.lower():return {**result,'reason':'Unrecognized margin settlement definition or boundary rule'}

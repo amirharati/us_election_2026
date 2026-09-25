@@ -1,5 +1,5 @@
 import unittest
-from unittest.mock import patch
+from unittest.mock import patch, Mock
 from pathlib import Path
 import tempfile
 import numpy as np
@@ -48,6 +48,10 @@ class ScannerTests(unittest.TestCase):
                 self.assertIn('a / Y',h);self.assertIn('a / N',h)
                 missing={**r,'details':r['details'][r['details'].model.ne('b')]}
                 self.assertEqual(debug_build(missing).query("model == 'b'").status.unique().tolist(),['Unavailable'])
+                flagged=grouped.copy();flagged['settlement_proxy']=True
+                self.assertTrue(compact_table(flagged)['Status'].str.endswith('*').all())
+                self.assertIn('#fff2cc',debug_html(flagged))
+                self.assertIn('a, b:',debug_html(flagged))
                 shown=model_table(r,'1','Yes').set_index('Model')
                 self.assertAlmostEqual(shown.loc['a','Entry price (¢/share)'],50)
                 self.assertAlmostEqual(shown.loc['a','Total budget for 10 shares ($)'],5.0)
@@ -70,6 +74,26 @@ class ScannerTests(unittest.TestCase):
                 self.assertAlmostEqual(d.loc[('a','Yes'),'probability_only_edge_low_pp'],27)
                 research['status']['catalog_status']='offline snapshot'
                 self.assertFalse(scan(research,Path(tmp),models=['a','b'])['summary'].initial_candidate.any())
+    def test_available_winners_are_exposed_with_explicit_settlement_conditions(self):
+        dist=Mock();dist.margin_probability.return_value=dict(probability=.88,probability_kind='Full simulations')
+        def estimate(state,question,policy):
+            ctx=dict(mix=pd.DataFrame({'geography':[state]}).set_index('geography'),review={state:policy},distributions=dist)
+            return poly.assess_market(dict(event=question,question=question,category='Senate race winners',rules_id='r'),{'r':'Final election, including any runoffs.'},ctx)
+        two=[dict(name='Jon Ossoff',party='DEM'),dict(name='Mike Collins',party='REP')]
+        ga=estimate('GA','Will the Democrats win the Georgia Senate race in 2026?',dict(rule='majority_runoff',scalar_seat_mapping_ready=False,candidates=two))
+        self.assertEqual(ga['model_low'],.88);self.assertTrue(ga['settlement_proxy']);self.assertIn('Runoff',ga['reason'])
+        ak=estimate('AK','Will the Democrats win the Alaska Senate race in 2026?',dict(rule='rcv',candidates=two))
+        self.assertEqual(ak['model_low'],.88);self.assertIn('Ranked-choice',ak['reason'])
+        co=estimate('CO','Will the Democrats win the Colorado Senate race in 2026?',dict(rule='plurality',candidates=[]))
+        self.assertEqual(co['model_low'],.88);self.assertIn('unreviewed',co['reason'])
+        ne=dict(rule='plurality',candidates=[dict(name='Dan Osborn',party='IND'),dict(name='Pete Ricketts',party='REP')])
+        self.assertEqual(estimate('NE','Will Dan Osborn win the Nebraska Senate race in 2026?',ne)['model_low'],.88)
+        self.assertIsNone(estimate('NE','Will the Democrats win the Nebraska Senate race in 2026?',ne)['model_low'])
+        mt=dict(rule='plurality',candidates=[dict(name='Bodnar',party='IND'),dict(name='Bankhead',party='DEM'),dict(name='Alme',party='REP')])
+        self.assertAlmostEqual(estimate('MT','Will the Republicans win the Montana Senate race in 2026?',mt)['model_low'],.12)
+        self.assertIsNone(estimate('MT','Will an Independent win the Montana Senate race in 2026?',mt)['model_low'])
+        self.assertIsNone(estimate('MT','Will the Democrats win the Montana Senate race in 2026?',mt)['model_low'])
+
     def test_negative_or_nonfinite_assumptions_rejected(self):
         for value in [-1,np.nan,np.inf]:
             with self.assertRaises(ValueError):scan({},Path('.'),friction_cents=value)

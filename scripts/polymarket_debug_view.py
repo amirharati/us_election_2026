@@ -43,7 +43,7 @@ def build(scanner):
                     'reward_to_risk':(1-cost)/cost if pd.notna(cost) and cost>0 else None,
                     'return_low_pct':r.edge_low_pp/cost if pd.notna(cost) and cost>0 else None,'return_high_pct':r.edge_high_pp/cost if pd.notna(cost) and cost>0 else None,
                     'forecast_mean_margin_pp':r.get('forecast_mean_margin_pp'),'margin_lo95_pp':r.margin_lo95_pp,'margin_hi95_pp':r.margin_hi95_pp,
-                    'probability_kind':r.probability_kind,'publisher_date':r.get('publisher_date'),'publisher_url':r.get('publisher_url'),'market_weight':r.get('market_weight')})
+                    'settlement_proxy':bool(r.get('settlement_proxy',False)),'probability_kind':r.probability_kind,'publisher_date':r.get('publisher_date'),'publisher_url':r.get('publisher_url'),'market_weight':r.get('market_weight')})
     return pd.DataFrame(records)
 
 
@@ -78,7 +78,7 @@ CSS='<style>.scan{max-width:760px;width:100%;box-sizing:border-box;color:#18212a
 
 
 def compact_table(group):
-    return pd.DataFrame([{'Model':MODEL_CODES.get(r.model,r.model_label),'Status':STATUS_CODES[r.status],
+    return pd.DataFrame([{'Model':MODEL_CODES.get(r.model,r.model_label),'Status':STATUS_CODES[r.status]+('*' if getattr(r,'settlement_proxy',False) is True else ''),
                          'P (%)':span(getattr(r,'probability_low',np.nan),getattr(r,'probability_high',np.nan),100).replace(' to ','–').replace('Unavailable','—'),
                          'EV ($)':span(getattr(r,'expected_profit_low',np.nan),getattr(r,'expected_profit_high',np.nan)).replace(' to ','–').replace('Unavailable','—'),
                          'Stress ($)':getattr(r,'stressed_profit',np.nan)} for r in group.itertuples()])
@@ -87,7 +87,7 @@ def compact_table(group):
 def small_html(t,colored=False):
     parts=['<table><thead><tr>'+''.join('<th>'+escape(str(c))+'</th>' for c in t.columns)+'</tr></thead><tbody>']
     for r in t.to_dict('records'):
-        parts.append('<tr style="background:'+COLORS.get(r.get('Status'),'white')+'">')
+        parts.append('<tr style="background:'+('#fff2cc' if str(r.get('Status','')).endswith('*') else COLORS.get(r.get('Status'),'white'))+'">')
         for v in r.values():
             text='—' if pd.isna(v) else f'{v:.2f}' if isinstance(v,(float,np.floating)) else str(v)
             parts.append('<td>'+escape(text)+'</td>')
@@ -125,7 +125,7 @@ def payoff_table(group):
 COMPACT_GUIDE=('Y = buy Yes; N = buy No. P = model probability that the selected side pays $1 under the contract condition; it is not confidence that the model is correct. EV = base expected net profit after purchase depth and estimated fees. Budget and win/loss payoffs use those base costs. '
                'Stress adds the extra friction scenario and applies the probability haircut to the model probability. GO (green) survives stress; WEAK (amber) is positive before stress only; '
                'UNC (amber) is unresolved; NEG (red) is negative in expectation; N/A (gray) is unavailable. '
-               'Local P comes from the full predictive distribution. External P is a published point estimate or seat-histogram probability; equal endpoints are not a confidence interval. Simulation estimates have sampling error. All model rows are independent comparisons; there is no combined score.')
+               'A status marked * uses a conditional settlement proxy: its P, EV and stress depend on the stated runoff, ranked-choice or candidate assumptions. These rows are amber even when the numerical edge is positive. Local P comes from the full predictive distribution. External P is a published point estimate or seat-histogram probability; equal endpoints are not a confidence interval. Simulation estimates have sampling error. All model rows are independent comparisons; there is no combined score.')
 
 
 def scenario_note(frame):
@@ -136,6 +136,11 @@ def scenario_note(frame):
 
 def external_notes(group):
     notes=[]
+    local=group[~group.model.isin(['Race to the WH','DDHQ'])]
+    for reason,g in local.groupby('reason',sort=False):
+        if g.status.eq('Unavailable').any() or ('settlement_proxy' in g and g.settlement_proxy.fillna(False).any()):
+            codes=', '.join(MODEL_CODES.get(m,m) for m in g.model.drop_duplicates())
+            notes.append(codes+': '+reason)
     for model,g in group.groupby('model',sort=False):
         if model not in ['Race to the WH','DDHQ']:continue
         r=g.iloc[0];date=r.get('publisher_date')

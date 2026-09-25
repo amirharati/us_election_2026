@@ -81,7 +81,7 @@ def scan(research, run, friction_cents=2., probability_haircut_pp=2., min_edge_p
                     quote_status=quote['quote_status'],spread=quote.get('spread'),accepting_orders=row['accepting_orders'],order_book=row['order_book'],liquidity=row['liquidity'],
                     forecast_mean_margin_pp=next((poly.number(ref.get(k)) for k in ['margin_pp','prediction_pp'] if poly.number(ref.get(k)) is not None),None),
                     margin_lo95_pp=poly.number(ref.get('lo95_pp')),margin_hi95_pp=poly.number(ref.get('hi95_pp')),poll_samples=poly.number(ref.get('sample_count',ref.get('n_samples'))),
-                    publisher_date=mapped.get('publisher_date'),publisher_url=mapped.get('publisher_url'),market_weight=mapped.get('market_weight'),
+                    settlement_proxy=mapped.get('settlement_proxy',False),publisher_date=mapped.get('publisher_date'),publisher_url=mapped.get('publisher_url'),market_weight=mapped.get('market_weight'),
                     model_blocker=('Forecast age exceeds the configured limit.' if snapshot is None and not 0<=research['status']['forecast_age_days']<=research['status']['max_forecast_age_days'] else ''),
                     mapping_reason=mapped['reason']))
     detail=pd.DataFrame(details);summary=[];status=research['status']

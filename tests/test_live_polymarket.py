@@ -34,9 +34,9 @@ class PolymarketTests(unittest.TestCase):
 
     def test_first_round_and_independent_rules_are_not_silently_priced(self):
         row=dict(event='Alaska Senate Election Margin of Victory (First Round)',question='Will the Democratic Party win by 0%-3%?',category='Senate margins / relative results',rules_id='r')
-        context=dict(mix=pd.DataFrame({'geography':['AK'],'p_dem':[.8]}).set_index('geography'),review={'AK':{'scalar_seat_mapping_ready':False,'candidates':[]}})
+        context=dict(distributions=None,mix=pd.DataFrame({'geography':['AK'],'p_dem':[.8]}).set_index('geography'),review={'AK':{'scalar_seat_mapping_ready':False,'candidates':[]}})
         self.assertIn('First-round',assess_market(row,{'r':'first round'},context)['reason'])
-        row.update(event='Alaska Senate Election Winner',category='Senate race winners',question='Will Democrats win?')
+        row.update(event='Alaska Senate Election Winner',category='Senate race winners',question='Will Unknown Candidate win the Alaska Senate race in 2026?')
         self.assertIsNone(assess_market(row,{'r':'final election'},context)['model_low'])
 
     def test_empty_shortlist_is_displayable(self):
