@@ -87,7 +87,7 @@ def compact_table(group):
 def small_html(t,colored=False):
     parts=['<table><thead><tr>'+''.join('<th>'+escape(str(c))+'</th>' for c in t.columns)+'</tr></thead><tbody>']
     for r in t.to_dict('records'):
-        parts.append('<tr style="background:'+('#fff2cc' if str(r.get('Status','')).endswith('*') else COLORS.get(r.get('Status'),'white'))+'">')
+        parts.append('<tr style="background:'+COLORS.get(str(r.get('Status','')).rstrip('*'),'white')+'">')
         for v in r.values():
             text='—' if pd.isna(v) else f'{v:.2f}' if isinstance(v,(float,np.floating)) else str(v)
             parts.append('<td>'+escape(text)+'</td>')
@@ -125,7 +125,7 @@ def payoff_table(group):
 COMPACT_GUIDE=('Y = buy Yes; N = buy No. P = model probability that the selected side pays $1 under the contract condition; it is not confidence that the model is correct. EV = base expected net profit after purchase depth and estimated fees. Budget and win/loss payoffs use those base costs. '
                'Stress adds the extra friction scenario and applies the probability haircut to the model probability. GO (green) survives stress; WEAK (amber) is positive before stress only; '
                'UNC (amber) is unresolved; NEG (red) is negative in expectation; N/A (gray) is unavailable. '
-               'A status marked * uses a conditional settlement proxy: its P, EV and stress depend on the stated runoff, ranked-choice or candidate assumptions. These rows are amber even when the numerical edge is positive. Local P comes from the full predictive distribution. External P is a published point estimate or seat-histogram probability; equal endpoints are not a confidence interval. Simulation estimates have sampling error. All model rows are independent comparisons; there is no combined score.')
+               'A status marked * uses a conditional settlement proxy: its P, EV and stress depend on the stated runoff, ranked-choice or candidate assumptions. Color follows the assessment even with a star; the star separately flags the settlement assumption. Local P comes from the full predictive distribution. External P is a published point estimate or seat-histogram probability; equal endpoints are not a confidence interval. Simulation estimates have sampling error. All model rows are independent comparisons; there is no combined score.')
 
 
 def scenario_note(frame):
@@ -138,7 +138,7 @@ def external_notes(group):
     notes=[]
     local=group[~group.model.isin(['Race to the WH','DDHQ'])]
     for reason,g in local.groupby('reason',sort=False):
-        if g.status.eq('Unavailable').any() or ('settlement_proxy' in g and g.settlement_proxy.fillna(False).any()):
+        if g.status.eq('Unavailable').any() or ('settlement_proxy' in g and g.settlement_proxy.eq(True).any()):
             codes=', '.join(MODEL_CODES.get(m,m) for m in g.model.drop_duplicates())
             notes.append(codes+': '+reason)
     for model,g in group.groupby('model',sort=False):

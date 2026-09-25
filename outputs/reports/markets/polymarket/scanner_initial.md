@@ -1,6 +1,6 @@
 # All model-market pairs grouped by market
 
-Y = buy Yes; N = buy No. P = model probability that the selected side pays $1 under the contract condition; it is not confidence that the model is correct. EV = base expected net profit after purchase depth and estimated fees. Budget and win/loss payoffs use those base costs. Stress adds the extra friction scenario and applies the probability haircut to the model probability. GO (green) survives stress; WEAK (amber) is positive before stress only; UNC (amber) is unresolved; NEG (red) is negative in expectation; N/A (gray) is unavailable. A status marked * uses a conditional settlement proxy: its P, EV and stress depend on the stated runoff, ranked-choice or candidate assumptions. These rows are amber even when the numerical edge is positive. Local P comes from the full predictive distribution. External P is a published point estimate or seat-histogram probability; equal endpoints are not a confidence interval. Simulation estimates have sampling error. All model rows are independent comparisons; there is no combined score.
+Y = buy Yes; N = buy No. P = model probability that the selected side pays $1 under the contract condition; it is not confidence that the model is correct. EV = base expected net profit after purchase depth and estimated fees. Budget and win/loss payoffs use those base costs. Stress adds the extra friction scenario and applies the probability haircut to the model probability. GO (green) survives stress; WEAK (amber) is positive before stress only; UNC (amber) is unresolved; NEG (red) is negative in expectation; N/A (gray) is unavailable. A status marked * uses a conditional settlement proxy: its P, EV and stress depend on the stated runoff, ranked-choice or candidate assumptions. Color follows the assessment even with a star; the star separately flags the settlement assumption. Local P comes from the full predictive distribution. External P is a published point estimate or seat-histogram probability; equal endpoints are not a confidence interval. Simulation estimates have sampling error. All model rows are independent comparisons; there is no combined score.
 
 Base: quoted ask depth plus estimated fees. Stress only: add 2¢ per share and reduce the selected-side probability by 2 percentage points (minimum zero).
 
@@ -112,8 +112,8 @@ Contract 630707; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        9.18 |         9.51 | +90.49 / −9.51   | 9.51×         |
-| No     |       95.92 |        96.08 | +3.92 / −96.08   | 0.04×         |
+| Yes    |       11.09 |        11.48 | +88.52 / −11.48  | 7.71×         |
+| No     |       90.93 |        91.26 | +8.74 / −91.26   | 0.10×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
@@ -125,10 +125,10 @@ Contract 630707; 100 shares per position.
 | MX / N         | N/A      | —       | —        | —                   |
 | M10 / Y        | N/A      | —       | —        | —                   |
 | M10 / N        | N/A      | —       | —        | —                   |
-| RTWH / Y       | NEG      | 4.20    | -5.31    | -9.31349            |
-| RTWH / N       | NEG      | 95.80   | -0.28    | -4.2765400000000175 |
-| DDHQ / Y       | NEG      | 3.00    | -6.51    | -10.513490000000001 |
-| DDHQ / N       | WEAK     | 97.00   | 0.92     | -3.0765400000000165 |
+| RTWH / Y       | NEG      | 4.20    | -7.28    | -11.284399999999998 |
+| RTWH / N       | GO       | 95.80   | 4.54     | 0.5407599999999846  |
+| DDHQ / Y       | NEG      | 3.00    | -8.48    | -12.484399999999999 |
+| DDHQ / N       | GO       | 97.00   | 5.74     | 1.7407599999999857  |
 
 GB, ST, MX, M10: The model has no separate probability for this candidate among multiple contenders on the same modeled side.
 RTWH (2026-09-25): Achilles retains IND despite publisher column. Publisher omits separate probabilities for reviewed contenders: Natalie Fleming. Final-election publisher probability; current candidate and contract rules must agree. Published rounding is retained; equal endpoints represent one estimate, not certainty.
@@ -219,18 +219,18 @@ Contract 3343531; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |          20 |        20.64 | +79.36 / −20.64  | 3.84×         |
-| No     |          81 |        81.62 | +18.38 / −81.62  | 0.23×         |
+| Yes    |       23.51 |        24.22 | +75.78 / −24.22  | 3.13×         |
+| No     |       81    |        81.62 | +18.38 / −81.62  | 0.23×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 16.65   | -3.99    | -7.9945131404447185 |
+| GB / Y         | NEG      | 16.65   | -7.57    | -11.572223140444718 |
 | GB / N         | WEAK     | 83.35   | 1.74     | -2.2610868595552835 |
-| ST / Y         | NEG      | 18.59   | -2.05    | -6.052499999999997  |
+| ST / Y         | NEG      | 18.59   | -5.63    | -9.630209999999998  |
 | ST / N         | NEG      | 81.41   | -0.20    | -4.2031000000000045 |
-| MX / Y         | NEG      | 17.54   | -3.10    | -7.1038541666666655 |
+| MX / Y         | NEG      | 17.54   | -6.68    | -10.681564166666668 |
 | MX / N         | WEAK     | 82.46   | 0.85     | -3.151745833333342  |
-| M10 / Y        | NEG      | 17.04   | -3.60    | -7.596666666666667  |
+| M10 / Y        | NEG      | 17.04   | -7.17    | -11.174376666666666 |
 | M10 / N        | WEAK     | 82.96   | 1.34     | -2.6589333333333354 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
@@ -240,24 +240,50 @@ Contract 3343531; 100 shares per position.
 RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 
-## Will the Democratic Party candidate win the 2026 Iowa Senate election by 12% or more?
-Contract 3343535; 100 shares per position.
+## Will the Democratic Party candidate win the 2026 Massachusetts Senate election by 0%-10%?
+Contract 3343809; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        8.41 |         8.71 | +91.29 / −8.71   | 10.48×        |
-| No     |       97.27 |        97.38 | +2.62 / −97.38   | 0.03×         |
+| Yes    |         1   |         1.04 | +98.96 / −1.04   | 95.19×        |
+| No     |        99.4 |        99.42 | +0.58 / −99.42   | 0.01×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 0.88    | -7.83    | -10.713720000000002 |
-| GB / N         | WEAK     | 99.12   | 1.74     | -2.25959304614749   |
-| ST / Y         | NEG      | 0.34    | -8.37    | -10.713720000000002 |
-| ST / N         | WEAK     | 99.66   | 2.28     | -1.7172450000000117 |
-| MX / Y         | NEG      | 1.02    | -7.70    | -10.713720000000002 |
-| MX / N         | WEAK     | 98.98   | 1.61     | -2.3939637500000055 |
-| M10 / Y        | NEG      | 0.92    | -7.79    | -10.713720000000002 |
-| M10 / N        | WEAK     | 99.08   | 1.70     | -2.2983387500000063 |
+| GB / Y         | NEG      | 0.23    | -0.81    | -3.0396000000000005 |
+| GB / N         | WEAK     | 99.77   | 0.34     | -3.6564655114206928 |
+| ST / Y         | NEG      | 0.28    | -0.76    | -3.0396000000000005 |
+| ST / N         | WEAK     | 99.72   | 0.29     | -3.7051100000000114 |
+| MX / Y         | NEG      | 0.53    | -0.51    | -3.0396000000000005 |
+| MX / N         | WEAK     | 99.47   | 0.05     | -3.9531308333333404 |
+| M10 / Y        | NEG      | 0.77    | -0.27    | -3.0396000000000005 |
+| M10 / N        | NEG      | 99.23   | -0.19    | -4.19125583333334   |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
+## Will the Democratic Party candidate win the 2026 Massachusetts Senate election by 10%-15%?
+Contract 3343810; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |         2   |         2.08 | +97.92 / −2.08   | 47.11×        |
+| No     |        98.7 |        98.75 | +1.25 / −98.75   | 0.01×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | WEAK     | 2.20    | 0.12     | -3.8792953803983723 |
+| GB / N         | NEG      | 97.80   | -0.95    | -4.950424619601634  |
+| ST / Y         | NEG      | 1.72    | -0.36    | -4.0784             |
+| ST / N         | NEG      | 98.28   | -0.47    | -4.473194999999997  |
+| MX / Y         | WEAK     | 2.98    | 0.90     | -3.0950145833333336 |
+| MX / N         | NEG      | 97.02   | -1.73    | -5.734705416666664  |
+| M10 / Y        | WEAK     | 4.05    | 1.97     | -2.0302750000000005 |
+| M10 / N        | NEG      | 95.95   | -2.80    | -6.799445000000004  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -271,19 +297,19 @@ Contract 3343812; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       14.23 |        14.72 | +85.28 / −14.72  | 5.79×         |
-| No     |       89    |        89.39 | +10.61 / −89.39  | 0.12×         |
+| Yes    |       14    |        14.48 | +85.52 / −14.48  | 5.91×         |
+| No     |       89.28 |        89.67 | +10.33 / −89.67  | 0.12×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | GO       | 26.64   | 11.92    | 7.921425398573733   |
-| GB / N         | NEG      | 73.36   | -16.03   | -20.03373539857374  |
-| ST / Y         | GO       | 26.03   | 11.31    | 7.310539999999999   |
-| ST / N         | NEG      | 73.97   | -15.42   | -19.42284999999999  |
-| MX / Y         | GO       | 27.23   | 12.51    | 8.510696249999997   |
-| MX / N         | NEG      | 72.77   | -16.62   | -20.623006249999992 |
-| M10 / Y        | GO       | 29.69   | 14.97    | 10.972258750000002  |
-| M10 / N        | NEG      | 70.31   | -19.08   | -23.084568750000003 |
+| GB / Y         | GO       | 26.64   | 12.16    | 8.160535398573735   |
+| GB / N         | NEG      | 73.36   | -16.31   | -20.30863539857376  |
+| ST / Y         | GO       | 26.03   | 11.55    | 7.549649999999999   |
+| ST / N         | NEG      | 73.97   | -15.70   | -19.697750000000013 |
+| MX / Y         | GO       | 27.23   | 12.75    | 8.749806249999997   |
+| MX / N         | NEG      | 72.77   | -16.90   | -20.89790625000002  |
+| M10 / Y        | GO       | 29.69   | 15.21    | 11.211368749999998  |
+| M10 / N        | NEG      | 70.31   | -19.36   | -23.359468750000023 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -344,23 +370,49 @@ Contract 3343816; 100 shares per position.
 RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 
+## Will the Democratic Party candidate win the 2026 Massachusetts Senate election by 45% or more?
+Contract 3343817; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |         6.9 |         7.16 | +92.84 / −7.16   | 12.97×        |
+| No     |        97   |        97.12 | +2.88 / −97.12   | 0.03×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | NEG      | 0.07    | -7.08    | -9.15692            |
+| GB / N         | WEAK     | 99.93   | 2.81     | -1.1908811582839296 |
+| ST / Y         | NEG      | 0.03    | -7.13    | -9.15692            |
+| ST / N         | WEAK     | 99.98   | 2.86     | -1.1414000000000035 |
+| MX / Y         | NEG      | 0.08    | -7.08    | -9.15692            |
+| MX / N         | WEAK     | 99.92   | 2.80     | -1.195879166666669  |
+| M10 / Y        | NEG      | 0.05    | -7.11    | -9.15692            |
+| M10 / N        | WEAK     | 99.95   | 2.84     | -1.1647854166666693 |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
 ## Will the Democratic Party candidate win the 2026 Michigan Senate election by 3%-6%?
 Contract 3343888; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |          23 |        23.71 | +76.29 / −23.71  | 3.22×         |
+| Yes    |          22 |        22.69 | +77.31 / −22.69  | 3.41×         |
 | No     |          79 |        79.66 | +20.34 / −79.66  | 0.26×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 19.52   | -4.19    | -8.189897716121688  |
+| GB / Y         | NEG      | 19.52   | -3.17    | -7.167897716121683  |
 | GB / N         | WEAK     | 80.48   | 0.82     | -3.1821022838783186 |
-| ST / Y         | NEG      | 23.67   | -0.04    | -4.042775000000002  |
+| ST / Y         | WEAK     | 23.67   | 0.98     | -3.020774999999995  |
 | ST / N         | NEG      | 76.33   | -3.33    | -7.329225000000005  |
-| MX / Y         | NEG      | 20.47   | -3.24    | -7.2399625000000025 |
+| MX / Y         | NEG      | 20.47   | -2.22    | -6.217962499999996  |
 | MX / N         | NEG      | 79.53   | -0.13    | -4.132037500000008  |
-| M10 / Y        | NEG      | 20.88   | -2.83    | -6.83225416666667   |
+| M10 / Y        | NEG      | 20.88   | -1.81    | -5.810254166666665  |
 | M10 / N        | NEG      | 79.12   | -0.54    | -4.539745833333331  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
@@ -376,18 +428,44 @@ Contract 3343889; 100 shares per position.
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
 | Yes    |          22 |        22.69 | +77.31 / −22.69  | 3.41×         |
-| No     |          80 |        80.64 | +19.36 / −80.64  | 0.24×         |
+| No     |          79 |        79.66 | +20.34 / −79.66  | 0.26×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
 | GB / Y         | NEG      | 19.14   | -3.54    | -7.5441279221754725 |
-| GB / N         | WEAK     | 80.86   | 0.22     | -3.7822720778245333 |
+| GB / N         | WEAK     | 80.86   | 1.19     | -2.805872077824534  |
 | ST / Y         | WEAK     | 23.20   | 0.51     | -3.4863999999999953 |
-| ST / N         | NEG      | 76.80   | -3.84    | -7.8400000000000025 |
+| ST / N         | NEG      | 76.80   | -2.86    | -6.8636000000000035 |
 | MX / Y         | NEG      | 19.73   | -2.96    | -6.95567083333333   |
-| MX / N         | NEG      | 80.27   | -0.37    | -4.370729166666676  |
+| MX / N         | WEAK     | 80.27   | 0.61     | -3.394329166666677  |
 | M10 / Y        | NEG      | 18.49   | -4.20    | -8.197389583333328  |
-| M10 / N        | WEAK     | 81.51   | 0.87     | -3.129010416666666  |
+| M10 / N        | WEAK     | 81.51   | 1.85     | -2.152610416666667  |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
+## Will the Democratic Party candidate win the 2026 Michigan Senate election by 9%-12%?
+Contract 3343890; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |       14.58 |        15.08 | +84.92 / −15.08  | 5.63×         |
+| No     |       94.75 |        94.95 | +5.05 / −94.95   | 0.05×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | NEG      | 14.62   | -0.47    | -4.46603840469243   |
+| GB / N         | NEG      | 85.38   | -9.57    | -13.569541595307566 |
+| ST / Y         | WEAK     | 15.29   | 0.21     | -3.7890299999999986 |
+| ST / N         | NEG      | 84.71   | -10.25   | -14.246549999999992 |
+| MX / Y         | NEG      | 14.30   | -0.78    | -4.783509166666668  |
+| MX / N         | NEG      | 85.70   | -9.25    | -13.25207083333333  |
+| M10 / Y        | NEG      | 12.30   | -2.79    | -6.7862695833333335 |
+| M10 / N        | NEG      | 87.70   | -7.25    | -11.249310416666658 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -401,18 +479,18 @@ Contract 3343942; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        9.96 |        10.32 | +89.68 / −10.32  | 8.69×         |
+| Yes    |        9.2  |         9.54 | +90.46 / −9.54   | 9.49×         |
 | No     |       95.12 |        95.31 | +4.69 / −95.31   | 0.05×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | GO       | 19.73   | 9.41     | 5.413775063107476   |
+| GB / Y         | GO       | 19.73   | 10.19    | 6.194655063107477   |
 | GB / N         | NEG      | 80.27   | -15.04   | -19.035795063107475 |
-| ST / Y         | GO       | 20.99   | 10.67    | 6.671110000000001   |
+| ST / Y         | GO       | 20.99   | 11.45    | 7.451990000000003   |
 | ST / N         | NEG      | 79.01   | -16.29   | -20.293130000000005 |
-| MX / Y         | GO       | 15.58   | 5.26     | 1.2638183333333344  |
+| MX / Y         | GO       | 15.58   | 6.04     | 2.0446983333333364  |
 | MX / N         | NEG      | 84.42   | -10.89   | -14.885838333333334 |
-| M10 / Y        | GO       | 16.41   | 6.10     | 2.0958495833333326  |
+| M10 / Y        | GO       | 16.41   | 6.88     | 2.8767295833333346  |
 | M10 / N        | NEG      | 83.59   | -11.72   | -15.717869583333332 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
@@ -453,19 +531,19 @@ Contract 3343939; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       21    |        21.66 | +78.34 / −21.66  | 3.62×         |
-| No     |       80.47 |        81.1  | +18.90 / −81.10  | 0.23×         |
+| Yes    |          21 |        21.66 | +78.34 / −21.66  | 3.62×         |
+| No     |          80 |        80.64 | +19.36 / −80.64  | 0.24×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
 | GB / Y         | NEG      | 9.93    | -11.73   | -15.731893958934224 |
-| GB / N         | GO       | 90.07   | 8.97     | 4.97171395893421    |
+| GB / N         | GO       | 90.07   | 9.43     | 5.428293958934216   |
 | ST / Y         | NEG      | 9.62    | -12.04   | -16.041725          |
-| ST / N         | GO       | 90.38   | 9.28     | 5.281544999999987   |
+| ST / N         | GO       | 90.38   | 9.74     | 5.738124999999994   |
 | MX / Y         | NEG      | 14.00   | -7.66    | -11.65917291666667  |
-| MX / N         | GO       | 86.00   | 4.90     | 0.8989929166666522  |
+| MX / N         | GO       | 86.00   | 5.36     | 1.3555729166666586  |
 | M10 / Y        | NEG      | 13.04   | -8.62    | -12.618704166666667 |
-| M10 / N        | GO       | 86.96   | 5.86     | 1.858524166666664   |
+| M10 / N        | GO       | 86.96   | 6.32     | 2.3151041666666705  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -479,23 +557,49 @@ Contract 3343941; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |          15 |        15.51 | +84.49 / −15.51  | 5.45×         |
-| No     |          86 |        86.48 | +13.52 / −86.48  | 0.16×         |
+| Yes    |          13 |        13.45 | +86.55 / −13.45  | 6.43×         |
+| No     |          88 |        88.42 | +11.58 / −88.42  | 0.13×         |
 
-| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)           |
-|:---------------|:---------|:--------|:---------|:---------------------|
-| GB / Y         | GO       | 20.72   | 5.21     | 1.2076287263198844   |
-| GB / N         | NEG      | 79.28   | -7.20    | -11.19922872631989   |
-| ST / Y         | GO       | 21.75   | 6.24     | 2.236875000000002    |
-| ST / N         | NEG      | 78.25   | -8.23    | -12.228475000000005  |
-| MX / Y         | WEAK     | 19.09   | 3.58     | -0.42307291666666413 |
-| MX / N         | NEG      | 80.91   | -5.57    | -9.568527083333333   |
-| M10 / Y        | WEAK     | 19.27   | 3.76     | -0.2361979166666639  |
-| M10 / N        | NEG      | 80.73   | -5.76    | -9.755402083333342   |
-| RTWH / Y       | N/A      | —       | —        | —                    |
-| RTWH / N       | N/A      | —       | —        | —                    |
-| DDHQ / Y       | N/A      | —       | —        | —                    |
-| DDHQ / N       | N/A      | —       | —        | —                    |
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | GO       | 20.72   | 7.27     | 3.2652287263198825  |
+| GB / N         | NEG      | 79.28   | -9.14    | -13.140028726319885 |
+| ST / Y         | GO       | 21.75   | 8.29     | 4.294475            |
+| ST / N         | NEG      | 78.25   | -10.17   | -14.169275000000003 |
+| MX / Y         | GO       | 19.09   | 5.63     | 1.6345270833333343  |
+| MX / N         | NEG      | 80.91   | -7.51    | -11.509327083333332 |
+| M10 / Y        | GO       | 19.27   | 5.82     | 1.8214020833333344  |
+| M10 / N        | NEG      | 80.73   | -7.70    | -11.69620208333334  |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
+## Will the Democratic Party candidate win the 2026 New Mexico Senate election by 12%-15%?
+Contract 3343971; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |        9.15 |         9.49 | +90.51 / −9.49   | 9.54×         |
+| No     |       91.6  |        91.91 | +8.09 / −91.91   | 0.09×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | GO       | 14.90   | 5.41     | 1.4132656415712388  |
+| GB / N         | NEG      | 85.10   | -6.81    | -10.808535641571247 |
+| ST / Y         | GO       | 16.71   | 7.22     | 3.2187599999999996  |
+| ST / N         | NEG      | 83.29   | -8.61    | -12.614030000000009 |
+| MX / Y         | GO       | 15.45   | 5.96     | 1.9642287500000009  |
+| MX / N         | NEG      | 84.55   | -7.36    | -11.359498750000007 |
+| M10 / Y        | GO       | 15.49   | 6.00     | 1.9984474999999988  |
+| M10 / N        | NEG      | 84.51   | -7.39    | -11.393717500000012 |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
 
 RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
@@ -552,23 +656,49 @@ Contract 3343973; 100 shares per position.
 RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 
+## Will the Democratic Party candidate win the 2026 New Mexico Senate election by 6%-9%?
+Contract 3343969; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |        7.8  |         8.09 | +91.91 / −8.09   | 11.36×        |
+| No     |       94.36 |        94.57 | +5.43 / −94.57   | 0.06×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | WEAK     | 8.66    | 0.58     | -3.4248892073547537 |
+| GB / N         | NEG      | 91.34   | -3.24    | -7.235450792645237  |
+| ST / Y         | NEG      | 7.88    | -0.21    | -4.21266            |
+| ST / N         | NEG      | 92.12   | -2.45    | -6.4476799999999885 |
+| MX / Y         | WEAK     | 8.64    | 0.55     | -3.451149583333334  |
+| MX / N         | NEG      | 91.36   | -3.21    | -7.209190416666655  |
+| M10 / Y        | WEAK     | 8.70    | 0.62     | -3.384482916666666  |
+| M10 / N        | NEG      | 91.30   | -3.28    | -7.275857083333326  |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
 ## Will the Democratic Party candidate win the 2026 New Mexico Senate election by 9%-12%?
 Contract 3343970; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |         7   |         7.26 | +92.74 / −7.26   | 12.77×        |
-| No     |        95.5 |        95.67 | +4.33 / −95.67   | 0.05×         |
+| Yes    |        7.84 |         8.13 | +91.87 / −8.13   | 11.30×        |
+| No     |       95.5  |        95.67 | +4.33 / −95.67   | 0.05×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | GO       | 12.26   | 5.00     | 1.0035590962532677  |
+| GB / Y         | GO       | 12.26   | 4.14     | 0.13606909625326763 |
 | GB / N         | NEG      | 87.74   | -7.94    | -11.935859096253266 |
-| ST / Y         | GO       | 12.71   | 5.45     | 1.4520999999999982  |
+| ST / Y         | GO       | 12.71   | 4.58     | 0.5846099999999979  |
 | ST / N         | NEG      | 87.29   | -8.38    | -12.384399999999996 |
-| MX / Y         | GO       | 12.36   | 5.10     | 1.096839583333331   |
+| MX / Y         | GO       | 12.36   | 4.23     | 0.22934958333333116 |
 | MX / N         | NEG      | 87.64   | -8.03    | -12.029139583333336 |
-| M10 / Y        | GO       | 12.43   | 5.17     | 1.1735062500000004  |
+| M10 / Y        | GO       | 12.43   | 4.31     | 0.3060162500000005  |
 | M10 / N        | NEG      | 87.57   | -8.11    | -12.105806250000006 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
@@ -609,19 +739,45 @@ Contract 3344037; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       14.91 |        15.42 | +84.58 / −15.42  | 5.49×         |
+| Yes    |       13.76 |        14.23 | +85.77 / −14.23  | 6.03×         |
 | No     |       87.4  |        87.84 | +12.16 / −87.84  | 0.14×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 6.68    | -8.74    | -12.737205590328129 |
+| GB / Y         | NEG      | 6.68    | -7.55    | -11.554835590328128 |
 | GB / N         | GO       | 93.32   | 5.48     | 1.480565590328109   |
-| ST / Y         | NEG      | 4.72    | -10.69   | -14.691140000000003 |
+| ST / Y         | NEG      | 4.72    | -9.51    | -13.50877           |
 | ST / N         | GO       | 95.28   | 7.43     | 3.4344999999999843  |
-| MX / Y         | NEG      | 4.05    | -11.37   | -15.369994166666668 |
+| MX / Y         | NEG      | 4.05    | -10.19   | -14.187624166666664 |
 | MX / N         | GO       | 95.95   | 8.11     | 4.1133541666666495  |
-| M10 / Y        | NEG      | 4.01    | -11.40   | -15.40374416666667  |
+| M10 / Y        | NEG      | 4.01    | -10.22   | -14.221374166666667 |
 | M10 / N        | GO       | 95.99   | 8.15     | 4.147104166666649   |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
+## Will the Democratic Party candidate win the 2026 North Carolina Senate election by 15%-18%?
+Contract 3344038; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |       10    |        10.36 | +89.64 / −10.36  | 8.65×         |
+| No     |       93.92 |        94.14 | +5.86 / −94.14   | 0.06×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | NEG      | 2.22    | -8.14    | -12.137241775557827 |
+| GB / N         | WEAK     | 97.78   | 3.63     | -0.3673182244421813 |
+| ST / Y         | NEG      | 1.33    | -9.03    | -12.36              |
+| ST / N         | GO       | 98.67   | 4.52     | 0.5241900000000022  |
+| MX / Y         | NEG      | 1.08    | -9.28    | -12.36              |
+| MX / N         | GO       | 98.92   | 4.78     | 0.7771066666666604  |
+| M10 / Y        | NEG      | 1.07    | -9.29    | -12.36              |
+| M10 / N        | GO       | 98.93   | 4.79     | 0.7892420833333302  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -635,19 +791,19 @@ Contract 3344039; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       11.77 |        12.18 | +87.82 / −12.18  | 7.21×         |
-| No     |       96.71 |        96.83 | +3.17 / −96.83   | 0.03×         |
+| Yes    |        9.99 |        10.35 | +89.65 / −10.35  | 8.66×         |
+| No     |       94.26 |        94.48 | +5.52 / −94.48   | 0.06×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 0.62    | -11.56   | -14.18417           |
-| GB / N         | WEAK     | 99.38   | 2.55     | -1.4531172754779995 |
-| ST / Y         | NEG      | 0.29    | -11.90   | -14.18417           |
-| ST / N         | WEAK     | 99.71   | 2.88     | -1.1175000000000157 |
-| MX / Y         | NEG      | 0.26    | -11.93   | -14.18417           |
-| MX / N         | WEAK     | 99.74   | 2.91     | -1.0854166666666831 |
-| M10 / Y        | NEG      | 0.25    | -11.93   | -14.18417           |
-| M10 / N        | WEAK     | 99.75   | 2.92     | -1.083020833333348  |
+| GB / Y         | NEG      | 0.62    | -9.73    | -12.354440000000002 |
+| GB / N         | GO       | 99.38   | 4.90     | 0.8987927245220351  |
+| ST / Y         | NEG      | 0.29    | -10.07   | -12.354440000000002 |
+| ST / N         | GO       | 99.71   | 5.23     | 1.234410000000019   |
+| MX / Y         | NEG      | 0.26    | -10.10   | -12.354440000000002 |
+| MX / N         | GO       | 99.74   | 5.27     | 1.2664933333333517  |
+| M10 / Y        | NEG      | 0.25    | -10.10   | -12.354440000000002 |
+| M10 / N        | GO       | 99.75   | 5.27     | 1.2688891666666868  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -687,19 +843,19 @@ Contract 3344036; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       17.74 |        18.32 | +81.68 / −18.32  | 4.46×         |
-| No     |       87.4  |        87.84 | +12.16 / −87.84  | 0.14×         |
+| Yes    |       16.57 |        17.12 | +82.88 / −17.12  | 4.84×         |
+| No     |       87    |        87.45 | +12.55 / −87.45  | 0.14×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 14.23   | -4.10    | -8.095974274735969  |
-| GB / N         | NEG      | 85.77   | -2.07    | -6.068245725264044  |
-| ST / Y         | NEG      | 13.50   | -4.83    | -8.826945000000002  |
-| ST / N         | NEG      | 86.50   | -1.34    | -5.337275000000008  |
-| MX / Y         | NEG      | 11.48   | -6.85    | -10.846892916666668 |
-| MX / N         | WEAK     | 88.52   | 0.68     | -3.3173270833333435 |
-| M10 / Y        | NEG      | 11.41   | -6.92    | -10.915851250000001 |
-| M10 / N        | WEAK     | 88.59   | 0.75     | -3.248368750000008  |
+| GB / Y         | NEG      | 14.23   | -2.90    | -6.895124274735966  |
+| GB / N         | NEG      | 85.77   | -1.68    | -5.680245725264033  |
+| ST / Y         | NEG      | 13.50   | -3.63    | -7.626094999999998  |
+| ST / N         | NEG      | 86.50   | -0.95    | -4.949274999999997  |
+| MX / Y         | NEG      | 11.48   | -5.65    | -9.646042916666666  |
+| MX / N         | WEAK     | 88.52   | 1.07     | -2.9293270833333325 |
+| M10 / Y        | NEG      | 11.41   | -5.72    | -9.715001249999998  |
+| M10 / N        | WEAK     | 88.59   | 1.14     | -2.8603687499999975 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -713,19 +869,19 @@ Contract 3344047; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       19    |        19.62 | +80.38 / −19.62  | 4.10×         |
-| No     |       83.41 |        83.96 | +16.04 / −83.96  | 0.19×         |
+| Yes    |          19 |        19.62 | +80.38 / −19.62  | 4.10×         |
+| No     |          83 |        83.56 | +16.44 / −83.56  | 0.20×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
 | GB / Y         | WEAK     | 20.16   | 0.54     | -3.4601456718344634 |
-| GB / N         | NEG      | 79.84   | -4.12    | -8.119544328165517  |
+| GB / N         | NEG      | 79.84   | -3.72    | -7.7198543281655425 |
 | ST / Y         | GO       | 24.12   | 4.50     | 0.5031500000000022  |
-| ST / N         | NEG      | 75.88   | -8.08    | -12.082839999999983 |
+| ST / N         | NEG      | 75.88   | -7.68    | -11.683150000000007 |
 | MX / Y         | WEAK     | 21.96   | 2.34     | -1.660079166666664  |
-| MX / N         | NEG      | 78.04   | -5.92    | -9.919610833333314  |
+| MX / N         | NEG      | 78.04   | -5.52    | -9.51992083333334   |
 | M10 / Y        | WEAK     | 22.35   | 2.73     | -1.26549583333333   |
-| M10 / N        | NEG      | 77.65   | -6.31    | -10.314194166666658 |
+| M10 / N        | NEG      | 77.65   | -5.91    | -9.914504166666681  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -791,18 +947,18 @@ Contract 3344097; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        8.91 |         9.23 | +90.77 / −9.23   | 9.84×         |
+| Yes    |       13.87 |        14.33 | +85.67 / −14.33  | 5.98×         |
 | No     |       99.7  |        99.71 | +0.29 / −99.71   | 0.00×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 0.09    | -9.14    | -11.227139999999999 |
+| GB / Y         | NEG      | 0.09    | -14.24   | -16.328870000000002 |
 | GB / N         | WEAK     | 99.91   | 0.20     | -3.8023471132106694 |
-| ST / Y         | NEG      | 0.11    | -9.11    | -11.227139999999999 |
+| ST / Y         | NEG      | 0.11    | -14.22   | -16.328870000000002 |
 | ST / N         | WEAK     | 99.89   | 0.18     | -3.8244600000000073 |
-| MX / Y         | NEG      | 0.66    | -8.56    | -11.227139999999999 |
+| MX / Y         | NEG      | 0.66    | -13.67   | -16.328870000000002 |
 | MX / N         | NEG      | 99.34   | -0.37    | -4.374616250000008  |
-| M10 / Y        | NEG      | 0.77    | -8.46    | -11.227139999999999 |
+| M10 / Y        | NEG      | 0.77    | -13.56   | -16.328870000000002 |
 | M10 / N        | NEG      | 99.23   | -0.48    | -4.481647500000008  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
@@ -817,18 +973,18 @@ Contract 3344099; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        1.45 |         1.51 | +98.49 / −1.51   | 65.25×        |
+| Yes    |        1.45 |         1.5  | +98.50 / −1.50   | 65.58×        |
 | No     |       99.3  |        99.33 | +0.67 / −99.33   | 0.01×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | WEAK     | 4.53    | 3.02     | -0.9773001919941894 |
+| GB / Y         | WEAK     | 4.53    | 3.03     | -0.969880191994189  |
 | GB / N         | NEG      | 95.47   | -3.86    | -7.8598998080058    |
-| ST / Y         | WEAK     | 3.53    | 2.02     | -1.9781500000000003 |
+| ST / Y         | WEAK     | 3.53    | 2.03     | -1.97073            |
 | ST / N         | NEG      | 96.47   | -2.86    | -6.859049999999989  |
-| MX / Y         | GO       | 7.72    | 6.21     | 2.2087770833333327  |
+| MX / Y         | GO       | 7.72    | 6.22     | 2.216197083333333   |
 | MX / N         | NEG      | 92.28   | -7.05    | -11.045977083333325 |
-| M10 / Y        | GO       | 8.45    | 6.94     | 2.9375270833333333  |
+| M10 / Y        | GO       | 8.45    | 6.94     | 2.9449470833333335  |
 | M10 / N        | NEG      | 91.55   | -7.77    | -11.774727083333325 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
@@ -843,18 +999,18 @@ Contract 3344100; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       10.89 |        11.26 | +88.74 / −11.26  | 7.88×         |
+| Yes    |       11.32 |        11.7  | +88.30 / −11.70  | 7.55×         |
 | No     |       99.6  |        99.62 | +0.38 / −99.62   | 0.00×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | WEAK     | 14.27   | 3.01     | -0.990395058709763  |
+| GB / Y         | WEAK     | 14.27   | 2.57     | -1.4263650587097623 |
 | GB / N         | NEG      | 85.73   | -13.89   | -17.88934494129022  |
-| ST / Y         | NEG      | 11.22   | -0.05    | -4.048175000000001  |
+| ST / Y         | NEG      | 11.22   | -0.48    | -4.484145000000001  |
 | ST / N         | NEG      | 88.78   | -10.83   | -14.83156499999998  |
-| MX / Y         | GO       | 16.65   | 5.38     | 1.3841166666666682  |
+| MX / Y         | GO       | 16.65   | 4.95     | 0.9481466666666688  |
 | MX / N         | NEG      | 83.35   | -16.26   | -20.26385666666666  |
-| M10 / Y        | GO       | 17.63   | 6.37     | 2.365887500000002   |
+| M10 / Y        | GO       | 17.63   | 5.93     | 1.9299175000000028  |
 | M10 / N        | NEG      | 82.37   | -17.25   | -21.245627499999987 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
@@ -869,19 +1025,19 @@ Contract 3344101; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       15.93 |        16.46 | +83.54 / −16.46  | 5.07×         |
-| No     |       87.93 |        88.35 | +11.65 / −88.35  | 0.13×         |
+| Yes    |       15.9  |        16.43 | +83.57 / −16.43  | 5.08×         |
+| No     |       87.73 |        88.16 | +11.84 / −88.16  | 0.13×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | GO       | 26.25   | 9.79     | 5.78644705392817    |
-| GB / N         | NEG      | 73.75   | -14.60   | -18.59983705392816  |
-| ST / Y         | GO       | 24.83   | 8.37     | 4.372195000000001   |
-| ST / N         | NEG      | 75.17   | -13.19   | -17.185584999999993 |
-| MX / Y         | GO       | 25.32   | 8.86     | 4.856726250000001   |
-| MX / N         | NEG      | 74.68   | -13.67   | -17.67011624999999  |
-| M10 / Y        | GO       | 25.88   | 9.42     | 5.4152679166666635  |
-| M10 / N        | NEG      | 74.12   | -14.23   | -18.228657916666656 |
+| GB / Y         | GO       | 26.25   | 9.81     | 5.8137470539281715  |
+| GB / N         | NEG      | 73.75   | -14.41   | -18.40660705392816  |
+| ST / Y         | GO       | 24.83   | 8.40     | 4.3994950000000035  |
+| ST / N         | NEG      | 75.17   | -12.99   | -16.992354999999993 |
+| MX / Y         | GO       | 25.32   | 8.88     | 4.884026250000003   |
+| MX / N         | NEG      | 74.68   | -13.48   | -17.47688624999999  |
+| M10 / Y        | GO       | 25.88   | 9.44     | 5.442567916666666   |
+| M10 / N        | NEG      | 74.12   | -14.04   | -18.035427916666656 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -968,24 +1124,50 @@ Contract 3344142; 100 shares per position.
 RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 
-## Will the Democratic Party candidate win the 2026 Texas Senate election by 9%-12%?
-Contract 3344144; 100 shares per position.
+## Will the Democratic Party candidate win the 2026 Virginia Senate election by 0%-3%?
+Contract 3344162; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        4.95 |         5.14 | +94.86 / −5.14   | 18.46×        |
-| No     |       95.2  |        95.38 | +4.62 / −95.38   | 0.05×         |
+| Yes    |         0.9 |         0.94 | +99.06 / −0.94   | 105.87×       |
+| No     |        99.2 |        99.23 | +0.77 / −99.23   | 0.01×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 3.57    | -1.57    | -5.565827084375543  |
-| GB / N         | WEAK     | 96.43   | 1.05     | -2.9547629156244426 |
-| ST / Y         | NEG      | 1.94    | -3.20    | -7.137809999999998  |
-| ST / N         | WEAK     | 98.06   | 2.68     | -1.3234049999999775 |
-| MX / Y         | NEG      | 2.78    | -2.36    | -6.358018333333332  |
-| MX / N         | WEAK     | 97.22   | 1.84     | -2.162571666666646  |
-| M10 / Y        | NEG      | 2.82    | -2.32    | -6.318330833333332  |
-| M10 / N        | WEAK     | 97.18   | 1.80     | -2.2022591666666536 |
+| GB / Y         | WEAK     | 1.19    | 0.26     | -2.9356799999999996 |
+| GB / N         | NEG      | 98.81   | -0.42    | -4.423105329589405  |
+| ST / Y         | NEG      | 0.76    | -0.18    | -2.9356799999999996 |
+| ST / N         | WEAK     | 99.24   | 0.01     | -3.987989999999997  |
+| MX / Y         | WEAK     | 1.73    | 0.80     | -2.9356799999999996 |
+| MX / N         | NEG      | 98.27   | -0.96    | -4.96278166666666   |
+| M10 / Y        | WEAK     | 1.71    | 0.78     | -2.9356799999999996 |
+| M10 / N        | NEG      | 98.29   | -0.94    | -4.943302499999991  |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
+## Will the Democratic Party candidate win the 2026 Virginia Senate election by 12%-15%?
+Contract 3344166; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |        8.49 |         8.8  | +91.20 / −8.80   | 10.36×        |
+| No     |       93    |        93.26 | +6.74 / −93.26   | 0.07×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | GO       | 14.02   | 5.22     | 1.2162178122252232  |
+| GB / N         | NEG      | 85.98   | -7.28    | -11.276257812225232 |
+| ST / Y         | GO       | 14.88   | 6.08     | 2.0847350000000002  |
+| ST / N         | NEG      | 85.12   | -8.14    | -12.144774999999996 |
+| MX / Y         | GO       | 13.61   | 4.81     | 0.811453749999999   |
+| MX / N         | NEG      | 86.39   | -6.87    | -10.871493750000006 |
+| M10 / Y        | GO       | 13.54   | 4.74     | 0.7433808333333347  |
+| M10 / N        | NEG      | 86.46   | -6.80    | -10.803420833333343 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -999,19 +1181,45 @@ Contract 3344168; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       26.7  |        27.48 | +72.52 / −27.48  | 2.64×         |
-| No     |       74.54 |        75.3  | +24.70 / −75.30  | 0.33×         |
+| Yes    |        26.7 |        27.48 | +72.52 / −27.48  | 2.64×         |
+| No     |        74   |        74.77 | +25.23 / −74.77  | 0.34×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
 | GB / Y         | NEG      | 16.42   | -11.07   | -15.066293620365197 |
-| GB / N         | GO       | 83.58   | 8.28     | 4.281493620365195   |
+| GB / N         | GO       | 83.58   | 8.81     | 4.813853620365194   |
 | ST / Y         | NEG      | 19.27   | -8.21    | -12.214090000000004 |
-| ST / N         | GO       | 80.73   | 5.43     | 1.4292900000000055  |
+| ST / N         | GO       | 80.73   | 5.96     | 1.9616500000000037  |
 | MX / Y         | NEG      | 15.59   | -11.90   | -15.897579583333336 |
-| MX / N         | GO       | 84.41   | 9.11     | 5.112779583333338   |
+| MX / N         | GO       | 84.41   | 9.65     | 5.645139583333336   |
 | M10 / Y        | NEG      | 15.65   | -11.83   | -15.83106916666667  |
-| M10 / N        | GO       | 84.35   | 9.05     | 5.046269166666672   |
+| M10 / N        | GO       | 84.35   | 9.58     | 5.57862916666667    |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
+## Will the Democratic Party candidate win the 2026 Virginia Senate election by 21% or more?
+Contract 3344169; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |          46 |        46.99 | +53.01 / −46.99  | 1.13×         |
+| No     |          57 |        57.98 | +42.02 / −57.98  | 0.72×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | NEG      | 32.59   | -14.41   | -18.40510568559921  |
+| GB / N         | GO       | 67.41   | 9.43     | 5.431105685599203   |
+| ST / Y         | NEG      | 30.11   | -16.88   | -20.884225000000004 |
+| ST / N         | GO       | 69.89   | 11.91    | 7.910225000000004   |
+| MX / Y         | NEG      | 32.50   | -14.50   | -18.495943750000006 |
+| MX / N         | GO       | 67.50   | 9.52     | 5.521943749999991   |
+| M10 / Y        | NEG      | 32.92   | -14.07   | -18.073183333333336 |
+| M10 / N        | GO       | 67.08   | 9.10     | 5.099183333333324   |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -1046,24 +1254,24 @@ Contract 3344163; 100 shares per position.
 RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 
-## Will the Democratic Party candidate win the 2026 Virginia Senate election by 9%-12%?
-Contract 3344165; 100 shares per position.
+## Will the Democratic Party candidate win the 2026 Virginia Senate election by 6%-9%?
+Contract 3344164; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        7.88 |         8.17 | +91.83 / −8.17   | 11.24×        |
-| No     |       95.64 |        95.8  | +4.20 / −95.80   | 0.04×         |
+| Yes    |        3.09 |         3.21 | +96.79 / −3.21   | 30.14×        |
+| No     |       97.54 |        97.64 | +2.36 / −97.64   | 0.02×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | WEAK     | 9.90    | 1.73     | -2.267520332438118  |
-| GB / N         | NEG      | 90.10   | -5.70    | -9.704029667561887  |
-| ST / Y         | WEAK     | 8.57    | 0.40     | -3.5958650000000008 |
-| ST / N         | NEG      | 91.43   | -4.38    | -8.375684999999999  |
-| MX / Y         | WEAK     | 9.60    | 1.43     | -2.5723754166666684 |
-| MX / N         | NEG      | 90.40   | -5.40    | -9.399174583333336  |
-| M10 / Y        | WEAK     | 9.46    | 1.30     | -2.7048233333333336 |
-| M10 / N        | NEG      | 90.54   | -5.27    | -9.266726666666669  |
+| GB / Y         | WEAK     | 5.85    | 2.64     | -1.3642619335149946 |
+| GB / N         | NEG      | 94.15   | -3.49    | -7.487328066484988  |
+| ST / Y         | WEAK     | 4.16    | 0.95     | -3.05455            |
+| ST / N         | NEG      | 95.84   | -1.80    | -5.797039999999976  |
+| MX / Y         | WEAK     | 5.98    | 2.77     | -1.2260083333333338 |
+| MX / N         | NEG      | 94.02   | -3.63    | -7.625581666666648  |
+| M10 / Y        | WEAK     | 5.88    | 2.67     | -1.327102083333334  |
+| M10 / N        | NEG      | 94.12   | -3.52    | -7.5244879166666445 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -1103,22 +1311,22 @@ Contract 630627; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        3.86 |         4.01 | +95.99 / −4.01   | 23.95×        |
+| Yes    |        3.72 |         3.86 | +96.14 / −3.86   | 24.90×        |
 | No     |       99.57 |        99.59 | +0.41 / −99.59   | 0.00×         |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
-| GB / Y         | NEG      |    0.06 |    -3.95 |        -6.01 |
+| GB / Y         | NEG      |    0.06 |    -3.80 |        -5.86 |
 | GB / N         | WEAK     |   99.94 |     0.35 |        -3.65 |
-| ST / Y         | NEG      |    0.15 |    -3.86 |        -6.01 |
+| ST / Y         | NEG      |    0.15 |    -3.71 |        -5.86 |
 | ST / N         | WEAK     |   99.85 |     0.26 |        -3.74 |
-| MX / Y         | NEG      |    1.54 |    -2.47 |        -6.01 |
+| MX / Y         | NEG      |    1.54 |    -2.32 |        -5.86 |
 | MX / N         | NEG      |   98.46 |    -1.12 |        -5.12 |
-| M10 / Y        | NEG      |    1.46 |    -2.54 |        -6.01 |
+| M10 / Y        | NEG      |    1.46 |    -2.40 |        -5.86 |
 | M10 / N        | NEG      |   98.54 |    -1.05 |        -5.05 |
-| RTWH / Y       | NEG      |    1.10 |    -2.91 |        -6.01 |
+| RTWH / Y       | NEG      |    1.10 |    -2.76 |        -5.86 |
 | RTWH / N       | NEG      |   98.90 |    -0.69 |        -4.69 |
-| DDHQ / Y       | WEAK     |    5.00 |     0.99 |        -3.01 |
+| DDHQ / Y       | WEAK     |    5.00 |     1.14 |        -2.86 |
 | DDHQ / N       | NEG      |   95.00 |    -4.59 |        -8.59 |
 
 RTWH (2026-09-25): Final-election publisher probability; current candidate and contract rules must agree. Published rounding is retained; equal endpoints represent one estimate, not certainty.
@@ -1182,23 +1390,23 @@ Contract 630679; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       99.7  |        99.71 | +0.29 / −99.71   | 0.00×         |
-| No     |        2.07 |         2.15 | +97.85 / −2.15   | 45.49×        |
+| Yes    |        99.7 |        99.71 | +0.29 / −99.71   | 0.00×         |
+| No     |         1.9 |         1.97 | +98.03 / −1.97   | 49.64×        |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
 | GB / Y         | WEAK*    |   99.95 |     0.24 |        -3.76 |
-| GB / N         | NEG*     |    0.05 |    -2.10 |        -4.15 |
+| GB / N         | NEG*     |    0.05 |    -1.93 |        -3.97 |
 | ST / Y         | NEG*     |   99.62 |    -0.09 |        -4.09 |
-| ST / N         | NEG*     |    0.38 |    -1.78 |        -4.15 |
+| ST / N         | NEG*     |    0.38 |    -1.60 |        -3.97 |
 | MX / Y         | NEG*     |   99.57 |    -0.14 |        -4.14 |
-| MX / N         | NEG*     |    0.43 |    -1.72 |        -4.15 |
+| MX / N         | NEG*     |    0.43 |    -1.54 |        -3.97 |
 | M10 / Y        | NEG*     |   99.46 |    -0.25 |        -4.25 |
-| M10 / N        | NEG*     |    0.54 |    -1.61 |        -4.15 |
+| M10 / N        | NEG*     |    0.54 |    -1.43 |        -3.97 |
 | RTWH / Y       | NEG      |   98.00 |    -1.71 |        -5.71 |
-| RTWH / N       | NEG      |    2.00 |    -0.15 |        -4.15 |
+| RTWH / N       | WEAK     |    2.00 |     0.03 |        -3.97 |
 | DDHQ / Y       | NEG      |   99.00 |    -0.71 |        -4.71 |
-| DDHQ / N       | NEG      |    1.00 |    -1.15 |        -4.15 |
+| DDHQ / N       | NEG      |    1.00 |    -0.97 |        -3.97 |
 
 GB, ST, MX, M10: Candidate roster is unreviewed; this assumes the modeled D/R sides match the party nominees.
 RTWH (2026-09-25): Final-election publisher probability; current candidate and contract rules must agree. Published rounding is retained; equal endpoints represent one estimate, not certainty.
@@ -1341,22 +1549,22 @@ Contract 630759; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        4.22 |         4.38 | +95.62 / −4.38   | 21.82×        |
+| Yes    |        4.41 |         4.58 | +95.42 / −4.58   | 20.83×        |
 | No     |       97.17 |        97.28 | +2.72 / −97.28   | 0.03×         |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
-| GB / Y         | NEG      |    1.88 |    -2.50 |        -6.38 |
+| GB / Y         | NEG      |    1.88 |    -2.70 |        -6.58 |
 | GB / N         | WEAK     |   98.12 |     0.83 |        -3.17 |
-| ST / Y         | NEG      |    1.42 |    -2.96 |        -6.38 |
+| ST / Y         | NEG      |    1.42 |    -3.16 |        -6.58 |
 | ST / N         | WEAK     |   98.58 |     1.29 |        -2.71 |
-| MX / Y         | NEG      |    3.90 |    -0.49 |        -4.49 |
+| MX / Y         | NEG      |    3.90 |    -0.68 |        -4.68 |
 | MX / N         | NEG      |   96.10 |    -1.18 |        -5.18 |
-| M10 / Y        | NEG      |    2.96 |    -1.42 |        -5.42 |
+| M10 / Y        | NEG      |    2.96 |    -1.62 |        -5.62 |
 | M10 / N        | NEG      |   97.04 |    -0.24 |        -4.24 |
-| RTWH / Y       | NEG      |    2.10 |    -2.28 |        -6.28 |
+| RTWH / Y       | NEG      |    2.10 |    -2.48 |        -6.48 |
 | RTWH / N       | WEAK     |   97.90 |     0.62 |        -3.38 |
-| DDHQ / Y       | WEAK     |    5.00 |     0.62 |        -3.38 |
+| DDHQ / Y       | WEAK     |    5.00 |     0.42 |        -3.58 |
 | DDHQ / N       | NEG      |   95.00 |    -2.28 |        -6.28 |
 
 RTWH (2026-09-25): Final-election publisher probability; current candidate and contract rules must agree. Published rounding is retained; equal endpoints represent one estimate, not certainty.
@@ -1393,23 +1601,23 @@ Contract 630772; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |          69 |        69.86 | +30.14 / −69.86  | 0.43×         |
-| No     |          32 |        32.87 | +67.13 / −32.87  | 2.04×         |
+| Yes    |          68 |        68.87 | +31.13 / −68.87  | 0.45×         |
+| No     |          33 |        33.88 | +66.12 / −33.88  | 1.95×         |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
-| GB / Y         | GO*      |   92.55 |    22.70 |        18.70 |
-| GB / N         | NEG*     |    7.45 |   -25.42 |       -29.42 |
-| ST / Y         | GO*      |   93.63 |    23.78 |        19.78 |
-| ST / N         | NEG*     |    6.37 |   -26.50 |       -30.50 |
-| MX / Y         | GO*      |   85.54 |    15.69 |        11.69 |
-| MX / N         | NEG*     |   14.46 |   -18.41 |       -22.41 |
-| M10 / Y        | GO*      |   82.94 |    13.09 |         9.09 |
-| M10 / N        | NEG*     |   17.06 |   -15.81 |       -19.81 |
-| RTWH / Y       | NEG      |   62.20 |    -7.66 |       -11.66 |
-| RTWH / N       | GO       |   37.80 |     4.93 |         0.93 |
-| DDHQ / Y       | NEG      |   54.00 |   -15.86 |       -19.86 |
-| DDHQ / N       | GO       |   46.00 |    13.13 |         9.13 |
+| GB / Y         | GO*      |   92.55 |    23.68 |        19.68 |
+| GB / N         | NEG*     |    7.45 |   -26.44 |       -30.44 |
+| ST / Y         | GO*      |   93.63 |    24.76 |        20.76 |
+| ST / N         | NEG*     |    6.37 |   -27.52 |       -31.52 |
+| MX / Y         | GO*      |   85.54 |    16.67 |        12.67 |
+| MX / N         | NEG*     |   14.46 |   -19.43 |       -23.43 |
+| M10 / Y        | GO*      |   82.94 |    14.07 |        10.07 |
+| M10 / N        | NEG*     |   17.06 |   -16.83 |       -20.83 |
+| RTWH / Y       | NEG      |   62.20 |    -6.67 |       -10.67 |
+| RTWH / N       | WEAK     |   37.80 |     3.92 |        -0.08 |
+| DDHQ / Y       | NEG      |   54.00 |   -14.87 |       -18.87 |
+| DDHQ / N       | GO       |   46.00 |    12.12 |         8.12 |
 
 GB, ST, MX, M10: Ranked-choice transfers are not separately modeled; the modeled margin is used as a proxy for the eventual winner.
 RTWH (2026-09-25): Final-election publisher probability; current candidate and contract rules must agree. Published rounding is retained; equal endpoints represent one estimate, not certainty.
@@ -1420,22 +1628,22 @@ Contract 630790; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        98.3 |        98.37 | +1.63 / −98.37   | 0.02×         |
-| No     |         2.5 |         2.6  | +97.40 / −2.60   | 37.50×        |
+| Yes    |       98.28 |        98.34 | +1.66 / −98.34   | 0.02×         |
+| No     |        2.5  |         2.6  | +97.40 / −2.60   | 37.50×        |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
-| GB / Y         | WEAK     |  100.00 |     1.63 |        -2.37 |
+| GB / Y         | WEAK     |  100.00 |     1.66 |        -2.34 |
 | GB / N         | NEG      |    0.00 |    -2.60 |        -4.60 |
-| ST / Y         | WEAK     |  100.00 |     1.63 |        -2.37 |
+| ST / Y         | WEAK     |  100.00 |     1.65 |        -2.35 |
 | ST / N         | NEG      |    0.00 |    -2.59 |        -4.60 |
-| MX / Y         | WEAK     |   99.99 |     1.62 |        -2.38 |
+| MX / Y         | WEAK     |   99.99 |     1.65 |        -2.35 |
 | MX / N         | NEG      |    0.01 |    -2.59 |        -4.60 |
-| M10 / Y        | WEAK     |   99.99 |     1.62 |        -2.38 |
+| M10 / Y        | WEAK     |   99.99 |     1.65 |        -2.35 |
 | M10 / N        | NEG      |    0.01 |    -2.59 |        -4.60 |
-| RTWH / Y       | WEAK     |   99.60 |     1.23 |        -2.77 |
+| RTWH / Y       | WEAK     |   99.60 |     1.26 |        -2.74 |
 | RTWH / N       | NEG      |    0.40 |    -2.20 |        -4.60 |
-| DDHQ / Y       | WEAK     |   99.00 |     0.63 |        -3.37 |
+| DDHQ / Y       | WEAK     |   99.00 |     0.66 |        -3.34 |
 | DDHQ / N       | NEG      |    1.00 |    -1.60 |        -4.60 |
 
 RTWH (2026-09-25): Final-election publisher probability; current candidate and contract rules must agree. Published rounding is retained; equal endpoints represent one estimate, not certainty.
@@ -1813,22 +2021,22 @@ Contract 630976; 100 shares per position.
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
 | Yes    |       99.61 |        99.63 | +0.37 / −99.63   | 0.00×         |
-| No     |        2.87 |         2.98 | +97.02 / −2.98   | 32.54×        |
+| No     |        2.86 |         2.97 | +97.03 / −2.97   | 32.62×        |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
 | GB / Y         | NEG      |   99.43 |    -0.20 |        -4.20 |
-| GB / N         | NEG      |    0.57 |    -2.42 |        -4.98 |
+| GB / N         | NEG      |    0.57 |    -2.41 |        -4.97 |
 | ST / Y         | NEG      |   99.41 |    -0.22 |        -4.22 |
-| ST / N         | NEG      |    0.59 |    -2.39 |        -4.98 |
+| ST / N         | NEG      |    0.59 |    -2.39 |        -4.97 |
 | MX / Y         | NEG      |   98.48 |    -1.15 |        -5.15 |
-| MX / N         | NEG      |    1.52 |    -1.46 |        -4.98 |
+| MX / N         | NEG      |    1.52 |    -1.46 |        -4.97 |
 | M10 / Y        | NEG      |   98.52 |    -1.11 |        -5.11 |
-| M10 / N        | NEG      |    1.48 |    -1.50 |        -4.98 |
+| M10 / N        | NEG      |    1.48 |    -1.49 |        -4.97 |
 | RTWH / Y       | NEG      |   98.10 |    -1.53 |        -5.53 |
-| RTWH / N       | NEG      |    1.90 |    -1.08 |        -4.98 |
+| RTWH / N       | NEG      |    1.90 |    -1.07 |        -4.97 |
 | DDHQ / Y       | NEG      |   96.00 |    -3.63 |        -7.63 |
-| DDHQ / N       | WEAK     |    4.00 |     1.02 |        -2.98 |
+| DDHQ / N       | WEAK     |    4.00 |     1.03 |        -2.97 |
 
 RTWH (2026-09-25): Final-election publisher probability; current candidate and contract rules must agree. Published rounding is retained; equal endpoints represent one estimate, not certainty.
 DDHQ (2026-09-25): Final-election publisher probability; current candidate and contract rules must agree. DDHQ uses 25% market inputs for this race. Published rounding is retained; equal endpoints represent one estimate, not certainty.
@@ -1865,18 +2073,18 @@ Contract 3343105; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |          14 |        14.48 | +85.52 / −14.48  | 5.91×         |
+| Yes    |          13 |        13.45 | +86.55 / −13.45  | 6.43×         |
 | No     |          88 |        88.42 | +11.58 / −88.42  | 0.13×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 12.70   | -1.78    | -5.777347683235572  |
+| GB / Y         | NEG      | 12.70   | -0.75    | -4.748147683235569  |
 | GB / N         | NEG      | 87.30   | -1.13    | -5.126652316764434  |
-| ST / Y         | NEG      | 10.22   | -4.26    | -8.256600000000002  |
+| ST / Y         | NEG      | 10.22   | -3.23    | -7.2274             |
 | ST / N         | WEAK     | 89.78   | 1.35     | -2.6473999999999993 |
-| MX / Y         | NEG      | 14.48   | -0.01    | -4.006183333333337  |
+| MX / Y         | WEAK     | 14.48   | 1.02     | -2.9769833333333344 |
 | MX / N         | NEG      | 85.52   | -2.90    | -6.897816666666667  |
-| M10 / Y        | NEG      | 14.11   | -0.37    | -4.370402083333334  |
+| M10 / Y        | WEAK     | 14.11   | 0.66     | -3.3412020833333314 |
 | M10 / N        | NEG      | 85.89   | -2.53    | -6.5335979166666664 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
@@ -1912,24 +2120,24 @@ Contract 3343103; 100 shares per position.
 RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 
-## Will the Republican Party candidate win the 2026 Alabama Senate election by 35% or more?
-Contract 3343100; 100 shares per position.
+## Will the Republican Party candidate win the 2026 Alabama Senate election by 25%-30%?
+Contract 3343102; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       21.42 |        22.07 | +77.93 / −22.07  | 3.53×         |
-| No     |       98.92 |        98.96 | +1.04 / −98.96   | 0.01×         |
+| Yes    |        18.2 |        18.8  | +81.20 / −18.80  | 4.32×         |
+| No     |        84   |        84.54 | +15.46 / −84.54  | 0.18×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 1.84    | -20.23   | -24.073619999999995 |
-| GB / N         | NEG      | 98.16   | -0.80    | -4.801002412164235  |
-| ST / Y         | NEG      | 1.01    | -21.06   | -24.073619999999995 |
-| ST / N         | WEAK     | 98.99   | 0.03     | -3.973020000000005  |
-| MX / Y         | NEG      | 2.52    | -19.55   | -23.554661666666664 |
-| MX / N         | NEG      | 97.48   | -1.48    | -5.479478333333332  |
-| M10 / Y        | NEG      | 2.67    | -19.41   | -23.405026250000002 |
-| M10 / N        | NEG      | 97.33   | -1.63    | -5.629113750000004  |
+| GB / Y         | WEAK     | 19.30   | 0.50     | -3.4969262743435676 |
+| GB / N         | NEG      | 80.70   | -3.84    | -7.8361137256564355 |
+| ST / Y         | WEAK     | 19.33   | 0.53     | -3.467314999999998  |
+| ST / N         | NEG      | 80.67   | -3.87    | -7.865725000000001  |
+| MX / Y         | NEG      | 15.84   | -2.95    | -6.951950416666666  |
+| MX / N         | NEG      | 84.16   | -0.38    | -4.381089583333331  |
+| M10 / Y        | NEG      | 16.34   | -2.45    | -6.45471083333333   |
+| M10 / N        | NEG      | 83.66   | -0.88    | -4.878329166666672  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -1944,18 +2152,18 @@ Contract 3343106; 100 shares per position.
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
 | Yes    |       15    |        15.51 | +84.49 / −15.51  | 5.45×         |
-| No     |       89.74 |        90.11 | +9.89 / −90.11   | 0.11×         |
+| No     |       86.94 |        87.39 | +12.61 / −87.39  | 0.14×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
 | GB / Y         | NEG      | 3.67    | -11.84   | -15.840217679996963 |
-| GB / N         | GO       | 96.33   | 6.22     | 2.219977679996954   |
+| GB / N         | GO       | 96.33   | 8.94     | 4.94032767999697    |
 | ST / Y         | NEG      | 2.84    | -12.67   | -16.6725            |
-| ST / N         | GO       | 97.16   | 7.05     | 3.0522599999999844  |
+| ST / N         | GO       | 97.16   | 9.77     | 5.772609999999999   |
 | MX / Y         | NEG      | 7.20    | -8.31    | -12.306614583333333 |
-| MX / N         | WEAK     | 92.80   | 2.69     | -1.3136254166666752 |
+| MX / N         | GO       | 92.80   | 5.41     | 1.4067245833333408  |
 | M10 / Y        | NEG      | 6.97    | -8.54    | -12.543125          |
-| M10 / N        | WEAK     | 93.03   | 2.92     | -1.0771150000000063 |
+| M10 / N        | GO       | 93.03   | 5.64     | 1.6432350000000095  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -1970,18 +2178,44 @@ Contract 3343124; 100 shares per position.
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
 | Yes    |        26.5 |        27.28 | +72.72 / −27.28  | 2.67×         |
-| No     |        73.7 |        74.48 | +25.52 / −74.48  | 0.34×         |
+| No     |        73.6 |        74.38 | +25.62 / −74.38  | 0.34×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
 | GB / Y         | NEG      | 16.18   | -11.10   | -15.102838994980475 |
-| GB / N         | GO       | 83.82   | 9.35     | 5.348418994980475   |
+| GB / N         | GO       | 83.82   | 9.45     | 5.446518994980476   |
 | ST / Y         | NEG      | 16.19   | -11.09   | -15.08535           |
-| ST / N         | GO       | 83.81   | 9.33     | 5.33092999999999    |
+| ST / N         | GO       | 83.81   | 9.43     | 5.42902999999999    |
 | MX / Y         | NEG      | 17.99   | -9.29    | -13.292172916666665 |
-| MX / N         | GO       | 82.01   | 7.54     | 3.5377529166666593  |
+| MX / N         | GO       | 82.01   | 7.64     | 3.6358529166666598  |
 | M10 / Y        | NEG      | 17.22   | -10.06   | -14.060975000000001 |
-| M10 / N        | GO       | 82.78   | 8.31     | 4.306555000000001   |
+| M10 / N        | GO       | 82.78   | 8.40     | 4.404655000000002   |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
+## Will the Republican Party candidate win the 2026 Arkansas Senate election by 15%-20%?
+Contract 3343123; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |          28 |        28.81 | +71.19 / −28.81  | 2.47×         |
+| No     |          73 |        73.79 | +26.21 / −73.79  | 0.36×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | NEG      | 26.03   | -2.78    | -6.780271689315534  |
+| GB / N         | WEAK     | 73.97   | 0.19     | -3.8145283106844725 |
+| ST / Y         | WEAK     | 28.82   | 0.02     | -3.9814000000000065 |
+| ST / N         | NEG      | 71.17   | -2.61    | -6.613400000000002  |
+| MX / Y         | NEG      | 21.87   | -6.94    | -10.936608333333337 |
+| MX / N         | GO       | 78.13   | 4.34     | 0.34180833333332655 |
+| M10 / Y        | NEG      | 21.51   | -7.30    | -11.297910416666673 |
+| M10 / N        | GO       | 78.49   | 4.70     | 0.7031104166666635  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -1995,19 +2229,19 @@ Contract 3343122; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       11    |        11.39 | +88.61 / −11.39  | 7.78×         |
-| No     |       91.14 |        91.46 | +8.54 / −91.46   | 0.09×         |
+| Yes    |          11 |        11.39 | +88.61 / −11.39  | 7.78×         |
+| No     |          91 |        91.33 | +8.67 / −91.33   | 0.09×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
 | GB / Y         | GO       | 25.96   | 14.57    | 10.565290760275026  |
-| GB / N         | NEG      | 74.04   | -17.42   | -21.41985076027503  |
+| GB / N         | NEG      | 74.04   | -17.28   | -21.284490760275045 |
 | ST / Y         | GO       | 28.23   | 16.83    | 12.833399999999997  |
-| ST / N         | NEG      | 71.78   | -19.69   | -23.687959999999997 |
+| ST / N         | NEG      | 71.78   | -19.55   | -23.552600000000012 |
 | MX / Y         | GO       | 18.79   | 7.40     | 3.397722916666668   |
-| MX / N         | NEG      | 81.21   | -10.25   | -14.252282916666658 |
+| MX / N         | NEG      | 81.21   | -10.12   | -14.116922916666674 |
 | M10 / Y        | GO       | 19.87   | 8.48     | 4.4772541666666665  |
-| M10 / N        | NEG      | 80.13   | -11.33   | -15.331814166666657 |
+| M10 / N        | NEG      | 80.13   | -11.20   | -15.196454166666673 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -2034,32 +2268,6 @@ Contract 3343121; 100 shares per position.
 | MX / N         | NEG      | 89.86   | -6.05    | -10.04785625000001  |
 | M10 / Y        | GO       | 11.52   | 4.26     | 0.25975624999999836 |
 | M10 / N        | NEG      | 88.48   | -7.43    | -11.432856250000011 |
-| RTWH / Y       | N/A      | —       | —        | —                   |
-| RTWH / N       | N/A      | —       | —        | —                   |
-| DDHQ / Y       | N/A      | —       | —        | —                   |
-| DDHQ / N       | N/A      | —       | —        | —                   |
-
-RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
-DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
-
-## Will the Republican Party candidate win the 2026 Arkansas Senate election by 35%-40%?
-Contract 3343119; 100 shares per position.
-
-| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
-|:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        9.06 |         9.39 | +90.61 / −9.39   | 9.64×         |
-| No     |       96.6  |        96.73 | +3.27 / −96.73   | 0.03×         |
-
-| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
-|:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 1.46    | -7.94    | -11.394219999999997 |
-| GB / N         | WEAK     | 98.54   | 1.81     | -2.188860558732031  |
-| ST / Y         | NEG      | 0.56    | -8.84    | -11.394219999999997 |
-| ST / N         | WEAK     | 99.44   | 2.71     | -1.2875300000000032 |
-| MX / Y         | NEG      | 1.04    | -8.36    | -11.394219999999997 |
-| MX / N         | WEAK     | 98.96   | 2.23     | -1.768363333333334  |
-| M10 / Y        | NEG      | 1.25    | -8.15    | -11.394219999999997 |
-| M10 / N        | WEAK     | 98.75   | 2.02     | -1.9770091666666656 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -2100,18 +2308,18 @@ Contract 3343184; 100 shares per position.
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
 | Yes    |        21   |        21.66 | +78.34 / −21.66  | 3.62×         |
-| No     |        81.4 |        82.01 | +17.99 / −82.01  | 0.22×         |
+| No     |        81.3 |        81.91 | +18.09 / −81.91  | 0.22×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
 | GB / Y         | NEG      | 14.55   | -7.12    | -11.116565629165231 |
-| GB / N         | WEAK     | 85.45   | 3.45     | -0.5546543708347618 |
+| GB / N         | WEAK     | 85.45   | 3.54     | -0.455154370834765  |
 | ST / Y         | NEG      | 15.98   | -5.68    | -9.679224999999997  |
-| ST / N         | WEAK     | 84.02   | 2.01     | -1.991995000000002  |
+| ST / N         | WEAK     | 84.02   | 2.11     | -1.8924950000000051 |
 | MX / Y         | NEG      | 14.41   | -7.25    | -11.253287499999999 |
-| MX / N         | WEAK     | 85.59   | 3.58     | -0.4179324999999956 |
+| MX / N         | WEAK     | 85.59   | 3.68     | -0.3184324999999988 |
 | M10 / Y        | NEG      | 13.61   | -8.05    | -12.051204166666665 |
-| M10 / N        | GO       | 86.39   | 4.38     | 0.3799841666666693  |
+| M10 / N        | GO       | 86.39   | 4.48     | 0.47948416666666605 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -2125,19 +2333,19 @@ Contract 3343180; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        8.62 |         8.94 | +91.06 / −8.94   | 10.19×        |
-| No     |       95.2  |        95.38 | +4.62 / −95.38   | 0.05×         |
+| Yes    |        8.6  |         8.91 | +91.09 / −8.91   | 10.22×        |
+| No     |       93.16 |        93.42 | +6.58 / −93.42   | 0.07×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | WEAK     | 9.31    | 0.38     | -3.6224398614882136 |
-| GB / N         | NEG      | 90.69   | -4.69    | -8.691340138511805  |
-| ST / Y         | NEG      | 7.39    | -1.54    | -5.544464999999999  |
-| ST / N         | NEG      | 92.61   | -2.77    | -6.769315000000019  |
-| MX / Y         | NEG      | 8.79    | -0.15    | -4.146860833333332  |
-| MX / N         | NEG      | 91.21   | -4.17    | -8.166919166666675  |
-| M10 / Y        | WEAK     | 9.60    | 0.66     | -3.336965           |
-| M10 / N        | NEG      | 90.40   | -4.98    | -8.976815000000016  |
+| GB / Y         | WEAK     | 9.31    | 0.40     | -3.6017698614882145 |
+| GB / N         | NEG      | 90.69   | -2.73    | -6.729680138511807  |
+| ST / Y         | NEG      | 7.39    | -1.52    | -5.523795           |
+| ST / N         | NEG      | 92.61   | -0.81    | -4.807655000000022  |
+| MX / Y         | NEG      | 8.79    | -0.13    | -4.126190833333333  |
+| MX / N         | NEG      | 91.21   | -2.21    | -6.205259166666676  |
+| M10 / Y        | WEAK     | 9.60    | 0.68     | -3.316295000000001  |
+| M10 / N        | NEG      | 90.40   | -3.02    | -7.015155000000018  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -2151,19 +2359,19 @@ Contract 3343179; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        2.94 |         3.05 | +96.95 / −3.05   | 31.79×        |
-| No     |       98.45 |        98.51 | +1.49 / −98.51   | 0.02×         |
+| Yes    |        3.25 |         3.37 | +96.63 / −3.37   | 28.64×        |
+| No     |       98.5  |        98.56 | +1.44 / −98.56   | 0.01×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | WEAK     | 4.97    | 1.92     | -2.0774653067829214 |
-| GB / N         | NEG      | 95.03   | -3.48    | -7.483824693217079  |
-| ST / Y         | NEG      | 2.97    | -0.08    | -4.077415           |
-| ST / N         | NEG      | 97.03   | -1.48    | -5.483875000000005  |
-| MX / Y         | WEAK     | 4.68    | 1.63     | -2.365331666666666  |
-| MX / N         | NEG      | 95.32   | -3.20    | -7.195958333333341  |
-| M10 / Y        | WEAK     | 5.31    | 2.26     | -1.7381441666666673 |
-| M10 / N        | NEG      | 94.69   | -3.82    | -7.823145833333333  |
+| GB / Y         | WEAK     | 4.97    | 1.60     | -2.4022253067829227 |
+| GB / N         | NEG      | 95.03   | -3.53    | -7.530924693217067  |
+| ST / Y         | NEG      | 2.97    | -0.40    | -4.4021750000000015 |
+| ST / N         | NEG      | 97.03   | -1.53    | -5.530974999999994  |
+| MX / Y         | WEAK     | 4.68    | 1.31     | -2.690091666666667  |
+| MX / N         | NEG      | 95.32   | -3.24    | -7.24305833333333   |
+| M10 / Y        | WEAK     | 5.31    | 1.94     | -2.062904166666668  |
+| M10 / N        | NEG      | 94.69   | -3.87    | -7.870245833333323  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -2190,32 +2398,6 @@ Contract 3343530; 100 shares per position.
 | MX / N         | WEAK     | 79.08   | 3.33     | -0.6657812499999971 |
 | M10 / Y        | NEG      | 20.77   | -7.02    | -11.021681250000004 |
 | M10 / N        | WEAK     | 79.23   | 3.48     | -0.5167187500000003 |
-| RTWH / Y       | N/A      | —       | —        | —                   |
-| RTWH / N       | N/A      | —       | —        | —                   |
-| DDHQ / Y       | N/A      | —       | —        | —                   |
-| DDHQ / N       | N/A      | —       | —        | —                   |
-
-RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
-DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
-
-## Will the Republican Party candidate win the 2026 Iowa Senate election by 12% or more?
-Contract 3343526; 100 shares per position.
-
-| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
-|:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        3.83 |         3.98 | +96.02 / −3.98   | 24.15×        |
-| No     |       99.2  |        99.23 | +0.77 / −99.23   | 0.01×         |
-
-| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
-|:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | WEAK     | 4.79    | 0.82     | -3.1833204211686104 |
-| GB / N         | NEG      | 95.21   | -4.03    | -8.025009578831387  |
-| ST / Y         | NEG      | 2.37    | -1.61    | -5.6078399999999995 |
-| ST / N         | NEG      | 97.63   | -1.60    | -5.600489999999992  |
-| MX / Y         | NEG      | 3.96    | -0.02    | -4.01612125         |
-| MX / N         | NEG      | 96.04   | -3.19    | -7.192208749999995  |
-| M10 / Y        | WEAK     | 4.31    | 0.33     | -3.6674233333333333 |
-| M10 / N        | NEG      | 95.69   | -3.54    | -7.540906666666658  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -2255,18 +2437,18 @@ Contract 3343528; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       12.04 |        12.46 | +87.54 / −12.46  | 7.03×         |
-| No     |       90    |        90.36 | +9.64 / −90.36   | 0.11×         |
+| Yes    |          12 |        12.42 | +87.58 / −12.42  | 7.05×         |
+| No     |          90 |        90.36 | +9.64 / −90.36   | 0.11×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | WEAK     | 13.31   | 0.85     | -3.153619761911512  |
+| GB / Y         | WEAK     | 13.31   | 0.88     | -3.1157097619115124 |
 | GB / N         | NEG      | 86.69   | -3.67    | -7.6666902380884805 |
-| ST / Y         | WEAK     | 13.24   | 0.78     | -3.2165599999999976 |
+| ST / Y         | WEAK     | 13.24   | 0.82     | -3.178649999999998  |
 | ST / N         | NEG      | 86.76   | -3.60    | -7.603749999999998  |
-| MX / Y         | WEAK     | 12.81   | 0.35     | -3.6548412499999974 |
+| MX / Y         | WEAK     | 12.81   | 0.38     | -3.6169312499999986 |
 | MX / N         | NEG      | 87.19   | -3.17    | -7.165468750000005  |
-| M10 / Y        | WEAK     | 13.32   | 0.86     | -3.1356225          |
+| M10 / Y        | WEAK     | 13.32   | 0.90     | -3.0977125000000014 |
 | M10 / N        | NEG      | 86.68   | -3.68    | -7.684687499999998  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
@@ -2281,18 +2463,18 @@ Contract 3343527; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |         3.8 |         3.95 | +96.05 / −3.95   | 24.34×        |
-| No     |        97.7 |        97.79 | +2.21 / −97.79   | 0.02×         |
+| Yes    |        3.74 |         3.88 | +96.12 / −3.88   | 24.75×        |
+| No     |       97.7  |        97.79 | +2.21 / −97.79   | 0.02×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)           |
 |:---------------|:---------|:--------|:---------|:---------------------|
-| GB / Y         | WEAK     | 7.50    | 3.55     | -0.44717448117687764 |
+| GB / Y         | WEAK     | 7.50    | 3.62     | -0.38383448117687846 |
 | GB / N         | NEG      | 92.50   | -5.29    | -9.28892551882312    |
-| ST / Y         | WEAK     | 5.39    | 1.45     | -2.5524699999999996  |
+| ST / Y         | WEAK     | 5.39    | 1.51     | -2.4891300000000003  |
 | ST / N         | NEG      | 94.61   | -3.18    | -7.183629999999996   |
-| MX / Y         | WEAK     | 6.29    | 2.34     | -1.6571054166666668  |
+| MX / Y         | WEAK     | 6.29    | 2.41     | -1.5937654166666677  |
 | MX / N         | NEG      | 93.71   | -4.08    | -8.078994583333332   |
-| M10 / Y        | WEAK     | 6.71    | 2.76     | -1.2356470833333328  |
+| M10 / Y        | WEAK     | 6.71    | 2.83     | -1.1723070833333336  |
 | M10 / N        | NEG      | 93.29   | -4.50    | -8.500452916666667   |
 | RTWH / Y       | N/A      | —       | —        | —                    |
 | RTWH / N       | N/A      | —       | —        | —                    |
@@ -2308,44 +2490,18 @@ Contract 3343544; 100 shares per position.
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
 | Yes    |       10    |        10.36 | +89.64 / −10.36  | 8.65×         |
-| No     |       92.19 |        92.48 | +7.52 / −92.48   | 0.08×         |
+| No     |       94.39 |        94.6  | +5.40 / −94.60   | 0.06×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
 | GB / Y         | GO       | 22.83   | 12.47    | 8.4723771908735     |
-| GB / N         | NEG      | 77.17   | -15.31   | -19.312637190873506 |
+| GB / N         | NEG      | 77.17   | -17.43   | -21.430337190873505 |
 | ST / Y         | GO       | 22.34   | 11.98    | 7.983750000000002   |
-| ST / N         | NEG      | 77.66   | -14.82   | -18.82401           |
+| ST / N         | NEG      | 77.66   | -16.94   | -20.941710000000004 |
 | MX / Y         | GO       | 21.50   | 11.14    | 7.143958333333335   |
-| MX / N         | NEG      | 78.50   | -13.98   | -17.984218333333345 |
+| MX / N         | NEG      | 78.50   | -16.10   | -20.101918333333344 |
 | M10 / Y        | GO       | 20.08   | 9.72     | 5.71578125          |
-| M10 / N        | NEG      | 79.92   | -12.56   | -16.556041250000007 |
-| RTWH / Y       | N/A      | —       | —        | —                   |
-| RTWH / N       | N/A      | —       | —        | —                   |
-| DDHQ / Y       | N/A      | —       | —        | —                   |
-| DDHQ / N       | N/A      | —       | —        | —                   |
-
-RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
-DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
-
-## Will the Republican Party candidate win the 2026 Kansas Senate election by 15%-20%?
-Contract 3343543; 100 shares per position.
-
-| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
-|:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |           6 |         6.23 | +93.77 / −6.23   | 15.06×        |
-| No     |          97 |        97.12 | +2.88 / −97.12   | 0.03×         |
-
-| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
-|:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | WEAK     | 6.74    | 0.52     | -3.484523788900436  |
-| GB / N         | NEG      | 93.26   | -3.86    | -7.857476211099569  |
-| ST / Y         | NEG      | 4.42    | -1.81    | -5.80685            |
-| ST / N         | NEG      | 95.58   | -1.54    | -5.5351500000000105 |
-| MX / Y         | NEG      | 5.86    | -0.36    | -4.363099999999999  |
-| MX / N         | NEG      | 94.14   | -2.98    | -6.97890000000001   |
-| M10 / Y        | NEG      | 5.18    | -1.04    | -5.0428395833333335 |
-| M10 / N        | NEG      | 94.82   | -2.30    | -6.2991604166666715 |
+| M10 / N        | NEG      | 79.92   | -14.67   | -18.67374125000001  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -2359,18 +2515,18 @@ Contract 3343542; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        8.84 |         9.16 | +90.84 / −9.16   | 9.91×         |
+| Yes    |        9.78 |        10.13 | +89.87 / −10.13  | 8.88×         |
 | No     |       96.99 |        97.11 | +2.89 / −97.11   | 0.03×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 0.90    | -8.26    | -11.162139999999999 |
+| GB / Y         | NEG      | 0.90    | -9.22    | -12.12621           |
 | GB / N         | WEAK     | 99.10   | 1.99     | -2.012713824121104  |
-| ST / Y         | NEG      | 0.37    | -8.79    | -11.162139999999999 |
+| ST / Y         | NEG      | 0.37    | -9.76    | -12.12621           |
 | ST / N         | WEAK     | 99.63   | 2.52     | -1.4782100000000131 |
-| MX / Y         | NEG      | 0.89    | -8.28    | -11.162139999999999 |
+| MX / Y         | NEG      | 0.89    | -9.24    | -12.12621           |
 | MX / N         | WEAK     | 99.11   | 2.00     | -1.9956579166666821 |
-| M10 / Y        | NEG      | 0.75    | -8.41    | -11.162139999999999 |
+| M10 / Y        | NEG      | 0.75    | -9.37    | -12.12621           |
 | M10 / N        | WEAK     | 99.25   | 2.14     | -1.8622725000000173 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
@@ -2385,23 +2541,49 @@ Contract 3343541; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |          11 |        11.39 | +88.61 / −11.39  | 7.78×         |
-| No     |          95 |        95.19 | +4.81 / −95.19   | 0.05×         |
+| Yes    |       11    |        11.39 | +88.61 / −11.39  | 7.78×         |
+| No     |       94.84 |        95.04 | +4.96 / −95.04   | 0.05×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)         |
 |:---------------|:---------|:--------|:---------|:-------------------|
 | GB / Y         | NEG      | 0.05    | -11.34   | -13.3916           |
-| GB / N         | GO       | 99.95   | 4.76     | 0.7554466825398842 |
+| GB / N         | GO       | 99.95   | 4.91     | 0.9097466825398803 |
 | ST / Y         | NEG      | 0.02    | -11.37   | -13.3916           |
-| ST / N         | GO       | 99.98   | 4.79     | 0.7881249999999951 |
+| ST / N         | GO       | 99.98   | 4.94     | 0.9424249999999913 |
 | MX / Y         | NEG      | 0.07    | -11.33   | -13.3916           |
-| MX / N         | GO       | 99.93   | 4.74     | 0.7443749999999971 |
+| MX / N         | GO       | 99.93   | 4.90     | 0.8986749999999932 |
 | M10 / Y        | NEG      | 0.05    | -11.34   | -13.3916           |
-| M10 / N        | GO       | 99.95   | 4.76     | 0.7558854166666684 |
+| M10 / N        | GO       | 99.95   | 4.91     | 0.9101854166666645 |
 | RTWH / Y       | N/A      | —       | —        | —                  |
 | RTWH / N       | N/A      | —       | —        | —                  |
 | DDHQ / Y       | N/A      | —       | —        | —                  |
 | DDHQ / N       | N/A      | —       | —        | —                  |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
+## Will the Republican Party candidate win the 2026 Kansas Senate election by 30% or more?
+Contract 3343540; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |        5.32 |         5.52 | +94.48 / −5.52   | 17.12×        |
+| No     |       99.62 |        99.64 | +0.36 / −99.64   | 0.00×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | NEG      | 0.00    | -5.52    | -7.518849999999999  |
+| GB / N         | WEAK     | 100.00  | 0.36     | -3.64038218171987   |
+| ST / Y         | NEG      | 0.00    | -5.52    | -7.518849999999999  |
+| ST / N         | WEAK     | 100.00  | 0.36     | -3.6420149999999984 |
+| MX / Y         | NEG      | 0.00    | -5.52    | -7.518849999999999  |
+| MX / N         | WEAK     | 100.00  | 0.36     | -3.641337916666665  |
+| M10 / Y        | NEG      | 0.00    | -5.52    | -7.518849999999999  |
+| M10 / N        | WEAK     | 100.00  | 0.36     | -3.640556666666661  |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
 
 RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
@@ -2484,24 +2666,102 @@ Contract 3343562; 100 shares per position.
 RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 
+## Will the Republican Party candidate win the 2026 Kentucky Senate election by 25%-30%?
+Contract 3343561; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |          12 |        12.42 | +87.58 / −12.42  | 7.05×         |
+| No     |          90 |        90.36 | +9.64 / −90.36   | 0.11×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | NEG      | 2.16    | -10.26   | -14.262503765393918 |
+| GB / N         | GO       | 97.84   | 7.48     | 3.480103765393916   |
+| ST / Y         | NEG      | 1.08    | -11.34   | -14.4224            |
+| ST / N         | GO       | 98.92   | 8.56     | 4.5556249999999965  |
+| MX / Y         | NEG      | 1.81    | -10.61   | -14.4224            |
+| MX / N         | GO       | 98.19   | 7.83     | 3.8295312499999956  |
+| M10 / Y        | NEG      | 2.47    | -9.95    | -13.954066666666666 |
+| M10 / N        | GO       | 97.53   | 7.17     | 3.1716666666666615  |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
 ## Will the Republican Party candidate win the 2026 Kentucky Senate election by 30%-35%?
 Contract 3343560; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       11.28 |        11.68 | +88.32 / −11.68  | 7.56×         |
-| No     |       93.6  |        93.84 | +6.16 / −93.84   | 0.07×         |
+| Yes    |        11   |        11.39 | +88.61 / −11.39  | 7.78×         |
+| No     |        93.4 |        93.65 | +6.35 / −93.65   | 0.07×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)         |
+|:---------------|:---------|:--------|:---------|:-------------------|
+| GB / Y         | NEG      | 0.25    | -11.14   | -13.3916           |
+| GB / N         | GO       | 99.75   | 6.10     | 2.09997300432625   |
+| ST / Y         | NEG      | 0.11    | -11.28   | -13.3916           |
+| ST / N         | GO       | 99.89   | 6.24     | 2.2410199999999825 |
+| MX / Y         | NEG      | 0.28    | -11.11   | -13.3916           |
+| MX / N         | GO       | 99.72   | 6.07     | 2.0749783333333216 |
+| M10 / Y        | NEG      | 0.40    | -11.00   | -13.3916           |
+| M10 / N        | GO       | 99.60   | 5.96     | 1.9582595833333216 |
+| RTWH / Y       | N/A      | —       | —        | —                  |
+| RTWH / N       | N/A      | —       | —        | —                  |
+| DDHQ / Y       | N/A      | —       | —        | —                  |
+| DDHQ / N       | N/A      | —       | —        | —                  |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
+## Will the Republican Party candidate win the 2026 Kentucky Senate election by 35%-40%?
+Contract 3343559; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |         7.6 |         7.88 | +92.12 / −7.88   | 11.69×        |
+| No     |        93.6 |        93.84 | +6.16 / −93.84   | 0.07×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)         |
+|:---------------|:---------|:--------|:---------|:-------------------|
+| GB / Y         | NEG      | 0.02    | -7.87    | -9.880899999999999 |
+| GB / N         | GO       | 99.98   | 6.14     | 2.144529605956469  |
+| ST / Y         | NEG      | 0.01    | -7.87    | -9.880899999999999 |
+| ST / N         | GO       | 99.99   | 6.15     | 2.14787999999998   |
+| MX / Y         | NEG      | 0.03    | -7.85    | -9.880899999999999 |
+| MX / N         | GO       | 99.97   | 6.13     | 2.1285049999999806 |
+| M10 / Y        | NEG      | 0.05    | -7.83    | -9.880899999999999 |
+| M10 / N        | GO       | 99.95   | 6.11     | 2.107879999999984  |
+| RTWH / Y       | N/A      | —       | —        | —                  |
+| RTWH / N       | N/A      | —       | —        | —                  |
+| DDHQ / Y       | N/A      | —       | —        | —                  |
+| DDHQ / N       | N/A      | —       | —        | —                  |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
+## Will the Republican Party candidate win the 2026 Kentucky Senate election by 40%-45%?
+Contract 3343558; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |       10.19 |        10.56 | +89.44 / −10.56  | 8.47×         |
+| No     |       94.14 |        94.36 | +5.64 / −94.36   | 0.06×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 0.25    | -11.43   | -13.680119999999999 |
-| GB / N         | GO       | 99.75   | 5.91     | 1.9069330043262611  |
-| ST / Y         | NEG      | 0.11    | -11.57   | -13.680119999999999 |
-| ST / N         | GO       | 99.89   | 6.05     | 2.0479799999999937  |
-| MX / Y         | NEG      | 0.28    | -11.40   | -13.680119999999999 |
-| MX / N         | GO       | 99.72   | 5.88     | 1.8819383333333328  |
-| M10 / Y        | NEG      | 0.40    | -11.28   | -13.680119999999999 |
-| M10 / N        | GO       | 99.60   | 5.77     | 1.7652195833333328  |
+| GB / Y         | NEG      | 0.00    | -10.56   | -12.555999999999997 |
+| GB / N         | GO       | 100.00  | 5.64     | 1.6396541754790772  |
+| ST / Y         | NEG      | 0.01    | -10.55   | -12.555999999999997 |
+| ST / N         | GO       | 99.99   | 5.63     | 1.6339300000000057  |
+| MX / Y         | NEG      | 0.00    | -10.55   | -12.555999999999997 |
+| MX / N         | GO       | 100.00  | 5.64     | 1.637002916666663   |
+| M10 / Y        | NEG      | 0.00    | -10.55   | -12.555999999999997 |
+| M10 / N        | GO       | 100.00  | 5.64     | 1.637002916666663   |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -2515,19 +2775,19 @@ Contract 3343577; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        14.4 |        14.89 | +85.11 / −14.89  | 5.72×         |
-| No     |        94.4 |        94.61 | +5.39 / −94.61   | 0.06×         |
+| Yes    |          12 |        12.42 | +87.58 / −12.42  | 7.05×         |
+| No     |          90 |        90.36 | +9.64 / −90.36   | 0.11×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | WEAK     | 15.89   | 0.99     | -3.0060460168352954 |
-| GB / N         | NEG      | 84.11   | -10.50   | -14.496833983164702 |
-| ST / Y         | NEG      | 14.19   | -0.70    | -4.700894999999996  |
-| ST / N         | NEG      | 85.81   | -8.80    | -12.801985000000007 |
-| MX / Y         | GO       | 19.12   | 4.22     | 0.224938333333341   |
-| MX / N         | NEG      | 80.88   | -13.73   | -17.727818333333335 |
-| M10 / Y        | GO       | 19.38   | 4.49     | 0.48775083333333913 |
-| M10 / N        | NEG      | 80.62   | -13.99   | -17.99063083333333  |
+| GB / Y         | WEAK     | 15.89   | 3.46     | -0.5369260168352985 |
+| GB / N         | NEG      | 84.11   | -6.25    | -10.245473983164697 |
+| ST / Y         | WEAK     | 14.19   | 1.77     | -2.2317749999999985 |
+| ST / N         | NEG      | 85.81   | -4.55    | -8.550625           |
+| MX / Y         | GO       | 19.12   | 6.69     | 2.6940583333333383  |
+| MX / N         | NEG      | 80.88   | -9.48    | -13.47645833333333  |
+| M10 / Y        | GO       | 19.38   | 6.96     | 2.956870833333336   |
+| M10 / N        | NEG      | 80.62   | -9.74    | -13.739270833333329 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -2541,19 +2801,19 @@ Contract 3343574; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |          24 |        24.73 | +75.27 / −24.73  | 3.04×         |
-| No     |          81 |        81.62 | +18.38 / −81.62  | 0.23×         |
+| Yes    |          23 |        23.71 | +76.29 / −23.71  | 3.22×         |
+| No     |          80 |        80.64 | +19.36 / −80.64  | 0.24×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 15.11   | -9.62    | -13.620739182068327 |
-| GB / N         | WEAK     | 84.89   | 3.28     | -0.7244608179316825 |
-| ST / Y         | NEG      | 13.58   | -11.15   | -15.154600000000002 |
-| ST / N         | GO       | 86.42   | 4.81     | 0.8093999999999935  |
-| MX / Y         | NEG      | 11.59   | -13.14   | -17.139652083333335 |
-| MX / N         | GO       | 88.41   | 6.79     | 2.794452083333332   |
-| M10 / Y        | NEG      | 11.35   | -13.38   | -17.37970416666667  |
-| M10 / N        | GO       | 88.65   | 7.03     | 3.034504166666663   |
+| GB / Y         | NEG      | 15.11   | -8.60    | -12.599539182068328 |
+| GB / N         | GO       | 84.89   | 4.25     | 0.2511391820683162  |
+| ST / Y         | NEG      | 13.58   | -10.13   | -14.133400000000002 |
+| ST / N         | GO       | 86.42   | 5.78     | 1.7849999999999921  |
+| MX / Y         | NEG      | 11.59   | -12.12   | -16.118452083333334 |
+| MX / N         | GO       | 88.41   | 7.77     | 3.770052083333331   |
+| M10 / Y        | NEG      | 11.35   | -12.36   | -16.35850416666667  |
+| M10 / N        | GO       | 88.65   | 8.01     | 4.010104166666661   |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -2567,19 +2827,45 @@ Contract 3343573; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       13.6  |        14.07 | +85.93 / −14.07  | 6.11×         |
-| No     |       90.07 |        90.43 | +9.57 / −90.43   | 0.11×         |
+| Yes    |        12.4 |        12.83 | +87.17 / −12.83  | 6.79×         |
+| No     |        90   |        90.36 | +9.64 / −90.36   | 0.11×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 4.06    | -10.01   | -14.011019857489455 |
-| GB / N         | GO       | 95.94   | 5.51     | 1.5138598574894524  |
-| ST / Y         | NEG      | 2.27    | -11.79   | -15.794920000000001 |
-| ST / N         | GO       | 97.72   | 7.30     | 3.297759999999994   |
-| MX / Y         | NEG      | 2.84    | -11.23   | -15.225284583333334 |
-| MX / N         | GO       | 97.16   | 6.73     | 2.7281245833333356  |
-| M10 / Y        | NEG      | 2.76    | -11.31   | -15.305545          |
-| M10 / N        | GO       | 97.24   | 6.81     | 2.8083850000000026  |
+| GB / Y         | NEG      | 4.06    | -8.78    | -12.775499857489448 |
+| GB / N         | GO       | 95.94   | 5.58     | 1.5810998574894541  |
+| ST / Y         | NEG      | 2.27    | -10.56   | -14.559399999999997 |
+| ST / N         | GO       | 97.72   | 7.36     | 3.364999999999996   |
+| MX / Y         | NEG      | 2.84    | -9.99    | -13.989764583333331 |
+| MX / N         | GO       | 97.16   | 6.80     | 2.795364583333337   |
+| M10 / Y        | NEG      | 2.76    | -10.07   | -14.070024999999998 |
+| M10 / N        | GO       | 97.24   | 6.88     | 2.875625000000004   |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
+## Will the Republican Party candidate win the 2026 Louisiana Senate election by 25%-30%?
+Contract 3343572; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |        4.9  |         5.08 | +94.92 / −5.08   | 18.68×        |
+| No     |       99.48 |        99.5  | +0.50 / −99.50   | 0.00×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | NEG      | 0.57    | -4.51    | -7.0810200000000005 |
+| GB / N         | NEG      | 99.43   | -0.07    | -4.071820880038701  |
+| ST / Y         | NEG      | 0.21    | -4.87    | -7.0810200000000005 |
+| ST / N         | WEAK     | 99.79   | 0.29     | -3.710329999999995  |
+| MX / Y         | NEG      | 0.46    | -4.62    | -7.0810200000000005 |
+| MX / N         | WEAK     | 99.54   | 0.03     | -3.96746541666666   |
+| M10 / Y        | NEG      | 0.45    | -4.64    | -7.0810200000000005 |
+| M10 / N        | WEAK     | 99.55   | 0.05     | -3.949392499999993  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -2593,18 +2879,18 @@ Contract 3343571; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       13.49 |        13.93 | +86.07 / −13.93  | 6.18×         |
+| Yes    |        6.87 |         7.12 | +92.88 / −7.12   | 13.04×        |
 | No     |       96.47 |        96.61 | +3.39 / −96.61   | 0.04×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 0.04    | -13.89   | -15.933529999999998 |
+| GB / Y         | NEG      | 0.04    | -7.08    | -9.12099            |
 | GB / N         | WEAK     | 99.96   | 3.35     | -0.6495432294449266 |
-| ST / Y         | NEG      | 0.01    | -13.92   | -15.933529999999998 |
+| ST / Y         | NEG      | 0.01    | -7.11    | -9.12099            |
 | ST / N         | WEAK     | 99.99   | 3.38     | -0.6208500000000061 |
-| MX / Y         | NEG      | 0.05    | -13.88   | -15.933529999999998 |
+| MX / Y         | NEG      | 0.05    | -7.07    | -9.12099            |
 | MX / N         | WEAK     | 99.95   | 3.34     | -0.6616312500000054 |
-| M10 / Y        | NEG      | 0.05    | -13.88   | -15.933529999999998 |
+| M10 / Y        | NEG      | 0.05    | -7.07    | -9.12099            |
 | M10 / N        | WEAK     | 99.95   | 3.34     | -0.6607979166666667 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
@@ -2614,24 +2900,50 @@ Contract 3343571; 100 shares per position.
 RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 
+## Will the Republican Party candidate win the 2026 Louisiana Senate election by 35% or more?
+Contract 3343570; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |        9    |         9.33 | +90.67 / −9.33   | 9.72×         |
+| No     |       94.22 |        94.44 | +5.56 / −94.44   | 0.06×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)         |
+|:---------------|:---------|:--------|:---------|:-------------------|
+| GB / Y         | NEG      | 0.00    | -9.33    | -11.3276           |
+| GB / N         | GO       | 100.00  | 5.56     | 1.560655779237141  |
+| ST / Y         | NEG      | 0.00    | -9.32    | -11.3276           |
+| ST / N         | GO       | 100.00  | 5.56     | 1.559104999999994  |
+| MX / Y         | NEG      | 0.01    | -9.32    | -11.3276           |
+| MX / N         | GO       | 99.99   | 5.55     | 1.5539487500000004 |
+| M10 / Y        | NEG      | 0.01    | -9.32    | -11.3276           |
+| M10 / N        | GO       | 99.99   | 5.55     | 1.5539487500000004 |
+| RTWH / Y       | N/A      | —       | —        | —                  |
+| RTWH / N       | N/A      | —       | —        | —                  |
+| DDHQ / Y       | N/A      | —       | —        | —                  |
+| DDHQ / N       | N/A      | —       | —        | —                  |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
 ## Will the Republican Party candidate win the 2026 Louisiana Senate election by 5%-10%?
 Contract 3343576; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |          22 |        22.69 | +77.31 / −22.69  | 3.41×         |
-| No     |          82 |        82.59 | +17.41 / −82.59  | 0.21×         |
+| Yes    |        20   |        20.64 | +79.36 / −20.64  | 3.84×         |
+| No     |        82.6 |        83.17 | +16.83 / −83.17  | 0.20×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | GO       | 29.86   | 7.18     | 3.1782159723570844  |
-| GB / N         | NEG      | 70.14   | -12.46   | -16.455015972357078 |
-| ST / Y         | GO       | 32.12   | 9.44     | 5.435475            |
-| ST / N         | NEG      | 67.88   | -14.71   | -18.712275          |
-| MX / Y         | GO       | 29.45   | 6.76     | 2.7600583333333373  |
-| MX / N         | NEG      | 70.55   | -12.04   | -16.03685833333334  |
-| M10 / Y        | GO       | 29.52   | 6.84     | 2.835214583333334   |
-| M10 / N        | NEG      | 70.48   | -12.11   | -16.112014583333334 |
+| GB / Y         | GO       | 29.86   | 9.22     | 5.224615972357083   |
+| GB / N         | NEG      | 70.14   | -13.04   | -17.039415972357077 |
+| ST / Y         | GO       | 32.12   | 11.48    | 7.481874999999999   |
+| ST / N         | NEG      | 67.88   | -15.30   | -19.296674999999997 |
+| MX / Y         | GO       | 29.45   | 8.81     | 4.806458333333335   |
+| MX / N         | NEG      | 70.55   | -12.62   | -16.621258333333333 |
+| M10 / Y        | GO       | 29.52   | 8.88     | 4.881614583333333   |
+| M10 / N        | NEG      | 70.48   | -12.70   | -16.69641458333333  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -2671,18 +2983,18 @@ Contract 3343882; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       11.58 |        11.99 | +88.01 / −11.99  | 7.34×         |
+| Yes    |        7.31 |         7.57 | +92.43 / −7.57   | 12.20×        |
 | No     |       99.7  |        99.71 | +0.29 / −99.71   | 0.00×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 0.14    | -11.85   | -13.98947           |
+| GB / Y         | NEG      | 0.14    | -7.44    | -9.574660000000002  |
 | GB / N         | WEAK     | 99.86   | 0.15     | -3.8494331671657394 |
-| ST / Y         | NEG      | 0.09    | -11.90   | -13.98947           |
+| ST / Y         | NEG      | 0.09    | -7.48    | -9.574660000000002  |
 | ST / N         | WEAK     | 99.91   | 0.19     | -3.8057100000000066 |
-| MX / Y         | NEG      | 0.29    | -11.70   | -13.98947           |
+| MX / Y         | NEG      | 0.29    | -7.29    | -9.574660000000002  |
 | MX / N         | WEAK     | 99.71   | 0.00     | -3.9982620833333375 |
-| M10 / Y        | NEG      | 0.39    | -11.60   | -13.98947           |
+| M10 / Y        | NEG      | 0.39    | -7.18    | -9.574660000000002  |
 | M10 / N        | NEG      | 99.61   | -0.11    | -4.106126666666665  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
@@ -2692,23 +3004,49 @@ Contract 3343882; 100 shares per position.
 RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 
+## Will the Republican Party candidate win the 2026 Michigan Senate election by 3%-6%?
+Contract 3343885; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |       12.44 |        12.88 | +87.12 / −12.88  | 6.77×         |
+| No     |       93.26 |        93.51 | +6.49 / −93.51   | 0.07×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)           |
+|:---------------|:---------|:--------|:---------|:---------------------|
+| GB / Y         | NEG      | 4.61    | -8.27    | -12.266576231994168  |
+| GB / N         | WEAK     | 95.39   | 1.88     | -2.1195837680058394  |
+| ST / Y         | NEG      | 2.98    | -9.89    | -13.894290000000002  |
+| ST / N         | WEAK     | 97.02   | 3.51     | -0.49187000000000536 |
+| MX / Y         | NEG      | 4.59    | -8.29    | -12.288821250000002  |
+| MX / N         | WEAK     | 95.41   | 1.90     | -2.0973387499999996  |
+| M10 / Y        | NEG      | 5.81    | -7.07    | -11.066060833333333  |
+| M10 / N        | WEAK     | 94.19   | 0.68     | -3.320099166666668   |
+| RTWH / Y       | N/A      | —       | —        | —                    |
+| RTWH / N       | N/A      | —       | —        | —                    |
+| DDHQ / Y       | N/A      | —       | —        | —                    |
+| DDHQ / N       | N/A      | —       | —        | —                    |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
 ## Will the Republican Party candidate win the 2026 Michigan Senate election by 6%-9%?
 Contract 3343884; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       30.56 |        31.37 | +68.63 / −31.37  | 2.19×         |
+| Yes    |       35.04 |        35.74 | +64.26 / −35.74  | 1.80×         |
 | No     |       95.02 |        95.2  | +4.80 / −95.20   | 0.05×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)           |
 |:---------------|:---------|:--------|:---------|:---------------------|
-| GB / Y         | NEG      | 1.73    | -29.65   | -33.372840000000004  |
+| GB / Y         | NEG      | 1.73    | -34.01   | -37.73683            |
 | GB / N         | WEAK     | 98.27   | 3.07     | -0.9309383920397707  |
-| ST / Y         | NEG      | 0.97    | -30.40   | -33.372840000000004  |
+| ST / Y         | NEG      | 0.97    | -34.76   | -37.73683            |
 | ST / N         | WEAK     | 99.02   | 3.82     | -0.17946000000000908 |
-| MX / Y         | NEG      | 1.89    | -29.48   | -33.372840000000004  |
+| MX / Y         | NEG      | 1.89    | -33.85   | -37.73683            |
 | MX / N         | WEAK     | 98.11   | 2.91     | -1.0928975000000007  |
-| M10 / Y        | NEG      | 2.50    | -28.88   | -32.875496250000005  |
+| M10 / Y        | NEG      | 2.50    | -33.24   | -37.23948625         |
 | M10 / N        | WEAK     | 97.50   | 2.30     | -1.7018037500000083  |
 | RTWH / Y       | N/A      | —       | —        | —                    |
 | RTWH / N       | N/A      | —       | —        | —                    |
@@ -2723,18 +3061,18 @@ Contract 3343883; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       24.27 |        24.98 | +75.02 / −24.98  | 3.00×         |
+| Yes    |       16.29 |        16.81 | +83.19 / −16.81  | 4.95×         |
 | No     |       97.95 |        98.03 | +1.97 / −98.03   | 0.02×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 0.50    | -24.47   | -26.97835           |
+| GB / Y         | NEG      | 0.50    | -16.30   | -18.807629999999996 |
 | GB / N         | WEAK     | 99.50   | 1.46     | -2.5359847961896387 |
-| ST / Y         | NEG      | 0.24    | -24.73   | -26.97835           |
+| ST / Y         | NEG      | 0.24    | -16.56   | -18.807629999999996 |
 | ST / N         | WEAK     | 99.76   | 1.72     | -2.2763600000000106 |
-| MX / Y         | NEG      | 0.65    | -24.33   | -26.97835           |
+| MX / Y         | NEG      | 0.65    | -16.16   | -18.807629999999996 |
 | MX / N         | WEAK     | 99.36   | 1.32     | -2.677610000000008  |
-| M10 / Y        | NEG      | 0.92    | -24.06   | -26.97835           |
+| M10 / Y        | NEG      | 0.92    | -15.89   | -18.807629999999996 |
 | M10 / N        | WEAK     | 99.08   | 1.05     | -2.9507350000000154 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
@@ -2749,19 +3087,19 @@ Contract 3343937; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       14.84 |        15.35 | +84.65 / −15.35  | 5.52×         |
-| No     |       90    |        90.36 | +9.64 / −90.36   | 0.11×         |
+| Yes    |       12.44 |        12.88 | +87.12 / −12.88  | 6.77×         |
+| No     |       89    |        89.39 | +10.61 / −89.39  | 0.12×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 1.57    | -13.78   | -17.34526           |
-| GB / N         | GO       | 98.43   | 8.07     | 4.0726709864043915  |
-| ST / Y         | NEG      | 1.72    | -13.63   | -17.34526           |
-| ST / N         | GO       | 98.28   | 7.92     | 3.924375000000002   |
-| MX / Y         | NEG      | 4.40    | -10.95   | -14.94921833333333  |
-| MX / N         | GO       | 95.60   | 5.24     | 1.2439583333333282  |
-| M10 / Y        | NEG      | 3.79    | -11.56   | -15.559426666666665 |
-| M10 / N        | GO       | 96.21   | 5.85     | 1.854166666666668   |
+| GB / Y         | NEG      | 1.57    | -11.31   | -14.875599999999999 |
+| GB / N         | GO       | 98.43   | 9.04     | 5.041070986404394   |
+| ST / Y         | NEG      | 1.72    | -11.16   | -14.875599999999999 |
+| ST / N         | GO       | 98.28   | 8.89     | 4.892775000000005   |
+| MX / Y         | NEG      | 4.40    | -8.48    | -12.479558333333335 |
+| MX / N         | GO       | 95.60   | 6.21     | 2.2123583333333308  |
+| M10 / Y        | NEG      | 3.79    | -9.09    | -13.089766666666668 |
+| M10 / N        | GO       | 96.21   | 6.82     | 2.8225666666666704  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -2775,18 +3113,18 @@ Contract 3343936; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       24.58 |        25.27 | +74.73 / −25.27  | 2.96×         |
+| Yes    |       25.72 |        26.43 | +73.57 / −26.43  | 2.78×         |
 | No     |       99.3  |        99.33 | +0.67 / −99.33   | 0.01×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 0.41    | -24.86   | -27.26727           |
+| GB / Y         | NEG      | 0.41    | -26.02   | -28.43132           |
 | GB / N         | WEAK     | 99.59   | 0.26     | -3.7381065617119074 |
-| ST / Y         | NEG      | 0.53    | -24.74   | -27.26727           |
+| ST / Y         | NEG      | 0.53    | -25.90   | -28.43132           |
 | ST / N         | WEAK     | 99.47   | 0.14     | -3.8590499999999976 |
-| MX / Y         | NEG      | 1.86    | -23.40   | -27.26727           |
+| MX / Y         | NEG      | 1.86    | -24.57   | -28.43132           |
 | MX / N         | NEG      | 98.14   | -1.19    | -5.192747916666662  |
-| M10 / Y        | NEG      | 1.57    | -23.70   | -27.26727           |
+| M10 / Y        | NEG      | 1.57    | -24.86   | -28.43132           |
 | M10 / N        | NEG      | 98.43   | -0.90    | -4.8959770833333245 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
@@ -2801,19 +3139,45 @@ Contract 3343935; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       17.92 |        18.41 | +81.59 / −18.41  | 4.43×         |
-| No     |       99.8  |        99.81 | +0.19 / −99.81   | 0.00×         |
+| Yes    |       17.93 |        18.42 | +81.58 / −18.42  | 4.43×         |
+| No     |       99.9  |        99.9  | +0.10 / −99.90   | 0.00×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)         |
+|:---------------|:---------|:--------|:---------|:-------------------|
+| GB / Y         | NEG      | 0.10    | -18.32   | -20.41908          |
+| GB / N         | WEAK     | 99.90   | 0.00     | -3.999027712691716 |
+| ST / Y         | NEG      | 0.18    | -18.24   | -20.41908          |
+| ST / N         | NEG      | 99.83   | -0.08    | -4.079000000000022 |
+| MX / Y         | NEG      | 0.97    | -17.45   | -20.41908          |
+| MX / N         | NEG      | 99.03   | -0.87    | -4.873166666666684 |
+| M10 / Y        | NEG      | 0.77    | -17.65   | -20.41908          |
+| M10 / N        | NEG      | 99.23   | -0.67    | -4.670718750000013 |
+| RTWH / Y       | N/A      | —       | —        | —                  |
+| RTWH / N       | N/A      | —       | —        | —                  |
+| DDHQ / Y       | N/A      | —       | —        | —                  |
+| DDHQ / N       | N/A      | —       | —        | —                  |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
+## Will the Republican Party candidate win the 2026 New Mexico Senate election by 3% or more?
+Contract 3343965; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |         2.6 |         2.7  | +97.30 / −2.70   | 36.02×        |
+| No     |        99.4 |        99.42 | +0.58 / −99.42   | 0.01×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 0.10    | -18.31   | -20.408430000000003 |
-| GB / N         | WEAK     | 99.90   | 0.10     | -3.9030077126916973 |
-| ST / Y         | NEG      | 0.18    | -18.23   | -20.408430000000003 |
-| ST / N         | WEAK     | 99.83   | 0.02     | -3.982980000000003  |
-| MX / Y         | NEG      | 0.97    | -17.44   | -20.408430000000003 |
-| MX / N         | NEG      | 99.03   | -0.78    | -4.777146666666665  |
-| M10 / Y        | NEG      | 0.77    | -17.64   | -20.408430000000003 |
-| M10 / N        | NEG      | 99.23   | -0.57    | -4.574698749999994  |
+| GB / Y         | NEG      | 0.68    | -2.02    | -4.7013             |
+| GB / N         | NEG      | 99.32   | -0.10    | -4.101424594971103  |
+| ST / Y         | NEG      | 0.30    | -2.40    | -4.7013             |
+| ST / N         | WEAK     | 99.70   | 0.27     | -3.726985000000016  |
+| MX / Y         | NEG      | 0.67    | -2.04    | -4.7013             |
+| MX / N         | NEG      | 99.33   | -0.09    | -4.0896412500000086 |
+| M10 / Y        | NEG      | 0.68    | -2.02    | -4.7013             |
+| M10 / N        | NEG      | 99.32   | -0.10    | -4.101151666666681  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -2874,23 +3238,75 @@ Contract 3344046; 100 shares per position.
 RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
 
+## Will the Republican Party candidate win the 2026 Ohio Senate election by 12% or more?
+Contract 3344042; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |        2.45 |         2.54 | +97.46 / −2.54   | 38.44×        |
+| No     |       99.8  |        99.81 | +0.19 / −99.81   | 0.00×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | NEG      | 0.40    | -2.14    | -4.5357400000000005 |
+| GB / N         | NEG      | 99.60   | -0.21    | -4.2073421895840735 |
+| ST / Y         | NEG      | 0.17    | -2.37    | -4.5357400000000005 |
+| ST / N         | WEAK     | 99.83   | 0.02     | -3.976729999999995  |
+| MX / Y         | NEG      | 0.53    | -2.01    | -4.5357400000000005 |
+| MX / N         | NEG      | 99.47   | -0.33    | -4.3330320833333325 |
+| M10 / Y        | NEG      | 0.68    | -1.86    | -4.5357400000000005 |
+| M10 / N        | NEG      | 99.32   | -0.49    | -4.488240416666667  |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
+## Will the Republican Party candidate win the 2026 Ohio Senate election by 3%-6%?
+Contract 3344045; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |       10.35 |        10.72 | +89.28 / −10.72  | 8.33×         |
+| No     |       91.4  |        91.71 | +8.29 / −91.71   | 0.09×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | NEG      | 8.82    | -1.90    | -5.904334538015493  |
+| GB / N         | NEG      | 91.18   | -0.53    | -4.531045461984517  |
+| ST / Y         | NEG      | 6.52    | -4.21    | -8.205434999999998  |
+| ST / N         | WEAK     | 93.48   | 1.77     | -2.229945000000011  |
+| MX / Y         | NEG      | 8.73    | -1.99    | -5.994393333333331  |
+| MX / N         | NEG      | 91.27   | -0.44    | -4.44098666666668   |
+| M10 / Y        | NEG      | 10.08   | -0.64    | -4.642049583333331  |
+| M10 / N        | NEG      | 89.92   | -1.79    | -5.7933304166666755 |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
 ## Will the Republican Party candidate win the 2026 Ohio Senate election by 6%-9%?
 Contract 3344044; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        9.38 |         9.7  | +90.30 / −9.70   | 9.30×         |
+| Yes    |        9.08 |         9.4  | +90.60 / −9.40   | 9.64×         |
 | No     |       97.2  |        97.31 | +2.69 / −97.31   | 0.03×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 3.87    | -5.84    | -9.838985681132337  |
+| GB / Y         | NEG      | 3.87    | -5.53    | -9.534815681132338  |
 | GB / N         | NEG      | 96.13   | -1.17    | -5.174384318867675  |
-| ST / Y         | NEG      | 2.07    | -7.64    | -11.638885000000002 |
+| ST / Y         | NEG      | 2.07    | -7.33    | -11.334715000000003 |
 | ST / N         | WEAK     | 97.93   | 0.63     | -3.374485000000016  |
-| MX / Y         | NEG      | 3.77    | -5.94    | -9.937530833333334  |
+| MX / Y         | NEG      | 3.77    | -5.63    | -9.633360833333334  |
 | MX / N         | NEG      | 96.23   | -1.08    | -5.075839166666674  |
-| M10 / Y        | NEG      | 4.57    | -5.13    | -9.133728750000001  |
+| M10 / Y        | NEG      | 4.57    | -4.83    | -8.829558750000002  |
 | M10 / N        | NEG      | 95.43   | -1.88    | -5.879641250000011  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
@@ -2905,19 +3321,45 @@ Contract 3344070; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        16.8 |        17.36 | +82.64 / −17.36  | 4.76×         |
-| No     |        87   |        87.45 | +12.55 / −87.45  | 0.14×         |
+| Yes    |          16 |        16.54 | +83.46 / −16.54  | 5.05×         |
+| No     |          86 |        86.48 | +13.52 / −86.48  | 0.16×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 13.24   | -4.12    | -8.119126343916456  |
-| GB / N         | NEG      | 86.76   | -0.69    | -4.692313656083547  |
-| ST / Y         | NEG      | 11.28   | -6.08    | -10.08404           |
-| ST / N         | WEAK     | 88.72   | 1.27     | -2.7274000000000016 |
-| MX / Y         | NEG      | 13.55   | -3.81    | -7.811696249999998  |
-| MX / N         | NEG      | 86.45   | -1.00    | -4.999743749999997  |
-| M10 / Y        | NEG      | 11.99   | -5.37    | -9.366748333333334  |
-| M10 / N        | WEAK     | 88.01   | 0.56     | -3.4446916666666656 |
+| GB / Y         | NEG      | 13.24   | -3.30    | -7.2976863439164585 |
+| GB / N         | WEAK     | 86.76   | 0.28     | -3.7215136560835527 |
+| ST / Y         | NEG      | 11.28   | -5.26    | -9.2626             |
+| ST / N         | WEAK     | 88.72   | 2.24     | -1.7566000000000082 |
+| MX / Y         | NEG      | 13.55   | -2.99    | -6.99025625         |
+| MX / N         | NEG      | 86.45   | -0.03    | -4.0289437500000025 |
+| M10 / Y        | NEG      | 11.99   | -4.55    | -8.545308333333336  |
+| M10 / N        | WEAK     | 88.01   | 1.53     | -2.473891666666672  |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
+## Will the Republican Party candidate win the 2026 Oklahoma Senate election by 25%-30%?
+Contract 3344068; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |          31 |        31.86 | +68.14 / −31.86  | 2.14×         |
+| No     |          70 |        70.84 | +29.16 / −70.84  | 0.41×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | NEG      | 28.45   | -3.40    | -7.402257756775632  |
+| GB / N         | WEAK     | 71.55   | 0.71     | -3.2933422432243846 |
+| ST / Y         | WEAK     | 33.38   | 1.52     | -2.4774750000000068 |
+| ST / N         | NEG      | 66.62   | -4.22    | -8.218124999999999  |
+| MX / Y         | NEG      | 27.55   | -4.30    | -8.302839583333338  |
+| MX / N         | WEAK     | 72.45   | 1.61     | -2.3927604166666727 |
+| M10 / Y        | NEG      | 28.10   | -3.75    | -7.754662500000004  |
+| M10 / N        | WEAK     | 71.90   | 1.06     | -2.9409375000000066 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -2932,18 +3374,44 @@ Contract 3344067; 100 shares per position.
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
 | Yes    |        15   |        15.51 | +84.49 / −15.51  | 5.45×         |
-| No     |        89.9 |        90.25 | +9.75 / −90.25   | 0.11×         |
+| No     |        86.2 |        86.67 | +13.33 / −86.67  | 0.15×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
 | GB / Y         | WEAK     | 18.84   | 3.33     | -0.6663586198582621 |
-| GB / N         | NEG      | 81.16   | -9.10    | -13.09807138014174  |
+| GB / N         | NEG      | 81.16   | -5.52    | -9.518431380141745  |
 | ST / Y         | WEAK     | 18.41   | 2.90     | -1.1037499999999978 |
-| ST / N         | NEG      | 81.59   | -8.66    | -12.660680000000003 |
+| ST / N         | NEG      | 81.59   | -5.08    | -9.081040000000007  |
 | MX / Y         | WEAK     | 17.85   | 2.34     | -1.660677083333331  |
-| MX / N         | NEG      | 82.15   | -8.10    | -12.103752916666668 |
+| MX / N         | NEG      | 82.15   | -4.52    | -8.52411291666667   |
 | M10 / Y        | GO       | 19.57   | 4.06     | 0.05510416666666962 |
-| M10 / N        | NEG      | 80.43   | -9.82    | -13.819534166666669 |
+| M10 / N        | NEG      | 80.43   | -6.24    | -10.239894166666675 |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
+## Will the Republican Party candidate win the 2026 Oklahoma Senate election by 35%-40%?
+Contract 3344066; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |       10    |        10.36 | +89.64 / −10.36  | 8.65×         |
+| No     |       92.65 |        92.93 | +7.07 / −92.93   | 0.08×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | NEG      | 7.34    | -3.02    | -7.016327838535908  |
+| GB / N         | NEG      | 92.66   | -0.27    | -4.269522161464112  |
+| ST / Y         | NEG      | 4.98    | -5.38    | -9.385              |
+| ST / N         | WEAK     | 95.03   | 2.10     | -1.9008500000000095 |
+| MX / Y         | NEG      | 7.23    | -3.13    | -7.129375000000001  |
+| MX / N         | NEG      | 92.77   | -0.16    | -4.156475000000015  |
+| M10 / Y        | NEG      | 8.31    | -2.05    | -6.051770833333333  |
+| M10 / N        | NEG      | 91.69   | -1.23    | -5.2340791666666835 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -2957,18 +3425,18 @@ Contract 3344065; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       18.36 |        18.88 | +81.12 / −18.88  | 4.30×         |
+| Yes    |        5.64 |         5.85 | +94.15 / −5.85   | 16.09×        |
 | No     |       97.66 |        97.75 | +2.25 / −97.75   | 0.02×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 1.68    | -17.19   | -20.87708           |
+| GB / Y         | NEG      | 1.68    | -4.17    | -7.853000000000001  |
 | GB / N         | WEAK     | 98.32   | 0.57     | -3.4318948234330793 |
-| ST / Y         | NEG      | 0.81    | -18.06   | -20.87708           |
+| ST / Y         | NEG      | 0.81    | -5.04    | -7.853000000000001  |
 | ST / N         | WEAK     | 99.19   | 1.44     | -2.5623000000000062 |
-| MX / Y         | NEG      | 2.08    | -16.80   | -20.797184166666668 |
+| MX / Y         | NEG      | 2.08    | -3.77    | -7.773104166666666  |
 | MX / N         | WEAK     | 97.92   | 0.17     | -3.829695833333335  |
-| M10 / Y        | NEG      | 2.54    | -16.34   | -20.34072583333333  |
+| M10 / Y        | NEG      | 2.54    | -3.32    | -7.316645833333333  |
 | M10 / N        | NEG      | 97.46   | -0.29    | -4.286154166666667  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
@@ -2983,19 +3451,19 @@ Contract 3344064; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        11.1 |        11.46 | +88.54 / −11.46  | 7.72×         |
-| No     |        99.3 |        99.33 | +0.67 / −99.33   | 0.01×         |
+| Yes    |        3.78 |         3.93 | +96.07 / −3.93   | 24.46×        |
+| No     |       99.5  |        99.52 | +0.48 / −99.52   | 0.00×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 0.24    | -11.22   | -13.46299           |
-| GB / N         | WEAK     | 99.76   | 0.43     | -3.572493910512276  |
-| ST / Y         | NEG      | 0.16    | -11.31   | -13.46299           |
-| ST / N         | WEAK     | 99.84   | 0.52     | -3.484049999999994  |
-| MX / Y         | NEG      | 0.55    | -10.91   | -13.46299           |
-| MX / N         | WEAK     | 99.45   | 0.12     | -3.8821229166666638 |
-| M10 / Y        | NEG      | 0.70    | -10.77   | -13.46299           |
-| M10 / N        | NEG      | 99.30   | -0.03    | -4.025195833333328  |
+| GB / Y         | NEG      | 0.24    | -3.68    | -5.928180000000001  |
+| GB / N         | WEAK     | 99.76   | 0.24     | -3.7645939105122816 |
+| ST / Y         | NEG      | 0.16    | -3.77    | -5.928180000000001  |
+| ST / N         | WEAK     | 99.84   | 0.32     | -3.6761500000000003 |
+| MX / Y         | NEG      | 0.55    | -3.37    | -5.928180000000001  |
+| MX / N         | NEG      | 99.45   | -0.07    | -4.07422291666667   |
+| M10 / Y        | NEG      | 0.70    | -3.23    | -5.928180000000001  |
+| M10 / N        | NEG      | 99.30   | -0.22    | -4.217295833333335  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -3035,19 +3503,19 @@ Contract 3344124; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       16.54 |        17.09 | +82.91 / −17.09  | 4.85×         |
-| No     |       85.4  |        85.9  | +14.10 / −85.90  | 0.16×         |
+| Yes    |          16 |        16.54 | +83.46 / −16.54  | 5.05×         |
+| No     |          85 |        85.51 | +14.49 / −85.51  | 0.17×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | GO       | 29.89   | 12.80    | 8.798784716252841   |
-| GB / N         | NEG      | 70.11   | -15.79   | -19.78950471625285  |
-| ST / Y         | GO       | 34.44   | 17.35    | 13.345419999999995  |
-| ST / N         | NEG      | 65.56   | -20.34   | -24.33614000000001  |
-| MX / Y         | GO       | 27.45   | 10.36    | 6.361357499999994   |
-| MX / N         | NEG      | 72.55   | -13.35   | -17.352077500000007 |
-| M10 / Y        | GO       | 28.49   | 11.40    | 7.397294999999996   |
-| M10 / N        | NEG      | 71.51   | -14.39   | -18.388015000000003 |
+| GB / Y         | GO       | 29.89   | 13.35    | 9.353264716252843   |
+| GB / N         | NEG      | 70.11   | -15.40   | -19.40086471625285  |
+| ST / Y         | GO       | 34.44   | 17.90    | 13.899899999999995  |
+| ST / N         | NEG      | 65.56   | -19.95   | -23.947500000000012 |
+| MX / Y         | GO       | 27.45   | 10.92    | 6.915837499999997   |
+| MX / N         | NEG      | 72.55   | -12.96   | -16.963437500000012 |
+| M10 / Y        | GO       | 28.49   | 11.95    | 7.951774999999997   |
+| M10 / N        | NEG      | 71.51   | -14.00   | -17.999375000000008 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -3087,18 +3555,18 @@ Contract 3344122; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        5.81 |         6.02 | +93.98 / −6.02   | 15.60×        |
+| Yes    |        5.9  |         6.12 | +93.88 / −6.12   | 15.35×        |
 | No     |       97.46 |        97.56 | +2.44 / −97.56   | 0.03×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)         |
 |:---------------|:---------|:--------|:---------|:-------------------|
-| GB / Y         | NEG      | 4.04    | -1.99    | -5.988424989445572 |
+| GB / Y         | NEG      | 4.04    | -2.08    | -6.082084989445572 |
 | GB / N         | NEG      | 95.96   | -1.60    | -5.596005010554439 |
-| ST / Y         | NEG      | 2.08    | -3.94    | -7.939565          |
+| ST / Y         | NEG      | 2.08    | -4.03    | -8.033225          |
 | ST / N         | WEAK     | 97.92   | 0.36     | -3.644865000000019 |
-| MX / Y         | NEG      | 2.92    | -3.10    | -7.104617083333334 |
+| MX / Y         | NEG      | 2.92    | -3.20    | -7.198277083333334 |
 | MX / N         | NEG      | 97.08   | -0.48    | -4.479812916666681 |
-| M10 / Y        | NEG      | 3.35    | -2.68    | -6.675762916666667 |
+| M10 / Y        | NEG      | 3.35    | -2.77    | -6.769422916666667 |
 | M10 / N        | NEG      | 96.65   | -0.91    | -4.908667083333351 |
 | RTWH / Y       | N/A      | —       | —        | —                  |
 | RTWH / N       | N/A      | —       | —        | —                  |
@@ -3113,19 +3581,19 @@ Contract 3344121; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        5.19 |         5.39 | +94.61 / −5.39   | 17.57×        |
-| No     |       99.3  |        99.33 | +0.67 / −99.33   | 0.01×         |
+| Yes    |        5.28 |         5.48 | +94.52 / −5.48   | 17.25×        |
+| No     |       99.47 |        99.49 | +0.51 / −99.49   | 0.01×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 0.54    | -4.84    | -7.38626            |
-| GB / N         | WEAK     | 99.46   | 0.13     | -3.87165334813957   |
-| ST / Y         | NEG      | 0.26    | -5.13    | -7.38626            |
-| ST / N         | WEAK     | 99.74   | 0.41     | -3.5871749999999865 |
-| MX / Y         | NEG      | 0.44    | -4.94    | -7.38626            |
-| MX / N         | WEAK     | 99.56   | 0.23     | -3.7695187499999894 |
-| M10 / Y        | NEG      | 0.51    | -4.88    | -7.38626            |
-| M10 / N        | WEAK     | 99.49   | 0.16     | -3.837174999999993  |
+| GB / Y         | NEG      | 0.54    | -4.94    | -7.479430000000001  |
+| GB / N         | NEG      | 99.46   | -0.03    | -4.032113348139577  |
+| ST / Y         | NEG      | 0.26    | -5.22    | -7.479430000000001  |
+| ST / N         | WEAK     | 99.74   | 0.25     | -3.7476349999999936 |
+| MX / Y         | NEG      | 0.44    | -5.04    | -7.479430000000001  |
+| MX / N         | WEAK     | 99.56   | 0.07     | -3.929978749999996  |
+| M10 / Y        | NEG      | 0.51    | -4.97    | -7.479430000000001  |
+| M10 / N        | WEAK     | 99.49   | 0.00     | -3.997635           |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -3139,45 +3607,19 @@ Contract 3344120; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |         6.6 |         6.84 | +93.16 / −6.84   | 13.62×        |
+| Yes    |         5.7 |         5.92 | +94.08 / −5.92   | 15.90×        |
 | No     |        99.5 |        99.52 | +0.48 / −99.52   | 0.00×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 0.04    | -6.80    | -8.83952            |
+| GB / Y         | NEG      | 0.04    | -5.88    | -7.9183             |
 | GB / N         | WEAK     | 99.96   | 0.44     | -3.558586705563871  |
-| ST / Y         | NEG      | 0.02    | -6.82    | -8.83952            |
+| ST / Y         | NEG      | 0.02    | -5.90    | -7.9183             |
 | ST / N         | WEAK     | 99.98   | 0.46     | -3.535524999999995  |
-| MX / Y         | NEG      | 0.06    | -6.78    | -8.83952            |
+| MX / Y         | NEG      | 0.06    | -5.86    | -7.9183             |
 | MX / N         | WEAK     | 99.94   | 0.42     | -3.577347916666662  |
-| M10 / Y        | NEG      | 0.08    | -6.76    | -8.83952            |
+| M10 / Y        | NEG      | 0.08    | -5.84    | -7.9183             |
 | M10 / N        | WEAK     | 99.92   | 0.40     | -3.5969312500000017 |
-| RTWH / Y       | N/A      | —       | —        | —                   |
-| RTWH / N       | N/A      | —       | —        | —                   |
-| DDHQ / Y       | N/A      | —       | —        | —                   |
-| DDHQ / N       | N/A      | —       | —        | —                   |
-
-RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
-DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
-
-## Will the Republican Party candidate win the 2026 Tennessee Senate election by 0%-10%?
-Contract 3344156; 100 shares per position.
-
-| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
-|:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        8.43 |         8.73 | +91.27 / −8.73   | 10.45×        |
-| No     |       97.58 |        97.67 | +2.33 / −97.67   | 0.02×         |
-
-| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
-|:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 2.70    | -6.03    | -10.034247339056023 |
-| GB / N         | NEG      | 97.30   | -0.37    | -4.371882660943982  |
-| ST / Y         | NEG      | 1.44    | -7.29    | -10.731929999999998 |
-| ST / N         | WEAK     | 98.56   | 0.89     | -3.1117000000000066 |
-| MX / Y         | NEG      | 2.79    | -5.95    | -9.946044583333332  |
-| MX / N         | NEG      | 97.21   | -0.46    | -4.46008541666667   |
-| M10 / Y        | NEG      | 1.77    | -6.96    | -10.731929999999998 |
-| M10 / N        | WEAK     | 98.23   | 0.55     | -3.447325000000001  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -3217,18 +3659,18 @@ Contract 3344154; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       15.13 |        15.65 | +84.35 / −15.65  | 5.39×         |
-| No     |       86    |        86.48 | +13.52 / −86.48  | 0.16×         |
+| Yes    |          15 |        15.51 | +84.49 / −15.51  | 5.45×         |
+| No     |          86 |        86.48 | +13.52 / −86.48  | 0.16×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | GO       | 22.61   | 6.96     | 2.963025627934895   |
+| GB / Y         | GO       | 22.61   | 7.10     | 3.1015456279348954  |
 | GB / N         | NEG      | 77.39   | -9.09    | -13.093145627934899 |
-| ST / Y         | GO       | 24.98   | 9.33     | 5.332730000000002   |
+| ST / Y         | GO       | 24.98   | 9.47     | 5.471250000000002   |
 | ST / N         | NEG      | 75.02   | -11.46   | -15.462850000000008 |
-| MX / Y         | GO       | 22.08   | 6.43     | 2.4266362500000027  |
+| MX / Y         | GO       | 22.08   | 6.57     | 2.565156250000003   |
 | MX / N         | NEG      | 77.92   | -8.56    | -12.556756250000012 |
-| M10 / Y        | WEAK     | 18.37   | 2.72     | -1.2810720833333318 |
+| M10 / Y        | WEAK     | 18.37   | 2.86     | -1.1425520833333314 |
 | M10 / N        | NEG      | 81.63   | -4.85    | -8.849047916666674  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
@@ -3269,18 +3711,18 @@ Contract 3344148; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        6.93 |         7.18 | +92.82 / −7.18   | 12.93×        |
+| Yes    |        6.03 |         6.25 | +93.75 / −6.25   | 15.00×        |
 | No     |       99.6  |        99.62 | +0.38 / −99.62   | 0.00×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 0.03    | -7.15    | -9.177349999999999  |
+| GB / Y         | NEG      | 0.03    | -6.22    | -8.250960000000001  |
 | GB / N         | WEAK     | 99.97   | 0.36     | -3.6426365741092814 |
-| ST / Y         | NEG      | 0.03    | -7.15    | -9.177349999999999  |
+| ST / Y         | NEG      | 0.03    | -6.22    | -8.250960000000001  |
 | ST / N         | WEAK     | 99.97   | 0.35     | -3.647189999999989  |
-| MX / Y         | NEG      | 0.11    | -7.07    | -9.177349999999999  |
+| MX / Y         | NEG      | 0.11    | -6.14    | -8.250960000000001  |
 | MX / N         | WEAK     | 99.89   | 0.27     | -3.727971249999984  |
-| M10 / Y        | NEG      | 0.21    | -6.97    | -9.177349999999999  |
+| M10 / Y        | NEG      | 0.21    | -6.04    | -8.250960000000001  |
 | M10 / N        | WEAK     | 99.79   | 0.17     | -3.8272941666666505 |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
@@ -3347,19 +3789,45 @@ Contract 3344139; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       11.46 |        11.87 | +88.13 / −11.87  | 7.43×         |
-| No     |       89.2  |        89.59 | +10.41 / −89.59  | 0.12×         |
+| Yes    |       11.38 |        11.78 | +88.22 / −11.78  | 7.49×         |
+| No     |       89    |        89.39 | +10.61 / −89.39  | 0.12×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | WEAK     | 13.56   | 1.69     | -2.30779477307627   |
-| GB / N         | NEG      | 86.44   | -3.14    | -7.143405226923738  |
-| ST / Y         | WEAK     | 12.10   | 0.24     | -3.762735000000002  |
-| ST / N         | NEG      | 87.90   | -1.69    | -5.6884650000000105 |
-| MX / Y         | WEAK     | 13.83   | 1.96     | -2.038203750000002  |
-| MX / N         | NEG      | 86.17   | -3.41    | -7.4129962500000035 |
-| M10 / Y        | WEAK     | 13.69   | 1.82     | -2.1751308333333346 |
-| M10 / N        | NEG      | 86.31   | -3.28    | -7.276069166666677  |
+| GB / Y         | WEAK     | 13.56   | 1.77     | -2.225324773076269  |
+| GB / N         | NEG      | 86.44   | -2.95    | -6.949665226923729  |
+| ST / Y         | WEAK     | 12.10   | 0.32     | -3.6802650000000003 |
+| ST / N         | NEG      | 87.90   | -1.49    | -5.494725000000001  |
+| MX / Y         | WEAK     | 13.83   | 2.04     | -1.955733750000001  |
+| MX / N         | NEG      | 86.17   | -3.22    | -7.2192562499999955 |
+| M10 / Y        | WEAK     | 13.69   | 1.91     | -2.0926608333333334 |
+| M10 / N        | NEG      | 86.31   | -3.08    | -7.082329166666669  |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
+## Will the Republican Party candidate win the 2026 Texas Senate election by 6%-9%?
+Contract 3344138; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |        5.44 |         5.65 | +94.35 / −5.65   | 16.71×        |
+| No     |       95.48 |        95.65 | +4.35 / −95.65   | 0.05×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | WEAK     | 5.87    | 0.23     | -3.7731804110406095 |
+| GB / N         | NEG      | 94.13   | -1.52    | -5.523529588959386  |
+| ST / Y         | NEG      | 3.89    | -1.76    | -5.758259999999998  |
+| ST / N         | WEAK     | 96.11   | 0.46     | -3.538449999999993  |
+| MX / Y         | NEG      | 5.55    | -0.10    | -4.098884999999999  |
+| MX / N         | NEG      | 94.45   | -1.20    | -5.197824999999989  |
+| M10 / Y        | NEG      | 5.47    | -0.17    | -4.173884999999999  |
+| M10 / N        | NEG      | 94.53   | -1.12    | -5.122824999999997  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -3373,19 +3841,45 @@ Contract 3344137; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |         5.6 |         5.81 | +94.19 / −5.81   | 16.22×        |
-| No     |        98.3 |        98.37 | +1.63 / −98.37   | 0.02×         |
+| Yes    |        9.84 |        10.17 | +89.83 / −10.17  | 8.83×         |
+| No     |       98.3  |        98.37 | +1.63 / −98.37   | 0.02×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 1.76    | -4.05    | -7.806040000000001  |
+| GB / Y         | NEG      | 1.76    | -8.41    | -12.1748            |
 | GB / N         | NEG      | 98.24   | -0.13    | -4.126846062794343  |
-| ST / Y         | NEG      | 0.80    | -5.01    | -7.806040000000001  |
+| ST / Y         | NEG      | 0.80    | -9.38    | -12.1748            |
 | ST / N         | WEAK     | 99.20   | 0.84     | -3.1637150000000003 |
-| MX / Y         | NEG      | 1.61    | -4.20    | -7.806040000000001  |
+| MX / Y         | NEG      | 1.61    | -8.57    | -12.1748            |
 | MX / N         | WEAK     | 98.39   | 0.03     | -3.9746524999999973 |
-| M10 / Y        | NEG      | 1.57    | -4.23    | -7.806040000000001  |
+| M10 / Y        | NEG      | 1.57    | -8.60    | -12.1748            |
 | M10 / N        | WEAK     | 98.43   | 0.06     | -3.9417358333333374 |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | N/A      | —       | —        | —                   |
+| DDHQ / N       | N/A      | —       | —        | —                   |
+
+RTWH (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+DDHQ (2026-09-25): Publisher has no full margin or joint-state distribution for this contract; no Gaussian approximation is substituted.
+
+## Will the Republican Party candidate win the 2026 Virginia Senate election by 3% or more?
+Contract 3344160; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |        0.72 |         0.75 | +99.25 / −0.75   | 132.96×       |
+| No     |       99.8  |        99.81 | +0.19 / −99.81   | 0.00×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | NEG      | 0.15    | -0.59    | -2.74648            |
+| GB / N         | WEAK     | 99.85   | 0.04     | -3.9620026260141827 |
+| ST / Y         | NEG      | 0.26    | -0.48    | -2.74648            |
+| ST / N         | NEG      | 99.74   | -0.07    | -4.070479999999998  |
+| MX / Y         | NEG      | 0.69    | -0.05    | -2.74648            |
+| MX / N         | NEG      | 99.31   | -0.50    | -4.502407083333337  |
+| M10 / Y        | NEG      | 0.68    | -0.07    | -2.74648            |
+| M10 / N        | NEG      | 99.32   | -0.49    | -4.486209166666666  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
 | DDHQ / Y       | N/A      | —       | —        | —                   |
@@ -3451,23 +3945,23 @@ Contract 943829; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |         0.7 |         0.73 | +99.27 / −0.73   | 136.40×       |
-| No     |        99.6 |        99.62 | +0.38 / −99.62   | 0.00×         |
+| Yes    |         0.9 |         0.94 | +99.06 / −0.94   | 105.87×       |
+| No     |        99.5 |        99.52 | +0.48 / −99.52   | 0.00×         |
 
 | Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
 |:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 0.00    | -0.73    | -2.7278000000000002 |
-| GB / N         | WEAK     | 100.00  | 0.38     | -3.615939999999984  |
-| ST / Y         | NEG      | 0.00    | -0.73    | -2.7278000000000002 |
-| ST / N         | WEAK     | 100.00  | 0.38     | -3.615939999999984  |
-| MX / Y         | NEG      | 0.00    | -0.73    | -2.7278000000000002 |
-| MX / N         | WEAK     | 100.00  | 0.38     | -3.615939999999984  |
-| M10 / Y        | NEG      | 0.00    | -0.73    | -2.7278000000000002 |
-| M10 / N        | WEAK     | 100.00  | 0.38     | -3.615939999999984  |
+| GB / Y         | NEG      | 0.00    | -0.94    | -2.9356799999999996 |
+| GB / N         | WEAK     | 100.00  | 0.48     | -3.519899999999998  |
+| ST / Y         | NEG      | 0.00    | -0.94    | -2.9356799999999996 |
+| ST / N         | WEAK     | 100.00  | 0.48     | -3.519899999999998  |
+| MX / Y         | NEG      | 0.00    | -0.94    | -2.9356799999999996 |
+| MX / N         | WEAK     | 100.00  | 0.48     | -3.519899999999998  |
+| M10 / Y        | NEG      | 0.00    | -0.94    | -2.9356799999999996 |
+| M10 / N        | WEAK     | 100.00  | 0.48     | -3.519899999999998  |
 | RTWH / Y       | N/A      | —       | —        | —                   |
 | RTWH / N       | N/A      | —       | —        | —                   |
-| DDHQ / Y       | WEAK     | 3.09    | 2.36     | -1.6420000000000003 |
-| DDHQ / N       | NEG      | 96.91   | -2.70    | -6.701739999999989  |
+| DDHQ / Y       | WEAK     | 3.09    | 2.15     | -1.8498800000000002 |
+| DDHQ / N       | NEG      | 96.91   | -2.61    | -6.605700000000002  |
 
 RTWH (2026-09-25): Publisher supplies no seat-count distribution; expected seats cannot price this contract.
 DDHQ (2026-09-25): Conditional on publisher caucus/seat accounting matching settlement; no joint state simulations are available. DDHQ incorporates market inputs; this is not independent corroboration of market prices. Published rounding is retained; equal endpoints represent one estimate, not certainty.
@@ -3628,28 +4122,80 @@ Contract 943825; 100 shares per position.
 RTWH (2026-09-25): Publisher supplies no seat-count distribution; expected seats cannot price this contract.
 DDHQ (2026-09-25): Conditional on publisher caucus/seat accounting matching settlement; no joint state simulations are available. DDHQ incorporates market inputs; this is not independent corroboration of market prices. Published rounding is retained; equal endpoints represent one estimate, not certainty.
 
+## Will the Republican Party hold exactly 54 Senate seats after the 2026 midterm elections?
+Contract 943826; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |        2.51 |         2.61 | +97.39 / −2.61   | 37.31×        |
+| No     |       98.46 |        98.52 | +1.48 / −98.52   | 0.02×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)         |
+|:---------------|:---------|:--------|:---------|:-------------------|
+| GB / Y         | NEG      | 0.27    | -2.34    | -4.60999           |
+| GB / N         | WEAK     | 99.73   | 1.21     | -2.790649999999994 |
+| ST / Y         | NEG      | 0.13    | -2.48    | -4.60999           |
+| ST / N         | WEAK     | 99.87   | 1.35     | -2.648774999999992 |
+| MX / Y         | NEG      | 0.23    | -2.38    | -4.60999           |
+| MX / N         | WEAK     | 99.77   | 1.25     | -2.745910416666641 |
+| M10 / Y        | NEG      | 0.29    | -2.32    | -4.60999           |
+| M10 / N        | WEAK     | 99.71   | 1.19     | -2.810597916666635 |
+| RTWH / Y       | N/A      | —       | —        | —                  |
+| RTWH / N       | N/A      | —       | —        | —                  |
+| DDHQ / Y       | WEAK     | 4.72    | 2.11     | -1.88789           |
+| DDHQ / N       | NEG      | 95.28   | -3.24    | -7.242749999999988 |
+
+RTWH (2026-09-25): Publisher supplies no seat-count distribution; expected seats cannot price this contract.
+DDHQ (2026-09-25): Conditional on publisher caucus/seat accounting matching settlement; no joint state simulations are available. DDHQ incorporates market inputs; this is not independent corroboration of market prices. Published rounding is retained; equal endpoints represent one estimate, not certainty.
+
+## Will the Republican Party hold exactly 55 Senate seats after the 2026 midterm elections?
+Contract 943827; 100 shares per position.
+
+| Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
+|:-------|------------:|-------------:|:-----------------|:--------------|
+| Yes    |         0.9 |         0.94 | +99.06 / −0.94   | 105.87×       |
+| No     |        99.8 |        99.81 | +0.19 / −99.81   | 0.00×         |
+
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
+|:---------------|:---------|:--------|:---------|:--------------------|
+| GB / Y         | NEG      | 0.02    | -0.92    | -2.9356799999999996 |
+| GB / N         | WEAK     | 99.98   | 0.17     | -3.827979999999998  |
+| ST / Y         | NEG      | 0.03    | -0.91    | -2.9356799999999996 |
+| ST / N         | WEAK     | 99.98   | 0.17     | -3.8329799999999974 |
+| MX / Y         | NEG      | 0.03    | -0.91    | -2.9356799999999996 |
+| MX / N         | WEAK     | 99.97   | 0.17     | -3.8348029166666686 |
+| M10 / Y        | NEG      | 0.05    | -0.89    | -2.9356799999999996 |
+| M10 / N        | WEAK     | 99.95   | 0.14     | -3.8551154166666657 |
+| RTWH / Y       | N/A      | —       | —        | —                   |
+| RTWH / N       | N/A      | —       | —        | —                   |
+| DDHQ / Y       | WEAK     | 3.32    | 2.38     | -1.6194800000000003 |
+| DDHQ / N       | NEG      | 96.68   | -3.12    | -7.124180000000003  |
+
+RTWH (2026-09-25): Publisher supplies no seat-count distribution; expected seats cannot price this contract.
+DDHQ (2026-09-25): Conditional on publisher caucus/seat accounting matching settlement; no joint state simulations are available. DDHQ incorporates market inputs; this is not independent corroboration of market prices. Published rounding is retained; equal endpoints represent one estimate, not certainty.
+
 ## Will the Republican Party hold exactly 56 Senate seats after the 2026 midterm elections?
 Contract 943828; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |         0.3 |         0.31 | +99.69 / −0.31   | 319.55×       |
-| No     |        99.9 |        99.9  | +0.10 / −99.90   | 0.00×         |
+| Yes    |        0.3  |         0.31 | +99.69 / −0.31   | 319.55×       |
+| No     |       99.89 |        99.89 | +0.11 / −99.89   | 0.00×         |
 
-| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)          |
-|:---------------|:---------|:--------|:---------|:--------------------|
-| GB / Y         | NEG      | 0.00    | -0.31    | -2.31196            |
-| GB / N         | WEAK     | 100.00  | 0.10     | -3.9040000000000186 |
-| ST / Y         | NEG      | 0.00    | -0.31    | -2.31196            |
-| ST / N         | WEAK     | 100.00  | 0.10     | -3.9040000000000186 |
-| MX / Y         | NEG      | 0.00    | -0.31    | -2.31196            |
-| MX / N         | WEAK     | 100.00  | 0.09     | -3.9056666666666846 |
-| M10 / Y        | NEG      | 0.00    | -0.31    | -2.31196            |
-| M10 / N        | WEAK     | 100.00  | 0.09     | -3.9081145833333553 |
-| RTWH / Y       | N/A      | —       | —        | —                   |
-| RTWH / N       | N/A      | —       | —        | —                   |
-| DDHQ / Y       | WEAK     | 2.22    | 1.91     | -2.09476            |
-| DDHQ / N       | NEG      | 97.78   | -2.12    | -6.121200000000016  |
+| Model / side   | Status   | P (%)   | EV ($)   | Stress ($)         |
+|:---------------|:---------|:--------|:---------|:-------------------|
+| GB / Y         | NEG      | 0.00    | -0.31    | -2.31196           |
+| GB / N         | WEAK     | 100.00  | 0.11     | -3.894390000000003 |
+| ST / Y         | NEG      | 0.00    | -0.31    | -2.31196           |
+| ST / N         | WEAK     | 100.00  | 0.11     | -3.894390000000003 |
+| MX / Y         | NEG      | 0.00    | -0.31    | -2.31196           |
+| MX / N         | WEAK     | 100.00  | 0.10     | -3.896056666666669 |
+| M10 / Y        | NEG      | 0.00    | -0.31    | -2.31196           |
+| M10 / N        | WEAK     | 100.00  | 0.10     | -3.89850458333334  |
+| RTWH / Y       | N/A      | —       | —        | —                  |
+| RTWH / N       | N/A      | —       | —        | —                  |
+| DDHQ / Y       | WEAK     | 2.22    | 1.91     | -2.09476           |
+| DDHQ / N       | NEG      | 97.78   | -2.11    | -6.11159           |
 
 RTWH (2026-09-25): Publisher supplies no seat-count distribution; expected seats cannot price this contract.
 DDHQ (2026-09-25): Conditional on publisher caucus/seat accounting matching settlement; no joint state simulations are available. DDHQ incorporates market inputs; this is not independent corroboration of market prices. Published rounding is retained; equal endpoints represent one estimate, not certainty.
@@ -3659,23 +4205,23 @@ Contract 630628; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       99.18 |        99.21 | +0.79 / −99.21   | 0.01×         |
-| No     |        4.8  |         4.98 | +95.02 / −4.98   | 19.08×        |
+| Yes    |       98.56 |        98.62 | +1.38 / −98.62   | 0.01×         |
+| No     |        4.96 |         5.15 | +94.85 / −5.15   | 18.41×        |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
-| GB / Y         | WEAK     |   99.94 |     0.73 |        -3.27 |
-| GB / N         | NEG      |    0.06 |    -4.92 |        -6.98 |
-| ST / Y         | WEAK     |   99.85 |     0.64 |        -3.36 |
-| ST / N         | NEG      |    0.15 |    -4.83 |        -6.98 |
-| MX / Y         | NEG      |   98.46 |    -0.75 |        -4.75 |
-| MX / N         | NEG      |    1.54 |    -3.45 |        -6.98 |
-| M10 / Y        | NEG      |   98.54 |    -0.67 |        -4.67 |
-| M10 / N        | NEG      |    1.46 |    -3.52 |        -6.98 |
-| RTWH / Y       | NEG      |   98.90 |    -0.31 |        -4.31 |
-| RTWH / N       | NEG      |    1.10 |    -3.88 |        -6.98 |
-| DDHQ / Y       | NEG      |   95.00 |    -4.21 |        -8.21 |
-| DDHQ / N       | WEAK     |    5.00 |     0.02 |        -3.98 |
+| GB / Y         | WEAK     |   99.94 |     1.32 |        -2.68 |
+| GB / N         | NEG      |    0.06 |    -5.09 |        -7.15 |
+| ST / Y         | WEAK     |   99.85 |     1.23 |        -2.77 |
+| ST / N         | NEG      |    0.15 |    -5.00 |        -7.15 |
+| MX / Y         | NEG      |   98.46 |    -0.15 |        -4.15 |
+| MX / N         | NEG      |    1.54 |    -3.62 |        -7.15 |
+| M10 / Y        | NEG      |   98.54 |    -0.08 |        -4.08 |
+| M10 / N        | NEG      |    1.46 |    -3.69 |        -7.15 |
+| RTWH / Y       | WEAK     |   98.90 |     0.28 |        -3.72 |
+| RTWH / N       | NEG      |    1.10 |    -4.05 |        -7.15 |
+| DDHQ / Y       | NEG      |   95.00 |    -3.62 |        -7.62 |
+| DDHQ / N       | NEG      |    5.00 |    -0.15 |        -4.15 |
 
 RTWH (2026-09-25): Final-election publisher probability; current candidate and contract rules must agree. Published rounding is retained; equal endpoints represent one estimate, not certainty.
 DDHQ (2026-09-25): Final-election publisher probability; current candidate and contract rules must agree. DDHQ uses 25% market inputs for this race. Published rounding is retained; equal endpoints represent one estimate, not certainty.
@@ -3685,22 +4231,22 @@ Contract 630654; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       95.31 |        95.49 | +4.51 / −95.49   | 0.05×         |
-| No     |        5.9  |         6.12 | +93.88 / −6.12   | 15.33×        |
+| Yes    |        95.5 |        95.68 | +4.32 / −95.68   | 0.05×         |
+| No     |         5.9 |         6.12 | +93.88 / −6.12   | 15.33×        |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
-| GB / Y         | GO       |   99.76 |     4.27 |         0.27 |
+| GB / Y         | GO       |   99.76 |     4.08 |         0.08 |
 | GB / N         | NEG      |    0.24 |    -5.88 |        -8.12 |
-| ST / Y         | WEAK     |   99.21 |     3.72 |        -0.28 |
+| ST / Y         | WEAK     |   99.21 |     3.54 |        -0.46 |
 | ST / N         | NEG      |    0.79 |    -5.33 |        -8.12 |
-| MX / Y         | NEG      |   93.36 |    -2.13 |        -6.13 |
+| MX / Y         | NEG      |   93.36 |    -2.31 |        -6.31 |
 | MX / N         | WEAK     |    6.64 |     0.51 |        -3.49 |
-| M10 / Y        | NEG      |   94.22 |    -1.27 |        -5.27 |
+| M10 / Y        | NEG      |   94.22 |    -1.45 |        -5.45 |
 | M10 / N        | NEG      |    5.78 |    -0.35 |        -4.35 |
-| RTWH / Y       | WEAK     |   98.00 |     2.51 |        -1.49 |
+| RTWH / Y       | WEAK     |   98.00 |     2.32 |        -1.68 |
 | RTWH / N       | NEG      |    2.00 |    -4.12 |        -8.12 |
-| DDHQ / Y       | WEAK     |   96.00 |     0.51 |        -3.49 |
+| DDHQ / Y       | WEAK     |   96.00 |     0.32 |        -3.68 |
 | DDHQ / N       | NEG      |    4.00 |    -2.12 |        -6.12 |
 
 RTWH (2026-09-25): Final-election publisher probability; current candidate and contract rules must agree. Published rounding is retained; equal endpoints represent one estimate, not certainty.
@@ -3738,22 +4284,22 @@ Contract 630680; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        2.04 |         2.12 | +97.88 / −2.12   | 46.17×        |
+| Yes    |        2    |         2.08 | +97.92 / −2.08   | 47.11×        |
 | No     |       99.43 |        99.46 | +0.54 / −99.46   | 0.01×         |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
-| GB / Y         | NEG*     |    0.05 |    -2.07 |        -4.12 |
+| GB / Y         | NEG*     |    0.05 |    -2.03 |        -4.08 |
 | GB / N         | WEAK*    |   99.95 |     0.49 |        -3.51 |
-| ST / Y         | NEG*     |    0.38 |    -1.74 |        -4.12 |
+| ST / Y         | NEG*     |    0.38 |    -1.70 |        -4.08 |
 | ST / N         | WEAK*    |   99.62 |     0.17 |        -3.83 |
-| MX / Y         | NEG*     |    0.43 |    -1.69 |        -4.12 |
+| MX / Y         | NEG*     |    0.43 |    -1.65 |        -4.08 |
 | MX / N         | WEAK*    |   99.57 |     0.11 |        -3.89 |
-| M10 / Y        | NEG*     |    0.54 |    -1.58 |        -4.12 |
+| M10 / Y        | NEG*     |    0.54 |    -1.54 |        -4.08 |
 | M10 / N        | WEAK*    |   99.46 |     0.00 |        -4.00 |
-| RTWH / Y       | NEG      |    2.00 |    -0.12 |        -4.12 |
+| RTWH / Y       | NEG      |    2.00 |    -0.08 |        -4.08 |
 | RTWH / N       | NEG      |   98.00 |    -1.46 |        -5.46 |
-| DDHQ / Y       | NEG      |    1.00 |    -1.12 |        -4.12 |
+| DDHQ / Y       | NEG      |    1.00 |    -1.08 |        -4.08 |
 | DDHQ / N       | NEG      |   99.00 |    -0.46 |        -4.46 |
 
 GB, ST, MX, M10: Candidate roster is unreviewed; this assumes the modeled D/R sides match the party nominees.
@@ -3791,22 +4337,22 @@ Contract 630693; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        5.76 |         5.98 | +94.02 / −5.98   | 15.72×        |
+| Yes    |        5.7  |         5.92 | +94.08 / −5.92   | 15.91×        |
 | No     |       94.96 |        95.15 | +4.85 / −95.15   | 0.05×         |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
-| GB / Y         | GO*      |   12.68 |     6.71 |         2.71 |
+| GB / Y         | GO*      |   12.68 |     6.77 |         2.77 |
 | GB / N         | NEG*     |   87.32 |    -7.83 |       -11.83 |
-| ST / Y         | WEAK*    |    8.14 |     2.16 |        -1.84 |
+| ST / Y         | WEAK*    |    8.14 |     2.22 |        -1.78 |
 | ST / N         | NEG*     |   91.86 |    -3.28 |        -7.28 |
-| MX / Y         | GO*      |   11.43 |     5.45 |         1.45 |
+| MX / Y         | GO*      |   11.43 |     5.51 |         1.51 |
 | MX / N         | NEG*     |   88.57 |    -6.57 |       -10.57 |
-| M10 / Y        | GO*      |   12.09 |     6.11 |         2.11 |
+| M10 / Y        | GO*      |   12.09 |     6.18 |         2.18 |
 | M10 / N        | NEG*     |   87.91 |    -7.24 |       -11.24 |
-| RTWH / Y       | NEG      |    5.60 |    -0.38 |        -4.38 |
+| RTWH / Y       | NEG      |    5.60 |    -0.32 |        -4.32 |
 | RTWH / N       | NEG      |   94.40 |    -0.75 |        -4.75 |
-| DDHQ / Y       | GO       |   13.00 |     7.02 |         3.02 |
+| DDHQ / Y       | GO       |   13.00 |     7.08 |         3.09 |
 | DDHQ / N       | NEG      |   87.00 |    -8.15 |       -12.15 |
 
 GB, ST, MX, M10: Runoff transfers and turnout are not separately modeled; the modeled margin is used as a proxy for the eventual winner.
@@ -3818,23 +4364,23 @@ Contract 630706; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       92.72 |        92.99 | +7.01 / −92.99   | 0.08×         |
-| No     |        8.86 |         9.18 | +90.82 / −9.18   | 9.89×         |
+| Yes    |        91.1 |        91.42 | +8.58 / −91.42   | 0.09×         |
+| No     |        10.6 |        10.98 | +89.02 / −10.98  | 8.11×         |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
-| GB / Y         | GO*      |   99.95 |     6.95 |         2.95 |
-| GB / N         | NEG*     |    0.05 |    -9.13 |       -11.18 |
-| ST / Y         | GO*      |   99.68 |     6.69 |         2.69 |
-| ST / N         | NEG*     |    0.32 |    -8.86 |       -11.18 |
-| MX / Y         | GO*      |   99.76 |     6.77 |         2.77 |
-| MX / N         | NEG*     |    0.24 |    -8.94 |       -11.18 |
-| M10 / Y        | GO*      |   99.61 |     6.62 |         2.62 |
-| M10 / N        | NEG*     |    0.39 |    -8.79 |       -11.18 |
-| RTWH / Y       | WEAK     |   95.80 |     2.81 |        -1.19 |
-| RTWH / N       | NEG      |    4.20 |    -4.98 |        -8.98 |
-| DDHQ / Y       | GO       |   97.00 |     4.01 |         0.01 |
-| DDHQ / N       | NEG      |    3.00 |    -6.18 |       -10.18 |
+| GB / Y         | GO*      |   99.95 |     8.52 |         4.52 |
+| GB / N         | NEG*     |    0.05 |   -10.93 |       -12.98 |
+| ST / Y         | GO*      |   99.68 |     8.26 |         4.26 |
+| ST / N         | NEG*     |    0.32 |   -10.66 |       -12.98 |
+| MX / Y         | GO*      |   99.76 |     8.33 |         4.33 |
+| MX / N         | NEG*     |    0.24 |   -10.74 |       -12.98 |
+| M10 / Y        | GO*      |   99.61 |     8.19 |         4.19 |
+| M10 / N        | NEG*     |    0.39 |   -10.59 |       -12.98 |
+| RTWH / Y       | GO       |   95.80 |     4.38 |         0.38 |
+| RTWH / N       | NEG      |    4.20 |    -6.78 |       -10.78 |
+| DDHQ / Y       | GO       |   97.00 |     5.58 |         1.58 |
+| DDHQ / N       | NEG      |    3.00 |    -7.98 |       -11.98 |
 
 GB, ST, MX, M10: The strongest D/Independent-versus-R margin approximates the winning side; third-candidate outcomes are not jointly modeled. Independents remain IND.
 RTWH (2026-09-25): Achilles retains IND despite publisher column. Publisher omits separate probabilities for reviewed contenders: Natalie Fleming. Final-election publisher probability; current candidate and contract rules must agree. Published rounding is retained; equal endpoints represent one estimate, not certainty.
@@ -3976,23 +4522,23 @@ Contract 630773; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |          33 |        33.88 | +66.12 / −33.88  | 1.95×         |
-| No     |          68 |        68.87 | +31.13 / −68.87  | 0.45×         |
+| Yes    |          34 |        34.9  | +65.10 / −34.90  | 1.87×         |
+| No     |          67 |        67.88 | +32.12 / −67.88  | 0.47×         |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
-| GB / Y         | NEG*     |    7.45 |   -26.44 |       -30.44 |
-| GB / N         | GO*      |   92.55 |    23.68 |        19.68 |
-| ST / Y         | NEG*     |    6.37 |   -27.52 |       -31.52 |
-| ST / N         | GO*      |   93.63 |    24.76 |        20.76 |
-| MX / Y         | NEG*     |   14.46 |   -19.43 |       -23.43 |
-| MX / N         | GO*      |   85.54 |    16.67 |        12.67 |
-| M10 / Y        | NEG*     |   17.06 |   -16.83 |       -20.83 |
-| M10 / N        | GO*      |   82.94 |    14.07 |        10.07 |
-| RTWH / Y       | WEAK     |   37.80 |     3.92 |        -0.08 |
-| RTWH / N       | NEG      |   62.20 |    -6.67 |       -10.67 |
-| DDHQ / Y       | GO       |   46.00 |    12.12 |         8.12 |
-| DDHQ / N       | NEG      |   54.00 |   -14.87 |       -18.87 |
+| GB / Y         | NEG*     |    7.45 |   -27.45 |       -31.45 |
+| GB / N         | GO*      |   92.55 |    24.67 |        20.67 |
+| ST / Y         | NEG*     |    6.37 |   -28.53 |       -32.53 |
+| ST / N         | GO*      |   93.63 |    25.75 |        21.75 |
+| MX / Y         | NEG*     |   14.46 |   -20.44 |       -24.44 |
+| MX / N         | GO*      |   85.54 |    17.66 |        13.66 |
+| M10 / Y        | NEG*     |   17.06 |   -17.84 |       -21.84 |
+| M10 / N        | GO*      |   82.94 |    15.06 |        11.06 |
+| RTWH / Y       | WEAK     |   37.80 |     2.90 |        -1.10 |
+| RTWH / N       | NEG      |   62.20 |    -5.68 |        -9.68 |
+| DDHQ / Y       | GO       |   46.00 |    11.10 |         7.10 |
+| DDHQ / N       | NEG      |   54.00 |   -13.88 |       -17.88 |
 
 GB, ST, MX, M10: Ranked-choice transfers are not separately modeled; the modeled margin is used as a proxy for the eventual winner.
 RTWH (2026-09-25): Final-election publisher probability; current candidate and contract rules must agree. Published rounding is retained; equal endpoints represent one estimate, not certainty.
@@ -4161,23 +4707,23 @@ Contract 630845; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |          16 |        16.54 | +83.46 / −16.54  | 5.05×         |
-| No     |          85 |        85.51 | +14.49 / −85.51  | 0.17×         |
+| Yes    |       15    |        15.51 | +84.49 / −15.51  | 5.45×         |
+| No     |       86.13 |        86.61 | +13.39 / −86.61  | 0.15×         |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
-| GB / Y         | NEG      |    2.07 |   -14.46 |       -18.46 |
-| GB / N         | GO       |   97.93 |    12.42 |         8.42 |
-| ST / Y         | NEG      |    2.42 |   -14.12 |       -18.12 |
-| ST / N         | GO       |   97.58 |    12.07 |         8.07 |
-| MX / Y         | NEG      |    7.23 |    -9.31 |       -13.31 |
-| MX / N         | GO       |   92.77 |     7.26 |         3.26 |
-| M10 / Y        | NEG      |    6.12 |   -10.42 |       -14.42 |
-| M10 / N        | GO       |   93.88 |     8.37 |         4.37 |
-| RTWH / Y       | NEG      |   13.80 |    -2.74 |        -6.74 |
-| RTWH / N       | WEAK     |   86.20 |     0.69 |        -3.31 |
-| DDHQ / Y       | WEAK     |   19.00 |     2.46 |        -1.54 |
-| DDHQ / N       | NEG      |   81.00 |    -4.51 |        -8.51 |
+| GB / Y         | NEG      |    2.07 |   -13.44 |       -17.44 |
+| GB / N         | GO       |   97.93 |    11.32 |         7.32 |
+| ST / Y         | NEG      |    2.42 |   -13.09 |       -17.09 |
+| ST / N         | GO       |   97.58 |    10.97 |         6.97 |
+| MX / Y         | NEG      |    7.23 |    -8.28 |       -12.28 |
+| MX / N         | GO       |   92.77 |     6.16 |         2.16 |
+| M10 / Y        | NEG      |    6.12 |    -9.39 |       -13.39 |
+| M10 / N        | GO       |   93.88 |     7.27 |         3.27 |
+| RTWH / Y       | NEG      |   13.80 |    -1.71 |        -5.71 |
+| RTWH / N       | NEG      |   86.20 |    -0.41 |        -4.41 |
+| DDHQ / Y       | WEAK     |   19.00 |     3.49 |        -0.51 |
+| DDHQ / N       | NEG      |   81.00 |    -5.61 |        -9.61 |
 
 RTWH (2026-09-25): Final-election publisher probability; current candidate and contract rules must agree. Published rounding is retained; equal endpoints represent one estimate, not certainty.
 DDHQ (2026-09-25): Final-election publisher probability; current candidate and contract rules must agree. DDHQ uses 25% market inputs for this race. Published rounding is retained; equal endpoints represent one estimate, not certainty.
@@ -4214,22 +4760,22 @@ Contract 630871; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        3.21 |         3.34 | +96.66 / −3.34   | 28.95×        |
+| Yes    |        3.2  |         3.32 | +96.68 / −3.32   | 29.09×        |
 | No     |       99.17 |        99.2  | +0.80 / −99.20   | 0.01×         |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
-| GB / Y         | NEG      |    1.90 |    -1.44 |        -5.34 |
+| GB / Y         | NEG      |    1.90 |    -1.43 |        -5.32 |
 | GB / N         | NEG      |   98.10 |    -1.10 |        -5.10 |
-| ST / Y         | NEG      |    0.93 |    -2.40 |        -5.34 |
+| ST / Y         | NEG      |    0.93 |    -2.39 |        -5.32 |
 | ST / N         | NEG      |   99.07 |    -0.13 |        -4.13 |
-| MX / Y         | NEG      |    1.81 |    -1.53 |        -5.34 |
+| MX / Y         | NEG      |    1.81 |    -1.52 |        -5.32 |
 | MX / N         | NEG      |   98.19 |    -1.01 |        -5.01 |
-| M10 / Y        | NEG      |    1.85 |    -1.49 |        -5.34 |
+| M10 / Y        | NEG      |    1.85 |    -1.48 |        -5.32 |
 | M10 / N        | NEG      |   98.15 |    -1.05 |        -5.05 |
-| RTWH / Y       | NEG      |    0.70 |    -2.64 |        -5.34 |
+| RTWH / Y       | NEG      |    0.70 |    -2.62 |        -5.32 |
 | RTWH / N       | WEAK     |   99.30 |     0.10 |        -3.90 |
-| DDHQ / Y       | WEAK     |    4.00 |     0.66 |        -3.34 |
+| DDHQ / Y       | WEAK     |    4.00 |     0.68 |        -3.32 |
 | DDHQ / N       | NEG      |   96.00 |    -3.20 |        -7.20 |
 
 RTWH (2026-09-25): Final-election publisher probability; current candidate and contract rules must agree. Published rounding is retained; equal endpoints represent one estimate, not certainty.
@@ -4292,18 +4838,18 @@ Contract 631031; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |       98.14 |        98.21 | +1.79 / −98.21   | 0.02×         |
+| Yes    |       98.13 |        98.21 | +1.79 / −98.21   | 0.02×         |
 | No     |        2.7  |         2.81 | +97.19 / −2.81   | 34.65×        |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
-| GB / Y         | WEAK     |   99.99 |     1.78 |        -2.22 |
+| GB / Y         | WEAK     |   99.99 |     1.79 |        -2.21 |
 | GB / N         | NEG      |    0.01 |    -2.80 |        -4.81 |
 | ST / Y         | WEAK     |   99.99 |     1.78 |        -2.22 |
 | ST / N         | NEG      |    0.01 |    -2.80 |        -4.81 |
 | MX / Y         | WEAK     |   99.94 |     1.73 |        -2.27 |
 | MX / N         | NEG      |    0.06 |    -2.75 |        -4.81 |
-| M10 / Y        | WEAK     |   99.96 |     1.74 |        -2.26 |
+| M10 / Y        | WEAK     |   99.96 |     1.75 |        -2.25 |
 | M10 / N        | NEG      |    0.04 |    -2.76 |        -4.81 |
 | RTWH / Y       | WEAK     |   99.20 |     0.99 |        -3.01 |
 | RTWH / N       | NEG      |    0.80 |    -2.01 |        -4.81 |
@@ -4345,22 +4891,22 @@ Contract 630912; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        2.23 |         2.32 | +97.68 / −2.32   | 42.16×        |
-| No     |       99.6  |        99.62 | +0.38 / −99.62   | 0.00×         |
+| Yes    |         1.8 |         1.87 | +98.13 / −1.87   | 52.56×        |
+| No     |        99.6 |        99.62 | +0.38 / −99.62   | 0.00×         |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
-| GB / Y         | NEG      |    0.01 |    -2.31 |        -4.32 |
+| GB / Y         | NEG      |    0.01 |    -1.86 |        -3.87 |
 | GB / N         | WEAK     |   99.99 |     0.38 |        -3.62 |
-| ST / Y         | NEG      |    0.01 |    -2.31 |        -4.32 |
+| ST / Y         | NEG      |    0.01 |    -1.86 |        -3.87 |
 | ST / N         | WEAK     |   99.99 |     0.37 |        -3.63 |
-| MX / Y         | NEG      |    0.15 |    -2.17 |        -4.32 |
+| MX / Y         | NEG      |    0.15 |    -1.72 |        -3.87 |
 | MX / N         | WEAK     |   99.85 |     0.24 |        -3.76 |
-| M10 / Y        | NEG      |    0.18 |    -2.13 |        -4.32 |
+| M10 / Y        | NEG      |    0.18 |    -1.68 |        -3.87 |
 | M10 / N        | WEAK     |   99.82 |     0.20 |        -3.80 |
-| RTWH / Y       | NEG      |    1.10 |    -1.22 |        -4.32 |
+| RTWH / Y       | NEG      |    1.10 |    -0.77 |        -3.87 |
 | RTWH / N       | NEG      |   98.90 |    -0.72 |        -4.72 |
-| DDHQ / Y       | NEG      |    1.00 |    -1.32 |        -4.32 |
+| DDHQ / Y       | NEG      |    1.00 |    -0.87 |        -3.87 |
 | DDHQ / N       | NEG      |   99.00 |    -0.62 |        -4.62 |
 
 RTWH (2026-09-25): Final-election publisher probability; current candidate and contract rules must agree. Published rounding is retained; equal endpoints represent one estimate, not certainty.
@@ -4398,22 +4944,22 @@ Contract 630938; 100 shares per position.
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
 | Yes    |       94.3  |        94.52 | +5.48 / −94.52   | 0.06×         |
-| No     |        6.37 |         6.6  | +93.40 / −6.60   | 14.14×        |
+| No     |        6.35 |         6.58 | +93.42 / −6.58   | 14.19×        |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
 | GB / Y         | GO*      |   99.94 |     5.42 |         1.42 |
-| GB / N         | NEG*     |    0.06 |    -6.54 |        -8.60 |
+| GB / N         | NEG*     |    0.06 |    -6.52 |        -8.58 |
 | ST / Y         | GO*      |   99.18 |     4.66 |         0.66 |
-| ST / N         | NEG*     |    0.82 |    -5.78 |        -8.60 |
+| ST / N         | NEG*     |    0.82 |    -5.76 |        -8.58 |
 | MX / Y         | NEG*     |   91.88 |    -2.64 |        -6.64 |
-| MX / N         | WEAK*    |    8.12 |     1.52 |        -2.48 |
+| MX / N         | WEAK*    |    8.12 |     1.54 |        -2.46 |
 | M10 / Y        | NEG*     |   92.85 |    -1.66 |        -5.66 |
-| M10 / N        | WEAK*    |    7.15 |     0.55 |        -3.45 |
+| M10 / N        | WEAK*    |    7.15 |     0.57 |        -3.43 |
 | RTWH / Y       | NEG      |   87.10 |    -7.42 |       -11.42 |
-| RTWH / N       | GO       |   12.90 |     6.30 |         2.30 |
+| RTWH / N       | GO       |   12.90 |     6.32 |         2.32 |
 | DDHQ / Y       | WEAK     |   97.00 |     2.48 |        -1.52 |
-| DDHQ / N       | NEG      |    3.00 |    -3.60 |        -7.60 |
+| DDHQ / N       | NEG      |    3.00 |    -3.58 |        -7.58 |
 
 GB, ST, MX, M10: The strongest D/Independent-versus-R margin approximates the winning side; third-candidate outcomes are not jointly modeled. Independents remain IND.
 RTWH (2026-09-25): Bengs retains IND despite publisher column. Final-election publisher probability; current candidate and contract rules must agree. Published rounding is retained; equal endpoints represent one estimate, not certainty.
@@ -4425,22 +4971,22 @@ Contract 630951; 100 shares per position.
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
 | Yes    |        97.2 |        97.31 | +2.69 / −97.31   | 0.03×         |
-| No     |         3.8 |         3.95 | +96.05 / −3.95   | 24.34×        |
+| No     |         3.7 |         3.84 | +96.16 / −3.84   | 25.02×        |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
 | GB / Y         | WEAK     |   99.97 |     2.66 |        -1.34 |
-| GB / N         | NEG      |    0.03 |    -3.92 |        -5.95 |
+| GB / N         | NEG      |    0.03 |    -3.82 |        -5.84 |
 | ST / Y         | WEAK     |   99.98 |     2.67 |        -1.33 |
-| ST / N         | NEG      |    0.02 |    -3.92 |        -5.95 |
+| ST / N         | NEG      |    0.02 |    -3.82 |        -5.84 |
 | MX / Y         | WEAK     |   99.92 |     2.61 |        -1.39 |
-| MX / N         | NEG      |    0.08 |    -3.87 |        -5.95 |
+| MX / N         | NEG      |    0.08 |    -3.76 |        -5.84 |
 | M10 / Y        | WEAK     |   99.95 |     2.64 |        -1.36 |
-| M10 / N        | NEG      |    0.05 |    -3.90 |        -5.95 |
+| M10 / N        | NEG      |    0.05 |    -3.80 |        -5.84 |
 | RTWH / Y       | WEAK     |   99.00 |     1.69 |        -2.31 |
-| RTWH / N       | NEG      |    1.00 |    -2.95 |        -5.95 |
+| RTWH / N       | NEG      |    1.00 |    -2.84 |        -5.84 |
 | DDHQ / Y       | NEG      |   97.00 |    -0.31 |        -4.31 |
-| DDHQ / N       | NEG      |    3.00 |    -0.95 |        -4.95 |
+| DDHQ / N       | NEG      |    3.00 |    -0.84 |        -4.84 |
 
 RTWH (2026-09-25): Final-election publisher probability; current candidate and contract rules must agree. Published rounding is retained; equal endpoints represent one estimate, not certainty.
 DDHQ (2026-09-25): Final-election publisher probability; current candidate and contract rules must agree. DDHQ uses 25% market inputs for this race. Published rounding is retained; equal endpoints represent one estimate, not certainty.
@@ -4476,22 +5022,22 @@ Contract 630977; 100 shares per position.
 
 | Side   |   Entry (¢) |   Budget ($) | Win / lose ($)   | Reward/loss   |
 |:-------|------------:|-------------:|:-----------------|:--------------|
-| Yes    |        2.71 |         2.82 | +97.18 / −2.82   | 34.46×        |
-| No     |       99.7  |        99.71 | +0.29 / −99.71   | 0.00×         |
+| Yes    |         2.9 |         3.01 | +96.99 / −3.01   | 32.19×        |
+| No     |        99.7 |        99.71 | +0.29 / −99.71   | 0.00×         |
 
 | Model / side   | Status   |   P (%) |   EV ($) |   Stress ($) |
 |:---------------|:---------|--------:|---------:|-------------:|
-| GB / Y         | NEG      |    0.57 |    -2.25 |        -4.82 |
+| GB / Y         | NEG      |    0.57 |    -2.45 |        -5.01 |
 | GB / N         | NEG      |   99.43 |    -0.28 |        -4.28 |
-| ST / Y         | NEG      |    0.59 |    -2.23 |        -4.82 |
+| ST / Y         | NEG      |    0.59 |    -2.43 |        -5.01 |
 | ST / N         | NEG      |   99.41 |    -0.30 |        -4.30 |
-| MX / Y         | NEG      |    1.52 |    -1.30 |        -4.82 |
+| MX / Y         | NEG      |    1.52 |    -1.49 |        -5.01 |
 | MX / N         | NEG      |   98.48 |    -1.23 |        -5.23 |
-| M10 / Y        | NEG      |    1.48 |    -1.34 |        -4.82 |
+| M10 / Y        | NEG      |    1.48 |    -1.53 |        -5.01 |
 | M10 / N        | NEG      |   98.52 |    -1.19 |        -5.19 |
-| RTWH / Y       | NEG      |    1.90 |    -0.92 |        -4.82 |
+| RTWH / Y       | NEG      |    1.90 |    -1.11 |        -5.01 |
 | RTWH / N       | NEG      |   98.10 |    -1.61 |        -5.61 |
-| DDHQ / Y       | WEAK     |    4.00 |     1.18 |        -2.82 |
+| DDHQ / Y       | WEAK     |    4.00 |     0.99 |        -3.01 |
 | DDHQ / N       | NEG      |   96.00 |    -3.71 |        -7.71 |
 
 RTWH (2026-09-25): Final-election publisher probability; current candidate and contract rules must agree. Published rounding is retained; equal endpoints represent one estimate, not certainty.

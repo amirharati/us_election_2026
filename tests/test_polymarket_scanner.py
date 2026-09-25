@@ -50,7 +50,8 @@ class ScannerTests(unittest.TestCase):
                 self.assertEqual(debug_build(missing).query("model == 'b'").status.unique().tolist(),['Unavailable'])
                 flagged=grouped.copy();flagged['settlement_proxy']=True
                 self.assertTrue(compact_table(flagged)['Status'].str.endswith('*').all())
-                self.assertIn('#fff2cc',debug_html(flagged))
+                self.assertIn('#e0f2e7',debug_html(flagged))
+                self.assertIn('#fbe3e3',debug_html(flagged))
                 self.assertIn('a, b:',debug_html(flagged))
                 shown=model_table(r,'1','Yes').set_index('Model')
                 self.assertAlmostEqual(shown.loc['a','Entry price (¢/share)'],50)
