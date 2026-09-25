@@ -5,7 +5,7 @@
   "live_manifest_sha256": "0632f06aac571c2fee3d30bd0866d15704f29b06e905c4bb449e96917f01afd6",
   "published_parameters": {
     "source_manifest_sha256": "0632f06aac571c2fee3d30bd0866d15704f29b06e905c4bb449e96917f01afd6",
-    "comparison_code_sha256": "38bb431b988f4524b3c288fbe6e50a572465bb79a8d8037332b659030e840725",
+    "comparison_code_sha256": "e41089ca3df4c79a4ceac31ac1cbe2355f8c5b3327e2e26b48bb168315e2a33c",
     "candidate_review_sha256": "3c3ba8104295322e30e5b73a8217aa68ad56a4755a8a7a22cb25e935047e8689",
     "cutoff": "2026-09-25",
     "models": [

@@ -5,7 +5,7 @@ Latest reports and supporting results are below. Dated reports are retained in G
 ## Forecast
 
 - [Read the forecast](reports/forecast/report.md) — Markdown summary, state forecasts, source status and cutoff history.
-- [Open the browser report](reports/forecast/report.html) — self-contained HTML (download/open locally).
+- [Open the browser report](reports/forecast/report.html) — HTML with adjacent PNG images (download the folder to open locally).
 - [Shareable PNG images](reports/forecast/report.md#shareable-images) — generated alongside the tables and retained in dated reports.
 
 ## Prediction-market research
@@ -56,11 +56,11 @@ Latest reports and supporting results are below. Dated reports are retained in G
 
 ## Supporting files
 
-- `results/forecast/`: latest forecast tables, joint arrays and cutoff history.
+- `results/forecast/`: compact latest forecast tables, covariance matrices, seat frequencies and cutoff history. Full simulation draws stay in ignored cache.
 - `results/experiments/`: latest tables and diagnostics for each comparison.
 - `results/training/`: latest explicit training/sampler reruns. The active model remains in `../assets/`.
 - Every result bundle includes `run.json` and `manifest.json`; keep bundles complete.
 
-Timestamped executions, intermediate forecasts, logs and older migrated outputs are local-only under `../cache/`. They are ignored by Git. Source-audit and migration documentation remain under `../reports/`.
+Latest forecast and market reports are complete bundles under `reports/forecast/` and `reports/markets/`; duplicate result copies are ignored. Timestamped executions, intermediate forecasts, logs and older migrated outputs are local-only under `../cache/`. They are ignored by Git. Source-audit and migration documentation remain under `../reports/`.
 
 Rerun all notebooks: `python scripts/run_notebooks.py` from the project root.

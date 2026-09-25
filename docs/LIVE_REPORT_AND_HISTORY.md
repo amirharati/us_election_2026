@@ -11,7 +11,7 @@ cutoff forecasts are local-only under ignored `cache/runs/`.
 Notebook04 now saves a current-only report before starting the cutoff replay,
 then a complete report once the replay succeeds. Each is an immutable timestamped
 directory under `cache/runs/live_reports/`; `latest.json` points to the latest
-completed report. The self-contained `report.html` embeds its chart. Adjacent
+completed report. The `report.html` file uses its adjacent PNG images; keep the report folder together. Adjacent
 Parquet files preserve the current predictions, chamber probabilities, watchlist,
 and cutoff-history tables; the chart is also available as PNG. No ZIP is created.
 

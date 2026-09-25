@@ -29,5 +29,20 @@ def upgrade(run):
     return out
 
 
+def ensure_full_samples(run):
+    """Explicit offline bootstrap for a clone; later scans only read cached draws."""
+    run=lab.verify_run(Path(run));meta=json.loads((run/'run.json').read_text())
+    needed=set((meta.get('ensemble') or {}).get('component_weights',{}))|{'Bayesian'}
+    import numpy as np
+    available=set()
+    for path in [run/'main_joint.npz',*(run/'model_forecasts').glob('*.npz')]:
+        if not path.exists():continue
+        with np.load(path,allow_pickle=False) as a:
+            if 'samples' in a:available.add(str(a['model']) if 'model' in a else 'Bayesian')
+    if needed<=available:return run
+    print('Rebuilding local predictive simulations from the saved compact inputs. No downloads or historical training.')
+    return upgrade(run)
+
+
 if __name__=='__main__':
     print(upgrade(Path(sys.argv[1]) if len(sys.argv)>1 else lab.latest_run('live')))

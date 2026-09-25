@@ -1,6 +1,9 @@
 """Publish latest results and compact dated reports; keep full runs in local cache."""
 from pathlib import Path
 import json
+import base64
+import hashlib
+import numpy as np
 import os
 import re
 from datetime import datetime
@@ -25,15 +28,46 @@ TITLES = {
 
 
 def result_path(root, kind):
+    if kind=='live_reports':return Path(root)/'outputs/reports/forecast'
+    if kind=='polymarket':return Path(root)/'outputs/reports/markets/polymarket'
     group = 'forecast' if kind in FORECAST else 'training' if kind in TRAINING else 'experiments'
     return Path(root)/'outputs/results'/group/kind
 
 
-def replace_directory(source, destination):
+def compact_bundle(directory, live=False):
+    """Compact a publication copy; full execution artifacts stay immutable in cache."""
+    directory=Path(directory);changed=False
+    if live:
+        removed=[]
+        for path in directory.rglob('*.npz'):
+            with np.load(path,allow_pickle=False) as a:
+                if 'samples' not in a:continue
+                arrays={k:a[k] for k in a.files if k!='samples'}
+            np.savez_compressed(path,**arrays);removed.append(str(path.relative_to(directory)))
+        if removed:
+            (directory/'storage.json').write_text(json.dumps(dict(full_samples='local cache only',
+                rebuild='Run the prepare-simulations cell in notebook 11 or export_predictive_distributions.py; exact saved inputs, no downloads or historical training.',
+                compact_arrays=removed),indent=2)+'\n');changed=True
+    for path in directory.rglob('*.html'):
+        images={hashlib.sha256(p.read_bytes()).hexdigest():p.name for p in path.parent.glob('*.png')}
+        def image_link(match):
+            raw=base64.b64decode(match[1],validate=True);h=hashlib.sha256(raw).hexdigest()
+            name=images.get(h,'embedded-'+h[:16]+'.png')
+            if name not in images.values():(path.parent/name).write_bytes(raw)
+            return 'src="'+name+'"'
+        old=path.read_text();new=re.sub(r'src="data:image/png;base64,([A-Za-z0-9+/=]+)"',image_link,old)
+        if old!=new:path.write_text(new);changed=True
+    if changed and (directory/'manifest.json').exists():
+        manifest={str(p.relative_to(directory)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(directory.rglob('*')) if p.is_file() and p.name!='manifest.json'}
+        (directory/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+
+
+def replace_directory(source, destination, compact_live=False):
     """Stage a complete copy on the destination filesystem; rollback on failure."""
     destination=Path(destination);destination.parent.mkdir(parents=True,exist_ok=True)
     with tempfile.TemporaryDirectory(dir=destination.parent,prefix='.publish-') as temp:
         staged=Path(temp)/'new';shutil.copytree(source,staged)
+        compact_bundle(staged,live=compact_live)
         previous=Path(temp)/'old'
         if destination.exists():destination.rename(previous)
         try:staged.rename(destination)
@@ -67,7 +101,7 @@ def write_index(root):
         '## Forecast','']
     if (out/'reports/forecast/report.md').exists():
         lines += ['- [Read the forecast](reports/forecast/report.md) — Markdown summary, state forecasts, source status and cutoff history.',
-                  '- [Open the browser report](reports/forecast/report.html) — self-contained HTML (download/open locally).',
+                  '- [Open the browser report](reports/forecast/report.html) — HTML with adjacent PNG images (download the folder to open locally).',
                   '- [Shareable PNG images](reports/forecast/report.md#shareable-images) — generated alongside the tables and retained in dated reports.']
     else:lines+=['Run notebook 04 to publish the forecast report.']
     if (out/'reports/markets/polymarket/report.md').exists():
@@ -94,11 +128,11 @@ def write_index(root):
         '- [Notebook execution status](validation/notebooks.md)',
         '- [Storage and rerun validation](validation/output_cleanup.md)', '',
         '## Supporting files', '',
-        '- `results/forecast/`: latest forecast tables, joint arrays and cutoff history.',
+        '- `results/forecast/`: compact latest forecast tables, covariance matrices, seat frequencies and cutoff history. Full simulation draws stay in ignored cache.',
         '- `results/experiments/`: latest tables and diagnostics for each comparison.',
         '- `results/training/`: latest explicit training/sampler reruns. The active model remains in `../assets/`.',
         '- Every result bundle includes `run.json` and `manifest.json`; keep bundles complete.', '',
-        'Timestamped executions, intermediate forecasts, logs and older migrated outputs are local-only under `../cache/`. They are ignored by Git. Source-audit and migration documentation remain under `../reports/`.', '',
+        'Latest forecast and market reports are complete bundles under `reports/forecast/` and `reports/markets/`; duplicate result copies are ignored. Timestamped executions, intermediate forecasts, logs and older migrated outputs are local-only under `../cache/`. They are ignored by Git. Source-audit and migration documentation remain under `../reports/`.', '',
         'Rerun all notebooks: `python scripts/run_notebooks.py` from the project root.']
     (out/'README.md').write_text('\n'.join(lines)+'\n')
 
@@ -176,14 +210,8 @@ def archive_report(root, run, report):
 def publish(root, run):
     run=Path(run);kind=run.parent.name
     if kind in INTERNAL:return
-    replace_directory(run,result_path(root,kind))
-    if kind=='live_reports':
-        with tempfile.TemporaryDirectory() as temp:
-            stage=Path(temp)
-            for name in ['report.md','report.html','control_history.png',*[p.name for p in sorted(run.glob('poll_audit*'))],*[p.name for p in sorted(run.glob('share_*.png'))]]:
-                if (run/name).exists():shutil.copyfile(run/name,stage/name)
-            replace_directory(stage,Path(root)/'outputs/reports/forecast')
-    elif kind not in FORECAST:experiment_report(root,run,kind)
+    replace_directory(run,result_path(root,kind),compact_live=kind=='live')
+    if kind not in FORECAST:experiment_report(root,run,kind)
     if kind=='live_reports':
         archive_report(root,run,Path(root)/'outputs/reports/forecast/report.md')
     elif kind not in FORECAST:

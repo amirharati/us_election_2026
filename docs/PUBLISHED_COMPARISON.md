@@ -27,7 +27,7 @@ State probabilities and expected seats remain missing when they are not publicly
 
 ## Shareable images
 
-Run All generates PNGs beside the original tables in the live notebook. It also saves them beside the latest report in `outputs/reports/forecast/`, with names beginning `share_`. Dated report folders freeze the same images. The HTML report embeds its images, so it remains self-contained.
+Run All generates PNGs beside the original tables in the live notebook. It also saves them beside the latest report in `outputs/reports/forecast/`, with names beginning `share_`. Dated report folders freeze the same images. The HTML report links its adjacent PNG images. Download the report folder to view it locally.
 
 Images cover chamber probabilities and seat ranges, state mixture margin plots showing the mean and central 68%/95% predictive intervals, with a separate aligned panel of average pairwise margin disagreement among the four mixture components, predictive interval plots, surprise probability bars, and published-forecast comparison plots. Numeric publisher comparisons connect our probability to theirs. Qualitative ratings accompany race labels without being converted into probabilities. These are charts, not table images. Model names, cutoff dates, publisher dates, cache status where relevant, and short interpretation notes travel with each image. The existing cutoff-history chart remains available as `control_history.png`. The original tables and complete supporting data are retained. `share_images.json` records the generated PNG checksums and source forecast manifest.
 

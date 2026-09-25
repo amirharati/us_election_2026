@@ -1,6 +1,6 @@
 # Notebook execution
 
-Execution results include earlier runs of unchanged notebooks. The latest notebook 04 run used full online execution; notebook 11 used the legacy raw-data read guard. Successful notebooks are saved in place; logs and failed attempts stay in the ignored local cache.
+Executed in order with legacy raw-data reads blocked. Successful notebooks are saved in place; logs and failed attempts stay in the ignored local cache.
 
 | Notebook | Status | Seconds |
 |---|---|---:|
@@ -14,4 +14,4 @@ Execution results include earlier runs of unchanged notebooks. The latest notebo
 | [08_all_model_mixture.ipynb](../../notebooks/08_all_model_mixture.ipynb) | passed | 3.07 |
 | [09_poll_weight_experiments.ipynb](../../notebooks/09_poll_weight_experiments.ipynb) | passed | 16.82 |
 | [10_model_disagreements.ipynb](../../notebooks/10_model_disagreements.ipynb) | passed | 3.16 |
-| [11_live_polymarket.ipynb](../../notebooks/11_live_polymarket.ipynb) | passed | 36.03 |
+| [11_live_polymarket.ipynb](../../notebooks/11_live_polymarket.ipynb) | passed | 13.07 |

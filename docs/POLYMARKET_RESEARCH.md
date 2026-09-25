@@ -29,7 +29,7 @@ A positive model gap can reflect a model error, stale roster, wrong settlement i
 
 - Notebook: `notebooks/11_live_polymarket.ipynb`.
 - Latest report: `outputs/reports/markets/polymarket/report.md`.
-- Latest data bundle: `outputs/results/markets/polymarket/`.
+- Latest data bundle: `outputs/reports/markets/polymarket/`.
 - Daily report and linked snapshots: `outputs/reports/history/YYYY-MM-DD/polymarket/report.md`.
 - Ignored cache: `cache/polymarket/` and `cache/runs/polymarket/`.
 
@@ -101,3 +101,20 @@ The formulas are programmed by contract type; market text supplies the state, pa
 For a Democratic margin band `[a,b)`, the event is `a <= M < b`, where M is D minus R margin. For a Republican band it is `-b < M <= -a`; this reflection preserves the rule that exact boundaries belong to the higher winning-margin bracket. No is the complement. For continuous predictive distributions, exact ties have zero probability; actual contract tie/replacement/unresolved-election rules remain settlement assumptions, not separate modeled risks.
 
 ST winner probabilities now count its same posterior draws used for margin events. They may differ slightly from the variance-reduced winner estimate in the forecast summary. Gaussian winner/margin probabilities use its analytic CDF; Gaussian chamber/seat probabilities use its joint simulation frequency. MX and M10 use the same weighted component draws that generated their published forecast probabilities. No independent-state approximation is introduced.
+
+## Published forecasts in notebook 11
+
+The grouped scanner includes **RTWH** (Race to the WH) and **DDHQ** beside GB, ST, MX and M10. These are separate model–market comparisons, not mixture components or independent votes. Each uses the same selected-side order book, quantity, depth, fees, base expected profit, binary win/loss payoff and optional friction/probability-haircut stress. No AI call is used.
+
+The external forecast download is a separate notebook cell. `REFRESH_EXTERNAL`, `FORCE_EXTERNAL` and `MAX_EXTERNAL_AGE_DAYS` control it independently of election inference and `REFRESH_MARKETS`. Public downloads use a six-hour cache. Publisher dates remain separate from quote timestamps and our own forecast cutoff. Failed refreshes are visibly unavailable for pricing; older cached evidence is retained for review. The default maximum publisher age is three days. A stale local forecast does not suppress a fresh external comparison, and a stale external forecast cannot select a market.
+
+- **Race to the WH:** named state candidate/party probabilities and Senate-control odds. Expected seats and projected margins do not imply a seat or margin distribution.
+- **DDHQ:** state candidate/party probabilities, Senate-control odds, and published seat-histogram counts. Exact seats and upper/lower seat thresholds sum those counts directly. Counts, total mass and agreement with the rounded control headline are validated. This is not access to joint state simulations.
+- **Unsupported contracts:** margin bands, relative state rankings and multi-state combinations remain explicitly unpriced for these publishers. No Gaussian distribution or independence assumption is reconstructed from summary numbers.
+- **Independent candidates and replacements:** named candidates are checked against reviewed current identities using exact names or unique surname abbreviations within the state. A named independent displayed in a publisher D column retains IND. Missing party probabilities are unavailable, not zero. Candidate mismatch, first-round contracts and ambiguous identities remain unpriced. Party contracts and named-candidate contracts are distinct. Chamber comparisons remain conditional on the publisher's caucus and complete-chamber assumptions.
+- **Uncertainty:** published probabilities are point estimates with their original rounding. Equal lower/upper fields are a storage convention, not a confidence interval. Missing 95% predictive margin intervals remain empty. The same probability haircut is a user-selected sensitivity test, not estimated publisher uncertainty.
+- **Market inputs:** DDHQ incorporates prediction-market information. Its race-specific market weight is saved and shown when disclosed; chamber comparisons carry the same general qualification. Agreement is not fully independent confirmation of a market price.
+
+The compact five-column tables retain both Yes and No rows and all selected models, including disagreements and unavailable mappings. Publisher dates and contract-specific limitations appear below each table. The source-status table and `external_forecasts.json` preserve normalized probabilities, seat counts, source URLs, retrieval dates and response hashes. That small snapshot is saved with latest and daily reports and supports verified offline reuse on a clone. Raw HTML is not committed. Silver's dated public commentary and Inside Elections' qualitative ratings remain in notebook 04; neither is converted into a numerical state forecast here.
+
+On a fresh clone, the separate simulation-preparation cell reconstructs missing full draws offline from the exact saved compact inputs and verifies identical prediction and seat tables. This happens before market downloads; normal scans never rerun inference. Full draws remain in ignored local cache.

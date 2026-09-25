@@ -1,0 +1,10 @@
+{
+  "full_samples": "local cache only",
+  "rebuild": "Run the prepare-simulations cell in notebook 11 or export_predictive_distributions.py; exact saved inputs, no downloads or historical training.",
+  "compact_arrays": [
+    "main_joint.npz",
+    "model_forecasts/2.npz",
+    "model_forecasts/1.npz",
+    "model_forecasts/0.npz"
+  ]
+}

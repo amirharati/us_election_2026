@@ -32,3 +32,12 @@ __pycache__/
 /outputs/validation/*.log
 /outputs/results/**/.publish-*/
 /outputs/reports/**/.publish-*/
+
+# Canonical report bundles live under outputs/reports; these old duplicate copies
+# remain available locally but are never uploaded again.
+/outputs/results/forecast/live_reports/
+/outputs/results/markets/
+
+# Optional legacy row-level audit exports; compact inputs and audit summaries stay.
+/reports/data_review/survey_identity_identity.csv
+/reports/data_review/basis_availability_metadata.csv

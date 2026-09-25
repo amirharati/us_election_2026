@@ -20,7 +20,7 @@ SOURCES={'discovery':'https://docs.polymarket.com/market-data/discover-markets',
          'books':'https://docs.polymarket.com/market-data/prices-order-books',
          'fees':'https://docs.polymarket.com/trading/fees'}
 CACHE=lab.ROOT/'cache/polymarket'
-RESULT=lab.ROOT/'outputs/results/markets/polymarket'
+RESULT=lab.ROOT/'outputs/reports/markets/polymarket'
 
 
 def utcnow():return datetime.now(timezone.utc).isoformat()
@@ -424,8 +424,6 @@ def save(result):
     (out/'report.md').write_text('\n'.join(lines)+'\n')
     lab.finish(out,dict(kind='polymarket',as_of=meta['forecast_cutoff'],market_retrieved_at=meta['retrieved_at']),publish=False)
     replace_directory(out,RESULT)
-    # A dedicated report folder keeps its links self-contained and easy to share.
-    replace_directory(out,lab.ROOT/'outputs/reports/markets/polymarket')
     archive_report(lab.ROOT,out,lab.ROOT/'outputs/reports/markets/polymarket/report.md')
     write_index(lab.ROOT)
     return out

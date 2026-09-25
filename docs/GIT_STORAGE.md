@@ -1,6 +1,6 @@
 # Compact inputs, Git storage, and model updates
 
-The supported commands and all ten notebooks use ordinary Git files under
+The supported commands and all eleven notebooks use ordinary Git files under
 `data/compact/` and `assets/`. Raw provider archives and old preparation trees
 are excluded by `.gitignore`; no Git LFS or external file-storage service is
 required. Existing local archives have not been deleted.
@@ -14,9 +14,9 @@ required. Existing local archives have not been deleted.
   successful live forecast. It contains historical labels/poll metadata, current
   polls, normalized model feature observations, materialized monthly features,
   political context, source receipts, and checksums.
-- `outputs/reports/`: latest Markdown reports and the latest forecast HTML/chart.
+- `outputs/reports/`: latest Markdown reports and the latest forecast HTML and adjacent PNG images.
 - `outputs/results/`: one complete latest bundle per forecast, experiment or training
-  task, including tables, arrays, metadata and manifests. These support rerunning
+  task, including tables, compact covariance/seat arrays, metadata and manifests. Full live predictive draws stay in ignored cache; forecast-report and market bundles have one canonical copy under `outputs/reports/`. These support rerunning
   downstream notebooks from a clone without retaining all timestamped runs.
 - `outputs/validation/`: latest notebook status and cleanup validation.
 - `reports/`: source-audit and historical migration documentation.
@@ -94,3 +94,16 @@ are copied with the report, while full execution archives remain ignored. Notebo
 report generation and CLI report-producing tasks use this same publication path.
 Run `python run.py report` to generate a dated forecast report from the saved forecast
 without downloading data or fitting models. `python run.py live` also generates a report.
+
+
+## Compact Git publication
+
+Full predictive draw matrices are generated artifacts, not trained model parameters. Git keeps the saved fits in `assets/`, historical/current inputs in `data/compact/`, and compact latest forecast tables, covariance matrices and seat-count frequencies. Publication omits only the `samples` arrays from the live NPZ copies and reseals their manifests. Full execution artifacts remain unchanged under ignored `cache/runs/`.
+
+Notebook 11 has a separate **Prepare local simulations when needed** cell. On a fresh clone it regenerates missing draws from the exact committed input bundle and saved settings, without downloads or historical retraining. It verifies unchanged prediction and seat tables before using the result. Subsequent scans reuse these local draws. Market downloads and external-forecast refreshes remain independent. If the precise input bundle is unavailable, the bootstrap fails rather than silently using newer evidence; rerun notebook 04 explicitly in that case.
+
+Latest forecast reports, linked tables and images have one complete canonical bundle at `outputs/reports/forecast/`. Latest market research is at `outputs/reports/markets/polymarket/`. Duplicate older paths under `outputs/results/forecast/live_reports/` and `outputs/results/markets/` are ignored. Daily Markdown reports and linked images/data remain tracked, one copy per day. HTML uses adjacent PNG images instead of embedding another copy of every image.
+
+The two optional legacy row-level CSV exports under `reports/data_review/` are ignored; their small summary JSONs and extracted compact inputs remain. Existing local copies are not deleted. `scripts/compact_git_outputs.py` migrates older published copies to this layout without touching immutable cached runs. Git LFS and external storage are not required.
+
+These changes reduce future tracked snapshots and growth. Existing commits still contain their original files. No history rewrite or force-push is performed.

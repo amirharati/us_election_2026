@@ -21,7 +21,7 @@ def selected_predictions(pred, models=None):
     return pred[pred.model.isin(names)].copy(),names
 
 
-def scan(research, run, friction_cents=2., probability_haircut_pp=2., min_edge_pp=0., models=None):
+def scan(research, run, friction_cents=2., probability_haircut_pp=2., min_edge_pp=0., models=None, external=None, max_external_age_days=3):
     import live_polymarket as poly
     if not all(np.isfinite(x) and x>=0 for x in [friction_cents,probability_haircut_pp,min_edge_pp]):
         raise ValueError('Scanner assumptions must be finite and nonnegative')
@@ -41,12 +41,21 @@ def scan(research, run, friction_cents=2., probability_haircut_pp=2., min_edge_p
             f=a['seat_count_frequency'].astype(float)
             if f.sum()>0:frequencies[str(a['model'])]=f/f.sum()
     details=[];audits=[]
-    # Every catalog contract is considered for every saved model, even if unmappable.
-    for name,pred in context['pred'].groupby('model'):
-        ctx={**context,'mix':pred.set_index('geography'),'freq':frequencies.get(name),'model_name':name}
+    contexts=[(name,{**context,'mix':pred.set_index('geography'),'freq':frequencies.get(name),'model_name':name},None) for name,pred in context['pred'].groupby('model')]
+    external=external or {}
+    for name,snapshot in external.items():
+        if name in selected_models:raise ValueError('Duplicate external model name')
+        selected_models.append(name)
+        contexts.append((name,{**context,'mix':pd.DataFrame()},snapshot))
+    # Every contract is audited for each local and external model.
+    for name,ctx,snapshot in contexts:
         if ctx['mix'].index.duplicated().any():raise ValueError('Ambiguous model geography')
         for row in research['catalog']['markets']:
-            mapped=poly.assess_market(row,research['catalog']['rules'],ctx)
+            if snapshot is None:
+                mapped=poly.assess_market(row,research['catalog']['rules'],ctx)
+            else:
+                from polymarket_external import assess
+                mapped=assess(row,research['catalog']['rules'],snapshot,context['review'],max_age_days=max_external_age_days)
             audits.append(dict(market_id=row['market_id'],question=row['question'],model=name,**mapped))
             if mapped['model_low'] is None:continue
             for side in ['Yes','No']:
@@ -72,6 +81,8 @@ def scan(research, run, friction_cents=2., probability_haircut_pp=2., min_edge_p
                     quote_status=quote['quote_status'],spread=quote.get('spread'),accepting_orders=row['accepting_orders'],order_book=row['order_book'],liquidity=row['liquidity'],
                     forecast_mean_margin_pp=next((poly.number(ref.get(k)) for k in ['margin_pp','prediction_pp'] if poly.number(ref.get(k)) is not None),None),
                     margin_lo95_pp=poly.number(ref.get('lo95_pp')),margin_hi95_pp=poly.number(ref.get('hi95_pp')),poll_samples=poly.number(ref.get('sample_count',ref.get('n_samples'))),
+                    publisher_date=mapped.get('publisher_date'),publisher_url=mapped.get('publisher_url'),market_weight=mapped.get('market_weight'),
+                    model_blocker=('Forecast age exceeds the configured limit.' if snapshot is None and not 0<=research['status']['forecast_age_days']<=research['status']['max_forecast_age_days'] else ''),
                     mapping_reason=mapped['reason']))
     detail=pd.DataFrame(details);summary=[];status=research['status']
     for (_,side),g in detail.groupby(['market_id','side']) if not detail.empty else []:
@@ -81,10 +92,10 @@ def scan(research, run, friction_cents=2., probability_haircut_pp=2., min_edge_p
         if 'max_book_age_seconds' in status and (pd.isna(first.book_age_seconds) or not 0<=first.book_age_seconds<=status['max_book_age_seconds']):blocked.append('Order book is stale or its timestamp is unavailable.')
         if first.quote_status!='quoted':blocked.append(first.quote_status+'.')
         if not first.accepting_orders or not first.order_book:blocked.append('Contract is not accepting book orders.')
-        if not 0<=status['forecast_age_days']<=status['max_forecast_age_days']:blocked.append('Forecast age exceeds the configured limit.')
         if pd.isna(first.spread) or first.spread>status['max_spread']:blocked.append('The spread is wide or missing.')
         if pd.isna(first.liquidity) or first.liquidity<status['min_liquidity']:blocked.append('Reported liquidity is below the configured limit.')
-        robust=g.stressed_edge_pp.gt(min_edge_pp);possible=g.edge_high_pp.gt(min_edge_pp)
+        usable=g.model_blocker.eq('')
+        robust=g.stressed_edge_pp.gt(min_edge_pp)&usable;possible=g.edge_high_pp.gt(min_edge_pp)&usable
         tier=('Positive stressed edge in at least one selected model' if robust.any()
               else 'Possible edge; probability bounds overlap cost' if possible.any() else 'No positive modeled edge')
         included=bool(possible.any() and not blocked)
@@ -103,11 +114,11 @@ def scan(research, run, friction_cents=2., probability_haircut_pp=2., min_edge_p
             blockers=' '.join(blocked),settlement_review=first.mapping_reason,forecast_source_review=status['forecast_source_review']))
     summary=pd.DataFrame(summary)
     if not summary.empty:summary=summary.sort_values(['question','side'],kind='stable')
-    return dict(details=detail,summary=summary,audit=pd.DataFrame(audits),settings=dict(shares=research['status']['shares'],friction_cents=friction_cents,probability_haircut_pp=probability_haircut_pp,min_edge_pp=min_edge_pp,models=selected_models,core_models=sorted(core)),method=METHOD)
+    return dict(details=detail,summary=summary,audit=pd.DataFrame(audits),settings=dict(shares=research['status']['shares'],friction_cents=friction_cents,probability_haircut_pp=probability_haircut_pp,min_edge_pp=min_edge_pp,models=selected_models,core_models=sorted(core),max_external_age_days=max_external_age_days),external=external,method=METHOD)
 
 
 READING_GUIDE = (
-    'Each model uses its own predictive distribution. State event probabilities use an analytic Gaussian CDF or full model simulations. Chamber probabilities use joint seat frequencies. A 95% margin interval is not a confidence interval for a win probability. '
+    'Local models use their own predictive distributions; external rows use published point probabilities or seat histograms, with missing confidence intervals left unavailable. State event probabilities use an analytic Gaussian CDF or full model simulations. Chamber probabilities use joint seat frequencies. A 95% margin interval is not a confidence interval for a win probability. '
     'Market midpoint is a descriptive price-based probability, not the purchase price or an objective probability. The purchase break-even probability includes depth and fees. '
     'Entry price is the average ask price for the configured number of shares, before fees. '
     'Base budget includes entry price and estimated taker fees. Extra friction is only included in the stress scenario. '
@@ -178,5 +189,8 @@ def publish(scanner,directory):
     directory=Path(directory)
     for key in ['details','summary','audit']:scanner[key].to_parquet(directory/f'scanner_{key}.parquet',index=False)
     lab.write_json(directory/'scanner_settings.json',scanner['settings'])
+    if scanner.get('external'):
+        from polymarket_external import digest
+        lab.write_json(directory/'external_forecasts.json',dict(payload=scanner['external'],sha256=digest(scanner['external'])))
     from polymarket_debug_view import publish as publish_grouped
     return publish_grouped(scanner,directory)

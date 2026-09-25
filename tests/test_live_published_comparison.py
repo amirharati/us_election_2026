@@ -98,7 +98,7 @@ class PublishedComparisonTests(unittest.TestCase):
             path=Path(temp)/'cache/published_forecasts/rttwh.json';path.parent.mkdir(parents=True)
             path.write_text(json.dumps(dict(sha256='wrong',snapshot={'changed':True})))
             self.assertIsNone(pub.cached_snapshot('rttwh'))
-            out=Path(temp)/'outputs/results/forecast/live_reports';out.mkdir(parents=True)
+            out=Path(temp)/'outputs/reports/forecast';out.mkdir(parents=True)
             (out/'published_sources.json').write_text(json.dumps({'rttwh':{'test':1}}))
             with patch.object(lab,'verify_run',return_value=out),patch.object(pub,'validate',side_effect=lambda s:s):
                 self.assertEqual(pub.cached_snapshot('rttwh'),{'test':1})

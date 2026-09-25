@@ -28,23 +28,23 @@
     },
     {
       "name": "share_published_chamber.png",
-      "sha256": "8cee18594af785130eac8bba8a97299a2aee650f5bb70052c45bb43c48011a23"
+      "sha256": "da652671e5fdd91dd62865eba2c61f6bc05e2b0495d9ea94bcefd43eaeb87475"
     },
     {
       "name": "share_compare_inside_elections_four_model_mixture.png",
-      "sha256": "6780e7b9cac4410fc1faa6890dbff6383a789fcc4c691059bddf746bd2e4a04d"
+      "sha256": "0248bf9a9bd88d75b88dead522e61ea7bc463a188b040cba8eb703e4946ecd4c"
     },
     {
       "name": "share_compare_inside_elections_gaussian_bayesian.png",
-      "sha256": "8ee04feaf04ef85ba07e32ccf1f9a9df724e582197f5a78ccf20b855a7883e7f"
+      "sha256": "937936a5249c4d403f937b61450852b7f04e309daa35edfdc3d3086bd426eb54"
     },
     {
       "name": "share_compare_race_to_the_wh_four_model_mixture.png",
-      "sha256": "64e35dd9836cc9d7e05684d90b9819257d4bcd69bc99b1ef735e99ca9a9f4404"
+      "sha256": "083fac60e884cb3c36a553010e831997a5856e72d56f1ffcf181abe3f8c29e61"
     },
     {
       "name": "share_compare_race_to_the_wh_gaussian_bayesian.png",
-      "sha256": "7e54565653e58b77a584027186fa4de04c12427f214f3896eaad294e0cd496fd"
+      "sha256": "4ca76e08355c30cc1e3f8adce00eb30ca91cf9ae702ae35e4b843c30cb2033c4"
     }
   ]
 }

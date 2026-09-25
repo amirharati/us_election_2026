@@ -144,7 +144,7 @@ See [portfolio results](docs/PORTFOLIO_RESULTS.md) for the executed historical a
 ### Saved live reports and cutoff history
 
 Notebook 04 publishes [the Markdown forecast](outputs/reports/forecast/report.md)
-and [the self-contained HTML report](outputs/reports/forecast/report.html).
+and [the HTML report with adjacent PNG images](outputs/reports/forecast/report.html).
 Both have stable paths and are replaced on each successful run. They include
 current models, state/chamber tables, the uncertainty watchlist and both-party
 control history. Supporting data live in `outputs/results/forecast/`; comparison
@@ -159,7 +159,7 @@ This is a **retrospective current-roster reconstruction**, not archived issued f
 
 See [Git storage and model updates](docs/GIT_STORAGE.md) for the compact input
 layout, current-only refresh, source-audit boundary, and model promotion behavior.
-Run all ten notebooks with `python scripts/run_notebooks.py`; this also checks
+Run all eleven notebooks with `python scripts/run_notebooks.py`; this also checks
 that none depends on the ignored legacy data trees.
 
 Browse [all daily reports](outputs/reports/history/README.md). Forecast copies are saved as

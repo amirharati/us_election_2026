@@ -193,7 +193,7 @@ def markdown_report(out, meta, seats, predictions, watchlist, history_run=None, 
     from output_publication import markdown_table
     main=seats[seats.model.eq('Bayesian')].iloc[0]
     lines=[f'# 2026 Senate forecast — {meta["as_of"]}', '',
-        '[All outputs](../../README.md) · [HTML report](report.html) · [Supporting tables](../../results/forecast/live_reports/)', '',
+        '[All outputs](../../README.md) · [HTML report](report.html) · [Supporting tables](./)', '',
         '## At a glance', '',
         f'- **D/Independent control: {main.D_control_pct:.1f}%** under the reference Gaussian model.',
         f'- **Expected D/Independent seats: {main.expected_D:.1f}**; central 70% range: **{int(main.D_lo70)}–{int(main.D_hi70)}**.',
@@ -239,8 +239,8 @@ def markdown_report(out, meta, seats, predictions, watchlist, history_run=None, 
                   'Available core models: '+', '.join(map(model_label, surprise['parameters']['available_models']))+'.', '']
         for key,title in [('polled','Adequately polled races'),('thin','Thinly polled or no recent polls')]:
             lines += ['### '+title, '', markdown_table(display_table(surprise[key])) if not surprise[key].empty else 'No qualifying races.', '']
-        lines += ['[All races and numerical scores](../../results/forecast/live_reports/surprise_all.parquet) · '
-                  '[Watchlist settings and provenance](../../results/forecast/live_reports/surprise_parameters.json)', '']
+        lines += ['[All races and numerical scores](./surprise_all.parquet) · '
+                  '[Watchlist settings and provenance](./surprise_parameters.json)', '']
     if history_run is not None:
         hm=json.loads((history_run/'run.json').read_text());history=pd.read_parquet(history_run/'control_history.parquet')
         lines += ['## Control probability over cutoff dates','',
@@ -256,19 +256,19 @@ def markdown_report(out, meta, seats, predictions, watchlist, history_run=None, 
         lines += ['## Comparison with published forecasts', '', method(published), '']
         for title, frame in sections(published):
             lines += ['### '+title, '', markdown_table(frame) if not frame.empty else 'No rows qualify or the source is unavailable. Check source status above.', '']
-        lines += ['[All matched state comparisons](../../results/forecast/live_reports/published_all_states.parquet) · '
-                  '[Publisher snapshots and provenance](../../results/forecast/live_reports/published_sources.json) · '
-                  '[Comparison settings](../../results/forecast/live_reports/published_parameters.json)', '']
+        lines += ['[All matched state comparisons](./published_all_states.parquet) · '
+                  '[Publisher snapshots and provenance](./published_sources.json) · '
+                  '[Comparison settings](./published_parameters.json)', '']
     images=sorted(out.glob('share_*.png'))
     if images:
         lines += ['## Shareable images', '', 'The tables above remain available. These PNGs are generated from the same saved results on every run.', '']
         for picture in images:
             lines += [f'![{picture.stem.removeprefix("share_").replace("_"," ")}]({picture.name})', '']
-        lines += ['[Image manifest](../../results/forecast/live_reports/share_images.json)', '']
+        lines += ['[Image manifest](./share_images.json)', '']
     lines += ['## Provenance and interpretation','',
-        '- [Forecast settings, input hash and source receipts](../../results/forecast/live_reports/forecast_metadata.json)',
-        '- [Complete state predictions](../../results/forecast/live_reports/predictions.parquet)',
-        '- [Chamber results](../../results/forecast/live_reports/seats.parquet)', '',
+        '- [Forecast settings, input hash and source receipts](./forecast_metadata.json)',
+        '- [Complete state predictions](./predictions.parquet)',
+        '- [Chamber results](./seats.parquet)', '',
         'The model retains its candidate, caucus, election-rule, historical-vintage and small-sample limitations. Probabilities are model estimates. An unchanged fitted checkpoint can produce different forecasts when polls, feature observations or the cutoff change.', '']
     (out/'report.md').write_text('\n'.join(lines))
 
@@ -337,12 +337,11 @@ def save_report(live_run, watchlist, history_run=None, surprise=None, published=
         evidence = pd.read_parquet(history_run/'evidence.parquet')
         evidence.to_parquet(out/'history_evidence.parquet',index=False)
         figure = history_figure(history);figure.savefig(out/'control_history.png',dpi=140,bbox_inches='tight');plt.close(figure)
-        encoded = base64.b64encode((out/'control_history.png').read_bytes()).decode()
         parts.extend(['<h2>Senate-control probabilities over cutoff dates</h2>',
             '<p>'+html.escape(hmeta['interpretation']+' '+hmeta['availability']+' '+hmeta['horizon'])+'</p>',
             f'<p>Feature mode: {html.escape(hmeta["feature_mode"])}. Scheduled spacing: {hmeta["every_days"]} days; '
             f'last {hmeta["last_days"]} days evaluated daily. Small changes may include Monte Carlo noise.</p>',
-            f'<img alt="Senate-control history by model and party" src="data:image/png;base64,{encoded}">',
+            f'<img alt="Senate-control history by model and party" src="control_history.png">',
             '<h3>Recent daily probabilities (%)</h3>',label_frame(recent_table(history,hmeta['last_days'])).to_html(),
             '<details><summary>All cutoff results and changes</summary>',table(history),'</details>',
             '<details><summary>Polling evidence by cutoff</summary>',table(evidence),'</details>'])
@@ -351,9 +350,8 @@ def save_report(live_run, watchlist, history_run=None, surprise=None, published=
     share_images=build_share_images(out,live_run,watchlist,surprise,published)
     parts += ['<h2>Shareable images</h2>', '<p>These PNGs are generated from the same results. The original tables remain above.</p>']
     for picture in share_images:
-        encoded=base64.b64encode(picture.read_bytes()).decode()
         label=html.escape(picture.stem.removeprefix('share_').replace('_',' '))
-        parts += [f'<details><summary>{label}</summary><img alt="{label}" src="data:image/png;base64,{encoded}"></details>']
+        parts += [f'<details><summary>{label}</summary><img alt="{label}" src="{picture.name}"></details>']
     parts.extend(['<h2>Freshness and provenance</h2>',
         '<pre>'+html.escape(json.dumps(meta,indent=2))+'</pre>'])
     page='<!doctype html><html><head><meta charset="utf-8"><title>2026 Senate forecast report</title><style>body{font-family:system-ui,sans-serif;margin:32px;line-height:1.45}table{border-collapse:collapse;font-size:13px;margin:16px 0}th,td{padding:6px 10px;border:1px solid #ddd;text-align:right}th{background:#eef2f6}details{margin:16px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere}img{max-width:100%}</style></head><body>'+''.join(parts)+'</body></html>'

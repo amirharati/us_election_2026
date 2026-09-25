@@ -135,7 +135,7 @@ def cached_snapshot(key):
     path = lab.ROOT/'cache/published_forecasts'/f'{key}.json'
     candidates = [path]
     # Portable, normalized fallback for a clone without a local download cache.
-    published = lab.ROOT/'outputs/results/forecast/live_reports'
+    published = lab.ROOT/'outputs/reports/forecast'
     if (published/'published_sources.json').exists():
         try:
             lab.verify_run(published)

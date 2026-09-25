@@ -1,0 +1,1907 @@
+{
+  "payload": {
+    "Race to the WH": {
+      "control": 0.705,
+      "expected_D": 52.5,
+      "model": "Race to the WH",
+      "published_date": "2026-09-25",
+      "races": {
+        "AK": {
+          "candidates": [
+            {
+              "name": "Peltola",
+              "p": 0.5660000000000001,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Sullivan",
+              "p": 0.434,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "AL": {
+          "candidates": [
+            {
+              "name": "Wess",
+              "p": 0.011000000000000001,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Moore",
+              "p": 0.9890000000000001,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "AR": {
+          "candidates": [
+            {
+              "name": "Shoffner",
+              "p": 0.02,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Cotton",
+              "p": 0.98,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "CO": {
+          "candidates": [
+            {
+              "name": "Hickenlooper",
+              "p": 0.985,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Baisley",
+              "p": 0.015,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "DE": {
+          "candidates": [
+            {
+              "name": "Coons",
+              "p": 0.98,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Katz",
+              "p": 0.02,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "FL": {
+          "candidates": [
+            {
+              "name": "Nixon",
+              "p": 0.262,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Moody",
+              "p": 0.738,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "GA": {
+          "candidates": [
+            {
+              "name": "Ossoff",
+              "p": 0.9440000000000001,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Collins",
+              "p": 0.055999999999999994,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "IA": {
+          "candidates": [
+            {
+              "name": "Turek",
+              "p": 0.589,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Hinson",
+              "p": 0.41100000000000003,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "ID": {
+          "candidates": [
+            {
+              "name": "Achilles",
+              "p": 0.042,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Risch",
+              "p": 0.958,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "IL": {
+          "candidates": [
+            {
+              "name": "Stratton",
+              "p": 0.975,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Tracy",
+              "p": 0.025,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "KS": {
+          "candidates": [
+            {
+              "name": "Hamilton",
+              "p": 0.368,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Marshall",
+              "p": 0.632,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "KY": {
+          "candidates": [
+            {
+              "name": "Booker",
+              "p": 0.021,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Barr",
+              "p": 0.9790000000000001,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "LA": {
+          "candidates": [
+            {
+              "name": "Davis",
+              "p": 0.10800000000000001,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Letlow",
+              "p": 0.892,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "MA": {
+          "candidates": [
+            {
+              "name": "Markey",
+              "p": 0.996,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Deaton",
+              "p": 0.004,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "ME": {
+          "candidates": [
+            {
+              "name": "Jackson",
+              "p": 0.622,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Collins",
+              "p": 0.37799999999999995,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "MI": {
+          "candidates": [
+            {
+              "name": "El-Sayed",
+              "p": 0.821,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Rogers",
+              "p": 0.179,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "MN": {
+          "candidates": [
+            {
+              "name": "Flanagan",
+              "p": 0.848,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Tafoya",
+              "p": 0.152,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "MS": {
+          "candidates": [
+            {
+              "name": "Colom",
+              "p": 0.131,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Hyde-Smith",
+              "p": 0.8690000000000001,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "MT": {
+          "candidates": [
+            {
+              "name": "Alme",
+              "p": 0.779,
+              "party": "REP",
+              "source_party": "REP"
+            },
+            {
+              "name": "Bodnar",
+              "p": 0.221,
+              "party": "IND",
+              "source_party": "IND"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "NC": {
+          "candidates": [
+            {
+              "name": "Cooper",
+              "p": 0.898,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Whatley",
+              "p": 0.102,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "NE": {
+          "candidates": [
+            {
+              "name": "Ricketts",
+              "p": 0.64,
+              "party": "REP",
+              "source_party": "REP"
+            },
+            {
+              "name": "Osborn",
+              "p": 0.36,
+              "party": "IND",
+              "source_party": "IND"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "NH": {
+          "candidates": [
+            {
+              "name": "Pappas",
+              "p": 0.862,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Sununu",
+              "p": 0.138,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "NJ": {
+          "candidates": [
+            {
+              "name": "Booker",
+              "p": 0.971,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Murphy",
+              "p": 0.028999999999999998,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "NM": {
+          "candidates": [
+            {
+              "name": "Ray Luj\u00e1n",
+              "p": 0.993,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Marker",
+              "p": 0.006999999999999999,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "OH": {
+          "candidates": [
+            {
+              "name": "Brown",
+              "p": 0.7440000000000001,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Husted",
+              "p": 0.256,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "OK": {
+          "candidates": [
+            {
+              "name": "Thomas",
+              "p": 0.008,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Hern",
+              "p": 0.992,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "OR": {
+          "candidates": [
+            {
+              "name": "Merkley",
+              "p": 0.9790000000000001,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Smith",
+              "p": 0.021,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "RI": {
+          "candidates": [
+            {
+              "name": "Reed",
+              "p": 0.9890000000000001,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "McKay",
+              "p": 0.011000000000000001,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "SC": {
+          "candidates": [
+            {
+              "name": "Andrews",
+              "p": 0.203,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Graham",
+              "p": 0.797,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "SD": {
+          "candidates": [
+            {
+              "name": "Bengs",
+              "p": 0.129,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Rounds",
+              "p": 0.871,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "TN": {
+          "candidates": [
+            {
+              "name": "Bradshaw",
+              "p": 0.01,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Hagerty",
+              "p": 0.99,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "TX": {
+          "candidates": [
+            {
+              "name": "Talarico",
+              "p": 0.775,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Paxton",
+              "p": 0.225,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "VA": {
+          "candidates": [
+            {
+              "name": "Warner",
+              "p": 0.981,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Mizusawa",
+              "p": 0.019,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "WV": {
+          "candidates": [
+            {
+              "name": "Anderson",
+              "p": 0.006999999999999999,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Moore Capito",
+              "p": 0.993,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        },
+        "WY": {
+          "candidates": [
+            {
+              "name": "Byrd",
+              "p": 0.012,
+              "party": "DEM",
+              "source_party": "DEM"
+            },
+            {
+              "name": "Hageman",
+              "p": 0.988,
+              "party": "REP",
+              "source_party": "REP"
+            }
+          ],
+          "market_weight": null,
+          "published_date": "2026-09-25",
+          "source_url": "https://www.racetothewh.com/senate/26"
+        }
+      },
+      "receipts": [
+        {
+          "sha256": "50170b87e1ca3d93421314dd3c7279508c075eb7d65bdd428bc285604f69aa13",
+          "url": "https://live-data.jifo.co/6911ecb8-c744-4464-a182-70568e288364"
+        }
+      ],
+      "refresh_status": "recent publisher cache",
+      "retrieved_at": "2026-09-25T17:50:40.561933+00:00",
+      "schema_version": 1,
+      "seat_bins": null,
+      "source_url": "https://www.racetothewh.com/senate/26"
+    },
+    "DDHQ": {
+      "control": 0.54,
+      "expected_D": 50.974887,
+      "model": "DDHQ",
+      "published_date": "2026-09-25",
+      "races": {
+        "AK": {
+          "candidates": [
+            {
+              "members": [
+                "Daniel J. Sullivan Jr.",
+                "Dan Sullivan",
+                "Gerald Heikes"
+              ],
+              "name": "",
+              "p": 0.39,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Mary Peltola"
+              ],
+              "name": "Mary Peltola",
+              "p": 0.61,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/alaska-us-senate-general-election/forecast"
+        },
+        "AL": {
+          "candidates": [
+            {
+              "members": [
+                "Barry Moore"
+              ],
+              "name": "Barry Moore",
+              "p": 0.95,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Everett Wess"
+              ],
+              "name": "Everett Wess",
+              "p": 0.05,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/alabama-us-senate-general-election/forecast"
+        },
+        "AR": {
+          "candidates": [
+            {
+              "members": [
+                "Tom Cotton"
+              ],
+              "name": "Tom Cotton",
+              "p": 0.96,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Hallie Shoffner"
+              ],
+              "name": "Hallie Shoffner",
+              "p": 0.04,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/arkansas-us-senate-general-election/forecast"
+        },
+        "CO": {
+          "candidates": [
+            {
+              "members": [
+                "Mark Baisley"
+              ],
+              "name": "Mark Baisley",
+              "p": 0.03,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "John Hickenlooper"
+              ],
+              "name": "John Hickenlooper",
+              "p": 0.97,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/colorado-us-senate-general-election/forecast"
+        },
+        "DE": {
+          "candidates": [
+            {
+              "members": [
+                "Michael Katz"
+              ],
+              "name": "Michael Katz",
+              "p": 0.01,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Chris Coons"
+              ],
+              "name": "Chris Coons",
+              "p": 0.99,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/delaware-us-senate-general-election/forecast"
+        },
+        "FL": {
+          "candidates": [
+            {
+              "members": [
+                "Ashley Moody"
+              ],
+              "name": "Ashley Moody",
+              "p": 0.78,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Angie Nixon"
+              ],
+              "name": "Angie Nixon",
+              "p": 0.22,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/florida-us-senate-special-election-general/forecast"
+        },
+        "GA": {
+          "candidates": [
+            {
+              "members": [
+                "Mike Collins"
+              ],
+              "name": "Mike Collins",
+              "p": 0.13,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Jon Ossoff"
+              ],
+              "name": "Jon Ossoff",
+              "p": 0.87,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/georgia-us-senate-general-election/forecast"
+        },
+        "IA": {
+          "candidates": [
+            {
+              "members": [
+                "Ashley Hinson"
+              ],
+              "name": "Ashley Hinson",
+              "p": 0.51,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Josh Turek"
+              ],
+              "name": "Josh Turek",
+              "p": 0.49,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/iowa-us-senate-general-election/forecast"
+        },
+        "ID": {
+          "candidates": [
+            {
+              "members": [
+                "Jim Risch"
+              ],
+              "name": "Jim Risch",
+              "p": 0.97,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Todd Achilles"
+              ],
+              "name": "Todd Achilles",
+              "p": 0.03,
+              "party": "IND",
+              "source_party": "I"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/idaho-us-senate-general-election/forecast"
+        },
+        "IL": {
+          "candidates": [
+            {
+              "members": [
+                "Don Tracy"
+              ],
+              "name": "Don Tracy",
+              "p": 0.04,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Juliana Stratton"
+              ],
+              "name": "Juliana Stratton",
+              "p": 0.96,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/illinois-us-senate-general-election/forecast"
+        },
+        "KS": {
+          "candidates": [
+            {
+              "members": [
+                "Roger Marshall"
+              ],
+              "name": "Roger Marshall",
+              "p": 0.77,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Adam Hamilton"
+              ],
+              "name": "Adam Hamilton",
+              "p": 0.23,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/kansas-us-senate-general-election/forecast"
+        },
+        "KY": {
+          "candidates": [
+            {
+              "members": [
+                "Andy Barr"
+              ],
+              "name": "Andy Barr",
+              "p": 0.95,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Charles Booker"
+              ],
+              "name": "Charles Booker",
+              "p": 0.05,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/kentucky-us-senate-general-election/forecast"
+        },
+        "LA": {
+          "candidates": [
+            {
+              "members": [
+                "Julia Letlow"
+              ],
+              "name": "Julia Letlow",
+              "p": 0.89,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Jamie Davis"
+              ],
+              "name": "Jamie Davis",
+              "p": 0.11,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/louisiana-us-senate-general-election/forecast"
+        },
+        "MA": {
+          "candidates": [
+            {
+              "members": [
+                "John Deaton"
+              ],
+              "name": "John Deaton",
+              "p": 0.01,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Edward Markey"
+              ],
+              "name": "Edward Markey",
+              "p": 0.99,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/massachusetts-us-senate-general-election/forecast"
+        },
+        "ME": {
+          "candidates": [
+            {
+              "members": [
+                "Susan Collins"
+              ],
+              "name": "Susan Collins",
+              "p": 0.46,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Troy Jackson"
+              ],
+              "name": "Troy Jackson",
+              "p": 0.54,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/maine-us-senate-general-election/forecast"
+        },
+        "MI": {
+          "candidates": [
+            {
+              "members": [
+                "Mike Rogers"
+              ],
+              "name": "Mike Rogers",
+              "p": 0.3,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Abdul El-Sayed"
+              ],
+              "name": "Abdul El-Sayed",
+              "p": 0.7,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/michigan-us-senate-general-election/forecast"
+        },
+        "MN": {
+          "candidates": [
+            {
+              "members": [
+                "Michele Tafoya"
+              ],
+              "name": "Michele Tafoya",
+              "p": 0.13,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Peggy Flanagan"
+              ],
+              "name": "Peggy Flanagan",
+              "p": 0.87,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/minnesota-us-senate-general-election/forecast"
+        },
+        "MS": {
+          "candidates": [
+            {
+              "members": [
+                "Cindy Hyde-Smith"
+              ],
+              "name": "Cindy Hyde-Smith",
+              "p": 0.93,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Scott Colom"
+              ],
+              "name": "Scott Colom",
+              "p": 0.07,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/mississippi-us-senate-general-election/forecast"
+        },
+        "MT": {
+          "candidates": [
+            {
+              "members": [
+                "Kurt Alme"
+              ],
+              "name": "Kurt Alme",
+              "p": 0.9,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Seth Bodnar"
+              ],
+              "name": "Seth Bodnar",
+              "p": 0.1,
+              "party": "IND",
+              "source_party": "I"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/montana-us-senate-general-election/forecast"
+        },
+        "NC": {
+          "candidates": [
+            {
+              "members": [
+                "Michael Whatley"
+              ],
+              "name": "Michael Whatley",
+              "p": 0.19,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Roy Cooper"
+              ],
+              "name": "Roy Cooper",
+              "p": 0.81,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/north-carolina-us-senate-general-election/forecast"
+        },
+        "NE": {
+          "candidates": [
+            {
+              "members": [
+                "Pete Ricketts"
+              ],
+              "name": "Pete Ricketts",
+              "p": 0.83,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Dan Osborn"
+              ],
+              "name": "Dan Osborn",
+              "p": 0.17,
+              "party": "IND",
+              "source_party": "I"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/nebraska-us-senate-general-election/forecast"
+        },
+        "NH": {
+          "candidates": [
+            {
+              "members": [
+                "John Sununu"
+              ],
+              "name": "John Sununu",
+              "p": 0.19,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Chris Pappas"
+              ],
+              "name": "Chris Pappas",
+              "p": 0.81,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/new-hampshire-us-senate-general-election/forecast"
+        },
+        "NJ": {
+          "candidates": [
+            {
+              "members": [
+                "Justin Murphy"
+              ],
+              "name": "Justin Murphy",
+              "p": 0.04,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Cory Booker"
+              ],
+              "name": "Cory Booker",
+              "p": 0.96,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/new-jersey-us-senate-general-election/forecast"
+        },
+        "NM": {
+          "candidates": [
+            {
+              "members": [
+                "Larry Marker"
+              ],
+              "name": "Larry Marker",
+              "p": 0.04,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Ben Ray Lujan"
+              ],
+              "name": "Ben Ray Lujan",
+              "p": 0.96,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/new-mexico-us-senate-general-election/forecast"
+        },
+        "OH": {
+          "candidates": [
+            {
+              "members": [
+                "Jon Husted"
+              ],
+              "name": "Jon Husted",
+              "p": 0.49,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Sherrod Brown"
+              ],
+              "name": "Sherrod Brown",
+              "p": 0.51,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/ohio-us-senate-special-election-general/forecast"
+        },
+        "OK": {
+          "candidates": [
+            {
+              "members": [
+                "Kevin Hern"
+              ],
+              "name": "Kevin Hern",
+              "p": 0.99,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "N'Kiyla Thomas"
+              ],
+              "name": "N'Kiyla Thomas",
+              "p": 0.01,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/oklahoma-us-senate-general-election/forecast"
+        },
+        "OR": {
+          "candidates": [
+            {
+              "members": [
+                "David Smith"
+              ],
+              "name": "David Smith",
+              "p": 0.01,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Jeff Merkley"
+              ],
+              "name": "Jeff Merkley",
+              "p": 0.99,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/oregon-us-senate-general-election/forecast"
+        },
+        "RI": {
+          "candidates": [
+            {
+              "members": [
+                "Raymond McKay"
+              ],
+              "name": "Raymond McKay",
+              "p": 0.01,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Jack Reed"
+              ],
+              "name": "Jack Reed",
+              "p": 0.99,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/rhode-island-us-senate-general-election/forecast"
+        },
+        "SC": {
+          "candidates": [
+            {
+              "members": [
+                "Darline Graham"
+              ],
+              "name": "Darline Graham",
+              "p": 0.73,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Annie Andrews"
+              ],
+              "name": "Annie Andrews",
+              "p": 0.27,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/south-carolina-us-senate-general-election/forecast"
+        },
+        "SD": {
+          "candidates": [
+            {
+              "members": [
+                "Mike Rounds"
+              ],
+              "name": "Mike Rounds",
+              "p": 0.97,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Brian Bengs"
+              ],
+              "name": "Brian Bengs",
+              "p": 0.03,
+              "party": "IND",
+              "source_party": "I"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/south-dakota-us-senate-general-election/forecast"
+        },
+        "TN": {
+          "candidates": [
+            {
+              "members": [
+                "Bill Hagerty"
+              ],
+              "name": "Bill Hagerty",
+              "p": 0.97,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Marquita Bradshaw"
+              ],
+              "name": "Marquita Bradshaw",
+              "p": 0.03,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/tennessee-us-senate-general-election/forecast"
+        },
+        "TX": {
+          "candidates": [
+            {
+              "members": [
+                "Ken Paxton"
+              ],
+              "name": "Ken Paxton",
+              "p": 0.44,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "James Talarico"
+              ],
+              "name": "James Talarico",
+              "p": 0.56,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/texas-us-senate-general-election/forecast"
+        },
+        "VA": {
+          "candidates": [
+            {
+              "members": [
+                "Bert Mizusawa"
+              ],
+              "name": "Bert Mizusawa",
+              "p": 0.04,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Mark Warner"
+              ],
+              "name": "Mark Warner",
+              "p": 0.96,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/virginia-us-senate-general-election/forecast"
+        },
+        "WV": {
+          "candidates": [
+            {
+              "members": [
+                "Shelley Moore Capito"
+              ],
+              "name": "Shelley Moore Capito",
+              "p": 1.0,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "Rachel Anderson"
+              ],
+              "name": "Rachel Anderson",
+              "p": 0.0,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/west-virginia-us-senate-general-election/forecast"
+        },
+        "WY": {
+          "candidates": [
+            {
+              "members": [
+                "Harriet Hageman"
+              ],
+              "name": "Harriet Hageman",
+              "p": 0.99,
+              "party": "REP",
+              "source_party": "R"
+            },
+            {
+              "members": [
+                "James Byrd"
+              ],
+              "name": "James Byrd",
+              "p": 0.01,
+              "party": "DEM",
+              "source_party": "D"
+            }
+          ],
+          "market_weight": 0.25,
+          "published_date": "2026-09-25",
+          "source_url": "https://votes.decisiondeskhq.com/races/2026-11-03/wyoming-us-senate-general-election/forecast"
+        }
+      },
+      "receipts": [
+        {
+          "sha256": "2ca561173dce1067b6da6843eef804da4dec9d027da30393e190353416bd4b78",
+          "url": "https://votes.decisiondeskhq.com/forecast/2026/senate"
+        },
+        {
+          "sha256": "9e201d58f1cf3658c9e85cc2f9a5776d552f0e9d7a68223004e94497a20f1e87",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/alabama-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "725c31d64d5723bc910f96b1e4e38a0b9ab64d7cf76171d77df09d947a5f0e20",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/alaska-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "506e873e4e3c422804c41a45b446f914dde92b8ebfb75fc54779a02e7c8359ff",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/arkansas-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "4d39588151596903bc9c2039281cb6960d3572842ed46e395f06b4bad2b48ae5",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/colorado-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "cab56f4d05ed135e3f02b699c364076378d848611aa9612c7267c79ca7855b58",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/delaware-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "16bc1f8b12f44bff0c87ad99b9b71362d97074076ddcbfed33cb9be6fb76842e",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/florida-us-senate-special-election-general/forecast"
+        },
+        {
+          "sha256": "9d6a8187b1c41731039052b0e16ec8068d92447d4220892977f22423180b5417",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/georgia-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "5a357c86a8a69dd55a238b329af09fb226866ed828554018dd9f57db4dc31980",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/idaho-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "edbe09a1ece38548b7ca6bfe861d4cc0eb02b56f95ebfa945335832df170a81a",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/illinois-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "67067720f7eed9c1985975cd3542a2885ef0137e1185a16f6c87d5fae96aacc7",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/iowa-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "f7045143b50e681be1b5b744aa7084270a2fe328bfa9e1f0bef0d288a6c6e4f4",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/kansas-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "d367f1ff3890e177f2e1c9dcfe0666b763d1669b8ab9c140136c02912265ab26",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/kentucky-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "3dbe22403cf17bbd63752ca02db98264ec2880952dc8051221994d6b74420540",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/louisiana-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "9e6e80f03e71ec18cf0967d1960ef8852db09e95c1af3d7fea9d730041a6af24",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/maine-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "3c397e0e6f39cb40e8a0eb95e6881b501f5d08767f7d48429547b09c5cc5131e",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/massachusetts-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "8a328f27561ce2eb0408d2141de2b80f4bd49be9b56d8b451988e59ea687e3da",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/michigan-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "55c84f5e76a8e69b4d17a89ee4aef101896c390bb3d5de5c73f8805275d76570",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/minnesota-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "25c63163eb26ef83adc0e78dec2b671a1b2a682113aef0865850d8f11c522edb",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/mississippi-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "83e188e47dd7d28d61ffc060eecc1df386efddd811f32e5a10ae4809fdb1e6a6",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/montana-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "3ade2d5598228118c3930dfb5512e4a6c43c5195c34d14eb112cd7d7def6561b",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/nebraska-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "b031d36e5698e51f9dacf042bcf714f16c041b82a49702eb5978585a22d2c544",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/new-hampshire-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "23efc30ed81d59c85d842e0e3f6bea4f267e32a2b8c8de8cfc03ac79d4f4bc6f",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/new-jersey-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "951c0a38824cc733f3e0a67977a2bf69f8ede49c00e689b344844bbdf1fc869a",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/new-mexico-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "83ba788ebeea8f947f1ecbcce61af40da4f1c754f66233ecb7c209131b1b1a66",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/north-carolina-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "b39af04b06c26794dfa0d9e59706b832f6b9ada0ac984bb1572f5fb18c819dd0",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/ohio-us-senate-special-election-general/forecast"
+        },
+        {
+          "sha256": "e897e06b480f43e2d2ce6a8143703b453b52a77031d0048cb0ba539d0bbb37a1",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/oklahoma-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "4bba2c3817c8b66a9e7e9c103ee8cf83b8f66234ac30aab0fc4707eff5153269",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/oregon-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "e5580bf692f505b956f153fb75fe1d0f77f42362a89a9329a21daed85495a17b",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/rhode-island-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "7079adee328599cb866d5681f56489285bc17bd3a5aeae1f3877ab67479d56b3",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/south-carolina-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "b2c2685b9cef860ee96d7b32371a4b8e197415d0bc0994a2670cc582a90a1dbe",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/south-dakota-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "bd5e1f9d11b4f8ffd118ad9a423c24de7ac65a52ca0ee591ea6d4c3186998968",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/tennessee-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "c60cb4e1dddb7d17479bf262ca025d52d4e338fe348752f2a7ee2e5250f8f8b5",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/texas-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "e96139238bcb9ef8c7311a10d8d5766e41cceb13669af315e94e84b3eb9e0516",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/virginia-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "2bf9e97331253669a93205305bc533c3c146fb120325bfebf54259d43503c49b",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/west-virginia-us-senate-general-election/forecast"
+        },
+        {
+          "sha256": "126da7c782ce9a766e73ed2de19e3c739b8f04fa4d211e913e130a3654d42b38",
+          "url": "https://votes.decisiondeskhq.com/races/2026-11-03/wyoming-us-senate-general-election/forecast"
+        }
+      ],
+      "refresh_status": "recent publisher cache",
+      "retrieved_at": "2026-09-25T17:50:46.538171+00:00",
+      "schema_version": 1,
+      "seat_bins": [
+        {
+          "D": 69,
+          "R": 31,
+          "count": 5
+        },
+        {
+          "D": 68,
+          "R": 32,
+          "count": 28
+        },
+        {
+          "D": 67,
+          "R": 33,
+          "count": 93
+        },
+        {
+          "D": 66,
+          "R": 34,
+          "count": 221
+        },
+        {
+          "D": 65,
+          "R": 35,
+          "count": 496
+        },
+        {
+          "D": 64,
+          "R": 36,
+          "count": 1005
+        },
+        {
+          "D": 63,
+          "R": 37,
+          "count": 1768
+        },
+        {
+          "D": 62,
+          "R": 38,
+          "count": 3305
+        },
+        {
+          "D": 61,
+          "R": 39,
+          "count": 5588
+        },
+        {
+          "D": 60,
+          "R": 40,
+          "count": 9025
+        },
+        {
+          "D": 59,
+          "R": 41,
+          "count": 14091
+        },
+        {
+          "D": 58,
+          "R": 42,
+          "count": 21310
+        },
+        {
+          "D": 57,
+          "R": 43,
+          "count": 31184
+        },
+        {
+          "D": 56,
+          "R": 44,
+          "count": 43190
+        },
+        {
+          "D": 55,
+          "R": 45,
+          "count": 57258
+        },
+        {
+          "D": 54,
+          "R": 46,
+          "count": 72342
+        },
+        {
+          "D": 53,
+          "R": 47,
+          "count": 85801
+        },
+        {
+          "D": 52,
+          "R": 48,
+          "count": 95874
+        },
+        {
+          "D": 51,
+          "R": 49,
+          "count": 99225
+        },
+        {
+          "D": 50,
+          "R": 50,
+          "count": 96882
+        },
+        {
+          "D": 49,
+          "R": 51,
+          "count": 89097
+        },
+        {
+          "D": 48,
+          "R": 52,
+          "count": 76547
+        },
+        {
+          "D": 47,
+          "R": 53,
+          "count": 62252
+        },
+        {
+          "D": 46,
+          "R": 54,
+          "count": 47221
+        },
+        {
+          "D": 45,
+          "R": 55,
+          "count": 33162
+        },
+        {
+          "D": 44,
+          "R": 56,
+          "count": 22172
+        },
+        {
+          "D": 43,
+          "R": 57,
+          "count": 14080
+        },
+        {
+          "D": 42,
+          "R": 58,
+          "count": 8136
+        },
+        {
+          "D": 41,
+          "R": 59,
+          "count": 4454
+        },
+        {
+          "D": 40,
+          "R": 60,
+          "count": 2272
+        },
+        {
+          "D": 39,
+          "R": 61,
+          "count": 1096
+        },
+        {
+          "D": 38,
+          "R": 62,
+          "count": 503
+        },
+        {
+          "D": 37,
+          "R": 63,
+          "count": 214
+        },
+        {
+          "D": 36,
+          "R": 64,
+          "count": 86
+        },
+        {
+          "D": 35,
+          "R": 65,
+          "count": 15
+        },
+        {
+          "D": 34,
+          "R": 66,
+          "count": 2
+        }
+      ],
+      "simulation_draws": 1000000,
+      "source_url": "https://votes.decisiondeskhq.com/forecast/2026/senate"
+    }
+  },
+  "sha256": "49b14ba40ac4e3a47bd907f3ccaea6932b318dac35fb43c840a7820afeb5639c"
+}

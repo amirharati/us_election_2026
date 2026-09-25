@@ -1,6 +1,6 @@
 # 2026 Senate forecast — 2026-09-25
 
-[All outputs](../../README.md) · [HTML report](report.html) · [Supporting tables](../../results/forecast/live_reports/)
+[All outputs](../../README.md) · [HTML report](report.html) · [Supporting tables](./)
 
 ## At a glance
 
@@ -144,7 +144,7 @@ Available core models: Gaussian Bayesian, Matched Student-t (df5), Older Gaussia
 | OR     | D               |        24.20 | 9.3 to 39.1      |             0.10 |                6.60 |                 9.70 | 0 / 0                  | The largest miss was 9.7 pp in 2020. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.  | Model disagreement ranks #3 in this group. There are no recent eligible polls.                                                                                                                                                                                           |
 | SD     | R               |       -27.30 | -43.8 to -10.7   |             0.10 |                9.90 |                11.50 | 1 / 1                  | The largest miss was 32.0 pp in 2016. 1 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Model disagreement ranks #2 in this group. Predictive uncertainty ranks #3 in this group. Past margin error ranks #1 in this group. Recent polling is limited. 1 of 3 past results fell outside the 95% range.                                                           |
 
-[All races and numerical scores](../../results/forecast/live_reports/surprise_all.parquet) · [Watchlist settings and provenance](../../results/forecast/live_reports/surprise_parameters.json)
+[All races and numerical scores](./surprise_all.parquet) · [Watchlist settings and provenance](./surprise_parameters.json)
 
 ## Control probability over cutoff dates
 
@@ -168,11 +168,11 @@ This section is generated from publisher feeds on each live rerun. It compares t
 
 ### Source dates and availability
 
-| Source                 | URL                                                            | Status            | Published   | Retrieved                        | Error   | Coverage                                                                                                                                     |   Days before our cutoff |
-|:-----------------------|:---------------------------------------------------------------|:------------------|:------------|:---------------------------------|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------|-------------------------:|
-| Silver Bulletin Deluxe | https://www.natesilver.net/p/expert-ratings-are-ignoring-signs | fresh_check_cache | 2026-09-20  | 2026-09-25T16:01:10.670734+00:00 |         | Rounded Deluxe Senate-control probability from public text. State probabilities and expected seats are subscriber-only and unavailable here. |                        5 |
-| Race to the WH         | https://www.racetothewh.com/senate/26                          | fresh_check_cache | 2026-09-24  | 2026-09-25T16:01:11.239327+00:00 |         | State and chamber forecasts                                                                                                                  |                        1 |
-| Inside Elections       | https://insideelections.com/ratings/senate/                    | fresh_check_cache | 2026-09-17  | 2026-09-25T16:01:12.973259+00:00 |         | Public race ratings                                                                                                                          |                        8 |
+| Source                 | URL                                                            | Status        | Published   | Retrieved                        | Error   | Coverage                                                                                                                                     |   Days before our cutoff |
+|:-----------------------|:---------------------------------------------------------------|:--------------|:------------|:---------------------------------|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------|-------------------------:|
+| Silver Bulletin Deluxe | https://www.natesilver.net/p/expert-ratings-are-ignoring-signs | offline_cache | 2026-09-20  | 2026-09-25T16:01:10.670734+00:00 |         | Rounded Deluxe Senate-control probability from public text. State probabilities and expected seats are subscriber-only and unavailable here. |                        5 |
+| Race to the WH         | https://www.racetothewh.com/senate/26                          | offline_cache | 2026-09-24  | 2026-09-25T16:01:11.239327+00:00 |         | State and chamber forecasts                                                                                                                  |                        1 |
+| Inside Elections       | https://insideelections.com/ratings/senate/                    | offline_cache | 2026-09-17  | 2026-09-25T16:01:12.973259+00:00 |         | Public race ratings                                                                                                                          |                        8 |
 
 ### Senate control and expected seats
 
@@ -230,7 +230,7 @@ This section is generated from publisher feeds on each live rerun. It compares t
 
 No rows qualify or the source is unavailable. Check source status above.
 
-[All matched state comparisons](../../results/forecast/live_reports/published_all_states.parquet) · [Publisher snapshots and provenance](../../results/forecast/live_reports/published_sources.json) · [Comparison settings](../../results/forecast/live_reports/published_parameters.json)
+[All matched state comparisons](./published_all_states.parquet) · [Publisher snapshots and provenance](./published_sources.json) · [Comparison settings](./published_parameters.json)
 
 ## Shareable images
 
@@ -258,12 +258,12 @@ The tables above remain available. These PNGs are generated from the same saved 
 
 ![watch thin](share_watch_thin.png)
 
-[Image manifest](../../results/forecast/live_reports/share_images.json)
+[Image manifest](./share_images.json)
 
 ## Provenance and interpretation
 
-- [Forecast settings, input hash and source receipts](../../results/forecast/live_reports/forecast_metadata.json)
-- [Complete state predictions](../../results/forecast/live_reports/predictions.parquet)
-- [Chamber results](../../results/forecast/live_reports/seats.parquet)
+- [Forecast settings, input hash and source receipts](./forecast_metadata.json)
+- [Complete state predictions](./predictions.parquet)
+- [Chamber results](./seats.parquet)
 
 The model retains its candidate, caucus, election-rule, historical-vintage and small-sample limitations. Probabilities are model estimates. An unchanged fitted checkpoint can produce different forecasts when polls, feature observations or the cutoff change.

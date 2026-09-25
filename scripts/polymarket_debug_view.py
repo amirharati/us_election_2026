@@ -19,7 +19,7 @@ def build(scanner):
     d=scanner['details'];s=scanner['summary'];a=scanner['audit'];shares=scanner['settings']['shares']
     if d.empty or s.empty:return pd.DataFrame()
     eligible={(str(r.market_id),r.side):r.blockers for r in s.itertuples()}
-    selected=set(d.loc[d.apply(lambda r:not eligible.get((str(r.market_id),r.side),'Unavailable') and pd.notna(r.edge_low_pp) and r.edge_low_pp>scanner['settings']['min_edge_pp'],axis=1),'market_id'])
+    selected=set(d.loc[d.apply(lambda r:not eligible.get((str(r.market_id),r.side),'Unavailable') and not r.get('model_blocker','') and pd.notna(r.edge_low_pp) and r.edge_low_pp>scanner['settings']['min_edge_pp'],axis=1),'market_id'])
     records=[]
     for market in sorted(selected,key=lambda mid:(str(s[s.market_id.eq(mid)].iloc[0].question),str(mid))):
         header=s[s.market_id.eq(market)].iloc[0]
@@ -29,8 +29,9 @@ def build(scanner):
                 audit=a[a.market_id.eq(market)&a.model.eq(model)]
                 base=dict(market_id=market,question=header.question,url=header.url,side=side,model=model,model_label=model_label(model),shares=shares,friction_cents=scanner['settings']['friction_cents'],haircut_pp=scanner['settings']['probability_haircut_pp'])
                 if rows.empty:
-                    records.append({**base,'status':'Unavailable','reason':audit.iloc[0].reason if len(audit) else 'No saved comparison.'});continue
-                r=rows.iloc[0];blocked=eligible.get((str(market),side),'Missing quote eligibility.')
+                    records.append({**base,'status':'Unavailable','reason':audit.iloc[0].reason if len(audit) else 'No saved comparison.',
+                                    'publisher_date':audit.iloc[0].get('publisher_date') if len(audit) else None});continue
+                r=rows.iloc[0];blocked=eligible.get((str(market),side),'Missing quote eligibility.') or r.get('model_blocker','')
                 status=('Unavailable' if blocked or pd.isna(r.effective_cost) else 'Positive after stress' if r.stressed_edge_pp>scanner['settings']['min_edge_pp']
                         else 'Negative expected profit' if r.edge_high_pp<0 else 'Positive before stress only' if r.edge_low_pp>0 else 'Bounds overlap cost')
                 cost=r.effective_cost
@@ -42,7 +43,7 @@ def build(scanner):
                     'reward_to_risk':(1-cost)/cost if pd.notna(cost) and cost>0 else None,
                     'return_low_pct':r.edge_low_pp/cost if pd.notna(cost) and cost>0 else None,'return_high_pct':r.edge_high_pp/cost if pd.notna(cost) and cost>0 else None,
                     'forecast_mean_margin_pp':r.get('forecast_mean_margin_pp'),'margin_lo95_pp':r.margin_lo95_pp,'margin_hi95_pp':r.margin_hi95_pp,
-                    'probability_kind':r.probability_kind})
+                    'probability_kind':r.probability_kind,'publisher_date':r.get('publisher_date'),'publisher_url':r.get('publisher_url'),'market_weight':r.get('market_weight')})
     return pd.DataFrame(records)
 
 
@@ -69,7 +70,7 @@ def table(group):
     return pd.DataFrame(rows)
 
 
-MODEL_CODES={'Bayesian':'GB','Matched Student-t (df5)':'ST','Older Gaussian':'OG','Student-t research helper':'OT','Non-Bayesian corrected':'EB','Four-model mixture':'MX',
+MODEL_CODES={'Race to the WH':'RTWH','DDHQ':'DDHQ','Bayesian':'GB','Matched Student-t (df5)':'ST','Older Gaussian':'OG','Student-t research helper':'OT','Non-Bayesian corrected':'EB','Four-model mixture':'MX',
              **{f'Corrected {x}%':f'G{x}' for x in [10,20,40,50]},**{f'Mixture + polling {x}%':f'M{x}' for x in [5,10,20,30,40,50]}}
 STATUS_CODES={'Positive after stress':'GO','Positive before stress only':'WEAK','Bounds overlap cost':'UNC','Negative expected profit':'NEG','Unavailable':'N/A'}
 COLORS={'GO':'#e0f2e7','NEG':'#fbe3e3','N/A':'#eeeeee','WEAK':'#fff2cc','UNC':'#fff2cc'}
@@ -124,7 +125,7 @@ def payoff_table(group):
 COMPACT_GUIDE=('Y = buy Yes; N = buy No. P = model probability that the selected side pays $1 under the contract condition; it is not confidence that the model is correct. EV = base expected net profit after purchase depth and estimated fees. Budget and win/loss payoffs use those base costs. '
                'Stress adds the extra friction scenario and applies the probability haircut to the model probability. GO (green) survives stress; WEAK (amber) is positive before stress only; '
                'UNC (amber) is unresolved; NEG (red) is negative in expectation; N/A (gray) is unavailable. '
-               'P comes from the full predictive distribution. Simulation estimates have sampling error. All model rows are independent comparisons; there is no combined score.')
+               'Local P comes from the full predictive distribution. External P is a published point estimate or seat-histogram probability; equal endpoints are not a confidence interval. Simulation estimates have sampling error. All model rows are independent comparisons; there is no combined score.')
 
 
 def scenario_note(frame):
@@ -133,13 +134,24 @@ def scenario_note(frame):
     return f'Base: quoted ask depth plus estimated fees. Stress only: add {r.friction_cents:g}¢ per share and reduce the selected-side probability by {r.haircut_pp:g} percentage points (minimum zero).'
 
 
+def external_notes(group):
+    notes=[]
+    for model,g in group.groupby('model',sort=False):
+        if model not in ['Race to the WH','DDHQ']:continue
+        r=g.iloc[0];date=r.get('publisher_date')
+        prefix=MODEL_CODES[model]+(' ('+str(date)+')' if pd.notna(date) else '')
+        notes.append(prefix+': '+r.reason)
+    return notes
+
+
 def html(frame):
     if frame.empty:return CSS+'<div class="scan">No markets pass the initial screen.</div>'
     parts=[CSS,'<div class="scan"><h3>Model codes</h3>',small_html(legend_tables(frame)),'<p>'+escape(COMPACT_GUIDE)+'</p>','<p><b>'+escape(scenario_note(frame))+'</b></p>']
     for (mid,question),g in frame.groupby(['market_id','question'],sort=False):
         parts += ['<section style="border-top:2px solid #7d8792;margin-top:20px;padding-top:8px">',
                   f'<h3>{escape(question)}</h3><p>Contract {escape(str(mid))} · {g.iloc[0].shares:g} shares per position · <a href="{escape(g.iloc[0].url,quote=True)}">Market rules</a></p>',
-                  small_html(payoff_table(g)),small_html(grouped_table(g),True),'</section>']
+                  small_html(payoff_table(g)),small_html(grouped_table(g),True),
+                  *['<p>'+escape(n)+'</p>' for n in external_notes(g)],'</section>']
     return ''.join(parts)+'</div>'
 
 
@@ -156,11 +168,16 @@ def publish(scanner,directory):
     frame.to_parquet(directory/'scanner_grouped.parquet',index=False)
     (directory/'scanner_grouped.html').write_text('<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grouped model-market scan</title></head><body>'+html(frame)+'</body></html>')
     lines=['# All model-market pairs grouped by market','',COMPACT_GUIDE,'',scenario_note(frame),'']
+    external_lines=[]
+    if scanner.get('external'):
+        from polymarket_external import METHOD,status_table
+        external_lines=['## External forecast sources','',METHOD,'',status_table(scanner['external']).to_markdown(index=False),'','[Normalized publisher snapshot and receipts](external_forecasts.json)','']
+        lines+=external_lines
     if not frame.empty:
         lines += ['## Model codes','',legend_tables(frame).to_markdown(index=False),'']
         for (mid,question),g in frame.groupby(['market_id','question'],sort=False):
-            lines += [f'## {question}',f'Contract {mid}; {g.iloc[0].shares:g} shares per position.','',payoff_table(g).to_markdown(index=False),'',grouped_table(g).fillna('—').to_markdown(index=False,floatfmt='.2f'),'']
+            lines += [f'## {question}',f'Contract {mid}; {g.iloc[0].shares:g} shares per position.','',payoff_table(g).to_markdown(index=False),'',grouped_table(g).fillna('—').to_markdown(index=False,floatfmt='.2f'),'',*external_notes(g),'']
     else:lines+=['No market passes the initial screen.']
     (directory/'scanner_initial.md').write_text('\n'.join(lines)+'\n')
-    return ['## All model-market pairs grouped by market','',f'{frame.market_id.nunique() if not frame.empty else 0} markets. All models and both sides appear together in five-column tables.','',
+    return external_lines+['## All model-market pairs grouped by market','',f'{frame.market_id.nunique() if not frame.empty else 0} markets. All models and both sides appear together in five-column tables.','',
         '[Colored grouped tables](scanner_grouped.html) · [Markdown tables and model legend](scanner_initial.md) · [Full numeric detail](scanner_grouped.parquet) · [Coverage audit](scanner_audit.parquet)','']

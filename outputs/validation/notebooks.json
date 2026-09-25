@@ -74,7 +74,7 @@
     "notebook": "11_live_polymarket.ipynb",
     "status": "passed",
     "legacy_data_reads_blocked": true,
-    "seconds": 36.03,
-    "notebook_sha256": "c63c364df8baa4edd0da72ef235d71be5edebeaf525c71fd22b2fa9ecefff3ce"
+    "seconds": 13.07,
+    "notebook_sha256": "b349d8bc803eb024af9ca5cd5e1b797a61afeb6b09fbdf41d5865f144b0ad7ed"
   }
 ]

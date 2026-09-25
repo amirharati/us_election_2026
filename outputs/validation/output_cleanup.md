@@ -1,3 +1,21 @@
+# Git storage cleanup — September 25, 2026
+
+Current Git-eligible files total **75.4 MiB**, down from the earlier **136.6 MiB** inventory (about 45% smaller). This measures the next complete file snapshot, not compressed push traffic or existing Git history.
+
+- Saved models and compact historical/current data remain tracked.
+- Full predictive draws remain in ignored local cache. Published live bundles retain probabilities, intervals, covariance matrices, seat frequencies and verified manifests.
+- A clean export with no cache rebuilt full simulations offline and verified unchanged predictions/seat tables. Its subsequent six-model scan evaluated 2,970 model–contract pairs with network calls and repeated inference blocked.
+- Latest forecast and market bundles now have one canonical report location. Old duplicate folders and two optional legacy audit CSV exports are untracked and ignored; local copies remain.
+- Dated reports and their images remain tracked. No tracked HTML report embeds duplicate base64 PNGs.
+- All 112 tests passed. Notebook 11 reran and saved successfully (13.07 seconds). Forecast reports were regenerated from the existing forecast, without refreshing inputs or retraining. Public manifests, notebook execution checksum and report links verified.
+- No Git LFS, history rewrite, commit or push was performed. Existing commits still contain their original files.
+
+See [storage policy and clone behavior](../../docs/GIT_STORAGE.md).
+
+---
+
+The earlier validation below describes the September 21 layout before later features were added.
+
 # Output cleanup validation — September 21, 2026
 
 [All outputs](../README.md) · [Notebook execution details](notebooks.md) · [Latest Markdown forecast](../reports/forecast/report.md)

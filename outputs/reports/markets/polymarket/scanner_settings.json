@@ -7,12 +7,15 @@
     "Bayesian",
     "Matched Student-t (df5)",
     "Four-model mixture",
-    "Mixture + polling 10%"
+    "Mixture + polling 10%",
+    "Race to the WH",
+    "DDHQ"
   ],
   "core_models": [
     "Bayesian",
     "Matched Student-t (df5)",
     "Older Gaussian",
     "Student-t research helper"
-  ]
+  ],
+  "max_external_age_days": 3
 }
