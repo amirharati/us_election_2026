@@ -1,0 +1,58 @@
+{
+  "kind": "live_report",
+  "as_of": "2026-10-29",
+  "live_run": "cache/runs/live/20261029T124042.029821Z",
+  "live_manifest_sha256": "cc4f25f4378a210d829f95ced4f2c84b699a6f7809bb467ace603654cdf391ff",
+  "published_parameters": {
+    "source_manifest_sha256": "cc4f25f4378a210d829f95ced4f2c84b699a6f7809bb467ace603654cdf391ff",
+    "comparison_code_sha256": "e41089ca3df4c79a4ceac31ac1cbe2355f8c5b3327e2e26b48bb168315e2a33c",
+    "candidate_review_sha256": "41823413247ac7dd5eca2a81747b823d3eafb266a48d6aab3ca13f58a9a557ba",
+    "cutoff": "2026-10-29",
+    "models": [
+      "Bayesian",
+      "Four-model mixture"
+    ],
+    "gap_pp": 15,
+    "confidence": 0.75,
+    "independent_states": [
+      "ID",
+      "MT",
+      "NE",
+      "SD"
+    ],
+    "independent_policy": "D_plus_independent_combined_side; no double counting of publisher D column"
+  },
+  "watchlist_parameters": {
+    "recent_days": 30,
+    "min_width_pp": 25.0,
+    "min_samples": 3,
+    "min_firms": 2
+  },
+  "surprise_parameters": {
+    "as_of": "2026-10-29",
+    "recent_days": 30,
+    "min_samples": 3,
+    "min_firms": 2,
+    "top_n": 3,
+    "core_models": [
+      "Bayesian",
+      "Matched Student-t (df5)",
+      "Older Gaussian",
+      "Student-t research helper",
+      "Non-Bayesian corrected"
+    ],
+    "available_models": [
+      "Bayesian",
+      "Matched Student-t (df5)",
+      "Older Gaussian",
+      "Student-t research helper",
+      "Non-Bayesian corrected"
+    ],
+    "history_sha256": "e168daabc2efeccb4db025386f8ed78ea4e4ab9a7d7f49e37716352a4e027d86",
+    "historical_scope": "state, not necessarily same Senate seat",
+    "historical_scenario": "matched_live",
+    "source_manifest_sha256": "cc4f25f4378a210d829f95ced4f2c84b699a6f7809bb467ace603654cdf391ff"
+  },
+  "history_run": "cache/runs/control_history/20261029T124218.490555Z",
+  "history_manifest_sha256": "de23cad2cc45b21a9f56032f55500d2facd1935d27a6208569b23e3b00301ba6"
+}

@@ -1,0 +1,50 @@
+{
+  "cutoff": "2026-10-05",
+  "live_manifest_sha256": "dd3c83489d7d9a2478b0b54d759f3e1239a54e53e3f5d042aa17fa47a74c3d99",
+  "files": [
+    {
+      "name": "share_chamber.png",
+      "sha256": "22bf4b442ce17e8db2b552e0e5cb3af18a4d40922f8a7c75d09fdd103d99ba52"
+    },
+    {
+      "name": "share_state_margins.png",
+      "sha256": "02ad3025f3515622a4f2fbb5f28af759536b2bda038facc0a40f3c511070e481"
+    },
+    {
+      "name": "share_state_probabilities.png",
+      "sha256": "beb13bf74eefc72023b4be48e3dcb5de15d47fca80e7688dfa72240817ca9361"
+    },
+    {
+      "name": "share_uncertainty.png",
+      "sha256": "8f3882a82e5cdbe04274b2b69e424c51791ff81610435bd39a69f1726f9a6e8e"
+    },
+    {
+      "name": "share_watch_polled.png",
+      "sha256": "700947ad1cd217d7357ad7d9fdea3b5220eb04c9bd916969851f6344d7f9c5b3"
+    },
+    {
+      "name": "share_watch_thin.png",
+      "sha256": "2add38c0630cbbc76c2df5181b976d6d5eeb68df59a40fb3d59b815401fce3fc"
+    },
+    {
+      "name": "share_published_chamber.png",
+      "sha256": "af0ce7bda93b9517a227ef2ed6cccc561774362e122714ebd76897ff7b334185"
+    },
+    {
+      "name": "share_compare_inside_elections_four_model_mixture.png",
+      "sha256": "8afec99400ca3db2fd8399a4082c4bbdd9ce549ae6e5f8aff3f8bf1956943ddb"
+    },
+    {
+      "name": "share_compare_inside_elections_gaussian_bayesian.png",
+      "sha256": "6e907d5cac3f7ef2a1278b81db7828e3cb2b4884afc5fbdaa57f20a26d6e32c0"
+    },
+    {
+      "name": "share_compare_race_to_the_wh_four_model_mixture.png",
+      "sha256": "ad46d1c05ca08c1bf34af3e1f43a0bbd08c3571b2290fc82f04752208fde883a"
+    },
+    {
+      "name": "share_compare_race_to_the_wh_gaussian_bayesian.png",
+      "sha256": "542ceb2b887e6c311ea73893a1509d5feb3db699216699240e0e8f70a0c2a665"
+    }
+  ]
+}

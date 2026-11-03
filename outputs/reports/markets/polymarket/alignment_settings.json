@@ -1,0 +1,19 @@
+{
+  "models": [
+    "Bayesian",
+    "Matched Student-t (df5)",
+    "Four-model mixture",
+    "Mixture + polling 10%",
+    "Race to the WH",
+    "DDHQ"
+  ],
+  "common_states": 34,
+  "states_with_quotes": 34,
+  "market_retrieved_at": "2026-09-25T21:30:17.076515+00:00",
+  "forecast_cutoff": "2026-09-25",
+  "unrepresented_states": [
+    "WV"
+  ],
+  "max_spread": 0.1,
+  "min_liquidity": 2000
+}

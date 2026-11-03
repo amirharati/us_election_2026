@@ -1,0 +1,110 @@
+[
+  {
+    "cell_type": "markdown",
+    "source": "# Live2026 forecast \u2014 cached downloads and fresh inference\n\n**Run All checks source freshness every time.** Public sources are downloaded when the successful-check cache is older than six hours; FORCE=True bypasses that cache. Changed sources trigger cleanup/alignment and new predictions. All outputs are timestamped.\n\nFailed providers use verified cached data with explicit stale status. STRICT=True fails instead. OFFLINE=True deliberately disables downloads. The table below distinguishes checks from the dates of actual observations. Do not describe a cached feature as newly observed.\n\nThe2026 model checkpoint, historical fits and normalizers stay fixed. New polls and feature values update its inference. Political control after its September17 review is explicitly carried forward as a scenario assumption. Candidate changes remain subject to the reviewed screening policy."
+  },
+  {
+    "cell_type": "code",
+    "source": "from pathlib import Path\nimport sys, json, importlib\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom IPython.display import display\nROOT = next(p for p in [Path.cwd(), Path.cwd().parent] if (p/'election_lab.py').exists())\nsys.path.insert(0, str(ROOT))\nimport election_lab as lab\nimport model_portfolio\n# Refresh inference and display helpers when Run All uses an existing kernel.\nimportlib.reload(lab)\nimportlib.reload(model_portfolio)\nimport model_labels\nimportlib.reload(model_labels)\nfrom model_labels import display, model_label, MODEL_GUIDE\npd.set_option('display.max_rows', 40)\n\nFORCE = False\nOFFLINE = False\nSTRICT = False\nINCLUDE_STUDENT = True\nTTL_HOURS = 6\nTIMEOUT_SECONDS = 15\nimport importlib\nimport live_share_images\n\n# Polling-coverage rules used consistently by charts and watchlists.\nRECENT_DAYS = 30\nMIN_95_WIDTH_PP = 25.0\nMIN_RECENT_SAMPLES = 3\nMIN_RECENT_FIRMS = 2\n\n# Reload ingestion fixes when reusing a live kernel.\nimport current_poll_review, prepare_data, normalize_data, compact_data\nfor module in [current_poll_review, prepare_data, normalize_data, compact_data]:\n    importlib.reload(module)\n"
+  },
+  {
+    "cell_type": "markdown",
+    "source": "## 1. Download/check, prepare and predict\n\nThis is the entire supported data-to-model handoff. Verbose download/preparation output is saved to the run log. A failed preparation preserves the last successful forecast."
+  },
+  {
+    "cell_type": "code",
+    "source": "RUN=lab.run_logged(lab.refresh,force=FORCE,offline=OFFLINE,strict=STRICT,ttl_hours=TTL_HOURS,timeout=TIMEOUT_SECONDS,include_student=INCLUDE_STUDENT)\nmeta=json.loads((RUN/'run.json').read_text())\nprint('Forecast:',RUN.relative_to(ROOT),'| Cutoff:',meta['as_of'])\nprint('Training through:',meta['trained_through'],'| Political review:',meta['political_reference_reviewed_through'],'| Carried forward:',meta['political_context_carried_forward'])\nSHARE_DIR = ROOT/'cache/share_images'/RUN.name\n"
+  },
+  {
+    "cell_type": "markdown",
+    "source": "## 2. Freshness and screened evidence\n\nA successful online check can find unchanged data. Stale-cache status is a download failure, not a fresh observation. Current labels remain missing; poll/sample exclusions remain visible."
+  },
+  {
+    "cell_type": "code",
+    "source": "from IPython.display import HTML\nfrom source_status import format_source_status\n\nfresh = format_source_status(meta['freshness']['sources'])\ndisplay(HTML(fresh.to_html(index=False, escape=True)))\naudit = pd.read_parquet(RUN/'poll_audit.parquet')\ndisplay(audit.baseline_status.value_counts().rename('answer_or_question_versions'))\ndisplay(pd.read_parquet(RUN/'feature_scores.parquet').round(3))\nprint('Missing score fields:', meta['missing_current_feature_scores'])\n"
+  },
+  {
+    "cell_type": "markdown",
+    "source": "## All-state polling audit\nIndependent candidates retain their IND affiliation. The table audits every Senate state, including those without polls."
+  },
+  {
+    "cell_type": "code",
+    "source": "from live_poll_audit import build_poll_audit, METHOD as POLL_SIDE_METHOD\npoll_coverage = build_poll_audit(RUN)\nprint(POLL_SIDE_METHOD)\ndisplay(HTML(poll_coverage['summary'].to_html(index=False, escape=True)))\nprint('Reasons for excluded questions:')\ndisplay(HTML(poll_coverage['reasons'].to_html(index=False, escape=True)))\nprint(\"All-state integrity checks:\")\ndisplay(HTML(poll_coverage[\"checks\"].to_html(index=False, escape=True)))\nprint(\"Reviewed qualifications (partial ballots, aliases, date bounds):\")\ndisplay(HTML(poll_coverage[\"flags\"].to_html(index=False, escape=True)))\n"
+  },
+  {
+    "cell_type": "markdown",
+    "source": "## 3. Full chamber forecast\n\nThe final Gaussian is the reference. Both Student versions and the older Gaussian are alternatives, all updated with the same evidence. The fixed25%-each mixture represents model uncertainty. Its20% polling adjustment translates means only; it preserves mixture covariance. Older Gaussian-only polling blends remain in saved data.\n\nPoint totals count positive means; expected totals sum win probabilities. D control requires51 seats. The non-Bayesian helper alone uses independent-state chamber uncertainty. These are exploratory alternatives, not independently validated winners."
+  },
+  {
+    "cell_type": "code",
+    "source": "# Reload chart styling even when this cell runs in an existing kernel.\nimport importlib, live_share_images\nimportlib.reload(live_share_images)\n\nfrom IPython.display import Markdown\ndisplay(Markdown(MODEL_GUIDE))\ntables=lab.display_tables(RUN)\nDISPLAY_MODELS=['Bayesian','Matched Student-t (df5)','Older Gaussian','Student-t research helper','Non-Bayesian corrected','Four-model mixture','Mixture + polling 20%']\nseats=tables['seats'].set_index('model').reindex([m for m in DISPLAY_MODELS if m in tables['seats'].model.values]).reset_index()\nseats['D control %']=100*seats.p_D_control\ndisplay(seats[['model','point_D','point_R','expected_D','D control %','D_lo70','D_hi70']].round(3))\nlive_share_images.display_images(live_share_images.chamber_images(seats, SHARE_DIR, meta['as_of']))\n"
+  },
+  {
+    "cell_type": "markdown",
+    "source": "## 4. State margins and probabilities\n\nPositive D\u2212R margins favor Democrats. Unpolled states remain in the model; their estimates rely on priors and cross-state information. Blend percentages are sensitivities, not a selected new main forecast.\n\nThe margin chart shows the four-model mixture mean, its central 68% (thick) and 95% (thin) predictive intervals, and a separate panel of average pairwise margin disagreement among its four components. The probability chart shows mixture win probabilities. Row guides align each race across panels.\n"
+  },
+  {
+    "cell_type": "code",
+    "source": "# Reload chart styling even when this cell runs in an existing kernel.\nimport importlib, live_share_images\nimportlib.reload(live_share_images)\n\nprint('D/Independent\u2212R margins (pp)')\nshow=[m for m in DISPLAY_MODELS if m in tables['margins'].columns]\ndisplay(tables['margins'][show].round(2))\nprint('D/Independent win probabilities (%)')\ndisplay(tables['probabilities'][show].round(1))\nfrom live_uncertainty_watchlist import build_watchlist\nstate_coverage = build_watchlist(RUN, DISPLAY_MODELS, recent_days=RECENT_DAYS,\n    min_width_pp=MIN_95_WIDTH_PP, min_samples=MIN_RECENT_SAMPLES, min_firms=MIN_RECENT_FIRMS)\nlive_share_images.display_images(live_share_images.state_images(\n    tables, show, SHARE_DIR, meta['as_of'], coverage=state_coverage))\n"
+  },
+  {
+    "cell_type": "markdown",
+    "source": "## 4b. Florida: lower Republican turnout scenarios\n\nOne-poll sensitivity using [ActiVote\u2019s October 17\u201327 release](https://www.activote.net/polls/2026/fl-u-s-senate/2026-10-27/): Moody 53%, Nixon 47%; Republican share 45%, Democratic share 32% (R+13). Among Republicans, 97% support Moody and 3% Nixon.\n\nTargets **R+3, R+5, R+8 and R+10** are Republican minus Democratic electorate shares. Reduce Republican voter counts only; hold Democratic/independent counts and each group's preferences fixed, then renormalize. Fewer Republican voters (%) is relative to the baseline Republican voter count, not a turnout-rate percentage-point change.\n\nAnchor the published 53\u201347 topline because rounded party crosstabs do not reconstruct it exactly; group the residual share with independent/other voters. These are deterministic poll scenarios, **not model forecasts or win probabilities**. Live forecasts and chamber totals remain unchanged. This dated poll stays fixed on reruns; subgroup sampling uncertainty is not simulated."
+  },
+  {
+    "cell_type": "code",
+    "source": "import importlib\nimport florida_turnout_sensitivity as fl_turnout\nimportlib.reload(fl_turnout)\n\nFL_TARGET_GAPS_PP = [3, 5, 8, 10]\nfl_scenarios = pd.DataFrame([fl_turnout.simulate(g) for g in [13, *FL_TARGET_GAPS_PP]])\nfl_display = fl_scenarios.rename(columns={\n    'target_r_minus_d_pp': 'R minus D electorate (pp)',\n    'republican_share_pct': 'Republican share (%)',\n    'democratic_share_pct': 'Democratic share (%)',\n    'independent_other_share_pct': 'Independent/other share (%)',\n    'republican_turnout_reduction_pct': 'Fewer Republican voters (%)',\n    'moody_pct': 'Moody (%)',\n    'nixon_pct': 'Nixon (%)',\n    'moody_minus_nixon_pp': 'Moody minus Nixon (pp)',\n})\nprint('ActiVote October 27 baseline, followed by lower-GOP-turnout scenarios.')\ndisplay(fl_display.round(2))"
+  },
+  {
+    "cell_type": "markdown",
+    "source": "## 5. Wide uncertainty despite recent polling\n\nThis watchlist ranks **uncertainty in the margin**, not closeness to a 50/50 win probability. It uses this run's cutoff and dataset, so Run All automatically updates the list after refreshing data.\n\nDefaults: an eligible poll ending within **30 days** (age 0\u201330 inclusive), and a **95% interval at least 25 percentage points wide**. A stronger-coverage flag requires **3 distinct recent samples from at least 2 identified firms**. These adjustable thresholds are descriptive, not learned. Dates are field-end dates; unknown publication dates retain the forecast's existing screening policy. Multiple question versions from the same sample count once.\n\nThe first table shows qualifying states under the main Gaussian. The second applies the same filter to every displayed model. `watchlist['recent']` retains all recently polled states and models, including those below the width threshold; `watchlist['broad']` contains all qualifying rows. Positive margins mean D\u2212R in percentage points.\n\nMissing polls can leave broad priors; one recent poll does not eliminate sparse-evidence uncertainty. Wide intervals alone do **not** establish fat tails or a likely political shock. The non-Bayesian helper has a common error spread across states, and mean-only blends preserve their base distribution's centered uncertainty. Student intervals use saved sampled quantiles, not a Gaussian approximation.\n"
+  },
+  {
+    "cell_type": "code",
+    "source": "# Reload chart styling even when this cell runs in an existing kernel.\nimport importlib, live_share_images\nimportlib.reload(live_share_images)\n\nfrom live_uncertainty_watchlist import build_watchlist\n\n\nwatchlist = build_watchlist(\n    RUN, DISPLAY_MODELS, recent_days=RECENT_DAYS, min_width_pp=MIN_95_WIDTH_PP,\n    min_samples=MIN_RECENT_SAMPLES, min_firms=MIN_RECENT_FIRMS,\n)\nprint(f\"As of {watchlist['as_of']}: recent = age 0\u2013{RECENT_DAYS} days; \"\n      f\"broad = 95% interval width \u2265 {MIN_95_WIDTH_PP:g} pp\")\nprint(f\"Stronger coverage = \u2265{MIN_RECENT_SAMPLES} samples from \u2265{MIN_RECENT_FIRMS} firms.\")\nmain_watch = watchlist['broad'].query(\"model == 'Bayesian'\")\nif main_watch.empty:\n    print('No main-model states meet both the recency and width filters.')\nelse:\n    display(main_watch[['contest', 'latest_poll', 'recent_samples', 'recent_firms',\n                        'stronger_coverage', 'prediction_pp', 'lo95_pp', 'hi95_pp',\n                        'width95_pp']].set_index('contest').round(1))\nwith pd.option_context('display.max_colwidth', None):\n    display(watchlist['summary'].set_index('model'))\n\nlive_share_images.display_images(live_share_images.uncertainty_images(main_watch, SHARE_DIR, meta['as_of']))\n"
+  },
+  {
+    "cell_type": "markdown",
+    "source": "## 5b. Races to watch: likely outcome and room for a surprise\n\nTwo tables separate adequate polling from thin/no recent polling. Each lists the likely winner, reference-model margin and 95% range, probability the other party wins, average core-model disagreement, and predictive standard deviation. Zero-recent-poll races remain eligible.\n\nWithin each group, we take the union of the top three races for disagreement, predictive uncertainty, other-winner probability, and historical mean absolute error (requiring at least two past races). Reasons explain each selection; this is a descriptive screen, not an estimated probability of surprising the public. Historical context uses up to three past **state** races in September backtests (not necessarily the same Senate seat), excluding the current cycle. Past misses do not change current forecasts."
+  },
+  {
+    "cell_type": "code",
+    "source": "# Reload chart styling even when this cell runs in an existing kernel.\nimport importlib, live_share_images\nimportlib.reload(live_share_images)\n\nfrom pathlib import Path\nimport sys, importlib\nfrom IPython.display import Markdown\nfrom model_labels import display\n\nROOT = next(p for p in [Path.cwd(), *Path.cwd().parents] if (p / 'election_lab.py').exists())\nif str(ROOT) not in sys.path:\n    sys.path.insert(0, str(ROOT))\nimport election_lab as lab\nfrom model_labels import display, model_label\nimport live_uncertainty_watchlist\nimport live_surprise_watchlist\nimportlib.reload(live_uncertainty_watchlist)\nimportlib.reload(live_surprise_watchlist)\nfrom live_surprise_watchlist import build_surprise_watchlist, render_table, METHOD\n\nif 'RUN' not in globals():\n    RUN = lab.latest_run('live')\nsurprise = build_surprise_watchlist(\n    RUN, recent_days=globals().get('RECENT_DAYS', 30),\n    min_samples=globals().get('MIN_RECENT_SAMPLES', 3),\n    min_firms=globals().get('MIN_RECENT_FIRMS', 2), top_n=3,\n)\ndisplay(Markdown(METHOD))\nprint('Forecast cutoff:', surprise['parameters']['as_of'])\nprint('Core models:', ', '.join(map(model_label, surprise['parameters']['available_models'])))\nfor key, title in [('polled', 'Adequately polled races'), ('thin', 'Thinly polled / no recent polls')]:\n    display(Markdown('### ' + title))\n    display(render_table(surprise[key]))\n    live_share_images.display_images(live_share_images.watch_images(surprise[key], key, SHARE_DIR, surprise['parameters']['as_of']))\n"
+  },
+  {
+    "cell_type": "markdown",
+    "source": "## 5c. Compare with published forecasts\n\nThis cell automatically retrieves Race to the WH probabilities, Inside Elections ratings, and a dated public Silver Bulletin Deluxe Senate-control probability. Silver\u2019s state forecasts and expected seats are not available in the public text. It compares Senate control, expected seats, and state races. It selects different favored winners and large probability gaps using the thresholds below. Full sentences explain each selection. Source dates, unavailable sources, and excluded contests are shown. The same comparison is saved in the report; no text or forecast values need to be entered manually.\n\nIndependent candidates count on the D/Independent side for this comparison. Separate D and independent win probabilities are added once. This assumption is recorded in the report."
+  },
+  {
+    "cell_type": "code",
+    "source": "# Reload chart styling even when this cell runs in an existing kernel.\nimport importlib, live_share_images\nimportlib.reload(live_share_images)\n\nfrom live_published_comparison import build_published_comparison, render_comparison\n\nPUBLISHED_GAP_PP = 15\nPUBLISHED_RATING_CONFIDENCE = .75\nPUBLISHED_MODELS = ('Bayesian', 'Four-model mixture')\npublished = build_published_comparison(\n    RUN, offline=OFFLINE, force=FORCE, ttl_hours=TTL_HOURS, timeout=TIMEOUT_SECONDS,\n    gap_pp=PUBLISHED_GAP_PP, confidence=PUBLISHED_RATING_CONFIDENCE, models=PUBLISHED_MODELS,\n)\ndisplay(render_comparison(published))\nlive_share_images.display_images(live_share_images.published_images(published, SHARE_DIR, meta['as_of']))\n"
+  },
+  {
+    "cell_type": "markdown",
+    "source": "## 6. Senate-control probabilities over cutoff dates\n\nReconstruct the direction of the forecast from January2026: evaluate every `HISTORY_EVERY_DAYS` days **plus each of the last three calendar days**, always including the endpoint. The default30-day grid is inexpensive; change it to7 for weekly detail. All models in the current live run are included, including every retained mean-shift weight. Republican control includes a50\u201350 Senate under the assumed Republican VP tie-break, so the two control probabilities sum to100%.\n\n**This is a retrospective fixed-model replay, not a history of forecasts issued at the time.** Trained coefficients, priors, normalizers, hyperparameters, roster and screening rules stay fixed. Each cutoff rescreens polls by field-end and known release dates and recomputes decay. Unknown release dates use field-end dates; later archives cannot perfectly reconstruct publication availability or old candidate choices. `dated` also recomputes economic/approval features from reference periods ending by that cutoff, using today's revised source history. Those reference periods do not guarantee publication availability. `fixed_latest` is an optional polling-only sensitivity that deliberately holds today's features fixed.\n\nThe models were calibrated at September/October horizons, so January probabilities are exploratory. Small daily movements, particularly for Student models, may include Monte Carlo noise. The lines connect evaluated cutoffs, not daily forecasts between those dates. Student models run their actual samplers and convergence checks. Unchanged cutoff inputs reuse verified caches; changed inputs recompute.\n\nA current-only HTML report is saved before the history starts, so it remains available even if a later replay fails. The following section then saves the complete report with the history. No existing forecast artifact is overwritten.\n"
+  },
+  {
+    "cell_type": "code",
+    "source": "import importlib, live_forecast_report\nimportlib.reload(live_forecast_report)\nfrom live_forecast_report import run_history, history_figure, recent_table, save_report\n\nHISTORY_START = '2026-01-01'\nHISTORY_EVERY_DAYS = 30\nHISTORY_LAST_DAYS = 3\nHISTORY_FEATURE_MODE = 'dated'  # or 'fixed_latest' to isolate polling changes\nHISTORY_FORCE = False\n\nCURRENT_REPORT = save_report(RUN, watchlist, surprise=surprise, published=published)\nprint('Current report saved:', CURRENT_REPORT/'report.html')\nHISTORY_RUN = run_history(\n    RUN, start=HISTORY_START, every_days=HISTORY_EVERY_DAYS,\n    last_days=HISTORY_LAST_DAYS, feature_mode=HISTORY_FEATURE_MODE, force=HISTORY_FORCE,\n)\ncontrol_history = pd.read_parquet(HISTORY_RUN/'control_history.parquet')\nprint('Last daily cutoff probabilities (%), both parties and all models:')\ndisplay(recent_table(control_history, HISTORY_LAST_DAYS))\nfig = history_figure(control_history)\nSHARE_DIR.mkdir(parents=True, exist_ok=True)\nfig.savefig(SHARE_DIR/'control_history.png', dpi=160, bbox_inches='tight')\nplt.show()\nplt.close(fig)\n"
+  },
+  {
+    "cell_type": "markdown",
+    "source": "## 7. Save the complete report\n\nEvery Run All saves a timestamped **self-contained HTML report** with the current chamber/state forecasts, uncertainty watchlist, both-party control-history plots, recent daily tables, all cutoff results, polling coverage and provenance. Its chart is embedded, so the HTML file can be shared on its own. Machine-readable Parquet tables and a PNG chart are saved alongside it. The latest published report is under `outputs/reports/forecast/`; dated reports are under `outputs/reports/history/`.\n\nShareable PNG images are generated automatically for chamber results, state forecasts, watchlists and published comparisons. The original tables remain available. PNGs are saved alongside the latest report and frozen in the dated report folder.\n"
+  },
+  {
+    "cell_type": "code",
+    "source": "import os\n\nREPORT = save_report(RUN, watchlist, HISTORY_RUN, surprise=surprise, published=published)\nprint('Complete report saved:', REPORT/'report.html')\nlab.verify_run(REPORT)\n\nprint('Shareable PNGs:', ROOT/'outputs/reports/forecast')\nprint('Dated reports and images:', ROOT/'outputs/reports/history')\n"
+  },
+  {
+    "cell_type": "markdown",
+    "source": "## 8. Saved provenance and uncertainty checks\n\nThe entire run can be reopened by its path without following a later pointer. For an offline fresh recomputation use `python run.py live --offline`. For exact original research numbers use notebook01 instead."
+  },
+  {
+    "cell_type": "code",
+    "source": "lab.verify_run(RUN)\npred=pd.read_parquet(RUN/'predictions.parquet')\nassert pred.actual_pp.isna().all()\nif (RUN/'all_model_diagnostics.parquet').exists():\n    d=pd.read_parquet(RUN/'all_model_diagnostics.parquet')\n    display(d.groupby('model')[['rhat','bulk_ess','tail_ess']].agg(['min','max']).round(3))\nprint('Run manifest verified. No2026 outcomes were used. Historical comparisons: notebooks07/08.')"
+  },
+  {
+    "cell_type": "markdown",
+    "source": "## Saved reports\n\n[Read the published report](../outputs/reports/forecast/report.md) \u00b7 [All outputs and dated reports](../outputs/README.md)\n"
+  }
+]
