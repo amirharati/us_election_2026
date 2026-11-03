@@ -15,6 +15,22 @@ import release_refresh as refresh
 
 
 class ReleaseTests(unittest.TestCase):
+    def test_failed_logged_run_prints_log_and_preserves_exception(self):
+        import contextlib, io
+        with tempfile.TemporaryDirectory() as tmp, patch.object(lab,'ROOT',Path(tmp)):
+            output=io.StringIO()
+            error=ValueError('review required')
+            def fail():
+                print('preparation started')
+                raise error
+            with contextlib.redirect_stdout(output), self.assertRaises(ValueError) as caught:
+                lab.run_logged(fail)
+            self.assertIs(caught.exception,error)
+            logs=list((Path(tmp)/'cache/logs').glob('*.txt'))
+            self.assertEqual(len(logs),1)
+            self.assertEqual(logs[0].read_text(),'preparation started\n')
+            self.assertIn(str(logs[0].relative_to(tmp)),output.getvalue())
+
     def test_weight_and_covariance(self):
         mu=np.array([-2.,4.]);other=np.array([3.,-1.]);cov=np.array([[9.,-1.],[-1.,4.]])
         draws=np.random.default_rng(3).multivariate_normal(mu,cov,1000)

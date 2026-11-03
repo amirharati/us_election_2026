@@ -8,6 +8,34 @@ import pandas as pd
 
 
 class RaceIdentityTests(unittest.TestCase):
+    def test_reviewed_colorado_identity_and_matchup_are_selected(self):
+        from prepare_data import select_current
+        review=json.loads((lab.ROOT/'config/candidate_review_2026.json').read_text())
+        base=pd.read_parquet(lab.ROOT/'data/compact/current/feeds/senate.parquet')
+        template=base.iloc[0].fillna('').to_dict()
+        rows=[]
+        for name,candidate_id,party,pct in [
+            ('John Hickenlooper','decc7707-5bbc-44fe-a5ce-2adf5d67f9cc','DEM','57'),
+            ('Mark Baisley','7bf1f953-a811-441a-8929-ac75dd06f9b4','REP','39'),
+        ]:
+            rows.append(dict(template,state='CO',race_id='fe24b75f-0b09-4c0a-afdf-805b480929f7',
+                cycle='2026',office_type='U.S. Senate',stage='general',election_date='2026-11-03',
+                poll_id='colorado-review-regression',question_id='colorado-matchup',
+                start_date='10/9/26',end_date='10/20/26',created_at='11/2/26 11:09',
+                candidate_name=name,answer=name,candidate_id=candidate_id,party=party,pct=pct,
+                hypothetical='',ranked_choice_round='',ranked_choice_reallocated='FALSE',ranked_choice_final='FALSE'))
+        validate_race_ids([],rows,review)
+        questions,_=current_questions(rows,review,date(2026,11,2))
+        select_current(questions,date(2026,11,2),14)
+        self.assertEqual(len(questions),1)
+        self.assertTrue(questions[0]['accepted_matchup'])
+        self.assertTrue(questions[0]['scalar_seat_mapping_ready'])
+        self.assertEqual(questions[0]['selection'],'selected')
+        self.assertEqual(questions[0]['dem_rep_margin'],18)
+        rows[0]['race_id']='unreviewed-colorado-race'
+        with self.assertRaisesRegex(ValueError,'CO: unreviewed-colorado-race'):
+            validate_race_ids([],rows,review)
+
     def test_registered_identity_does_not_accept_candidate_matchup(self):
         review=json.loads((lab.ROOT/'config/candidate_review_2026.json').read_text())
         review['contests']['LA']['candidates']=[]

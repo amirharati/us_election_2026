@@ -74,7 +74,15 @@
     "notebook": "11_live_polymarket.ipynb",
     "status": "passed",
     "legacy_data_reads_blocked": true,
-    "seconds": 14.55,
-    "notebook_sha256": "660dff0c83adf79a02e7a5320745fdcd148b10ee32bd96e34d6c67ee8a180668"
+    "seconds": 13.16,
+    "notebook_sha256": "6f657b071e0b8b7b7b8d21c6873a8d666d458fe2c9b967496857da650e9698ec"
+  },
+  {
+    "notebook": "12_historical_polymarket_backtest.ipynb",
+    "status": "passed",
+    "legacy_data_reads_blocked": true,
+    "seconds": 110.64,
+    "recovery_copy": "cache/notebook_history/12_historical_polymarket_backtest/20260927T011809384959Z-executed.ipynb",
+    "notebook_sha256": "d12c6f115ed1c16438c5415e59a51a537a93d9ad3e28067269305338b9f809b4"
   }
 ]

@@ -1,24 +1,5485 @@
 {
   "generic_ballot": {
-    "added_poll_ids": [],
+    "added_poll_ids": [
+      "901966",
+      "901967",
+      "901968",
+      "901969",
+      "901971",
+      "901973",
+      "901974",
+      "901975",
+      "901976",
+      "901978",
+      "901979",
+      "901980",
+      "901981"
+    ],
     "counts": {
-      "added": 0,
+      "added": 13,
       "removed": 0,
-      "revised": 0
+      "revised": 666
     },
     "removed_poll_ids": [],
-    "revised_fields": [],
-    "revised_poll_ids": []
+    "revised_fields": [
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89437"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89445"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89491"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89497"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89522"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89530"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89553"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89555"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89560"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89566"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89579"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89590"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89596"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89602"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89604"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89624"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89685"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89690"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89718"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89719"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89744"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89745"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89766"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89821"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89825"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89881"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89882"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "89897"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90014"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90016"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90022"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900267"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900268"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900272"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900276"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900279"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900289"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900299"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900331"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900347"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900354"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900355"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900361"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900375"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900377"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90039"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900394"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900398"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900421"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900429"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900442"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900443"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900464"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900471"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900505"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900510"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900513"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900514"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900524"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90053"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900534"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900538"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90056"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900568"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90057"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900570"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900575"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900590"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900612"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900618"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900621"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90063"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900639"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900640"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900643"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900665"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900680"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900689"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900696"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900698"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900731"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900736"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900739"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90074"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900746"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900757"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900759"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90076"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900765"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900777"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900784"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900790"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900793"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900800"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900802"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900806"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900810"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900812"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900816"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900817"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900826"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900827"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90083"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900830"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900831"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900834"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900836"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900841"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900842"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900843"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900846"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900848"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900856"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900862"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900870"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900877"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900879"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900880"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900881"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900883"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900884"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900885"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900888"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900898"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900900"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900901"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900905"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900910"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900911"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900913"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900919"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900920"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900924"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900929"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900931"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900932"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900945"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900947"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900948"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900949"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900950"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900951"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900952"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900955"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900956"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900958"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900960"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900964"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900970"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900973"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900974"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900976"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900979"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900980"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900985"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900988"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900993"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900995"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "900996"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901006"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901007"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901009"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901010"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901012"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901016"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901019"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901022"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901024"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901028"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901029"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901030"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901032"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901037"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901038"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901039"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901047"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901048"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901049"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901051"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901053"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901057"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901058"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901059"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901061"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901062"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901066"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901070"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|question_id|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901071"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901072"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901074"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901075"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901078"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901081"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901087"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901091"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901092"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901093"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901094"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901099"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901102"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901104"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901105"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901106"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901108"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901111"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901112"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901113"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901115"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901116"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901121"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901127"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901129"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901130"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901131"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901133"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901134"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901137"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901139"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901141"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901147"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901148"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901149"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901150"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901151"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901161"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901163"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901173"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901176"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901177"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901181"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901182"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901183"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901188"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901190"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901191"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901194"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901196"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901197"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901198"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901201"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901202"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901203"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901204"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901208"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901210"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901211"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901212"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901216"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901222"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901227"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901231"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901239"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901240"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901242"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901243"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901244"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901245"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901296"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901298"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901302"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901306"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901313"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901315"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901318"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901322"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901328"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901332"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901334"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901336"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901340"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901342"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901343"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901349"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901353"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901355"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901357"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901360"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901365"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901369"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901370"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901372"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901373"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901374"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901375"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901376"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901377"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901380"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901381"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901385"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901387"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901388"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901389"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901394"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901397"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901399"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901401"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901402"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901403"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901405"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901406"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901407"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901415"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901417"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901419"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901422"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901423"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901424"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901425"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901426"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901427"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901428"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901429"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901431"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901432"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901433"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901435"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901441"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901444"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901445"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901447"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901448"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901449"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901452"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901453"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901455"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901460"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901463"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901467"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901468"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901469"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901477"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901478"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901480"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901481"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901483"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901484"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901485"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901486"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901490"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901492"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901493"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901495"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901503"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901508"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901509"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901511"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901513"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901514"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901515"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901516"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901520"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901521"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901524"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901525"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901533"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901534"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901537"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901538"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901540"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901541"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901545"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901547"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901548"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901552"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901553"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901554"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901555"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901557"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901559"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901560"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901566"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901568"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901569"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901575"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901577"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901578"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901579"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901580"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901581"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901584"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901585"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901590"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901594"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901596"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901598"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901600"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901602"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901605"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901606"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90161"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901610"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901612"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901614"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901617"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901620"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901621"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901623"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901624"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901628"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901629"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901633"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901634"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901636"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901637"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901638"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901639"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901640"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901645"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901657"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901658"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90166"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901660"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901662"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901663"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901665"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901666"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901667"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901668"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901672"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901676"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901677"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901678"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901682"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901684"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901685"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901686"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901687"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901693"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901698"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901700"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901701"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901705"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901706"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901707"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901712"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901714"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901715"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901716"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901720"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901722"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901723"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901724"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901729"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901732"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901733"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901734"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901736"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901737"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901741"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901748"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901749"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901751"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901752"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901757"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901758"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901761"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901762"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901765"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901766"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901768"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901775"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901776"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901777"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901778"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901780"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901781"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901786"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901789"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901793"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901798"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901799"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90180"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901801"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901803"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901804"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901806"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901811"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901812"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901813"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901814"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901816"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901818"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901819"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901820"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901822"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901824"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901825"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901826"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901829"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90183"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901830"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901831"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901835"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901837"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901838"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901841"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901843"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901844"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901845"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901847"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901848"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901855"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901856"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901857"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90186"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901863"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901864"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901865"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901866"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901869"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901870"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901871"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901872"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901875"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901877"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901879"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901884"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901887"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901888"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 2,
+        "note": "",
+        "old_rows": 2,
+        "poll_id": "901889"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901890"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901894"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901896"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901898"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901899"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901903"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901904"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901905"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901907"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901908"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901909"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 2,
+        "note": "",
+        "old_rows": 2,
+        "poll_id": "901912"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901915"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901917"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901918"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901922"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901925"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901926"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901927"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901929"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901931"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901932"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901933"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901934"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901935"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901936"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901937"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901940"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 2,
+        "note": "",
+        "old_rows": 2,
+        "poll_id": "901941"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901942"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901946"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901949"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901950"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901951"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901953"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901954"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901955"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901956"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 2,
+        "note": "",
+        "old_rows": 2,
+        "poll_id": "901959"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901960"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901961"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901962"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|influence|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "901963"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90219"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90241"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90244"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90311"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90321"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90334"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90336"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90338"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90353"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90363"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90388"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90405"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90410"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90476"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90480"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90497"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90501"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90502"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90521"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90537"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90539"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90614"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90617"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90645"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90674"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90675"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90692"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90709"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90710"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90714"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90717"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90747"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90748"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90750"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90752"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90753"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90757"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90760"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90762"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp|weight",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90765"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90766"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90768"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90771"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90776"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90779"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90780"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90781"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90797"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90801"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90802"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90803"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90806"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90807"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90811"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90813"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90824"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90831"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90833"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90834"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90835"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90836"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90837"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90838"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90839"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90840"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90841"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90842"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90843"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90844"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90845"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90846"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90847"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90848"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90849"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90850"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90851"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90852"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90853"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90854"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90855"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90856"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90857"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90858"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90859"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90860"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90861"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90862"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90863"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90864"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90865"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90866"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90867"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90868"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90869"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90870"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90871"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90872"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90873"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90874"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90875"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90876"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90877"
+      },
+      {
+        "fields": "adjusted_dem|adjusted_net|adjusted_rep|date|modeldate|timestamp",
+        "new_rows": 1,
+        "note": "",
+        "old_rows": 1,
+        "poll_id": "90878"
+      }
+    ],
+    "revised_poll_ids": [
+      "89437",
+      "89445",
+      "89491",
+      "89497",
+      "89522",
+      "89530",
+      "89553",
+      "89555",
+      "89560",
+      "89566",
+      "89579",
+      "89590",
+      "89596",
+      "89602",
+      "89604",
+      "89624",
+      "89685",
+      "89690",
+      "89718",
+      "89719",
+      "89744",
+      "89745",
+      "89766",
+      "89821",
+      "89825",
+      "89881",
+      "89882",
+      "89897",
+      "90014",
+      "90016",
+      "90022",
+      "900267",
+      "900268",
+      "900272",
+      "900276",
+      "900279",
+      "900289",
+      "900299",
+      "900331",
+      "900347",
+      "900354",
+      "900355",
+      "900361",
+      "900375",
+      "900377",
+      "90039",
+      "900394",
+      "900398",
+      "900421",
+      "900429",
+      "900442",
+      "900443",
+      "900464",
+      "900471",
+      "900505",
+      "900510",
+      "900513",
+      "900514",
+      "900524",
+      "90053",
+      "900534",
+      "900538",
+      "90056",
+      "900568",
+      "90057",
+      "900570",
+      "900575",
+      "900590",
+      "900612",
+      "900618",
+      "900621",
+      "90063",
+      "900639",
+      "900640",
+      "900643",
+      "900665",
+      "900680",
+      "900689",
+      "900696",
+      "900698",
+      "900731",
+      "900736",
+      "900739",
+      "90074",
+      "900746",
+      "900757",
+      "900759",
+      "90076",
+      "900765",
+      "900777",
+      "900784",
+      "900790",
+      "900793",
+      "900800",
+      "900802",
+      "900806",
+      "900810",
+      "900812",
+      "900816",
+      "900817",
+      "900826",
+      "900827",
+      "90083",
+      "900830",
+      "900831",
+      "900834",
+      "900836",
+      "900841",
+      "900842",
+      "900843",
+      "900846",
+      "900848",
+      "900856",
+      "900862",
+      "900870",
+      "900877",
+      "900879",
+      "900880",
+      "900881",
+      "900883",
+      "900884",
+      "900885",
+      "900888",
+      "900898",
+      "900900",
+      "900901",
+      "900905",
+      "900910",
+      "900911",
+      "900913",
+      "900919",
+      "900920",
+      "900924",
+      "900929",
+      "900931",
+      "900932",
+      "900945",
+      "900947",
+      "900948",
+      "900949",
+      "900950",
+      "900951",
+      "900952",
+      "900955",
+      "900956",
+      "900958",
+      "900960",
+      "900964",
+      "900970",
+      "900973",
+      "900974",
+      "900976",
+      "900979",
+      "900980",
+      "900985",
+      "900988",
+      "900993",
+      "900995",
+      "900996",
+      "901006",
+      "901007",
+      "901009",
+      "901010",
+      "901012",
+      "901016",
+      "901019",
+      "901022",
+      "901024",
+      "901028",
+      "901029",
+      "901030",
+      "901032",
+      "901037",
+      "901038",
+      "901039",
+      "901047",
+      "901048",
+      "901049",
+      "901051",
+      "901053",
+      "901057",
+      "901058",
+      "901059",
+      "901061",
+      "901062",
+      "901066",
+      "901070",
+      "901071",
+      "901072",
+      "901074",
+      "901075",
+      "901078",
+      "901081",
+      "901087",
+      "901091",
+      "901092",
+      "901093",
+      "901094",
+      "901099",
+      "901102",
+      "901104",
+      "901105",
+      "901106",
+      "901108",
+      "901111",
+      "901112",
+      "901113",
+      "901115",
+      "901116",
+      "901121",
+      "901127",
+      "901129",
+      "901130",
+      "901131",
+      "901133",
+      "901134",
+      "901137",
+      "901139",
+      "901141",
+      "901147",
+      "901148",
+      "901149",
+      "901150",
+      "901151",
+      "901161",
+      "901163",
+      "901173",
+      "901176",
+      "901177",
+      "901181",
+      "901182",
+      "901183",
+      "901188",
+      "901190",
+      "901191",
+      "901194",
+      "901196",
+      "901197",
+      "901198",
+      "901201",
+      "901202",
+      "901203",
+      "901204",
+      "901208",
+      "901210",
+      "901211",
+      "901212",
+      "901216",
+      "901222",
+      "901227",
+      "901231",
+      "901239",
+      "901240",
+      "901242",
+      "901243",
+      "901244",
+      "901245",
+      "901296",
+      "901298",
+      "901302",
+      "901306",
+      "901313",
+      "901315",
+      "901318",
+      "901322",
+      "901328",
+      "901332",
+      "901334",
+      "901336",
+      "901340",
+      "901342",
+      "901343",
+      "901349",
+      "901353",
+      "901355",
+      "901357",
+      "901360",
+      "901365",
+      "901369",
+      "901370",
+      "901372",
+      "901373",
+      "901374",
+      "901375",
+      "901376",
+      "901377",
+      "901380",
+      "901381",
+      "901385",
+      "901387",
+      "901388",
+      "901389",
+      "901394",
+      "901397",
+      "901399",
+      "901401",
+      "901402",
+      "901403",
+      "901405",
+      "901406",
+      "901407",
+      "901415",
+      "901417",
+      "901419",
+      "901422",
+      "901423",
+      "901424",
+      "901425",
+      "901426",
+      "901427",
+      "901428",
+      "901429",
+      "901431",
+      "901432",
+      "901433",
+      "901435",
+      "901441",
+      "901444",
+      "901445",
+      "901447",
+      "901448",
+      "901449",
+      "901452",
+      "901453",
+      "901455",
+      "901460",
+      "901463",
+      "901467",
+      "901468",
+      "901469",
+      "901477",
+      "901478",
+      "901480",
+      "901481",
+      "901483",
+      "901484",
+      "901485",
+      "901486",
+      "901490",
+      "901492",
+      "901493",
+      "901495",
+      "901503",
+      "901508",
+      "901509",
+      "901511",
+      "901513",
+      "901514",
+      "901515",
+      "901516",
+      "901520",
+      "901521",
+      "901524",
+      "901525",
+      "901533",
+      "901534",
+      "901537",
+      "901538",
+      "901540",
+      "901541",
+      "901545",
+      "901547",
+      "901548",
+      "901552",
+      "901553",
+      "901554",
+      "901555",
+      "901557",
+      "901559",
+      "901560",
+      "901566",
+      "901568",
+      "901569",
+      "901575",
+      "901577",
+      "901578",
+      "901579",
+      "901580",
+      "901581",
+      "901584",
+      "901585",
+      "901590",
+      "901594",
+      "901596",
+      "901598",
+      "901600",
+      "901602",
+      "901605",
+      "901606",
+      "90161",
+      "901610",
+      "901612",
+      "901614",
+      "901617",
+      "901620",
+      "901621",
+      "901623",
+      "901624",
+      "901628",
+      "901629",
+      "901633",
+      "901634",
+      "901636",
+      "901637",
+      "901638",
+      "901639",
+      "901640",
+      "901645",
+      "901657",
+      "901658",
+      "90166",
+      "901660",
+      "901662",
+      "901663",
+      "901665",
+      "901666",
+      "901667",
+      "901668",
+      "901672",
+      "901676",
+      "901677",
+      "901678",
+      "901682",
+      "901684",
+      "901685",
+      "901686",
+      "901687",
+      "901693",
+      "901698",
+      "901700",
+      "901701",
+      "901705",
+      "901706",
+      "901707",
+      "901712",
+      "901714",
+      "901715",
+      "901716",
+      "901720",
+      "901722",
+      "901723",
+      "901724",
+      "901729",
+      "901732",
+      "901733",
+      "901734",
+      "901736",
+      "901737",
+      "901741",
+      "901748",
+      "901749",
+      "901751",
+      "901752",
+      "901757",
+      "901758",
+      "901761",
+      "901762",
+      "901765",
+      "901766",
+      "901768",
+      "901775",
+      "901776",
+      "901777",
+      "901778",
+      "901780",
+      "901781",
+      "901786",
+      "901789",
+      "901793",
+      "901798",
+      "901799",
+      "90180",
+      "901801",
+      "901803",
+      "901804",
+      "901806",
+      "901811",
+      "901812",
+      "901813",
+      "901814",
+      "901816",
+      "901818",
+      "901819",
+      "901820",
+      "901822",
+      "901824",
+      "901825",
+      "901826",
+      "901829",
+      "90183",
+      "901830",
+      "901831",
+      "901835",
+      "901837",
+      "901838",
+      "901841",
+      "901843",
+      "901844",
+      "901845",
+      "901847",
+      "901848",
+      "901855",
+      "901856",
+      "901857",
+      "90186",
+      "901863",
+      "901864",
+      "901865",
+      "901866",
+      "901869",
+      "901870",
+      "901871",
+      "901872",
+      "901875",
+      "901877",
+      "901879",
+      "901884",
+      "901887",
+      "901888",
+      "901889",
+      "901890",
+      "901894",
+      "901896",
+      "901898",
+      "901899",
+      "901903",
+      "901904",
+      "901905",
+      "901907",
+      "901908",
+      "901909",
+      "901912",
+      "901915",
+      "901917",
+      "901918",
+      "901922",
+      "901925",
+      "901926",
+      "901927",
+      "901929",
+      "901931",
+      "901932",
+      "901933",
+      "901934",
+      "901935",
+      "901936",
+      "901937",
+      "901940",
+      "901941",
+      "901942",
+      "901946",
+      "901949",
+      "901950",
+      "901951",
+      "901953",
+      "901954",
+      "901955",
+      "901956",
+      "901959",
+      "901960",
+      "901961",
+      "901962",
+      "901963",
+      "90219",
+      "90241",
+      "90244",
+      "90311",
+      "90321",
+      "90334",
+      "90336",
+      "90338",
+      "90353",
+      "90363",
+      "90388",
+      "90405",
+      "90410",
+      "90476",
+      "90480",
+      "90497",
+      "90501",
+      "90502",
+      "90521",
+      "90537",
+      "90539",
+      "90614",
+      "90617",
+      "90645",
+      "90674",
+      "90675",
+      "90692",
+      "90709",
+      "90710",
+      "90714",
+      "90717",
+      "90747",
+      "90748",
+      "90750",
+      "90752",
+      "90753",
+      "90757",
+      "90760",
+      "90762",
+      "90765",
+      "90766",
+      "90768",
+      "90771",
+      "90776",
+      "90779",
+      "90780",
+      "90781",
+      "90797",
+      "90801",
+      "90802",
+      "90803",
+      "90806",
+      "90807",
+      "90811",
+      "90813",
+      "90824",
+      "90831",
+      "90833",
+      "90834",
+      "90835",
+      "90836",
+      "90837",
+      "90838",
+      "90839",
+      "90840",
+      "90841",
+      "90842",
+      "90843",
+      "90844",
+      "90845",
+      "90846",
+      "90847",
+      "90848",
+      "90849",
+      "90850",
+      "90851",
+      "90852",
+      "90853",
+      "90854",
+      "90855",
+      "90856",
+      "90857",
+      "90858",
+      "90859",
+      "90860",
+      "90861",
+      "90862",
+      "90863",
+      "90864",
+      "90865",
+      "90866",
+      "90867",
+      "90868",
+      "90869",
+      "90870",
+      "90871",
+      "90872",
+      "90873",
+      "90874",
+      "90875",
+      "90876",
+      "90877",
+      "90878"
+    ]
   },
   "senate": {
-    "added_poll_ids": [],
+    "added_poll_ids": [
+      "00eec46b-20c2-48d9-abfd-65e700524acb",
+      "0251982d-6972-49dc-85a5-59a59f153bef",
+      "03a5f4fe-8984-49ba-b8ce-2044bab54108",
+      "06629328-a105-4cea-9764-1768892a646d",
+      "0c4baea9-f768-41f4-8f0b-49246ff20b7f",
+      "0d52e74a-4d26-4572-8b02-034b624ede40",
+      "1463c401-194c-4f2b-a897-d274eaa1618f",
+      "178f4a20-3a0b-4f63-9a03-19811b8277aa",
+      "196de13e-1481-439d-9176-e5079f25b5cf",
+      "1d977920-6c4e-4f40-9b3d-b5aa4c912583",
+      "1e6f3670-4580-45df-928a-94a521db841c",
+      "2483fb30-fb88-456c-b51f-b03bad5ba693",
+      "24da89e7-102c-4aa4-89a1-451e5301fd0d",
+      "261adc4a-cfbe-4fe7-9455-24765fbcea0c",
+      "29bc618a-daa1-4fb2-9acf-5bee75f2bbbf",
+      "379b9273-5e8d-461f-81ff-893c7e2cb8e6",
+      "38454df3-a47e-4923-b5eb-d570b5b30f3a",
+      "38f19daa-ba64-473d-9baf-d72b0fae2520",
+      "3ee13e5a-1bb0-40a5-acf3-81088c10f4a5",
+      "4413d374-c87c-4b80-861f-b5716eee7311",
+      "45558885-837e-4d56-958e-ddd52081bad8",
+      "4567e642-9d14-4530-9c86-e17199675130",
+      "488d5c04-cc06-4cf9-a292-24dca14264b6",
+      "4a8b3e3c-bb46-4a52-a75b-3eef218075c0",
+      "4be09574-d2f7-41cc-804a-911ff78f94cd",
+      "4dc32c45-083d-49e5-a155-7fbd9084ed08",
+      "52d83e1b-b2b1-4d0f-bb53-8adc59029127",
+      "57631c63-27a4-4cb7-adcb-99233e0056d8",
+      "5823662f-30b2-42b1-a224-9352ede8ad74",
+      "58393008-d203-4bf4-8bfd-aa610f32ab24",
+      "5b734364-d6c9-4d6d-9585-4deac2cc6890",
+      "5e6a38ed-064b-4310-8cc2-eff8991ebae5",
+      "61f15781-75a4-47c4-a04a-da825f9d1778",
+      "624f1dc6-345c-46f6-b412-6fdb12d1797f",
+      "63516926-7ba4-457a-8b7c-e52aed2edb55",
+      "63f40723-ec76-453c-90cd-01e1224edc02",
+      "641ee852-f596-4554-a4f7-c74286914371",
+      "69fc5034-470a-42cb-b49a-0c989fcc6047",
+      "6aa99f8a-1d58-4606-9f29-bd132b6f9dc1",
+      "799adc95-7605-40d1-b686-80b11548e471",
+      "79c1089e-6893-4079-913e-e6f151d017c2",
+      "7fca87a7-c9a7-443c-9b3a-f5826088f152",
+      "81be1cc2-3c9d-4786-9ee7-9d01bceb06e7",
+      "8336d95c-e120-482d-ba1c-42b88a343483",
+      "874e66b5-2a4c-4aca-98bf-0a195be794af",
+      "8de7ab3e-bd02-4cec-be08-c93b64288f26",
+      "913c201c-a821-4a56-b3c5-91e86b15af5f",
+      "96d6e3cb-710e-4140-86b4-4f4f2545b2bd",
+      "97e6dede-92cf-4a71-9cb3-3031e822dbee",
+      "9d59ada9-f021-49e8-b627-4c0308822798",
+      "9d7b82a6-e65d-460b-a09f-ac6d2fa865c8",
+      "a0d99ae7-a6c2-430d-ad8f-92e91d659b66",
+      "a1e3f1ce-417d-4436-b948-485544ecdf39",
+      "a2abf79d-4ebe-451a-9fa7-aeaa27e1ee2d",
+      "a516eb44-5932-41e4-8d9c-00b5db2cd325",
+      "a6c01fbe-a7ca-4d4b-ab7a-00a70463db67",
+      "abc2a463-cbe3-4da8-8494-b10266a5ca04",
+      "ac95d9d0-6076-4d28-9e91-be2b3a5f22e0",
+      "ace5053f-e892-4ca2-a2d9-b96249dc8c27",
+      "affe090f-1582-4758-9ad6-3d3a3e136282",
+      "b112cbf3-ab0d-490b-b374-6f83fd7f9545",
+      "b2df3f8d-e5f5-404e-878e-e17ffb9c30f7",
+      "b805e995-fdc6-4384-a5e9-7c8ca121cebc",
+      "c1d14361-f029-4b1d-ba0f-d4fa10222df0",
+      "c506a63c-4d38-4a19-9173-98e168424ae5",
+      "c69c6758-b7d5-450d-81dd-c1c7f2ad1268",
+      "cd6d6c9c-946e-406c-8a1b-1d54c5da3ae3",
+      "d12ca396-9967-4c5a-b3af-5754f8a2ff05",
+      "d4400760-72bc-49ff-9842-f8cb3e3e38bf",
+      "d936e903-4367-4a56-b855-942ae35fce12",
+      "dbd1593d-daad-413f-93bf-083273ec85f9",
+      "dd778e11-d751-4a94-9ece-1dd896021d10",
+      "e03c576a-cd8f-42bf-b7af-64de93b2e78c",
+      "e324d57b-4426-403d-9ca8-23cf08f2c082",
+      "e516bc0a-6266-48e0-b4e9-73abd442e3ba",
+      "e5e20345-3b79-49b1-bd66-d5e7bfda599d",
+      "ec104f8a-5101-41e8-a3a9-ad0d516a8693",
+      "efae558e-7c8c-48ab-b133-84962aaa054f",
+      "efb35ed0-feb9-4785-8f6c-67a2f28a3148",
+      "f31e142f-d353-45f2-8409-f4e442b6383c",
+      "f554f677-d120-41a4-b4e9-afc7946e6da3",
+      "f96cc69b-cd5a-4526-930b-9707abdb8e97"
+    ],
     "counts": {
-      "added": 0,
+      "added": 82,
       "removed": 0,
-      "revised": 0
+      "revised": 4
     },
     "removed_poll_ids": [],
-    "revised_fields": [],
-    "revised_poll_ids": []
+    "revised_fields": [
+      {
+        "fields": "pct",
+        "new_rows": 3,
+        "note": "",
+        "old_rows": 3,
+        "poll_id": "06cde9f9-1d19-466c-b7aa-42e4ec649862"
+      },
+      {
+        "fields": "display_name|pollster",
+        "new_rows": 13,
+        "note": "",
+        "old_rows": 13,
+        "poll_id": "57649163-682d-4897-bea8-5e8679901359"
+      },
+      {
+        "fields": "answer|candidate_id|candidate_name|created_at|cycle|display_name|election_date|end_date|hypothetical|internal|methodology|nationwide_match|notes|numeric_grade|office_type|partisan|party|pct|poll_id|pollscore|pollster|pollster_id|pollster_rating_id|pollster_rating_name|population|population_full|question_id|race_id|ranked_choice_final|ranked_choice_reallocated|ranked_choice_round|sample_size|seat_name|seat_number|source|sponsor_candidate|sponsor_candidate_id|sponsor_candidate_party|sponsor_ids|sponsors|stage|start_date|state|subpopulation|tracking|transparency_score|url|url_article|url_crosstab|url_topline",
+        "new_rows": 7,
+        "note": "",
+        "old_rows": 3,
+        "poll_id": "b8ae6e54-601a-409d-aa76-8fcaf9a3636c"
+      },
+      {
+        "fields": "answer|candidate_id|candidate_name|created_at|cycle|display_name|election_date|end_date|hypothetical|internal|methodology|nationwide_match|notes|numeric_grade|office_type|partisan|party|pct|poll_id|pollscore|pollster|pollster_id|pollster_rating_id|pollster_rating_name|population|population_full|question_id|race_id|ranked_choice_final|ranked_choice_reallocated|ranked_choice_round|sample_size|seat_name|seat_number|source|sponsor_candidate|sponsor_candidate_id|sponsor_candidate_party|sponsor_ids|sponsors|stage|start_date|state|subpopulation|tracking|transparency_score|url|url_article|url_crosstab|url_topline",
+        "new_rows": 8,
+        "note": "",
+        "old_rows": 3,
+        "poll_id": "f9198a5f-26a6-4d51-91e6-de346701bca2"
+      }
+    ],
+    "revised_poll_ids": [
+      "06cde9f9-1d19-466c-b7aa-42e4ec649862",
+      "57649163-682d-4897-bea8-5e8679901359",
+      "b8ae6e54-601a-409d-aa76-8fcaf9a3636c",
+      "f9198a5f-26a6-4d51-91e6-de346701bca2"
+    ]
   }
 }

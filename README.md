@@ -33,7 +33,7 @@ jupyter lab
 On Windows activate with `.venv\Scripts\activate`. For reproducible numerical
 threading, set `OPENBLAS_NUM_THREADS=1` before launching Python if needed.
 
-## Ten short notebooks
+## Research notebooks
 
 | Notebook | Purpose | Downloads? |
 |---|---|---|
@@ -47,6 +47,10 @@ threading, set `OPENBLAS_NUM_THREADS=1` before launching Python if needed.
 | [08 All-model mixture](notebooks/08_all_model_mixture.ipynb) | Fixed four-model joint mixture and 5–50% polling mean shifts | No; latest saved live run |
 | [09 Poll weighting](notebooks/09_poll_weight_experiments.ipynb) | Equal polls, participant weights, firm balance and previous-cycle ratings | No; latest saved live run |
 | [10 Model disagreements](notebooks/10_model_disagreements.ipynb) | Current margins, probabilities, intervals and chamber tails across retained models | No; saved forecasts |
+| [11 Live Polymarket](notebooks/11_live_polymarket.ipynb) | Current Senate contracts and model comparisons | Yes, cache aware |
+| [12 Historical Polymarket](notebooks/12_historical_polymarket_backtest.ipynb) | 2022/2024 accuracy, market proximity and independent-model strategy comparisons | No by default; explicit refresh switches |
+
+The [Senate archive coverage report](outputs/reports/research/senate_archive/report.md) audits recovered 2022/2024 trade events and original price histories. Research datasets are Git-ignored. After cloning, rebuild with `python scripts/prepare_historical_markets.py`; see the [collection methodology](docs/POLYMARKET_BACKTEST.md#recovered-on-chain-archive-for-both-cycles).
 
 Each notebook has a small parameter cell, explains the units and assumptions,
 and calls readable functions rather than embedding hundreds of modeling lines.

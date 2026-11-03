@@ -4,43 +4,43 @@ D/Independent is the forecast side, not a party label. Independent candidates re
 
 Counts are question versions, not independent samples. Recency affects weighting; older eligible polls are retained.
 
-| State   |   Questions |   Eligible |   Excluded | Independent candidates in eligible polls   |
-|:--------|------------:|-----------:|-----------:|:-------------------------------------------|
-| AK      |          28 |         14 |         14 | None                                       |
-| AL      |           1 |          1 |          0 | None                                       |
-| AR      |           4 |          4 |          0 | None                                       |
-| CO      |           0 |          0 |          0 | None                                       |
-| DE      |           0 |          0 |          0 | None                                       |
-| FL      |          25 |          9 |         16 | None                                       |
-| GA      |          50 |         16 |         34 | Allen Buckley                              |
-| IA      |          33 |         20 |         13 | None                                       |
-| ID      |          12 |          6 |          6 | Natalie Fleming, Todd Achilles             |
-| IL      |           0 |          0 |          0 | None                                       |
-| KS      |          15 |          6 |          9 | None                                       |
-| KY      |           6 |          2 |          4 | None                                       |
-| LA      |           2 |          2 |          0 | None                                       |
-| MA      |          19 |         10 |          9 | None                                       |
-| ME      |          61 |         12 |         49 | None                                       |
-| MI      |          82 |         35 |         47 | None                                       |
-| MN      |          16 |          8 |          8 | Marisa Simonetti                           |
-| MS      |           5 |          2 |          3 | Ty Pinkins                                 |
-| MT      |          28 |         10 |         18 | Seth Bodnar                                |
-| NC      |          48 |         36 |         12 | None                                       |
-| NE      |          10 |          7 |          3 | Dan Osborn                                 |
-| NH      |          45 |         19 |         26 | Matt Giovonizzi, Tim Harris                |
-| NJ      |           0 |          0 |          0 | None                                       |
-| NM      |           1 |          1 |          0 | None                                       |
-| OH      |          26 |         22 |          4 | Gregory Levy                               |
-| OK      |           2 |          1 |          1 | Curtis Stinnett, Ron Meinhardt             |
-| OR      |           0 |          0 |          0 | None                                       |
-| RI      |           4 |          4 |          0 | Michael Bahry                              |
-| SC      |          18 |          3 |         15 | None                                       |
-| SD      |          11 |          7 |          4 | Brian Bengs                                |
-| TN      |           2 |          1 |          1 | Generic Candidate                          |
-| TX      |          90 |         39 |         51 | Camencia Ford, Hans Truelson, Joshua Cain  |
-| VA      |           3 |          2 |          1 | Mark Moran                                 |
-| WV      |           0 |          0 |          0 | None                                       |
-| WY      |           0 |          0 |          0 | None                                       |
+| State   |   Questions |   Eligible |   Excluded | Independent candidates in eligible polls                                     |
+|:--------|------------:|-----------:|-----------:|:-----------------------------------------------------------------------------|
+| AK      |          44 |         22 |         22 | None                                                                         |
+| AL      |           5 |          5 |          0 | None                                                                         |
+| AR      |           7 |          7 |          0 | None                                                                         |
+| CO      |           3 |          3 |          0 | None                                                                         |
+| DE      |           0 |          0 |          0 | None                                                                         |
+| FL      |          50 |         30 |         20 | None                                                                         |
+| GA      |          58 |         24 |         34 | Allen Buckley                                                                |
+| IA      |          56 |         38 |         18 | None                                                                         |
+| ID      |          15 |          9 |          6 | Natalie Fleming, Todd Achilles                                               |
+| IL      |           4 |          4 |          0 | None                                                                         |
+| KS      |          32 |         18 |         14 | None                                                                         |
+| KY      |           6 |          2 |          4 | None                                                                         |
+| LA      |           4 |          3 |          1 | None                                                                         |
+| MA      |          24 |         15 |          9 | Morgan Dawicki, Shiva Ayyadurai                                              |
+| ME      |          82 |         31 |         51 | None                                                                         |
+| MI      |         111 |         62 |         49 | None                                                                         |
+| MN      |          32 |         22 |         10 | Marisa Simonetti                                                             |
+| MS      |           6 |          3 |          3 | Ty Pinkins                                                                   |
+| MT      |          34 |         16 |         18 | Seth Bodnar                                                                  |
+| NC      |          69 |         52 |         17 | None                                                                         |
+| NE      |          29 |         21 |          8 | Dan Osborn                                                                   |
+| NH      |          55 |         28 |         27 | Aaron Day, Christine Lopez, Jeanne Logan Morrow, Matt Giovonizzi, Tim Harris |
+| NJ      |           0 |          0 |          0 | None                                                                         |
+| NM      |           4 |          4 |          0 | None                                                                         |
+| OH      |          59 |         48 |         11 | Gregory Levy                                                                 |
+| OK      |           2 |          1 |          1 | Curtis Stinnett, Ron Meinhardt                                               |
+| OR      |           0 |          0 |          0 | None                                                                         |
+| RI      |           6 |          6 |          0 | Michael Bahry                                                                |
+| SC      |          29 |         12 |         17 | None                                                                         |
+| SD      |          19 |         15 |          4 | Brian Bengs                                                                  |
+| TN      |           2 |          1 |          1 | Generic Candidate                                                            |
+| TX      |         132 |         74 |         58 | Camencia Ford, Hans Truelson, Joshua Cain                                    |
+| VA      |           3 |          2 |          1 | Mark Moran                                                                   |
+| WV      |           0 |          0 |          0 | None                                                                         |
+| WY      |           0 |          0 |          0 | None                                                                         |
 
 ## Integrity checks
 
@@ -55,9 +55,9 @@ Counts are question versions, not independent samples. Recency affects weighting
 
 | State   | pollster                       | poll_end   | quality_flags                                                                                    |
 |:--------|:-------------------------------|:-----------|:-------------------------------------------------------------------------------------------------|
-| LA      | Public Policy Polling          | 2026-07-22 | reviewed_candidate_alias                                                                         |
 | ID      | The Bullfinch Group            | 2026-06-01 | D_IND_vs_REP|independent_candidate_present|partial_ballot_coverage                               |
 | ID      | Change Research                | 2026-07-30 | D_IND_vs_REP|independent_candidate_present|reviewed_missing_sample_size|strongest_opponent_proxy |
+| ID      | VoteNexus                      | 2026-10-22 | D_IND_vs_REP|independent_candidate_present|partial_ballot_coverage                               |
 | ID      | Public Policy Polling          | 2026-03-17 | D_IND_vs_REP|independent_candidate_present|partial_ballot_coverage                               |
 | ID      | The Bullfinch Group            | 2026-08-07 | D_IND_vs_REP|independent_candidate_present|partial_ballot_coverage                               |
 | ID      | Advanced Targeting Research    | 2026-09-16 | D_IND_vs_REP|independent_candidate_present|partial_ballot_coverage                               |
@@ -71,14 +71,16 @@ Counts are question versions, not independent samples. Recency affects weighting
 | AK      | before_two_year_cycle                                                                                                                                              |           1 |
 | AK      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |           2 |
 | AK      | rcv_round_1|strongest_opponent_proxy|unreviewed_or_former_contender                                                                                                |           1 |
-| AK      | rcv_round_1|unreviewed_or_former_contender                                                                                                                         |           6 |
+| AK      | rcv_round_1|unreviewed_or_former_contender                                                                                                                         |          11 |
 | AK      | rcv_round_2|unreviewed_or_former_contender                                                                                                                         |           1 |
-| AK      | unreviewed_or_former_contender                                                                                                                                     |           2 |
-| FL      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |          16 |
+| AK      | unreviewed_or_former_contender                                                                                                                                     |           5 |
+| FL      | alternative_population_or_basis                                                                                                                                    |           2 |
+| FL      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |          18 |
 | GA      | alternative_population_or_basis                                                                                                                                    |           3 |
 | GA      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |          30 |
 | GA      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender|unsupported_population_or_subgroup                                  |           1 |
-| IA      | alternative_population_or_basis                                                                                                                                    |           2 |
+| IA      | alternative_population_or_basis                                                                                                                                    |           4 |
+| IA      | alternative_reduced_ballot_same_sample                                                                                                                             |           3 |
 | IA      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |          11 |
 | ID      | D_IND_vs_REP|alternative_reduced_ballot_same_sample|independent_candidate_present|partial_ballot_coverage                                                          |           2 |
 | ID      | D_IND_vs_REP|independent_candidate_present|partial_ballot_coverage|strongest_opponent_proxy|unreviewed_or_former_contender                                         |           1 |
@@ -87,16 +89,20 @@ Counts are question versions, not independent samples. Recency affects weighting
 | ID      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |           1 |
 | KS      | D_IND_vs_REP|conditional_missing_ballot_contender|independent_candidate_present|missing_reviewed_contender                                                         |           2 |
 | KS      | D_IND_vs_REP|conditional_missing_ballot_contender|independent_candidate_present|missing_reviewed_contender|strongest_opponent_proxy|unreviewed_or_former_contender |           1 |
+| KS      | alternative_population_or_basis                                                                                                                                    |           1 |
+| KS      | alternative_reduced_ballot_same_sample                                                                                                                             |           4 |
 | KS      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |           5 |
 | KS      | invalid_sample_size|missing_or_invalid_sample_size                                                                                                                 |           1 |
 | KY      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |           4 |
+| LA      | invalid_sample_size|missing_or_invalid_sample_size                                                                                                                 |           1 |
 | MA      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |           9 |
-| ME      | alternative_population_or_basis                                                                                                                                    |           2 |
-| ME      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |          47 |
-| MI      | alternative_population_or_basis                                                                                                                                    |           4 |
-| MI      | alternative_reduced_ballot_same_sample                                                                                                                             |           1 |
-| MI      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |          42 |
-| MN      | alternative_population_or_basis                                                                                                                                    |           1 |
+| ME      | alternative_population_or_basis                                                                                                                                    |           5 |
+| ME      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |          46 |
+| MI      | alternative_population_or_basis                                                                                                                                    |           8 |
+| MI      | alternative_reduced_ballot_same_sample                                                                                                                             |           2 |
+| MI      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |          39 |
+| MN      | alternative_population_or_basis                                                                                                                                    |           2 |
+| MN      | alternative_reduced_ballot_same_sample                                                                                                                             |           1 |
 | MN      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |           7 |
 | MS      | alternative_reduced_ballot_same_sample                                                                                                                             |           1 |
 | MS      | conditional_missing_ballot_contender|missing_reviewed_contender                                                                                                    |           2 |
@@ -106,21 +112,26 @@ Counts are question versions, not independent samples. Recency affects weighting
 | MT      | D_IND_vs_REP|conditional_missing_ballot_contender|independent_candidate_present|strongest_opponent_proxy|unreviewed_or_former_contender                            |           1 |
 | MT      | conditional_missing_ballot_contender                                                                                                                               |           4 |
 | MT      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |           3 |
-| NC      | alternative_population_or_basis                                                                                                                                    |           7 |
+| NC      | alternative_population_or_basis                                                                                                                                    |          10 |
+| NC      | alternative_reduced_ballot_same_sample                                                                                                                             |           2 |
 | NC      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |           5 |
+| NE      | D_IND_vs_REP|alternative_reduced_ballot_same_sample|independent_candidate_present                                                                                  |           4 |
+| NE      | D_IND_vs_REP|conditional_missing_ballot_contender|independent_candidate_present|missing_reviewed_contender|unreviewed_or_former_contender                          |           1 |
 | NE      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |           3 |
-| NH      | D_IND_vs_REP|independent_candidate_present|strongest_opponent_proxy|unreviewed_or_former_contender                                                                 |           1 |
+| NH      | alternative_reduced_ballot_same_sample                                                                                                                             |           2 |
 | NH      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |          25 |
-| OH      | alternative_population_or_basis                                                                                                                                    |           1 |
-| OH      | alternative_reduced_ballot_same_sample                                                                                                                             |           1 |
-| OH      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |           2 |
+| OH      | alternative_population_or_basis                                                                                                                                    |           6 |
+| OH      | alternative_reduced_ballot_same_sample                                                                                                                             |           2 |
+| OH      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |           3 |
 | OK      | D_IND_vs_REP|conditional_missing_ballot_contender|independent_candidate_present|missing_reviewed_contender|strongest_opponent_proxy|unreviewed_or_former_contender |           1 |
 | SC      | alternative_population_or_basis                                                                                                                                    |           2 |
 | SC      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |          13 |
+| SC      | unreviewed_or_former_contender                                                                                                                                     |           2 |
 | SD      | D_IND_vs_REP|conditional_missing_ballot_contender|independent_candidate_present|missing_reviewed_contender|strongest_opponent_proxy|unreviewed_or_former_contender |           1 |
 | SD      | D_IND_vs_REP|independent_candidate_present|strongest_opponent_proxy|unreviewed_or_former_contender                                                                 |           1 |
 | SD      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |           2 |
 | TN      | alternative_population_or_basis                                                                                                                                    |           1 |
+| TX      | alternative_population_or_basis                                                                                                                                    |           7 |
 | TX      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |          51 |
 | VA      | conditional_missing_ballot_contender|missing_reviewed_contender|unreviewed_or_former_contender                                                                     |           1 |
 

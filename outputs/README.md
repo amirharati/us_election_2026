@@ -30,6 +30,14 @@ Latest reports and supporting results are below. Dated reports are retained in G
 
 - [Browse all daily reports](reports/history/README.md)
 
+- [2026-11-03 — Forecast report](reports/history/2026-11-03/live_reports/forecast-2026-11-03.md)
+- [2026-10-29 — Forecast report](reports/history/2026-10-29/live_reports/forecast-2026-10-29.md)
+- [2026-10-06 — Forecast report](reports/history/2026-10-06/live_reports/forecast-2026-10-06.md)
+- [2026-10-04 — Forecast report](reports/history/2026-10-04/live_reports/forecast-2026-10-04.md)
+- [2026-10-01 — Forecast report](reports/history/2026-10-01/live_reports/forecast-2026-10-01.md)
+- [2026-09-26 — polymarket_history](reports/history/2026-09-26/polymarket_history/report.md)
+- [2026-09-25 — senate_archive](reports/history/2026-09-25/senate_archive/report.md)
+- [2026-09-25 — polymarket_history](reports/history/2026-09-25/polymarket_history/report.md)
 - [2026-09-25 — Polymarket Senate market research](reports/history/2026-09-25/polymarket/report.md)
 - [2026-09-25 — Forecast report](reports/history/2026-09-25/live_reports/forecast-2026-09-25.md)
 - [2026-09-24 — Polymarket Senate market research](reports/history/2026-09-24/polymarket/report.md)

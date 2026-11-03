@@ -12,6 +12,7 @@ import nbformat
 from nbclient import NotebookClient
 from jupyter_client import KernelManager
 from jupyter_client.kernelspec import KernelSpecManager
+from notebook_sources import check_source, snapshot, save_execution
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -42,7 +43,10 @@ print('Verification: legacy data reads blocked; compact inputs and local downloa
         for path in sorted((ROOT/'notebooks').glob('*.ipynb')):
             if int(path.name[:2])<start:continue
             begin=time.monotonic();print('RUN',path.name,flush=True)
-            notebook=nbformat.read(path,as_version=4)
+            original=path.read_bytes()
+            snapshot(path,original,'before-run')
+            notebook=nbformat.reads(original.decode(),as_version=4)
+            check_source(path,notebook)
             notebook.cells.insert(0,nbformat.v4.new_code_cell(guard))
             manager=KernelManager(kernel_name='election-verify',kernel_spec_manager=KernelSpecManager(kernel_dirs=[temp]))
             result=dict(notebook=path.name,status='running',legacy_data_reads_blocked=True)
@@ -62,7 +66,14 @@ print('Verification: legacy data reads blocked; compact inputs and local downloa
                         if o.output_type=='error':logs.append('\n'.join(o.traceback))
                 (logs_dir/(path.stem+'.log')).write_text('\n'.join(logs))
                 # Preserve failed executions separately; successful notebooks are saved in place.
-                nbformat.write(notebook,path if result['status']=='passed' else logs_dir/path.name)
+                if result['status']=='passed':
+                    try:
+                        result['recovery_copy']=str(save_execution(path,notebook,original).relative_to(ROOT))
+                    except RuntimeError as exc:
+                        result['status']='failed';result['error']=str(exc)
+                else:
+                    snapshot(path,nbformat.writes(notebook).encode(),'failed')
+                    nbformat.write(notebook,logs_dir/path.name)
                 result['notebook_sha256']=hashlib.sha256(path.read_bytes()).hexdigest()
                 report.append(result);status.write_text(json.dumps(report,indent=2)+'\n')
                 lines=['# Notebook execution', '', 'Executed in order with legacy raw-data reads blocked. Successful notebooks are saved in place; logs and failed attempts stay in the ignored local cache.', '',

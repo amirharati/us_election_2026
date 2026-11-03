@@ -2,12 +2,13 @@
   "notebooks/01_models_and_results.ipynb": "ee3b0d6875c58a77703b8569b301b0e8997ae4e5d85e6ccd03d0da052d6b6acb",
   "notebooks/02_blend_weights.ipynb": "774821dc0d849cd389e8081eaf02edfcfe28286274e3adf8e86b9fd4042d593c",
   "notebooks/03_training_and_assumptions.ipynb": "b662551c3da44bb3d4bc9f62b9d7819dcb459bfab048e2a85aa46e6a48450721",
-  "notebooks/04_live_forecast.ipynb": "392bc78b046b53869adad596528fecddfb6b94cf35345fc0e21ab0b92716f22a",
+  "notebooks/04_live_forecast.ipynb": "22e6b3985ab70bfb3d86ba491add5edd534c2fdb8905351506097cdfee67efdc",
   "notebooks/05_wave_and_poll_error_scenarios.ipynb": "1cfeabaafbae27c2169769a09a322cba302584cd69ad6bc547607283be1141de",
   "notebooks/06_matched_student_comparison.ipynb": "a8e742dc00df470f8fd273910b5927bb164e619439fa128bc24fc97e80870760",
   "notebooks/07_older_model_alternatives.ipynb": "b8826f21537a6ab85e12816faf5cba2129365063f49a58ede03a846fb1848183",
   "notebooks/08_all_model_mixture.ipynb": "0f66aa45ce0de620f9e3ae456095257a67f2bad3d61c36ac3b8d4061d2ab9009",
   "notebooks/09_poll_weight_experiments.ipynb": "f2c10546eb352dcee7583fbd4b6ca3c3b561db51dd0d8cf4e492d9e980c48d79",
   "notebooks/10_model_disagreements.ipynb": "b1457d1e314c83c1e963d92d4fb3d5c4f7fcd068098d88de6f47f61a546a3af6",
-  "notebooks/11_live_polymarket.ipynb": "2b63666f5b5d32603b48889999194895f78d8f2071dfaf6ad2fa48681e73c9d6"
+  "notebooks/11_live_polymarket.ipynb": "887a21c0604e5dd7c2065ac094303a424fe4da580d13ff233839109f0b325f5c",
+  "notebooks/12_historical_polymarket_backtest.ipynb": "542f531d28a2c6c1749e8ae4413e67f59d5fa88186dc17324da62b20f7b34f8e"
 }

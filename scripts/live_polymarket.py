@@ -449,6 +449,9 @@ def save(result):
     if 'scanner' in result:
         from polymarket_scanner import publish
         lines+=publish(result['scanner'],out)
+    if 'alignment' in result:
+        from polymarket_model_alignment import publish as publish_alignment
+        lines+=publish_alignment(result['alignment'],out)
     if 'price_checks' in result:
         from polymarket_price_checks import METHOD as PAIR_METHOD, table as pair_table
         result['price_checks'].to_parquet(out/'price_checks.parquet',index=False)

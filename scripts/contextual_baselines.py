@@ -42,12 +42,17 @@ def price_percent_change(end, base):
     return 100*(end/base-1)
 
 
-def calendar_inputs(data, store, scenario):
+def calendar_inputs(data, store, scenario, cutoff_by_cycle=None):
     """Rebuild reference contexts from pinned sources; export all endpoint evidence."""
     original=data.load_table('contest_inputs_reference')
     rows=[];endpoints=[]
     for year in sorted(original.cycle.unique()):
         dates=calendar_dates(int(year),data.policy['as_of'],scenario)
+        if cutoff_by_cycle and int(year) in cutoff_by_cycle:
+            end=pd.Timestamp(cutoff_by_cycle[int(year)]).normalize()
+            if end.year!=int(year) or end>pd.Timestamp(data.policy['as_of']):
+                raise ValueError('Invalid historical feature cutoff')
+            dates.update(end=end,complete=end==dates['desired'])
         contexts={name:store.at(dates[name])[0] for name in ['start','previous','end']}
         row=dict(cycle=int(year),**{k:v for k,v in contexts['end'].items() if k not in ['cycle']})
         row.update(scenario=scenario,desired_cutoff=str(dates['desired'].date()),

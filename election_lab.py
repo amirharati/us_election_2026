@@ -441,6 +441,7 @@ def run_logged(function, *args, **kwargs):
     try:
         with contextlib.redirect_stdout(stream),contextlib.redirect_stderr(stream):
             result=function(*args,**kwargs)
-    finally:log.write_text(stream.getvalue())
-    print('Run log:',log.relative_to(ROOT))
+    finally:
+        log.write_text(stream.getvalue())
+        print('Run log:',log.relative_to(ROOT))
     return result

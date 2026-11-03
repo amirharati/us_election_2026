@@ -17,6 +17,14 @@ __pycache__/
 
 # Local source checks, preparation pointers, inference caches, and logs.
 /cache/
+# Historical market research is reproducible downloaded/generated data.
+# Keep scripts, configuration, notebooks, and Markdown/image reports in Git.
+/outputs/results/research/polymarket_history/
+/outputs/results/research/senate_archive/
+/outputs/reports/**/polymarket_history/*.parquet
+/outputs/reports/**/senate_archive/*.parquet
+/outputs/reports/**/polymarket_history/*.json*
+/outputs/reports/**/senate_archive/*.json*
 /data/final_work/
 /data/**/latest.json
 

@@ -79,11 +79,39 @@
       "status": "reported_leading_contenders"
     },
     "CO": {
-      "candidates": [],
+      "candidates": [
+        {
+          "candidate_id": "decc7707-5bbc-44fe-a5ce-2adf5d67f9cc",
+          "name": "John Hickenlooper",
+          "party": "DEM",
+          "source_names": [
+            "John Hickenlooper"
+          ]
+        },
+        {
+          "candidate_id": "7bf1f953-a811-441a-8929-ac75dd06f9b4",
+          "name": "Mark Baisley",
+          "party": "REP",
+          "source_names": [
+            "Mark Baisley"
+          ]
+        }
+      ],
       "rule": "plurality",
-      "scalar_seat_mapping_ready": false,
-      "source_urls": [],
-      "status": "pending_matchup_review"
+      "scalar_seat_mapping_ready": true,
+      "source_urls": [
+        "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/",
+        "https://www.colorado.edu/lab/aprl/media/84"
+      ],
+      "status": "reviewed_general_election_nominees",
+      "source_race_ids": [
+        "fe24b75f-0b09-4c0a-afdf-805b480929f7"
+      ],
+      "reviewed_on": "2026-11-02",
+      "source_race_review": {
+        "reviewed_on": "2026-11-02",
+        "note": "Colorado U.S. Senate general election, 2026-11-03. Hickenlooper (DEM) and Baisley (REP) checked against Boulder County election candidate information and the University of Colorado October29 survey report; candidate UUIDs and race metadata matched to the saved November2 NYT feed. This maps the polled D/R matchup, not the complete ballot."
+      }
     },
     "DE": {
       "candidates": [],
@@ -212,11 +240,39 @@
       ]
     },
     "IL": {
-      "candidates": [],
+      "candidates": [
+        {
+          "candidate_id": "bc33e464-21a9-4303-8a85-e96b7b215c9b",
+          "name": "Juliana Stratton",
+          "party": "DEM",
+          "source_names": [
+            "Juliana Stratton"
+          ]
+        },
+        {
+          "candidate_id": "58ebcb5e-31ae-48b4-940f-c73a46dcdda7",
+          "name": "Don Tracy",
+          "party": "REP",
+          "source_names": [
+            "Don Tracy"
+          ]
+        }
+      ],
       "rule": "plurality",
-      "scalar_seat_mapping_ready": false,
-      "source_urls": [],
-      "status": "pending_matchup_review"
+      "scalar_seat_mapping_ready": true,
+      "source_urls": [
+        "https://www.elections.il.gov/ElectionOperations/CandidateList.aspx?ElectionID=71",
+        "https://www.activote.net/polls/2026/il-u-s-senate/"
+      ],
+      "status": "reviewed_general_election_nominees",
+      "source_race_ids": [
+        "3be1195b-6fc6-42c2-b5cd-8605748da86a"
+      ],
+      "reviewed_on": "2026-10-29",
+      "source_race_review": {
+        "reviewed_on": "2026-10-29",
+        "note": "Illinois U.S. Senate general election, 2026-11-03. Stratton (DEM) and Tracy (REP) verified against the Illinois State Board of Elections candidate list and ActiVote October20 release; candidate UUIDs and race metadata matched to the saved NYT feed. This maps the polled D/R matchup, not the complete ballot."
+      }
     },
     "KS": {
       "candidates": [

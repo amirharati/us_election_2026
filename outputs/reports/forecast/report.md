@@ -1,11 +1,11 @@
-# 2026 Senate forecast — 2026-09-25
+# 2026 Senate forecast — 2026-11-02
 
 [All outputs](../../README.md) · [HTML report](report.html) · [Supporting tables](./)
 
 ## At a glance
 
-- **D/Independent control: 60.2%** under the reference Gaussian model.
-- **Expected D/Independent seats: 50.9**; central 70% range: **49–52**.
+- **D/Independent control: 73.9%** under the reference Gaussian model.
+- **Expected D/Independent seats: 51.5**; central 70% range: **50–53**.
 - Predicted winners by mean margin: **51 D/IND / 49 R**.
 - Trained through **2024**. Live evidence updates predictions; trained parameters are fixed.
 
@@ -17,17 +17,17 @@ Margins are D/Independent minus Republican percentage points. Positive margins f
 
 ## Data freshness
 
-| Source         | Status                         | Last successful check            |
-|:---------------|:-------------------------------|:---------------------------------|
-| polls          | Recent successful check reused | 2026-09-25T16:00:45.044540+00:00 |
-| fred           | Recent successful check reused | 2026-09-25T16:00:45.904634+00:00 |
-| michigan       | Recent successful check reused | 2026-09-25T16:00:46.960671+00:00 |
-| ucsb           | Recent successful check reused | 2026-09-25T16:00:42.728027+00:00 |
-| french         | Recent successful check reused | 2026-09-25T16:00:44.163764+00:00 |
-| cboe           | Recent successful check reused | 2026-09-25T16:00:45.897772+00:00 |
-| gpr            | Recent successful check reused | 2026-09-25T16:00:47.829208+00:00 |
-| epu            | Recent successful check reused | 2026-09-25T16:00:48.489066+00:00 |
-| infectious_emv | Recent successful check reused | 2026-09-25T16:00:47.810410+00:00 |
+| Source         | Status                  | Last successful check            |
+|:---------------|:------------------------|:---------------------------------|
+| polls          | Checked online this run | 2026-11-03T00:58:11.957699+00:00 |
+| fred           | Checked online this run | 2026-11-03T00:58:11.846385+00:00 |
+| michigan       | Checked online this run | 2026-11-03T00:58:14.731052+00:00 |
+| ucsb           | Checked online this run | 2026-11-03T00:58:10.598109+00:00 |
+| french         | Checked online this run | 2026-11-03T00:58:11.338020+00:00 |
+| cboe           | Checked online this run | 2026-11-03T00:58:12.133717+00:00 |
+| gpr            | Checked online this run | 2026-11-03T00:58:13.188666+00:00 |
+| epu            | Checked online this run | 2026-11-03T00:58:13.825743+00:00 |
+| infectious_emv | Checked online this run | 2026-11-03T00:58:13.098934+00:00 |
 
 Political context is reviewed through **2026-09-17**. It is carried forward as an explicit assumption.
 
@@ -37,22 +37,22 @@ The forecast cutoff does not mean every source has observations through that dat
 
 | Model                               |   Expected D seats |   D control % |   R control % |   D seats: 70% low |   D seats: 70% high |
 |:------------------------------------|-------------------:|--------------:|--------------:|-------------------:|--------------------:|
-| Gaussian Bayesian                   |              50.89 |         60.17 |         39.83 |                 49 |                  52 |
-| Gaussian: 10% shift toward baseline |              50.75 |         56.30 |         43.70 |                 49 |                  52 |
-| Gaussian: 20% shift toward baseline |              50.61 |         52.62 |         47.38 |                 49 |                  52 |
-| Gaussian: 40% shift toward baseline |              50.30 |         45.35 |         54.65 |                 49 |                  52 |
-| Gaussian: 50% shift toward baseline |              50.14 |         42.08 |         57.92 |                 48 |                  52 |
-| Empirical baseline                  |              49.48 |         32.37 |         67.63 |                 47 |                  52 |
-| Older Gaussian                      |              51.82 |         75.12 |         24.88 |                 50 |                  54 |
-| Student-t research helper           |              51.80 |         76.50 |         23.50 |                 50 |                  54 |
-| Matched Student-t (df5)             |              51.01 |         63.50 |         36.50 |                 50 |                  52 |
-| Four-model mixture                  |              51.38 |         68.82 |         31.18 |                 50 |                  53 |
-| Mixture: 5% shift toward baseline   |              51.29 |         66.92 |         33.08 |                 50 |                  53 |
-| Mixture: 10% shift toward baseline  |              51.20 |         64.95 |         35.05 |                 49 |                  53 |
-| Mixture: 20% shift toward baseline  |              51.01 |         60.88 |         39.12 |                 49 |                  53 |
-| Mixture: 30% shift toward baseline  |              50.83 |         56.60 |         43.40 |                 49 |                  53 |
-| Mixture: 40% shift toward baseline  |              50.63 |         52.20 |         47.80 |                 49 |                  53 |
-| Mixture: 50% shift toward baseline  |              50.43 |         47.76 |         52.24 |                 49 |                  52 |
+| Gaussian Bayesian                   |              51.47 |         73.93 |         26.07 |                 50 |                  53 |
+| Gaussian: 10% shift toward baseline |              51.37 |         71.20 |         28.80 |                 50 |                  53 |
+| Gaussian: 20% shift toward baseline |              51.26 |         68.37 |         31.63 |                 50 |                  53 |
+| Gaussian: 40% shift toward baseline |              51.06 |         62.78 |         37.22 |                 49 |                  53 |
+| Gaussian: 50% shift toward baseline |              50.96 |         60.30 |         39.70 |                 49 |                  53 |
+| Empirical baseline                  |              50.47 |         49.33 |         50.67 |                 48 |                  53 |
+| Older Gaussian                      |              52.47 |         85.09 |         14.91 |                 51 |                  54 |
+| Student-t research helper           |              52.44 |         87.09 |         12.91 |                 51 |                  54 |
+| Matched Student-t (df5)             |              51.59 |         77.79 |         22.21 |                 50 |                  53 |
+| Four-model mixture                  |              51.99 |         80.97 |         19.03 |                 50 |                  54 |
+| Mixture: 5% shift toward baseline   |              51.92 |         79.63 |         20.37 |                 50 |                  54 |
+| Mixture: 10% shift toward baseline  |              51.84 |         78.25 |         21.75 |                 50 |                  54 |
+| Mixture: 20% shift toward baseline  |              51.69 |         75.37 |         24.63 |                 50 |                  53 |
+| Mixture: 30% shift toward baseline  |              51.55 |         72.28 |         27.72 |                 50 |                  53 |
+| Mixture: 40% shift toward baseline  |              51.40 |         69.05 |         30.95 |                 50 |                  53 |
+| Mixture: 50% shift toward baseline  |              51.25 |         65.78 |         34.22 |                 49 |                  53 |
 
 All forecasts shown here use polling evidence when available. The empirical baseline uses poll averages and historical polling-error patterns. A 20% shift moves the predicted margin one-fifth of the way toward that baseline while retaining the original model’s uncertainty distribution. It does not mean the other models omit polls or need correction. Mixtures and mean shifts are comparisons, not automatically selected replacements for the reference model.
 
@@ -60,54 +60,53 @@ All forecasts shown here use polling evidence when available. The empirical base
 
 | Contest      |   D/IND−R margin |   D/IND win % |   95% low |   95% high |
 |:-------------|-----------------:|--------------:|----------:|-----------:|
-| AK           |            -2.46 |         33.88 |    -14.04 |       9.12 |
-| AL           |           -21.27 |          0.06 |    -34.16 |      -8.37 |
-| AR           |           -19.97 |          0.24 |    -33.85 |      -6.09 |
-| CO           |            18.56 |         93.98 |     -4.86 |      41.99 |
-| DE           |            26.08 |         99.95 |     10.58 |      41.58 |
-| FL (special) |            -5.88 |         18.45 |    -18.71 |       6.95 |
-| GA           |             6.66 |         87.32 |     -4.78 |      18.10 |
-| IA           |            -2.10 |         36.18 |    -13.75 |       9.55 |
-| ID           |           -17.71 |          0.05 |    -28.31 |      -7.10 |
-| IL           |            23.15 |         99.74 |      6.93 |      39.37 |
-| KS           |            -7.22 |          9.28 |    -17.92 |       3.47 |
-| KY           |           -12.83 |          1.88 |    -24.93 |      -0.73 |
-| LA           |            -9.87 |          5.10 |    -21.70 |       1.96 |
-| MA           |            26.49 |        100.00 |     15.07 |      37.91 |
-| ME           |             8.36 |         92.55 |     -3.00 |      19.72 |
-| MI           |             5.77 |         83.45 |     -5.86 |      17.40 |
-| MN           |             6.76 |         84.80 |     -6.13 |      19.66 |
-| MS           |           -10.88 |          3.21 |    -22.40 |       0.64 |
-| MT           |           -13.08 |          2.95 |    -26.66 |       0.50 |
-| NC           |             5.40 |         85.77 |     -4.49 |      15.28 |
-| NE           |            -7.06 |         16.93 |    -21.53 |       7.40 |
-| NH           |            11.47 |         97.93 |      0.44 |      22.50 |
-| NJ           |            18.85 |         99.78 |      5.87 |      31.82 |
-| NM           |            15.82 |         98.10 |      0.88 |      30.76 |
-| OH (special) |             3.03 |         70.34 |     -8.08 |      14.13 |
-| OK           |           -26.11 |          0.01 |    -39.27 |     -12.95 |
-| OR           |            24.21 |         99.93 |      9.26 |      39.15 |
-| RI           |            25.67 |         99.99 |     12.61 |      38.73 |
-| SC           |            -9.98 |          4.70 |    -21.65 |       1.70 |
-| SD           |           -27.27 |          0.06 |    -43.82 |     -10.72 |
-| TN           |           -22.50 |          0.03 |    -35.23 |      -9.76 |
-| TX           |             0.82 |         56.72 |     -8.72 |      10.37 |
-| VA           |            17.82 |         99.43 |      4.03 |      31.62 |
-| WV           |           -31.32 |          6.33 |    -71.51 |       8.87 |
-| WY           |           -42.20 |          0.00 |    -57.27 |     -27.13 |
+| AK           |            -2.04 |         36.39 |    -13.52 |       9.44 |
+| AL           |           -19.69 |          0.03 |    -31.04 |      -8.35 |
+| AR           |           -20.63 |          0.18 |    -34.49 |      -6.77 |
+| CO           |            19.71 |         99.93 |      7.70 |      31.73 |
+| DE           |            26.75 |         99.96 |     11.26 |      42.25 |
+| FL (special) |            -6.15 |         17.16 |    -18.87 |       6.57 |
+| GA           |             7.34 |         89.69 |     -4.04 |      18.72 |
+| IA           |            -2.29 |         34.96 |    -13.90 |       9.32 |
+| ID           |           -17.86 |          0.05 |    -28.44 |      -7.27 |
+| IL           |            19.87 |         99.88 |      7.01 |      32.74 |
+| KS           |            -5.00 |         17.70 |    -15.57 |       5.57 |
+| KY           |           -12.56 |          2.57 |    -25.19 |       0.07 |
+| LA           |            -8.64 |          8.05 |    -20.71 |       3.44 |
+| MA           |            28.76 |        100.00 |     17.78 |      39.73 |
+| ME           |             8.94 |         93.94 |     -2.36 |      20.24 |
+| MI           |             6.56 |         86.59 |     -5.05 |      18.16 |
+| MN           |             9.05 |         92.22 |     -3.44 |      21.55 |
+| MS           |            -9.05 |          5.24 |    -19.98 |       1.89 |
+| MT           |            -8.82 |         10.13 |    -22.38 |       4.75 |
+| NC           |             7.44 |         93.10 |     -2.39 |      17.27 |
+| NE           |            -7.64 |         14.60 |    -21.86 |       6.57 |
+| NH           |            12.15 |         98.54 |      1.23 |      23.08 |
+| NJ           |            19.54 |         99.84 |      6.58 |      32.50 |
+| NM           |            18.39 |         99.75 |      5.56 |      31.21 |
+| OH (special) |             3.19 |         71.55 |     -7.79 |      14.18 |
+| OK           |           -25.81 |          0.02 |    -39.96 |     -11.66 |
+| OR           |            24.98 |         99.95 |     10.05 |      39.91 |
+| RI           |            29.47 |        100.00 |     17.94 |      41.00 |
+| SC           |            -7.97 |          8.63 |    -19.42 |       3.48 |
+| SD           |           -27.33 |          0.06 |    -43.77 |     -10.89 |
+| TN           |           -21.58 |          0.09 |    -35.08 |      -8.08 |
+| TX           |             1.25 |         60.23 |     -8.21 |      10.71 |
+| VA           |            18.34 |         99.39 |      4.00 |      32.69 |
+| WV           |           -30.49 |          6.85 |    -70.68 |       9.69 |
+| WY           |           -41.50 |          0.00 |    -56.56 |     -26.44 |
 
 ## Recently polled races with broad uncertainty
 
 | Contest    | Latest poll   |   Recent samples |   Recent firms | Stronger coverage   |   95% interval width (pp) |
 |:-----------|:--------------|-----------------:|---------------:|:--------------------|--------------------------:|
-| SD         | 2026-09-09    |                1 |              1 | False               |                     33.11 |
-| NM         | 2026-08-28    |                1 |              1 | False               |                     29.88 |
-| NE         | 2026-09-16    |                3 |              3 | True                |                     28.94 |
-| MT         | 2026-09-15    |                3 |              3 | True                |                     27.16 |
-| RI         | 2026-09-21    |                1 |              1 | False               |                     26.13 |
-| MN         | 2026-09-15    |                4 |              4 | True                |                     25.79 |
-| FL special | 2026-09-21    |                5 |              5 | True                |                     25.66 |
-| TN         | 2026-08-26    |                1 |              1 | False               |                     25.47 |
+| SD         | 2026-10-26    |                6 |              5 | True                |                     32.88 |
+| NE         | 2026-11-01    |               11 |              8 | True                |                     28.43 |
+| AR         | 2026-10-28    |                3 |              2 | True                |                     27.72 |
+| MT         | 2026-10-23    |                5 |              4 | True                |                     27.12 |
+| IL         | 2026-11-02    |                3 |              2 | True                |                     25.73 |
+| NM         | 2026-11-02    |                2 |              2 | False               |                     25.65 |
+| FL special | 2026-11-02    |               19 |             15 | True                |                     25.44 |
 
 Watchlist settings: recent_days=30, min_width_pp=25.0, min_samples=3, min_firms=2.
 
@@ -121,28 +120,27 @@ Available core models: Gaussian Bayesian, Matched Student-t (df5), Older Gaussia
 
 ### Adequately polled races
 
-| Race       | Likely winner   |   D−R margin | 95% range (pp)   |   Other winner % |   Disagreement (pp) |   Predictive SD (pp) | Recent polls / firms   | Past state surprises                                                                                                   | Why watch                                                                                                                                |
-|:-----------|:----------------|-------------:|:-----------------|-----------------:|--------------------:|---------------------:|:-----------------------|:-----------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------|
-| TX         | D               |         0.80 | -8.7 to 10.4     |            43.30 |                0.40 |                 7.00 | 12 / 12                | The largest miss was 5.1 pp in 2018. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.  | Other-winner probability ranks #1 in this group.                                                                                         |
-| IA         | R               |        -2.10 | -13.8 to 9.5     |            36.20 |                1.20 |                 7.60 | 9 / 9                  | The largest miss was 10.4 pp in 2016. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Other-winner probability ranks #2 in this group.                                                                                         |
-| AK         | R               |        -2.50 | -14.0 to 9.1     |            33.90 |                1.20 |                 7.90 | 3 / 3                  | No comparable history is available.                                                                                    | Other-winner probability ranks #3 in this group.                                                                                         |
-| FL special | R               |        -5.90 | -18.7 to 6.9     |            18.50 |                2.20 |                 8.40 | 5 / 5                  | The largest miss was 12.4 pp in 2022. 1 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Predictive uncertainty ranks #2 in this group. Past margin error ranks #3 in this group. 1 of 3 past results fell outside the 95% range. |
-| NE         | R               |        -7.10 | -21.5 to 7.4     |            16.90 |                3.00 |                 8.70 | 3 / 3                  | The largest miss was 22.2 pp in 2020. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Predictive uncertainty ranks #1 in this group. Past margin error ranks #1 in this group.                                                 |
-| MI         | D               |         5.80 | -5.9 to 17.4     |            16.60 |                3.80 |                 7.70 | 11 / 11                | The largest miss was 11.9 pp in 2018. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Past margin error ranks #2 in this group. Models disagree on the winner.                                                                 |
-| ME         | D               |         8.40 | -3.0 to 19.7     |             7.40 |                4.30 |                 7.80 | 7 / 7                  | No comparable history is available.                                                                                    | Model disagreement ranks #1 in this group. Models disagree on the winner.                                                                |
-| MT         | R               |       -13.10 | -26.7 to 0.5     |             3.00 |                3.80 |                 8.10 | 3 / 3                  | The largest miss was 8.8 pp in 2020. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.  | Model disagreement ranks #3 in this group. Predictive uncertainty ranks #3 in this group.                                                |
-| NH         | D               |        11.50 | 0.4 to 22.5      |             2.10 |                4.00 |                 7.60 | 4 / 4                  | The largest miss was 4.3 pp in 2020. 0 of 3 results fell outside the 95% range. It missed the winner in 1 of 3 races.  | Model disagreement ranks #2 in this group.                                                                                               |
+| Race   | Likely winner   |   D−R margin | 95% range (pp)   |   Other winner % |   Disagreement (pp) |   Predictive SD (pp) | Recent polls / firms   | Past state surprises                                                                                                   | Why watch                                                                                                                                                                           |
+|:-------|:----------------|-------------:|:-----------------|-----------------:|--------------------:|---------------------:|:-----------------------|:-----------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| TX     | D               |         1.30 | -8.2 to 10.7     |            39.80 |                0.30 |                 6.90 | 31 / 23                | The largest miss was 5.1 pp in 2018. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.  | Other-winner probability ranks #1 in this group.                                                                                                                                    |
+| AK     | R               |        -2.00 | -13.5 to 9.4     |            36.40 |                1.10 |                 7.80 | 6 / 4                  | No comparable history is available.                                                                                    | Other-winner probability ranks #2 in this group.                                                                                                                                    |
+| IA     | R               |        -2.30 | -13.9 to 9.3     |            35.00 |                1.30 |                 7.60 | 15 / 13                | The largest miss was 10.4 pp in 2016. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Other-winner probability ranks #3 in this group.                                                                                                                                    |
+| NE     | R               |        -7.60 | -21.9 to 6.6     |            14.60 |                2.70 |                 8.60 | 11 / 8                 | The largest miss was 22.2 pp in 2020. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Predictive uncertainty ranks #3 in this group. Past margin error ranks #2 in this group.                                                                                            |
+| ME     | D               |         8.90 | -2.4 to 20.2     |             6.10 |                4.30 |                 7.80 | 14 / 13                | No comparable history is available.                                                                                    | Model disagreement ranks #3 in this group. Models disagree on the winner.                                                                                                           |
+| AR     | R               |       -20.60 | -34.5 to -6.8    |             0.20 |                6.80 |                 9.50 | 3 / 2                  | The largest miss was 16.7 pp in 2022. 2 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Model disagreement ranks #2 in this group. Predictive uncertainty ranks #2 in this group. Past margin error ranks #3 in this group. 2 of 3 past results fell outside the 95% range. |
+| SD     | R               |       -27.30 | -43.8 to -10.9   |             0.10 |               10.10 |                11.20 | 6 / 5                  | The largest miss was 32.0 pp in 2016. 1 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Model disagreement ranks #1 in this group. Predictive uncertainty ranks #1 in this group. Past margin error ranks #1 in this group. 1 of 3 past results fell outside the 95% range. |
 
 ### Thinly polled or no recent polls
 
-| Race   | Likely winner   |   D−R margin | 95% range (pp)   |   Other winner % |   Disagreement (pp) |   Predictive SD (pp) | Recent polls / firms   | Past state surprises                                                                                                   | Why watch                                                                                                                                                                                                                                                                |
-|:-------|:----------------|-------------:|:-----------------|-----------------:|--------------------:|---------------------:|:-----------------------|:-----------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WV     | R               |       -31.30 | -71.5 to 8.9     |             6.30 |               10.50 |                31.00 | 0 / 0                  | The largest miss was 47.9 pp in 2020. 1 of 3 results fell outside the 95% range. It missed the winner in 1 of 3 races. | Model disagreement ranks #1 in this group. Predictive uncertainty ranks #1 in this group. Other-winner probability ranks #1 in this group. Past margin error ranks #2 in this group. There are no recent eligible polls. 1 of 3 past results fell outside the 95% range. |
-| CO     | D               |        18.60 | -4.9 to 42.0     |             6.00 |                5.80 |                12.60 | 0 / 0                  | The largest miss was 8.1 pp in 2022. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.  | Predictive uncertainty ranks #2 in this group. Other-winner probability ranks #2 in this group. There are no recent eligible polls.                                                                                                                                      |
-| LA     | R               |        -9.90 | -21.7 to 2.0     |             5.10 |                1.80 |                 8.10 | 1 / 1                  | No comparable history is available.                                                                                    | Other-winner probability ranks #3 in this group. Recent polling is limited.                                                                                                                                                                                              |
-| AR     | R               |       -20.00 | -33.9 to -6.1    |             0.20 |                6.50 |                 9.60 | 0 / 0                  | The largest miss was 16.7 pp in 2022. 2 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Past margin error ranks #3 in this group. There are no recent eligible polls. 2 of 3 past results fell outside the 95% range.                                                                                                                                            |
-| OR     | D               |        24.20 | 9.3 to 39.1      |             0.10 |                6.60 |                 9.70 | 0 / 0                  | The largest miss was 9.7 pp in 2020. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.  | Model disagreement ranks #3 in this group. There are no recent eligible polls.                                                                                                                                                                                           |
-| SD     | R               |       -27.30 | -43.8 to -10.7   |             0.10 |                9.90 |                11.50 | 1 / 1                  | The largest miss was 32.0 pp in 2016. 1 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Model disagreement ranks #2 in this group. Predictive uncertainty ranks #3 in this group. Past margin error ranks #1 in this group. Recent polling is limited. 1 of 3 past results fell outside the 95% range.                                                           |
+| Race   | Likely winner   |   D−R margin | 95% range (pp)   | Other winner %   |   Disagreement (pp) |   Predictive SD (pp) | Recent polls / firms   | Past state surprises                                                                                                   | Why watch                                                                                                                                                                                                                                                                |
+|:-------|:----------------|-------------:|:-----------------|:-----------------|--------------------:|---------------------:|:-----------------------|:-----------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| LA     | R               |        -8.60 | -20.7 to 3.4     | 8.1              |                2.20 |                 8.20 | 1 / 1                  | No comparable history is available.                                                                                    | Other-winner probability ranks #1 in this group. Recent polling is limited.                                                                                                                                                                                              |
+| WV     | R               |       -30.50 | -70.7 to 9.7     | 6.8              |               10.10 |                31.10 | 0 / 0                  | The largest miss was 47.9 pp in 2020. 1 of 3 results fell outside the 95% range. It missed the winner in 1 of 3 races. | Model disagreement ranks #1 in this group. Predictive uncertainty ranks #1 in this group. Other-winner probability ranks #2 in this group. Past margin error ranks #1 in this group. There are no recent eligible polls. 1 of 3 past results fell outside the 95% range. |
+| MS     | R               |        -9.00 | -20.0 to 1.9     | 5.2              |                3.60 |                 7.70 | 1 / 1                  | The largest miss was 9.1 pp in 2024. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.  | Other-winner probability ranks #3 in this group. Recent polling is limited.                                                                                                                                                                                              |
+| TN     | R               |       -21.60 | -35.1 to -8.1    | 0.1              |                6.10 |                 8.70 | 0 / 0                  | The largest miss was 13.8 pp in 2020. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Model disagreement ranks #3 in this group. Past margin error ranks #2 in this group. There are no recent eligible polls.                                                                                                                                                 |
+| OR     | D               |        25.00 | 10.0 to 39.9     | 0.1              |                7.00 |                 9.60 | 0 / 0                  | The largest miss was 9.7 pp in 2020. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.  | Model disagreement ranks #2 in this group. There are no recent eligible polls.                                                                                                                                                                                           |
+| DE     | D               |        26.80 | 11.3 to 42.2     | <0.1             |                5.10 |                 9.90 | 0 / 0                  | The largest miss was 7.9 pp in 2020. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races.  | Predictive uncertainty ranks #3 in this group. Past margin error ranks #3 in this group. There are no recent eligible polls.                                                                                                                                             |
+| WY     | R               |       -41.50 | -56.6 to -26.4   | <0.1             |                0.50 |                10.10 | 0 / 0                  | The largest miss was 13.0 pp in 2018. 0 of 3 results fell outside the 95% range. It missed the winner in 0 of 3 races. | Predictive uncertainty ranks #2 in this group. There are no recent eligible polls.                                                                                                                                                                                       |
 
 [All races and numerical scores](./surprise_all.parquet) · [Watchlist settings and provenance](./surprise_parameters.json)
 
@@ -156,9 +154,9 @@ Available core models: Gaussian Bayesian, Matched Student-t (df5), Older Gaussia
 
 | Cutoff     |   D control % |   R control % |   Expected D seats |   D seats: 70% low |   D seats: 70% high |
 |:-----------|--------------:|--------------:|-------------------:|-------------------:|--------------------:|
-| 2026-09-23 |         59.85 |         40.15 |              50.88 |                 49 |                  52 |
-| 2026-09-24 |         59.34 |         40.66 |              50.86 |                 49 |                  52 |
-| 2026-09-25 |         60.17 |         39.83 |              50.89 |                 49 |                  52 |
+| 2026-10-31 |         71.82 |         28.18 |              51.39 |                 50 |                  53 |
+| 2026-11-01 |         72.19 |         27.81 |              51.41 |                 50 |                  53 |
+| 2026-11-02 |         73.93 |         26.07 |              51.47 |                 50 |                  53 |
 
 History mode: **dated**; regular spacing: **30 days**. Small differences can include Monte Carlo variation. All models and cutoff rows are in the HTML and supporting Parquet tables.
 
@@ -168,63 +166,58 @@ This section is generated from publisher feeds on each live rerun. It compares t
 
 ### Source dates and availability
 
-| Source                 | URL                                                            | Status        | Published   | Retrieved                        | Error   | Coverage                                                                                                                                     |   Days before our cutoff |
-|:-----------------------|:---------------------------------------------------------------|:--------------|:------------|:---------------------------------|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------|-------------------------:|
-| Silver Bulletin Deluxe | https://www.natesilver.net/p/expert-ratings-are-ignoring-signs | offline_cache | 2026-09-20  | 2026-09-25T16:01:10.670734+00:00 |         | Rounded Deluxe Senate-control probability from public text. State probabilities and expected seats are subscriber-only and unavailable here. |                        5 |
-| Race to the WH         | https://www.racetothewh.com/senate/26                          | offline_cache | 2026-09-24  | 2026-09-25T16:01:11.239327+00:00 |         | State and chamber forecasts                                                                                                                  |                        1 |
-| Inside Elections       | https://insideelections.com/ratings/senate/                    | offline_cache | 2026-09-17  | 2026-09-25T16:01:12.973259+00:00 |         | Public race ratings                                                                                                                          |                        8 |
+| Source                 | URL                                                            | Status                    | Published   | Retrieved                        | Error                                                                                                                | Coverage                                                                                                                                     |   Days before our cutoff |
+|:-----------------------|:---------------------------------------------------------------|:--------------------------|:------------|:---------------------------------|:---------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|-------------------------:|
+| Silver Bulletin Deluxe | https://www.natesilver.net/p/expert-ratings-are-ignoring-signs | stale_cache_after_failure | 2026-09-20  | 2026-10-06T01:44:28.847019+00:00 | ValueError: No unambiguous Deluxe Senate-control probability in public text; detailed tables require a subscription. | Rounded Deluxe Senate-control probability from public text. State probabilities and expected seats are subscriber-only and unavailable here. |                       43 |
+| Race to the WH         | https://www.racetothewh.com/senate/26                          | checked_online            | 2026-11-02  | 2026-11-03T00:58:34.417755+00:00 |                                                                                                                      | State and chamber forecasts                                                                                                                  |                        0 |
+| Inside Elections       | https://insideelections.com/ratings/senate/                    | checked_online            | 2026-10-29  | 2026-11-03T00:58:35.398593+00:00 |                                                                                                                      | Public race ratings                                                                                                                          |                        4 |
 
 ### Senate control and expected seats
 
 | Forecast               | Date       |   D control % | Expected D seats   | Coverage                                                                                                                                     |
 |:-----------------------|:-----------|--------------:|:-------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
-| Gaussian Bayesian      | 2026-09-25 |         60.17 | 50.89134835028253  | Our model                                                                                                                                    |
-| Four-model mixture     | 2026-09-25 |         68.82 | 51.37606718752925  | Our model                                                                                                                                    |
+| Gaussian Bayesian      | 2026-11-02 |         73.93 | 51.47256779754116  | Our model                                                                                                                                    |
+| Four-model mixture     | 2026-11-02 |         80.97 | 51.98953177086481  | Our model                                                                                                                                    |
 | Silver Bulletin Deluxe | 2026-09-20 |         65.00 | —                  | Rounded Deluxe Senate-control probability from public text. State probabilities and expected seats are subscriber-only and unavailable here. |
-| Race to the WH         | 2026-09-24 |         70.50 | 52.5               | Published forecast.                                                                                                                          |
+| Race to the WH         | 2026-11-02 |         80.30 | 53.2               | Published forecast.                                                                                                                          |
 
 ### Chamber differences: ours minus publisher
 
 | Model              | Publisher              | Published   |   Our D control % |   Published D control % |   Gap (pp) | Expected-seat gap   | Comparison                                 |
 |:-------------------|:-----------------------|:------------|------------------:|------------------------:|-----------:|:--------------------|:-------------------------------------------|
-| Gaussian Bayesian  | Silver Bulletin Deluxe | 2026-09-20  |             60.17 |                   65.00 |      -4.83 | —                   | The models favor the same Senate majority. |
-| Four-model mixture | Silver Bulletin Deluxe | 2026-09-20  |             68.82 |                   65.00 |       3.82 | —                   | The models favor the same Senate majority. |
-| Gaussian Bayesian  | Race to the WH         | 2026-09-24  |             60.17 |                   70.50 |     -10.33 | -1.6086516497174728 | The models favor the same Senate majority. |
-| Four-model mixture | Race to the WH         | 2026-09-24  |             68.82 |                   70.50 |      -1.68 | -1.1239328124707484 | The models favor the same Senate majority. |
+| Gaussian Bayesian  | Silver Bulletin Deluxe | 2026-09-20  |             73.93 |                   65.00 |       8.93 | —                   | The models favor the same Senate majority. |
+| Four-model mixture | Silver Bulletin Deluxe | 2026-09-20  |             80.97 |                   65.00 |      15.97 | —                   | The models favor the same Senate majority. |
+| Gaussian Bayesian  | Race to the WH         | 2026-11-02  |             73.93 |                   80.30 |      -6.37 | -1.7274322024588429 | The models favor the same Senate majority. |
+| Four-model mixture | Race to the WH         | 2026-11-02  |             80.97 |                   80.30 |       0.67 | -1.210468229135195  | The models favor the same Senate majority. |
 
 ### Inside Elections: favored-party counts in matched races
 
 | Model              |   Matched races |   Our D/Independent favored |   Our R favored |   Publisher D/Independent favored |   Publisher R favored |   Publisher toss-ups |
 |:-------------------|----------------:|----------------------------:|----------------:|----------------------------------:|----------------------:|---------------------:|
-| Gaussian Bayesian  |              35 |                          17 |              18 |                                12 |                    19 |                    4 |
-| Four-model mixture |              35 |                          17 |              18 |                                12 |                    19 |                    4 |
+| Gaussian Bayesian  |              35 |                          17 |              18 |                                16 |                    15 |                    4 |
+| Four-model mixture |              35 |                          17 |              18 |                                16 |                    15 |                    4 |
 
 ### State mismatches
 
-| Source           | Published   | Model              | Contest   |   Our D/Independent win % | Published D/Independent win %   | Published rating   | Gap (pp)            | Side definition                                | Reason                                                                                         |
-|:-----------------|:------------|:-------------------|:----------|--------------------------:|:--------------------------------|:-------------------|:--------------------|:-----------------------------------------------|:-----------------------------------------------------------------------------------------------|
-| Inside Elections | 2026-09-17  | Four-model mixture | ME        |                     85.54 | —                               | Toss-up            | —                   | D versus R.                                    | The publisher rates this a toss-up. Our model gives D 85.5%.                                   |
-| Inside Elections | 2026-09-17  | Four-model mixture | MI        |                     83.17 | —                               | Toss-up            | —                   | D versus R.                                    | The publisher rates this a toss-up. Our model gives D 83.2%.                                   |
-| Inside Elections | 2026-09-17  | Four-model mixture | NH        |                     92.77 | —                               | Toss-up            | —                   | D versus R.                                    | The publisher rates this a toss-up. Our model gives D 92.8%.                                   |
-| Inside Elections | 2026-09-17  | Four-model mixture | TX        |                     54.91 | —                               | Lean Republican    | —                   | D versus R.                                    | Our favored party differs from the published rating.                                           |
-| Inside Elections | 2026-09-17  | Gaussian Bayesian  | ME        |                     92.55 | —                               | Toss-up            | —                   | D versus R.                                    | The publisher rates this a toss-up. Our model gives D 92.6%.                                   |
-| Inside Elections | 2026-09-17  | Gaussian Bayesian  | MI        |                     83.45 | —                               | Toss-up            | —                   | D versus R.                                    | The publisher rates this a toss-up. Our model gives D 83.4%.                                   |
-| Inside Elections | 2026-09-17  | Gaussian Bayesian  | NH        |                     97.93 | —                               | Toss-up            | —                   | D versus R.                                    | The publisher rates this a toss-up. Our model gives D 97.9%.                                   |
-| Inside Elections | 2026-09-17  | Gaussian Bayesian  | TX        |                     56.72 | —                               | Lean Republican    | —                   | D versus R.                                    | Our favored party differs from the published rating.                                           |
-| Race to the WH   | 2026-09-24  | Four-model mixture | KS        |                     10.61 | 42.8                            | —                  | -32.19385416666844  | D versus R.                                    | Our D/Independent win probability is 32.2 points lower.                                        |
-| Race to the WH   | 2026-09-24  | Four-model mixture | ME        |                     85.54 | 62.2                            | —                  | 23.343645833479798  | D versus R.                                    | Our D/Independent win probability is 23.3 points higher.                                       |
-| Race to the WH   | 2026-09-24  | Four-model mixture | TX        |                     54.91 | 77.2                            | —                  | -22.28661458332747  | D versus R.                                    | Our D/Independent win probability is 22.3 points lower.                                        |
-| Race to the WH   | 2026-09-24  | Four-model mixture | IA        |                     36.92 | 59.0                            | —                  | -22.076614583352907 | D versus R.                                    | The forecasts favor different parties. Our D/Independent win probability is 22.1 points lower. |
-| Race to the WH   | 2026-09-24  | Four-model mixture | MT        |                      2.04 | 22.2                            | —                  | -20.16229166666673  | Independents count with D for this comparison. | Our D/Independent win probability is 20.2 points lower.                                        |
-| Race to the WH   | 2026-09-24  | Four-model mixture | WV        |                     19.28 | 0.7                             | —                  | 18.583541666673366  | D versus R.                                    | Our D/Independent win probability is 18.6 points higher.                                       |
-| Race to the WH   | 2026-09-24  | Four-model mixture | AK        |                     39.96 | 56.60000000000001               | —                  | -16.64031250002701  | D versus R.                                    | The forecasts favor different parties. Our D/Independent win probability is 16.6 points lower. |
-| Race to the WH   | 2026-09-24  | Gaussian Bayesian  | KS        |                      9.28 | 42.8                            | —                  | -33.518538891648575 | D versus R.                                    | Our D/Independent win probability is 33.5 points lower.                                        |
-| Race to the WH   | 2026-09-24  | Gaussian Bayesian  | ME        |                     92.55 | 62.2                            | —                  | 30.351099504360015  | D versus R.                                    | Our D/Independent win probability is 30.4 points higher.                                       |
-| Race to the WH   | 2026-09-24  | Gaussian Bayesian  | IA        |                     36.18 | 59.0                            | —                  | -22.822648422906454 | D versus R.                                    | The forecasts favor different parties. Our D/Independent win probability is 22.8 points lower. |
-| Race to the WH   | 2026-09-24  | Gaussian Bayesian  | AK        |                     33.88 | 56.60000000000001               | —                  | -22.72338904881732  | D versus R.                                    | The forecasts favor different parties. Our D/Independent win probability is 22.7 points lower. |
-| Race to the WH   | 2026-09-24  | Gaussian Bayesian  | TX        |                     56.72 | 77.2                            | —                  | -20.479051592507492 | D versus R.                                    | Our D/Independent win probability is 20.5 points lower.                                        |
-| Race to the WH   | 2026-09-24  | Gaussian Bayesian  | MT        |                      2.95 | 22.2                            | —                  | -19.247150990580476 | Independents count with D for this comparison. | Our D/Independent win probability is 19.2 points lower.                                        |
-| Race to the WH   | 2026-09-24  | Gaussian Bayesian  | SC        |                      4.70 | 20.4                            | —                  | -15.701631147404205 | D versus R.                                    | Our D/Independent win probability is 15.7 points lower.                                        |
+| Source           | Published   | Model              | Contest   |   Our D/Independent win % | Published D/Independent win %   | Published rating   | Gap (pp)            | Side definition   | Reason                                                                                         |
+|:-----------------|:------------|:-------------------|:----------|--------------------------:|:--------------------------------|:-------------------|:--------------------|:------------------|:-----------------------------------------------------------------------------------------------|
+| Inside Elections | 2026-10-29  | Four-model mixture | KS        |                     23.14 | —                               | Toss-up            | —                   | D versus R.       | The publisher rates this a toss-up. Our model gives R 76.9%.                                   |
+| Inside Elections | 2026-10-29  | Four-model mixture | ME        |                     87.56 | —                               | Toss-up            | —                   | D versus R.       | The publisher rates this a toss-up. Our model gives D 87.6%.                                   |
+| Inside Elections | 2026-10-29  | Gaussian Bayesian  | KS        |                     17.70 | —                               | Toss-up            | —                   | D versus R.       | The publisher rates this a toss-up. Our model gives R 82.3%.                                   |
+| Inside Elections | 2026-10-29  | Gaussian Bayesian  | ME        |                     93.94 | —                               | Toss-up            | —                   | D versus R.       | The publisher rates this a toss-up. Our model gives D 93.9%.                                   |
+| Race to the WH   | 2026-11-02  | Four-model mixture | KS        |                     23.14 | 58.4                            | —                  | -35.25703124999329  | D versus R.       | The forecasts favor different parties. Our D/Independent win probability is 35.3 points lower. |
+| Race to the WH   | 2026-11-02  | Four-model mixture | IA        |                     34.80 | 65.6                            | —                  | -30.79932291668568  | D versus R.       | The forecasts favor different parties. Our D/Independent win probability is 30.8 points lower. |
+| Race to the WH   | 2026-11-02  | Four-model mixture | SC        |                     15.02 | 40.1                            | —                  | -25.078437499998586 | D versus R.       | Our D/Independent win probability is 25.1 points lower.                                        |
+| Race to the WH   | 2026-11-02  | Four-model mixture | TX        |                     59.04 | 81.6                            | —                  | -22.563124999973905 | D versus R.       | Our D/Independent win probability is 22.6 points lower.                                        |
+| Race to the WH   | 2026-11-02  | Four-model mixture | AK        |                     42.17 | 61.6                            | —                  | -19.434687500025554 | D versus R.       | The forecasts favor different parties. Our D/Independent win probability is 19.4 points lower. |
+| Race to the WH   | 2026-11-02  | Four-model mixture | WV        |                     19.83 | 0.5                             | —                  | 19.33437500000756   | D versus R.       | Our D/Independent win probability is 19.3 points higher.                                       |
+| Race to the WH   | 2026-11-02  | Four-model mixture | ME        |                     87.56 | 72.3                            | —                  | 15.255416666823074  | D versus R.       | Our D/Independent win probability is 15.3 points higher.                                       |
+| Race to the WH   | 2026-11-02  | Gaussian Bayesian  | KS        |                     17.70 | 58.4                            | —                  | -40.70200701184501  | D versus R.       | The forecasts favor different parties. Our D/Independent win probability is 40.7 points lower. |
+| Race to the WH   | 2026-11-02  | Gaussian Bayesian  | SC        |                      8.63 | 40.1                            | —                  | -31.470182066182854 | D versus R.       | Our D/Independent win probability is 31.5 points lower.                                        |
+| Race to the WH   | 2026-11-02  | Gaussian Bayesian  | IA        |                     34.96 | 65.6                            | —                  | -30.643427097347864 | D versus R.       | The forecasts favor different parties. Our D/Independent win probability is 30.6 points lower. |
+| Race to the WH   | 2026-11-02  | Gaussian Bayesian  | AK        |                     36.39 | 61.6                            | —                  | -25.213661130668207 | D versus R.       | The forecasts favor different parties. Our D/Independent win probability is 25.2 points lower. |
+| Race to the WH   | 2026-11-02  | Gaussian Bayesian  | ME        |                     93.94 | 72.3                            | —                  | 21.64070325442584   | D versus R.       | Our D/Independent win probability is 21.6 points higher.                                       |
+| Race to the WH   | 2026-11-02  | Gaussian Bayesian  | TX        |                     60.23 | 81.6                            | —                  | -21.368143351643752 | D versus R.       | Our D/Independent win probability is 21.4 points lower.                                        |
 
 ### Excluded comparisons
 

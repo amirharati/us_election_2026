@@ -1,15 +1,15 @@
 {
-  "retrieved_at": "2026-09-25T21:05:18.507011+00:00",
-  "evaluated_at": "2026-09-25T21:05:19.607517+00:00",
+  "retrieved_at": "2026-09-25T21:30:17.076515+00:00",
+  "evaluated_at": "2026-09-25T21:30:17.949488+00:00",
   "catalog_status": "recent catalog cache",
   "book_status": {
     "status": "checked online",
     "errors": [],
-    "retrieved_at": "2026-09-25T21:05:18.506979+00:00",
+    "retrieved_at": "2026-09-25T21:30:17.076500+00:00",
     "tokens_requested": 990,
     "books_returned": 990
   },
-  "catalog_age_seconds": 52.651732,
+  "catalog_age_seconds": 168.455071,
   "max_catalog_age_seconds": 900,
   "max_book_age_seconds": 120,
   "forecast_cutoff": "2026-09-25",
